@@ -21,6 +21,7 @@ class RNSMapViewController: UIViewController {
         //mapView.setTrafficMarksHost("http://95.213.205.92/")
         mapView.enterForeground()
         mapView.enableMyLocation()
+        mapView.setMapRegime(1)
         let overlay = mapView.myLocationOverlay()
         overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
         overlay?.setRotationEnabled(false)
