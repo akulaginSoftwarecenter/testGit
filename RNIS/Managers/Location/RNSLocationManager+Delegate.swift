@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-extension STLocationManager: CLLocationManagerDelegate {
+extension RNSLocationManager: CLLocationManagerDelegate {
  
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if isUse {

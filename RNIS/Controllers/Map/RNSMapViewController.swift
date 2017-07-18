@@ -21,7 +21,9 @@ class RNSMapViewController: UIViewController {
         //mapView.setTrafficMarksHost("http://95.213.205.92/")
         mapView.enterForeground()
         mapView.enableMyLocation()
-        mapView.myLocationOverlay()?.setBitmap(#imageLiteral(resourceName: "ic_userDirection"), xOffset: 0, yOffset: 0)
+        let overlay = mapView.myLocationOverlay()
+        overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
+        overlay?.setRotationEnabled(false)
         return mapView
     }()
     
@@ -42,13 +44,13 @@ class RNSMapViewController: UIViewController {
     }
     
     func startLocation() {
-        STLocationManager.startLocation { [weak self] in
+        RNSLocationManager.startLocation { [weak self] in
              self?.centerUserLocation()
         }
     }
     
     func centerUserLocation() {
-        mapView.setMapCenter(STLocationManager.point)
+        mapView.setMapCenter(RNSLocationManager.point)
         mapView.setZoomLevel(13)
     }
 }

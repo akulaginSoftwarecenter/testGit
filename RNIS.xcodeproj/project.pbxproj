@@ -19,22 +19,27 @@
 		836D80B21F1DB35400FEE390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836D80B01F1DB35400FEE390 /* Assets.xcassets */; };
 		836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D80B31F1DB37000FEE390 /* LaunchScreen.storyboard */; };
 		836D80B61F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D80B31F1DB37000FEE390 /* LaunchScreen.storyboard */; };
-		836D80B91F1DB37700FEE390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D80B71F1DB37700FEE390 /* Main.storyboard */; };
-		836D80BA1F1DB37700FEE390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D80B71F1DB37700FEE390 /* Main.storyboard */; };
+		836D80B91F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D80B71F1DB37700FEE390 /* RNSMapViewController.storyboard */; };
+		836D80BA1F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D80B71F1DB37700FEE390 /* RNSMapViewController.storyboard */; };
 		836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836D80BB1F1DB38D00FEE390 /* RNIS.xcdatamodeld */; };
 		836D80BE1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 836D80BB1F1DB38D00FEE390 /* RNIS.xcdatamodeld */; };
 		836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80C01F1DB3B000FEE390 /* RNSMapViewController.swift */; };
 		836D80C21F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80C01F1DB3B000FEE390 /* RNSMapViewController.swift */; };
 		836D80C31F1DB75E00FEE390 /* ProgorodLiteLibraryResources.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 836D80A51F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		836D80CE1F1DBF2B00FEE390 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D80C51F1DBB8D00FEE390 /* OpenAL.framework */; };
-		836D80D81F1DC6CA00FEE390 /* STLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D61F1DC6CA00FEE390 /* STLocationManager.swift */; };
-		836D80D91F1DC6CA00FEE390 /* STLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D61F1DC6CA00FEE390 /* STLocationManager.swift */; };
-		836D80DA1F1DC6CA00FEE390 /* STLocationManager+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D71F1DC6CA00FEE390 /* STLocationManager+Delegate.swift */; };
-		836D80DB1F1DC6CA00FEE390 /* STLocationManager+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D71F1DC6CA00FEE390 /* STLocationManager+Delegate.swift */; };
+		836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D61F1DC6CA00FEE390 /* RNSLocationManager.swift */; };
+		836D80D91F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D61F1DC6CA00FEE390 /* RNSLocationManager.swift */; };
+		836D80DA1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D71F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift */; };
+		836D80DB1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80D71F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift */; };
 		836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80DC1F1DC87100FEE390 /* Utils.swift */; };
 		836D80DE1F1DC87100FEE390 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80DC1F1DC87100FEE390 /* Utils.swift */; };
 		836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80E01F1DC89D00FEE390 /* Constant.swift */; };
 		836D80E21F1DC89D00FEE390 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80E01F1DC89D00FEE390 /* Constant.swift */; };
+		836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */; };
+		836D80EC1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */; };
+		836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
+		836D80F41F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
+		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		AFCB50069DBF94697662C88D /* Pods_RNIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,17 +88,20 @@
 		836D80AD1F1DB33900FEE390 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
 		836D80B01F1DB35400FEE390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		836D80B41F1DB37000FEE390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		836D80B81F1DB37700FEE390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		836D80B81F1DB37700FEE390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/RNSMapViewController.storyboard; sourceTree = "<group>"; };
 		836D80BC1F1DB38D00FEE390 /* RNIS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RNIS.xcdatamodel; sourceTree = "<group>"; };
 		836D80C01F1DB3B000FEE390 /* RNSMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMapViewController.swift; path = Controllers/Map/RNSMapViewController.swift; sourceTree = "<group>"; };
 		836D80C51F1DBB8D00FEE390 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		836D80C71F1DBB9600FEE390 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		836D80CA1F1DBE7C00FEE390 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		836D80CC1F1DBE9300FEE390 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		836D80D61F1DC6CA00FEE390 /* STLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STLocationManager.swift; path = Managers/Location/STLocationManager.swift; sourceTree = "<group>"; };
-		836D80D71F1DC6CA00FEE390 /* STLocationManager+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STLocationManager+Delegate.swift"; path = "Managers/Location/STLocationManager+Delegate.swift"; sourceTree = "<group>"; };
+		836D80D61F1DC6CA00FEE390 /* RNSLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLocationManager.swift; path = Managers/Location/RNSLocationManager.swift; sourceTree = "<group>"; };
+		836D80D71F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLocationManager+Delegate.swift"; path = "Managers/Location/RNSLocationManager+Delegate.swift"; sourceTree = "<group>"; };
 		836D80DC1F1DC87100FEE390 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Library/Utils.swift; sourceTree = "<group>"; };
 		836D80E01F1DC89D00FEE390 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Library/Constant/Constant.swift; sourceTree = "<group>"; };
+		836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewWithXIBInit.swift; path = "Library/Base classes/BaseViewWithXIBInit/BaseViewWithXIBInit.swift"; sourceTree = "<group>"; };
+		836D80F21F1DD62400FEE390 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Layer.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Layer.swift"; sourceTree = "<group>"; };
+		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		BE5BDD3840B274B802D836D4 /* Pods-RNIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.release.xcconfig"; sourceTree = "<group>"; };
 		DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +208,7 @@
 		836D80831F1DAE3C00FEE390 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				836D80E81F1DD59800FEE390 /* Base classes */,
 				836D80DF1F1DC88300FEE390 /* Constant */,
 				836D80871F1DB0D600FEE390 /* Helpers */,
 				836D80DC1F1DC87100FEE390 /* Utils.swift */,
@@ -230,7 +239,6 @@
 			children = (
 				836D80BB1F1DB38D00FEE390 /* RNIS.xcdatamodeld */,
 				836D80B31F1DB37000FEE390 /* LaunchScreen.storyboard */,
-				836D80B71F1DB37700FEE390 /* Main.storyboard */,
 				836D80B01F1DB35400FEE390 /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -239,6 +247,7 @@
 		836D80871F1DB0D600FEE390 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				836D80F01F1DD5EC00FEE390 /* Base objects extensions */,
 				836D80881F1DB0E100FEE390 /* ProgorodLiteLibrary */,
 			);
 			name = Helpers;
@@ -265,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				836D80C01F1DB3B000FEE390 /* RNSMapViewController.swift */,
+				83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */,
+				836D80B71F1DB37700FEE390 /* RNSMapViewController.storyboard */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -272,8 +283,8 @@
 		836D80CF1F1DC67800FEE390 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				836D80D61F1DC6CA00FEE390 /* STLocationManager.swift */,
-				836D80D71F1DC6CA00FEE390 /* STLocationManager+Delegate.swift */,
+				836D80D61F1DC6CA00FEE390 /* RNSLocationManager.swift */,
+				836D80D71F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -284,6 +295,38 @@
 				836D80E01F1DC89D00FEE390 /* Constant.swift */,
 			);
 			name = Constant;
+			sourceTree = "<group>";
+		};
+		836D80E81F1DD59800FEE390 /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				836D80E91F1DD59F00FEE390 /* BaseViewWithXIBInit */,
+			);
+			name = "Base classes";
+			sourceTree = "<group>";
+		};
+		836D80E91F1DD59F00FEE390 /* BaseViewWithXIBInit */ = {
+			isa = PBXGroup;
+			children = (
+				836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */,
+			);
+			name = BaseViewWithXIBInit;
+			sourceTree = "<group>";
+		};
+		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
+			isa = PBXGroup;
+			children = (
+				836D80F11F1DD5F600FEE390 /* View */,
+			);
+			name = "Base objects extensions";
+			sourceTree = "<group>";
+		};
+		836D80F11F1DD5F600FEE390 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				836D80F21F1DD62400FEE390 /* UIView+Layer.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		A72B1F20BB40A42123B9309F /* Pods */ = {
@@ -384,7 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
-				836D80B91F1DB37700FEE390 /* Main.storyboard in Resources */,
+				836D80B91F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				836D80B11F1DB35400FEE390 /* Assets.xcassets in Resources */,
 			);
@@ -395,7 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				836D80AC1F1DB32E00FEE390 /* Info.plist in Resources */,
-				836D80BA1F1DB37700FEE390 /* Main.storyboard in Resources */,
+				836D80BA1F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
 				836D80B61F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				836D80B21F1DB35400FEE390 /* Assets.xcassets in Resources */,
 				836D80A91F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
@@ -459,10 +502,13 @@
 			files = (
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
-				836D80D81F1DC6CA00FEE390 /* STLocationManager.swift in Sources */,
+				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
+				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
 				836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
+				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
-				836D80DA1F1DC6CA00FEE390 /* STLocationManager+Delegate.swift in Sources */,
+				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
+				836D80DA1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,11 +519,13 @@
 			files = (
 				836D80AF1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80C21F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
-				836D80DB1F1DC6CA00FEE390 /* STLocationManager+Delegate.swift in Sources */,
+				836D80DB1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
+				836D80F41F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
+				836D80EC1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
 				836D80E21F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80DE1F1DC87100FEE390 /* Utils.swift in Sources */,
 				836D80BE1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
-				836D80D91F1DC6CA00FEE390 /* STLocationManager.swift in Sources */,
+				836D80D91F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
 				836D80761F1DAC0400FEE390 /* RNISTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,12 +549,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		836D80B71F1DB37700FEE390 /* Main.storyboard */ = {
+		836D80B71F1DB37700FEE390 /* RNSMapViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				836D80B81F1DB37700FEE390 /* Base */,
 			);
-			name = Main.storyboard;
+			name = RNSMapViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

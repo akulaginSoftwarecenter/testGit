@@ -9,9 +9,9 @@
 import UIKit
 import CoreLocation
 
-class STLocationManager: NSObject {
+class RNSLocationManager: NSObject {
     
-    static let shared = STLocationManager()
+    static let shared = RNSLocationManager()
     
     var handlerStartLocation: EmptyBlock?
     
@@ -55,7 +55,6 @@ class STLocationManager: NSObject {
     }
     
     func startLocation(_ handler: EmptyBlock?) {
-        print("isUse",isUse)
         if isUse {
             handler?()
         } else {

@@ -6,9 +6,5 @@
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
-#ifndef RNIS-Bridging-Header_h
-#define RNIS-Bridging-Header_h
 
 #import "PGLibraryHeaders.h"
-
-#endif /* RNIS-Bridging-Header_h */
