@@ -74,6 +74,8 @@
 		83B2E09C1F1E13F700FA92A4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */; };
 		83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */; };
 		83B2E0A01F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */; };
+		83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */; };
+		83B2E0A51F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */; };
 		AFCB50069DBF94697662C88D /* Pods_RNIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +155,7 @@
 		83B2E07B1F1E139800FA92A4 /* SLTApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLTApiHelper.swift; sourceTree = "<group>"; };
 		83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSError+ErrorItem.swift"; path = "Library/Helpers/Base objects extensions/NSError/NSError+ErrorItem.swift"; sourceTree = "<group>"; };
+		83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGetTraffic.swift; path = GET/Traffic/RNSGetTraffic.swift; sourceTree = "<group>"; };
 		BE5BDD3840B274B802D836D4 /* Pods-RNIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.release.xcconfig"; sourceTree = "<group>"; };
 		DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -398,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				83B2E0681F1E139800FA92A4 /* Base */,
+				83B2E0A11F1E160100FA92A4 /* GET */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -460,6 +464,22 @@
 				83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */,
 			);
 			name = NSError;
+			sourceTree = "<group>";
+		};
+		83B2E0A11F1E160100FA92A4 /* GET */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E0A21F1E162900FA92A4 /* Traffic */,
+			);
+			name = GET;
+			sourceTree = "<group>";
+		};
+		83B2E0A21F1E162900FA92A4 /* Traffic */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */,
+			);
+			name = Traffic;
 			sourceTree = "<group>";
 		};
 		A72B1F20BB40A42123B9309F /* Pods */ = {
@@ -634,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
@@ -668,6 +689,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B2E0A51F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
 				83B2E0811F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80AF1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80C21F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,

@@ -59,21 +59,23 @@ class RNSMapViewController: UIViewController {
     }
     
     func changeTraffic() {
-        lightButton.isSelected =  !trafficEnabled
-        lightButton.isUserInteractionEnabled = false
+        //lightButton.isSelected =  !trafficEnabled
+        //lightButton.isUserInteractionEnabled = false
         
         mapView.setTraffic(!mapView.getTraffic())
+        /*
         if trafficEnabled {
             enableTraffic()
         } else {
             disableTraffic()
         }
+ */
     }
     
     func enableTraffic() {
         let pointMin = mapView.lastMinCoord;
         let pointMax = mapView.lastMaxCoord;
-        SVProgressHUD.show()
+  //      SVProgressHUD.show()
     }
     
     func disableTraffic() {
