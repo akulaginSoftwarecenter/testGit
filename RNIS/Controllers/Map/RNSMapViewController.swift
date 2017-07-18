@@ -8,6 +8,7 @@
 
 import UIKit
 import PureLayout
+import SVProgressHUD
 
 class RNSMapViewController: UIViewController {
     
@@ -17,8 +18,8 @@ class RNSMapViewController: UIViewController {
         mapView.autoPinEdgesToSuperviewEdges()
         mapView.startApplication()
         mapView.clearMapCache()
-        //mapView.setMapHost("http://95.213.205.92/")
-        //mapView.setTrafficMarksHost("http://95.213.205.92/")
+        mapView.setMapHost(mapHost)
+        mapView.setTrafficMarksHost(mapHost)
         mapView.enterForeground()
         mapView.enableMyLocation()
         mapView.setMapRegime(1)
@@ -27,6 +28,8 @@ class RNSMapViewController: UIViewController {
         overlay?.setRotationEnabled(false)
         return mapView
     }()
+    
+    @IBOutlet weak var lightButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,30 @@ class RNSMapViewController: UIViewController {
     func centerUserLocation() {
         mapView.setMapCenter(RNSLocationManager.point)
         mapView.setZoomLevel(13)
+    }
+    
+    func changeTraffic() {
+        lightButton.isSelected =  !trafficEnabled
+        lightButton.isUserInteractionEnabled = false
+        
+        mapView.setTraffic(!mapView.getTraffic())
+        if trafficEnabled {
+            enableTraffic()
+        } else {
+            disableTraffic()
+        }
+    }
+    
+    func enableTraffic() {
+        let pointMin = mapView.lastMinCoord;
+        let pointMax = mapView.lastMaxCoord;
+        SVProgressHUD.show()
+    }
+    
+    func disableTraffic() {
+        lightButton.isUserInteractionEnabled = true;
+        //self.trafficValueLabel.hidden = YES;
+        //self.landscapeMapOrientationView.trafficValueLabel.hidden = YES;
     }
 }
 

@@ -40,6 +40,40 @@
 		836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
 		836D80F41F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
+		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
+		83B2E07D1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
+		83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */; };
+		83B2E07F1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */; };
+		83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06C1F1E139800FA92A4 /* PostAPI.swift */; };
+		83B2E0811F1E139800FA92A4 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06C1F1E139800FA92A4 /* PostAPI.swift */; };
+		83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06D1F1E139800FA92A4 /* API+Creating.swift */; };
+		83B2E0831F1E139800FA92A4 /* API+Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06D1F1E139800FA92A4 /* API+Creating.swift */; };
+		83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06E1F1E139800FA92A4 /* API+ReplyHandling.swift */; };
+		83B2E0851F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06E1F1E139800FA92A4 /* API+ReplyHandling.swift */; };
+		83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06F1F1E139800FA92A4 /* API+RequestProgress.swift */; };
+		83B2E0871F1E139800FA92A4 /* API+RequestProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06F1F1E139800FA92A4 /* API+RequestProgress.swift */; };
+		83B2E0881F1E139800FA92A4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0701F1E139800FA92A4 /* API.swift */; };
+		83B2E0891F1E139800FA92A4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0701F1E139800FA92A4 /* API.swift */; };
+		83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0721F1E139800FA92A4 /* CloudKitAPI.swift */; };
+		83B2E08B1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0721F1E139800FA92A4 /* CloudKitAPI.swift */; };
+		83B2E08C1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0741F1E139800FA92A4 /* APIModel+CloudKit.swift */; };
+		83B2E08D1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0741F1E139800FA92A4 /* APIModel+CloudKit.swift */; };
+		83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0751F1E139800FA92A4 /* APIModel.swift */; };
+		83B2E08F1F1E139800FA92A4 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0751F1E139800FA92A4 /* APIModel.swift */; };
+		83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0761F1E139800FA92A4 /* APIModelMissedKeys.swift */; };
+		83B2E0911F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0761F1E139800FA92A4 /* APIModelMissedKeys.swift */; };
+		83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0781F1E139800FA92A4 /* CloudKitParser.swift */; };
+		83B2E0931F1E139800FA92A4 /* CloudKitParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0781F1E139800FA92A4 /* CloudKitParser.swift */; };
+		83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0791F1E139800FA92A4 /* Parser+KeyConversion.swift */; };
+		83B2E0951F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0791F1E139800FA92A4 /* Parser+KeyConversion.swift */; };
+		83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E07A1F1E139800FA92A4 /* Parser.swift */; };
+		83B2E0971F1E139800FA92A4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E07A1F1E139800FA92A4 /* Parser.swift */; };
+		83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E07B1F1E139800FA92A4 /* SLTApiHelper.swift */; };
+		83B2E0991F1E139800FA92A4 /* SLTApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E07B1F1E139800FA92A4 /* SLTApiHelper.swift */; };
+		83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */; };
+		83B2E09C1F1E13F700FA92A4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */; };
+		83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */; };
+		83B2E0A01F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */; };
 		AFCB50069DBF94697662C88D /* Pods_RNIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +136,23 @@
 		836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewWithXIBInit.swift; path = "Library/Base classes/BaseViewWithXIBInit/BaseViewWithXIBInit.swift"; sourceTree = "<group>"; };
 		836D80F21F1DD62400FEE390 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Layer.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Layer.swift"; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
+		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
+		83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofirePagedAPI.swift; sourceTree = "<group>"; };
+		83B2E06C1F1E139800FA92A4 /* PostAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
+		83B2E06D1F1E139800FA92A4 /* API+Creating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+Creating.swift"; sourceTree = "<group>"; };
+		83B2E06E1F1E139800FA92A4 /* API+ReplyHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+ReplyHandling.swift"; sourceTree = "<group>"; };
+		83B2E06F1F1E139800FA92A4 /* API+RequestProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+RequestProgress.swift"; sourceTree = "<group>"; };
+		83B2E0701F1E139800FA92A4 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		83B2E0721F1E139800FA92A4 /* CloudKitAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitAPI.swift; sourceTree = "<group>"; };
+		83B2E0741F1E139800FA92A4 /* APIModel+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIModel+CloudKit.swift"; sourceTree = "<group>"; };
+		83B2E0751F1E139800FA92A4 /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		83B2E0761F1E139800FA92A4 /* APIModelMissedKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModelMissedKeys.swift; sourceTree = "<group>"; };
+		83B2E0781F1E139800FA92A4 /* CloudKitParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitParser.swift; sourceTree = "<group>"; };
+		83B2E0791F1E139800FA92A4 /* Parser+KeyConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parser+KeyConversion.swift"; sourceTree = "<group>"; };
+		83B2E07A1F1E139800FA92A4 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		83B2E07B1F1E139800FA92A4 /* SLTApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLTApiHelper.swift; sourceTree = "<group>"; };
+		83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSError+ErrorItem.swift"; path = "Library/Helpers/Base objects extensions/NSError/NSError+ErrorItem.swift"; sourceTree = "<group>"; };
 		BE5BDD3840B274B802D836D4 /* Pods-RNIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.release.xcconfig"; sourceTree = "<group>"; };
 		DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -247,6 +298,7 @@
 		836D80871F1DB0D600FEE390 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				83B2E0661F1E139800FA92A4 /* API */,
 				836D80F01F1DD5EC00FEE390 /* Base objects extensions */,
 				836D80881F1DB0E100FEE390 /* ProgorodLiteLibrary */,
 			);
@@ -316,6 +368,7 @@
 		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				83B2E09D1F1E14F800FA92A4 /* NSError */,
 				836D80F11F1DD5F600FEE390 /* View */,
 			);
 			name = "Base objects extensions";
@@ -327,6 +380,86 @@
 				836D80F21F1DD62400FEE390 /* UIView+Layer.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		83B2E0661F1E139800FA92A4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E0671F1E139800FA92A4 /* Methods */,
+				83B2E0731F1E139800FA92A4 /* Model */,
+				83B2E0771F1E139800FA92A4 /* Parser */,
+				83B2E07B1F1E139800FA92A4 /* SLTApiHelper.swift */,
+			);
+			name = API;
+			path = Library/Helpers/API;
+			sourceTree = "<group>";
+		};
+		83B2E0671F1E139800FA92A4 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E0681F1E139800FA92A4 /* Base */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		83B2E0681F1E139800FA92A4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E0691F1E139800FA92A4 /* Alamofire */,
+				83B2E06D1F1E139800FA92A4 /* API+Creating.swift */,
+				83B2E06E1F1E139800FA92A4 /* API+ReplyHandling.swift */,
+				83B2E06F1F1E139800FA92A4 /* API+RequestProgress.swift */,
+				83B2E0701F1E139800FA92A4 /* API.swift */,
+				83B2E0711F1E139800FA92A4 /* CloudKit */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		83B2E0691F1E139800FA92A4 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */,
+				83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */,
+				83B2E06C1F1E139800FA92A4 /* PostAPI.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		83B2E0711F1E139800FA92A4 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E0721F1E139800FA92A4 /* CloudKitAPI.swift */,
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
+		83B2E0731F1E139800FA92A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */,
+				83B2E0741F1E139800FA92A4 /* APIModel+CloudKit.swift */,
+				83B2E0751F1E139800FA92A4 /* APIModel.swift */,
+				83B2E0761F1E139800FA92A4 /* APIModelMissedKeys.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83B2E0771F1E139800FA92A4 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E0781F1E139800FA92A4 /* CloudKitParser.swift */,
+				83B2E0791F1E139800FA92A4 /* Parser+KeyConversion.swift */,
+				83B2E07A1F1E139800FA92A4 /* Parser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		83B2E09D1F1E14F800FA92A4 /* NSError */ = {
+			isa = PBXGroup;
+			children = (
+				83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */,
+			);
+			name = NSError;
 			sourceTree = "<group>";
 		};
 		A72B1F20BB40A42123B9309F /* Pods */ = {
@@ -501,16 +634,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
+				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
 				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
 				836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
+				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
+				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
+				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
+				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
 				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
+				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				836D80DA1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
+				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
+				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
+				83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
+				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
+				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
+				83B2E08C1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */,
+				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
+				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
+				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
+				83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,16 +668,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B2E0811F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80AF1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80C21F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
 				836D80DB1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
+				83B2E08F1F1E139800FA92A4 /* APIModel.swift in Sources */,
 				836D80F41F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
 				836D80EC1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
+				83B2E0911F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
+				83B2E07F1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
+				83B2E0871F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
+				83B2E0A01F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
 				836D80E21F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80DE1F1DC87100FEE390 /* Utils.swift in Sources */,
 				836D80BE1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
+				83B2E08B1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				836D80D91F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
+				83B2E07D1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
+				83B2E09C1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
+				83B2E0851F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
+				83B2E0991F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
+				83B2E0931F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
+				83B2E08D1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */,
+				83B2E0951F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
+				83B2E0971F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80761F1DAC0400FEE390 /* RNISTests.swift in Sources */,
+				83B2E0891F1E139800FA92A4 /* API.swift in Sources */,
+				83B2E0831F1E139800FA92A4 /* API+Creating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
