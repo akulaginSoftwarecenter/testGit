@@ -44,15 +44,15 @@ class RNSGetTraffic: AlamofireAPI {
     }
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        guard let dict = reply as? AliasDictionary else {
+        guard let dict = reply as? AliasDictionary, let mark = (dict["city"] as? AliasDictionary)?["Mark"] else {
             return
         }
-       
-        guard let model = RNSTrafficData(JSON: dict),
-                model.b != nil else {
+        print("dict",String(describing: type(of: mark)))
+        guard let model = RNSTrafficData(JSON: dict) else {
              superError()
             return
         }
+        print("city", model.city?.mark)
         super.apiDidReturnReply(model.averageMarks as AnyObject, source: source)
     }
     

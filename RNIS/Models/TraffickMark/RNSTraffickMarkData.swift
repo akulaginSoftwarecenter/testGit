@@ -14,7 +14,7 @@ class RNSTraffickMarkData: Mappable {
     var cityNam: String?
     var lat: Double?
     var long: Double?
-    var mark: Float?
+    var mark: Int?
     
     required init?(map: Map) {
         
