@@ -44,18 +44,15 @@ class RNSGetTraffic: AlamofireAPI {
     }
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        guard let dict = reply as? AliasDictionary, let mark = (dict["city"] as? AliasDictionary)?["Mark"] else {
+        guard let dict = reply as? AliasDictionary else {
             return
         }
-        print("dict",String(describing: type(of: mark)))
         guard let model = RNSTrafficData(JSON: dict) else {
              superError()
             return
         }
-        print("city", model.city?.mark)
         super.apiDidReturnReply(model.averageMarks as AnyObject, source: source)
     }
-    
     
     override func superError() {
         super.apiDidFailWithError(NSError(domain: "Не удалось получить полную информацию о трафике в данном регионе.", code: 0, userInfo: [:]))
