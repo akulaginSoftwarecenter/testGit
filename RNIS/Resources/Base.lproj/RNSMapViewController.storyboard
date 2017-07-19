@@ -8,6 +8,11 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -72,6 +77,12 @@
                                     <action selector="userLocationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQY-OF-rWT"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMa-No-Rh4">
+                                <rect key="frame" x="36" y="305.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -87,14 +98,17 @@
                             <constraint firstItem="dmU-Ot-Rdk" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="myy-TN-A7v"/>
                             <constraint firstItem="IOv-AM-ZvN" firstAttribute="centerY" secondItem="FmM-L5-aK2" secondAttribute="centerY" constant="3" id="oZm-OT-V0s"/>
                             <constraint firstItem="dmU-Ot-Rdk" firstAttribute="leading" secondItem="pL4-4a-4pD" secondAttribute="leading" id="p0a-nQ-H3o"/>
+                            <constraint firstItem="uMa-No-Rh4" firstAttribute="centerX" secondItem="dmU-Ot-Rdk" secondAttribute="centerX" id="s2o-uG-bgG"/>
                             <constraint firstItem="2Ri-pi-V4l" firstAttribute="centerY" secondItem="zHB-al-yVQ" secondAttribute="centerY" id="tJS-X4-zJa"/>
                             <constraint firstItem="QRI-Fe-F3D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="wx9-0q-NEf"/>
+                            <constraint firstItem="uMa-No-Rh4" firstAttribute="centerY" secondItem="dmU-Ot-Rdk" secondAttribute="centerY" id="xpf-Rt-a4K"/>
                             <constraint firstItem="IOv-AM-ZvN" firstAttribute="centerX" secondItem="OLh-Ms-4hu" secondAttribute="centerX" id="xzm-bZ-OoJ"/>
                             <constraint firstItem="OLh-Ms-4hu" firstAttribute="centerY" secondItem="dmU-Ot-Rdk" secondAttribute="centerY" constant="1" id="z4V-Xv-hVP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lightButton" destination="dmU-Ot-Rdk" id="VkC-Db-sEA"/>
+                        <outlet property="trafficValueLabel" destination="uMa-No-Rh4" id="NRg-AE-qGs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

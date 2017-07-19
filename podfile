@@ -6,6 +6,7 @@ use_frameworks!
 pod 'PureLayout'
 pod 'SVProgressHUD'
 pod 'Alamofire', '~> 4.0'
+pod 'ObjectMapper', '~> 2.0'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

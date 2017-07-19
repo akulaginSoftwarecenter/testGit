@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 typealias EmptyBlock = () -> Void
+typealias AliasDictionary = [String: Any]
 
 class Utils {
     

@@ -29,6 +29,7 @@ class RNSMapViewController: UIViewController {
         return mapView
     }()
     
+    @IBOutlet weak var trafficValueLabel: UILabel!
     @IBOutlet weak var lightButton: UIButton!
     
     override func viewDidLoad() {
@@ -59,29 +60,58 @@ class RNSMapViewController: UIViewController {
     }
     
     func changeTraffic() {
-        //lightButton.isSelected =  !trafficEnabled
-        //lightButton.isUserInteractionEnabled = false
+        lightButton.isSelected =  !trafficEnabled
+        lightButton.isUserInteractionEnabled = false
         
         mapView.setTraffic(!mapView.getTraffic())
-        /*
+        
         if trafficEnabled {
             enableTraffic()
         } else {
             disableTraffic()
         }
- */
     }
     
     func enableTraffic() {
         let pointMin = mapView.lastMinCoord;
         let pointMax = mapView.lastMaxCoord;
-  //      SVProgressHUD.show()
+        SVProgressHUD.show()
+        RNSGetTraffic(minCoord: pointMin, maxCoord: pointMax, zoom: mapView.getZoomLevel()) {[weak self] (reply, error, handleError) in
+            SVProgressHUD.dismiss()
+            self?.lightButton.isUserInteractionEnabled = true;
+            self?.prepareAverageTraffic(reply as? Int)
+            print("reply",reply)
+            print("error",error)
+        }
+    }
+    
+    func prepareAverageTraffic(_ average: Int?) {
+        guard let average = average else {
+            return
+        }
+        var image:UIImage
+        if (average == 0) {
+            image = #imageLiteral(resourceName: "svetofor_selected")
+        } else if (average < 4) {
+            image = #imageLiteral(resourceName: "ic_svetofor_green")
+         }else if (average < 7){
+            image = #imageLiteral(resourceName: "ic_svetofor_orange")
+        }else {
+            image = #imageLiteral(resourceName: "ic_svetofor_red")
+        }
+        lightButton.setImage(image, for: .selected)
+
+        if (average == 0) {
+            trafficValueLabel.isHidden = false;
+        }else {
+            trafficValueLabel.text = String(average);
+            trafficValueLabel.isHidden = false;
+        }
     }
     
     func disableTraffic() {
         lightButton.isUserInteractionEnabled = true;
-        //self.trafficValueLabel.hidden = YES;
-        //self.landscapeMapOrientationView.trafficValueLabel.hidden = YES;
+        trafficValueLabel.isHidden = true;
     }
 }
 

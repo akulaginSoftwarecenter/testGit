@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA301F1F51A700F893C8 /* Dictionary+Utils.swift */; };
+		8326AA321F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA301F1F51A700F893C8 /* Dictionary+Utils.swift */; };
+		8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA341F1F57CF00F893C8 /* RNSTraffickMarkData.swift */; };
+		8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */; };
+		8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */; };
+		8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8326AA431F1F6A1C00F893C8 /* mainFont.otf */; };
+		8326AA451F1F6A1C00F893C8 /* mainFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8326AA431F1F6A1C00F893C8 /* mainFont.otf */; };
 		836D80761F1DAC0400FEE390 /* RNISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80751F1DAC0400FEE390 /* RNISTests.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A71F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
@@ -105,6 +112,11 @@
 
 /* Begin PBXFileReference section */
 		23B4C45A07CC288BB5A83FCE /* Pods-RNIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.debug.xcconfig"; sourceTree = "<group>"; };
+		8326AA301F1F51A700F893C8 /* Dictionary+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utils.swift"; sourceTree = "<group>"; };
+		8326AA341F1F57CF00F893C8 /* RNSTraffickMarkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTraffickMarkData.swift; path = Models/TraffickMark/RNSTraffickMarkData.swift; sourceTree = "<group>"; };
+		8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTrafficData.swift; path = Models/Traffic/RNSTrafficData.swift; sourceTree = "<group>"; };
+		8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
+		8326AA431F1F6A1C00F893C8 /* mainFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mainFont.otf; path = Resources/mainFont.otf; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D80711F1DAC0400FEE390 /* RNISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D80751F1DAC0400FEE390 /* RNISTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNISTests.swift; sourceTree = "<group>"; };
@@ -194,6 +206,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8326AA2F1F1F51A700F893C8 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				8326AA301F1F51A700F893C8 /* Dictionary+Utils.swift */,
+			);
+			name = Dictionary;
+			path = "Library/Helpers/Base objects extensions/Dictionary";
+			sourceTree = "<group>";
+		};
+		8326AA331F1F57AA00F893C8 /* TraffickMark */ = {
+			isa = PBXGroup;
+			children = (
+				8326AA341F1F57CF00F893C8 /* RNSTraffickMarkData.swift */,
+			);
+			name = TraffickMark;
+			sourceTree = "<group>";
+		};
+		8326AA361F1F59C400F893C8 /* Traffic */ = {
+			isa = PBXGroup;
+			children = (
+				8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */,
+			);
+			name = Traffic;
+			sourceTree = "<group>";
+		};
+		8326AA391F1F631900F893C8 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		8326AA3C1F1F643E00F893C8 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */,
+			);
+			name = Button;
+			path = "Library/Helpers/Base objects extensions/Button";
+			sourceTree = "<group>";
+		};
 		836D80511F1DAC0400FEE390 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +301,7 @@
 		836D80811F1DAE2400FEE390 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8326AA391F1F631900F893C8 /* Buttons */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -255,6 +309,8 @@
 		836D80821F1DAE3300FEE390 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8326AA361F1F59C400F893C8 /* Traffic */,
+				8326AA331F1F57AA00F893C8 /* TraffickMark */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -291,6 +347,7 @@
 		836D80861F1DAE5400FEE390 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8326AA431F1F6A1C00F893C8 /* mainFont.otf */,
 				836D80BB1F1DB38D00FEE390 /* RNIS.xcdatamodeld */,
 				836D80B31F1DB37000FEE390 /* LaunchScreen.storyboard */,
 				836D80B01F1DB35400FEE390 /* Assets.xcassets */,
@@ -371,6 +428,8 @@
 		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8326AA3C1F1F643E00F893C8 /* Button */,
+				8326AA2F1F1F51A700F893C8 /* Dictionary */,
 				83B2E09D1F1E14F800FA92A4 /* NSError */,
 				836D80F11F1DD5F600FEE390 /* View */,
 			);
@@ -583,6 +642,7 @@
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 				836D80B91F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
+				8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */,
 				836D80B11F1DB35400FEE390 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +654,7 @@
 				836D80AC1F1DB32E00FEE390 /* Info.plist in Resources */,
 				836D80BA1F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
 				836D80B61F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
+				8326AA451F1F6A1C00F893C8 /* mainFont.otf in Resources */,
 				836D80B21F1DB35400FEE390 /* Assets.xcassets in Resources */,
 				836D80A91F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 			);
@@ -672,12 +733,16 @@
 				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				836D80DA1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
+				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
+				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
 				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
+				8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
 				83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
 				83B2E08C1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */,
 				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
+				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
@@ -708,6 +773,7 @@
 				836D80D91F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
 				83B2E07D1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
 				83B2E09C1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
+				8326AA321F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
 				83B2E0851F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
 				83B2E0991F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				83B2E0931F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
@@ -852,6 +918,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EWEHB93998;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNIS/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -882,6 +949,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EWEHB93998;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNIS/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

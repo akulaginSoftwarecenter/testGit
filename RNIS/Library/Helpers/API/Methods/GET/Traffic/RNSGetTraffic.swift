@@ -7,26 +7,28 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class RNSGetTraffic: AlamofireAPI {
     
     var minCoord: PGGeoPoint?
     var maxCoord: PGGeoPoint?
-    var zoom: Int?
+    var zoom: Int32?
     
-    convenience init(minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int?) {
+    @discardableResult convenience init(minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int32?, completion: @escaping APICompletion) {
         self.init()
         
         self.minCoord = minCoord
         self.maxCoord = maxCoord
         self.zoom = zoom
+        sendRequestWithCompletion(completion: completion)
     }
     
     override var path: String {
         return "http://traffic.tmcrussia.com/"
     }
     
-    override var parameters: [String : AnyObject] {
+    override var parameters: [String : Any] {
         guard let minCoord = minCoord,
             let maxCoord = maxCoord,
             let zoom = zoom else {
@@ -37,19 +39,25 @@ class RNSGetTraffic: AlamofireAPI {
                     "lon2": maxCoord.longitude,
                     "lat2": maxCoord.latitude,
                     "z": zoom]
-  
-        /*
-        var dict = object as! [String : AnyObject]
-        if !SLTGraphManager.visibleTitleAll {
-            if let clid = SLTLineManager.clid {
-                dict["clid"] = clid
-            }
-        }
-        return super.parameters + dict
- */
-        return [:]
+        
+        return super.parameters.merged(with: dict)
     }
     
-
-
+    override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
+        guard let dict = reply as? AliasDictionary else {
+            return
+        }
+       
+        guard let model = RNSTrafficData(JSON: dict),
+                model.b != nil else {
+             superError()
+            return
+        }
+        super.apiDidReturnReply(model.averageMarks as AnyObject, source: source)
+    }
+    
+    
+    override func superError() {
+        super.apiDidFailWithError(NSError(domain: "Не удалось получить полную информацию о трафике в данном регионе.", code: 0, userInfo: [:]))
+    }
 }

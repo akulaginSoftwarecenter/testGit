@@ -117,6 +117,6 @@ extension AlamofireAPI {
     }
     
     func superError() {
-        super.apiDidFailWithError(NSError(domain: "error parse", code: 0, userInfo: [:]))
+        super.apiDidFailWithError(NSError(domain: "error", code: 0, userInfo: [:]))
     }
 }

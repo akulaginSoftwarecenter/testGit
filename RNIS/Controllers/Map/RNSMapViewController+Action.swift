@@ -16,9 +16,7 @@ extension RNSMapViewController {
     
     @IBAction func lightAction(_ sender: Any) {
         changeTraffic()
-
-        
-        
+        print("changeTraffic")
     }
     
     @IBAction func compasAction(_ sender: Any) {

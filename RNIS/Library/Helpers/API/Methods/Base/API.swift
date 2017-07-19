@@ -33,8 +33,8 @@ public class API: NSObject {
     var object: AnyObject?
 
     // Override this method to add some parameters to URL
-    var parameters: [String: AnyObject] {
-        let parameters = [String: AnyObject]()
+    var parameters: AliasDictionary {
+        let parameters = AliasDictionary()
         
         //parameters["sid"] = SLTAuthManager.token as AnyObject?
  
