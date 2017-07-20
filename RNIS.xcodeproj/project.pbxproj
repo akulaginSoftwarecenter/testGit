@@ -52,6 +52,10 @@
 		8375DEA01F204FA700FCA26E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE9D1F204FA700FCA26E /* LoaderView.swift */; };
 		8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9E1F204FA700FCA26E /* LoaderView.xib */; };
 		8375DEA21F204FA700FCA26E /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9E1F204FA700FCA26E /* LoaderView.xib */; };
+		8375DEA41F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */; };
+		8375DEA51F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */; };
+		8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */; };
+		8375DEA81F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
 		83B2E07D1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
@@ -159,6 +163,8 @@
 		8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSLightButton.xib; path = Views/Buttons/RNSlightButton/RNSLightButton.xib; sourceTree = "<group>"; };
 		8375DE9D1F204FA700FCA26E /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		8375DE9E1F204FA700FCA26E /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
+		8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Traffic.swift"; path = "Controllers/Map/RNSMapViewController+Traffic.swift"; sourceTree = "<group>"; };
+		8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+MapView.swift"; path = "Controllers/Map/RNSMapViewController+MapView.swift"; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
 		83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofirePagedAPI.swift; sourceTree = "<group>"; };
@@ -398,6 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				836D80C01F1DB3B000FEE390 /* RNSMapViewController.swift */,
+				8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */,
+				8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */,
 				83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */,
 				836D80B71F1DB37700FEE390 /* RNSMapViewController.storyboard */,
 			);
@@ -754,6 +762,7 @@
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
+				8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */,
 				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
 				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,
 				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
@@ -780,6 +789,7 @@
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
+				8375DEA41F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */,
 				8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
 				83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */,
@@ -791,6 +801,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B2E0A51F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
+				8375DEA51F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */,
 				83B2E0811F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80AF1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80C21F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
@@ -810,6 +821,7 @@
 				8375DEA01F204FA700FCA26E /* LoaderView.swift in Sources */,
 				83B2E07D1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
 				83B2E09C1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
+				8375DEA81F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */,
 				8326AA321F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
 				83B2E0851F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
 				83B2E0991F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,

@@ -19,6 +19,7 @@ class RNSMapViewController: UIViewController {
         mapView.startApplication()
         mapView.clearMapCache()
         mapView.setMapHost(mapHost)
+        mapView.delegate = self
         mapView.setTrafficMarksHost(mapHost)
         mapView.enterForeground()
         mapView.enableMyLocation()
@@ -38,50 +39,10 @@ class RNSMapViewController: UIViewController {
         prepareLightButton()
     }
     
-    func prepareMapView() {
-        mapView.enableCompass()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         startLocation()
-    }
-    
-    func startLocation() {
-        RNSLocationManager.startLocation { [weak self] in
-             self?.centerUserLocation()
-        }
-    }
-    
-    func centerUserLocation() {
-        mapView.setMapCenter(RNSLocationManager.point)
-        mapView.setZoomLevel(13)
-    }
-    
-    var getTraffic: Bool {
-        return mapView.getTraffic()
-    }
-    
-    func changeTraffic() {
-        mapView.setTraffic(!getTraffic)
-        updateStateLightButton()
-        
-    }
-    
-    func prepareLightButton() {
-        lightButton.handlerAction = { [weak self] in
-            self?.changeTraffic()
-        }
-        updateStateLightButton()
-    }
-    
-    func updateStateLightButton() {
-        if getTraffic {
-            lightButton.loadTraffic(minCoord: mapView.lastMinCoord, maxCoord: mapView.lastMaxCoord, zoom: mapView.getZoomLevel())
-        } else {
-            lightButton.hiddenTraffic()
-        }
     }
 }
 
