@@ -603,6 +603,8 @@
 				39AC1E0083836605582D2F05 /* [CP] Embed Pods Frameworks */,
 				5111B14013FA11C8184829C1 /* [CP] Copy Pods Resources */,
 				836D80C41F1DB75E00FEE390 /* Embed PlugIns */,
+				8375DEA91F20681700FCA26E /* ShellScript */,
+				8375DEAA1F20695100FCA26E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -643,7 +645,7 @@
 				TargetAttributes = {
 					836D80591F1DAC0400FEE390 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = EWEHB93998;
+						DevelopmentTeam = EPY5L857V2;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -734,6 +736,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNIS/Pods-RNIS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8375DEA91F20681700FCA26E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f67f202ee4b4de3992f5c52aacbefb74f0c0a6bd 5db0704649e3b17748e00c6d88a2eaf2c3c8de1537d634adcb0cd2d83d04a43a";
+		};
+		8375DEAA1F20695100FCA26E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f67f202ee4b4de3992f5c52aacbefb74f0c0a6bd 5db0704649e3b17748e00c6d88a2eaf2c3c8de1537d634adcb0cd2d83d04a43a";
 		};
 		CDBC72EDE02F640C6AADD15D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -966,7 +994,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = EWEHB93998;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EPY5L857V2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNIS/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -982,8 +1011,9 @@
 					"\"PureLayout\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.softwarecenter.rnis;
+				PRODUCT_BUNDLE_IDENTIFIER = com.t1.rnis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RNIS/RNIS-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "RNIS/Application/RNIS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -997,7 +1027,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = EWEHB93998;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EPY5L857V2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNIS/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1013,8 +1044,9 @@
 					"\"PureLayout\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.softwarecenter.rnis;
+				PRODUCT_BUNDLE_IDENTIFIER = com.t1.rnis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RNIS/RNIS-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "RNIS/Application/RNIS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
