@@ -26,7 +26,7 @@ class RNSTrafficData: Mappable {
     }
     
     var averageMarks: Int {
-        guard let marks = marks else {
+        guard let marks = marks, marks.count > 0 else {
             return 0
         }
         var sum = 0
