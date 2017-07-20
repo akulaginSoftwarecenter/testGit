@@ -29,7 +29,6 @@ class RNSMapViewController: UIViewController {
         return mapView
     }()
     
-    @IBOutlet weak var trafficValueLabel: UILabel!
     @IBOutlet weak var lightButton: RNSLightButton!
     
     override func viewDidLoad() {
@@ -79,53 +78,10 @@ class RNSMapViewController: UIViewController {
     
     func updateStateLightButton() {
         if getTraffic {
-            lightButton.loadTraffic(getTraffic: getTraffic, minCoord: mapView.lastMinCoord, maxCoord: mapView.lastMaxCoord, zoom: mapView.getZoomLevel())
+            lightButton.loadTraffic(minCoord: mapView.lastMinCoord, maxCoord: mapView.lastMaxCoord, zoom: mapView.getZoomLevel())
         } else {
-            lightButton.hiddenLabel()
+            lightButton.hiddenTraffic()
         }
     }
-    /*
-    func loadLightButton() {
-        lightButton.isSelected =  !getTraffic
-        lightButton.isUserInteractionEnabled = false
-        
-        let pointMin = mapView.lastMinCoord;
-        let pointMax = mapView.lastMaxCoord;
-        SVProgressHUD.show()
-        RNSGetTraffic(minCoord: pointMin, maxCoord: pointMax, zoom: mapView.getZoomLevel()) {[weak self] (reply, error, handleError) in
-            SVProgressHUD.dismiss()
-            self?.prepareAverageTraffic(reply as? Int)
-        }
-    }
-    
-    func prepareAverageTraffic(_ average: Int?) {
-        lightButton.isUserInteractionEnabled = true;
-        guard let average = average else {
-            return
-        }
-        var image:UIImage
-        if (average == 0) {
-            image = #imageLiteral(resourceName: "svetofor_selected")
-        } else if (average < 4) {
-            image = #imageLiteral(resourceName: "ic_svetofor_green")
-         }else if (average < 7){
-            image = #imageLiteral(resourceName: "ic_svetofor_orange")
-        }else {
-            image = #imageLiteral(resourceName: "ic_svetofor_red")
-        }
-        lightButton.setImage(image, for: .selected)
-
-        if (average == 0) {
-            trafficValueLabel.isHidden = true;
-        }else {
-            trafficValueLabel.text = String(average);
-            trafficValueLabel.isHidden = false;
-        }
-    }
-    
-    func disableTraffic() {
-        trafficValueLabel.isHidden = true;
-    }
-    */
 }
 

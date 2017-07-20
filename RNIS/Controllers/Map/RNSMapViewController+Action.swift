@@ -10,10 +10,6 @@ import Foundation
 
 extension RNSMapViewController {
     
-    @IBAction func lightAction(_ sender: Any) {
-        changeTraffic()
-    }
-    
     @IBAction func compasAction(_ sender: Any) {
         setMapRegime(0)
         Utils.delay(0.2) {

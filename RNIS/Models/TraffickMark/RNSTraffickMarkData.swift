@@ -24,10 +24,6 @@ class RNSTraffickMarkData: Mappable {
         cityNam <- map["CITY_NAM"]
         lat <- map["Lat"]
         long <- map["Long"]
-        
         mark = Int(map["Mark"].currentValue as? String ?? "")
-        
-        //String(describing: type(of: map["Mark"].currentValue))
-        print("map[Mark]", Int(map["Mark"].currentValue as? String ?? ""))
     }
 }

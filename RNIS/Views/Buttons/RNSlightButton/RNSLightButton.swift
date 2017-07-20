@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSLightButton: UIView {
+class RNSLightButton: BaseViewWithXIBInit {
     
     var handlerAction: EmptyBlock?
     lazy var loaderView:LoaderView = LoaderView()
@@ -19,11 +19,12 @@ class RNSLightButton: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        button.touchUpInside(handler: handlerAction)
+        button.touchUpInside{
+            self.handlerAction?()
+        }
     }
     
-    func loadTraffic(getTraffic: Bool, minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int32?) {
-        button.isSelected =  !getTraffic
+    func loadTraffic(minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int32?) {
         loaderView.showInView(self)
         RNSGetTraffic(minCoord: minCoord, maxCoord: maxCoord, zoom: zoom) {[weak self] (reply, error, handleError) in
             self?.loaderView.remove()
@@ -32,6 +33,23 @@ class RNSLightButton: UIView {
     }
     
     func prepareAverageTraffic(_ average: Int?) {
+        prepareImage(average)
+        prepareLabel(average)
+    }
+    
+    func prepareLabel(_ average: Int?) {
+        guard let average = average else {
+            return
+        }
+        if (average == 0) {
+            hiddenLabel()
+        }else {
+            label.text = String(average);
+            label.isHidden = false;
+        }
+    }
+    
+    func prepareImage(_ average: Int?) {
         guard let average = average else {
             return
         }
@@ -45,17 +63,19 @@ class RNSLightButton: UIView {
         }else {
             image = #imageLiteral(resourceName: "ic_svetofor_red")
         }
-        button.setImage(image, for: .selected)
-        
-        if (average == 0) {
-            hiddenLabel()
-        }else {
-            label.text = String(average);
-            label.isHidden = false;
-        }
+        setImage(image)
+    }
+    
+    func setImage(_ image: UIImage?) {
+        button.setImage(image, for: UIControlState())
     }
     
     func hiddenLabel() {
+        label.isHidden = true;
+    }
+    
+    func hiddenTraffic() {
+        setImage(#imageLiteral(resourceName: "svetofor_deselect"))
         label.isHidden = true;
     }
 }
