@@ -29,7 +29,10 @@ class RNSTrafficData: Mappable {
         guard let marks = marks else {
             return 0
         }
-        let sum = marks.reduce(0) { _, item in +(item.mark ?? 0) }
+        var sum = 0
+        for item in marks {
+            sum += item.mark ?? 0
+        }
         return Int(sum) / marks.count
     }
     

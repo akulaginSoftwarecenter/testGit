@@ -10,13 +10,8 @@ import Foundation
 
 extension RNSMapViewController {
     
-    var trafficEnabled: Bool {
-        return lightButton.isSelected
-    }
-    
     @IBAction func lightAction(_ sender: Any) {
         changeTraffic()
-        print("changeTraffic")
     }
     
     @IBAction func compasAction(_ sender: Any) {

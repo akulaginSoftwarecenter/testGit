@@ -46,6 +46,12 @@
 		836D80EC1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */; };
 		836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
 		836D80F41F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
+		8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE981F204C4000FCA26E /* RNSLightButton.swift */; };
+		8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */; };
+		8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE9D1F204FA700FCA26E /* LoaderView.swift */; };
+		8375DEA01F204FA700FCA26E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE9D1F204FA700FCA26E /* LoaderView.swift */; };
+		8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9E1F204FA700FCA26E /* LoaderView.xib */; };
+		8375DEA21F204FA700FCA26E /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9E1F204FA700FCA26E /* LoaderView.xib */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
 		83B2E07D1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
@@ -149,6 +155,10 @@
 		836D80E01F1DC89D00FEE390 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Library/Constant/Constant.swift; sourceTree = "<group>"; };
 		836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewWithXIBInit.swift; path = "Library/Base classes/BaseViewWithXIBInit/BaseViewWithXIBInit.swift"; sourceTree = "<group>"; };
 		836D80F21F1DD62400FEE390 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Layer.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Layer.swift"; sourceTree = "<group>"; };
+		8375DE981F204C4000FCA26E /* RNSLightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLightButton.swift; path = Views/Buttons/RNSlightButton/RNSLightButton.swift; sourceTree = "<group>"; };
+		8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSLightButton.xib; path = Views/Buttons/RNSlightButton/RNSLightButton.xib; sourceTree = "<group>"; };
+		8375DE9D1F204FA700FCA26E /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		8375DE9E1F204FA700FCA26E /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
 		83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofirePagedAPI.swift; sourceTree = "<group>"; };
@@ -234,6 +244,7 @@
 		8326AA391F1F631900F893C8 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				8375DE971F204C1400FCA26E /* LightButton */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -360,6 +371,7 @@
 			children = (
 				83B2E0661F1E139800FA92A4 /* API */,
 				836D80F01F1DD5EC00FEE390 /* Base objects extensions */,
+				8375DE9C1F204FA700FCA26E /* LoaderView */,
 				836D80881F1DB0E100FEE390 /* ProgorodLiteLibrary */,
 			);
 			name = Helpers;
@@ -442,6 +454,25 @@
 				836D80F21F1DD62400FEE390 /* UIView+Layer.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		8375DE971F204C1400FCA26E /* LightButton */ = {
+			isa = PBXGroup;
+			children = (
+				8375DE981F204C4000FCA26E /* RNSLightButton.swift */,
+				8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */,
+			);
+			name = LightButton;
+			sourceTree = "<group>";
+		};
+		8375DE9C1F204FA700FCA26E /* LoaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8375DE9D1F204FA700FCA26E /* LoaderView.swift */,
+				8375DE9E1F204FA700FCA26E /* LoaderView.xib */,
+			);
+			name = LoaderView;
+			path = Library/Helpers/LoaderView;
 			sourceTree = "<group>";
 		};
 		83B2E0661F1E139800FA92A4 /* API */ = {
@@ -639,8 +670,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 				836D80B91F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
+				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */,
 				836D80B11F1DB35400FEE390 /* Assets.xcassets in Resources */,
@@ -651,6 +684,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8375DEA21F204FA700FCA26E /* LoaderView.xib in Resources */,
 				836D80AC1F1DB32E00FEE390 /* Info.plist in Resources */,
 				836D80BA1F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
 				836D80B61F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
@@ -721,6 +755,7 @@
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
 				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
+				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,
 				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
 				836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
@@ -745,6 +780,7 @@
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
+				8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
 				83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */,
 			);
@@ -771,6 +807,7 @@
 				836D80BE1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				83B2E08B1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				836D80D91F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
+				8375DEA01F204FA700FCA26E /* LoaderView.swift in Sources */,
 				83B2E07D1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
 				83B2E09C1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
 				8326AA321F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,

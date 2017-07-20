@@ -30,12 +30,13 @@ class RNSMapViewController: UIViewController {
     }()
     
     @IBOutlet weak var trafficValueLabel: UILabel!
-    @IBOutlet weak var lightButton: UIButton!
+    @IBOutlet weak var lightButton: RNSLightButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareMapView()
+        prepareLightButton()
     }
     
     func prepareMapView() {
@@ -59,33 +60,46 @@ class RNSMapViewController: UIViewController {
         mapView.setZoomLevel(13)
     }
     
-    func changeTraffic() {
-        lightButton.isSelected =  !trafficEnabled
-        lightButton.isUserInteractionEnabled = false
-        
-        mapView.setTraffic(!mapView.getTraffic())
-        
-        if trafficEnabled {
-            enableTraffic()
-        } else {
-            disableTraffic()
-        }
+    var getTraffic: Bool {
+        return mapView.getTraffic()
     }
     
-    func enableTraffic() {
+    func changeTraffic() {
+        mapView.setTraffic(!getTraffic)
+        updateStateLightButton()
+        
+    }
+    
+    func prepareLightButton() {
+        lightButton.handlerAction = { [weak self] in
+            self?.changeTraffic()
+        }
+        updateStateLightButton()
+    }
+    
+    func updateStateLightButton() {
+        if getTraffic {
+            lightButton.loadTraffic(getTraffic: getTraffic, minCoord: mapView.lastMinCoord, maxCoord: mapView.lastMaxCoord, zoom: mapView.getZoomLevel())
+        } else {
+            lightButton.hiddenLabel()
+        }
+    }
+    /*
+    func loadLightButton() {
+        lightButton.isSelected =  !getTraffic
+        lightButton.isUserInteractionEnabled = false
+        
         let pointMin = mapView.lastMinCoord;
         let pointMax = mapView.lastMaxCoord;
         SVProgressHUD.show()
         RNSGetTraffic(minCoord: pointMin, maxCoord: pointMax, zoom: mapView.getZoomLevel()) {[weak self] (reply, error, handleError) in
             SVProgressHUD.dismiss()
-            self?.lightButton.isUserInteractionEnabled = true;
             self?.prepareAverageTraffic(reply as? Int)
-            print("reply",reply)
-            print("error",error)
         }
     }
     
     func prepareAverageTraffic(_ average: Int?) {
+        lightButton.isUserInteractionEnabled = true;
         guard let average = average else {
             return
         }
@@ -102,7 +116,7 @@ class RNSMapViewController: UIViewController {
         lightButton.setImage(image, for: .selected)
 
         if (average == 0) {
-            trafficValueLabel.isHidden = false;
+            trafficValueLabel.isHidden = true;
         }else {
             trafficValueLabel.text = String(average);
             trafficValueLabel.isHidden = false;
@@ -110,8 +124,8 @@ class RNSMapViewController: UIViewController {
     }
     
     func disableTraffic() {
-        lightButton.isUserInteractionEnabled = true;
         trafficValueLabel.isHidden = true;
     }
+    */
 }
 
