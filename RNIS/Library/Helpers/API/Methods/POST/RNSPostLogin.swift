@@ -13,7 +13,7 @@ class RNSPostLogin: PostRequest {
     override var path: String {
         return serverRnisapi
     }
-    /*
+    
     override var parameters: [String : Any] {
         let headers = ["version": "1.0.0",
                        "requester": "web",
@@ -27,7 +27,7 @@ class RNSPostLogin: PostRequest {
         print("parameters",dict)
         return dict
     }
-    */
+    
     override func prepareURLRequest(_ request: URLRequest) -> URLRequest{
         var mutableRequest = super.prepareURLRequest(request)
     /*
