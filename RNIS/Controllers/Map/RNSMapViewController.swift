@@ -34,7 +34,11 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
+        RNSPostLogin { (_, _, _) in
+            
+        }
+         */
         prepareMapView()
         prepareLightButton()
     }

@@ -13,4 +13,5 @@ var stubLocation: CLLocation?// = CLLocation(latitude: 59.752561, longitude: 30.
 let mapHost = "http://95.213.205.92/"
 
 let serverAddress = ""
+let serverRnisapi = "https://rnisapi.regeora.ru:8001/request"
 let showLogApi = false

@@ -40,7 +40,7 @@ class RNSGetTraffic: AlamofireAPI {
                     "lat2": maxCoord.latitude,
                     "z": zoom]
         
-        return super.parameters.merged(with: dict)
+        return dict
     }
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){

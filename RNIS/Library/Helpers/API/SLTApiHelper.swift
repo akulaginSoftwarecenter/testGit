@@ -10,7 +10,7 @@ import UIKit
 
 class SLTApiHelper {
 
-    static func urlRequestAddContent(_ request: URLRequest, obj: AnyObject) -> URLRequest
+    static func urlRequestAddContent(_ request: URLRequest, obj: [String : Any]) -> URLRequest
     {
         var mutableRequest = request
         let jsonData = try? JSONSerialization.data(withJSONObject: obj, options:JSONSerialization.WritingOptions.prettyPrinted)
