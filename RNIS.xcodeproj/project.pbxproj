@@ -16,6 +16,25 @@
 		8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */; };
 		8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8326AA431F1F6A1C00F893C8 /* mainFont.otf */; };
 		8326AA451F1F6A1C00F893C8 /* mainFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8326AA431F1F6A1C00F893C8 /* mainFont.otf */; };
+		8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
+		8357186D1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
+		835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
+		835718711F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
+		835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
+		835718751F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
+		8357187A1F21A2A500DE5E25 /* RNSLaunchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835718791F21A2A500DE5E25 /* RNSLaunchViewController.storyboard */; };
+		8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357187C1F21A33900DE5E25 /* UIViewController+Storyboards.swift */; };
+		835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718821F21A54600DE5E25 /* RNISAuthManager.swift */; };
+		835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718851F21A73C00DE5E25 /* RNSRequestReply.swift */; };
+		835718891F21A7B700DE5E25 /* RNSTokenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718881F21A7B700DE5E25 /* RNSTokenPayload.swift */; };
+		8357188D1F21A9CA00DE5E25 /* UserDefaults+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357188B1F21A9CA00DE5E25 /* UserDefaults+Auth.swift */; };
+		8357188E1F21A9CA00DE5E25 /* UserDefaults+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357188B1F21A9CA00DE5E25 /* UserDefaults+Auth.swift */; };
+		8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357188C1F21A9CA00DE5E25 /* UserDefaults+Utils.swift */; };
+		835718901F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357188C1F21A9CA00DE5E25 /* UserDefaults+Utils.swift */; };
+		835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718911F21AA5400DE5E25 /* STRouter+Navigation.swift */; };
+		835718931F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718911F21AA5400DE5E25 /* STRouter+Navigation.swift */; };
+		835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718941F21AA9200DE5E25 /* STRouter+Loader.swift */; };
+		835718961F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718941F21AA9200DE5E25 /* STRouter+Loader.swift */; };
 		836D80761F1DAC0400FEE390 /* RNISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80751F1DAC0400FEE390 /* RNISTests.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A71F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
@@ -131,6 +150,18 @@
 		8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTrafficData.swift; path = Models/Traffic/RNSTrafficData.swift; sourceTree = "<group>"; };
 		8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
 		8326AA431F1F6A1C00F893C8 /* mainFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mainFont.otf; path = Resources/mainFont.otf; sourceTree = "<group>"; };
+		8357186B1F219EB600DE5E25 /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
+		8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		835718731F21A05D00DE5E25 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Utils.swift"; sourceTree = "<group>"; };
+		835718791F21A2A500DE5E25 /* RNSLaunchViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSLaunchViewController.storyboard; path = Controllers/Launch/RNSLaunchViewController.storyboard; sourceTree = "<group>"; };
+		8357187C1F21A33900DE5E25 /* UIViewController+Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Storyboards.swift"; path = "Library/Helpers/Base objects extensions/UIViewController/UIViewController+Storyboards.swift"; sourceTree = "<group>"; };
+		835718821F21A54600DE5E25 /* RNISAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNISAuthManager.swift; path = Managers/AuthManager/RNISAuthManager.swift; sourceTree = "<group>"; };
+		835718851F21A73C00DE5E25 /* RNSRequestReply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRequestReply.swift; path = Models/RequestReply/RNSRequestReply.swift; sourceTree = "<group>"; };
+		835718881F21A7B700DE5E25 /* RNSTokenPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTokenPayload.swift; path = Models/TokenPayload/RNSTokenPayload.swift; sourceTree = "<group>"; };
+		8357188B1F21A9CA00DE5E25 /* UserDefaults+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Auth.swift"; sourceTree = "<group>"; };
+		8357188C1F21A9CA00DE5E25 /* UserDefaults+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Utils.swift"; sourceTree = "<group>"; };
+		835718911F21AA5400DE5E25 /* STRouter+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "STRouter+Navigation.swift"; sourceTree = "<group>"; };
+		835718941F21AA9200DE5E25 /* STRouter+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "STRouter+Loader.swift"; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D80711F1DAC0400FEE390 /* RNISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D80751F1DAC0400FEE390 /* RNISTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNISTests.swift; sourceTree = "<group>"; };
@@ -284,6 +315,76 @@
 			path = "Library/Helpers/Base objects extensions/Button";
 			sourceTree = "<group>";
 		};
+		8357186A1F219EB600DE5E25 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8357186B1F219EB600DE5E25 /* STRouter.swift */,
+				835718941F21AA9200DE5E25 /* STRouter+Loader.swift */,
+				835718911F21AA5400DE5E25 /* STRouter+Navigation.swift */,
+			);
+			name = Router;
+			path = Managers/Router;
+			sourceTree = "<group>";
+		};
+		8357186E1F219F1F00DE5E25 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */,
+			);
+			name = NavigationController;
+			path = "Library/Base classes/NavigationController";
+			sourceTree = "<group>";
+		};
+		835718721F219F2D00DE5E25 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				835718821F21A54600DE5E25 /* RNISAuthManager.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		835718761F21A1F300DE5E25 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				835718791F21A2A500DE5E25 /* RNSLaunchViewController.storyboard */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		8357187B1F21A30F00DE5E25 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8357187C1F21A33900DE5E25 /* UIViewController+Storyboards.swift */,
+			);
+			name = UIViewController;
+			sourceTree = "<group>";
+		};
+		835718841F21A6A400DE5E25 /* RequestReply */ = {
+			isa = PBXGroup;
+			children = (
+				835718851F21A73C00DE5E25 /* RNSRequestReply.swift */,
+			);
+			name = RequestReply;
+			sourceTree = "<group>";
+		};
+		835718871F21A79100DE5E25 /* TokenPayload */ = {
+			isa = PBXGroup;
+			children = (
+				835718881F21A7B700DE5E25 /* RNSTokenPayload.swift */,
+			);
+			name = TokenPayload;
+			sourceTree = "<group>";
+		};
+		8357188A1F21A9CA00DE5E25 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				8357188C1F21A9CA00DE5E25 /* UserDefaults+Utils.swift */,
+				8357188B1F21A9CA00DE5E25 /* UserDefaults+Auth.swift */,
+			);
+			name = UserDefaults;
+			path = "Library/Helpers/Base objects extensions/UserDefaults";
+			sourceTree = "<group>";
+		};
 		836D80511F1DAC0400FEE390 = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +431,7 @@
 		836D80801F1DAE1B00FEE390 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				835718761F21A1F300DE5E25 /* Launch */,
 				836D80BF1F1DB3A700FEE390 /* Map */,
 			);
 			name = Controllers;
@@ -346,6 +448,8 @@
 		836D80821F1DAE3300FEE390 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				835718871F21A79100DE5E25 /* TokenPayload */,
+				835718841F21A6A400DE5E25 /* RequestReply */,
 				8326AA361F1F59C400F893C8 /* Traffic */,
 				8326AA331F1F57AA00F893C8 /* TraffickMark */,
 			);
@@ -366,7 +470,9 @@
 		836D80841F1DAE4500FEE390 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				835718721F219F2D00DE5E25 /* Auth */,
 				836D80CF1F1DC67800FEE390 /* Location */,
+				8357186A1F219EB600DE5E25 /* Router */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -452,6 +558,7 @@
 		836D80E81F1DD59800FEE390 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
+				8357186E1F219F1F00DE5E25 /* NavigationController */,
 				836D80E91F1DD59F00FEE390 /* BaseViewWithXIBInit */,
 			);
 			name = "Base classes";
@@ -471,6 +578,8 @@
 				8326AA3C1F1F643E00F893C8 /* Button */,
 				8326AA2F1F1F51A700F893C8 /* Dictionary */,
 				83B2E09D1F1E14F800FA92A4 /* NSError */,
+				8357187B1F21A30F00DE5E25 /* UIViewController */,
+				8357188A1F21A9CA00DE5E25 /* UserDefaults */,
 				836D80F11F1DD5F600FEE390 /* View */,
 			);
 			name = "Base objects extensions";
@@ -480,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				836D80F21F1DD62400FEE390 /* UIView+Layer.swift */,
+				835718731F21A05D00DE5E25 /* UIView+Utils.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -708,6 +818,7 @@
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */,
+				8357187A1F21A2A500DE5E25 /* RNSLaunchViewController.storyboard in Resources */,
 				836D80B11F1DB35400FEE390 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -808,20 +919,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
+				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
+				835718891F21A7B700DE5E25 /* RNSTokenPayload.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
 				8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */,
 				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
 				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,
+				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
+				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
 				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
 				836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
+				8357188D1F21A9CA00DE5E25 /* UserDefaults+Auth.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
+				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
 				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
 				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
 				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,
+				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				831D89951F2075C500082116 /* RNSPostLogin.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
@@ -830,18 +948,22 @@
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
+				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
 				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
 				8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
 				83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
+				835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */,
 				83B2E08C1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */,
 				831D89931F2075A300082116 /* PostRequest.swift in Sources */,
 				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
+				835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
 				8375DEA41F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */,
+				8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */,
 				8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
 				83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */,
@@ -853,10 +975,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B2E0A51F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
+				835718961F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
 				8375DEA51F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */,
+				8357188E1F21A9CA00DE5E25 /* UserDefaults+Auth.swift in Sources */,
+				835718751F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				83B2E0811F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80AF1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836D80C21F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
+				8357186D1F219EB600DE5E25 /* STRouter.swift in Sources */,
+				835718901F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				836D80DB1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
 				83B2E08F1F1E139800FA92A4 /* APIModel.swift in Sources */,
 				836D80F41F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
@@ -865,6 +992,7 @@
 				83B2E07F1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
 				83B2E0871F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
 				83B2E0A01F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
+				835718711F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				836D80E21F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80DE1F1DC87100FEE390 /* Utils.swift in Sources */,
 				836D80BE1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
@@ -882,6 +1010,7 @@
 				83B2E0951F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
 				83B2E0971F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80761F1DAC0400FEE390 /* RNISTests.swift in Sources */,
+				835718931F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
 				83B2E0891F1E139800FA92A4 /* API.swift in Sources */,
 				83B2E0831F1E139800FA92A4 /* API+Creating.swift in Sources */,
 			);

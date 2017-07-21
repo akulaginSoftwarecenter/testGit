@@ -10,6 +10,13 @@ import UIKit
 
 class RNSPostLogin: PostRequest {
     
+    @discardableResult override init() {
+        super.init()
+        
+        STRouter.showLoader()
+        sendRequest()
+    }
+    
     override var path: String {
         return serverRnisapi
     }
@@ -35,10 +42,24 @@ class RNSPostLogin: PostRequest {
     }
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        print("apiDidReturnReply",reply)
+        removeLoader()
+        guard let model = RNSRequestReply<RNSTokenPayload>(reply: reply) else {
+                superError()
+                return
+        }
+        guard let token = model.payload?.token else {
+            return
+        }
+        UserDefaults.setToken(token)
+        STRouter.showMap()
+        print("RNSPostLogin",token)
     }
     
     override func apiDidFailWithError(_ error: NSError) {
-        print("apiDidFailWithError",error)
+        removeLoader()
+    }
+    
+    func removeLoader() {
+        STRouter.removeLoader()
     }
 }

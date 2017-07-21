@@ -20,4 +20,8 @@ class Utils {
             closure?()
         })
     }
+    
+    static func stringFromSwiftClass(_ swiftClass: AnyClass) -> String {
+        return NSStringFromClass(swiftClass).components(separatedBy: ".").last!
+    }
 }

@@ -5,6 +5,7 @@ PODS:
   - Fabric (1.6.11)
   - ObjectMapper (2.2.7)
   - PureLayout (3.0.2)
+  - SnapKit (3.0.2)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - Fabric
   - ObjectMapper (~> 2.0)
   - PureLayout
+  - SnapKit (~> 3.0.2)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -21,8 +23,9 @@ SPEC CHECKSUMS:
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 9aa7f0ea432648ede28b35e6bcd59e5b7e81167e
+PODFILE CHECKSUM: a1a41285ff6d1ed759a6aef45a73761ac95a8df1
 
 COCOAPODS: 1.2.0

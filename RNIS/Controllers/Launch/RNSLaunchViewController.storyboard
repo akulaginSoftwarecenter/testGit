@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UMU-w3-PrX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eSd-dr-Jdu">
+            <objects>
+                <viewController id="gRt-bq-7Rg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sfP-pC-A0b"/>
+                        <viewControllerLayoutGuide type="bottom" id="WuV-G9-N0O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rOy-59-kFP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-6W-d9x">
+                                <rect key="frame" x="111" y="311.5" width="152" height="44"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АВТОРИЗАЦИЯ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n20-6N-4AX">
+                                <rect key="frame" x="129" y="392.5" width="117" height="20"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8862745098" green="0.36862745099999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FsJ-6W-d9x" firstAttribute="centerY" secondItem="rOy-59-kFP" secondAttribute="centerY" id="4NE-Td-ymp"/>
+                            <constraint firstItem="FsJ-6W-d9x" firstAttribute="centerX" secondItem="rOy-59-kFP" secondAttribute="centerX" id="hBP-nm-QaN"/>
+                            <constraint firstItem="n20-6N-4AX" firstAttribute="centerX" secondItem="FsJ-6W-d9x" secondAttribute="centerX" id="niR-07-2vB"/>
+                            <constraint firstItem="n20-6N-4AX" firstAttribute="top" secondItem="FsJ-6W-d9x" secondAttribute="bottom" constant="37" id="wIm-x9-IZM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3dK-dj-B9m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kug-bS-XqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="d8i-98-iC1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UMU-w3-PrX" customClass="BaseNavigationController" customModule="Spytricks" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="682-TC-yN9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gRt-bq-7Rg" kind="relationship" relationship="rootViewController" id="43h-eJ-1Wa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9CB-KL-wwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="152" height="44"/>
+    </resources>
+</document>

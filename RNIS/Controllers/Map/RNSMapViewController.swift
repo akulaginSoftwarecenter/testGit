@@ -35,10 +35,6 @@ class RNSMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RNSPostLogin { (_, _, _) in
-            
-        }
-         
         prepareMapView()
         prepareLightButton()
     }
@@ -47,6 +43,10 @@ class RNSMapViewController: UIViewController {
         super.viewDidAppear(animated)
         
         startLocation()
+    }
+    
+    override class var storyboardName: String {
+        return "RNSMapViewController"
     }
 }
 
