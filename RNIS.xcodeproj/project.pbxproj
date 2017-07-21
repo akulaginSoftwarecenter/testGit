@@ -35,6 +35,12 @@
 		835718931F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718911F21AA5400DE5E25 /* STRouter+Navigation.swift */; };
 		835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718941F21AA9200DE5E25 /* STRouter+Loader.swift */; };
 		835718961F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718941F21AA9200DE5E25 /* STRouter+Loader.swift */; };
+		8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8357189C1F21AFD700DE5E25 /* RNSBuildRouteView.xib */; };
+		8357189E1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8357189C1F21AFD700DE5E25 /* RNSBuildRouteView.xib */; };
+		835718A01F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357189F1F21AFE100DE5E25 /* RNSBuildRouteView.swift */; };
+		835718A11F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357189F1F21AFE100DE5E25 /* RNSBuildRouteView.swift */; };
+		835718A31F21B37800DE5E25 /* RNSBuildRouteView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718A21F21B37800DE5E25 /* RNSBuildRouteView+Action.swift */; };
+		835718A41F21B37800DE5E25 /* RNSBuildRouteView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718A21F21B37800DE5E25 /* RNSBuildRouteView+Action.swift */; };
 		836D80761F1DAC0400FEE390 /* RNISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80751F1DAC0400FEE390 /* RNISTests.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A71F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
@@ -162,6 +168,9 @@
 		8357188C1F21A9CA00DE5E25 /* UserDefaults+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Utils.swift"; sourceTree = "<group>"; };
 		835718911F21AA5400DE5E25 /* STRouter+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "STRouter+Navigation.swift"; sourceTree = "<group>"; };
 		835718941F21AA9200DE5E25 /* STRouter+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "STRouter+Loader.swift"; sourceTree = "<group>"; };
+		8357189C1F21AFD700DE5E25 /* RNSBuildRouteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSBuildRouteView.xib; path = Views/Map/BuildRouteView/RNSBuildRouteView.xib; sourceTree = "<group>"; };
+		8357189F1F21AFE100DE5E25 /* RNSBuildRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBuildRouteView.swift; path = Views/Map/BuildRouteView/RNSBuildRouteView.swift; sourceTree = "<group>"; };
+		835718A21F21B37800DE5E25 /* RNSBuildRouteView+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBuildRouteView+Action.swift"; path = "Views/Map/BuildRouteView/RNSBuildRouteView+Action.swift"; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D80711F1DAC0400FEE390 /* RNISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D80751F1DAC0400FEE390 /* RNISTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNISTests.swift; sourceTree = "<group>"; };
@@ -385,6 +394,24 @@
 			path = "Library/Helpers/Base objects extensions/UserDefaults";
 			sourceTree = "<group>";
 		};
+		835718971F21AE2600DE5E25 /* BuildRouteView */ = {
+			isa = PBXGroup;
+			children = (
+				8357189F1F21AFE100DE5E25 /* RNSBuildRouteView.swift */,
+				835718A21F21B37800DE5E25 /* RNSBuildRouteView+Action.swift */,
+				8357189C1F21AFD700DE5E25 /* RNSBuildRouteView.xib */,
+			);
+			name = BuildRouteView;
+			sourceTree = "<group>";
+		};
+		835718981F21AE3900DE5E25 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				835718971F21AE2600DE5E25 /* BuildRouteView */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		836D80511F1DAC0400FEE390 = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +467,7 @@
 		836D80811F1DAE2400FEE390 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				835718981F21AE3900DE5E25 /* Map */,
 				8326AA391F1F631900F893C8 /* Buttons */,
 			);
 			name = Views;
@@ -815,6 +843,7 @@
 				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 				836D80B91F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
+				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */,
@@ -830,6 +859,7 @@
 				8375DEA21F204FA700FCA26E /* LoaderView.xib in Resources */,
 				836D80AC1F1DB32E00FEE390 /* Info.plist in Resources */,
 				836D80BA1F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
+				8357189E1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
 				836D80B61F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				8326AA451F1F6A1C00F893C8 /* mainFont.otf in Resources */,
 				836D80B21F1DB35400FEE390 /* Assets.xcassets in Resources */,
@@ -959,6 +989,7 @@
 				831D89931F2075A300082116 /* PostRequest.swift in Sources */,
 				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
 				835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
+				835718A31F21B37800DE5E25 /* RNSBuildRouteView+Action.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
@@ -967,6 +998,7 @@
 				8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
 				83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */,
+				835718A01F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,11 +1039,13 @@
 				83B2E0991F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				83B2E0931F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
 				83B2E08D1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */,
+				835718A41F21B37800DE5E25 /* RNSBuildRouteView+Action.swift in Sources */,
 				83B2E0951F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
 				83B2E0971F1E139800FA92A4 /* Parser.swift in Sources */,
 				836D80761F1DAC0400FEE390 /* RNISTests.swift in Sources */,
 				835718931F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
 				83B2E0891F1E139800FA92A4 /* API.swift in Sources */,
+				835718A11F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */,
 				83B2E0831F1E139800FA92A4 /* API+Creating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
