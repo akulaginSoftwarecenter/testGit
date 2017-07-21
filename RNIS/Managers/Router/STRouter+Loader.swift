@@ -12,6 +12,7 @@ import SVProgressHUD
 extension STRouter {
     
     static func showLoader() {
+        SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.show()
     }
     

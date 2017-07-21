@@ -12,8 +12,6 @@ class STRouter: NSObject {
     
     static let shared = STRouter()
     
-    static var loaderView:LoaderView = LoaderView()
-    
     static var rootViewController:BaseNavigationController? {
         return UIApplication.shared.delegate!.window!!.rootViewController as! BaseNavigationController?
     }

@@ -23,7 +23,7 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         prepareMapView()
         prepareLightButton()
     }

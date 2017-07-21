@@ -536,9 +536,9 @@
 		836D80841F1DAE4500FEE390 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				835718B01F21C84400DE5E25 /* Map */,
 				835718721F219F2D00DE5E25 /* Auth */,
 				836D80CF1F1DC67800FEE390 /* Location */,
+				835718B01F21C84400DE5E25 /* Map */,
 				8357186A1F219EB600DE5E25 /* Router */,
 			);
 			name = Managers;
