@@ -13,14 +13,18 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSBuildRouteView" customModule="RNIS" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSBuildRouteView" customModule="RNIS" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomConstraint" destination="M50-kn-313" id="oa1-ds-oH8"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5o-M8-Axa">
-                    <rect key="frame" x="0.0" y="466" width="375" height="201"/>
+                    <rect key="frame" x="0.0" y="667" width="375" height="201"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Построить маршрут:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OS-FX-Wiz">
                             <rect key="frame" x="103" y="23" width="169" height="24"/>
@@ -95,7 +99,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ7-sX-ckp">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <connections>
                         <action selector="removeAction:" destination="-1" eventType="touchUpInside" id="75o-YP-fs0"/>
                     </connections>
@@ -108,9 +112,15 @@
                 <constraint firstItem="lJ7-sX-ckp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DYd-fM-VPv"/>
                 <constraint firstItem="lJ7-sX-ckp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KJG-XZ-wtj"/>
                 <constraint firstAttribute="bottom" secondItem="G5o-M8-Axa" secondAttribute="bottom" id="M50-kn-313"/>
+                <constraint firstItem="G5o-M8-Axa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="bottom" priority="750" id="VKf-Rt-hi6"/>
                 <constraint firstItem="G5o-M8-Axa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o0D-lf-YSA"/>
                 <constraint firstAttribute="trailing" secondItem="G5o-M8-Axa" secondAttribute="trailing" id="wD4-vg-EAX"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="M50-kn-313"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>
     </objects>

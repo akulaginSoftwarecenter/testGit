@@ -22,4 +22,16 @@ extension UIView {
             _ = make.height.equalTo(81).constraint
         }
     }
+    
+    static func animateConstrains(_ target: UIView?, animations: @escaping () -> Void) {
+        guard let target = target else {
+            animations()
+            return
+        }
+        target.layoutIfNeeded()
+        UIView.animate(withDuration: 0.3, animations: {
+            animations()
+            target.layoutIfNeeded()
+        })
+    }
 }

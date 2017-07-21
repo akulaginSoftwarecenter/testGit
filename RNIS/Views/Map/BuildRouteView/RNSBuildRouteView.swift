@@ -13,22 +13,8 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     @discardableResult convenience init() {
         self.init(frame: CGRect.zero)
         
-        show()
+        animateShow()
     }
     
-    func show() {
-        guard let view = STRouter.rootView else {
-                return
-        }
-        view.addSubview(self)
-        self.autoPinEdgesToSuperviewEdges()
-        alpha = 0;
-        UIView.animate(withDuration: 0.1) {[weak self] in
-            self?.alpha = 1
-            }
-    }
-    
-    func remove() {
-        removeFromSuperview()
-    }
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 }
