@@ -11,14 +11,14 @@ import Foundation
 extension RNSBuildRouteView {
     
     @IBAction func removeAction(_ sender: Any) {
-        remove()
+        removeAnimate()
     }
     
     @IBAction func actionFrom(_ sender: Any) {
-        remove()
+        removeAnimate()
     }
     
     @IBAction func actionIn(_ sender: Any) {
-        remove()
+        removeAnimate()
     }
 }

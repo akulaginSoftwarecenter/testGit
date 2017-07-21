@@ -17,4 +17,14 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     }
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    func remove() {
+        RNSMapManager.removeOldPinBuild()
+        self.removeFromSuperview()
+    }
+    
+    deinit {
+        print("RNSBuildRouteView deinit")
+    }
+    
 }

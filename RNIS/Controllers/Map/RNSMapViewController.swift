@@ -8,25 +8,14 @@
 
 import UIKit
 import PureLayout
-import SVProgressHUD
 
 class RNSMapViewController: UIViewController {
     
     lazy var mapView: MapView = {
-        let mapView = MapView()
+        let mapView = RNSMapManager.mapView
         self.view.insertSubview(mapView, at: 0)
         mapView.autoPinEdgesToSuperviewEdges()
-        mapView.startApplication()
-        mapView.clearMapCache()
-        mapView.setMapHost(mapHost)
         mapView.delegate = self
-        mapView.setTrafficMarksHost(mapHost)
-        mapView.enterForeground()
-        mapView.enableMyLocation()
-        mapView.setMapRegime(1)
-        let overlay = mapView.myLocationOverlay()
-        overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
-        overlay?.setRotationEnabled(false)
         return mapView
     }()
     
@@ -34,7 +23,7 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         prepareMapView()
         prepareLightButton()
     }

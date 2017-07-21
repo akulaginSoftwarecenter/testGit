@@ -31,11 +31,9 @@ extension RNSBuildRouteView {
         }
     }
     
-    func remove() {
+    func removeAnimate() {
         animateBottom(false)
-        animateAlpha(0) {
-            self.removeFromSuperview()
-        }
+        animateAlpha(0, complete: remove)
     }
     
     func animateAlpha(_ alpha: CGFloat, complete: EmptyBlock? = nil) {

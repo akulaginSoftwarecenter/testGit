@@ -7,16 +7,15 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 extension STRouter {
     
     static func showLoader() {
-        if let view = rootViewController?.view {
-            loaderView.showInView(view)
-        }
+        SVProgressHUD.show()
     }
     
     static func removeLoader() {
-        loaderView.remove()
+        SVProgressHUD.dismiss()
     }
 }
