@@ -11,6 +11,8 @@ import UIKit
 class RNSMapManager {
     static let shared = RNSMapManager()
     
+    static var route: PGLiteRoute?
+    
     static var mapView: MapView {
         return shared.mapView
     }
@@ -35,4 +37,16 @@ class RNSMapManager {
     }
     
     static var handlerRemovePinBuild: EmptyBlock?
+    static var handlerAddRoute: ((PGLiteRoute?) -> ())?
+    
+    static func prepareRoute(_ route: PGLiteRoute?) {
+        guard let route = route else {
+            return
+        }
+        RNSMapManager.route?.clearResults(true)
+        if !route.build() {
+            print("ROUTE NOT BUILD")
+        }
+        RNSMapManager.route = route
+    }
 }

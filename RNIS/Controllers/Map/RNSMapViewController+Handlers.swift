@@ -8,4 +8,5 @@
 
 import Foundation
 
-extension RNSMapViewController {}
+extension RNSMapViewController {
+}

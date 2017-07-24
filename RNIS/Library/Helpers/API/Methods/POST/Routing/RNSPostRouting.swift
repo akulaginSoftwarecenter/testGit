@@ -12,11 +12,14 @@ class RNSPostRouting: RNSPostRequest {
     
     var point: PGGeoPoint?
     
-    @discardableResult convenience init(_ point: PGGeoPoint?) {
+    @discardableResult convenience init(_ point: PGGeoPoint?, complete: EmptyBlock?) {
         self.init()
         
         self.point = point
-        sendRequest()
+        showLoader()
+        sendRequestWithCompletion { (_, _, _) in
+            complete?()
+        }
     }
     
     override var headers: AliasDictionary {
@@ -46,15 +49,12 @@ class RNSPostRouting: RNSPostRequest {
     }
 
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        print("apiDidReturnReply",reply)
         removeLoader()
         guard let model = RNSRequestReply<RNSRoutingPayload>(reply: reply) else {
             superError()
             return
         }
-        guard let distance = model.payload?.distance else {
-            return
-        }
-        print("RNSPOSTRouting",distance)
-    }
+        RNSMapManager.prepareRoute(model.payload?.route)
+        super.apiDidReturnReply(reply, source: source)
+   }
 }

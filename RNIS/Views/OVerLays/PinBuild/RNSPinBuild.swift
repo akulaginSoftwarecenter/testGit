@@ -29,8 +29,6 @@ class RNSPinBuild: PGOverlay {
         addOnMap()
         overlayItem.geoPoint = point
         populate()
-        print("RNSMapManager.mapView1",RNSMapManager.mapView)
-        print("RNSMapManager.mapView2",RNSMapManager.mapView.overlays().count)
     }
     
     func addOnMap() {

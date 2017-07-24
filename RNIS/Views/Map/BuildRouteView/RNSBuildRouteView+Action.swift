@@ -16,11 +16,9 @@ extension RNSBuildRouteView {
     
     @IBAction func actionFrom(_ sender: Any) {
         requestRoute()
-        //removeAnimate()
-    }
+     }
     
     @IBAction func actionIn(_ sender: Any) {
         requestRoute()
-        //removeAnimate()
     }
 }

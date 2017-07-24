@@ -52,4 +52,8 @@ class RNSPostRequest: AlamofireAPI {
     func removeLoader() {
         STRouter.removeLoader()
     }
+    
+    func showLoader() {
+        STRouter.showLoader()
+    }
 }

@@ -13,7 +13,7 @@ class RNSPostLogin: RNSPostRequest {
     @discardableResult override init() {
         super.init()
         
-        STRouter.showLoader()
+        showLoader()
         sendRequest()
     }
     

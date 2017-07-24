@@ -26,7 +26,6 @@ class RNSRoutingPayload: RNISMappableBase {
         let points = items.flatMap({ (array) -> PGRoutePoint! in
             let point = PGGeoPoint(latitude: array.first ?? 0, longitude: array.last ?? 0)
             return PGRoutePoint(pos: point, title: "") })
-        print("points",points)
         let route = PGLiteRoute()
         route.setStartPos(points.first)
         route.setFinishPos(points.last)
