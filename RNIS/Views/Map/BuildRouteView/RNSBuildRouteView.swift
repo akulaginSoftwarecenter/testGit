@@ -26,6 +26,6 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     }
     
     func requestRoute() {
-        RNSPOSTRouting(point)
+        RNSPostRouting(point)
     }
 }

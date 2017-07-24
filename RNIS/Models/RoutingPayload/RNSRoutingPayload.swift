@@ -12,10 +12,25 @@ import ObjectMapper
 class RNSRoutingPayload: RNISMappableBase {
     
     var distance: CGFloat?
-    var points: [RNSPoint]?
+    var route: PGLiteRoute?
     
     public override func mapping(map: Map) {
         distance <- map["distance"]
-        points <- map["points"]
+        parseRoute(map["points"].currentValue)
+    }
+    
+    func parseRoute(_ currentValue: Any?) {
+        guard let items = currentValue as? [[Double]] else {
+            return
+        }
+        let points = items.flatMap({ (array) -> PGRoutePoint! in
+            let point = PGGeoPoint(latitude: array.first ?? 0, longitude: array.last ?? 0)
+            return PGRoutePoint(pos: point, title: "") })
+        print("points",points)
+        let route = PGLiteRoute()
+        route.setStartPos(points.first)
+        route.setFinishPos(points.last)
+        route.setViaPos(points)
+        self.route = route
     }
 }

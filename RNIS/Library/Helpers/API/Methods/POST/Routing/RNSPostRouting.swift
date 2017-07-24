@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSPOSTRouting: RNSPostRequest {
+class RNSPostRouting: RNSPostRequest {
     
     var point: PGGeoPoint?
     
