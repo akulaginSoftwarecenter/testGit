@@ -2,7 +2,7 @@
 //  RNISTests.swift
 //  RNISTests
 //
-//  Created by Артем Кулагин on 18.07.17.
+//  Created by Артем Кулагин on 24.07.17.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import XCTest
 @testable import RNIS
 
 class RNISTests: XCTestCase {
-    
+    /*
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -32,5 +32,16 @@ class RNISTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+    */
+
+    func testDataTask() {
+        let expectation = self.expectation(description: "asynchronous request")
+        print("testLogin")
+        RNSPostLogin { (reply, error, _) in
+            print("RNSPostLogin reply",reply as Any)
+            print("RNSPostLogin error",error as Any)
+            expectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 10)
+    }
 }
