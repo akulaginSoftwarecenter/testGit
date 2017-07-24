@@ -10,21 +10,22 @@ import UIKit
 
 class RNSBuildRouteView: BaseViewWithXIBInit {
     
-    @discardableResult convenience init() {
-        self.init(frame: CGRect.zero)
-        
-        animateShow()
-    }
-    
+    var point: PGGeoPoint?
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    @discardableResult convenience init(_ point: PGGeoPoint?) {
+        self.init(frame: CGRect.zero)
+        
+        self.point = point
+        animateShow()
+    }
+   
     func remove() {
         RNSMapManager.removeOldPinBuild()
         self.removeFromSuperview()
     }
     
-    deinit {
-        print("RNSBuildRouteView deinit")
+    func requestRoute() {
+        RNSPOSTRouting(point)
     }
-    
 }

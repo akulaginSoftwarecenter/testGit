@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class RNSRequestReply<T: Mappable>: Mappable {
+class RNSRequestReply<T: Mappable>: RNISMappableBase {
     var payload: T?
     
     convenience init?(reply: AnyObject) {
@@ -19,10 +19,7 @@ class RNSRequestReply<T: Mappable>: Mappable {
         self.init(JSON: dict)
     }
     
-    required init?(map: Map) {
-    }
-    
-    public func mapping(map: Map) {
+    public override func mapping(map: Map) {
         payload <- map["payload"]
     }
 }

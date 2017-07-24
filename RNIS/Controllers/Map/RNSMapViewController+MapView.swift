@@ -30,7 +30,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     }
     
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
-        RNSBuildRouteView()
+        RNSBuildRouteView(point)
         mapView.setMapCenter(point)
         RNSPinBuild(point)
     }
