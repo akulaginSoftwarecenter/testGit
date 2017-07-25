@@ -34,4 +34,4 @@ extension RNSMapViewController: PGMapViewDelegate {
         mapView.setMapCenter(point)
         RNSPinBuild(point)
     }
-}
+ }

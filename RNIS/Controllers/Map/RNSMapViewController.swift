@@ -12,12 +12,25 @@ import PureLayout
 class RNSMapViewController: UIViewController {
     
     lazy var mapView: MapView = {
-        let mapView = RNSMapManager.mapView
+        let mapView = MapView()
+        mapView.startApplication()
+        mapView.clearMapCache()
+        mapView.setMapHost(mapHost)
+        mapView.setTrafficMarksHost(mapHost)
+        mapView.enterForeground()
+        mapView.enableMyLocation()
+        mapView.setMapRegime(1)
+        let overlay = mapView.myLocationOverlay()
+        overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
+        overlay?.setRotationEnabled(false)
+        
         self.view.insertSubview(mapView, at: 0)
         mapView.autoPinEdgesToSuperviewEdges()
         mapView.delegate = self
         return mapView
     }()
+    
+    var route: PGPolyline?
     
     @IBOutlet weak var lightButton: RNSLightButton!
     
@@ -26,6 +39,7 @@ class RNSMapViewController: UIViewController {
         
         prepareMapView()
         prepareLightButton()
+        prepareHandlers()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -8,45 +8,15 @@
 
 import UIKit
 
-class RNSMapManager {
-    static let shared = RNSMapManager()
-    
-    static var route: PGLiteRoute?
-    
-    static var mapView: MapView {
-        return shared.mapView
-    }
-    
-    lazy var mapView: MapView = {
-        let mapView = MapView()
-        mapView.startApplication()
-        mapView.clearMapCache()
-        mapView.setMapHost(mapHost)
-        mapView.setTrafficMarksHost(mapHost)
-        mapView.enterForeground()
-        mapView.enableMyLocation()
-        mapView.setMapRegime(1)
-        let overlay = mapView.myLocationOverlay()
-        overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
-        overlay?.setRotationEnabled(false)
-        return mapView
-    }()
+class RNSMapManager: NSObject {
+
+    static var handlerAddOverlay: AnyBlock?
+    static var handlerRemoveOverlay: AnyBlock?
     
     static func removeOldPinBuild() {
         handlerRemovePinBuild?()
     }
-    
     static var handlerRemovePinBuild: EmptyBlock?
-    static var handlerAddRoute: ((PGLiteRoute?) -> ())?
+    static var handlerAddRoute: ((PGPolyline?) -> ())?
     
-    static func prepareRoute(_ route: PGLiteRoute?) {
-        guard let route = route else {
-            return
-        }
-        RNSMapManager.route?.clearResults(true)
-        if !route.build() {
-            print("ROUTE NOT BUILD")
-        }
-        RNSMapManager.route = route
-    }
 }

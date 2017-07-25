@@ -11,6 +11,7 @@ import UIKit
 
 typealias EmptyBlock = () -> Void
 typealias AliasDictionary = [String: Any]
+typealias AnyBlock = (Any) -> ()
 
 class Utils {
     

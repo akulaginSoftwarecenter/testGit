@@ -50,11 +50,12 @@ class RNSPostRouting: RNSPostRequest {
 
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
         removeLoader()
-        guard let model = RNSRequestReply<RNSRoutingPayload>(reply: reply) else {
+        guard let model = RNSRequestReply<RNSRoutingPayload>(reply: reply),
+            let route = model.payload?.route else {
             superError()
             return
         }
-        RNSMapManager.prepareRoute(model.payload?.route)
+        RNSMapManager.handlerAddRoute?(route)
         super.apiDidReturnReply(reply, source: source)
    }
 }

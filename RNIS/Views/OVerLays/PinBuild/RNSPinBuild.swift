@@ -20,11 +20,7 @@ class RNSPinBuild: PGOverlay {
     }
     
     lazy var overlayItem = PGOverlayItem()
-    
-    var overlays: NSMutableArray? {
-        return RNSMapManager.mapView.overlays()
-    }
-    
+     
     func preparePoint(_ point: PGGeoPoint) {
         addOnMap()
         overlayItem.geoPoint = point
@@ -32,15 +28,12 @@ class RNSPinBuild: PGOverlay {
     }
     
     func addOnMap() {
-        guard let overlays = overlays,
-             !overlays.contains(self) else {
-            return
-        }
-        overlays.add(self)
+        
+        RNSMapManager.addOverlay(self)
     }
     
     func remove() {
-        overlays?.remove(self)
+        RNSMapManager.removeOverlay(self)
     }
     
     func prepareHandlers() {
