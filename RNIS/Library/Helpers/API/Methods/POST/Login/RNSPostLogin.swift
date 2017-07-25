@@ -37,6 +37,6 @@ class RNSPostLogin: RNSPostRequest {
         }
         UserDefaults.setToken(token)
         STRouter.showMap()
-        super.apiDidReturnReply(reply, source: source)
+        super.apiDidReturnReply(token as AnyObject, source: source)
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 class RNISAuthManager {
     
     class func auth() {
-        RNSPostLogin()
+       //RNSPostLogin()
+        STRouter.showMap()
     }
 }

@@ -39,7 +39,7 @@ class RNSGetTraffic: AlamofireAPI {
                     "lon2": maxCoord.longitude,
                     "lat2": maxCoord.latitude,
                     "z": zoom]
-        
+        print("dict",dict)
         return dict
     }
     
