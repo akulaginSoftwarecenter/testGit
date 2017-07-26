@@ -38,7 +38,7 @@ class RNSMapViewController: UIViewController {
         super.viewDidLoad()
         
         prepareMapView()
-        prepareLightButton() 
+        prepareLightButton()
         prepareHandlers()
     }
     
