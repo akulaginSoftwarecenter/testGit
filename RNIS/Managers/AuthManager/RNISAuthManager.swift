@@ -9,9 +9,11 @@
 import UIKit
 
 class RNISAuthManager {
-    
+    /**
+     *  get токен at com.rnis.auth.action.login, after show map
+     */
     class func auth() {
-       //RNSPostLogin()
-        STRouter.showMap()
+       RNSPostLogin()
+        //STRouter.showMap()
     }
 }
