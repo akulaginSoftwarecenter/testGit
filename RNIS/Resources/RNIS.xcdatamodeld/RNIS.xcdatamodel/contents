@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RoutingPayload" representedClassName="RoutingPayload" syncable="YES" codeGenerationType="class">
+        <attribute name="distance" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="route" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <entity name="TokenPayload" representedClassName="TokenPayload" syncable="YES" codeGenerationType="class">
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TrafficData" representedClassName="TrafficData" syncable="YES" codeGenerationType="class">
+        <attribute name="b" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updated_utc" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TraffickMarkData" inverseName="trafficDatas" inverseEntity="TraffickMarkData" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TraffickMarkData" inverseName="trafficDatr" inverseEntity="TraffickMarkData" syncable="YES"/>
+    </entity>
+    <entity name="TraffickMarkData" representedClassName="TraffickMarkData" syncable="YES" codeGenerationType="class">
+        <attribute name="cityNam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="long" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mark" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="trafficDatas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrafficData" inverseName="cities" inverseEntity="TrafficData" syncable="YES"/>
+        <relationship name="trafficDatr" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrafficData" inverseName="city" inverseEntity="TrafficData" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RoutingPayload" positionX="198" positionY="45" width="128" height="75"/>
+        <element name="TokenPayload" positionX="-27" positionY="45" width="128" height="60"/>
+        <element name="TraffickMarkData" positionX="-29" positionY="173" width="128" height="133"/>
+        <element name="TrafficData" positionX="198" positionY="210" width="128" height="105"/>
+    </elements>
 </model>
