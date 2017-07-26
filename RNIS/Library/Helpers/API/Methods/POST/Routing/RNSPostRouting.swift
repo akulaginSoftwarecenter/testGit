@@ -10,13 +10,11 @@ import UIKit
 
 class RNSPostRouting: RNSPostRequest {
     
-    @discardableResult convenience init(complete: EmptyBlock?) {
+    @discardableResult convenience init(complete: @escaping APICompletion) {
         self.init()
 
         showLoader()
-        sendRequestWithCompletion { (_, _, _) in
-            complete?()
-        }
+        sendRequestWithCompletion(completion: complete)
     }
     
     override var headers: AliasDictionary {
@@ -57,6 +55,6 @@ class RNSPostRouting: RNSPostRequest {
             return
         }
         RNSMapManager.handlerAddRoute?(route)
-        super.apiDidReturnReply(reply, source: source)
+        super.apiDidReturnReply(route, source: source)
    }
 }
