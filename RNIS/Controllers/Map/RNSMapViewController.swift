@@ -36,7 +36,7 @@ class RNSMapViewController: UIViewController {
         return mapView
     }()
     
-    /**
+    /** 
     route in RNSPostRouting com.rnis.geo.action.service.routing
      */
     var route: PGPolyline?
