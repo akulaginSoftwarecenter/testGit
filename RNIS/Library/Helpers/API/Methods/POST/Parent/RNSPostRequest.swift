@@ -46,6 +46,9 @@ class RNSPostRequest: AlamofireAPI {
     }
    
     override func apiDidFailWithError(_ error: NSError) {
+        if showLogApi {
+            print("apiDidFailWithError",error)
+        }
         super.apiDidFailWithError(error)
         removeLoader()
     }

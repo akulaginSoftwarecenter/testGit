@@ -10,12 +10,9 @@ import UIKit
 
 class RNSPostRouting: RNSPostRequest {
     
-    var point: PGGeoPoint?
-    
-    @discardableResult convenience init(_ point: PGGeoPoint?, complete: EmptyBlock?) {
+    @discardableResult convenience init(complete: EmptyBlock?) {
         self.init()
-        
-        self.point = point
+
         showLoader()
         sendRequestWithCompletion { (_, _, _) in
             complete?()
@@ -36,11 +33,12 @@ class RNSPostRouting: RNSPostRequest {
     
     var points: [AliasDictionary] {
         var items =  [AliasDictionary]()
-        guard let point = point else {
+        guard let pointFrom = RNSMapManager.pointFrom,
+        let pointHere = RNSMapManager.pointHere else {
             return items
         }
-        items.append(contentsOf: [point.dictionary,
-                                  RNSLocationManager.point.dictionary])
+        items.append(contentsOf: [pointFrom.dictionary,
+                                  pointHere.dictionary])
         return items
     }
     
@@ -49,6 +47,9 @@ class RNSPostRouting: RNSPostRequest {
     }
 
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
+        if showLogApi {
+            print("apiDidReturnReply",reply)
+        }
         removeLoader()
         guard let model = RNSRequestReply<RNSRoutingPayload>(reply: reply),
             let route = model.payload?.route else {

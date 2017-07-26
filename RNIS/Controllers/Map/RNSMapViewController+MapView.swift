@@ -17,6 +17,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     func startLocation() {
         RNSLocationManager.startLocation { [weak self] in
             self?.centerUserLocation()
+            RNSMapManager.prepareRoutePoints()
         }
     }
     

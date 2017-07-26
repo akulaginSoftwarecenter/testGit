@@ -9,14 +9,22 @@
 import UIKit
 
 class RNSMapManager: NSObject {
+    
+    static var pointFrom: PGGeoPoint?
+    static var pointHere: PGGeoPoint?
 
     static var handlerAddOverlay: AnyBlock?
     static var handlerRemoveOverlay: AnyBlock?
+    static var handlerRemovePinBuild: EmptyBlock?
+    static var handlerAddRoute: ((PGPolyline?) -> ())?
+    
+    static func prepareRoutePoints() {
+        let point = RNSLocationManager.point
+        pointFrom = point
+        pointHere = point
+    }
     
     static func removeOldPinBuild() {
         handlerRemovePinBuild?()
     }
-    static var handlerRemovePinBuild: EmptyBlock?
-    static var handlerAddRoute: ((PGPolyline?) -> ())?
-    
 }

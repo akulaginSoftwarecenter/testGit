@@ -26,7 +26,7 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     }
     
     func requestRoute() {
-        RNSPostRouting(point) {[weak self] in
+        RNSPostRouting {[weak self] in
             self?.removeAnimate()
         }
     }
