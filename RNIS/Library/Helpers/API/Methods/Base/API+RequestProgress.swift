@@ -31,6 +31,9 @@ extension API {
         preconditionFailure("Concrete API object should override cancel method like 'alamofireRequest?.cancel()'")
     }
 
+    /**
+     Return Reply
+     */
     func requestDidReturnReply(_ reply: AnyObject) {
         let parsedReply = reply
 
@@ -41,7 +44,7 @@ extension API {
         
         apiDidReturnReply(parsedReply, source: reply)
     }
-
+    
     func classForParsingReply() -> AnyClass? {
         return nil
     }

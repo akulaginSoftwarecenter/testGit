@@ -27,6 +27,9 @@ import Alamofire
 
 extension API
 {
+    /**
+     Return Reply
+     */
     func apiDidReturnReply(_ reply: AnyObject, source: AnyObject)
     {
         lastReply = reply
@@ -38,7 +41,10 @@ extension API
 
         apiDidEnd()
     }
-
+    
+    /**
+     return error
+     */
     func apiDidFailWithError(_ error: NSError)
     {
         lastReply = nil
@@ -55,6 +61,9 @@ extension API
         }
     }
     
+    /**
+     re AuthorizeUser if need
+     */
     func reAuthorizeUser()
     {   /*
         print("reAuthorizeUser")

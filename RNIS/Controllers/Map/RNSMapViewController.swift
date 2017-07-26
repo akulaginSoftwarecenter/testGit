@@ -9,8 +9,14 @@
 import UIKit
 import PureLayout
 
+/**
+ main Map ViewController
+ */
 class RNSMapViewController: UIViewController {
     
+    /**
+     base mapview PGView
+     */
     lazy var mapView: MapView = {
         let mapView = MapView()
         mapView.startApplication()
@@ -30,6 +36,9 @@ class RNSMapViewController: UIViewController {
         return mapView
     }()
     
+    /**
+    route in RNSPostRouting com.rnis.geo.action.service.routing
+     */
     var route: PGPolyline?
     
     @IBOutlet weak var lightButton: RNSLightButton!

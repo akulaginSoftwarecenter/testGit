@@ -27,12 +27,18 @@ import Alamofire
 public typealias APICompletion = (_ reply: AnyObject?, _ error: NSError?, _ handleError: inout Bool) -> ()
 public typealias APIProgress = (_ progress: Double) -> ()
 
+/**
+ Base API
+ */
 public class API: NSObject {
-    
-    // Api object to generate request
+    /**
+     Api object to generate request
+     */
     var object: AnyObject?
-
-    // Override this method to add some parameters to URL
+    
+    /**
+     Override this method to add some parameters to URL
+     */
     var parameters: AliasDictionary {
         let parameters = AliasDictionary()
         
@@ -41,19 +47,29 @@ public class API: NSObject {
         return parameters
     }
 
-    // Last API reply
+    /**
+     Last API reply
+     */
     var lastReply: AnyObject?
 
-    // Last API error
+    /**
+     Last API error
+     */
     var lastError: NSError?;
 
-    // Request completion handler
+    /**
+     Request completion handler
+     */
     var completion: APICompletion?
 
-    // Request progress handler
+    /**
+     Request progress handler
+     */
     var progressBlock: APIProgress?
 
-    // Returns true if API request is already sent and not complete
+    /**
+      Returns true if API request is already sent and not complete
+     */
     var apiRequestInProgress: Bool {
         preconditionFailure("Concrete API object should override progress indicator like 'return alamofireRequest != nil'")
     }

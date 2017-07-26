@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parser Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Parser" class="dashAnchor"></a>
+    <a title="Parser Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (14% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Parser Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/API.html">API</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/APIModelMissedKeys.html">APIModelMissedKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlamofireAPI.html">AlamofireAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C4RNIS17AlamofirePagedAPI">AlamofirePagedAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseModel.html">BaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseNavigationController.html">BaseNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseViewWithXIBInit.html">BaseViewWithXIBInit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CloudKitAPI.html">CloudKitAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C4RNIS14CloudKitParser">CloudKitParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoaderView.html">LoaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Parser.html">Parser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PostAPI.html">PostAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNISAuthManager.html">RNISAuthManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNISMappableBase.html">RNISMappableBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSBuildRouteView.html">RNSBuildRouteView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSGetTraffic.html">RNSGetTraffic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSLightButton.html">RNSLightButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSLocationManager.html">RNSLocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSMapManager.html">RNSMapManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSMapViewController.html">RNSMapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSPinBuild.html">RNSPinBuild</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSPostLogin.html">RNSPostLogin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSPostRequest.html">RNSPostRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSPostRouting.html">RNSPostRouting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSRequestReply.html">RNSRequestReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSRoutingPayload.html">RNSRoutingPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSTokenPayload.html">RNSTokenPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSTrafficData.html">RNSTrafficData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RNSTraffickMarkData.html">RNSTraffickMarkData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SLTApiHelper.html">SLTApiHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/STRouter.html">STRouter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Utils.html">Utils</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4RNIS7mapHostSS">mapHost</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4RNIS13serverAddressSS">serverAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4RNIS13serverRnisapiSS">serverRnisapi</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4RNIS10showLogApiSb">showLogApi</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4RNIS12stubLocationGSqCSo10CLLocation_">stubLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4RNISP33_2FB462DA2FC87DC44145933F475389D616xoAssociationKeyVs5UInt8">xoAssociationKey</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/APIModel.html">APIModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PGGeoPoint.html">PGGeoPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PGPolyline.html">PGPolyline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UserDefaults.html">UserDefaults</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4RNISoi2eeFTCS_9BaseModelS0__Sb">==(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ParsableObject.html">ParsableObject</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Parser</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC4RNIS6Parser14executableNameSS"></a>
+                    <a name="//apple_ref/swift/Variable/executableName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC4RNIS6Parser14executableNameSS">executableName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser15modelsFromArrayFTMCS_9BaseModel5arrayGSaPs9AnyObject___GSaS1__"></a>
+                    <a name="//apple_ref/swift/Method/modelsFromArray(_:array:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser15modelsFromArrayFTMCS_9BaseModel5arrayGSaPs9AnyObject___GSaS1__">modelsFromArray(_:array:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses array of objects
+Calls objectFromDictionary: iteratively</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">modelsFromArray</span><span class="p">(</span><span class="n">_</span> <span class="nv">modelClass</span><span class="p">:</span> <span class="kt">APIModel</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyObject</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">APIModel</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>modelClass</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Class for parsing data to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of dictionaries that represent an object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array of parsed objects</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser21modelFromSourceObjectFTMCS_9BaseModel6sourcePs9AnyObject__GSqS1__"></a>
+                    <a name="//apple_ref/swift/Method/modelFromSourceObject(_:source:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser21modelFromSourceObjectFTMCS_9BaseModel6sourcePs9AnyObject__GSqS1__">modelFromSourceObject(_:source:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses object with property values filled according to source object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">modelFromSourceObject</span><span class="p">(</span><span class="n">_</span> <span class="nv">modelClass</span><span class="p">:</span> <span class="kt">APIModel</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">APIModel</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>modelClass</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Class for parsing data to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source dictionary which represents object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Parsed object</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser33modelFromSourceObjectWithoutDrainFTMCS_9BaseModel6sourcePs9AnyObject__GSqS1__"></a>
+                    <a name="//apple_ref/swift/Method/modelFromSourceObjectWithoutDrain(_:source:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser33modelFromSourceObjectWithoutDrainFTMCS_9BaseModel6sourcePs9AnyObject__GSqS1__">modelFromSourceObjectWithoutDrain(_:source:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>We should use this private method for parcing arrays
+Because public method drains mappings after every parse</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">modelFromSourceObjectWithoutDrain</span><span class="p">(</span><span class="n">_</span> <span class="nv">modelClass</span><span class="p">:</span> <span class="kt">APIModel</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">APIModel</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser10parseValueFTCS_9BaseModel5valuePs9AnyObject_6forKeySS_T_"></a>
+                    <a name="//apple_ref/swift/Method/parseValue(_:value:forKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser10parseValueFTCS_9BaseModel5valuePs9AnyObject_6forKeySS_T_">parseValue(_:value:forKey:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser20swiftClassFromStringFSSGSqPMPs9AnyObject__"></a>
+                    <a name="//apple_ref/swift/Method/swiftClassFromString(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser20swiftClassFromStringFSSGSqPMPs9AnyObject__">swiftClassFromString(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser23classNameFromBackendKeyFSSSS"></a>
+                    <a name="//apple_ref/swift/Method/classNameFromBackendKey(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser23classNameFromBackendKeyFSSSS">classNameFromBackendKey(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser22propertyFromBackendKeyFSSSS"></a>
+                    <a name="//apple_ref/swift/Method/propertyFromBackendKey(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser22propertyFromBackendKeyFSSSS">propertyFromBackendKey(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser17keyFromBackendKeyFTSS14capitlizeFirstSb_SS"></a>
+                    <a name="//apple_ref/swift/Method/keyFromBackendKey(_:capitlizeFirst:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser17keyFromBackendKeyFTSS14capitlizeFirstSb_SS">keyFromBackendKey(_:capitlizeFirst:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser26backendKeyFromPropertyNameFSSSS"></a>
+                    <a name="//apple_ref/swift/Method/backendKeyFromPropertyName(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser26backendKeyFromPropertyNameFSSSS">backendKeyFromPropertyName(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser23backendKeyFromClassNameFSSSS"></a>
+                    <a name="//apple_ref/swift/Method/backendKeyFromClassName(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser23backendKeyFromClassNameFSSSS">backendKeyFromClassName(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4RNIS6Parser10dictionaryFT8forModelCS_9BaseModel7andKeysGSaSS__GVs10DictionarySSPs9AnyObject__"></a>
+                    <a name="//apple_ref/swift/Method/dictionary(forModel:andKeys:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4RNIS6Parser10dictionaryFT8forModelCS_9BaseModel7andKeysGSaSS__GVs10DictionarySSPs9AnyObject__">dictionary(forModel:andKeys:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-07-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
