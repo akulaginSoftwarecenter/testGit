@@ -20,7 +20,7 @@ extension RNSBuildRouteView {
      }
     
     @IBAction func actionHere(_ sender: Any) {
-        RNSMapManager.pointFrom = point
+        RNSMapManager.pointHere = point
         requestRoute()
     }
 }
