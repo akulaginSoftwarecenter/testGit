@@ -1329,6 +1329,7 @@
 				83ED5E401F270A25007D9F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
