@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wUs-3r-StT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Phone View Controller-->
+        <scene sceneID="m0L-sk-3SP">
+            <objects>
+                <viewController id="wUs-3r-StT" customClass="RNSPhoneViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ns7-LC-rLh"/>
+                        <viewControllerLayoutGuide type="bottom" id="0DG-iq-4zY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HrX-gk-F32" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKe-5P-ngy" customClass="RNSPhoneField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="288.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На этот номер будет выслано SMS-сообщение с кодом подтверждения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLU-Qf-4bb">
+                                <rect key="frame" x="45" y="333.5" width="285" height="32"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8862745098" green="0.36862745099999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DLU-Qf-4bb" firstAttribute="top" secondItem="hKe-5P-ngy" secondAttribute="bottom" constant="15" id="82o-v2-6VB"/>
+                            <constraint firstItem="hKe-5P-ngy" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="30" id="Elv-nf-Adp"/>
+                            <constraint firstAttribute="trailing" secondItem="hKe-5P-ngy" secondAttribute="trailing" constant="30" id="OoJ-db-IR6"/>
+                            <constraint firstAttribute="trailing" secondItem="DLU-Qf-4bb" secondAttribute="trailing" constant="45" id="dNp-Vi-YVs"/>
+                            <constraint firstItem="DLU-Qf-4bb" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="45" id="dkY-ft-prY"/>
+                            <constraint firstItem="hKe-5P-ngy" firstAttribute="centerY" secondItem="HrX-gk-F32" secondAttribute="centerY" constant="-30" id="fzv-yT-p2e"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Далее"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="coverView" destination="HrX-gk-F32" id="ISf-7X-rfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndC-2r-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-105" y="-183"/>
+        </scene>
+    </scenes>
+</document>

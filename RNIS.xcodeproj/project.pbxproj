@@ -106,6 +106,12 @@
 		837ABF271F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */; };
 		837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
+		837ABF2F1F2EF35300AB5E54 /* RNSPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF2E1F2EF35300AB5E54 /* RNSPhoneViewController.swift */; };
+		837ABF301F2EF35300AB5E54 /* RNSPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF2E1F2EF35300AB5E54 /* RNSPhoneViewController.swift */; };
+		837ABF321F2EF48900AB5E54 /* RNSPhoneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837ABF311F2EF48900AB5E54 /* RNSPhoneViewController.storyboard */; };
+		837ABF331F2EF48900AB5E54 /* RNSPhoneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837ABF311F2EF48900AB5E54 /* RNSPhoneViewController.storyboard */; };
+		837ABF351F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF341F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift */; };
+		837ABF361F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF341F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift */; };
 		838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
@@ -252,6 +258,9 @@
 		837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STImageContainer.swift; path = "Library/Base classes/ImageContainer/STImageContainer.swift"; sourceTree = "<group>"; };
 		837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Action.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Action.swift"; sourceTree = "<group>"; };
 		837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+TextField.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+TextField.swift"; sourceTree = "<group>"; };
+		837ABF2E1F2EF35300AB5E54 /* RNSPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPhoneViewController.swift; path = "Controllers/Authorization+Registration/Parent/Phone/RNSPhoneViewController.swift"; sourceTree = "<group>"; };
+		837ABF311F2EF48900AB5E54 /* RNSPhoneViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSPhoneViewController.storyboard; path = "Controllers/Authorization+Registration/Parent/Phone/RNSPhoneViewController.storyboard"; sourceTree = "<group>"; };
+		837ABF341F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationPhoneController.swift; path = "Controllers/Authorization+Registration/Registration/RNSRegistrationPhoneController.swift"; sourceTree = "<group>"; };
 		838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utils.swift"; path = "Library/Helpers/Base objects extensions/Color/UIColor+Utils.swift"; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
@@ -396,6 +405,8 @@
 		832E4B6C1F2EC37F00A4AD77 /* Login+Registration */ = {
 			isa = PBXGroup;
 			children = (
+				837ABF2D1F2EF2FC00AB5E54 /* Parent */,
+				837ABF2C1F2EF2E700AB5E54 /* Registration */,
 				832E4B691F2EC26C00A4AD77 /* Login */,
 			);
 			name = "Login+Registration";
@@ -576,6 +587,7 @@
 		835718981F21AE3900DE5E25 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				835718A81F21C39300DE5E25 /* Overlays */,
 				835718971F21AE2600DE5E25 /* BuildRouteView */,
 			);
 			name = Map;
@@ -656,7 +668,6 @@
 				8326AA391F1F631900F893C8 /* Buttons */,
 				832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */,
 				835718981F21AE3900DE5E25 /* Map */,
-				835718A81F21C39300DE5E25 /* Overlays */,
 				832E4B831F2ECDCC00A4AD77 /* TextField */,
 			);
 			name = Views;
@@ -930,6 +941,23 @@
 			name = Array;
 			sourceTree = "<group>";
 		};
+		837ABF2C1F2EF2E700AB5E54 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				837ABF341F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift */,
+			);
+			name = Registration;
+			sourceTree = "<group>";
+		};
+		837ABF2D1F2EF2FC00AB5E54 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				837ABF2E1F2EF35300AB5E54 /* RNSPhoneViewController.swift */,
+				837ABF311F2EF48900AB5E54 /* RNSPhoneViewController.storyboard */,
+			);
+			name = Parent;
+			sourceTree = "<group>";
+		};
 		838AB8C51F26FB7C009E9C40 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1225,7 @@
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 				836D80B91F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
+				837ABF321F2EF48900AB5E54 /* RNSPhoneViewController.storyboard in Resources */,
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
@@ -1212,6 +1241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837ABF331F2EF48900AB5E54 /* RNSPhoneViewController.storyboard in Resources */,
 				832E4B801F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */,
 				832E4B761F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
 				832E4B7D1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */,
@@ -1347,6 +1377,7 @@
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
 				837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
+				837ABF2F1F2EF35300AB5E54 /* RNSPhoneViewController.swift in Sources */,
 				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
 				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
 				8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
@@ -1369,6 +1400,7 @@
 				83CD58611F25948E00A9FE1A /* RNSPostRequest.swift in Sources */,
 				835718A31F21B37800DE5E25 /* RNSBuildRouteView+Action.swift in Sources */,
 				837ABF0A1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */,
+				837ABF351F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
@@ -1401,6 +1433,7 @@
 				837ABF201F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
 				837ABF091F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
+				837ABF361F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift in Sources */,
 				837ABF141F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */,
 				837ABF1C1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */,
 				832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
@@ -1410,6 +1443,7 @@
 				837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,
 				832E4B901F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
+				837ABF301F2EF35300AB5E54 /* RNSPhoneViewController.swift in Sources */,
 				837ABF0E1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,
 				832E4B941F2ED53000A4AD77 /* String+Utils.swift in Sources */,
 				837ABF0B1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */,

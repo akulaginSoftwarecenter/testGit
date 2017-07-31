@@ -94,7 +94,7 @@
                             <constraint firstItem="pz7-OO-cHU" firstAttribute="top" secondItem="LIe-zO-afW" secondAttribute="bottom" constant="20" id="yKc-ca-g2J"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Забыли пароль"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Авторизация"/>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Сохранить"/>
                         </userDefinedRuntimeAttributes>
                     </view>

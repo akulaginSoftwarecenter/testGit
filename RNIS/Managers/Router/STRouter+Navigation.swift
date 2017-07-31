@@ -18,4 +18,8 @@ extension STRouter {
         clearNav()
         push(imageContainer(boardContainer(RNSLoginViewController.controller)))
     }
+    
+    static func showRegistrationPhone() {
+        push(RNSRegistrationPhoneController.initialController)
+    }
 }
