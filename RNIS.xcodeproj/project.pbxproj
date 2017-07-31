@@ -12,6 +12,17 @@
 		8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */; };
 		8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */; };
 		8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8326AA431F1F6A1C00F893C8 /* mainFont.otf */; };
+		832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */; };
+		832E4B721F2EC48600A4AD77 /* RNSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */; };
+		832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */; };
+		832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B741F2EC49400A4AD77 /* RNSLoginView.xib */; };
+		832E4B761F2EC49400A4AD77 /* RNSLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B741F2EC49400A4AD77 /* RNSLoginView.xib */; };
+		832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B781F2EC69200A4AD77 /* RNSBlackButton.swift */; };
+		832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B781F2EC69200A4AD77 /* RNSBlackButton.swift */; };
+		832E4B7C1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */; };
+		832E4B7D1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */; };
+		832E4B7F1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */; };
+		832E4B801F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */; };
 		8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
 		835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
 		835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
@@ -118,6 +129,12 @@
 		8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTrafficData.swift; path = Models/Traffic/RNSTrafficData.swift; sourceTree = "<group>"; };
 		8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
 		8326AA431F1F6A1C00F893C8 /* mainFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mainFont.otf; path = Resources/mainFont.otf; sourceTree = "<group>"; };
+		832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLoginViewController.swift; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController.swift"; sourceTree = "<group>"; };
+		832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLoginView.swift; path = "Views/Login+Registration/LoginView/RNSLoginView.swift"; sourceTree = "<group>"; };
+		832E4B741F2EC49400A4AD77 /* RNSLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSLoginView.xib; path = "Views/Login+Registration/LoginView/RNSLoginView.xib"; sourceTree = "<group>"; };
+		832E4B781F2EC69200A4AD77 /* RNSBlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackButton.swift; path = Views/Buttons/BlackButton/RNSBlackButton.swift; sourceTree = "<group>"; };
+		832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSBlackButton.xib; path = Views/Buttons/BlackButton/RNSBlackButton.xib; sourceTree = "<group>"; };
+		832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSLoginViewController.storyboard; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController.storyboard"; sourceTree = "<group>"; };
 		8357186B1F219EB600DE5E25 /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
 		8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		835718731F21A05D00DE5E25 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Utils.swift"; sourceTree = "<group>"; };
@@ -288,6 +305,7 @@
 		8326AA391F1F631900F893C8 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				832E4B771F2EC65C00A4AD77 /* BlackButton */,
 				8375DE971F204C1400FCA26E /* LightButton */,
 			);
 			name = Buttons;
@@ -300,6 +318,49 @@
 			);
 			name = Button;
 			path = "Library/Helpers/Base objects extensions/Button";
+			sourceTree = "<group>";
+		};
+		832E4B691F2EC26C00A4AD77 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */,
+				832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		832E4B6C1F2EC37F00A4AD77 /* Login+Registration */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B691F2EC26C00A4AD77 /* Login */,
+			);
+			name = "Login+Registration";
+			sourceTree = "<group>";
+		};
+		832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B701F2EC40E00A4AD77 /* LoginView */,
+			);
+			name = "Login+Registration";
+			sourceTree = "<group>";
+		};
+		832E4B701F2EC40E00A4AD77 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */,
+				832E4B741F2EC49400A4AD77 /* RNSLoginView.xib */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
+		832E4B771F2EC65C00A4AD77 /* BlackButton */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B781F2EC69200A4AD77 /* RNSBlackButton.swift */,
+				832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */,
+			);
+			name = BlackButton;
 			sourceTree = "<group>";
 		};
 		8357186A1F219EB600DE5E25 /* Router */ = {
@@ -453,6 +514,7 @@
 		836D80801F1DAE1B00FEE390 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				832E4B6C1F2EC37F00A4AD77 /* Login+Registration */,
 				835718761F21A1F300DE5E25 /* Launch */,
 				836D80BF1F1DB3A700FEE390 /* Map */,
 			);
@@ -462,6 +524,7 @@
 		836D80811F1DAE2400FEE390 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */,
 				835718A81F21C39300DE5E25 /* Overlays */,
 				835718981F21AE3900DE5E25 /* Map */,
 				8326AA391F1F631900F893C8 /* Buttons */,
@@ -915,8 +978,11 @@
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
+				832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
 				8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */,
 				8357187A1F21A2A500DE5E25 /* RNSLaunchViewController.storyboard in Resources */,
+				832E4B7F1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */,
+				832E4B7C1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */,
 				836D80B11F1DB35400FEE390 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -925,6 +991,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E4B801F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */,
+				832E4B761F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
+				832E4B7D1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1092,7 @@
 				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
 				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
 				836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
+				832E4B721F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				8357188D1F21A9CA00DE5E25 /* UserDefaults+Auth.swift in Sources */,
 				83ED5E2F1F2707A0007D9F1C /* PGPolyline+Utils.swift in Sources */,
 				838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */,
@@ -1037,6 +1107,7 @@
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
+				832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				836D80DA1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
 				83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */,
@@ -1050,6 +1121,7 @@
 				835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */,
 				83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
+				832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */,
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
 				83ED5E2A1F270383007D9F1C /* RNSMapManager+OverLays.swift in Sources */,
 				835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */,
@@ -1080,6 +1152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
+				832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				83ED5E3A1F270A25007D9F1C /* RNISTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
