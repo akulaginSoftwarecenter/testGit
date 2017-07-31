@@ -7,6 +7,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="4Is-yP-fCa">
@@ -35,15 +40,40 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите пароль"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReY-FI-gw3">
+                                <rect key="frame" x="30" y="602" width="89" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="aoj-CP-0fp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <state key="normal" title="Регистрация">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKu-xF-If7">
+                                <rect key="frame" x="229" y="602" width="116" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="3gA-RK-GVB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="M7G-Uu-rDh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RMr-V4-Wpw" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="Aid-oh-t62"/>
+                            <constraint firstItem="ReY-FI-gw3" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="Dcx-7p-Rca"/>
                             <constraint firstItem="LIe-zO-afW" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="JfM-ud-qYu"/>
                             <constraint firstAttribute="trailing" secondItem="RMr-V4-Wpw" secondAttribute="trailing" constant="30" id="PMO-xh-puW"/>
                             <constraint firstItem="LIe-zO-afW" firstAttribute="bottom" secondItem="RMr-V4-Wpw" secondAttribute="bottom" constant="85" id="RpE-Ru-yTB"/>
                             <constraint firstAttribute="trailing" secondItem="LIe-zO-afW" secondAttribute="trailing" constant="30" id="XmT-pr-dcD"/>
+                            <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="yKu-xF-If7" secondAttribute="bottom" constant="3" id="a51-C8-BrW"/>
                             <constraint firstItem="RMr-V4-Wpw" firstAttribute="centerY" secondItem="sNt-JM-pvk" secondAttribute="centerY" constant="-30" id="ay2-gV-wGQ"/>
+                            <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="ReY-FI-gw3" secondAttribute="bottom" constant="3" id="nZp-ia-beg"/>
+                            <constraint firstAttribute="trailing" secondItem="yKu-xF-If7" secondAttribute="trailing" constant="30" id="xaX-g2-Sho"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Забыли пароль"/>
