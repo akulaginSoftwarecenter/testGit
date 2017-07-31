@@ -23,6 +23,20 @@
 		832E4B7D1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */; };
 		832E4B7F1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */; };
 		832E4B801F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */; };
+		832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B851F2ECDCC00A4AD77 /* RNSPhoneField.swift */; };
+		832E4B871F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B851F2ECDCC00A4AD77 /* RNSPhoneField.swift */; };
+		832E4B8A1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B891F2ECE8C00A4AD77 /* RNSTextField.swift */; };
+		832E4B8B1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B891F2ECE8C00A4AD77 /* RNSTextField.swift */; };
+		832E4B8F1F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B8E1F2ED03400A4AD77 /* UIFont+Utils.swift */; };
+		832E4B901F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B8E1F2ED03400A4AD77 /* UIFont+Utils.swift */; };
+		832E4B931F2ED53000A4AD77 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B921F2ED53000A4AD77 /* String+Utils.swift */; };
+		832E4B941F2ED53000A4AD77 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B921F2ED53000A4AD77 /* String+Utils.swift */; };
+		832E4B991F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */; };
+		832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */; };
+		832E4B9B1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */; };
+		832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */; };
+		832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
+		832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
 		8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
 		835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
 		835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
@@ -135,6 +149,13 @@
 		832E4B781F2EC69200A4AD77 /* RNSBlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackButton.swift; path = Views/Buttons/BlackButton/RNSBlackButton.swift; sourceTree = "<group>"; };
 		832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSBlackButton.xib; path = Views/Buttons/BlackButton/RNSBlackButton.xib; sourceTree = "<group>"; };
 		832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSLoginViewController.storyboard; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController.storyboard"; sourceTree = "<group>"; };
+		832E4B851F2ECDCC00A4AD77 /* RNSPhoneField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPhoneField.swift; sourceTree = "<group>"; };
+		832E4B891F2ECE8C00A4AD77 /* RNSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSTextField.swift; sourceTree = "<group>"; };
+		832E4B8E1F2ED03400A4AD77 /* UIFont+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
+		832E4B921F2ED53000A4AD77 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputFieldsValidator+Validation.swift"; sourceTree = "<group>"; };
+		832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldsValidator.swift; sourceTree = "<group>"; };
+		832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Utils.swift"; sourceTree = "<group>"; };
 		8357186B1F219EB600DE5E25 /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
 		8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		835718731F21A05D00DE5E25 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Utils.swift"; sourceTree = "<group>"; };
@@ -363,6 +384,69 @@
 			name = BlackButton;
 			sourceTree = "<group>";
 		};
+		832E4B831F2ECDCC00A4AD77 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B881F2ECE8C00A4AD77 /* Parent */,
+				832E4B841F2ECDCC00A4AD77 /* PhoneField */,
+			);
+			name = TextField;
+			path = Views/TextField;
+			sourceTree = "<group>";
+		};
+		832E4B841F2ECDCC00A4AD77 /* PhoneField */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B851F2ECDCC00A4AD77 /* RNSPhoneField.swift */,
+			);
+			path = PhoneField;
+			sourceTree = "<group>";
+		};
+		832E4B881F2ECE8C00A4AD77 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B891F2ECE8C00A4AD77 /* RNSTextField.swift */,
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
+		832E4B8D1F2ED03400A4AD77 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B8E1F2ED03400A4AD77 /* UIFont+Utils.swift */,
+			);
+			name = UIFont;
+			path = "Library/Helpers/Base objects extensions/UIFont";
+			sourceTree = "<group>";
+		};
+		832E4B911F2ED53000A4AD77 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B921F2ED53000A4AD77 /* String+Utils.swift */,
+			);
+			name = String;
+			path = "Library/Helpers/Base objects extensions/String";
+			sourceTree = "<group>";
+		};
+		832E4B961F2ED57C00A4AD77 /* InputFieldsValidator */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */,
+				832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */,
+			);
+			name = InputFieldsValidator;
+			path = Library/Helpers/InputFieldsValidator;
+			sourceTree = "<group>";
+		};
+		832E4B9D1F2ED5D200A4AD77 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */,
+			);
+			name = TextField;
+			path = "Library/Helpers/Base objects extensions/TextField";
+			sourceTree = "<group>";
+		};
 		8357186A1F219EB600DE5E25 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,10 +608,11 @@
 		836D80811F1DAE2400FEE390 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */,
-				835718A81F21C39300DE5E25 /* Overlays */,
-				835718981F21AE3900DE5E25 /* Map */,
 				8326AA391F1F631900F893C8 /* Buttons */,
+				832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */,
+				835718981F21AE3900DE5E25 /* Map */,
+				835718A81F21C39300DE5E25 /* Overlays */,
+				832E4B831F2ECDCC00A4AD77 /* TextField */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -593,6 +678,7 @@
 			children = (
 				83B2E0661F1E139800FA92A4 /* API */,
 				836D80F01F1DD5EC00FEE390 /* Base objects extensions */,
+				832E4B961F2ED57C00A4AD77 /* InputFieldsValidator */,
 				8375DE9C1F204FA700FCA26E /* LoaderView */,
 				836D80881F1DB0E100FEE390 /* ProgorodLiteLibrary */,
 			);
@@ -673,7 +759,10 @@
 				83B2E09D1F1E14F800FA92A4 /* NSError */,
 				83CD584F1F258B9300A9FE1A /* PGGeoPoint */,
 				83ED5E2D1F27078A007D9F1C /* PGPolyline */,
+				832E4B911F2ED53000A4AD77 /* String */,
+				832E4B9D1F2ED5D200A4AD77 /* TextField */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,
+				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				8357187B1F21A30F00DE5E25 /* UIViewController */,
 				8357188A1F21A9CA00DE5E25 /* UserDefaults */,
 				836D80F11F1DD5F600FEE390 /* View */,
@@ -1084,10 +1173,12 @@
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				835718891F21A7B700DE5E25 /* RNSTokenPayload.swift in Sources */,
+				832E4B8F1F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
 				8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */,
 				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
 				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,
+				832E4B991F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
 				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
 				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
@@ -1112,6 +1203,7 @@
 				836D80DA1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
 				83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */,
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
+				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
@@ -1120,6 +1212,9 @@
 				8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
 				835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */,
 				83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
+				832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,
+				832E4B9B1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */,
+				832E4B8A1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */,
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
@@ -1127,6 +1222,7 @@
 				835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */,
 				83B2E08C1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */,
 				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
+				832E4B931F2ED53000A4AD77 /* String+Utils.swift in Sources */,
 				83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */,
 				835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
 				83CD58611F25948E00A9FE1A /* RNSPostRequest.swift in Sources */,
@@ -1152,8 +1248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E4B8B1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
 				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
+				832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
+				832E4B871F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
+				832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,
+				832E4B901F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
+				832E4B941F2ED53000A4AD77 /* String+Utils.swift in Sources */,
+				832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */,
 				83ED5E3A1F270A25007D9F1C /* RNISTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

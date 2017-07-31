@@ -13,6 +13,13 @@ typealias EmptyBlock = () -> Void
 typealias AliasDictionary = [String: Any]
 typealias AnyBlock = (Any) -> ()
 
+func NSLoc(_ key: String?) -> String {
+    guard let key = key else {
+        return ""
+    }
+    return NSLocalizedString(key, comment: "")
+}
+
 class Utils {
     
     static func delay(_ delay:Double, closure: EmptyBlock?) {

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,20 @@
                     <view key="view" contentMode="scaleToFill" id="sNt-JM-pvk" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMr-V4-Wpw" customClass="RNSPhoneField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="31" y="299.5" width="313" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RMr-V4-Wpw" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leadingMargin" constant="15" id="4jk-xA-Zqf"/>
+                            <constraint firstItem="RMr-V4-Wpw" firstAttribute="centerY" secondItem="sNt-JM-pvk" secondAttribute="centerY" constant="-19" id="ay2-gV-wGQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RMr-V4-Wpw" secondAttribute="trailing" constant="15" id="tFF-7w-IkW"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Забыли пароль"/>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Сохранить"/>
@@ -30,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5MD-eh-Z6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="140"/>
+            <point key="canvasLocation" x="-18.399999999999999" y="139.880059970015"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="fSW-02-Hx0">
