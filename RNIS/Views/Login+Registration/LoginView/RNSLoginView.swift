@@ -13,14 +13,7 @@ class RNSLoginView: BaseViewWithXIBInit {
     @IBOutlet weak var blackButton: RNSBlackButton!
     @IBOutlet weak var titleTop: UILabel!
     
-    var handlerBlackAction: EmptyBlock? {
-        get {
-            return nil
-        }
-        set {
-            blackButton.handlerAction = handlerBlackAction
-        }
-    }
+    var handlerBlackAction: EmptyBlock?
     
     @IBInspectable var titleBlackButton: String {
         get { return "" }
@@ -33,6 +26,14 @@ class RNSLoginView: BaseViewWithXIBInit {
         get { return "" }
         set {
             self.titleTop.text = newValue
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        blackButton.button.touchUpInside { [weak self] in
+            self?.handlerBlackAction?()
         }
     }
 }

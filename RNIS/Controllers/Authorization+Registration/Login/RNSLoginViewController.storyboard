@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
         <array key="mainFont.otf">
             <string>Cffazmiakhaddpiofffvylaqekz</string>
         </array>
@@ -49,6 +52,9 @@
                                 <state key="normal" title="Регистрация">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registrationAction:" destination="ieL-F5-6Fm" eventType="touchUpInside" id="O03-IT-LII"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKu-xF-If7">
                                 <rect key="frame" x="229" y="602" width="116" height="62"/>
@@ -60,20 +66,32 @@
                                 <state key="normal" title="Забыли пароль?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="recoveryAction:" destination="ieL-F5-6Fm" eventType="touchUpInside" id="8FP-PP-HD4"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz7-OO-cHU">
+                                <rect key="frame" x="30" y="423.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RMr-V4-Wpw" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="Aid-oh-t62"/>
                             <constraint firstItem="ReY-FI-gw3" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="Dcx-7p-Rca"/>
+                            <constraint firstAttribute="trailing" secondItem="pz7-OO-cHU" secondAttribute="trailing" constant="30" id="DeA-4g-5bZ"/>
                             <constraint firstItem="LIe-zO-afW" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="JfM-ud-qYu"/>
                             <constraint firstAttribute="trailing" secondItem="RMr-V4-Wpw" secondAttribute="trailing" constant="30" id="PMO-xh-puW"/>
                             <constraint firstItem="LIe-zO-afW" firstAttribute="bottom" secondItem="RMr-V4-Wpw" secondAttribute="bottom" constant="85" id="RpE-Ru-yTB"/>
+                            <constraint firstItem="pz7-OO-cHU" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="XKg-lu-nYk"/>
                             <constraint firstAttribute="trailing" secondItem="LIe-zO-afW" secondAttribute="trailing" constant="30" id="XmT-pr-dcD"/>
                             <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="yKu-xF-If7" secondAttribute="bottom" constant="3" id="a51-C8-BrW"/>
                             <constraint firstItem="RMr-V4-Wpw" firstAttribute="centerY" secondItem="sNt-JM-pvk" secondAttribute="centerY" constant="-30" id="ay2-gV-wGQ"/>
                             <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="ReY-FI-gw3" secondAttribute="bottom" constant="3" id="nZp-ia-beg"/>
                             <constraint firstAttribute="trailing" secondItem="yKu-xF-If7" secondAttribute="trailing" constant="30" id="xaX-g2-Sho"/>
+                            <constraint firstItem="pz7-OO-cHU" firstAttribute="top" secondItem="LIe-zO-afW" secondAttribute="bottom" constant="20" id="yKc-ca-g2J"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Забыли пароль"/>
@@ -82,6 +100,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="TXH-zU-9mB"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="pz7-OO-cHU" id="kQG-lB-YTd"/>
+                        <outlet property="loginField" destination="RMr-V4-Wpw" id="WH9-1T-VHS"/>
+                        <outlet property="loginView" destination="sNt-JM-pvk" id="dsM-Nv-PUu"/>
+                        <outlet property="passwordField" destination="LIe-zO-afW" id="8RV-JF-0Rb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5MD-eh-Z6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

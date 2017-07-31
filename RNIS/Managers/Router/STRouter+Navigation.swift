@@ -11,8 +11,7 @@ import UIKit
 extension STRouter {
     
     static func showMap() {
-        clearNav()
-        push(RNSMapViewController.initialController)
+        pushAnimated(RNSMapViewController.initialController)
     }
     
     static func showLogin() {

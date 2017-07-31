@@ -102,6 +102,10 @@
 		837ABF201F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF1E1F2EE3BC00AB5E54 /* EventDispatcher.swift */; };
 		837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */; };
 		837ABF241F2EE5B400AB5E54 /* STImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */; };
+		837ABF261F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */; };
+		837ABF271F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */; };
+		837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
+		837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
@@ -246,6 +250,8 @@
 		837ABF1A1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Listener.swift"; sourceTree = "<group>"; };
 		837ABF1E1F2EE3BC00AB5E54 /* EventDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDispatcher.swift; sourceTree = "<group>"; };
 		837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STImageContainer.swift; path = "Library/Base classes/ImageContainer/STImageContainer.swift"; sourceTree = "<group>"; };
+		837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Action.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Action.swift"; sourceTree = "<group>"; };
+		837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+TextField.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+TextField.swift"; sourceTree = "<group>"; };
 		838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utils.swift"; path = "Library/Helpers/Base objects extensions/Color/UIColor+Utils.swift"; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
@@ -381,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */,
+				837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */,
 				832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */,
 			);
 			name = Login;
@@ -795,6 +802,7 @@
 		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				837ABF281F2EEDF800AB5E54 /* Array */,
 				8326AA3C1F1F643E00F893C8 /* Button */,
 				8326AA2F1F1F51A700F893C8 /* Dictionary */,
 				83B2E09D1F1E14F800FA92A4 /* NSError */,
@@ -912,6 +920,14 @@
 				837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */,
 			);
 			name = ImageContainer;
+			sourceTree = "<group>";
+		};
+		837ABF281F2EEDF800AB5E54 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */,
+			);
+			name = Array;
 			sourceTree = "<group>";
 		};
 		838AB8C51F26FB7C009E9C40 /* UIColor */ = {
@@ -1306,11 +1322,13 @@
 				832E4B721F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				8357188D1F21A9CA00DE5E25 /* UserDefaults+Auth.swift in Sources */,
 				83ED5E2F1F2707A0007D9F1C /* PGPolyline+Utils.swift in Sources */,
+				837ABF261F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */,
 				838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
 				83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */,
 				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
+				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
 				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
 				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,
@@ -1389,6 +1407,7 @@
 				837ABF241F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
 				832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
 				832E4B871F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
+				837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,
 				832E4B901F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
 				837ABF0E1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,
@@ -1398,6 +1417,7 @@
 				837ABEFF1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
 				832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */,
 				83ED5E3A1F270A25007D9F1C /* RNISTests.swift in Sources */,
+				837ABF271F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

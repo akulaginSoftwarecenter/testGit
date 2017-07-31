@@ -9,7 +9,42 @@
 import UIKit
 
 class RNSLoginViewController: UIViewController {
-
+    
+    @IBOutlet var loginView: RNSLoginView!
+    @IBOutlet weak var loginField: RNSPhoneField!
+    @IBOutlet weak var passwordField: STPasswordField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    lazy var fields:[RNSTextField] = {
+        return [self.loginField, self.passwordField]
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loginView.handlerBlackAction = { [weak self] in
+            self?.loginPressed()
+        }
+    }
+    
+    func loginPressed() {
+        if let error = fields.checkValidFields {
+            errorLabel.text = error
+            return
+        }
+        clearError()
+        STRouter.showLoader()
+        Utils.delay(2) {
+            STRouter.removeLoader()
+            STRouter.showMap()
+        }
+    }
+    
+    func clearError() {
+        fields.clearError()
+        errorLabel.text = nil
+    }
+    
     override class var storyboardName: String {
         return "RNSLoginViewController"
     }
