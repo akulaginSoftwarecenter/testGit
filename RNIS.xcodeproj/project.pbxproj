@@ -78,6 +78,8 @@
 		8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9E1F204FA700FCA26E /* LoaderView.xib */; };
 		8375DEA41F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */; };
 		8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */; };
+		837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */; };
+		837ABEFC1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */; };
 		838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
@@ -210,6 +212,7 @@
 		8375DE9E1F204FA700FCA26E /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Traffic.swift"; path = "Controllers/Map/RNSMapViewController+Traffic.swift"; sourceTree = "<group>"; };
 		8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+MapView.swift"; path = "Controllers/Map/RNSMapViewController+MapView.swift"; sourceTree = "<group>"; };
+		837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPasswordField.swift; sourceTree = "<group>"; };
 		838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utils.swift"; path = "Library/Helpers/Base objects extensions/Color/UIColor+Utils.swift"; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
@@ -388,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				832E4B881F2ECE8C00A4AD77 /* Parent */,
+				837ABEF91F2EDAAD00AB5E54 /* PasswordField */,
 				832E4B841F2ECDCC00A4AD77 /* PhoneField */,
 			);
 			name = TextField;
@@ -796,6 +800,14 @@
 			);
 			name = LoaderView;
 			path = Library/Helpers/LoaderView;
+			sourceTree = "<group>";
+		};
+		837ABEF91F2EDAAD00AB5E54 /* PasswordField */ = {
+			isa = PBXGroup;
+			children = (
+				837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */,
+			);
+			path = PasswordField;
 			sourceTree = "<group>";
 		};
 		838AB8C51F26FB7C009E9C40 /* UIColor */ = {
@@ -1224,6 +1236,7 @@
 				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
 				832E4B931F2ED53000A4AD77 /* String+Utils.swift in Sources */,
 				83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */,
+				837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
 				835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
 				83CD58611F25948E00A9FE1A /* RNSPostRequest.swift in Sources */,
 				835718A31F21B37800DE5E25 /* RNSBuildRouteView+Action.swift in Sources */,
@@ -1249,6 +1262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				832E4B8B1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
+				837ABEFC1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
 				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,

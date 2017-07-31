@@ -37,7 +37,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brh-YF-4gx" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
-                    <rect key="frame" x="15" y="539" width="345" height="63"/>
+                    <rect key="frame" x="30" y="539" width="315" height="63"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="63" id="4ZX-Mv-pid"/>
@@ -49,8 +49,8 @@
                 <constraint firstItem="NRt-QG-dcm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2xt-2i-emP"/>
                 <constraint firstItem="E1e-mt-v4h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6J9-8f-w83"/>
                 <constraint firstItem="E1e-mt-v4h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="A8c-Nr-Dv4"/>
-                <constraint firstItem="brh-YF-4gx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="R0h-9b-p95"/>
-                <constraint firstAttribute="trailing" secondItem="brh-YF-4gx" secondAttribute="trailing" constant="15" id="XFd-SR-fxt"/>
+                <constraint firstItem="brh-YF-4gx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="R0h-9b-p95"/>
+                <constraint firstAttribute="trailing" secondItem="brh-YF-4gx" secondAttribute="trailing" constant="30" id="XFd-SR-fxt"/>
                 <constraint firstAttribute="trailing" secondItem="NRt-QG-dcm" secondAttribute="trailing" id="Yhz-cg-Zbm"/>
                 <constraint firstItem="NRt-QG-dcm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zvg-oo-M0A"/>
                 <constraint firstAttribute="bottom" secondItem="brh-YF-4gx" secondAttribute="bottom" constant="65" id="bIf-Ot-L18"/>

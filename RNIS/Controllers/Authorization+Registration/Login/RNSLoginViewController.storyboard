@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,17 +21,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMr-V4-Wpw" customClass="RNSPhoneField" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="31" y="299.5" width="313" height="30"/>
+                                <rect key="frame" x="30" y="288.5" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIe-zO-afW" customClass="STPasswordField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="373.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите пароль"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RMr-V4-Wpw" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leadingMargin" constant="15" id="4jk-xA-Zqf"/>
-                            <constraint firstItem="RMr-V4-Wpw" firstAttribute="centerY" secondItem="sNt-JM-pvk" secondAttribute="centerY" constant="-19" id="ay2-gV-wGQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RMr-V4-Wpw" secondAttribute="trailing" constant="15" id="tFF-7w-IkW"/>
+                            <constraint firstItem="RMr-V4-Wpw" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="Aid-oh-t62"/>
+                            <constraint firstItem="LIe-zO-afW" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="JfM-ud-qYu"/>
+                            <constraint firstAttribute="trailing" secondItem="RMr-V4-Wpw" secondAttribute="trailing" constant="30" id="PMO-xh-puW"/>
+                            <constraint firstItem="LIe-zO-afW" firstAttribute="bottom" secondItem="RMr-V4-Wpw" secondAttribute="bottom" constant="85" id="RpE-Ru-yTB"/>
+                            <constraint firstAttribute="trailing" secondItem="LIe-zO-afW" secondAttribute="trailing" constant="30" id="XmT-pr-dcD"/>
+                            <constraint firstItem="RMr-V4-Wpw" firstAttribute="centerY" secondItem="sNt-JM-pvk" secondAttribute="centerY" constant="-30" id="ay2-gV-wGQ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Забыли пароль"/>

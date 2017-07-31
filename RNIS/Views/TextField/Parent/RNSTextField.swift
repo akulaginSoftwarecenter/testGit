@@ -85,6 +85,7 @@ class RNSTextField: UITextField {
             _ = make.height.equalTo(45)
         }
         borderStyle = .none
+        textAlignment = .center
     }
     
     func preparePlaceholder(_ placeholderKey: String?) {

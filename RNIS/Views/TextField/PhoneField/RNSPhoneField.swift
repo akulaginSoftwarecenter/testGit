@@ -53,7 +53,6 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         editingChanged {[weak self] in
             self?.textFieldDidChange()
         }
-        textAlignment = .center
     }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
