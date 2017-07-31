@@ -10,5 +10,7 @@ import UIKit
 
 class RNSLoginViewController: UIViewController {
 
-    
+    override class var storyboardName: String {
+        return "RNSLoginViewController"
+    }
 }

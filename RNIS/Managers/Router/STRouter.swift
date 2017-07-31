@@ -54,4 +54,8 @@ class STRouter: NSObject {
     static func clearNav() {
         rootViewController?.viewControllers.removeAll()
     }
+    
+    static func pushBoard(_ viewController: UIViewController) {
+        push(boardContainer(viewController))
+    }
 }

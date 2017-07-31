@@ -16,7 +16,7 @@
         <!--Login View Controller-->
         <scene sceneID="4Is-yP-fCa">
             <objects>
-                <viewController id="ieL-F5-6Fm" customClass="RNSLoginViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RNSLoginViewController" id="ieL-F5-6Fm" customClass="RNSLoginViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UvM-4L-QkF"/>
                         <viewControllerLayoutGuide type="bottom" id="avp-B5-VH2"/>
@@ -62,7 +62,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94509803920000002" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RMr-V4-Wpw" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="Aid-oh-t62"/>
                             <constraint firstItem="ReY-FI-gw3" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="Dcx-7p-Rca"/>
@@ -97,9 +97,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ieL-F5-6Fm" kind="relationship" relationship="rootViewController" id="odD-M1-J2y"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asx-Bo-gqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

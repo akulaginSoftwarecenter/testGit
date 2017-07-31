@@ -24,9 +24,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedBG" translatesAutoresizingMaskIntoConstraints="NO" id="NRt-QG-dcm">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="E1e-mt-v4h">
                     <rect key="frame" x="111" y="66" width="152" height="44"/>
                 </imageView>
@@ -46,23 +43,18 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="NRt-QG-dcm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2xt-2i-emP"/>
                 <constraint firstItem="E1e-mt-v4h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6J9-8f-w83"/>
                 <constraint firstItem="E1e-mt-v4h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="A8c-Nr-Dv4"/>
                 <constraint firstItem="brh-YF-4gx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="R0h-9b-p95"/>
                 <constraint firstAttribute="trailing" secondItem="brh-YF-4gx" secondAttribute="trailing" constant="30" id="XFd-SR-fxt"/>
-                <constraint firstAttribute="trailing" secondItem="NRt-QG-dcm" secondAttribute="trailing" id="Yhz-cg-Zbm"/>
-                <constraint firstItem="NRt-QG-dcm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zvg-oo-M0A"/>
                 <constraint firstAttribute="bottom" secondItem="brh-YF-4gx" secondAttribute="bottom" constant="65" id="bIf-Ot-L18"/>
                 <constraint firstItem="LK6-E7-SZX" firstAttribute="top" secondItem="E1e-mt-v4h" secondAttribute="bottom" constant="37" id="fHT-Fb-8Vq"/>
                 <constraint firstItem="LK6-E7-SZX" firstAttribute="centerX" secondItem="E1e-mt-v4h" secondAttribute="centerX" id="gfF-hv-Fdl"/>
-                <constraint firstAttribute="bottom" secondItem="NRt-QG-dcm" secondAttribute="bottom" id="heY-Tj-T54"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
     <resources>
         <image name="Logo" width="152" height="44"/>
-        <image name="RedBG" width="375" height="667"/>
     </resources>
 </document>

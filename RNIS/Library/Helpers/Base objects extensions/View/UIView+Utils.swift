@@ -34,4 +34,19 @@ extension UIView {
             target.layoutIfNeeded()
         })
     }
+    
+    func removeAllGesture() {
+        if let recognizers = self.gestureRecognizers {
+            for recognizer in recognizers {
+                self.removeGestureRecognizer(recognizer)
+            }
+        }
+    }
+    
+    func addBackGroundImage() {
+        let backgroundView = UIImageView(frame: bounds)
+        backgroundView.image = #imageLiteral(resourceName: "RedBG")
+        backgroundView.contentMode = .scaleAspectFill
+        addSubview(backgroundView)
+    }
 }

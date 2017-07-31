@@ -14,4 +14,9 @@ extension STRouter {
         clearNav()
         push(RNSMapViewController.initialController)
     }
+    
+    static func showLogin() {
+        clearNav()
+        push(imageContainer(boardContainer(RNSLoginViewController.controller)))
+    }
 }
