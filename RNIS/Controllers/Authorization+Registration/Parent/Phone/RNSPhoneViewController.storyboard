@@ -7,6 +7,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Phone View Controller-->
         <scene sceneID="m0L-sk-3SP">
@@ -39,11 +44,20 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите номер телефона"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkV-q8-iDK">
+                                <rect key="frame" x="30" y="338.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NkV-q8-iDK" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="30" id="1s6-CH-AHh"/>
+                            <constraint firstAttribute="trailing" secondItem="NkV-q8-iDK" secondAttribute="trailing" constant="30" id="5WG-ac-f59"/>
                             <constraint firstItem="m8m-pf-kL8" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="30" id="PWd-sv-WtN"/>
                             <constraint firstItem="m8m-pf-kL8" firstAttribute="centerY" secondItem="HrX-gk-F32" secondAttribute="centerY" constant="-30" id="Pwu-2d-Rl3"/>
+                            <constraint firstItem="NkV-q8-iDK" firstAttribute="top" secondItem="m8m-pf-kL8" secondAttribute="bottom" constant="20" id="Shl-dy-sLc"/>
                             <constraint firstItem="0DG-iq-4zY" firstAttribute="top" secondItem="Tzw-1V-wXu" secondAttribute="bottom" constant="3" id="VNf-Kx-iMW"/>
                             <constraint firstItem="Tzw-1V-wXu" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" id="ftF-5S-60o"/>
                             <constraint firstAttribute="trailing" secondItem="m8m-pf-kL8" secondAttribute="trailing" constant="30" id="tmx-9T-856"/>
@@ -55,11 +69,48 @@
                     </view>
                     <connections>
                         <outlet property="coverView" destination="HrX-gk-F32" id="ISf-7X-rfJ"/>
+                        <outlet property="errorLabel" destination="NkV-q8-iDK" id="jaw-LS-EG7"/>
+                        <outlet property="phoneField" destination="m8m-pf-kL8" id="Wav-Re-ub4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndC-2r-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106.40000000000001" y="-183.05847076461771"/>
         </scene>
+        <!--Registration Phone Controller-->
+        <scene sceneID="tLG-vZ-v6A">
+            <objects>
+                <viewController storyboardIdentifier="RNSRegistrationPhoneController" id="uxU-RZ-Asb" customClass="RNSRegistrationPhoneController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="tcU-0l-HgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="wUs-3r-StT" kind="embed" identifier="RNSPhoneViewController" id="LU5-I6-VNt"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0iw-rP-YLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="-977"/>
+        </scene>
+        <!--Recovery Phone Controller-->
+        <scene sceneID="Kt8-vn-FDo">
+            <objects>
+                <viewController id="XCa-lG-Gfc" customClass="RNSRecoveryPhoneController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="QL0-7m-RC9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="wUs-3r-StT" kind="embed" identifier="RNSPhoneViewController" id="vfo-8v-ygT"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSt-5W-XtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="-977"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LU5-I6-VNt"/>
+    </inferredMetricsTieBreakers>
 </document>

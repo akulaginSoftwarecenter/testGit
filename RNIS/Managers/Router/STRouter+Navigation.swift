@@ -16,10 +16,10 @@ extension STRouter {
     
     static func showLogin() {
         clearNav()
-        push(imageContainer(boardContainer(RNSLoginViewController.controller)))
+        push(imageBoardContainer(RNSLoginViewController.controller))
     }
     
-    static func showRegistration() {
-        pushAnimated(imageContainer(boardContainer(RNSPhoneViewController.initialController)))
+    static func showRegistrationPhone() {
+        pushAnimated(imageBoardContainer(RNSRegistrationPhoneController.controller))
     }
 }

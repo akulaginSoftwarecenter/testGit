@@ -9,28 +9,22 @@
 import UIKit
 
 class RNSRegistrationPhoneController: UIViewController {
-    /*
-    override var titleTop: String {
-        return kRegistration
+    
+    var enterViewController: RNSPhoneViewController?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        enterViewController = segue.destination as? RNSPhoneViewController
+        prepareEnterViewController()
     }
     
-    override func blackAction() {
-        print("blackAction")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        prepareContainer()
-    }
-    
-    func prepareContainer() {
-        guard let containerVC = RNSPhoneViewController.initialController,
-            let containerView = containerVC.view else {
-                return
+    func prepareEnterViewController(){
+        enterViewController?.titleTextTop = kRegistration
+        enterViewController?.handlerBlackAction = { [weak self] in
+            print("RNSRegistrationPhoneController handlerBlackAction")
         }
-        self.addChildViewController(containerVC)
-        view.addSubview(containerView)
-        containerView.autoPinEdgesToSuperviewEdges()
     }
- */
+    
+    override class var storyboardName: String {
+        return "RNSPhoneViewController"
+    }
 }

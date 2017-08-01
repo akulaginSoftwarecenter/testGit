@@ -11,15 +11,21 @@ import UIKit
 class RNSPhoneViewController: UIViewController {
 
     @IBOutlet var coverView: RNSLoginView!
-
     var handlerBlackAction: EmptyBlock?
+    @IBInspectable var titleTextTop: String?
+    @IBOutlet weak var phoneField: RNSPhoneField!
+    @IBOutlet weak var errorLabel: UILabel!
     
-    @IBInspectable var titleTextTop: String {
-        get { return "" }
-        set {
-            self.coverView.titleTextTop = newValue
+    func prepareTitleTextTop() {
+        guard let titleTextTop = titleTextTop else {
+            return
         }
+        coverView.titleTextTop = titleTextTop
     }
+    
+    lazy var fields:[RNSTextField] = {
+        return [self.phoneField]
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +34,24 @@ class RNSPhoneViewController: UIViewController {
     }
     
     func prepareCoverView() {
+        prepareTitleTextTop()
         coverView.handlerBlackAction = { [weak self] in
-            self?.handlerBlackAction?()
+            self?.loginPressed()
         }
+    }
+    
+    func loginPressed() {
+        if let error = fields.checkValidFields {
+            errorLabel.text = error
+            return
+        }
+        clearError()
+        handlerBlackAction?()
+    }
+    
+    func clearError() {
+        fields.clearError()
+        errorLabel.text = nil
     }
     
     override class var storyboardName: String {

@@ -11,7 +11,7 @@ import Foundation
 extension RNSLoginViewController {
     
     @IBAction func registrationAction(_ sender: Any) {
-        STRouter.showRegistration()
+        STRouter.showRegistrationPhone()
     }
     
     @IBAction func recoveryAction(_ sender: Any) {

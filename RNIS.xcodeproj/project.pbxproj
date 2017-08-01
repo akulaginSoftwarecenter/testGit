@@ -114,6 +114,7 @@
 		837ABF361F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF341F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift */; };
 		838707D31F3017870094B273 /* RNSGrayBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707D21F3017870094B273 /* RNSGrayBackButton.swift */; };
 		838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838707D41F30179B0094B273 /* RNSGrayBackButton.xib */; };
+		838707D81F301D0D0094B273 /* RNSRecoveryPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707D71F301D0D0094B273 /* RNSRecoveryPhoneController.swift */; };
 		838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
@@ -265,6 +266,7 @@
 		837ABF341F2EF8CF00AB5E54 /* RNSRegistrationPhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationPhoneController.swift; path = "Controllers/Authorization+Registration/Registration/RNSRegistrationPhoneController.swift"; sourceTree = "<group>"; };
 		838707D21F3017870094B273 /* RNSGrayBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGrayBackButton.swift; path = Views/Buttons/GrayBackButton/RNSGrayBackButton.swift; sourceTree = "<group>"; };
 		838707D41F30179B0094B273 /* RNSGrayBackButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSGrayBackButton.xib; path = Views/Buttons/GrayBackButton/RNSGrayBackButton.xib; sourceTree = "<group>"; };
+		838707D71F301D0D0094B273 /* RNSRecoveryPhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryPhoneController.swift; path = "Controllers/Authorization+Registration/Recovery/RNSRecoveryPhoneController.swift"; sourceTree = "<group>"; };
 		838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utils.swift"; path = "Library/Helpers/Base objects extensions/Color/UIColor+Utils.swift"; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			children = (
 				837ABF2D1F2EF2FC00AB5E54 /* Parent */,
 				837ABF2C1F2EF2E700AB5E54 /* Registration */,
+				838707D61F301CC80094B273 /* Recovery */,
 				832E4B691F2EC26C00A4AD77 /* Login */,
 			);
 			name = "Login+Registration";
@@ -972,6 +975,14 @@
 			name = GrayBackButton;
 			sourceTree = "<group>";
 		};
+		838707D61F301CC80094B273 /* Recovery */ = {
+			isa = PBXGroup;
+			children = (
+				838707D71F301D0D0094B273 /* RNSRecoveryPhoneController.swift */,
+			);
+			name = Recovery;
+			sourceTree = "<group>";
+		};
 		838AB8C51F26FB7C009E9C40 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1378,6 +1389,7 @@
 				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
 				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,
 				835718AE1F21C80600DE5E25 /* RNSPinBuild.swift in Sources */,
+				838707D81F301D0D0094B273 /* RNSRecoveryPhoneController.swift in Sources */,
 				837ABF1F1F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
