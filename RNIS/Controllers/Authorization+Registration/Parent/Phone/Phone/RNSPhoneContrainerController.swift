@@ -1,15 +1,15 @@
 //
-//  RNSRegistrationPhoneController.swift
+//  RNSPhoneContrainerController.swift
 //  RNIS
 //
-//  Created by Артем Кулагин on 31.07.17.
+//  Created by Артем Кулагин on 01.08.17.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
 import UIKit
 
-class RNSRegistrationPhoneController: UIViewController {
-    
+class RNSPhoneContrainerController: UIViewController {
+
     var enterViewController: RNSPhoneViewController?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -18,13 +18,25 @@ class RNSRegistrationPhoneController: UIViewController {
     }
     
     func prepareEnterViewController(){
-        enterViewController?.titleTextTop = kRegistration
+        enterViewController?.titleTextTop = titleTextTop
         enterViewController?.handlerBlackAction = { [weak self] in
-            print("RNSRegistrationPhoneController handlerBlackAction")
+            self?.actionNext()
         }
     }
     
+    var titleTextTop: String {
+        return ""
+    }
+    
+    var phoneText: String? {
+       return enterViewController?.phoneField.last10
+    }
+    
+    func actionNext() {
+        
+    }
+    
     override class var storyboardName: String {
-        return "RNSPhoneViewController"
+        return kPhoneVC
     }
 }

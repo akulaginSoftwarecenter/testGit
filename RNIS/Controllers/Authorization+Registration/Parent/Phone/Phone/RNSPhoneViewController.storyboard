@@ -96,7 +96,7 @@
         <!--Recovery Phone Controller-->
         <scene sceneID="Kt8-vn-FDo">
             <objects>
-                <viewController id="XCa-lG-Gfc" customClass="RNSRecoveryPhoneController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RNSRecoveryPhoneController" id="XCa-lG-Gfc" customClass="RNSRecoveryPhoneController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <containerView key="view" opaque="NO" contentMode="scaleToFill" id="QL0-7m-RC9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

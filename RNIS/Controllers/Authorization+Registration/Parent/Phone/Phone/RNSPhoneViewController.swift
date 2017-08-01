@@ -55,6 +55,6 @@ class RNSPhoneViewController: UIViewController {
     }
     
     override class var storyboardName: String {
-        return "RNSPhoneViewController"
+        return kPhoneVC
     }
 }

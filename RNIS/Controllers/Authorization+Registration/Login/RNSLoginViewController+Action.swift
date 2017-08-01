@@ -11,10 +11,14 @@ import Foundation
 extension RNSLoginViewController {
     
     @IBAction func registrationAction(_ sender: Any) {
-        STRouter.showRegistrationPhone()
+        push(RNSRegistrationPhoneController.controller)
     }
     
     @IBAction func recoveryAction(_ sender: Any) {
-        print("recoveryAction")
+        push(RNSRecoveryPhoneController.controller)
+    }
+    
+    func push(_ viewController: UIViewController) {
+        STRouter.pushAnimatedImageBoard(viewController)
     }
 }

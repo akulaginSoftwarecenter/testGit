@@ -55,7 +55,7 @@ class STRouter: NSObject {
         rootViewController?.viewControllers.removeAll()
     }
     
-    static func pushBoard(_ viewController: UIViewController) {
-        push(boardContainer(viewController))
+    static func pushAnimatedImageBoard(_ viewController: UIViewController) {
+        pushAnimated(imageBoardContainer(viewController))
     }
 }

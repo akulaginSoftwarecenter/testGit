@@ -18,3 +18,7 @@ let showLogApi = false
 
 
 let kRegistration = "Регистрация"
+let kForgotPassword = "Забыли пароль"
+
+
+let kPhoneVC = "RNSPhoneViewController"
