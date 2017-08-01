@@ -10,15 +10,15 @@ import UIKit
 
 extension STRouter {
     
-    static func boardContainer(_ viewController: UIViewController) -> UIViewController {
-        return KeyBoardViewController(container: viewController)
+    static func boardContainer(_ viewController: UIViewController?) -> UIViewController? {
+        return KeyBoardViewController(viewController)
     }
     
-    static func imageContainer(_ viewController: UIViewController) -> UIViewController {
-        return STImageContainer(container: viewController)
+    static func imageContainer(_ viewController: UIViewController?) -> UIViewController? {
+        return STImageContainer(viewController)
     }
     
-    static func imageBoardContainer(_ viewController: UIViewController) -> UIViewController {
+    static func imageBoardContainer(_ viewController: UIViewController?) -> UIViewController? {
         return imageContainer(boardContainer(viewController))
     }
 }

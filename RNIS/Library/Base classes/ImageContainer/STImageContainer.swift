@@ -13,7 +13,7 @@ class STImageContainer: UIViewController {
     
     var containerVC:UIViewController?
     
-    convenience init(container: UIViewController) {
+    convenience init(_ container: UIViewController?) {
         self.init()
         containerVC = container
     }

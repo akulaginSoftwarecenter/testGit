@@ -24,13 +24,16 @@ class STRouter: NSObject {
         return rootViewController?.viewControllers
     }
     
-    static func push(_ viewController: UIViewController,
+    static func push(_ viewController: UIViewController?,
                              animated: Bool = false,
                            completion: EmptyBlock? = nil) {
+        guard let viewController = viewController else {
+            return
+        }
         rootViewController?.push(viewController, animated: animated, completion: completion)
     }
     
-    static func pushAnimated(_ viewController: UIViewController,
+    static func pushAnimated(_ viewController: UIViewController?,
                                    completion: EmptyBlock? = nil) {
         push(viewController, animated: true, completion: completion)
     }
@@ -55,7 +58,7 @@ class STRouter: NSObject {
         rootViewController?.viewControllers.removeAll()
     }
     
-    static func pushAnimatedImageBoard(_ viewController: UIViewController) {
+    static func pushAnimatedImageBoard(_ viewController: UIViewController?) {
         pushAnimated(imageBoardContainer(viewController))
     }
 }

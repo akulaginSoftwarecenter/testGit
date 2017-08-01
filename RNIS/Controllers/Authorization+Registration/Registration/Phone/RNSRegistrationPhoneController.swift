@@ -15,6 +15,7 @@ class RNSRegistrationPhoneController: RNSPhoneContrainerController {
     }
     
     override func actionNext() {
-        print("RNSRegistrationPhoneController ",phoneText)
+        let vc = RNSRegistrationCodeController.initController(phoneText)
+        STRouter.pushAnimatedImageBoard(vc)
     }
 }

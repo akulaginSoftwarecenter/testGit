@@ -15,6 +15,8 @@ class RNSRecoveryPhoneController: RNSPhoneContrainerController {
     }
     
     override func actionNext() {
-        print("RNSRecoveryPhoneController",phoneText)
+        let vc = RNSRecoveryCodeController.initController(phoneText)
+        STRouter.pushAnimatedImageBoard(vc)
+        print("RNSRecoveryPhoneController")
     }
 }

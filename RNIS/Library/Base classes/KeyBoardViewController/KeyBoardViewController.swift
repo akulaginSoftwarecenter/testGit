@@ -15,7 +15,7 @@ class KeyBoardViewController: UIViewController, KeyboardShowable {
     var innerView: UIView!
     var containerVC:UIViewController?
     
-    convenience init(container: UIViewController) {
+    convenience init(_ container: UIViewController?) {
         self.init()
         containerVC = container
     }

@@ -17,6 +17,7 @@ class RNSCodeViewController: UIViewController {
     @IBOutlet var coverView: RNSLoginView!
     var handlerBlackAction: EmptyBlock?
     var handlerRepeatCode: EmptyBlock?
+    var phone: String?
     
     @IBInspectable var titleTextTop: String?
     
@@ -31,6 +32,11 @@ class RNSCodeViewController: UIViewController {
         super.viewDidLoad()
         
         prepareCoverView()
+        preparePhone()
+    }
+    
+    func preparePhone() {
+        phoneLabel.text = InputFieldsValidator.format(phone).text
     }
     
     func prepareCoverView() {

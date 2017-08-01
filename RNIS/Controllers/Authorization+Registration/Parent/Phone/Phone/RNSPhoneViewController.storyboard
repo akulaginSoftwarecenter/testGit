@@ -85,7 +85,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <connections>
-                            <segue destination="wUs-3r-StT" kind="embed" identifier="RNSPhoneViewController" id="LU5-I6-VNt"/>
+                            <segue destination="wUs-3r-StT" kind="embed" identifier="" id="LU5-I6-VNt"/>
                         </connections>
                     </containerView>
                 </viewController>
@@ -101,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <connections>
-                            <segue destination="wUs-3r-StT" kind="embed" identifier="RNSPhoneViewController" id="vfo-8v-ygT"/>
+                            <segue destination="wUs-3r-StT" kind="embed" identifier="" id="vfo-8v-ygT"/>
                         </connections>
                     </containerView>
                 </viewController>

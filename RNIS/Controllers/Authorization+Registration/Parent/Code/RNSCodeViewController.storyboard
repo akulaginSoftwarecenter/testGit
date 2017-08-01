@@ -17,6 +17,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Registration Code Controller-->
+        <scene sceneID="dri-uJ-F2d">
+            <objects>
+                <viewController storyboardIdentifier="RNSRegistrationCodeController" id="PJv-hf-0nb" customClass="RNSRegistrationCodeController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="ww5-r1-EvR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="0gl-Wq-lRC" kind="embed" id="wzz-oi-geh"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3M-iu-JDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-569" y="-909"/>
+        </scene>
         <!--Code View Controller-->
         <scene sceneID="hr8-xm-pmP">
             <objects>
@@ -53,7 +69,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-ko-thU" customClass="RNSTextField" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="386.5" width="315" height="30"/>
+                                <rect key="frame" x="30" y="387" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -62,13 +78,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGX-q7-GRV">
-                                <rect key="frame" x="30" y="426.5" width="315" height="0.0"/>
+                                <rect key="frame" x="30" y="427" width="315" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-N5-WXX">
-                                <rect key="frame" x="30" y="436.5" width="315" height="20"/>
+                                <rect key="frame" x="30" y="437" width="315" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="iGo-6F-uwO"/>
                                 </constraints>
@@ -121,5 +137,24 @@
             </objects>
             <point key="canvasLocation" x="-106.40000000000001" y="-183.05847076461771"/>
         </scene>
+        <!--Recovery Code Controller-->
+        <scene sceneID="gxo-Fj-Vwg">
+            <objects>
+                <viewController storyboardIdentifier="RNSRecoveryCodeController" id="eGw-aD-BkB" customClass="RNSRecoveryCodeController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="KZM-wq-jqL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="0gl-Wq-lRC" kind="embed" id="vYQ-1m-rZO"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBQ-Dw-OGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="-910"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vYQ-1m-rZO"/>
+    </inferredMetricsTieBreakers>
 </document>
