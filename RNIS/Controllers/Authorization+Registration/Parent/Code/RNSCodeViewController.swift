@@ -36,7 +36,10 @@ class RNSCodeViewController: UIViewController {
     }
     
     func preparePhone() {
-        phoneLabel.text = InputFieldsValidator.format(phone).text
+        guard let phone = phone else {
+            return
+        }
+        phoneLabel.text = InputFieldsValidator.format("+7" + phone).text
     }
     
     func prepareCoverView() {
