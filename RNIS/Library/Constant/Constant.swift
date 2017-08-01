@@ -22,3 +22,5 @@ let kForgotPassword = "Забыли пароль"
 
 
 let kPhoneVC = "RNSPhoneViewController"
+let kCodeVC = "RNSCodeViewController"
+

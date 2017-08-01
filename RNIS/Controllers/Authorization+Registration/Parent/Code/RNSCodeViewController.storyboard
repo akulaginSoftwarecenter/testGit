@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0gl-Wq-lRC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Code View Controller-->
+        <scene sceneID="hr8-xm-pmP">
+            <objects>
+                <viewController id="0gl-Wq-lRC" customClass="RNSCodeViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6mH-bb-2Jk"/>
+                        <viewControllerLayoutGuide type="bottom" id="uco-5U-zOt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yts-gU-Hrs" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZR-v5-eCf" customClass="RNSGrayBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="602" width="375" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="NkZ-9G-q4q"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 7 (921) 938-32-69" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X04-Uo-eTT">
+                                <rect key="frame" x="30" y="190" width="315" height="50"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На этот номер было выслано  SMS-сообщение с кодом подтверждения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O4-XA-ta0">
+                                <rect key="frame" x="30" y="254" width="315" height="40"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSZ-6f-o0L">
+                                <rect key="frame" x="0.0" y="294" width="375" height="245"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-ko-thU" customClass="RNSTextField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="386.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите код подтверждения"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGX-q7-GRV">
+                                <rect key="frame" x="30" y="426.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-N5-WXX">
+                                <rect key="frame" x="30" y="436.5" width="315" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="iGo-6F-uwO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <state key="normal" title="Выслать повторно">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="repeatCodeAction:" destination="0gl-Wq-lRC" eventType="touchUpInside" id="tsY-ks-BYT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="X04-Uo-eTT" secondAttribute="trailing" constant="30" id="2PV-6V-TI1"/>
+                            <constraint firstItem="pGX-q7-GRV" firstAttribute="top" secondItem="aC6-ko-thU" secondAttribute="bottom" constant="10" id="8Eg-O0-K5Z"/>
+                            <constraint firstItem="uco-5U-zOt" firstAttribute="top" secondItem="BZR-v5-eCf" secondAttribute="bottom" constant="3" id="ACn-Is-9iZ"/>
+                            <constraint firstAttribute="trailing" secondItem="BZR-v5-eCf" secondAttribute="trailing" id="BO7-VK-824"/>
+                            <constraint firstItem="kSZ-6f-o0L" firstAttribute="top" secondItem="X04-Uo-eTT" secondAttribute="bottom" constant="54" id="HWD-WS-OXg"/>
+                            <constraint firstItem="2O4-XA-ta0" firstAttribute="top" secondItem="X04-Uo-eTT" secondAttribute="bottom" constant="14" id="JTa-z9-hCs"/>
+                            <constraint firstItem="aC6-ko-thU" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" constant="30" id="OBM-Cr-kPO"/>
+                            <constraint firstItem="kSZ-6f-o0L" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" id="S86-lO-Hwb"/>
+                            <constraint firstItem="2O4-XA-ta0" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" constant="30" id="U93-Qi-ICf"/>
+                            <constraint firstItem="yXV-N5-WXX" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" constant="30" id="Vyj-oy-ZFB"/>
+                            <constraint firstItem="aC6-ko-thU" firstAttribute="bottom" secondItem="kSZ-6f-o0L" secondAttribute="centerY" id="WPb-QW-hOL"/>
+                            <constraint firstAttribute="trailing" secondItem="pGX-q7-GRV" secondAttribute="trailing" constant="30" id="c8y-yU-Blh"/>
+                            <constraint firstItem="pGX-q7-GRV" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" constant="30" id="dPZ-sn-4eB"/>
+                            <constraint firstAttribute="trailing" secondItem="kSZ-6f-o0L" secondAttribute="trailing" id="jNv-R5-tbK"/>
+                            <constraint firstItem="uco-5U-zOt" firstAttribute="top" secondItem="kSZ-6f-o0L" secondAttribute="bottom" constant="128" id="jiB-OQ-9HQ"/>
+                            <constraint firstAttribute="trailing" secondItem="aC6-ko-thU" secondAttribute="trailing" constant="30" id="kdW-Jq-Cy2"/>
+                            <constraint firstItem="X04-Uo-eTT" firstAttribute="top" secondItem="Yts-gU-Hrs" secondAttribute="top" constant="190" id="kip-1Z-RaG"/>
+                            <constraint firstAttribute="trailing" secondItem="2O4-XA-ta0" secondAttribute="trailing" constant="30" id="niT-J7-9DH"/>
+                            <constraint firstItem="BZR-v5-eCf" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" id="sSf-bB-P3k"/>
+                            <constraint firstItem="X04-Uo-eTT" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" constant="30" id="t5O-8y-CKp"/>
+                            <constraint firstAttribute="trailing" secondItem="yXV-N5-WXX" secondAttribute="trailing" constant="30" id="wOm-kW-Tye"/>
+                            <constraint firstItem="yXV-N5-WXX" firstAttribute="top" secondItem="pGX-q7-GRV" secondAttribute="bottom" constant="10" id="ztr-8p-5ZU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Подтвердить"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="codeField" destination="aC6-ko-thU" id="n6B-BL-xd5"/>
+                        <outlet property="coverView" destination="Yts-gU-Hrs" id="Vx4-G5-XJe"/>
+                        <outlet property="errorLabel" destination="pGX-q7-GRV" id="K72-eH-v3x"/>
+                        <outlet property="phoneLabel" destination="X04-Uo-eTT" id="yMo-6w-GNH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWf-0l-gZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.40000000000001" y="-183.05847076461771"/>
+        </scene>
+    </scenes>
+</document>
