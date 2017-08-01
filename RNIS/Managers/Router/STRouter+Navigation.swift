@@ -19,7 +19,7 @@ extension STRouter {
         push(imageContainer(boardContainer(RNSLoginViewController.controller)))
     }
     
-    static func showRegistrationPhone() {
-        push(RNSRegistrationPhoneController.initialController)
+    static func showRegistration() {
+        pushAnimated(imageContainer(boardContainer(RNSPhoneViewController.initialController)))
     }
 }

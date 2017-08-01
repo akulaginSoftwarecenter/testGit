@@ -7,11 +7,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="mainFont.otf">
-            <string>Cffazmiakhaddpiofffvylaqekz</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Phone View Controller-->
         <scene sceneID="m0L-sk-3SP">
@@ -25,27 +20,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKe-5P-ngy" customClass="RNSPhoneField" customModule="RNIS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzw-1V-wXu" customClass="RNSGrayBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="602" width="375" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="3Vc-Ej-HSH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Вернуться на экран приветствия"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-pf-kL8" customClass="RNSPhoneField" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="288.5" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите номер телефона"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На этот номер будет выслано SMS-сообщение с кодом подтверждения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLU-Qf-4bb">
-                                <rect key="frame" x="45" y="333.5" width="285" height="32"/>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.8862745098" green="0.36862745099999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DLU-Qf-4bb" firstAttribute="top" secondItem="hKe-5P-ngy" secondAttribute="bottom" constant="15" id="82o-v2-6VB"/>
-                            <constraint firstItem="hKe-5P-ngy" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="30" id="Elv-nf-Adp"/>
-                            <constraint firstAttribute="trailing" secondItem="hKe-5P-ngy" secondAttribute="trailing" constant="30" id="OoJ-db-IR6"/>
-                            <constraint firstAttribute="trailing" secondItem="DLU-Qf-4bb" secondAttribute="trailing" constant="45" id="dNp-Vi-YVs"/>
-                            <constraint firstItem="DLU-Qf-4bb" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="45" id="dkY-ft-prY"/>
-                            <constraint firstItem="hKe-5P-ngy" firstAttribute="centerY" secondItem="HrX-gk-F32" secondAttribute="centerY" constant="-30" id="fzv-yT-p2e"/>
+                            <constraint firstItem="m8m-pf-kL8" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="30" id="PWd-sv-WtN"/>
+                            <constraint firstItem="m8m-pf-kL8" firstAttribute="centerY" secondItem="HrX-gk-F32" secondAttribute="centerY" constant="-30" id="Pwu-2d-Rl3"/>
+                            <constraint firstItem="0DG-iq-4zY" firstAttribute="top" secondItem="Tzw-1V-wXu" secondAttribute="bottom" constant="3" id="VNf-Kx-iMW"/>
+                            <constraint firstItem="Tzw-1V-wXu" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" id="ftF-5S-60o"/>
+                            <constraint firstAttribute="trailing" secondItem="m8m-pf-kL8" secondAttribute="trailing" constant="30" id="tmx-9T-856"/>
+                            <constraint firstAttribute="trailing" secondItem="Tzw-1V-wXu" secondAttribute="trailing" id="w58-7Q-QSw"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Далее"/>
@@ -57,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndC-2r-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-105" y="-183"/>
+            <point key="canvasLocation" x="-106.40000000000001" y="-183.05847076461771"/>
         </scene>
     </scenes>
 </document>
