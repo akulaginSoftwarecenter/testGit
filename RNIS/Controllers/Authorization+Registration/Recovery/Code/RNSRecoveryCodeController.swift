@@ -23,4 +23,9 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
     override func actionNext() {
          print("RNSRecoveryCodeController ctionNext",codeText)
     }
+    
+    override func repeatCodeAction() {
+        STRouter.showAlertRepeatCode()
+        print("RNSRecoveryCodeController repeatCodeAction")
+    }
 }

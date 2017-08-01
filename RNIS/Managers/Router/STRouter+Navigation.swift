@@ -18,4 +18,8 @@ extension STRouter {
         clearNav()
         push(imageBoardContainer(RNSLoginViewController.controller))
     }
+    
+    static func showAlertRepeatCode() {
+        
+    }
 }

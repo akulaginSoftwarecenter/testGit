@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HbA-I2-cAp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="BpJ-b7-niA">
+            <objects>
+                <viewController id="HbA-I2-cAp" customClass="RNSAlertViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L1W-4q-TqY"/>
+                        <viewControllerLayoutGuide type="bottom" id="B1A-vp-2mM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lDi-wZ-lIt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L86-oQ-JF4">
+                                <rect key="frame" x="30" y="242.5" width="315" height="181"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugz-0h-g1m">
+                                        <rect key="frame" x="0.0" y="124" width="315" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="1zj-4D-J1e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="23"/>
+                                        <state key="normal" title="Ок">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-5J-yhq">
+                                        <rect key="frame" x="0.0" y="123.5" width="315" height="0.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="w5B-BV-HsT"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk6-bf-9RM">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="123.5"/>
+                                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.28235294117647058" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ugz-0h-g1m" secondAttribute="trailing" id="2UF-LK-Ywg"/>
+                                    <constraint firstItem="Ugz-0h-g1m" firstAttribute="leading" secondItem="L86-oQ-JF4" secondAttribute="leading" id="4TX-4A-bhC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ugz-0h-g1m" secondAttribute="bottom" id="AGP-N8-qqD"/>
+                                    <constraint firstItem="Qk6-bf-9RM" firstAttribute="top" secondItem="L86-oQ-JF4" secondAttribute="top" id="JJd-TN-r4G"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kxx-5J-yhq" secondAttribute="trailing" id="Pkg-aI-Kg7"/>
+                                    <constraint firstItem="Kxx-5J-yhq" firstAttribute="leading" secondItem="L86-oQ-JF4" secondAttribute="leading" id="PwI-8r-ORA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qk6-bf-9RM" secondAttribute="trailing" id="aXw-nL-aCC"/>
+                                    <constraint firstAttribute="height" constant="181" id="uXL-QK-ajG"/>
+                                    <constraint firstItem="Ugz-0h-g1m" firstAttribute="top" secondItem="Kxx-5J-yhq" secondAttribute="bottom" id="vSD-0M-tqK"/>
+                                    <constraint firstItem="Qk6-bf-9RM" firstAttribute="leading" secondItem="L86-oQ-JF4" secondAttribute="leading" id="wdK-0O-Iai"/>
+                                    <constraint firstItem="Kxx-5J-yhq" firstAttribute="top" secondItem="Qk6-bf-9RM" secondAttribute="bottom" id="wjg-4K-3zm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="L86-oQ-JF4" secondAttribute="trailing" constant="30" id="FjV-3D-Vv0"/>
+                            <constraint firstItem="L86-oQ-JF4" firstAttribute="centerX" secondItem="lDi-wZ-lIt" secondAttribute="centerX" id="H0x-eP-pFA"/>
+                            <constraint firstItem="L86-oQ-JF4" firstAttribute="leading" secondItem="lDi-wZ-lIt" secondAttribute="leading" constant="30" id="Nmv-vl-Lql"/>
+                            <constraint firstItem="L86-oQ-JF4" firstAttribute="centerY" secondItem="lDi-wZ-lIt" secondAttribute="centerY" id="T5z-yZ-tvs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Qk6-bf-9RM" id="pQf-se-pvx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hH-hd-80g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="141.67916041979012"/>
+        </scene>
+    </scenes>
+</document>

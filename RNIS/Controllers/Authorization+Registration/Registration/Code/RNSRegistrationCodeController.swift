@@ -21,6 +21,11 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     }
     
     override func actionNext() {
-        print("RNSRegistrationCodeControllera ctionNext",codeText)
+        print("RNSRegistrationCodeControllera ctionNext")
+    }
+    
+    override func repeatCodeAction() {
+        STRouter.showAlertRepeatCode()
+        print("RNSRegistrationCodeControllera repeatCodeAction")
     }
 }

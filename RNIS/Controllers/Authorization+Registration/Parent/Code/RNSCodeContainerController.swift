@@ -23,6 +23,10 @@ class RNSCodeContainerController: UIViewController {
         enterViewController?.handlerBlackAction = { [weak self] in
             self?.actionNext()
         }
+        
+        enterViewController?.handlerRepeatCode = { [weak self] in
+            self?.repeatCodeAction()
+        }
         enterViewController?.phone = phone
     }
     
@@ -35,6 +39,10 @@ class RNSCodeContainerController: UIViewController {
     }
     
     func actionNext() {
+        
+    }
+    
+    func repeatCodeAction() {
         
     }
     
