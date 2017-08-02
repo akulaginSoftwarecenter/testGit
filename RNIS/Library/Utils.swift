@@ -12,6 +12,7 @@ import UIKit
 typealias EmptyBlock = () -> Void
 typealias AliasDictionary = [String: Any]
 typealias AnyBlock = (Any) -> ()
+typealias AliasImageBlock = (UIImage?) -> ()
 
 func NSLoc(_ key: String?) -> String {
     guard let key = key else {

@@ -10,6 +10,8 @@ import UIKit
 
 class RNSRegistrationNameController: UIViewController {
     
+    var photo: UIImage?
+    
     override class var storyboardName: String {
         return "RNSRegistrationNameController"
     }
