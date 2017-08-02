@@ -9,6 +9,6 @@
 import UIKit
 
 protocol ContainerProtocol: class {
-    var titleTextTop: String? { get set }
+    var titleTextTop: TypeTitle? { get set }
     var handlerBlackAction: EmptyBlock? { get set}
 }

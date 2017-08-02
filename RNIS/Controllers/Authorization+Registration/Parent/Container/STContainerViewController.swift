@@ -23,7 +23,7 @@ class STContainerViewController: UIViewController {
     }
     
     func prepareEnterViewController(){
-        enterViewController?.titleTextTop = typeTitle.rawValue
+        enterViewController?.titleTextTop = typeTitle
         enterViewController?.handlerBlackAction = { [weak self] in
             self?.actionNext()
         }

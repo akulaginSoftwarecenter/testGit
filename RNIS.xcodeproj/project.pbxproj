@@ -72,6 +72,14 @@
 		836989231F317B64003E4D73 /* STContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989211F317B64003E4D73 /* STContainerViewController.swift */; };
 		836989291F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989281F3183C3003E4D73 /* RNSCoverViewController.swift */; };
 		8369892A1F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989281F3183C3003E4D73 /* RNSCoverViewController.swift */; };
+		836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989301F318778003E4D73 /* RNSRegistrationNameController.swift */; };
+		836989321F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989301F318778003E4D73 /* RNSRegistrationNameController.swift */; };
+		836989341F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */; };
+		836989351F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */; };
+		836989381F318B54003E4D73 /* RNSNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989371F318B54003E4D73 /* RNSNameField.swift */; };
+		836989391F318B54003E4D73 /* RNSNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989371F318B54003E4D73 /* RNSNameField.swift */; };
+		8369893B1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */; };
+		8369893C1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836D80A51F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle */; };
 		836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80AD1F1DB33900FEE390 /* AppDelegate.swift */; };
@@ -254,6 +262,10 @@
 		8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerProtocol.swift; path = ContainerProtocol/ContainerProtocol.swift; sourceTree = "<group>"; };
 		836989211F317B64003E4D73 /* STContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STContainerViewController.swift; path = "Controllers/Authorization+Registration/Parent/Container/STContainerViewController.swift"; sourceTree = "<group>"; };
 		836989281F3183C3003E4D73 /* RNSCoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSCoverViewController.swift; path = "Controllers/Authorization+Registration/Parent/Cover/RNSCoverViewController.swift"; sourceTree = "<group>"; };
+		836989301F318778003E4D73 /* RNSRegistrationNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationNameController.swift; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController.swift"; sourceTree = "<group>"; };
+		836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSRegistrationNameController.storyboard; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController.storyboard"; sourceTree = "<group>"; };
+		836989371F318B54003E4D73 /* RNSNameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSNameField.swift; path = LoginField/RNSNameField.swift; sourceTree = "<group>"; };
+		8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRegistrationNameController+Action.swift"; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController+Action.swift"; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D809B1F1DB29D00FEE390 /* RNIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RNIS-Bridging-Header.h"; path = "Application/RNIS-Bridging-Header.h"; sourceTree = "<group>"; };
 		836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProgorodLiteLibrary.a; path = Library/Helpers/ProgorodLiteLibrary/libProgorodLiteLibrary.a; sourceTree = "<group>"; };
@@ -499,6 +511,7 @@
 		832E4B831F2ECDCC00A4AD77 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				836989361F318B12003E4D73 /* NameField */,
 				832E4B881F2ECE8C00A4AD77 /* Parent */,
 				837ABEF91F2EDAAD00AB5E54 /* PasswordField */,
 				832E4B841F2ECDCC00A4AD77 /* PhoneField */,
@@ -725,6 +738,24 @@
 				836989281F3183C3003E4D73 /* RNSCoverViewController.swift */,
 			);
 			name = Cover;
+			sourceTree = "<group>";
+		};
+		8369892F1F318744003E4D73 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				836989301F318778003E4D73 /* RNSRegistrationNameController.swift */,
+				8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */,
+				836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */,
+			);
+			name = Name;
+			sourceTree = "<group>";
+		};
+		836989361F318B12003E4D73 /* NameField */ = {
+			isa = PBXGroup;
+			children = (
+				836989371F318B54003E4D73 /* RNSNameField.swift */,
+			);
+			name = NameField;
 			sourceTree = "<group>";
 		};
 		836D80511F1DAC0400FEE390 = {
@@ -1058,6 +1089,7 @@
 				838707D91F3025290094B273 /* Phone */,
 				838707F51F303C8B0094B273 /* Code */,
 				836989151F3172C1003E4D73 /* Parole */,
+				8369892F1F318744003E4D73 /* Name */,
 			);
 			name = Registration;
 			sourceTree = "<group>";
@@ -1434,6 +1466,7 @@
 				8357187A1F21A2A500DE5E25 /* RNSLaunchViewController.storyboard in Resources */,
 				832E4B7F1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */,
 				832E4B7C1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */,
+				836989341F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */,
 				836D80B11F1DB35400FEE390 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1446,6 +1479,7 @@
 				832E4B761F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
 				832E4B7D1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */,
 				838707E51F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */,
+				836989351F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */,
 				8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */,
 				838707F11F3029210094B273 /* RNSCodeViewController.storyboard in Resources */,
 			);
@@ -1566,6 +1600,7 @@
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
 				83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */,
 				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
+				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
 				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
@@ -1575,6 +1610,7 @@
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
+				836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
 				8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */,
 				832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
@@ -1585,6 +1621,7 @@
 				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,
+				8369893B1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
 				837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
@@ -1662,10 +1699,13 @@
 				838707EE1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,
 				838707DD1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */,
 				837ABF1C1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */,
+				836989321F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
 				838707E71F30257F0094B273 /* RNSPhoneViewController.swift in Sources */,
+				8369893C1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */,
 				832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				837ABF241F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
 				832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
+				836989391F318B54003E4D73 /* RNSNameField.swift in Sources */,
 				832E4B871F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
 				837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,

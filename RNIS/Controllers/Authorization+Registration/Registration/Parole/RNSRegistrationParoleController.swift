@@ -23,6 +23,7 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
     }
     
     override func actionNext() {
-        print("RNSRegistrationParoleController actionNext",passwordOne,passwordTwo)
+        let vc = RNSRegistrationNameController.initialController
+        STRouter.pushAnimatedImageBoard(vc)
     }
 }

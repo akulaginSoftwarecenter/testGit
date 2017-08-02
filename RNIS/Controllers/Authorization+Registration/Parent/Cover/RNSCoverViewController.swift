@@ -12,7 +12,7 @@ class RNSCoverViewController: UIViewController {
     
     @IBOutlet var coverView: RNSLoginView!
     var handlerBlackAction: EmptyBlock?
-    @IBInspectable var titleTextTop: String?
+    var titleTextTop: TypeTitle?
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -32,11 +32,10 @@ class RNSCoverViewController: UIViewController {
         guard let titleTextTop = titleTextTop else {
             return
         }
-        coverView.titleTextTop = titleTextTop
+        coverView.titleTextTop = titleTextTop.rawValue
     }
     
     func loginPressed() {
         
     }
-    
 }

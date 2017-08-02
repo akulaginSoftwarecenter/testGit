@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="adi-2r-abR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration Name Controller-->
+        <scene sceneID="eBf-vC-kZh">
+            <objects>
+                <viewController id="adi-2r-abR" customClass="RNSRegistrationNameController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ANv-lg-wyQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hla-E5-RO9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3SO-Er-NRQ" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZT-vJ-bGu" customClass="RNSGrayBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="602" width="375" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Xb2-en-MYa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="w8f-y6-Xdu"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Cd0-fU-xf4">
+                                <rect key="frame" x="87.5" y="182" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Tu9-QK-cG4"/>
+                                    <constraint firstAttribute="height" constant="200" id="ZLw-Kv-cgl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-rA-o14" customClass="RNSNameField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="430" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Как вас зовут?"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdC-Mf-qCf">
+                                <rect key="frame" x="231.5" y="333" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="A05-aI-lIf"/>
+                                    <constraint firstAttribute="width" constant="60" id="qSW-fo-NcP"/>
+                                </constraints>
+                                <state key="normal" image="photo-camera"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionCamera:" destination="adi-2r-abR" eventType="touchUpInside" id="lv6-Rc-nCY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cd0-fU-xf4" firstAttribute="top" secondItem="3SO-Er-NRQ" secondAttribute="top" constant="182" id="BPq-8N-dFr"/>
+                            <constraint firstItem="QdC-Mf-qCf" firstAttribute="trailing" secondItem="Cd0-fU-xf4" secondAttribute="trailing" constant="4" id="CBu-il-7Um"/>
+                            <constraint firstAttribute="trailing" secondItem="pZT-vJ-bGu" secondAttribute="trailing" id="IBK-9i-8ZJ"/>
+                            <constraint firstItem="bzV-rA-o14" firstAttribute="bottom" secondItem="Cd0-fU-xf4" secondAttribute="bottom" constant="78" id="OgU-ns-zrx"/>
+                            <constraint firstItem="pZT-vJ-bGu" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" id="QcJ-1C-31K"/>
+                            <constraint firstItem="bzV-rA-o14" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="30" id="e98-HF-YLa"/>
+                            <constraint firstItem="Cd0-fU-xf4" firstAttribute="centerX" secondItem="3SO-Er-NRQ" secondAttribute="centerX" id="igb-oI-WDv"/>
+                            <constraint firstItem="QdC-Mf-qCf" firstAttribute="bottom" secondItem="Cd0-fU-xf4" secondAttribute="bottom" constant="11" id="rg1-gf-Lc6"/>
+                            <constraint firstItem="Hla-E5-RO9" firstAttribute="top" secondItem="pZT-vJ-bGu" secondAttribute="bottom" constant="3" id="tBx-60-Yjw"/>
+                            <constraint firstAttribute="trailing" secondItem="bzV-rA-o14" secondAttribute="trailing" constant="30" id="xUG-IE-kZd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Регистрация"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Далее"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="RYH-LT-S7u"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVq-Zj-YOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="139.880059970015"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EmptyPhoto" width="200" height="200"/>
+        <image name="photo-camera" width="32" height="32"/>
+    </resources>
+</document>
