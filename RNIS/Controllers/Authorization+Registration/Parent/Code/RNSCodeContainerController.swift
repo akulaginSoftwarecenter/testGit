@@ -49,5 +49,4 @@ class RNSCodeContainerController: UIViewController {
     override class var storyboardName: String {
         return kCodeVC
     }
-
 }

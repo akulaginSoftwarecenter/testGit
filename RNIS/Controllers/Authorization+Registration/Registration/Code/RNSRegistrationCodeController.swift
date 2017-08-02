@@ -21,11 +21,10 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     }
     
     override func actionNext() {
-        print("RNSRegistrationCodeControllera ctionNext")
+        STRouter.pushAnimatedImageBoard(RNSRegistrationParoleController.controller)
     }
     
     override func repeatCodeAction() {
         STRouter.showAlertRepeatCode()
-        print("RNSRegistrationCodeControllera repeatCodeAction")
     }
 }

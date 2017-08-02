@@ -37,6 +37,9 @@
                                         <state key="normal" title="Ок">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="actionOk:" destination="HbA-I2-cAp" eventType="touchUpInside" id="EdA-TK-vZ0"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-5J-yhq">
                                         <rect key="frame" x="0.0" y="123.5" width="315" height="0.5"/>
@@ -45,7 +48,7 @@
                                             <constraint firstAttribute="height" constant="0.5" id="w5B-BV-HsT"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk6-bf-9RM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk6-bf-9RM">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="123.5"/>
                                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,7 +76,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="L86-oQ-JF4" secondAttribute="trailing" constant="30" id="FjV-3D-Vv0"/>
                             <constraint firstItem="L86-oQ-JF4" firstAttribute="centerX" secondItem="lDi-wZ-lIt" secondAttribute="centerX" id="H0x-eP-pFA"/>

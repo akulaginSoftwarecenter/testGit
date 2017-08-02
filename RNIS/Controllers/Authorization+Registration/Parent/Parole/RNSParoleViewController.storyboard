@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Registration Parole Controller-->
+        <scene sceneID="onF-uI-Irg">
+            <objects>
+                <viewController storyboardIdentifier="RNSRegistrationParoleController" id="dcA-9M-LHU" customClass="RNSRegistrationParoleController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="IJr-wr-0LV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="GCd-A9-OdR" kind="embed" id="Taj-hV-bXK"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7e-rZ-8o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-673" y="-589"/>
+        </scene>
+        <!--Parole View Controller-->
+        <scene sceneID="Ii5-aD-Gw0">
+            <objects>
+                <viewController storyboardIdentifier="RNSLoginViewController" id="GCd-A9-OdR" customClass="RNSParoleViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Wp-UX-rEN"/>
+                        <viewControllerLayoutGuide type="bottom" id="tap-f8-YX6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x6v-Ho-dlG" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-u5-fLb" customClass="STPasswordField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="288" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите новый пароль"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fz9-tX-ATO" customClass="STPasswordField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="373.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Повторите пароль"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxW-ww-gyf">
+                                <rect key="frame" x="30" y="413.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbg-YR-z5S" customClass="RNSGrayBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="602" width="375" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="BQX-RK-u79"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="HC2-BJ-g4G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JxW-ww-gyf" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="30" id="0qf-c3-wXv"/>
+                            <constraint firstAttribute="trailing" secondItem="JxW-ww-gyf" secondAttribute="trailing" constant="30" id="5YB-q2-aqs"/>
+                            <constraint firstItem="fz9-tX-ATO" firstAttribute="bottom" secondItem="KZc-u5-fLb" secondAttribute="bottom" constant="85" id="Afs-9V-Qio"/>
+                            <constraint firstAttribute="trailing" secondItem="KZc-u5-fLb" secondAttribute="trailing" constant="30" id="G2K-uX-rge"/>
+                            <constraint firstItem="fz9-tX-ATO" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="30" id="HnB-8k-qFS"/>
+                            <constraint firstItem="KZc-u5-fLb" firstAttribute="centerY" secondItem="x6v-Ho-dlG" secondAttribute="centerY" constant="-30" id="JsA-Fz-QCU"/>
+                            <constraint firstItem="JxW-ww-gyf" firstAttribute="top" secondItem="fz9-tX-ATO" secondAttribute="bottom" constant="10" id="Pzh-q9-xx0"/>
+                            <constraint firstAttribute="trailing" secondItem="fz9-tX-ATO" secondAttribute="trailing" constant="30" id="QnK-gF-xws"/>
+                            <constraint firstAttribute="trailing" secondItem="Jbg-YR-z5S" secondAttribute="trailing" id="fnn-OT-O33"/>
+                            <constraint firstItem="KZc-u5-fLb" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="30" id="j8X-fD-dfE"/>
+                            <constraint firstItem="Jbg-YR-z5S" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" id="m5B-2h-hco"/>
+                            <constraint firstItem="tap-f8-YX6" firstAttribute="top" secondItem="Jbg-YR-z5S" secondAttribute="bottom" constant="3" id="uXc-6B-OMU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Забыли пароль"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Сохранить"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="AO9-ei-mOZ"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="coverView" destination="x6v-Ho-dlG" id="R8i-Tm-yP9"/>
+                        <outlet property="errorLabel" destination="JxW-ww-gyf" id="BrS-Wg-BFg"/>
+                        <outlet property="passwordOneField" destination="KZc-u5-fLb" id="U1v-ct-pxb"/>
+                        <outlet property="passwordTwoField" destination="fz9-tX-ATO" id="OWL-FG-JS5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ak9-po-lOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="139.880059970015"/>
+        </scene>
+        <!--Recovery Parole Controller-->
+        <scene sceneID="58i-9G-HUY">
+            <objects>
+                <viewController storyboardIdentifier="RNSRecoveryParoleController" id="FkG-8l-JKa" customClass="RNSRecoveryParoleController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="BIx-qB-0Tz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="GCd-A9-OdR" kind="embed" id="cCO-Ac-6br"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFN-Ec-UQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="-590"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cCO-Ac-6br"/>
+    </inferredMetricsTieBreakers>
+</document>

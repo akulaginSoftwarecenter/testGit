@@ -20,6 +20,7 @@ extension STRouter {
     }
     
     static func showAlertRepeatCode() {
-        
+        let vc = RNSAlertViewController.initController("Код выслан повторно")
+        present(vc, animated: false)
     }
 }

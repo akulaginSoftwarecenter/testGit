@@ -42,8 +42,9 @@ class STRouter: NSObject {
         rootViewController?.pop(animated: animated, completion: completion)
     }
     
-    static func present(_ viewControllerToPresent:UIViewController) {
-        guard var vc:UIViewController = rootViewController else {
+    static func present(_ viewControllerToPresent:UIViewController?, animated: Bool = true) {
+        guard var vc:UIViewController = rootViewController,
+            let viewControllerToPresent = viewControllerToPresent  else {
             return
         }
        
@@ -51,7 +52,7 @@ class STRouter: NSObject {
             vc = presented
         }
         viewControllerToPresent.modalPresentationStyle = .overCurrentContext
-        vc.present(viewControllerToPresent, animated: true)
+        vc.present(viewControllerToPresent, animated: animated)
     }
     
     static func clearNav() {

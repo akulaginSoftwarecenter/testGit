@@ -21,11 +21,10 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
     }
     
     override func actionNext() {
-         print("RNSRecoveryCodeController ctionNext",codeText)
+        STRouter.pushAnimatedImageBoard(RNSRecoveryParoleController.controller)
     }
     
     override func repeatCodeAction() {
         STRouter.showAlertRepeatCode()
-        print("RNSRecoveryCodeController repeatCodeAction")
     }
 }

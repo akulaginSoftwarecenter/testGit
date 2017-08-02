@@ -12,14 +12,23 @@ class RNSAlertViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     
-    init(_ message: String?) {
-        super.init(nibName: nil, bundle: nil)
-        
-        messageLabel.text = message
-        modalPresentationStyle = .overCurrentContext
+    static func initController(_ message: String?) -> UIViewController? {
+        let vc = RNSAlertViewController.initialController as? RNSAlertViewController
+        vc?.message = message
+        return vc
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    var message: String?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        messageLabel.text = message
+    }
+    
+    override class var storyboardName: String {
+        return "RNSAlertViewController"
+    }
+    @IBAction func actionOk(_ sender: Any) {
+        dismiss(animated: false)
     }
 }
