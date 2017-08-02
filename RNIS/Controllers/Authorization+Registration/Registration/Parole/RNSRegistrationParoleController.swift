@@ -26,6 +26,6 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
         /*
         let vc = RNSRegistrationNameController.initialController
         STRouter.pushAnimatedImageBoard(vc)
-         */
+        */
     }
 }
