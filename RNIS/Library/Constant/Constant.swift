@@ -17,10 +17,6 @@ let serverRnisapi = "https://rnisapi.regeora.ru:8001/request"
 let showLogApi = false
 
 
-let kRegistration = "Регистрация"
-let kForgotPassword = "Забыли пароль"
-
-
 let kPhoneVC = "RNSPhoneViewController"
 let kCodeVC = "RNSCodeViewController"
 let kParoleVC = "RNSParoleViewController"

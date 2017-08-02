@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSParoleViewController: UIViewController {
+class RNSParoleViewController: UIViewController,ContainerProtocol {
     
     var handlerBlackAction: EmptyBlock?
     

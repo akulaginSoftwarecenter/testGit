@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSPhoneViewController: UIViewController {
+class RNSPhoneViewController: UIViewController,ContainerProtocol {
 
     @IBOutlet var coverView: RNSLoginView!
     var handlerBlackAction: EmptyBlock?

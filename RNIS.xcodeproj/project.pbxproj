@@ -66,6 +66,10 @@
 		836989181F317368003E4D73 /* RNSRecoveryParoleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989161F317368003E4D73 /* RNSRecoveryParoleController.swift */; };
 		8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989191F31737F003E4D73 /* RNSRegistrationParoleController.swift */; };
 		8369891B1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989191F31737F003E4D73 /* RNSRegistrationParoleController.swift */; };
+		8369891F1F317AB5003E4D73 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */; };
+		836989201F317AB5003E4D73 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */; };
+		836989221F317B64003E4D73 /* STContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989211F317B64003E4D73 /* STContainerViewController.swift */; };
+		836989231F317B64003E4D73 /* STContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989211F317B64003E4D73 /* STContainerViewController.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836D80A51F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle */; };
 		836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80AD1F1DB33900FEE390 /* AppDelegate.swift */; };
@@ -245,6 +249,8 @@
 		836989111F317190003E4D73 /* RNSParoleContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParoleContainerController.swift; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleContainerController.swift"; sourceTree = "<group>"; };
 		836989161F317368003E4D73 /* RNSRecoveryParoleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryParoleController.swift; path = "Controllers/Authorization+Registration/Recovery/Parole/RNSRecoveryParoleController.swift"; sourceTree = "<group>"; };
 		836989191F31737F003E4D73 /* RNSRegistrationParoleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationParoleController.swift; path = "Controllers/Authorization+Registration/Registration/Parole/RNSRegistrationParoleController.swift"; sourceTree = "<group>"; };
+		8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerProtocol.swift; path = ContainerProtocol/ContainerProtocol.swift; sourceTree = "<group>"; };
+		836989211F317B64003E4D73 /* STContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STContainerViewController.swift; path = "Controllers/Authorization+Registration/Parent/Container/STContainerViewController.swift"; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D809B1F1DB29D00FEE390 /* RNIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RNIS-Bridging-Header.h"; path = "Application/RNIS-Bridging-Header.h"; sourceTree = "<group>"; };
 		836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProgorodLiteLibrary.a; path = Library/Helpers/ProgorodLiteLibrary/libProgorodLiteLibrary.a; sourceTree = "<group>"; };
@@ -455,8 +461,8 @@
 			children = (
 				837ABF2D1F2EF2FC00AB5E54 /* Parent */,
 				832E4B691F2EC26C00A4AD77 /* Login */,
-				838707D61F301CC80094B273 /* Recovery */,
 				837ABF2C1F2EF2E700AB5E54 /* Registration */,
+				838707D61F301CC80094B273 /* Recovery */,
 			);
 			name = "Login+Registration";
 			sourceTree = "<group>";
@@ -692,6 +698,22 @@
 				836989191F31737F003E4D73 /* RNSRegistrationParoleController.swift */,
 			);
 			name = Parole;
+			sourceTree = "<group>";
+		};
+		8369891C1F3179F1003E4D73 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				836989211F317B64003E4D73 /* STContainerViewController.swift */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		8369891D1F317A5D003E4D73 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 		836D80511F1DAC0400FEE390 = {
@@ -958,6 +980,7 @@
 		837ABF041F2EE21B00AB5E54 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8369891D1F317A5D003E4D73 /* Protocol */,
 				837ABF1D1F2EE3BC00AB5E54 /* EventDispatcher */,
 				837ABF051F2EE21B00AB5E54 /* Keyboard */,
 			);
@@ -1031,6 +1054,7 @@
 		837ABF2D1F2EF2FC00AB5E54 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
+				8369891C1F3179F1003E4D73 /* Container */,
 				838707E11F30257F0094B273 /* Phone */,
 				838707EB1F3028E50094B273 /* Code */,
 				836989081F316B2E003E4D73 /* Parole */,
@@ -1568,6 +1592,7 @@
 				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,
 				8392BAC61F304BB80024E9E5 /* RNSAlertViewController.swift in Sources */,
 				832E4B931F2ED53000A4AD77 /* String+Utils.swift in Sources */,
+				836989221F317B64003E4D73 /* STContainerViewController.swift in Sources */,
 				8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
 				83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */,
 				837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
@@ -1591,6 +1616,7 @@
 				836989171F317368003E4D73 /* RNSRecoveryParoleController.swift in Sources */,
 				8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */,
 				83CD584D1F25879B00A9FE1A /* RNSPostLogin.swift in Sources */,
+				8369891F1F317AB5003E4D73 /* ContainerProtocol.swift in Sources */,
 				837ABF0D1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,
 				837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
 				83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */,
@@ -1609,6 +1635,7 @@
 				837ABF181F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
 				837ABF031F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */,
 				832E4B8B1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
+				836989231F317B64003E4D73 /* STContainerViewController.swift in Sources */,
 				838707E01F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */,
 				837ABEFC1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
 				837ABF201F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
@@ -1617,6 +1644,7 @@
 				837ABF091F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				838707F41F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,
+				836989201F317AB5003E4D73 /* ContainerProtocol.swift in Sources */,
 				837ABF141F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */,
 				838707EE1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,
 				838707DD1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */,

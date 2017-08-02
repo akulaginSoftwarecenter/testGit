@@ -8,38 +8,26 @@
 
 import UIKit
 
-class RNSCodeContainerController: UIViewController {
+class RNSCodeContainerController: STContainerViewController {
+   
+   var containerViewController: RNSCodeViewController? {
+        return (enterViewController as? RNSCodeViewController)
+   }
+
+   var phone: String?
     
-    var enterViewController: RNSCodeViewController?
-    var phone: String?
+   override func prepareEnterViewController(){
+        super.prepareEnterViewController()
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        enterViewController = segue.destination as? RNSCodeViewController
-        prepareEnterViewController()
-    }
-    
-    func prepareEnterViewController(){
-        enterViewController?.titleTextTop = titleTextTop
-        enterViewController?.handlerBlackAction = { [weak self] in
-            self?.actionNext()
-        }
-        
-        enterViewController?.handlerRepeatCode = { [weak self] in
+        containerViewController?.handlerRepeatCode = { [weak self] in
             self?.repeatCodeAction()
         }
-        enterViewController?.phone = phone
+        containerViewController?.phone = phone
     }
-    
-    var titleTextTop: String {
-        return ""
-    }
+
     
     var codeText: String? {
-        return enterViewController?.codeField.text
-    }
-    
-    func actionNext() {
-        
+        return containerViewController?.codeField.text
     }
     
     func repeatCodeAction() {

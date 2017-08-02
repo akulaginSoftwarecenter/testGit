@@ -8,32 +8,10 @@
 
 import UIKit
 
-class RNSPhoneContrainerController: UIViewController {
-
-    var enterViewController: RNSPhoneViewController?
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        enterViewController = segue.destination as? RNSPhoneViewController
-        prepareEnterViewController()
-    }
-    
-    func prepareEnterViewController(){
-        enterViewController?.titleTextTop = titleTextTop
-        enterViewController?.handlerBlackAction = { [weak self] in
-            self?.actionNext()
-        }
-    }
-    
-    var titleTextTop: String {
-        return ""
-    }
+class RNSPhoneContrainerController: STContainerViewController {
     
     var phoneText: String? {
-       return enterViewController?.phoneField.last10
-    }
-    
-    func actionNext() {
-        
+       return (enterViewController as? RNSPhoneViewController)?.phoneField.last10
     }
     
     override class var storyboardName: String {

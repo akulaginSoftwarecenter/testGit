@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSCodeViewController: UIViewController {
+class RNSCodeViewController: UIViewController,ContainerProtocol {
     
     @IBOutlet weak var codeField: RNSTextField!
     @IBOutlet weak var phoneLabel: UILabel!

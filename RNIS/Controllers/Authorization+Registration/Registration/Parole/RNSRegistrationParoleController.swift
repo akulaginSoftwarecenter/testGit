@@ -10,8 +10,8 @@ import UIKit
 
 class RNSRegistrationParoleController: RNSParoleContainerController {
     
-    override var titleTextTop: String {
-        return kRegistration
+    override var typeTitle: TypeTitle {
+        return .registration
     }
     
     override var placeholderPassworOne: String?  {

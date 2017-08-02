@@ -10,8 +10,8 @@ import UIKit
 
 class RNSRecoveryPhoneController: RNSPhoneContrainerController {
     
-    override var titleTextTop: String {
-        return kForgotPassword
+    override var typeTitle: TypeTitle {
+        return .recovery
     }
     
     override func actionNext() {

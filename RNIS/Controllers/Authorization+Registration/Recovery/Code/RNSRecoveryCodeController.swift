@@ -16,8 +16,8 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
         return vc
     }
     
-    override var titleTextTop: String {
-        return kForgotPassword
+    override var typeTitle: TypeTitle {
+        return .recovery
     }
     
     override func actionNext() {

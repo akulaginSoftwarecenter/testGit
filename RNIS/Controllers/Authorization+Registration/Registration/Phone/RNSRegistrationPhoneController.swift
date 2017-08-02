@@ -10,8 +10,8 @@ import UIKit
 
 class RNSRegistrationPhoneController: RNSPhoneContrainerController {
     
-    override var titleTextTop: String {
-        return kRegistration
+    override var typeTitle: TypeTitle {
+        return .registration
     }
     
     override func actionNext() {

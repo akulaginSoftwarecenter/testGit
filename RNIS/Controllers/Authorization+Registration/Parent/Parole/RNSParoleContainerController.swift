@@ -8,34 +8,25 @@
 
 import UIKit
 
-class RNSParoleContainerController: UIViewController {
+class RNSParoleContainerController: STContainerViewController {
 
-    var enterViewController: RNSParoleViewController?
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        enterViewController = segue.destination as? RNSParoleViewController
-        prepareEnterViewController()
+    var containerViewController: RNSParoleViewController? {
+        return (enterViewController as? RNSParoleViewController)
     }
     
-    func prepareEnterViewController(){
-        enterViewController?.titleTextTop = titleTextTop
-        enterViewController?.handlerBlackAction = { [weak self] in
-            self?.actionNext()
-        }
-        enterViewController?.placeholderPassworOne = placeholderPassworOne
-        enterViewController?.titleBlackButton = titleBlackButton
-    }
-    
-    var titleTextTop: String {
-        return ""
+    override func prepareEnterViewController(){
+        super.prepareEnterViewController()
+
+        containerViewController?.placeholderPassworOne = placeholderPassworOne
+        containerViewController?.titleBlackButton = titleBlackButton
     }
     
     var passwordOne: String? {
-        return enterViewController?.passwordOneField.text
+        return containerViewController?.passwordOneField.text
     }
     
     var passwordTwo: String? {
-        return enterViewController?.passwordTwoField.text
+        return containerViewController?.passwordTwoField.text
     }
     
     var placeholderPassworOne: String?  {
@@ -44,10 +35,6 @@ class RNSParoleContainerController: UIViewController {
     
     var titleBlackButton: String? {
         return ""
-    }
-    
-    func actionNext() {
-        
     }
   
     override class var storyboardName: String {

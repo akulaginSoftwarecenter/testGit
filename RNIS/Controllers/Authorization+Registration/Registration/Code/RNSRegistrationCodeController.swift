@@ -16,8 +16,8 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
         return vc
     }
     
-    override var titleTextTop: String {
-        return kRegistration
+    override var typeTitle: TypeTitle {
+        return .registration
     }
     
     override func actionNext() {
