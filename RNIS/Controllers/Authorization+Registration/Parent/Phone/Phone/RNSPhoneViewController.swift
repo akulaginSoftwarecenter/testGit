@@ -8,39 +8,15 @@
 
 import UIKit
 
-class RNSPhoneViewController: UIViewController,ContainerProtocol {
+class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
 
-    @IBOutlet var coverView: RNSLoginView!
-    var handlerBlackAction: EmptyBlock?
-    @IBInspectable var titleTextTop: String?
     @IBOutlet weak var phoneField: RNSPhoneField!
-    @IBOutlet weak var errorLabel: UILabel!
-    
-    func prepareTitleTextTop() {
-        guard let titleTextTop = titleTextTop else {
-            return
-        }
-        coverView.titleTextTop = titleTextTop
-    }
     
     lazy var fields:[RNSTextField] = {
         return [self.phoneField]
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        prepareCoverView()
-    }
-    
-    func prepareCoverView() {
-        prepareTitleTextTop()
-        coverView.handlerBlackAction = { [weak self] in
-            self?.loginPressed()
-        }
-    }
-    
-    func loginPressed() {
+    override func loginPressed() {
         if let error = fields.checkValidFields {
             errorLabel.text = error
             return

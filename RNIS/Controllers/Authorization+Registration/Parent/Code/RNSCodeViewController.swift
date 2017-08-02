@@ -8,30 +8,16 @@
 
 import UIKit
 
-class RNSCodeViewController: UIViewController,ContainerProtocol {
+class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     
     @IBOutlet weak var codeField: RNSTextField!
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var errorLabel: UILabel!
     
-    @IBOutlet var coverView: RNSLoginView!
-    var handlerBlackAction: EmptyBlock?
     var handlerRepeatCode: EmptyBlock?
     var phone: String?
-    
-    @IBInspectable var titleTextTop: String?
-    
-    func prepareTitleTextTop() {
-        guard let titleTextTop = titleTextTop else {
-            return
-        }
-        coverView.titleTextTop = titleTextTop
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        prepareCoverView()
         preparePhone()
     }
     
@@ -42,14 +28,7 @@ class RNSCodeViewController: UIViewController,ContainerProtocol {
         phoneLabel.text = InputFieldsValidator.format("+7" + phone).text
     }
     
-    func prepareCoverView() {
-        prepareTitleTextTop()
-        coverView.handlerBlackAction = { [weak self] in
-            self?.loginPressed()
-        }
-    }
-    
-    func loginPressed() {
+    override func loginPressed() {
         if !codeField.isValid {
             codeField.setStateNotValid()
             errorLabel.text = "Введите код"

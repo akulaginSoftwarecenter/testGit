@@ -8,16 +8,10 @@
 
 import UIKit
 
-class RNSParoleViewController: UIViewController,ContainerProtocol {
+class RNSParoleViewController: RNSCoverViewController,ContainerProtocol {
     
-    var handlerBlackAction: EmptyBlock?
-    
-    @IBOutlet var coverView: RNSLoginView!
     @IBOutlet weak var passwordOneField: STPasswordField!
     @IBOutlet weak var passwordTwoField: STPasswordField!
-    @IBOutlet weak var errorLabel: UILabel!
-    
-    var titleTextTop: String?
     var placeholderPassworOne: String?
     var titleBlackButton: String?
     
@@ -31,7 +25,7 @@ class RNSParoleViewController: UIViewController,ContainerProtocol {
         prepareUI()
     }
    
-    func loginPressed() {
+    override func loginPressed() {
         if let error = fields.checkValidFields {
             errorLabel.text = error
             return

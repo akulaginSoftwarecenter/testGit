@@ -12,7 +12,7 @@ extension RNSParoleViewController {
     
     func prepareUI() {
         preparePlaceholderPassworOne()
-        prepareCoverView()
+        prepareTitleBlackButton()
     }
     
     func preparePlaceholderPassworOne() {
@@ -20,21 +20,6 @@ extension RNSParoleViewController {
             return
         }
         passwordOneField.placeholderKey = placeholderPassworOne
-    }
-    
-    func prepareCoverView() {
-        prepareTitleTextTop()
-        prepareTitleBlackButton()
-        coverView.handlerBlackAction = { [weak self] in
-            self?.loginPressed()
-        }
-    }
-    
-    func prepareTitleTextTop() {
-        guard let titleTextTop = titleTextTop else {
-            return
-        }
-        coverView.titleTextTop = titleTextTop
     }
     
     func prepareTitleBlackButton() {
