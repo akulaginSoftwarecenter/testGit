@@ -163,6 +163,8 @@
 		8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
 		839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */; };
 		839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */; };
+		839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDF51F32CA9000B5CA88 /* RNSImagePickerController.swift */; };
+		839BCDF81F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDF71F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
 		83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */; };
@@ -340,6 +342,8 @@
 		8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSAlertViewController.storyboard; path = "Library/Base classes/AlertViewController/RNSAlertViewController.storyboard"; sourceTree = "<group>"; };
 		839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSProfilePhoto.swift; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.swift; sourceTree = "<group>"; };
 		839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSProfilePhoto.xib; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.xib; sourceTree = "<group>"; };
+		839BCDF51F32CA9000B5CA88 /* RNSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSImagePickerController.swift; path = "Controllers/Authorization+Registration/Registration/Name/ImagePicker/RNSImagePickerController.swift"; sourceTree = "<group>"; };
+		839BCDF71F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfilePhoto+ImagePicker.swift"; path = "Views/ImageView/ProfilePhoto/RNSProfilePhoto+ImagePicker.swift"; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
 		83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofirePagedAPI.swift; sourceTree = "<group>"; };
@@ -753,6 +757,7 @@
 		8369892F1F318744003E4D73 /* Name */ = {
 			isa = PBXGroup;
 			children = (
+				839BCDF41F32CA6000B5CA88 /* ImagePicker */,
 				836989401F319A65003E4D73 /* AlertPhoto */,
 				836989301F318778003E4D73 /* RNSRegistrationNameController.swift */,
 				8369893D1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift */,
@@ -1228,9 +1233,18 @@
 			isa = PBXGroup;
 			children = (
 				839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */,
+				839BCDF71F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift */,
 				839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */,
 			);
 			name = ProfilePhoto;
+			sourceTree = "<group>";
+		};
+		839BCDF41F32CA6000B5CA88 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				839BCDF51F32CA9000B5CA88 /* RNSImagePickerController.swift */,
+			);
+			name = ImagePicker;
 			sourceTree = "<group>";
 		};
 		83B2E0661F1E139800FA92A4 /* API */ = {
@@ -1606,6 +1620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837ABF151F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */,
+				839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */,
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
 				837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
 				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
@@ -1639,6 +1654,7 @@
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
 				83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */,
+				839BCDF81F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift in Sources */,
 				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
 				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,

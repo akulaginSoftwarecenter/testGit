@@ -19,14 +19,17 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
     }
     
     @IBAction func actionButton(_ sender: Any) {
-        RNSAlertPhotoController.controller(!isHavePhoto) { [weak self] image in
-            print("image",image)
-        }
+        RNSAlertPhotoController.controller(isHavePhoto, complete: showImagePicker, handlerRemove:removePhoto)
+    }
+
+    func removePhoto() {
+        photo = nil
+        imageView.image = #imageLiteral(resourceName: "EmptyPhoto")
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        imageView.layer.cornerRadius =  imageView.frame.width/2
+
+        imageView.layer.cornerRadius =  frame.width/2
     }
 }

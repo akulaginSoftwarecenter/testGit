@@ -12,7 +12,7 @@ class RNSAlertViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     
-    static func initController(_ message: String?) -> UIViewController? {
+    static func controller(_ message: String?) -> UIViewController? {
         let vc = RNSAlertViewController.initialController as? RNSAlertViewController
         vc?.message = message
         return vc

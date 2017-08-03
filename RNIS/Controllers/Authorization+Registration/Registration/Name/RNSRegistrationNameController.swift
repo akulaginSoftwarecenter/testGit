@@ -10,7 +10,6 @@ import UIKit
 
 class RNSRegistrationNameController: UIViewController {
     
-    
     override class var storyboardName: String {
         return "RNSRegistrationNameController"
     }

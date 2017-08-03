@@ -11,45 +11,42 @@ import UIKit
 class RNSAlertPhotoController: UIAlertController {
     
     var showRemove: Bool?
-    var complete: AliasImageBlock?
+    var complete: AliasImagePickerBlock?
+    var handlerRemove: EmptyBlock?
     
-    @discardableResult static func controller(_ showRemove: Bool?, complete: AliasImageBlock?) ->  RNSAlertPhotoController {
+    @discardableResult static func controller(_ showRemove: Bool?, complete: AliasImagePickerBlock?, handlerRemove: EmptyBlock?) ->  RNSAlertPhotoController {
         let vc = RNSAlertPhotoController(title: "Откуда взять фотографию?", message: nil, preferredStyle: .actionSheet)
         vc.showRemove = showRemove
         vc.complete = complete
+        vc.handlerRemove = handlerRemove
+        vc.prepareUI()
         STRouter.present(vc)
         return vc
     }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        prepareUI()
-    }
-    
+
     func prepareUI() {
-        addActionDefault("Сделать фото") {
-            print("Сделать фото")
+        addAction("Сделать фото") { [weak self] in
+            self?.complete?(.camera)
         }
         
-        addActionDefault("Выбрать из галерии") {
-            print("Выбрать из галерии")
+        addAction("Выбрать из галерии") {[weak self] in
+            self?.complete?(.photoLibrary)
         }
-        addAction(UIAlertAction(title: "Отмена", style: .cancel))
+        
+        addCancel()
+        addAction("Отмена", style: .cancel)
     }
     
-    func addActionDefault(_ title: String?,  complete: EmptyBlock? = nil) {
-        addAction(UIAlertAction(title: title, style: .default) { action in
+    func addAction(_ title: String?, style: UIAlertActionStyle = .default, complete: EmptyBlock? = nil) {
+        addAction(UIAlertAction(title: title, style: style) {action in
             complete?()
         })
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func addCancel() {
+        guard showRemove ?? false else {
+            return
+        }
+        addAction("Удалить", style: .destructive, complete: handlerRemove)
     }
-    
-    deinit {
-        print("RNSAlertPhotoController deinit")
-    }
-
 }
