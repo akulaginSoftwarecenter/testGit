@@ -10,6 +10,37 @@ import UIKit
 
 class RNSRegistrationNameController: UIViewController {
     
+    @IBOutlet weak var nameField: RNSTextField!
+    @IBOutlet var coverView: RNSLoginView!
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        prepareCoverView()
+    }
+    
+    func prepareCoverView() {
+        coverView.handlerBlackAction = { [weak self] in
+            self?.buttonPressed()
+        }
+    }
+    
+    func buttonPressed() {
+        if !nameField.isValid {
+            nameField.setStateNotValid()
+            errorLabel.text = "Введите имя"
+            return
+        }
+        clearError()
+        STRouter.showLogin()
+    }
+    
+    func clearError() {
+        nameField.setStateValid()
+        errorLabel.text = nil
+    }
+   
     override class var storyboardName: String {
         return "RNSRegistrationNameController"
     }

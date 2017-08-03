@@ -11,9 +11,7 @@ import Foundation
 extension RNSLoginViewController {
     
     @IBAction func registrationAction(_ sender: Any) {
-        
-        push(RNSRegistrationNameController.initialController)
-        //push(RNSRegistrationPhoneController.controller)
+        push(RNSRegistrationPhoneController.controller)
     }
     
     @IBAction func recoveryAction(_ sender: Any) {

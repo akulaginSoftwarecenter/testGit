@@ -8,6 +8,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Registration Name Controller-->
         <scene sceneID="eBf-vC-kZh">
@@ -52,6 +57,12 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M54-Z0-rE4">
+                                <rect key="frame" x="30" y="470" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -60,11 +71,14 @@
                             <constraint firstItem="pZT-vJ-bGu" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" id="QcJ-1C-31K"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uA1-nt-8CO" secondAttribute="trailing" constant="89" id="TYm-5m-6HZ"/>
                             <constraint firstItem="uA1-nt-8CO" firstAttribute="centerX" secondItem="3SO-Er-NRQ" secondAttribute="centerX" id="WLV-DA-Izx"/>
+                            <constraint firstItem="M54-Z0-rE4" firstAttribute="top" secondItem="bzV-rA-o14" secondAttribute="bottom" constant="10" id="Ynt-VU-Rtr"/>
+                            <constraint firstItem="M54-Z0-rE4" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="30" id="ct8-YA-hRF"/>
                             <constraint firstItem="uA1-nt-8CO" firstAttribute="centerX" secondItem="3SO-Er-NRQ" secondAttribute="centerX" id="dfS-uH-hFd"/>
                             <constraint firstItem="bzV-rA-o14" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="30" id="e98-HF-YLa"/>
                             <constraint firstItem="bzV-rA-o14" firstAttribute="bottom" secondItem="uA1-nt-8CO" secondAttribute="bottom" constant="78" id="fGg-h6-FdF"/>
                             <constraint firstItem="Hla-E5-RO9" firstAttribute="top" secondItem="pZT-vJ-bGu" secondAttribute="bottom" constant="3" id="tBx-60-Yjw"/>
                             <constraint firstAttribute="trailing" secondItem="bzV-rA-o14" secondAttribute="trailing" constant="30" id="xUG-IE-kZd"/>
+                            <constraint firstAttribute="trailing" secondItem="M54-Z0-rE4" secondAttribute="trailing" constant="30" id="zyq-TN-0jX"/>
                             <constraint firstItem="uA1-nt-8CO" firstAttribute="top" secondItem="ANv-lg-wyQ" secondAttribute="bottom" constant="182" id="zzs-gf-UEL"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -79,6 +93,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="RYH-LT-S7u"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="coverView" destination="3SO-Er-NRQ" id="a8I-S7-7tO"/>
+                        <outlet property="errorLabel" destination="M54-Z0-rE4" id="UJO-Dl-FLK"/>
+                        <outlet property="nameField" destination="bzV-rA-o14" id="BfO-hc-aWJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVq-Zj-YOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

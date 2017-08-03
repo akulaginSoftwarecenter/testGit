@@ -78,10 +78,6 @@
 		836989351F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */; };
 		836989381F318B54003E4D73 /* RNSNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989371F318B54003E4D73 /* RNSNameField.swift */; };
 		836989391F318B54003E4D73 /* RNSNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989371F318B54003E4D73 /* RNSNameField.swift */; };
-		8369893B1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */; };
-		8369893C1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */; };
-		8369893E1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369893D1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift */; };
-		8369893F1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369893D1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift */; };
 		836989421F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */; };
 		836989431F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
@@ -273,8 +269,6 @@
 		836989301F318778003E4D73 /* RNSRegistrationNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationNameController.swift; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController.swift"; sourceTree = "<group>"; };
 		836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSRegistrationNameController.storyboard; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController.storyboard"; sourceTree = "<group>"; };
 		836989371F318B54003E4D73 /* RNSNameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSNameField.swift; path = LoginField/RNSNameField.swift; sourceTree = "<group>"; };
-		8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRegistrationNameController+Action.swift"; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController+Action.swift"; sourceTree = "<group>"; };
-		8369893D1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRegistrationNameController+Photo.swift"; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController+Photo.swift"; sourceTree = "<group>"; };
 		836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertPhotoController.swift; path = "Controllers/Authorization+Registration/Registration/Name/AlertPhoto/RNSAlertPhotoController.swift"; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D809B1F1DB29D00FEE390 /* RNIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RNIS-Bridging-Header.h"; path = "Application/RNIS-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -760,8 +754,6 @@
 				839BCDF41F32CA6000B5CA88 /* ImagePicker */,
 				836989401F319A65003E4D73 /* AlertPhoto */,
 				836989301F318778003E4D73 /* RNSRegistrationNameController.swift */,
-				8369893D1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift */,
-				8369893A1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift */,
 				836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */,
 			);
 			name = Name;
@@ -1677,7 +1669,6 @@
 				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,
-				8369893B1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
 				837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
@@ -1718,7 +1709,6 @@
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
 				8375DEA41F205FB200FCA26E /* RNSMapViewController+Traffic.swift in Sources */,
 				8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */,
-				8369893E1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift in Sources */,
 				838707E61F30257F0094B273 /* RNSPhoneViewController.swift in Sources */,
 				836989171F317368003E4D73 /* RNSRecoveryParoleController.swift in Sources */,
 				8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */,
@@ -1748,7 +1738,6 @@
 				837ABEFC1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
 				837ABF201F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
 				8369891B1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
-				8369893F1F3198A1003E4D73 /* RNSRegistrationNameController+Photo.swift in Sources */,
 				8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
 				837ABF091F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				836989431F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */,
@@ -1761,7 +1750,6 @@
 				837ABF1C1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */,
 				836989321F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
 				838707E71F30257F0094B273 /* RNSPhoneViewController.swift in Sources */,
-				8369893C1F31905E003E4D73 /* RNSRegistrationNameController+Action.swift in Sources */,
 				832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				837ABF241F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
 				832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,

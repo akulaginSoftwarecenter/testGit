@@ -23,9 +23,6 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
     }
     
     override func actionNext() {
-        /*
-        let vc = RNSRegistrationNameController.initialController
-        STRouter.pushAnimatedImageBoard(vc)
-        */
+        STRouter.pushAnimatedImageBoard(RNSRegistrationNameController.initialController)
     }
 }
