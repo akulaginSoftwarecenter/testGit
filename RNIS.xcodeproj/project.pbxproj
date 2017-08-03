@@ -161,6 +161,8 @@
 		8392BAC71F304BB80024E9E5 /* RNSAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */; };
 		8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
 		8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
+		839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */; };
+		839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */; };
 		83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */; };
 		83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */; };
 		83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */; };
@@ -336,6 +338,8 @@
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
 		8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSAlertViewController.storyboard; path = "Library/Base classes/AlertViewController/RNSAlertViewController.storyboard"; sourceTree = "<group>"; };
+		839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSProfilePhoto.swift; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.swift; sourceTree = "<group>"; };
+		839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSProfilePhoto.xib; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.xib; sourceTree = "<group>"; };
 		83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Action.swift"; path = "Controllers/Map/RNSMapViewController+Action.swift"; sourceTree = "<group>"; };
 		83B2E06A1F1E139800FA92A4 /* AlamofireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAPI.swift; sourceTree = "<group>"; };
 		83B2E06B1F1E139800FA92A4 /* AlamofirePagedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofirePagedAPI.swift; sourceTree = "<group>"; };
@@ -821,6 +825,7 @@
 		836D80811F1DAE2400FEE390 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				839BCDEC1F32BABC00B5CA88 /* ImageView */,
 				8326AA391F1F631900F893C8 /* Buttons */,
 				832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */,
 				835718981F21AE3900DE5E25 /* Map */,
@@ -1211,6 +1216,23 @@
 			name = AlertViewController;
 			sourceTree = "<group>";
 		};
+		839BCDEC1F32BABC00B5CA88 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				839BCDEF1F32BAF500B5CA88 /* ProfilePhoto */,
+			);
+			name = ImageView;
+			sourceTree = "<group>";
+		};
+		839BCDEF1F32BAF500B5CA88 /* ProfilePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */,
+				839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */,
+			);
+			name = ProfilePhoto;
+			sourceTree = "<group>";
+		};
 		83B2E0661F1E139800FA92A4 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -1472,6 +1494,7 @@
 				838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */,
 				838707E41F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */,
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
+				839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */,
 				8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */,
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
@@ -1588,6 +1611,7 @@
 				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
+				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836989291F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */,

@@ -10,9 +10,5 @@ import Foundation
 
 extension RNSRegistrationNameController {
     
-    @IBAction func actionCamera(_ sender: Any) {
-        RNSAlertPhotoController.controller(!isHavePhoto) { [weak self] image in
-            print("image",image)
-        }
-    }
+
 }

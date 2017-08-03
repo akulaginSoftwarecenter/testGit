@@ -10,7 +10,5 @@ import Foundation
 
 extension RNSRegistrationNameController {
     
-    var isHavePhoto: Bool {
-        return photo != nil
-    }
+
 }
