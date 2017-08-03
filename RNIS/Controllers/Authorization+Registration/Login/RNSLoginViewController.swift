@@ -25,6 +25,14 @@ class RNSLoginViewController: UIViewController {
         loginView.handlerBlackAction = { [weak self] in
             self?.loginPressed()
         }
+        
+        stubLogin()
+    }
+    
+    func stubLogin() {
+        loginField.text = "79136298659"
+        loginField.textFieldDidChange()
+        passwordField.text = "111111"
     }
     
     func loginPressed() {
