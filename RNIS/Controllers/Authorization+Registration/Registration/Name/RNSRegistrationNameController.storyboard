@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="adi-2r-abR">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,32 +18,28 @@
                         <viewControllerLayoutGuide type="bottom" id="Hla-E5-RO9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3SO-Er-NRQ" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZT-vJ-bGu" customClass="RNSGrayBackButton" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="602" width="375" height="62"/>
+                                <rect key="frame" x="0.0" y="503" width="320" height="62"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="Xb2-en-MYa"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="w8f-y6-Xdu"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Cd0-fU-xf4">
-                                <rect key="frame" x="87.5" y="182" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Cd0-fU-xf4">
+                                <rect key="frame" x="89" y="182" width="142" height="142"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Tu9-QK-cG4"/>
-                                    <constraint firstAttribute="height" constant="200" id="ZLw-Kv-cgl"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Tu9-QK-cG4"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="ZLw-Kv-cgl"/>
+                                    <constraint firstAttribute="width" secondItem="Cd0-fU-xf4" secondAttribute="height" multiplier="200:200" id="zUi-XS-H46"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-rA-o14" customClass="RNSNameField" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="430" width="315" height="30"/>
+                                <rect key="frame" x="30" y="372" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -51,7 +48,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdC-Mf-qCf">
-                                <rect key="frame" x="231.5" y="333" width="60" height="60"/>
+                                <rect key="frame" x="175" y="275" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="A05-aI-lIf"/>
@@ -73,12 +70,14 @@
                             <constraint firstItem="Cd0-fU-xf4" firstAttribute="top" secondItem="3SO-Er-NRQ" secondAttribute="top" constant="182" id="BPq-8N-dFr"/>
                             <constraint firstItem="QdC-Mf-qCf" firstAttribute="trailing" secondItem="Cd0-fU-xf4" secondAttribute="trailing" constant="4" id="CBu-il-7Um"/>
                             <constraint firstAttribute="trailing" secondItem="pZT-vJ-bGu" secondAttribute="trailing" id="IBK-9i-8ZJ"/>
+                            <constraint firstItem="Cd0-fU-xf4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="89" id="MEA-mY-foN"/>
                             <constraint firstItem="bzV-rA-o14" firstAttribute="bottom" secondItem="Cd0-fU-xf4" secondAttribute="bottom" constant="78" id="OgU-ns-zrx"/>
                             <constraint firstItem="pZT-vJ-bGu" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" id="QcJ-1C-31K"/>
                             <constraint firstItem="bzV-rA-o14" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="30" id="e98-HF-YLa"/>
                             <constraint firstItem="Cd0-fU-xf4" firstAttribute="centerX" secondItem="3SO-Er-NRQ" secondAttribute="centerX" id="igb-oI-WDv"/>
                             <constraint firstItem="QdC-Mf-qCf" firstAttribute="bottom" secondItem="Cd0-fU-xf4" secondAttribute="bottom" constant="11" id="rg1-gf-Lc6"/>
                             <constraint firstItem="Hla-E5-RO9" firstAttribute="top" secondItem="pZT-vJ-bGu" secondAttribute="bottom" constant="3" id="tBx-60-Yjw"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cd0-fU-xf4" secondAttribute="trailing" constant="89" id="vkT-ef-NTz"/>
                             <constraint firstAttribute="trailing" secondItem="bzV-rA-o14" secondAttribute="trailing" constant="30" id="xUG-IE-kZd"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -88,6 +87,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="RYH-LT-S7u"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="Cd0-fU-xf4" id="Dkd-qw-hMg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVq-Zj-YOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
