@@ -16,7 +16,7 @@ class RNSProfileViewController: UIViewController {
     @IBOutlet weak var blackButton: RNSBlackButton!
     
     static func initController() -> UIViewController? {
-        return STRouter.redContainer(STRouter.scrollContainer(RNSProfileViewController.initialController))
+        return STRouter.redScrollContainer(RNSProfileViewController.initialController)
     }
     
     override func viewDidLoad() {

@@ -24,6 +24,6 @@ extension RNSLoginViewController {
     }
     
     @IBAction func actionProfile(_ sender: Any) {
-        RNSProfileViewController.initController()?.pushAnimated()
+        RNSProfileViewController.initialController.pushAnimatedRedScroll()
     }
 }

@@ -136,6 +136,8 @@
 		837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
+		8386B4451F343EC7008A5CC7 /* RNSChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */; };
+		8386B4491F344196008A5CC7 /* RNSChangePasswordController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */; };
 		838707D31F3017870094B273 /* RNSGrayBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707D21F3017870094B273 /* RNSGrayBackButton.swift */; };
 		838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838707D41F30179B0094B273 /* RNSGrayBackButton.xib */; };
 		838707DC1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707DB1F3025490094B273 /* RNSRecoveryPhoneController.swift */; };
@@ -337,6 +339,8 @@
 		837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Action.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Action.swift"; sourceTree = "<group>"; };
 		837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+TextField.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+TextField.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
+		8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePasswordController.swift; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.swift; sourceTree = "<group>"; };
+		8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSChangePasswordController.storyboard; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.storyboard; sourceTree = "<group>"; };
 		838707D21F3017870094B273 /* RNSGrayBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGrayBackButton.swift; path = Views/Buttons/GrayBackButton/RNSGrayBackButton.swift; sourceTree = "<group>"; };
 		838707D41F30179B0094B273 /* RNSGrayBackButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSGrayBackButton.xib; path = Views/Buttons/GrayBackButton/RNSGrayBackButton.xib; sourceTree = "<group>"; };
 		838707DB1F3025490094B273 /* RNSRecoveryPhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryPhoneController.swift; path = "Controllers/Authorization+Registration/Recovery/Phone/RNSRecoveryPhoneController.swift"; sourceTree = "<group>"; };
@@ -1197,6 +1201,15 @@
 			name = Parent;
 			sourceTree = "<group>";
 		};
+		8386B4431F343E8E008A5CC7 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */,
+				8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */,
+			);
+			name = ChangePassword;
+			sourceTree = "<group>";
+		};
 		838707D11F3017240094B273 /* GrayBackButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1315,6 +1328,7 @@
 		839BCDF91F32E28A00B5CA88 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8386B4431F343E8E008A5CC7 /* ChangePassword */,
 				839BCDFA1F32E66B00B5CA88 /* RNSProfileViewController.swift */,
 				8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */,
 				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
@@ -1620,6 +1634,7 @@
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
 				839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */,
 				8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */,
+				8386B4491F344196008A5CC7 /* RNSChangePasswordController.storyboard in Resources */,
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
@@ -1846,6 +1861,7 @@
 				83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
 				83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */,
+				8386B4451F343EC7008A5CC7 /* RNSChangePasswordController.swift in Sources */,
 				838707DC1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */,
 				837ABF021F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */,
 				835718A01F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */,

@@ -62,4 +62,8 @@ class STRouter: NSObject {
     static func pushAnimatedImageBoard(_ viewController: UIViewController?) {
         pushAnimated(imageBoardContainer(viewController))
     }
+    
+    static func pushAnimatedRedScroll(_ viewController: UIViewController?) {
+        pushAnimated(redScrollContainer(viewController))
+    }
 }
