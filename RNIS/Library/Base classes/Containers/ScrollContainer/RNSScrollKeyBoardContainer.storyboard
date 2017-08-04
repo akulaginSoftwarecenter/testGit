@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scroll Container-->
+        <!--Scroll Key Board Container-->
         <scene sceneID="STV-cL-d0f">
             <objects>
-                <viewController id="4Ic-dU-8S9" customClass="RNSScrollContainer" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Ic-dU-8S9" customClass="RNSScrollKeyBoardContainer" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1oI-HW-YbV"/>
                         <viewControllerLayoutGuide type="bottom" id="QSf-Kq-g0k"/>
@@ -47,6 +47,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="9J4-8v-Yco" id="Qos-UC-yVh"/>
                         <outlet property="coverView" destination="qbD-W0-T9a" id="JX4-j0-ZDs"/>
                     </connections>
                 </viewController>

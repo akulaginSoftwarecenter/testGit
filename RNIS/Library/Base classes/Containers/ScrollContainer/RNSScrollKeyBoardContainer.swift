@@ -8,10 +8,18 @@
 
 import UIKit
 
-class RNSScrollContainer: UIViewController {
-
+class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable {
+    
+    var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
+        get {
+            return bottomConstraint
+        }
+    }
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     static func initController(_ container: UIViewController?) -> UIViewController? {
-        let vc = RNSScrollContainer.initialController as? RNSScrollContainer
+        let vc = RNSScrollKeyBoardContainer.initialController as? RNSScrollKeyBoardContainer
         vc?.containerVC = container
         return vc
     }
@@ -24,19 +32,28 @@ class RNSScrollContainer: UIViewController {
         
         prepareContainer()
     }
-    
+
     func prepareContainer() {
         guard let containerVC = containerVC,
             let containerView = containerVC.view else {
                 return
         }
         self.addChildViewController(containerVC)
-        print("coverView",coverView)
         coverView.addSubview(containerView)
         containerView.autoPinEdgesToSuperviewEdges()
     }
     
     override class var storyboardName: String {
-        return "RNSScrollContainer"
+        return "RNSScrollKeyBoardContainer"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addKeyboardObservers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeAllObservers()
     }
 }

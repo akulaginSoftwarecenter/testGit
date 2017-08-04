@@ -195,8 +195,8 @@
 		83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58541F25919000A9FE1A /* RNSRoutingPayload.swift */; };
 		83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58581F25923400A9FE1A /* RNISMappableBase.swift */; };
 		83CD58611F25948E00A9FE1A /* RNSPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58601F25948E00A9FE1A /* RNSPostRequest.swift */; };
-		83E2D3921F34332B00035877 /* RNSScrollContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D3911F34332B00035877 /* RNSScrollContainer.swift */; };
-		83E2D3941F34336100035877 /* RNSScrollContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D3931F34336100035877 /* RNSScrollContainer.storyboard */; };
+		83E2D3921F34332B00035877 /* RNSScrollKeyBoardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D3911F34332B00035877 /* RNSScrollKeyBoardContainer.swift */; };
+		83E2D3941F34336100035877 /* RNSScrollKeyBoardContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D3931F34336100035877 /* RNSScrollKeyBoardContainer.storyboard */; };
 		83ED5E2A1F270383007D9F1C /* RNSMapManager+OverLays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */; };
 		83ED5E2C1F2706EF007D9F1C /* RNSMapViewController+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E2B1F2706EF007D9F1C /* RNSMapViewController+Route.swift */; };
 		83ED5E2F1F2707A0007D9F1C /* PGPolyline+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E2E1F2707A0007D9F1C /* PGPolyline+Utils.swift */; };
@@ -383,8 +383,8 @@
 		83CD58541F25919000A9FE1A /* RNSRoutingPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoutingPayload.swift; path = Models/RoutingPayload/RNSRoutingPayload.swift; sourceTree = "<group>"; };
 		83CD58581F25923400A9FE1A /* RNISMappableBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNISMappableBase.swift; path = Models/Base/RNISMappableBase.swift; sourceTree = "<group>"; };
 		83CD58601F25948E00A9FE1A /* RNSPostRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostRequest.swift; path = POST/Parent/RNSPostRequest.swift; sourceTree = "<group>"; };
-		83E2D3911F34332B00035877 /* RNSScrollContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSScrollContainer.swift; path = "Library/Base classes/Containers/ScrollContainer/RNSScrollContainer.swift"; sourceTree = "<group>"; };
-		83E2D3931F34336100035877 /* RNSScrollContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSScrollContainer.storyboard; path = "Library/Base classes/Containers/ScrollContainer/RNSScrollContainer.storyboard"; sourceTree = "<group>"; };
+		83E2D3911F34332B00035877 /* RNSScrollKeyBoardContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSScrollKeyBoardContainer.swift; path = "Library/Base classes/Containers/ScrollContainer/RNSScrollKeyBoardContainer.swift"; sourceTree = "<group>"; };
+		83E2D3931F34336100035877 /* RNSScrollKeyBoardContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSScrollKeyBoardContainer.storyboard; path = "Library/Base classes/Containers/ScrollContainer/RNSScrollKeyBoardContainer.storyboard"; sourceTree = "<group>"; };
 		83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapManager+OverLays.swift"; path = "Managers/Map/RNSMapManager+OverLays.swift"; sourceTree = "<group>"; };
 		83ED5E2B1F2706EF007D9F1C /* RNSMapViewController+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Route.swift"; path = "Controllers/Map/RNSMapViewController+Route.swift"; sourceTree = "<group>"; };
 		83ED5E2E1F2707A0007D9F1C /* PGPolyline+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PGPolyline+Utils.swift"; path = "Library/Helpers/Base objects extensions/PGPolyline/PGPolyline+Utils.swift"; sourceTree = "<group>"; };
@@ -1484,8 +1484,8 @@
 		83E2D3901F3432E000035877 /* ScrollContainer */ = {
 			isa = PBXGroup;
 			children = (
-				83E2D3911F34332B00035877 /* RNSScrollContainer.swift */,
-				83E2D3931F34336100035877 /* RNSScrollContainer.storyboard */,
+				83E2D3911F34332B00035877 /* RNSScrollKeyBoardContainer.swift */,
+				83E2D3931F34336100035877 /* RNSScrollKeyBoardContainer.storyboard */,
 			);
 			name = ScrollContainer;
 			sourceTree = "<group>";
@@ -1607,7 +1607,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E2D3941F34336100035877 /* RNSScrollContainer.storyboard in Resources */,
+				83E2D3941F34336100035877 /* RNSScrollKeyBoardContainer.storyboard in Resources */,
 				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
 				839BCDFD1F32E67E00B5CA88 /* RNSProfileViewController.storyboard in Resources */,
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
@@ -1769,7 +1769,7 @@
 				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
-				83E2D3921F34332B00035877 /* RNSScrollContainer.swift in Sources */,
+				83E2D3921F34332B00035877 /* RNSScrollKeyBoardContainer.swift in Sources */,
 				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
 				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,
 				835718AE1F21C80600DE5E25 /* RNSPinBuild.swift in Sources */,
