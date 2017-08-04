@@ -116,12 +116,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionPhone:" destination="Tda-Cz-cXr" eventType="touchUpInside" id="tVS-oD-P0h"/>
+                                    <action selector="actionPassword:" destination="Tda-Cz-cXr" eventType="touchUpInside" id="C52-8V-3xn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLA-Go-8UB" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="580" width="315" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="5aC-7J-hbt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Выйти из аккаунта"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BLA-Go-8UB" secondAttribute="trailing" constant="30" id="2uH-jR-1Ps"/>
                             <constraint firstAttribute="trailing" secondItem="xHl-sp-FVm" secondAttribute="trailing" constant="30" id="6iA-xA-hih"/>
                             <constraint firstItem="xHl-sp-FVm" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="8gF-2S-tok"/>
                             <constraint firstItem="gW3-PU-jT5" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="Dev-SM-DJx"/>
@@ -129,6 +140,7 @@
                             <constraint firstAttribute="trailing" secondItem="gW3-PU-jT5" secondAttribute="trailing" constant="30" id="Fjv-6H-ihR"/>
                             <constraint firstItem="He8-hz-3g9" firstAttribute="top" secondItem="MPX-75-nWd" secondAttribute="top" constant="84" id="JTi-TP-j17"/>
                             <constraint firstItem="89S-Yo-PlB" firstAttribute="bottom" secondItem="xHl-sp-FVm" secondAttribute="bottom" constant="83" id="KpT-DH-l6S"/>
+                            <constraint firstItem="pT7-5p-UAB" firstAttribute="top" secondItem="BLA-Go-8UB" secondAttribute="bottom" constant="24" id="QnR-of-7Io"/>
                             <constraint firstItem="qxU-QA-nnz" firstAttribute="top" secondItem="eQc-H9-pkS" secondAttribute="bottom" id="W5I-Cg-l3d"/>
                             <constraint firstItem="He8-hz-3g9" firstAttribute="centerX" secondItem="MPX-75-nWd" secondAttribute="centerX" id="a8D-y6-PcC"/>
                             <constraint firstItem="rpT-QZ-9JN" firstAttribute="top" secondItem="xHl-sp-FVm" secondAttribute="bottom" constant="6" id="cBK-rg-ISd"/>
@@ -138,6 +150,7 @@
                             <constraint firstItem="eQc-H9-pkS" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="hYB-KO-hcJ"/>
                             <constraint firstItem="89S-Yo-PlB" firstAttribute="bottom" secondItem="rpT-QZ-9JN" secondAttribute="bottom" constant="-5" id="keq-IT-1W4"/>
                             <constraint firstItem="qxU-QA-nnz" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="kf7-8g-Ubk"/>
+                            <constraint firstItem="BLA-Go-8UB" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="nkA-lZ-hsV"/>
                             <constraint firstAttribute="trailing" secondItem="qxU-QA-nnz" secondAttribute="trailing" constant="30" id="oiu-Fe-nzK"/>
                             <constraint firstAttribute="trailing" secondItem="eQc-H9-pkS" secondAttribute="trailing" constant="30" id="pRY-UQ-B8x"/>
                             <constraint firstItem="qxU-QA-nnz" firstAttribute="top" secondItem="89S-Yo-PlB" secondAttribute="bottom" constant="70" id="qK6-3p-82h"/>
@@ -148,6 +161,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="blackButton" destination="BLA-Go-8UB" id="wJ5-eh-piY"/>
                         <outlet property="emailField" destination="xHl-sp-FVm" id="0Rc-ok-HVV"/>
                         <outlet property="nameField" destination="gW3-PU-jT5" id="iur-Qh-jvy"/>
                         <outlet property="phoneField" destination="89S-Yo-PlB" id="ohd-zG-6Zh"/>

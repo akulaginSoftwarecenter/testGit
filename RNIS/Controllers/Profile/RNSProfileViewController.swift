@@ -9,9 +9,11 @@
 import UIKit
 
 class RNSProfileViewController: UIViewController {
+    
     @IBOutlet weak var nameField: RNSNameField!
     @IBOutlet weak var emailField: RNSEmailField!
     @IBOutlet weak var phoneField: RNSPhoneField!
+    @IBOutlet weak var blackButton: RNSBlackButton!
     
     static func initController() -> UIViewController? {
         return STRouter.redContainer(STRouter.boardContainer(RNSProfileViewController.initialController))
@@ -21,6 +23,13 @@ class RNSProfileViewController: UIViewController {
         super.viewDidLoad()
         
         prepareStubText()
+        prepareBlackButton()
+    }
+    
+    func prepareBlackButton() {
+        blackButton.handlerAction = {
+            print("blackButton.handlerAction ")
+        }
     }
     
     func prepareStubText() {
@@ -34,6 +43,10 @@ class RNSProfileViewController: UIViewController {
         return "RNSProfileViewController"
     }
     @IBAction func actionPhone(_ sender: Any) {
-        
+        print("actionPhone")
+    }
+    
+    @IBAction func actionPassword(_ sender: Any) {
+        print("actionPassword")
     }
 }

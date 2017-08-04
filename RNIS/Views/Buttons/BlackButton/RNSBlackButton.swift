@@ -13,7 +13,7 @@ class RNSBlackButton: BaseViewWithXIBInit {
     @IBOutlet var button: UIButton!
     var handlerAction: EmptyBlock?
     
-    var title: String? {
+    @IBInspectable var title: String? {
         didSet {
             prepareTitle()
         }
