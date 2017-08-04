@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,17 +28,71 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Настройки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geC-NS-Yiz" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Профиль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geC-NS-Yiz" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="155" y="1" width="71" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="He8-hz-3g9" customClass="RNSProfilePhoto" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="84" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="KMH-km-9Tk"/>
+                                    <constraint firstAttribute="width" secondItem="He8-hz-3g9" secondAttribute="height" multiplier="200:200" id="Sea-A3-j3f"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorImageView">
+                                        <color key="value" red="0.85098039215686272" green="0.3529411764705882" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gW3-PU-jT5" customClass="RNSNameField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="280" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomLineOffset">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Как вас зовут?"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Имя пользователя"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-sp-FVm" customClass="RNSEmailField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="363" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomLineOffset">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Электронная почта"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.28000000000000003" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xHl-sp-FVm" secondAttribute="trailing" constant="30" id="6iA-xA-hih"/>
+                            <constraint firstItem="xHl-sp-FVm" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="8gF-2S-tok"/>
+                            <constraint firstItem="gW3-PU-jT5" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="Dev-SM-DJx"/>
+                            <constraint firstItem="xHl-sp-FVm" firstAttribute="bottom" secondItem="gW3-PU-jT5" secondAttribute="bottom" constant="83" id="ENq-a5-X5L"/>
+                            <constraint firstAttribute="trailing" secondItem="gW3-PU-jT5" secondAttribute="trailing" constant="30" id="Fjv-6H-ihR"/>
+                            <constraint firstItem="He8-hz-3g9" firstAttribute="top" secondItem="MPX-75-nWd" secondAttribute="top" constant="84" id="JTi-TP-j17"/>
+                            <constraint firstItem="He8-hz-3g9" firstAttribute="centerX" secondItem="MPX-75-nWd" secondAttribute="centerX" id="a8D-y6-PcC"/>
+                            <constraint firstItem="gW3-PU-jT5" firstAttribute="bottom" secondItem="He8-hz-3g9" secondAttribute="bottom" constant="76" id="eHs-9K-Ki5"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="emailField" destination="xHl-sp-FVm" id="0Rc-ok-HVV"/>
+                        <outlet property="nameField" destination="gW3-PU-jT5" id="iur-Qh-jvy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2P-Z1-GDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

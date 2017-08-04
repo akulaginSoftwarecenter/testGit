@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 extension RNSLoginViewController {
     
@@ -23,6 +24,6 @@ extension RNSLoginViewController {
     }
     
     @IBAction func actionProfile(_ sender: Any) {
-        push(RNSProfileViewController.initialController)
+        RNSProfileViewController.initController()?.pushAnimated()
     }
 }

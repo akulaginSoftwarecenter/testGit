@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum STTextFieldState {
     case normal, black
@@ -28,6 +29,26 @@ class RNSTextField: UITextField {
         }
     }
     
+    @IBInspectable var bottomLineOffset: CGFloat = 0 {
+        didSet {
+            bottomConstraint?.update(offset: bottomLineOffset)
+        }
+    }
+    
+    @IBInspectable var leftTextAlignment: Bool = false {
+        didSet {
+            if leftTextAlignment  {
+                textAlignment = .left
+            }
+        }
+    }
+    
+    @IBInspectable var topText: String? {
+        didSet {
+            topLabel.text = topText
+        }
+    }
+    
     var placeholderFont: UIFont {
         return .cffazm24
     }
@@ -38,6 +59,21 @@ class RNSTextField: UITextField {
     
     var stateVar: STTextFieldState = .normal
     
+    var bottomConstraint: Constraint?
+    
+    lazy var topLabel: UILabel = {
+        let view = UILabel()
+        view.font = .cffazm16
+        view.textColor = .whiteAlpha50
+        self.addSubview(view)
+        view.snp.makeConstraints { (make) in
+            make.width.equalTo(self)
+            make.left.right.equalTo(self)
+            make.bottom.equalTo(self.snp.top).offset(4)
+        }
+        return view
+    }()
+    
     lazy var bottomLine: UIView = {
         let view = UIView()
         self.addSubview(view)
@@ -45,7 +81,7 @@ class RNSTextField: UITextField {
             make.width.equalTo(self)
             make.left.right.equalTo(self)
             make.height.equalTo(1)
-            make.bottom.equalTo(self)
+            self.bottomConstraint = make.bottom.equalTo(self).constraint
         }
         return view
     }()
@@ -115,7 +151,7 @@ class RNSTextField: UITextField {
         var color: UIColor
         switch state {
         case .normal:
-            color = .hexE25E55
+            color = .E25E55
         case .black:
             color = .black
         }

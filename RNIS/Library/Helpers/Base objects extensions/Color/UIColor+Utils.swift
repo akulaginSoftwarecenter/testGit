@@ -24,9 +24,14 @@ extension UIColor {
         return white.withAlphaComponent(0.5)
     }
     
-    static var hexE25E55:UIColor {
+    static var E25E55:UIColor {
         return UIColor(hexString: "E25E55")
     }
+    
+    static var F1645A:UIColor {
+        return UIColor(hexString: "F1645A")
+    }
+    
     
     convenience init(_ red255: UInt, _ green255: UInt, _ blue255: UInt) {
         self.init(red255,green255,blue255,1)

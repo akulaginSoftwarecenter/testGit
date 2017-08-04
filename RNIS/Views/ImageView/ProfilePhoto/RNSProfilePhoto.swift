@@ -11,11 +11,24 @@ import UIKit
 class RNSProfilePhoto: BaseViewWithXIBInit {
 
     var photo: UIImage?
-    
+    @IBInspectable var colorImageView: UIColor?
     @IBOutlet weak var imageView: UIImageView!
     
     var isHavePhoto: Bool {
         return photo != nil
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        prepareColorImageView()
+    }
+    
+    func prepareColorImageView() {
+        guard let color = colorImageView else {
+            return
+        }
+        imageView.backgroundColor = color
     }
     
     @IBAction func actionButton(_ sender: Any) {

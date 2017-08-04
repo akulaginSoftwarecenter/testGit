@@ -10,6 +10,10 @@ import UIKit
 
 extension UIFont {
     
+    static var cffazm16:UIFont {
+        return cffazm(16)
+    }
+    
     static var cffazm20:UIFont {
         return cffazm(20)
     }

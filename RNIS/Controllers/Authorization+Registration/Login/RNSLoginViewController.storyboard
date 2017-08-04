@@ -76,7 +76,7 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm8-Dj-mD7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm8-Dj-mD7">
                                 <rect key="frame" x="0.0" y="0.0" width="89" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="8OA-xs-zxz"/>
@@ -108,7 +108,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Авторизация"/>
-                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Сохранить"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Войти"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="TXH-zU-9mB"/>

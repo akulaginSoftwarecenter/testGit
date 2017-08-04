@@ -7,31 +7,12 @@
 //
 
 import UIKit
-import SnapKit
 
-class STImageContainer: UIViewController {
+class STImageContainer: RNSParentContainer {
     
-    var containerVC:UIViewController?
-    
-    convenience init(_ container: UIViewController?) {
-        self.init()
-        containerVC = container
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func prepareView() {
+        super.prepareView()
         
         view.addBackGroundImage()
-        prepareContainer()
-    }
-    
-    func prepareContainer() {
-        guard let containerVC = containerVC,
-            let containerView = containerVC.view else {
-                return
-        }
-        self.addChildViewController(containerVC)
-        view.addSubview(containerView)
-        containerView.autoPinEdgesToSuperviewEdges()
     }
 }
