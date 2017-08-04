@@ -135,6 +135,7 @@
 		837ABF271F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */; };
 		837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
+		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
 		838707D31F3017870094B273 /* RNSGrayBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707D21F3017870094B273 /* RNSGrayBackButton.swift */; };
 		838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838707D41F30179B0094B273 /* RNSGrayBackButton.xib */; };
 		838707DC1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707DB1F3025490094B273 /* RNSRecoveryPhoneController.swift */; };
@@ -335,6 +336,7 @@
 		837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STImageContainer.swift; path = "Library/Base classes/ImageContainer/STImageContainer.swift"; sourceTree = "<group>"; };
 		837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Action.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Action.swift"; sourceTree = "<group>"; };
 		837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+TextField.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+TextField.swift"; sourceTree = "<group>"; };
+		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
 		838707D21F3017870094B273 /* RNSGrayBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGrayBackButton.swift; path = Views/Buttons/GrayBackButton/RNSGrayBackButton.swift; sourceTree = "<group>"; };
 		838707D41F30179B0094B273 /* RNSGrayBackButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSGrayBackButton.xib; path = Views/Buttons/GrayBackButton/RNSGrayBackButton.xib; sourceTree = "<group>"; };
 		838707DB1F3025490094B273 /* RNSRecoveryPhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryPhoneController.swift; path = "Controllers/Authorization+Registration/Recovery/Phone/RNSRecoveryPhoneController.swift"; sourceTree = "<group>"; };
@@ -1314,6 +1316,7 @@
 			isa = PBXGroup;
 			children = (
 				839BCDFA1F32E66B00B5CA88 /* RNSProfileViewController.swift */,
+				8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */,
 				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
 			);
 			name = Profile;
@@ -1814,6 +1817,7 @@
 				836989221F317B64003E4D73 /* STContainerViewController.swift in Sources */,
 				8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
 				83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */,
+				8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */,
 				837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
 				835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
 				83CD58611F25948E00A9FE1A /* RNSPostRequest.swift in Sources */,

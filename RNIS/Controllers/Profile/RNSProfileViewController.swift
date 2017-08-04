@@ -28,7 +28,7 @@ class RNSProfileViewController: UIViewController {
     
     func prepareBlackButton() {
         blackButton.handlerAction = {
-            print("blackButton.handlerAction ")
+            STRouter.showLogin()
         }
     }
     
@@ -41,12 +41,5 @@ class RNSProfileViewController: UIViewController {
     
     override class var storyboardName: String {
         return "RNSProfileViewController"
-    }
-    @IBAction func actionPhone(_ sender: Any) {
-        print("actionPhone")
-    }
-    
-    @IBAction func actionPassword(_ sender: Any) {
-        print("actionPassword")
     }
 }
