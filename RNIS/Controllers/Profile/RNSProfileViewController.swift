@@ -11,6 +11,7 @@ import UIKit
 class RNSProfileViewController: UIViewController {
     @IBOutlet weak var nameField: RNSNameField!
     @IBOutlet weak var emailField: RNSEmailField!
+    @IBOutlet weak var phoneField: RNSPhoneField!
     
     static func initController() -> UIViewController? {
         return STRouter.redContainer(STRouter.boardContainer(RNSProfileViewController.initialController))
@@ -19,11 +20,20 @@ class RNSProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareStubText()
+    }
+    
+    func prepareStubText() {
         nameField.text = "Артем Кулагин"
         emailField.text = "akula_84@mail.ru"
+        phoneField.text = "89136298659"
+        phoneField.textFieldDidChange()
     }
     
     override class var storyboardName: String {
         return "RNSProfileViewController"
+    }
+    @IBAction func actionPhone(_ sender: Any) {
+        
     }
 }

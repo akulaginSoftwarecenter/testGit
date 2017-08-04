@@ -16,6 +16,7 @@
 		8329DF581F340F1200D542FF /* RNSParentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329DF571F340F1200D542FF /* RNSParentContainer.swift */; };
 		8329DF5A1F34117200D542FF /* UIViewController+STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329DF591F34117200D542FF /* UIViewController+STRouter.swift */; };
 		8329DF5D1F34251200D542FF /* RNSEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329DF5C1F34251200D542FF /* RNSEmailField.swift */; };
+		8329DF601F342B5E00D542FF /* RNSRightChevronButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329DF5F1F342B5E00D542FF /* RNSRightChevronButton.swift */; };
 		832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */; };
 		832E4B721F2EC48600A4AD77 /* RNSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */; };
 		832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */; };
@@ -237,6 +238,7 @@
 		8329DF571F340F1200D542FF /* RNSParentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParentContainer.swift; path = "Library/Base classes/Containers/ParentContainer/RNSParentContainer.swift"; sourceTree = "<group>"; };
 		8329DF591F34117200D542FF /* UIViewController+STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+STRouter.swift"; path = "Library/Helpers/Base objects extensions/UIViewController/UIViewController+STRouter.swift"; sourceTree = "<group>"; };
 		8329DF5C1F34251200D542FF /* RNSEmailField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSEmailField.swift; path = EmailField/RNSEmailField.swift; sourceTree = "<group>"; };
+		8329DF5F1F342B5E00D542FF /* RNSRightChevronButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRightChevronButton.swift; path = Views/Buttons/RightchevronButton/RNSRightChevronButton.swift; sourceTree = "<group>"; };
 		832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLoginViewController.swift; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController.swift"; sourceTree = "<group>"; };
 		832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLoginView.swift; path = "Views/Login+Registration/LoginView/RNSLoginView.swift"; sourceTree = "<group>"; };
 		832E4B741F2EC49400A4AD77 /* RNSLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSLoginView.xib; path = "Views/Login+Registration/LoginView/RNSLoginView.xib"; sourceTree = "<group>"; };
@@ -469,10 +471,11 @@
 		8326AA391F1F631900F893C8 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				839BCDFE1F32E83800B5CA88 /* LeftBackButton */,
 				832E4B771F2EC65C00A4AD77 /* BlackButton */,
 				838707D11F3017240094B273 /* GrayBackButton */,
+				839BCDFE1F32E83800B5CA88 /* LeftBackButton */,
 				8375DE971F204C1400FCA26E /* LightButton */,
+				8329DF5E1F342B2600D542FF /* RightchevronButton */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -519,6 +522,14 @@
 				8329DF5C1F34251200D542FF /* RNSEmailField.swift */,
 			);
 			name = EmailField;
+			sourceTree = "<group>";
+		};
+		8329DF5E1F342B2600D542FF /* RightchevronButton */ = {
+			isa = PBXGroup;
+			children = (
+				8329DF5F1F342B5E00D542FF /* RNSRightChevronButton.swift */,
+			);
+			name = RightchevronButton;
 			sourceTree = "<group>";
 		};
 		832E4B691F2EC26C00A4AD77 /* Login */ = {
@@ -1748,6 +1759,7 @@
 				835718AE1F21C80600DE5E25 /* RNSPinBuild.swift in Sources */,
 				839BCDFB1F32E66B00B5CA88 /* RNSProfileViewController.swift in Sources */,
 				837ABF1F1F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
+				8329DF601F342B5E00D542FF /* RNSRightChevronButton.swift in Sources */,
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
