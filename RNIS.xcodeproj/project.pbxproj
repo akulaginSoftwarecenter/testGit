@@ -62,6 +62,7 @@
 		835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718B11F21C86400DE5E25 /* RNSMapManager.swift */; };
 		835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */; };
 		836277C71F3804B8009FB712 /* RNSChangePhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */; };
+		836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277CA1F380C48009FB712 /* RNSChangeCodeController.swift */; };
 		8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989091F316B8E003E4D73 /* RNSParoleViewController.swift */; };
 		8369890C1F316B9C003E4D73 /* RNSParoleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8369890B1F316B9C003E4D73 /* RNSParoleViewController.storyboard */; };
 		8369890F1F316F9C003E4D73 /* RNSParoleViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */; };
@@ -278,6 +279,7 @@
 		835718B11F21C86400DE5E25 /* RNSMapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMapManager.swift; path = Managers/Map/RNSMapManager.swift; sourceTree = "<group>"; };
 		835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Handlers.swift"; path = "Controllers/Map/RNSMapViewController+Handlers.swift"; sourceTree = "<group>"; };
 		836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePhoneController.swift; path = Controllers/Profile/ChangePhone/RNSChangePhoneController.swift; sourceTree = "<group>"; };
+		836277CA1F380C48009FB712 /* RNSChangeCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangeCodeController.swift; path = Controllers/Profile/ChangePhone/Code/RNSChangeCodeController.swift; sourceTree = "<group>"; };
 		836989091F316B8E003E4D73 /* RNSParoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParoleViewController.swift; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController.swift"; sourceTree = "<group>"; };
 		8369890B1F316B9C003E4D73 /* RNSParoleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSParoleViewController.storyboard; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController.storyboard"; sourceTree = "<group>"; };
 		8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSParoleViewController+UI.swift"; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController+UI.swift"; sourceTree = "<group>"; };
@@ -778,9 +780,26 @@
 		836277C51F38044D009FB712 /* ChangePhone */ = {
 			isa = PBXGroup;
 			children = (
-				836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */,
+				836277C81F380C03009FB712 /* Phone */,
+				836277C91F380C27009FB712 /* Code */,
 			);
 			name = ChangePhone;
+			sourceTree = "<group>";
+		};
+		836277C81F380C03009FB712 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */,
+			);
+			name = Phone;
+			sourceTree = "<group>";
+		};
+		836277C91F380C27009FB712 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				836277CA1F380C48009FB712 /* RNSChangeCodeController.swift */,
+			);
+			name = Code;
 			sourceTree = "<group>";
 		};
 		836989081F316B2E003E4D73 /* Parole */ = {
@@ -1853,6 +1872,7 @@
 				8329DF5D1F34251200D542FF /* RNSEmailField.swift in Sources */,
 				838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
+				836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				835718A61F21BB2500DE5E25 /* RNSBuildRouteView+Animation.swift in Sources */,

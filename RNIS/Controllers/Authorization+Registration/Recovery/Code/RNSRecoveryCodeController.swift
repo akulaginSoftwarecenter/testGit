@@ -15,7 +15,7 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
         vc?.phone = phone
         return vc
     }
-    
+  
     override var typeTitle: TypeTitle {
         return .recovery
     }
