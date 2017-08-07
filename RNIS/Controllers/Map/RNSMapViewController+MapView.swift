@@ -37,6 +37,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     }
     
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
-        
+        print("onOverlay")
+        showBusStopIfNeed(overlay)
     }
  }

@@ -62,8 +62,13 @@ class RNSMapViewController: UIViewController {
         return "RNSMapViewController"
     }
     
-    func showBusStopIfNeed() {
-        
+    func showBusStopIfNeed(_ overlay: PGOverlay) {
+        guard let overlay = overlay as? RNSPinBusStop  else {
+            return
+        }
+        let vc = RNSBusStopDetailController.initController(overlay.item)
+        STRouter.present(vc, animated: false)
+        print("overlay",overlay.item?.title)
     }
 }
 

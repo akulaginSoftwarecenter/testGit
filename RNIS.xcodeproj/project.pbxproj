@@ -67,6 +67,10 @@
 		836277D11F3816BE009FB712 /* RNSMapViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277D01F3816BE009FB712 /* RNSMapViewController+Stub.swift */; };
 		836277D71F381DFA009FB712 /* RNSBusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277D61F381DFA009FB712 /* RNSBusStop.swift */; };
 		836277DA1F381FE1009FB712 /* RNSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277D91F381FE1009FB712 /* RNSDataManager.swift */; };
+		836277DD1F382CB2009FB712 /* RNSScrollShowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */; };
+		836277DF1F382CC8009FB712 /* RNSScrollShowContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */; };
+		836277E21F382E85009FB712 /* RNSBusStopDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */; };
+		836277E41F382E97009FB712 /* RNSBusStopDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */; };
 		8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989091F316B8E003E4D73 /* RNSParoleViewController.swift */; };
 		8369890C1F316B9C003E4D73 /* RNSParoleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8369890B1F316B9C003E4D73 /* RNSParoleViewController.storyboard */; };
 		8369890F1F316F9C003E4D73 /* RNSParoleViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */; };
@@ -288,6 +292,10 @@
 		836277D01F3816BE009FB712 /* RNSMapViewController+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Stub.swift"; path = "Controllers/Map/RNSMapViewController+Stub.swift"; sourceTree = "<group>"; };
 		836277D61F381DFA009FB712 /* RNSBusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusStop.swift; path = Models/DataBase/BusStop/RNSBusStop.swift; sourceTree = "<group>"; };
 		836277D91F381FE1009FB712 /* RNSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDataManager.swift; path = Managers/Data/RNSDataManager.swift; sourceTree = "<group>"; };
+		836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSScrollShowContainer.swift; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer.swift"; sourceTree = "<group>"; };
+		836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSScrollShowContainer.storyboard; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer.storyboard"; sourceTree = "<group>"; };
+		836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusStopDetailController.swift; path = Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift; sourceTree = "<group>"; };
+		836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSBusStopDetailController.storyboard; path = Controllers/Map/BusStopDetail/RNSBusStopDetailController.storyboard; sourceTree = "<group>"; };
 		836989091F316B8E003E4D73 /* RNSParoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParoleViewController.swift; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController.swift"; sourceTree = "<group>"; };
 		8369890B1F316B9C003E4D73 /* RNSParoleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSParoleViewController.storyboard; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController.storyboard"; sourceTree = "<group>"; };
 		8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSParoleViewController+UI.swift"; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController+UI.swift"; sourceTree = "<group>"; };
@@ -530,11 +538,12 @@
 		8329DF561F340EDF00D542FF /* Containers */ = {
 			isa = PBXGroup;
 			children = (
-				8329DF551F340EC600D542FF /* ParentContainer */,
 				837ABF211F2EE58C00AB5E54 /* ImageContainer */,
 				837ABF001F2EE19700AB5E54 /* KeyBoardViewController */,
+				8329DF551F340EC600D542FF /* ParentContainer */,
 				8329DF521F340E5B00D542FF /* RedContainer */,
 				83E2D3901F3432E000035877 /* ScrollContainer */,
+				836277DB1F382C56009FB712 /* ScrollShowContainer */,
 			);
 			name = Containers;
 			sourceTree = "<group>";
@@ -843,6 +852,24 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		836277DB1F382C56009FB712 /* ScrollShowContainer */ = {
+			isa = PBXGroup;
+			children = (
+				836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */,
+				836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */,
+			);
+			name = ScrollShowContainer;
+			sourceTree = "<group>";
+		};
+		836277E01F382E41009FB712 /* BusStopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */,
+				836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */,
+			);
+			name = BusStopDetail;
+			sourceTree = "<group>";
+		};
 		836989081F316B2E003E4D73 /* Parole */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,6 +1097,7 @@
 		836D80BF1F1DB3A700FEE390 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				836277E01F382E41009FB712 /* BusStopDetail */,
 				836D80C01F1DB3B000FEE390 /* RNSMapViewController.swift */,
 				8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */,
 				8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */,
@@ -1403,9 +1431,9 @@
 			children = (
 				8386B4431F343E8E008A5CC7 /* ChangePassword */,
 				836277C51F38044D009FB712 /* ChangePhone */,
-				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
 				839BCDFA1F32E66B00B5CA88 /* RNSProfileViewController.swift */,
 				8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */,
+				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -1704,11 +1732,13 @@
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 				836D80B91F1DB37700FEE390 /* RNSMapViewController.storyboard in Resources */,
 				838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */,
+				836277E41F382E97009FB712 /* RNSBusStopDetailController.storyboard in Resources */,
 				838707E41F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */,
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
 				839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */,
 				8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */,
 				8386B4491F344196008A5CC7 /* RNSChangePasswordController.storyboard in Resources */,
+				836277DF1F382CC8009FB712 /* RNSScrollShowContainer.storyboard in Resources */,
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
@@ -1883,6 +1913,7 @@
 				83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */,
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
 				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
+				836277DD1F382CB2009FB712 /* RNSScrollShowContainer.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
@@ -1939,6 +1970,7 @@
 				837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
 				83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
+				836277E21F382E85009FB712 /* RNSBusStopDetailController.swift in Sources */,
 				83B2E0821F1E139800FA92A4 /* API+Creating.swift in Sources */,
 				8386B4451F343EC7008A5CC7 /* RNSChangePasswordController.swift in Sources */,
 				838707DC1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */,
