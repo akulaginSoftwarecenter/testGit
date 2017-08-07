@@ -49,6 +49,7 @@ class RNSMapViewController: UIViewController {
         prepareMapView()
         prepareLightButton()
         prepareHandlers()
+        prepareStub()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +60,10 @@ class RNSMapViewController: UIViewController {
     
     override class var storyboardName: String {
         return "RNSMapViewController"
+    }
+    
+    func showBusStopIfNeed() {
+        
     }
 }
 

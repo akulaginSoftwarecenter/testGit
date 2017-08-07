@@ -28,7 +28,6 @@ class RNSPinBuild: PGOverlay {
     }
     
     func addOnMap() {
-        
         RNSMapManager.addOverlay(self)
     }
     

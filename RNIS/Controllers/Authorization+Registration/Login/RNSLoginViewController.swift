@@ -42,10 +42,10 @@ class RNSLoginViewController: UIViewController {
         }
         clearError()
         STRouter.showLoader()
-        Utils.delay(2) {
+        //Utils.delay(2) {
             STRouter.removeLoader()
             STRouter.showMap()
-        }
+        //}
     }
     
     func clearError() {

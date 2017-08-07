@@ -35,4 +35,8 @@ extension RNSMapViewController: PGMapViewDelegate {
         mapView.setMapCenter(point)
         RNSPinBuild(point)
     }
+    
+    func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
+        
+    }
  }

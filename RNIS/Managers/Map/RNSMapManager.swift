@@ -27,4 +27,16 @@ class RNSMapManager: NSObject {
     static func removeOldPinBuild() {
         handlerRemovePinBuild?()
     }
+    
+    static func prepareStubBusStop() {
+        RNSDataManager.createStubStubBusIfNeed()
+        
+        guard let items = RNSDataManager.busStops else {
+            return
+        }
+        for item in items {
+            RNSPinBusStop(item)
+        }
+        
+    }
 }

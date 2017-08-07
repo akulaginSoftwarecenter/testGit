@@ -8,7 +8,7 @@
 
 import CoreLocation
 
-var stubLocation: CLLocation?// = CLLocation(latitude: 59.752561, longitude: 30.148805) //питер
+var stubLocation: CLLocation? = CLLocation(latitude: 59.9363783, longitude: 30.3022305) //питер
 
 let mapHost = "http://95.213.205.92/"
 

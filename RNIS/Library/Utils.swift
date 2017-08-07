@@ -14,6 +14,8 @@ typealias AliasDictionary = [String: Any]
 typealias AnyBlock = (Any) -> ()
 typealias AliasImageBlock = (UIImage?) -> ()
 typealias AliasImagePickerBlock = (UIImagePickerControllerSourceType) -> ()
+typealias AliasThrowsBlock = (() throws -> Void)
+
 
 func NSLoc(_ key: String?) -> String {
     guard let key = key else {
