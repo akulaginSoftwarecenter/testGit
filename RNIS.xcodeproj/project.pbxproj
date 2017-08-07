@@ -61,6 +61,7 @@
 		835718AE1F21C80600DE5E25 /* RNSPinBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718AD1F21C80600DE5E25 /* RNSPinBuild.swift */; };
 		835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718B11F21C86400DE5E25 /* RNSMapManager.swift */; };
 		835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */; };
+		836277C71F3804B8009FB712 /* RNSChangePhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */; };
 		8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989091F316B8E003E4D73 /* RNSParoleViewController.swift */; };
 		8369890C1F316B9C003E4D73 /* RNSParoleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8369890B1F316B9C003E4D73 /* RNSParoleViewController.storyboard */; };
 		8369890F1F316F9C003E4D73 /* RNSParoleViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */; };
@@ -276,6 +277,7 @@
 		835718AD1F21C80600DE5E25 /* RNSPinBuild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinBuild.swift; path = Views/OVerLays/PinBuild/RNSPinBuild.swift; sourceTree = "<group>"; };
 		835718B11F21C86400DE5E25 /* RNSMapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMapManager.swift; path = Managers/Map/RNSMapManager.swift; sourceTree = "<group>"; };
 		835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Handlers.swift"; path = "Controllers/Map/RNSMapViewController+Handlers.swift"; sourceTree = "<group>"; };
+		836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePhoneController.swift; path = Controllers/Profile/ChangePhone/RNSChangePhoneController.swift; sourceTree = "<group>"; };
 		836989091F316B8E003E4D73 /* RNSParoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParoleViewController.swift; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController.swift"; sourceTree = "<group>"; };
 		8369890B1F316B9C003E4D73 /* RNSParoleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSParoleViewController.storyboard; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController.storyboard"; sourceTree = "<group>"; };
 		8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSParoleViewController+UI.swift"; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController+UI.swift"; sourceTree = "<group>"; };
@@ -771,6 +773,14 @@
 				83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */,
 			);
 			name = Map;
+			sourceTree = "<group>";
+		};
+		836277C51F38044D009FB712 /* ChangePhone */ = {
+			isa = PBXGroup;
+			children = (
+				836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */,
+			);
+			name = ChangePhone;
 			sourceTree = "<group>";
 		};
 		836989081F316B2E003E4D73 /* Parole */ = {
@@ -1329,9 +1339,10 @@
 			isa = PBXGroup;
 			children = (
 				8386B4431F343E8E008A5CC7 /* ChangePassword */,
+				836277C51F38044D009FB712 /* ChangePhone */,
+				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
 				839BCDFA1F32E66B00B5CA88 /* RNSProfileViewController.swift */,
 				8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */,
-				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -1836,6 +1847,7 @@
 				837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
 				835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
 				83CD58611F25948E00A9FE1A /* RNSPostRequest.swift in Sources */,
+				836277C71F3804B8009FB712 /* RNSChangePhoneController.swift in Sources */,
 				835718A31F21B37800DE5E25 /* RNSBuildRouteView+Action.swift in Sources */,
 				837ABF0A1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */,
 				8329DF5D1F34251200D542FF /* RNSEmailField.swift in Sources */,

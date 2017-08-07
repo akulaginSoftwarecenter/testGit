@@ -11,6 +11,7 @@ import UIKit
 class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
 
     @IBOutlet weak var phoneField: RNSPhoneField!
+    @IBOutlet weak var backButton: RNSGrayBackButton!
     
     lazy var fields:[RNSTextField] = {
         return [self.phoneField]

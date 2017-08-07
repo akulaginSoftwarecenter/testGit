@@ -68,6 +68,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Tzw-1V-wXu" id="4f2-86-ivi"/>
                         <outlet property="coverView" destination="HrX-gk-F32" id="ISf-7X-rfJ"/>
                         <outlet property="errorLabel" destination="NkV-q8-iDK" id="jaw-LS-EG7"/>
                         <outlet property="phoneField" destination="m8m-pf-kL8" id="Wav-Re-ub4"/>
@@ -76,6 +77,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndC-2r-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106.40000000000001" y="-183.05847076461771"/>
+        </scene>
+        <!--Change Phone Controller-->
+        <scene sceneID="vNt-W6-h4s">
+            <objects>
+                <viewController storyboardIdentifier="RNSChangePhoneController" id="50j-ZH-sJu" customClass="RNSChangePhoneController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="eml-GI-XK4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="wUs-3r-StT" kind="embed" id="bYv-Hd-1ei"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFJ-yP-WmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="-977"/>
         </scene>
         <!--Registration Phone Controller-->
         <scene sceneID="tLG-vZ-v6A">
@@ -91,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iw-rP-YLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394" y="-977"/>
+            <point key="canvasLocation" x="-814" y="-977"/>
         </scene>
         <!--Recovery Phone Controller-->
         <scene sceneID="Kt8-vn-FDo">
@@ -107,10 +124,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSt-5W-XtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="-977"/>
+            <point key="canvasLocation" x="-106" y="-977"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LU5-I6-VNt"/>
+        <segue reference="bYv-Hd-1ei"/>
     </inferredMetricsTieBreakers>
 </document>
