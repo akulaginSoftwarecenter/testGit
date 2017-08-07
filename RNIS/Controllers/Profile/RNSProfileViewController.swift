@@ -15,10 +15,6 @@ class RNSProfileViewController: UIViewController {
     @IBOutlet weak var phoneField: RNSPhoneField!
     @IBOutlet weak var blackButton: RNSBlackButton!
     
-    static func initController() -> UIViewController? {
-        return STRouter.redScrollContainer(RNSProfileViewController.initialController)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -15,8 +15,10 @@ class STPasswordField: RNSTextField {
     }
     
     override var errorText:String? {
-        return isValid ? nil : "Пароль не может содержать менее 6 символов"
+        return isValid ? nil : errorTextNoValid
     }
+    
+    @IBInspectable var errorTextNoValid: String = "Пароль не может содержать менее 6 символов"
     
     convenience init(placeholderKey: String) {
         self.init()

@@ -14,6 +14,9 @@ class RNSChangePasswordController: UIViewController {
     @IBOutlet weak var passwordOldField: STPasswordField!
     @IBOutlet weak var passwordOneField: STPasswordField!
     @IBOutlet weak var passwordTwoField: STPasswordField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet var fields: [STPasswordField]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,40 @@ class RNSChangePasswordController: UIViewController {
     }
     
     func prepareCoverView() {
-        coverView.handlerBlackAction = {
-            //STRouter.pop()
+        coverView.handlerBlackAction = { [weak self] in
+            self?.savePressed()
         }
+    }
+    
+    func savePressed() {
+        if let error = fields.checkValidFields {
+            errorLabel.text = error
+            return
+        }
+        
+        if passwordOneField.text !=  passwordTwoField.text {
+            errorLabel.text = "Пароли не совпадают"
+            passwordOneField.setStateNotValid()
+            passwordTwoField.setStateNotValid()
+            return
+        }
+        
+        clearError()
+        pop()
+    }
+    
+    func pop() {
+        STRouter.pop { 
+            STRouter.showAlert("Ваш пароль успешно изменён")
+        }
+    }
+    
+    func clearError() {
+        fields.clearError()
+        errorLabel.text = nil
+    }
+    
+    override class var storyboardName: String {
+        return "RNSChangePasswordController"
     }
 }

@@ -15,6 +15,6 @@ extension RNSProfileViewController {
     }
     
     @IBAction func actionPassword(_ sender: Any) {
-        print("actionPassword")
+        RNSChangePasswordController.initialController.pushAnimatedRedScroll()
     }
 }
