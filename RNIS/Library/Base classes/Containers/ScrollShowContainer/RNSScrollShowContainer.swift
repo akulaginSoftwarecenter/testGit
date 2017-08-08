@@ -19,12 +19,18 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverView: UIView!
-    var containerVC:UIViewController?
+    
+    var containerVC: UIViewController?
+    
+    var containerView: UIView? {
+        return containerVC?.view
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareContainer()
+        prepareTouchView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,12 +41,19 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     func prepareContainer() {
         guard let containerVC = containerVC,
-            let containerView = containerVC.view else {
+            let containerView = containerView else {
                 return
         }
         self.addChildViewController(containerVC)
         coverView.addSubview(containerView)
         containerView.autoPinEdgesToSuperviewEdges()
+    }
+    
+    func prepareTouchView() {
+        guard let frame = containerView?.frame else {
+            return
+        }
+        (view as? RNSTouchView)?.rect = scrollView.convert(frame, to: STRouter.rootView)
     }
     
     override class var storyboardName: String {

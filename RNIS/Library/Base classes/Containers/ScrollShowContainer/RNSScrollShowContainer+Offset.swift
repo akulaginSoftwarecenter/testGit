@@ -19,7 +19,7 @@ extension RNSScrollShowContainer {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scrollViewDidScroll",scrollView.contentOffset)
+        prepareTouchView()
     }
     
     func scrollTo(_ offset: CGFloat) {

@@ -31,7 +31,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
-        print("onMapTouchEvent")
+        dismissOldPresentVC()
     }
     
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
@@ -42,8 +42,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
         mapCenter(item.geoPoint)
-        print("onOverlay")
-        //showBusStopIfNeed(overlay)
+        showBusStopIfNeed(overlay)
     }
     
     func mapCenter(_ point: PGGeoPoint) {

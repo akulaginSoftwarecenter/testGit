@@ -42,6 +42,7 @@
 		832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */; };
 		832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
 		832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
+		8344E1CB1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */; };
 		8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
 		835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
 		835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
@@ -146,8 +147,9 @@
 		837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		837B66761F3957C50048C5BA /* UIScreen+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66751F3957C50048C5BA /* UIScreen+Utils.swift */; };
-		837B667B1F3960610048C5BA /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667A1F3960610048C5BA /* RNSScrollShowContainer+Action.swift */; };
-		837B667D1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667C1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift */; };
+		837B667F1F396AD20048C5BA /* RNSMapViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */; };
+		837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */; };
+		837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66871F396DEF0048C5BA /* RNSTouchView.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
 		8386B4451F343EC7008A5CC7 /* RNSChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */; };
 		8386B4491F344196008A5CC7 /* RNSChangePasswordController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */; };
@@ -270,6 +272,7 @@
 		832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputFieldsValidator+Validation.swift"; sourceTree = "<group>"; };
 		832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldsValidator.swift; sourceTree = "<group>"; };
 		832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Utils.swift"; sourceTree = "<group>"; };
+		8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Ranges.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Ranges.swift"; sourceTree = "<group>"; };
 		8357186B1F219EB600DE5E25 /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
 		8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		835718731F21A05D00DE5E25 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Utils.swift"; sourceTree = "<group>"; };
@@ -362,8 +365,9 @@
 		837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Action.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Action.swift"; sourceTree = "<group>"; };
 		837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+TextField.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+TextField.swift"; sourceTree = "<group>"; };
 		837B66751F3957C50048C5BA /* UIScreen+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Utils.swift"; sourceTree = "<group>"; };
-		837B667A1F3960610048C5BA /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
-		837B667C1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSScrollShowContainer+Offset.swift"; sourceTree = "<group>"; };
+		837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Present.swift"; path = "Controllers/Map/RNSMapViewController+Present.swift"; sourceTree = "<group>"; };
+		837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Offset.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Offset.swift"; sourceTree = "<group>"; };
+		837B66871F396DEF0048C5BA /* RNSTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTouchView.swift; path = "Library/Base classes/Containers/ScrollShowContainer/ShowView/RNSTouchView.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
 		8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePasswordController.swift; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.swift; sourceTree = "<group>"; };
 		8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSChangePasswordController.storyboard; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.storyboard; sourceTree = "<group>"; };
@@ -861,9 +865,10 @@
 		836277DB1F382C56009FB712 /* ScrollShowContainer */ = {
 			isa = PBXGroup;
 			children = (
+				837B66861F396DC10048C5BA /* TouchView */,
 				836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */,
-				837B667C1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift */,
-				837B667A1F3960610048C5BA /* RNSScrollShowContainer+Action.swift */,
+				837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */,
+				8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */,
 				836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */,
 			);
 			name = ScrollShowContainer;
@@ -1113,6 +1118,7 @@
 				83ED5E2B1F2706EF007D9F1C /* RNSMapViewController+Route.swift */,
 				83ED5E301F2709D4007D9F1C /* RNSMapViewController+OverLays.swift */,
 				835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */,
+				837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */,
 				836277D01F3816BE009FB712 /* RNSMapViewController+Stub.swift */,
 				836D80B71F1DB37700FEE390 /* RNSMapViewController.storyboard */,
 			);
@@ -1318,6 +1324,14 @@
 			);
 			name = UIScreen;
 			path = "Library/Helpers/Base objects extensions/UIScreen";
+			sourceTree = "<group>";
+		};
+		837B66861F396DC10048C5BA /* TouchView */ = {
+			isa = PBXGroup;
+			children = (
+				837B66871F396DEF0048C5BA /* RNSTouchView.swift */,
+			);
+			name = TouchView;
 			sourceTree = "<group>";
 		};
 		8386B4431F343E8E008A5CC7 /* ChangePassword */ = {
@@ -1869,14 +1883,14 @@
 				839BCE061F32EFA400B5CA88 /* RNSTopTitle.swift in Sources */,
 				837ABF151F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */,
 				839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */,
+				837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */,
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
 				836277CF1F3814FA009FB712 /* RNSPinBusStop.swift in Sources */,
 				837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
 				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
-				837B667D1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */,
+				837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
-				837B667B1F3960610048C5BA /* RNSScrollShowContainer+Action.swift in Sources */,
 				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
@@ -1938,6 +1952,7 @@
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
+				837B667F1F396AD20048C5BA /* RNSMapViewController+Present.swift in Sources */,
 				837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
 				838707E91F3027410094B273 /* RNSPhoneContrainerController.swift in Sources */,
@@ -1960,6 +1975,7 @@
 				832E4B931F2ED53000A4AD77 /* String+Utils.swift in Sources */,
 				836989221F317B64003E4D73 /* STContainerViewController.swift in Sources */,
 				8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
+				8344E1CB1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift in Sources */,
 				83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */,
 				8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */,
 				837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,

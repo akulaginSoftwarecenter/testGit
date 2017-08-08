@@ -36,6 +36,8 @@ class RNSMapViewController: UIViewController {
         return mapView
     }()
     
+    var presentViewController: UIViewController?
+    
     /**
     route in RNSPostRouting com.rnis.geo.action.service.routing
      */
@@ -67,8 +69,9 @@ class RNSMapViewController: UIViewController {
             return
         }
         let vc = RNSBusStopDetailController.initController(overlay.item)
-        STRouter.present(vc, animated: false)
-        print("overlay",overlay.item?.title)
+        dismissOldPresentVC {
+            self.present(vc)
+        }
     }
 }
 

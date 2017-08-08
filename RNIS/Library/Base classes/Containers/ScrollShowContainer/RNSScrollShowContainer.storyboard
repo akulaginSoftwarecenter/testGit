@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="top" id="A1y-om-SaG"/>
                         <viewControllerLayoutGuide type="bottom" id="1qd-dt-gD5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AxZ-0x-5Pg">
+                    <view key="view" contentMode="scaleToFill" id="AxZ-0x-5Pg" customClass="RNSTouchView" customModule="RNIS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -25,21 +25,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpA-2h-Wi3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6le-eZ-NbH">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                <connections>
-                                                    <action selector="actionTap:" destination="SL3-9c-wD9" eventType="touchUpInside" id="185-ma-ibL"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="6le-eZ-NbH" firstAttribute="top" secondItem="lpA-2h-Wi3" secondAttribute="top" id="0mN-b8-hQ6"/>
-                                            <constraint firstAttribute="bottom" secondItem="6le-eZ-NbH" secondAttribute="bottom" id="AhK-DV-BXS"/>
-                                            <constraint firstItem="6le-eZ-NbH" firstAttribute="leading" secondItem="lpA-2h-Wi3" secondAttribute="leading" id="D4u-El-tTR"/>
-                                            <constraint firstAttribute="trailing" secondItem="6le-eZ-NbH" secondAttribute="trailing" id="oJd-gI-2SY"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gra-g3-pDh">
                                         <rect key="frame" x="0.0" y="667" width="375" height="667"/>
