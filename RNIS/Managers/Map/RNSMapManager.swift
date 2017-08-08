@@ -17,6 +17,7 @@ class RNSMapManager: NSObject {
     static var handlerRemoveOverlay: AnyBlock?
     static var handlerRemovePinBuild: EmptyBlock?
     static var handlerAddRoute: ((PGPolyline?) -> ())?
+    static var handlerDismissOldPresentVC: EmptyBlock?
     
     static func prepareRoutePoints() {
         let point = RNSLocationManager.point

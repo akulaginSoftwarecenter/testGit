@@ -10,16 +10,44 @@ import Foundation
 
 extension RNSScrollShowContainer {
     
+    var topOffset: CGFloat {
+        return UIScreen.height
+    }
+    
+    var navHeight: CGFloat {
+        return 64
+    }
+    
+    var navOffset: CGFloat {
+        return topOffset - navHeight
+    }
+    
+    var halfOffset: CGFloat {
+        return UIScreen.height/2
+    }
+    
+    var startOffset: CGFloat {
+        return UIScreen.height/3
+    }
+    
+    var almostOffset: CGFloat {
+        return startOffset/2
+    }
+    
+    var bottomOffset: CGFloat {
+        return 0
+    }
+    
+    func scrollToTop() {
+        scrollTo(topOffset)
+    }
+    
     func scrollToStart() {
-        scrollTo(UIScreen.height/3)
+        scrollTo(startOffset)
     }
     
     func scrollToBottom() {
-        scrollTo(0)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        prepareTouchView()
+        scrollTo(bottomOffset)
     }
     
     func scrollTo(_ offset: CGFloat) {

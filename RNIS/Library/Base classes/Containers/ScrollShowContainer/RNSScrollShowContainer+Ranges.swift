@@ -9,5 +9,28 @@
 import Foundation
 
 extension RNSScrollShowContainer {
-
+    
+    var rangeNav: RNSRangeScroll {
+        return RNSRangeScroll(navOffset...topOffset) {
+            self.scrollToTop()
+        }
+    }
+    
+    var rangeHalf: RNSRangeScroll {
+        return RNSRangeScroll(startOffset...halfOffset)  {
+            self.scrollToStart()
+        }
+    }
+    
+    var rangeThird: RNSRangeScroll {
+        return RNSRangeScroll(almostOffset...startOffset){
+            self.scrollToStart()
+        }
+    }
+    
+    var rangeBottom: RNSRangeScroll {
+        return RNSRangeScroll(bottomOffset...almostOffset){
+            self.dismiss()
+         }
+    }
 }

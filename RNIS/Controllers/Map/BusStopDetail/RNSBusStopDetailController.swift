@@ -13,7 +13,7 @@ class RNSBusStopDetailController: UIViewController {
     static func initController(_ item: RNSBusStop?) -> UIViewController? {
         let vc = RNSBusStopDetailController.initialController as? RNSBusStopDetailController
         vc?.item = item
-        return STRouter.scrollShowContainer(STRouter.redContainer(vc))
+        return STRouter.scrollShowContainer(STRouter.redContainer(nil))
     }
     
     var item: RNSBusStop?
@@ -29,5 +29,9 @@ class RNSBusStopDetailController: UIViewController {
     
     override class var storyboardName: String {
         return "RNSBusStopDetailController"
+    }
+    
+    deinit {
+        print("RNSBusStopDetailController deinit")
     }
 }

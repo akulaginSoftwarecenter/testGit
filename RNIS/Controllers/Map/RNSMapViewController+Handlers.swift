@@ -23,5 +23,9 @@ extension RNSMapViewController {
         RNSMapManager.handlerAddRoute = { [weak self] (item) in
             self?.addRoute(item)
         }
+        
+        RNSMapManager.handlerDismissOldPresentVC = { [weak self] in
+            self?.dismissOldPresentVC()
+        }
     }
 }

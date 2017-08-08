@@ -26,6 +26,10 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
         return containerVC?.view
     }
     
+    lazy var ranges: [RNSRangeScroll] = {
+        return [self.rangeNav, self.rangeHalf, self.rangeThird, self.rangeBottom]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,8 +65,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     }
     
     func dismiss() {
-        dismiss(animated: true, completion: {
-            
-        })
+       scrollToBottom()
+       RNSMapManager.handlerDismissOldPresentVC?()
     }
 }
