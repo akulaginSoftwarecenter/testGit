@@ -18,7 +18,7 @@ class RNSPinBusStop: PGOverlay {
         self.init()
         
         self.item = item
-        setBitmap(#imageLiteral(resourceName: "Bus_stop"), xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 50)
+        setBitmap(#imageLiteral(resourceName: "Bus_stop"), xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 15)
         items().add(overlayItem)
         preparePoint(item.point)
     }

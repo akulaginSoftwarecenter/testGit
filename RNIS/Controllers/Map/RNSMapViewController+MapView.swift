@@ -22,7 +22,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     }
     
     func centerUserLocation() {
-        mapView.setMapCenter(RNSLocationManager.point)
+        mapCenter(RNSLocationManager.point)
         mapView.setZoomLevel(13)
     }
     
@@ -30,14 +30,23 @@ extension RNSMapViewController: PGMapViewDelegate {
         updateStateLightButton()
     }
     
+    func onMapTouchEvent(_ point: PGGeoPoint) {
+        print("onMapTouchEvent")
+    }
+    
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
         RNSBuildRouteView(point)
-        mapView.setMapCenter(point)
+        mapCenter(point)
         RNSPinBuild(point)
     }
     
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
+        mapCenter(item.geoPoint)
         print("onOverlay")
-        showBusStopIfNeed(overlay)
+        //showBusStopIfNeed(overlay)
+    }
+    
+    func mapCenter(_ point: PGGeoPoint) {
+        mapView.setMapCenter(point)
     }
  }

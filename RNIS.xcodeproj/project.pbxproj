@@ -145,6 +145,9 @@
 		837ABF271F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */; };
 		837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
+		837B66761F3957C50048C5BA /* UIScreen+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66751F3957C50048C5BA /* UIScreen+Utils.swift */; };
+		837B667B1F3960610048C5BA /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667A1F3960610048C5BA /* RNSScrollShowContainer+Action.swift */; };
+		837B667D1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667C1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
 		8386B4451F343EC7008A5CC7 /* RNSChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */; };
 		8386B4491F344196008A5CC7 /* RNSChangePasswordController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */; };
@@ -358,6 +361,9 @@
 		837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STImageContainer.swift; path = "Library/Base classes/ImageContainer/STImageContainer.swift"; sourceTree = "<group>"; };
 		837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Action.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Action.swift"; sourceTree = "<group>"; };
 		837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+TextField.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+TextField.swift"; sourceTree = "<group>"; };
+		837B66751F3957C50048C5BA /* UIScreen+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Utils.swift"; sourceTree = "<group>"; };
+		837B667A1F3960610048C5BA /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
+		837B667C1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSScrollShowContainer+Offset.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
 		8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePasswordController.swift; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.swift; sourceTree = "<group>"; };
 		8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSChangePasswordController.storyboard; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.storyboard; sourceTree = "<group>"; };
@@ -856,6 +862,8 @@
 			isa = PBXGroup;
 			children = (
 				836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */,
+				837B667C1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift */,
+				837B667A1F3960610048C5BA /* RNSScrollShowContainer+Action.swift */,
 				836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */,
 			);
 			name = ScrollShowContainer;
@@ -1161,6 +1169,7 @@
 				832E4B9D1F2ED5D200A4AD77 /* TextField */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,
 				832E4B8D1F2ED03400A4AD77 /* UIFont */,
+				837B66741F3957C50048C5BA /* UIScreen */,
 				837ABF191F2EE38600AB5E54 /* UITapGestureRecognizer */,
 				8357187B1F21A30F00DE5E25 /* UIViewController */,
 				8357188A1F21A9CA00DE5E25 /* UserDefaults */,
@@ -1300,6 +1309,15 @@
 				836989081F316B2E003E4D73 /* Parole */,
 			);
 			name = Parent;
+			sourceTree = "<group>";
+		};
+		837B66741F3957C50048C5BA /* UIScreen */ = {
+			isa = PBXGroup;
+			children = (
+				837B66751F3957C50048C5BA /* UIScreen+Utils.swift */,
+			);
+			name = UIScreen;
+			path = "Library/Helpers/Base objects extensions/UIScreen";
 			sourceTree = "<group>";
 		};
 		8386B4431F343E8E008A5CC7 /* ChangePassword */ = {
@@ -1856,7 +1874,9 @@
 				837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
 				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
+				837B667D1F3961020048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
+				837B667B1F3960610048C5BA /* RNSScrollShowContainer+Action.swift in Sources */,
 				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
@@ -1873,6 +1893,7 @@
 				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,
 				832E4B991F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
 				837ABF1B1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */,
+				837B66761F3957C50048C5BA /* UIScreen+Utils.swift in Sources */,
 				8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
 				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,

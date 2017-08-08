@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SnapKit
 
-class RNSScrollShowContainer: UIViewController {
+class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     static func initController(_ container: UIViewController?) -> UIViewController? {
         let vc = RNSScrollShowContainer.initialController as? RNSScrollShowContainer
@@ -16,6 +17,7 @@ class RNSScrollShowContainer: UIViewController {
         return vc
     }
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverView: UIView!
     var containerVC:UIViewController?
     
@@ -23,6 +25,12 @@ class RNSScrollShowContainer: UIViewController {
         super.viewDidLoad()
         
         prepareContainer()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        scrollToStart()
     }
     
     func prepareContainer() {
@@ -37,5 +45,11 @@ class RNSScrollShowContainer: UIViewController {
     
     override class var storyboardName: String {
         return "RNSScrollShowContainer"
+    }
+    
+    func dismiss() {
+        dismiss(animated: true, completion: {
+            
+        })
     }
 }
