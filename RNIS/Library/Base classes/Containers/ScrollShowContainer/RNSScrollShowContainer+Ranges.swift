@@ -35,18 +35,18 @@ extension RNSScrollShowContainer {
     }
     
     var rangeHalfTop: RNSRangeScroll {
-        return RNSRangeScroll(halfOffset...(topOffset-2), handlerOne: {
-            self.scrollToTop()
-        }, handlerTwo: {
-            self.scrollToStart()
+        return RNSRangeScroll(halfOffset...(topOffset-2), handlerOne: { [weak self] in
+            self?.scrollToTop()
+            }, handlerTwo: { [weak self] in
+                self?.scrollToStart()
         })
     }
     
     var rangeHalfAlmost: RNSRangeScroll {
-        return RNSRangeScroll(almostOffset...halfOffset, handlerOne: {
-            self.scrollToTop()
-        }, handlerTwo: {
-            self.dismiss()
+        return RNSRangeScroll(almostOffset...halfOffset, handlerOne: { [weak self] in
+            self?.scrollToTop()
+            }, handlerTwo: { [weak self] in
+                self?.dismiss()
         })
     }
     
