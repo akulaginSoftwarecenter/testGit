@@ -52,6 +52,10 @@
                                     <outlet property="delegate" destination="SL3-9c-wD9" id="ThP-1G-3aa"/>
                                 </connections>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonSlide" translatesAutoresizingMaskIntoConstraints="NO" id="KTP-W4-c4b">
+                                <rect key="frame" x="172" y="672" width="30" height="5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d21-RD-YKd">
                                 <rect key="frame" x="0.0" y="-64" width="375" height="64"/>
                                 <subviews>
@@ -95,6 +99,8 @@
                             <constraint firstItem="gra-g3-pDh" firstAttribute="height" secondItem="AxZ-0x-5Pg" secondAttribute="height" priority="750" id="Z1D-B1-MRE"/>
                             <constraint firstItem="lpA-2h-Wi3" firstAttribute="width" secondItem="AxZ-0x-5Pg" secondAttribute="width" id="hrk-32-Vmg"/>
                             <constraint firstItem="DvT-qv-n8s" firstAttribute="leading" secondItem="AxZ-0x-5Pg" secondAttribute="leading" id="iON-7O-2t6"/>
+                            <constraint firstItem="KTP-W4-c4b" firstAttribute="top" secondItem="gra-g3-pDh" secondAttribute="top" constant="5" id="jDI-0o-LR5"/>
+                            <constraint firstItem="KTP-W4-c4b" firstAttribute="centerX" secondItem="gra-g3-pDh" secondAttribute="centerX" id="ktt-Wx-wm6"/>
                             <constraint firstItem="d21-RD-YKd" firstAttribute="bottom" secondItem="AxZ-0x-5Pg" secondAttribute="top" id="t0T-IO-MuM"/>
                             <constraint firstItem="DvT-qv-n8s" firstAttribute="top" secondItem="AxZ-0x-5Pg" secondAttribute="top" id="tR0-cn-xc0"/>
                             <constraint firstAttribute="bottom" secondItem="DvT-qv-n8s" secondAttribute="bottom" id="ykO-mJ-QKN"/>
@@ -113,6 +119,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buttonSlide" width="30" height="5"/>
         <image name="Сross" width="22" height="22"/>
     </resources>
 </document>
