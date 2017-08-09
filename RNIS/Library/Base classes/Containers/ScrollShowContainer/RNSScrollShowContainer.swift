@@ -11,14 +11,20 @@ import SnapKit
 
 class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
-    static func initController(_ container: UIViewController?) -> UIViewController? {
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
+    static func initController(_ container: UIViewController?, topTitle: String? = nil) -> UIViewController? {
         let vc = RNSScrollShowContainer.initialController as? RNSScrollShowContainer
         vc?.containerVC = container
+        vc?.topTitle = topTitle
         return vc
     }
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverView: UIView!
+    
+    var topTitle: String?
+    @IBOutlet weak var topTitleLabel: UILabel!
     
     var containerVC: UIViewController?
     
@@ -41,6 +47,11 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
         
         prepareContainer()
         prepareTouchView()
+        prepareTitle()
+    }
+        
+    func prepareTitle() {
+        topTitleLabel.text = topTitle
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,5 +85,14 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     func dismiss() {
        scrollToBottom()
        RNSMapManager.handlerDismissOldPresentVC?()
+    }
+    
+    func updatePositionTop() {
+        let height = CGFloat(64)
+        var value  = offsetY - topOffset + height
+        if value > height {
+            value = height
+        }
+        topConstraint.constant = value
     }
 }

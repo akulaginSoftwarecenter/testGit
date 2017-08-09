@@ -11,7 +11,7 @@ import Foundation
 extension RNSScrollShowContainer {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //print("scrollViewDidScroll",offsetY)
+        updatePositionTop()
         moveOverTopIfNeed()
         prepareTouchView()
     }
@@ -22,7 +22,7 @@ extension RNSScrollShowContainer {
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        startOverTopDeselerate = false
+        startOverTopDeselerateFalse()
     }
 
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool){
@@ -32,6 +32,10 @@ extension RNSScrollShowContainer {
         checkRange(ranges) { range in
             range.handlerOne?()
         }
+    }
+    
+    func startOverTopDeselerateFalse() {
+       startOverTopDeselerate = false
     }
     
     var offsetY: CGFloat {

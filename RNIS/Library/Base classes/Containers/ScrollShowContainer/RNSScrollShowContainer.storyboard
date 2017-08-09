@@ -5,8 +5,14 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Scroll Show Container-->
         <scene sceneID="R6B-I6-MB4">
@@ -46,15 +52,50 @@
                                     <outlet property="delegate" destination="SL3-9c-wD9" id="ThP-1G-3aa"/>
                                 </connections>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d21-RD-YKd">
+                                <rect key="frame" x="0.0" y="-64" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6O-Cj-8UP">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="b6O-Cj-8UP" secondAttribute="height" multiplier="1:1" id="2cU-YR-zwF"/>
+                                        </constraints>
+                                        <state key="normal" image="Сross"/>
+                                        <connections>
+                                            <action selector="actionCross:" destination="SL3-9c-wD9" eventType="touchUpInside" id="Eok-xi-P5S"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-lD-eBy">
+                                        <rect key="frame" x="50" y="0.0" width="275" height="64"/>
+                                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.39215686274509803" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4GH-ab-nVR"/>
+                                    <constraint firstItem="b6O-Cj-8UP" firstAttribute="leading" secondItem="d21-RD-YKd" secondAttribute="leading" id="8as-i8-v7g"/>
+                                    <constraint firstItem="Crm-lD-eBy" firstAttribute="top" secondItem="d21-RD-YKd" secondAttribute="top" id="CBm-B7-m2Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="Crm-lD-eBy" secondAttribute="trailing" constant="50" id="LhJ-J6-DEv"/>
+                                    <constraint firstAttribute="bottom" secondItem="b6O-Cj-8UP" secondAttribute="bottom" id="WEd-gm-Jf6"/>
+                                    <constraint firstItem="b6O-Cj-8UP" firstAttribute="top" secondItem="d21-RD-YKd" secondAttribute="top" id="WO0-Ae-W8Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="Crm-lD-eBy" secondAttribute="bottom" id="l32-JF-xyg"/>
+                                    <constraint firstItem="Crm-lD-eBy" firstAttribute="leading" secondItem="d21-RD-YKd" secondAttribute="leading" constant="50" id="u1g-vc-hcy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="d21-RD-YKd" firstAttribute="leading" secondItem="AxZ-0x-5Pg" secondAttribute="leading" id="0u0-Sn-UBF"/>
                             <constraint firstItem="lpA-2h-Wi3" firstAttribute="height" secondItem="AxZ-0x-5Pg" secondAttribute="height" id="8AX-zl-k6f"/>
                             <constraint firstItem="gra-g3-pDh" firstAttribute="width" secondItem="AxZ-0x-5Pg" secondAttribute="width" id="9yP-lE-2as"/>
+                            <constraint firstAttribute="trailing" secondItem="d21-RD-YKd" secondAttribute="trailing" id="RbN-Sv-73r"/>
                             <constraint firstAttribute="trailing" secondItem="DvT-qv-n8s" secondAttribute="trailing" id="RtK-kB-8Ir"/>
                             <constraint firstItem="gra-g3-pDh" firstAttribute="height" secondItem="AxZ-0x-5Pg" secondAttribute="height" priority="750" id="Z1D-B1-MRE"/>
                             <constraint firstItem="lpA-2h-Wi3" firstAttribute="width" secondItem="AxZ-0x-5Pg" secondAttribute="width" id="hrk-32-Vmg"/>
                             <constraint firstItem="DvT-qv-n8s" firstAttribute="leading" secondItem="AxZ-0x-5Pg" secondAttribute="leading" id="iON-7O-2t6"/>
+                            <constraint firstItem="d21-RD-YKd" firstAttribute="bottom" secondItem="AxZ-0x-5Pg" secondAttribute="top" id="t0T-IO-MuM"/>
                             <constraint firstItem="DvT-qv-n8s" firstAttribute="top" secondItem="AxZ-0x-5Pg" secondAttribute="top" id="tR0-cn-xc0"/>
                             <constraint firstAttribute="bottom" secondItem="DvT-qv-n8s" secondAttribute="bottom" id="ykO-mJ-QKN"/>
                         </constraints>
@@ -62,6 +103,8 @@
                     <connections>
                         <outlet property="coverView" destination="gra-g3-pDh" id="EwG-GX-flr"/>
                         <outlet property="scrollView" destination="DvT-qv-n8s" id="BQ9-93-pd1"/>
+                        <outlet property="topConstraint" destination="t0T-IO-MuM" id="UPa-T9-BvM"/>
+                        <outlet property="topTitleLabel" destination="Crm-lD-eBy" id="y54-HU-4aq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLg-hb-EOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -69,4 +112,7 @@
             <point key="canvasLocation" x="176.80000000000001" y="-7.6461769115442282"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Сross" width="22" height="22"/>
+    </resources>
 </document>
