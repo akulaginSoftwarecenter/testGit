@@ -11,26 +11,52 @@ import Foundation
 extension RNSScrollShowContainer {
     
     var rangeNav: RNSRangeScroll {
-        return RNSRangeScroll(navOffset...topOffset) {
+        return RNSRangeScroll(navOffset...overTopOffset, handlerOne: {
             self.scrollToTop()
-        }
+        })
     }
     
     var rangeHalf: RNSRangeScroll {
-        return RNSRangeScroll(startOffset...halfOffset)  {
+        return RNSRangeScroll(startOffset...halfOffset, handlerOne: {
             self.scrollToStart()
-        }
+        })
     }
     
     var rangeThird: RNSRangeScroll {
-        return RNSRangeScroll(almostOffset...startOffset){
+        return RNSRangeScroll(almostOffset...startOffset, handlerOne: {
             self.scrollToStart()
-        }
+        })
     }
     
     var rangeBottom: RNSRangeScroll {
-        return RNSRangeScroll(bottomOffset...almostOffset){
+        return RNSRangeScroll(bottomOffset...almostOffset, handlerOne: {
             self.dismiss()
-         }
+         })
+    }
+    
+    var rangeHalfTop: RNSRangeScroll {
+        return RNSRangeScroll(halfOffset...(topOffset-2), handlerOne: {
+            self.scrollToTop()
+        }, handlerTwo: {
+            self.scrollToStart()
+        })
+    }
+    
+    var rangeHalfAlmost: RNSRangeScroll {
+        return RNSRangeScroll(almostOffset...halfOffset, handlerOne: {
+            self.scrollToTop()
+        }, handlerTwo: {
+            self.dismiss()
+        })
+    }
+    
+    func checkRange(_ ranges: [RNSRangeScroll], complete: AliasRangeBlock?) {
+        let offset = offsetY
+        for item in ranges {
+            if item.range.contains(offset) {
+                complete?(item)
+                return
+            }
+        }
     }
 }

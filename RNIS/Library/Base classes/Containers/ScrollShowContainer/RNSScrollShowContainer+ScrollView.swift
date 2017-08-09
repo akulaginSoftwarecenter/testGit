@@ -11,28 +11,30 @@ import Foundation
 extension RNSScrollShowContainer {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //print("scrollViewDidScroll", scrollView.contentOffset.y)
+        //print("scrollViewDidScroll",offsetY)
+        moveOverTopIfNeed()
         prepareTouchView()
     }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        targetContentOffset.pointee = scrollView.contentOffset
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        startOverTopDeselerate = ((topOffset+2)...10000000).contains(offsetY)
+        detectSwipe()
     }
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOverTopDeselerate = false
+    }
+
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool){
         guard !decelerate else {
-            return
+             return
         }
-        checkRange()
+        checkRange(ranges) { range in
+            range.handlerOne?()
+        }
     }
     
-    func checkRange() {
-        let offset = scrollView.contentOffset.y
-        for item in ranges {
-            if item.range.contains(offset) {
-                item.handler?()
-                return
-            }
-        }
+    var offsetY: CGFloat {
+        return scrollView.contentOffset.y
     }
 }

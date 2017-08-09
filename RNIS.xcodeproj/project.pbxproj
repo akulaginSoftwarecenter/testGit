@@ -152,6 +152,7 @@
 		837B667F1F396AD20048C5BA /* RNSMapViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */; };
 		837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */; };
 		837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66871F396DEF0048C5BA /* RNSTouchView.swift */; };
+		8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
 		8386B4451F343EC7008A5CC7 /* RNSChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */; };
 		8386B4491F344196008A5CC7 /* RNSChangePasswordController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */; };
@@ -372,6 +373,7 @@
 		837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Present.swift"; path = "Controllers/Map/RNSMapViewController+Present.swift"; sourceTree = "<group>"; };
 		837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Offset.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Offset.swift"; sourceTree = "<group>"; };
 		837B66871F396DEF0048C5BA /* RNSTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTouchView.swift; path = "Library/Base classes/Containers/ScrollShowContainer/ShowView/RNSTouchView.swift"; sourceTree = "<group>"; };
+		8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Swipe.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Swipe.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
 		8386B4441F343EC7008A5CC7 /* RNSChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePasswordController.swift; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.swift; sourceTree = "<group>"; };
 		8386B4481F344196008A5CC7 /* RNSChangePasswordController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSChangePasswordController.storyboard; path = Controllers/Profile/ChangePassword/RNSChangePasswordController.storyboard; sourceTree = "<group>"; };
@@ -890,6 +892,7 @@
 				8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */,
 				837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */,
 				8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */,
+				8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */,
 				836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */,
 			);
 			name = ScrollShowContainer;
@@ -2011,6 +2014,7 @@
 				838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
 				836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */,
+				8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				835718A61F21BB2500DE5E25 /* RNSBuildRouteView+Animation.swift in Sources */,

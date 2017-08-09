@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="2000"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.28235294119999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="200" constant="2000" id="Znn-Xt-r9O"/>
+                                    <constraint firstAttribute="height" constant="2000" id="Znn-Xt-r9O"/>
                                 </constraints>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvQ-PA-6pv" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">

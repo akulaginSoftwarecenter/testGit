@@ -11,10 +11,12 @@ import Foundation
 struct RNSRangeScroll {
     
     var range: ClosedRange<CGFloat>
-    var handler: EmptyBlock?
+    var handlerOne: EmptyBlock?
+    var handlerTwo: EmptyBlock?
     
-    init(_ range: ClosedRange<CGFloat>, handler: EmptyBlock?) {
+    init(_ range: ClosedRange<CGFloat>, handlerOne: EmptyBlock? = nil, handlerTwo: EmptyBlock? = nil) {
         self.range = range
-        self.handler = handler
+        self.handlerOne = handlerOne
+        self.handlerTwo = handlerTwo
     }
 }

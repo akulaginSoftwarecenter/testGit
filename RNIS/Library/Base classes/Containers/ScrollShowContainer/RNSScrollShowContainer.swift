@@ -26,8 +26,14 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
         return containerVC?.view
     }
     
+    var startOverTopDeselerate: Bool = false
+    
     lazy var ranges: [RNSRangeScroll] = {
         return [self.rangeNav, self.rangeHalf, self.rangeThird, self.rangeBottom]
+    }()
+    
+    lazy var rangesSwipe: [RNSRangeScroll] = {
+        return [self.rangeHalfTop, self.rangeHalfAlmost]
     }()
     
     override func viewDidLoad() {
