@@ -13,7 +13,7 @@ class RNSBusStopDetailController: UIViewController {
     static func initController(_ item: RNSBusStop?) -> UIViewController? {
         let vc = RNSBusStopDetailController.initialController as? RNSBusStopDetailController
         vc?.item = item
-        return STRouter.scrollShowContainer(STRouter.redContainer(nil))
+        return STRouter.scrollShowContainer(vc)
     }
     
     var item: RNSBusStop?

@@ -17,6 +17,6 @@ class RNSTouchView: UIView {
             return false
         }
         let touchInView = rect.contains(point)
-        return !touchInView
+        return touchInView
     }
 }

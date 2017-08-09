@@ -57,7 +57,8 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
         guard let frame = containerView?.frame else {
             return
         }
-        (view as? RNSTouchView)?.rect = scrollView.convert(frame, to: STRouter.rootView)
+        let rect = scrollView.convert(frame, to: STRouter.rootView)
+        (view as? RNSTouchView)?.rect = CGRect(x: rect.origin.x, y: UIScreen.height + rect.origin.y, width: rect.width, height: rect.height)
     }
     
     override class var storyboardName: String {
