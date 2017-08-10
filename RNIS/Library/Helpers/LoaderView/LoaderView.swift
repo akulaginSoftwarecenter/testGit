@@ -18,13 +18,26 @@ class LoaderView: BaseViewWithXIBInit {
     var delay: TimeInterval = 0
     
     func showInView(_ view: UIView?) {
+        addShowInView(view)
+        self.autoPinEdgesToSuperviewEdges()
+        animationShow()
+    }
+    
+    func showInView(_ view: UIView?, frame: CGRect) {
+        addShowInView(view)
+        self.frame = frame
+        animationShow()
+    }
+    
+    func addShowInView(_ view: UIView?) {
         guard isEmptySuperView,
             let view = view else {
-            return
+                return
         }
         view.addSubview(self)
-        self.autoPinEdgesToSuperviewEdges()
-        alpha = 0;
+    }
+    
+    func animationShow() {
         UIView.animate(withDuration: 0.5, delay: delay, options: .curveLinear, animations: {[weak self] in
             self?.alpha = 0.3
             }, completion:nil)

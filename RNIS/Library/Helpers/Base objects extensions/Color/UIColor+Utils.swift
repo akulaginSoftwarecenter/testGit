@@ -20,6 +20,10 @@ extension UIColor {
         return UIColor(34,178,248)
     }
     
+    static var color241: UIColor {
+        return UIColor(241,100,90)
+    }
+    
     static var whiteAlpha50: UIColor {
         return white.withAlphaComponent(0.5)
     }

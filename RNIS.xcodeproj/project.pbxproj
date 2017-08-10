@@ -114,6 +114,15 @@
 		836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80E01F1DC89D00FEE390 /* Constant.swift */; };
 		836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */; };
 		836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
+		836EEEFD1F3BF802007631D9 /* RNSBusStopDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEEFC1F3BF802007631D9 /* RNSBusStopDetailCell.swift */; };
+		836EEF001F3BF85E007631D9 /* RNSBaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEEFF1F3BF85E007631D9 /* RNSBaseTableCell.swift */; };
+		836EEF031F3BFAB2007631D9 /* RNSBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF021F3BFAB2007631D9 /* RNSBus.swift */; };
+		836EEF071F3BFC02007631D9 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF061F3BFC02007631D9 /* Random.swift */; };
+		836EEF091F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF081F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift */; };
+		836EEF0C1F3C0188007631D9 /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF0B1F3C0188007631D9 /* UITableView+Utils.swift */; };
+		836EEF0E1F3C0204007631D9 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF0D1F3C0204007631D9 /* NibLoadableView.swift */; };
+		836EEF101F3C023A007631D9 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF0F1F3C023A007631D9 /* ReusableView.swift */; };
+		836EEF131F3C02E3007631D9 /* UITableViewCell+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF121F3C02E3007631D9 /* UITableViewCell+Utils.swift */; };
 		8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE981F204C4000FCA26E /* RNSLightButton.swift */; };
 		8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */; };
 		8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE9D1F204FA700FCA26E /* LoaderView.swift */; };
@@ -350,6 +359,15 @@
 		836D80E01F1DC89D00FEE390 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Library/Constant/Constant.swift; sourceTree = "<group>"; };
 		836D80EA1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewWithXIBInit.swift; path = "Library/Base classes/BaseViewWithXIBInit/BaseViewWithXIBInit.swift"; sourceTree = "<group>"; };
 		836D80F21F1DD62400FEE390 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Layer.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Layer.swift"; sourceTree = "<group>"; };
+		836EEEFC1F3BF802007631D9 /* RNSBusStopDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusStopDetailCell.swift; path = Controllers/Map/BusStopDetail/Cell/RNSBusStopDetailCell.swift; sourceTree = "<group>"; };
+		836EEEFF1F3BF85E007631D9 /* RNSBaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBaseTableCell.swift; path = "Library/Base classes/Cell/RNSBaseTableCell.swift"; sourceTree = "<group>"; };
+		836EEF021F3BFAB2007631D9 /* RNSBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBus.swift; path = Models/Bus/RNSBus.swift; sourceTree = "<group>"; };
+		836EEF061F3BFC02007631D9 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		836EEF081F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusStopDetailController+TableView.swift"; path = "Controllers/Map/BusStopDetail/RNSBusStopDetailController+TableView.swift"; sourceTree = "<group>"; };
+		836EEF0B1F3C0188007631D9 /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
+		836EEF0D1F3C0204007631D9 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		836EEF0F1F3C023A007631D9 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		836EEF121F3C02E3007631D9 /* UITableViewCell+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Utils.swift"; path = "Library/Helpers/Base objects extensions/UITableViewCell/UITableViewCell+Utils.swift"; sourceTree = "<group>"; };
 		8375DE981F204C4000FCA26E /* RNSLightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLightButton.swift; path = Views/Buttons/RNSlightButton/RNSLightButton.swift; sourceTree = "<group>"; };
 		8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSLightButton.xib; path = Views/Buttons/RNSlightButton/RNSLightButton.xib; sourceTree = "<group>"; };
 		8375DE9D1F204FA700FCA26E /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
@@ -873,6 +891,7 @@
 		836277D31F381D68009FB712 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				836EEF011F3BFA87007631D9 /* Bus */,
 				836277D21F381D4E009FB712 /* BusStop */,
 			);
 			name = DataBase;
@@ -904,7 +923,9 @@
 		836277E01F382E41009FB712 /* BusStopDetail */ = {
 			isa = PBXGroup;
 			children = (
+				836EEEFB1F3BF7C5007631D9 /* Cell */,
 				836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */,
+				836EEF081F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift */,
 				836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */,
 			);
 			name = BusStopDetail;
@@ -945,12 +966,12 @@
 			name = Container;
 			sourceTree = "<group>";
 		};
-		8369891D1F317A5D003E4D73 /* Protocol */ = {
+		8369891D1F317A5D003E4D73 /* ContainerProtocol */ = {
 			isa = PBXGroup;
 			children = (
 				8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */,
 			);
-			name = Protocol;
+			name = ContainerProtocol;
 			sourceTree = "<group>";
 		};
 		836989271F31839E003E4D73 /* Cover */ = {
@@ -1173,6 +1194,7 @@
 		836D80E81F1DD59800FEE390 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
+				836EEEFE1F3BF830007631D9 /* Cell */,
 				8392BAC41F304B9B0024E9E5 /* AlertViewController */,
 				836D80E91F1DD59F00FEE390 /* BaseViewWithXIBInit */,
 				8329DF561F340EDF00D542FF /* Containers */,
@@ -1199,11 +1221,14 @@
 				837ABF0F1F2EE2E000AB5E54 /* NSNotificationCenter */,
 				83CD584F1F258B9300A9FE1A /* PGGeoPoint */,
 				83ED5E2D1F27078A007D9F1C /* PGPolyline */,
+				836EEF051F3BFBE3007631D9 /* Random */,
 				832E4B911F2ED53000A4AD77 /* String */,
+				836EEF0A1F3C0188007631D9 /* TableView */,
 				832E4B9D1F2ED5D200A4AD77 /* TextField */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,
 				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				837B66741F3957C50048C5BA /* UIScreen */,
+				836EEF111F3C02CC007631D9 /* UITableViewCell */,
 				837ABF191F2EE38600AB5E54 /* UITapGestureRecognizer */,
 				8357187B1F21A30F00DE5E25 /* UIViewController */,
 				8357188A1F21A9CA00DE5E25 /* UserDefaults */,
@@ -1220,6 +1245,55 @@
 				835718731F21A05D00DE5E25 /* UIView+Utils.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		836EEEFB1F3BF7C5007631D9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				836EEEFC1F3BF802007631D9 /* RNSBusStopDetailCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		836EEEFE1F3BF830007631D9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				836EEEFF1F3BF85E007631D9 /* RNSBaseTableCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		836EEF011F3BFA87007631D9 /* Bus */ = {
+			isa = PBXGroup;
+			children = (
+				836EEF021F3BFAB2007631D9 /* RNSBus.swift */,
+			);
+			name = Bus;
+			sourceTree = "<group>";
+		};
+		836EEF051F3BFBE3007631D9 /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				836EEF061F3BFC02007631D9 /* Random.swift */,
+			);
+			name = Random;
+			sourceTree = "<group>";
+		};
+		836EEF0A1F3C0188007631D9 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				836EEF0B1F3C0188007631D9 /* UITableView+Utils.swift */,
+			);
+			name = TableView;
+			path = "Library/Helpers/Base objects extensions/TableView";
+			sourceTree = "<group>";
+		};
+		836EEF111F3C02CC007631D9 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				836EEF121F3C02E3007631D9 /* UITableViewCell+Utils.swift */,
+			);
+			name = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		8375DE971F204C1400FCA26E /* LightButton */ = {
@@ -1261,7 +1335,9 @@
 		837ABF041F2EE21B00AB5E54 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8369891D1F317A5D003E4D73 /* Protocol */,
+				836EEF0F1F3C023A007631D9 /* ReusableView.swift */,
+				836EEF0D1F3C0204007631D9 /* NibLoadableView.swift */,
+				8369891D1F317A5D003E4D73 /* ContainerProtocol */,
 				837ABF1D1F2EE3BC00AB5E54 /* EventDispatcher */,
 				837ABF051F2EE21B00AB5E54 /* Keyboard */,
 			);
@@ -1915,12 +1991,14 @@
 				837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */,
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
 				836277CF1F3814FA009FB712 /* RNSPinBusStop.swift in Sources */,
+				836EEF101F3C023A007631D9 /* ReusableView.swift in Sources */,
 				837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
 				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
 				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
+				836EEF031F3BFAB2007631D9 /* RNSBus.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
 				836989291F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */,
@@ -1937,6 +2015,7 @@
 				832E4B991F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
 				837ABF1B1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */,
 				837B66761F3957C50048C5BA /* UIScreen+Utils.swift in Sources */,
+				836EEF0E1F3C0204007631D9 /* NibLoadableView.swift in Sources */,
 				8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
 				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
@@ -1951,11 +2030,13 @@
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
 				83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */,
+				836EEF091F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift in Sources */,
 				839BCDF81F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift in Sources */,
 				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
 				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
 				836277D11F3816BE009FB712 /* RNSMapViewController+Stub.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
+				836EEF071F3BFC02007631D9 /* Random.swift in Sources */,
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
 				83E2D3921F34332B00035877 /* RNSScrollKeyBoardContainer.swift in Sources */,
 				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
@@ -1968,6 +2049,7 @@
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
 				836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
+				836EEF0C1F3C0188007631D9 /* UITableView+Utils.swift in Sources */,
 				836277D71F381DFA009FB712 /* RNSBusStop.swift in Sources */,
 				8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */,
 				832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
@@ -2007,6 +2089,7 @@
 				8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
 				8344E1CB1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift in Sources */,
 				83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */,
+				836EEEFD1F3BF802007631D9 /* RNSBusStopDetailCell.swift in Sources */,
 				8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */,
 				837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
 				835718921F21AA5400DE5E25 /* STRouter+Navigation.swift in Sources */,
@@ -2016,10 +2099,12 @@
 				837ABF0A1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */,
 				8329DF5D1F34251200D542FF /* RNSEmailField.swift in Sources */,
 				838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,
+				836EEF131F3C02E3007631D9 /* UITableViewCell+Utils.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
 				836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */,
 				8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
+				836EEF001F3BF85E007631D9 /* RNSBaseTableCell.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				835718A61F21BB2500DE5E25 /* RNSBuildRouteView+Animation.swift in Sources */,
 				8369890F1F316F9C003E4D73 /* RNSParoleViewController+UI.swift in Sources */,
