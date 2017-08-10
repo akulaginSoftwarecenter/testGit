@@ -9,13 +9,13 @@
 import Foundation
 import RealmSwift
 
-class RNSBusStop: Object {
+class RNSBusStop: RNSCoordinateModel {
     
     dynamic var title: String = ""
-    dynamic var latitude = 0.0
-    dynamic var longitude = 0.0
     
-    var point: PGGeoPoint {
-        return PGGeoPoint(latitude: latitude, longitude: longitude)
+    func generate() {
+        title = "бул. Конногвардейский"
+        latitude = 59.9344377
+        longitude = 30.3010831
     }
 }

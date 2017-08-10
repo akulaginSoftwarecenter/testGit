@@ -11,6 +11,7 @@ import Foundation
 extension RNSMapViewController {
     
     func prepareStub() {
-       RNSMapManager.prepareStubBusStop()
+        RNSMapManager.prepareStubBusStop()
+        RNSMapManager.prepareStubBus()
     }
 }

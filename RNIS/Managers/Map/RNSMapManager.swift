@@ -30,7 +30,7 @@ class RNSMapManager: NSObject {
     }
     
     static func prepareStubBusStop() {
-        RNSDataManager.createStubStubBusIfNeed()
+        RNSDataManager.createStubBusStopIfNeed()
         
         guard let items = RNSDataManager.busStops else {
             return
@@ -38,6 +38,15 @@ class RNSMapManager: NSObject {
         for item in items {
             RNSPinBusStop(item)
         }
-        
     }
+    
+    static func prepareStubBus() {
+        RNSDataManager.createStubBusIfNeed()
+        guard let items = RNSDataManager.bussReal else {
+            return
+        }
+        for item in items {
+            RNSPinBus(item)
+        }
+   }
 }

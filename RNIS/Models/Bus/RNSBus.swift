@@ -9,11 +9,17 @@
 import UIKit
 import RealmSwift
 
-class RNSBus: Object {
+class RNSBus: RNSCoordinateModel {
     
     dynamic var minute: Int = 0
     dynamic var num: Int = 0
     dynamic var showNext: Bool = false
+    
+    func stubBus() {
+        generate()
+        latitude = 59.931448
+        longitude = 30.292849
+    }
     
     func generate() {
         minute = Int.rand(1, limit: 200)
