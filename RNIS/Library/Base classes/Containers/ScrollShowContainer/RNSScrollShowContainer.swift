@@ -13,13 +13,15 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
-    static func initController(_ container: UIViewController?, topTitle: String? = nil) -> UIViewController? {
+    static func initController(_ container: UIViewController?, topTitle: String? = nil, heightButtonTop: CGFloat = 64) -> UIViewController? {
         let vc = RNSScrollShowContainer.initialController as? RNSScrollShowContainer
         vc?.containerVC = container
         vc?.topTitle = topTitle
+        vc?.heightButtonTop = heightButtonTop
         return vc
     }
-    
+    var heightButtonTop: CGFloat?
+    @IBOutlet weak var heightButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverView: UIView!
     
@@ -45,37 +47,13 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareContainer()
-        prepareTouchView()
-        prepareTitle()
-    }
-        
-    func prepareTitle() {
-        topTitleLabel.text = topTitle
+        prepareUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         scrollToStart()
-    }
-    
-    func prepareContainer() {
-        guard let containerVC = containerVC,
-            let containerView = containerView else {
-                return
-        }
-        self.addChildViewController(containerVC)
-        coverView.addSubview(containerView)
-        containerView.autoPinEdgesToSuperviewEdges()
-    }
-    
-    func prepareTouchView() {
-        guard let frame = containerView?.frame else {
-            return
-        }
-        let rect = scrollView.convert(frame, to: STRouter.rootView)
-        (view as? RNSTouchView)?.rect = CGRect(x: rect.origin.x, y: UIScreen.height + rect.origin.y, width: rect.width, height: rect.height)
     }
     
     override class var storyboardName: String {
@@ -85,14 +63,5 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     func dismiss() {
        scrollToBottom()
        RNSMapManager.handlerDismissOldPresentVC?()
-    }
-    
-    func updatePositionTop() {
-        let height = CGFloat(64)
-        var value  = offsetY - topOffset + height
-        if value > height {
-            value = height
-        }
-        topConstraint.constant = value
     }
 }

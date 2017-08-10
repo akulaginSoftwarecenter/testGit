@@ -37,16 +37,29 @@
                                         <rect key="frame" x="0.0" y="667" width="375" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hf-y9-iw6">
+                                        <rect key="frame" x="0.0" y="667" width="375" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="gos-eJ-L5r"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="actionTop:" destination="SL3-9c-wD9" eventType="touchUpInside" id="BEb-SE-IDM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gra-g3-pDh" secondAttribute="trailing" id="4t5-JR-uc8"/>
                                     <constraint firstItem="gra-g3-pDh" firstAttribute="top" secondItem="lpA-2h-Wi3" secondAttribute="bottom" id="S9t-RX-ncv"/>
+                                    <constraint firstItem="7Hf-y9-iw6" firstAttribute="top" secondItem="gra-g3-pDh" secondAttribute="top" id="VnQ-oq-Iyd"/>
+                                    <constraint firstItem="7Hf-y9-iw6" firstAttribute="width" secondItem="gra-g3-pDh" secondAttribute="width" id="bXT-ad-22B"/>
                                     <constraint firstAttribute="bottom" secondItem="gra-g3-pDh" secondAttribute="bottom" id="dZE-ly-YhW"/>
                                     <constraint firstItem="gra-g3-pDh" firstAttribute="leading" secondItem="DvT-qv-n8s" secondAttribute="leading" id="hRO-DU-y4B"/>
                                     <constraint firstItem="lpA-2h-Wi3" firstAttribute="leading" secondItem="DvT-qv-n8s" secondAttribute="leading" id="hyh-Ac-g21"/>
                                     <constraint firstItem="lpA-2h-Wi3" firstAttribute="top" secondItem="DvT-qv-n8s" secondAttribute="top" id="jv6-38-D2Y"/>
                                     <constraint firstAttribute="trailing" secondItem="lpA-2h-Wi3" secondAttribute="trailing" id="nI4-Xd-qKB"/>
+                                    <constraint firstItem="7Hf-y9-iw6" firstAttribute="centerX" secondItem="gra-g3-pDh" secondAttribute="centerX" id="sG9-tT-xSc"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="SL3-9c-wD9" id="ThP-1G-3aa"/>
@@ -108,6 +121,7 @@
                     </view>
                     <connections>
                         <outlet property="coverView" destination="gra-g3-pDh" id="EwG-GX-flr"/>
+                        <outlet property="heightButtonTopConstraint" destination="gos-eJ-L5r" id="HNd-Yh-0nI"/>
                         <outlet property="scrollView" destination="DvT-qv-n8s" id="BQ9-93-pd1"/>
                         <outlet property="topConstraint" destination="t0T-IO-MuM" id="UPa-T9-BvM"/>
                         <outlet property="topTitleLabel" destination="Crm-lD-eBy" id="y54-HU-4aq"/>

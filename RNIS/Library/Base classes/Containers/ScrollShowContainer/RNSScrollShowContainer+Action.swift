@@ -14,4 +14,8 @@ extension RNSScrollShowContainer {
         startOverTopDeselerateFalse()
         scrollToStart()
     }
+    
+    @IBAction func actionTop(_ sender: Any) {
+        scrollToTop(true)
+    }
 }
