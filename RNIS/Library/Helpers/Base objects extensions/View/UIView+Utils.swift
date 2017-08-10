@@ -49,4 +49,8 @@ extension UIView {
         backgroundView.contentMode = .scaleAspectFill
         addSubview(backgroundView)
     }
+    
+    func prepareCircle() {
+        layer.cornerRadius =  frame.width/2
+    }
 }
