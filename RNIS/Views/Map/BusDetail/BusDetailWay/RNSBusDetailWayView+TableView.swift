@@ -16,13 +16,17 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSBusDetailWayCell
-        cell.item = items?[indexPath.row]
+        cell.item = item(indexPath)
         cell.typeItem = typeIndex(indexPath)
         return cell
     }
     
+    func item(_ indexPath: IndexPath) -> RNSBusStop? {
+        return items?[indexPath.row]
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Way didSelectRowAt")
+        RNSMapManager.showInfoIfNeed(item(indexPath))
     }
     
     func typeIndex(_ indexPath: IndexPath) -> STTypeItemArray {

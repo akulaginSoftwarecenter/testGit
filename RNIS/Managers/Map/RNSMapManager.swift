@@ -18,6 +18,7 @@ class RNSMapManager: NSObject {
     static var handlerRemovePinBuild: EmptyBlock?
     static var handlerAddRoute: ((PGPolyline?) -> ())?
     static var handlerDismissOldPresentVC: EmptyBlock?
+    static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
     
     static func prepareRoutePoints() {
         let point = RNSLocationManager.point
@@ -42,11 +43,9 @@ class RNSMapManager: NSObject {
     
     static func prepareStubBus() {
         RNSDataManager.createStubBusIfNeed()
-        guard let items = RNSDataManager.bussReal else {
+        guard let item = RNSDataManager.buss?.first else {
             return
         }
-        for item in items {
-            _ = RNSPinBus(item)
-        }
+        _ = RNSPinBus(item)
    }
 }

@@ -17,4 +17,8 @@ extension RNSMapManager {
     static func removeOverlay(_ obj: Any) {
         handlerRemoveOverlay?(obj)
     }
+    
+    static func showInfoIfNeed(_ item: RNSCoordinateModel?) {
+        handlerShowInfo?(item)
+    }
 }

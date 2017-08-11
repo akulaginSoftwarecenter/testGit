@@ -21,11 +21,15 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSBusStopDetailCell
-        cell.item = items[indexPath.row]
+        cell.item = item(indexPath)
         return cell
     }
     
+    func item(_ indexPath: IndexPath) -> RNSBus {
+        return items[indexPath.row]
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("BusStop didSelectRowAt")
+        RNSMapManager.showInfoIfNeed(item(indexPath))
     }
 }

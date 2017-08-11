@@ -11,22 +11,18 @@ import RealmSwift
 
 extension RNSDataManager {
     
-    static var bussReal: [RNSBus]? {
-        return bussAll?.filter{ $0.isHaveCoordinate }
-    }
-    
-    static var bussAll: Results<RNSBus>? {
+    static var buss: Results<RNSBus>? {
         return realm?.objects(RNSBus.self)
     }
     
     static func createStubBusIfNeed() {
          write({
-            if let items = bussAll {
+            if let items = buss {
                 realm?.delete(items)
             }
             
             let item = RNSBus()
-            item.stubBus()
+            item.generate()
             realm?.add(item)
         })
     }

@@ -20,9 +20,11 @@ class RNSBus: RNSCoordinateModel {
     dynamic var driver: String? = nil
     dynamic var conductor: String? = nil
     
-    
-    func stubBus() {
-        generate()
+    func generate() {
+        minute = Int.rand(1, limit: 200)
+        title = String(Int.rand(1, limit: 30))
+        showNext = Bool.random
+        
         latitude = 59.931448
         longitude = 30.292849
         
@@ -32,11 +34,5 @@ class RNSBus: RNSCoordinateModel {
         
         driver = "Петров Сергей Иванович"
         conductor = "Константинова Василиана Валерьяновна"
-   }
-    
-    func generate() {
-        minute = Int.rand(1, limit: 200)
-        title = String(Int.rand(1, limit: 30))
-        showNext = Bool.random
     }
 }
