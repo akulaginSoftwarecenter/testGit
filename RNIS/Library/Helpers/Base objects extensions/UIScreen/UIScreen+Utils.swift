@@ -19,6 +19,10 @@ extension UIScreen
         return bounds().height
     }
     
+    static var halfHeight:CGFloat {
+        return height/2
+    }
+    
     static func bounds() -> CGRect{
         return self.main.bounds
     }

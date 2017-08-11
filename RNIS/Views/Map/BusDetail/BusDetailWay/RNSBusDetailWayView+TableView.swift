@@ -21,6 +21,10 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Way didSelectRowAt")
+    }
+    
     func typeIndex(_ indexPath: IndexPath) -> STTypeItemArray {
         let index = indexPath.row
         if index == 0 {

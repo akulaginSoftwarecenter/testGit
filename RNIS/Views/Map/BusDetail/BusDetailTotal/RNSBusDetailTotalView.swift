@@ -34,6 +34,6 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
     }
 
     @IBAction func actionButton(_ sender: Any) {
-        
+        print("actionButton")
     }
 }

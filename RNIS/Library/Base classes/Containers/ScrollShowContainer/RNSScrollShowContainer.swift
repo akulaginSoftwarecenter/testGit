@@ -13,20 +13,20 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
-    static func initController(_ container: UIViewController?, topTitle: String? = nil, heightButtonTop: CGFloat = 64) -> RNSScrollShowContainer? {
+    static func initController(_ container: UIViewController?, topTitle: String? = nil) -> RNSScrollShowContainer? {
         let vc = RNSScrollShowContainer.initialController as? RNSScrollShowContainer
         vc?.containerVC = container
         vc?.topTitle = topTitle
-        vc?.heightButtonTop = heightButtonTop
         return vc
     }
-    var heightButtonTop: CGFloat?
+    var heightCoverButtonTop: CGFloat = 64
     @IBOutlet weak var heightButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverView: UIView!
     
     var topTitle: String?
     @IBOutlet weak var topTitleLabel: UILabel!
+    @IBOutlet weak var coverBotton: UIButton!
     
     var containerVC: UIViewController?
     

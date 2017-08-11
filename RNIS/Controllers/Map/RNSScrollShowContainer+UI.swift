@@ -18,7 +18,7 @@ extension RNSScrollShowContainer {
     }
     
     func prepareButtonTop() {
-        heightButtonTopConstraint.constant = heightButtonTop ?? 64
+        heightButtonTopConstraint.constant = heightCoverButtonTop
     }
     
     func prepareTitle() {
@@ -42,6 +42,7 @@ extension RNSScrollShowContainer {
         var rect = scrollView.convert(frame, to: STRouter.rootView)
         rect = CGRect(x: rect.origin.x, y: UIScreen.height + rect.origin.y, width: rect.width, height: rect.height)
         handlerRect?(rect)
+        prepareCoverBotton(rect)
         (view as? RNSTouchView)?.rect = rect
     }
     
@@ -52,5 +53,9 @@ extension RNSScrollShowContainer {
             value = height
         }
         topConstraint.constant = value
+    }
+    
+    func prepareCoverBotton(_ rect: CGRect) {
+        coverBotton.isEnabled = rect.origin.y > halfOffset
     }
 }

@@ -120,6 +120,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coverBotton" destination="7Hf-y9-iw6" id="7Cv-81-Rtf"/>
                         <outlet property="coverView" destination="gra-g3-pDh" id="EwG-GX-flr"/>
                         <outlet property="heightButtonTopConstraint" destination="gos-eJ-L5r" id="HNd-Yh-0nI"/>
                         <outlet property="scrollView" destination="DvT-qv-n8s" id="BQ9-93-pd1"/>

@@ -24,4 +24,8 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
         cell.item = items[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("BusStop didSelectRowAt")
+    }
 }

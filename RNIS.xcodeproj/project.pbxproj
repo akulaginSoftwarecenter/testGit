@@ -61,6 +61,7 @@
 		8356BE581F3D679F00560623 /* RNSBusDetailWayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8356BE571F3D679F00560623 /* RNSBusDetailWayCell.xib */; };
 		8356BE5A1F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BE591F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift */; };
 		8356BE5D1F3D7A9B00560623 /* RNSRegisterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BE5C1F3D7A9B00560623 /* RNSRegisterTableView.swift */; };
+		8356BE5F1F3D8B4700560623 /* RNSBusDetailController+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BE5E1F3D8B4700560623 /* RNSBusDetailController+Observe.swift */; };
 		8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
 		835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
 		835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
@@ -325,6 +326,7 @@
 		8356BE571F3D679F00560623 /* RNSBusDetailWayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSBusDetailWayCell.xib; path = Views/Map/BusDetail/BusDetailWay/Cell/RNSBusDetailWayCell.xib; sourceTree = "<group>"; };
 		8356BE591F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusDetailWayView+TableView.swift"; path = "Views/Map/BusDetail/BusDetailWay/RNSBusDetailWayView+TableView.swift"; sourceTree = "<group>"; };
 		8356BE5C1F3D7A9B00560623 /* RNSRegisterTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegisterTableView.swift; path = "Library/Base classes/RegisterTableView/RNSRegisterTableView.swift"; sourceTree = "<group>"; };
+		8356BE5E1F3D8B4700560623 /* RNSBusDetailController+Observe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusDetailController+Observe.swift"; path = "Controllers/Map/BusDetail/RNSBusDetailController+Observe.swift"; sourceTree = "<group>"; };
 		8357186B1F219EB600DE5E25 /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
 		8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		835718731F21A05D00DE5E25 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Utils.swift"; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */,
+				8356BE5E1F3D8B4700560623 /* RNSBusDetailController+Observe.swift */,
 				8310D4411F3C6B41000CCD0A /* RNSBusDetailController.storyboard */,
 			);
 			name = BusDetail;
@@ -1343,12 +1346,12 @@
 		836D80E81F1DD59800FEE390 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
-				8356BE5B1F3D7A7500560623 /* RegisterTableView */,
-				836EEEFE1F3BF830007631D9 /* Cell */,
 				8392BAC41F304B9B0024E9E5 /* AlertViewController */,
 				836D80E91F1DD59F00FEE390 /* BaseViewWithXIBInit */,
+				836EEEFE1F3BF830007631D9 /* Cell */,
 				8329DF561F340EDF00D542FF /* Containers */,
 				8357186E1F219F1F00DE5E25 /* NavigationController */,
+				8356BE5B1F3D7A7500560623 /* RegisterTableView */,
 			);
 			name = "Base classes";
 			sourceTree = "<group>";
@@ -2164,6 +2167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8356BE5F1F3D8B4700560623 /* RNSBusDetailController+Observe.swift in Sources */,
 				839BCE061F32EFA400B5CA88 /* RNSTopTitle.swift in Sources */,
 				8385DB431F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift in Sources */,
 				8310D4401F3C6AE3000CCD0A /* RNSBusDetailController.swift in Sources */,
