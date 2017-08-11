@@ -32,6 +32,10 @@ extension UIColor {
         return UIColor(hexString: "E25E55")
     }
     
+    static var D95A53:UIColor {
+        return UIColor(hexString: "D95A53")
+    }
+    
     static var F1645A:UIColor {
         return UIColor(hexString: "F1645A")
     }

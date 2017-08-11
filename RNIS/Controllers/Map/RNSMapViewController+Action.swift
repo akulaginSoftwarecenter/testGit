@@ -36,4 +36,9 @@ extension RNSMapViewController {
     @IBAction func menuAction(_ sender: Any) {
 
     }
+    
+    @IBAction func searchAction(_ sender: Any) {
+        //let vc = RNSSearchViewController.initialController
+        //STRouter.redContainer(vc)?.pushAnimated()
+    }
 }

@@ -24,6 +24,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-Fe-F3D">
                                 <rect key="frame" x="311" y="36" width="56" height="56"/>
                                 <state key="normal" image="Poisk"/>
+                                <connections>
+                                    <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9f-NV-8yb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pL4-4a-4pD">
                                 <rect key="frame" x="8" y="36" width="56" height="56"/>

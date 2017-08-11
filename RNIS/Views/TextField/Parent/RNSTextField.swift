@@ -25,7 +25,7 @@ class RNSTextField: UITextField {
     
     @IBInspectable var placeholderKey: String? {
         didSet {
-            self.preparePlaceholder(placeholderKey)
+            self.preparePlaceholder()
         }
     }
     
@@ -48,9 +48,14 @@ class RNSTextField: UITextField {
             topLabel.text = topText
         }
     }
+    @IBInspectable var placeholderFontSize: CGFloat = 24 {
+        didSet {
+            self.preparePlaceholder()
+        }
+    }
     
     var placeholderFont: UIFont {
-        return .cffazm24
+        return .cffazm(placeholderFontSize)
     }
     
     var placeholderColor: UIColor {
@@ -110,7 +115,7 @@ class RNSTextField: UITextField {
     
     func prepareUI(_ aPlaceholderKey: String?, state: STTextFieldState = .normal) {
 
-        preparePlaceholder(aPlaceholderKey)
+        preparePlaceholder()
         
         textColor = .white
         setState(state)
@@ -124,12 +129,13 @@ class RNSTextField: UITextField {
         textAlignment = .center
     }
     
-    func preparePlaceholder(_ placeholderKey: String?) {
+    func preparePlaceholder() {
         guard let placeholderKey = placeholderKey else {
             return
         }
         let attributes = [NSForegroundColorAttributeName: placeholderColor,
                           NSFontAttributeName: placeholderFont]
+        
         attributedPlaceholder = NSAttributedString(string:NSLoc(placeholderKey),
                                                    attributes:attributes)
         
