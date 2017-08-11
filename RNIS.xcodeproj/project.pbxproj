@@ -56,6 +56,7 @@
 		8344E1CF1F397F1B004A6F0C /* RNSRangeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1CE1F397F1B004A6F0C /* RNSRangeScroll.swift */; };
 		8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */; };
 		8356BE4F1F3D451F00560623 /* RNSCircleHole.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8356BE4E1F3D451F00560623 /* RNSCircleHole.xib */; };
+		8356BE531F3D582700560623 /* RNSBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BE521F3D582700560623 /* RNSBackGroundView.swift */; };
 		8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
 		835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
 		835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
@@ -315,6 +316,7 @@
 		8344E1CE1F397F1B004A6F0C /* RNSRangeScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRangeScroll.swift; path = Models/HelpersModel/RangeScroll/RNSRangeScroll.swift; sourceTree = "<group>"; };
 		8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+ScrollView.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+ScrollView.swift"; sourceTree = "<group>"; };
 		8356BE4E1F3D451F00560623 /* RNSCircleHole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSCircleHole.xib; path = Views/Others/CircleHole/RNSCircleHole.xib; sourceTree = "<group>"; };
+		8356BE521F3D582700560623 /* RNSBackGroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBackGroundView.swift; path = Views/Others/BackGroundView/RNSBackGroundView.swift; sourceTree = "<group>"; };
 		8357186B1F219EB600DE5E25 /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
 		8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		835718731F21A05D00DE5E25 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Utils.swift"; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 		8310D4531F3C72AC000CCD0A /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				8356BE511F3D580400560623 /* BackGroundView */,
 				8356BE4C1F3D437E00560623 /* Circle */,
 			);
 			name = Others;
@@ -829,6 +832,14 @@
 				8310D4561F3C745F000CCD0A /* Circle */,
 			);
 			name = Circle;
+			sourceTree = "<group>";
+		};
+		8356BE511F3D580400560623 /* BackGroundView */ = {
+			isa = PBXGroup;
+			children = (
+				8356BE521F3D582700560623 /* RNSBackGroundView.swift */,
+			);
+			name = BackGroundView;
 			sourceTree = "<group>";
 		};
 		8357186A1F219EB600DE5E25 /* Router */ = {
@@ -2216,6 +2227,7 @@
 				838707E91F3027410094B273 /* RNSPhoneContrainerController.swift in Sources */,
 				8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */,
 				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
+				8356BE531F3D582700560623 /* RNSBackGroundView.swift in Sources */,
 				8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
 				836EEF181F3C13DB007631D9 /* RNSCoordinateModel.swift in Sources */,
 				835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */,

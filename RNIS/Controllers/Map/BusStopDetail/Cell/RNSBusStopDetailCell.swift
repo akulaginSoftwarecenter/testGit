@@ -23,7 +23,7 @@ class RNSBusStopDetailCell: RNSBaseTableCell {
     
     func prepareUI() {
         minuteLabel.text = String(item?.minute ?? 0) + " мин."
-        numLabel.text = String(item?.num ?? 0)
+        numLabel.text = item?.title
         
         prepareShowNext()
     }

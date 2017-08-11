@@ -8,19 +8,6 @@
 
 import UIKit
 
-class RNSCircleHole: UIView {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        prepareUI()
-    }
-    
-    func prepareUI() {
-        backgroundColor = .white
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        prepareCircle()
-    }
+class RNSCircleHole: RNSCircle {
+
 }

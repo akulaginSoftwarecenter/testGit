@@ -30,7 +30,7 @@ class RNSImageFactory: NSObject {
     }()
     
     static func imageBus(_ item: RNSBus) -> UIImage {
-        let text = String(item.num)
+        let text = item.title
         let key = text as NSString
         if let icon = cache.object(forKey: key) {
             return icon

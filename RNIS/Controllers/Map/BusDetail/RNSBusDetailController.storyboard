@@ -1,7 +1,67 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7ub-YB-9Xp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Bus Detail Controller-->
+        <scene sceneID="Z6h-PO-5l9">
+            <objects>
+                <viewController id="7ub-YB-9Xp" customClass="RNSBusDetailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X1f-xv-4jX"/>
+                        <viewControllerLayoutGuide type="bottom" id="W4V-gY-xMs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O7P-Kd-VrC" customClass="RNSBackGroundView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автобус №" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0D-Dr-FXb">
+                                <rect key="frame" x="15" y="14" width="74.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2y-5c-KxU">
+                                <rect key="frame" x="89.5" y="14" width="8.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzf-qu-mtx" customClass="RNSBusDetailTotalView" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f0D-Dr-FXb" firstAttribute="leading" secondItem="O7P-Kd-VrC" secondAttribute="leading" constant="15" id="0Cb-ss-jSI"/>
+                            <constraint firstItem="W4V-gY-xMs" firstAttribute="top" secondItem="gzf-qu-mtx" secondAttribute="bottom" id="A5x-Ii-He1"/>
+                            <constraint firstItem="gzf-qu-mtx" firstAttribute="top" secondItem="O7P-Kd-VrC" secondAttribute="top" id="Jwm-f3-PJ8"/>
+                            <constraint firstItem="L2y-5c-KxU" firstAttribute="centerY" secondItem="f0D-Dr-FXb" secondAttribute="centerY" id="Pmm-Gb-dwf"/>
+                            <constraint firstItem="L2y-5c-KxU" firstAttribute="leading" secondItem="f0D-Dr-FXb" secondAttribute="trailing" id="XdG-03-tmx"/>
+                            <constraint firstItem="gzf-qu-mtx" firstAttribute="leading" secondItem="O7P-Kd-VrC" secondAttribute="leading" id="bH1-kT-xoe"/>
+                            <constraint firstAttribute="trailing" secondItem="gzf-qu-mtx" secondAttribute="trailing" id="bnf-WO-jbU"/>
+                            <constraint firstItem="f0D-Dr-FXb" firstAttribute="top" secondItem="O7P-Kd-VrC" secondAttribute="top" constant="14" id="n4x-Zg-LC7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="L2y-5c-KxU" id="DyE-Op-Olm"/>
+                        <outlet property="viewTotal" destination="gzf-qu-mtx" id="X91-2W-jop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1P-Bw-pX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.59999999999999" y="199.25037481259372"/>
+        </scene>
+    </scenes>
 </document>

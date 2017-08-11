@@ -8,14 +8,32 @@
 
 import UIKit
 
-class RNSBusDetailTotalView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class RNSBusDetailTotalView: BaseViewWithXIBInit {
+    
+    var item: RNSBus?{
+        didSet{
+            updateUI()
+        }
     }
-    */
+    
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var currentLabel: UILabel!
+    @IBOutlet weak var endLabel: UILabel!
+    @IBOutlet weak var driverLabel: UILabel!
+    @IBOutlet weak var сonductorLabel: UILabel!
 
+    
+    func updateUI() {
+        let stops = item?.busStops
+        startLabel.text = stops?.first?.title
+        currentLabel.text = item?.currentBusStops?.title
+        endLabel.text = stops?.last?.title
+        
+        driverLabel.text = item?.driver
+        сonductorLabel.text = item?.conductor
+    }
+
+    @IBAction func actionButton(_ sender: Any) {
+        
+    }
 }

@@ -10,6 +10,12 @@ import Foundation
 
 extension RNSMapViewController {
     
+    func dismissPresent(_ vc: UIViewController?) {
+        dismissOldPresentVC {
+            self.present(vc)
+        }
+    }
+    
     func present(_ vc: UIViewController?) {
         guard let containerVC = vc,
             let containerView = vc?.view else {

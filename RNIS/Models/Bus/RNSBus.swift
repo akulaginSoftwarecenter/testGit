@@ -12,13 +12,14 @@ import RealmSwift
 class RNSBus: RNSCoordinateModel {
     
     dynamic var minute: Int = 0
-    dynamic var num: Int = 0
+    dynamic var title: String = ""
     dynamic var showNext: Bool = false
     let busStops = List<RNSBusStop>()
     dynamic var currentBusStops: RNSBusStop?
     
     dynamic var driver: String? = nil
     dynamic var conductor: String? = nil
+    
     
     func stubBus() {
         generate()
@@ -35,7 +36,7 @@ class RNSBus: RNSCoordinateModel {
     
     func generate() {
         minute = Int.rand(1, limit: 200)
-        num = Int.rand(1, limit: 30)
+        title = String(Int.rand(1, limit: 30))
         showNext = Bool.random
     }
 }
