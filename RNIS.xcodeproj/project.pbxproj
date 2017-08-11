@@ -207,6 +207,7 @@
 		838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */; };
 		838707F41F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */; };
 		838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */; };
+		838CE9311F3D9E0800C10FBA /* RNSPinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838CE9301F3D9E0800C10FBA /* RNSPinItem.swift */; };
 		8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
@@ -452,6 +453,7 @@
 		838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSCodeViewController.storyboard; path = "Controllers/Authorization+Registration/Parent/Code/RNSCodeViewController.storyboard"; sourceTree = "<group>"; };
 		838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSCodeContainerController.swift; path = "Controllers/Authorization+Registration/Parent/Code/RNSCodeContainerController.swift"; sourceTree = "<group>"; };
 		838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utils.swift"; path = "Library/Helpers/Base objects extensions/Color/UIColor+Utils.swift"; sourceTree = "<group>"; };
+		838CE9301F3D9E0800C10FBA /* RNSPinItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinItem.swift; path = Views/OVerLays/Parent/RNSPinItem.swift; sourceTree = "<group>"; };
 		8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationCodeController.swift; path = "Controllers/Authorization+Registration/Registration/Code/RNSRegistrationCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 		835718A81F21C39300DE5E25 /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
+				838CE92F1F3D9DC000C10FBA /* Parent */,
 				836EEF141F3C12A8007631D9 /* PinBus */,
 				835718A91F21C77A00DE5E25 /* PinBuild */,
 				836277CD1F38146D009FB712 /* PinBusStop */,
@@ -1317,9 +1320,9 @@
 				8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */,
 				83ED5E2B1F2706EF007D9F1C /* RNSMapViewController+Route.swift */,
 				83ED5E301F2709D4007D9F1C /* RNSMapViewController+OverLays.swift */,
-				835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */,
 				837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */,
 				836277D01F3816BE009FB712 /* RNSMapViewController+Stub.swift */,
+				835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */,
 				83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */,
 				836D80B71F1DB37700FEE390 /* RNSMapViewController.storyboard */,
 			);
@@ -1694,6 +1697,14 @@
 				838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */,
 			);
 			name = UIColor;
+			sourceTree = "<group>";
+		};
+		838CE92F1F3D9DC000C10FBA /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				838CE9301F3D9E0800C10FBA /* RNSPinItem.swift */,
+			);
+			name = Parent;
 			sourceTree = "<group>";
 		};
 		8392BABD1F303D320024E9E5 /* Code */ = {
@@ -2239,6 +2250,7 @@
 				8329DF601F342B5E00D542FF /* RNSRightChevronButton.swift in Sources */,
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
+				838CE9311F3D9E0800C10FBA /* RNSPinItem.swift in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
 				836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
 				836EEF0C1F3C0188007631D9 /* UITableView+Utils.swift in Sources */,

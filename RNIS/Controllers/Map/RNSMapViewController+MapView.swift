@@ -41,12 +41,13 @@ extension RNSMapViewController: PGMapViewDelegate {
     }
     
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
-        mapCenter(item.geoPoint)
-        showBusStopIfNeed(overlay)
-        showBusIfNeed(overlay)
+        showInfoIfNeed((overlay as? RNSPinItem)?.item)
     }
     
-    func mapCenter(_ point: PGGeoPoint) {
+    func mapCenter(_ point: PGGeoPoint?) {
+        guard let point = point else {
+            return
+        }
         mapView.setMapCenter(point)
     }
  }

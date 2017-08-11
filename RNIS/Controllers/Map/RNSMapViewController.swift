@@ -64,22 +64,6 @@ class RNSMapViewController: UIViewController {
         return "RNSMapViewController"
     }
     
-    func showBusStopIfNeed(_ overlay: PGOverlay) {
-        guard let overlay = overlay as? RNSPinBusStop  else {
-            return
-        }
-        let vc = RNSBusStopDetailController.initController(overlay.item)
-        dismissPresent(vc)
-    }
-    
-    func showBusIfNeed(_ overlay: PGOverlay) {
-        guard let overlay = overlay as? RNSPinBus  else {
-            return
-        }
-        let vc = RNSBusDetailController.initController(overlay.item)
-        dismissPresent(vc)
-    }
-    
     deinit {
         print("RNSMapViewController deinit")
     }

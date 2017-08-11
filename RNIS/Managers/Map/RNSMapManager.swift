@@ -36,7 +36,7 @@ class RNSMapManager: NSObject {
             return
         }
         for item in items {
-            RNSPinBusStop(item)
+            _ = RNSPinBusStop(item)
         }
     }
     
@@ -46,7 +46,7 @@ class RNSMapManager: NSObject {
             return
         }
         for item in items {
-            RNSPinBus(item)
+            _ = RNSPinBus(item)
         }
    }
 }

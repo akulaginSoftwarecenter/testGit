@@ -8,28 +8,10 @@
 
 import UIKit
 
-class RNSPinBus: PGOverlay {
-    lazy var overlayItem = PGOverlayItem()
+class RNSPinBus: RNSPinItem {
     
-    var item: RNSBus?
-    
-    @discardableResult convenience init(_ item: RNSBus) {
-        self.init()
-        
-        self.item = item
-        let image = RNSImageFactory.imageBus(item)
+    override func prepareImage() {
+        let image = RNSImageFactory.imageBus(item as? RNSBus)
         setBitmap(image, xOffset: 0.37, yOffset: -0.85, isPlain: false, sizeInMeters: 15)
-        items().add(overlayItem)
-        preparePoint(item.point)
-    }
-    
-    func preparePoint(_ point: PGGeoPoint) {
-        addOnMap()
-        overlayItem.geoPoint = point
-        populate()
-    }
-    
-    func addOnMap() {
-        RNSMapManager.addOverlay(self)
     }
 }

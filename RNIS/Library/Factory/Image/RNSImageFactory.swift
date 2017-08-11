@@ -29,13 +29,17 @@ class RNSImageFactory: NSObject {
         ]
     }()
     
-    static func imageBus(_ item: RNSBus) -> UIImage {
+    static func imageBus(_ item: RNSBus?) -> UIImage {
+        let inImage = shared.inImage
+        guard let item = item else {
+            return inImage
+        }
+        
         let text = item.title
         let key = text as NSString
         if let icon = cache.object(forKey: key) {
             return icon
         }
-        let inImage = shared.inImage
         let scale = UIScreen.main.scale
         let size = inImage.size
         UIGraphicsBeginImageContextWithOptions(size, false, scale)

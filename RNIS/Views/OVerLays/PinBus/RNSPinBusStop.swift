@@ -8,28 +8,9 @@
 
 import UIKit
 
-class RNSPinBusStop: PGOverlay {
+class RNSPinBusStop: RNSPinItem {
     
-    lazy var overlayItem = PGOverlayItem()
-    
-    var item: RNSBusStop?
-    
-    @discardableResult convenience init(_ item: RNSBusStop) {
-        self.init()
-        
-        self.item = item
+    override func prepareImage() {
         setBitmap(#imageLiteral(resourceName: "Bus_stop"), xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 15)
-        items().add(overlayItem)
-        preparePoint(item.point)
-    }
-    
-    func preparePoint(_ point: PGGeoPoint) {
-        addOnMap()
-        overlayItem.geoPoint = point
-        populate()
-    }
-    
-    func addOnMap() {
-        RNSMapManager.addOverlay(self)
     }
 }

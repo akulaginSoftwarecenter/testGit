@@ -25,4 +25,16 @@ extension RNSMapViewController {
     func removeOverlay(_ obj: Any) {
         overlays?.remove(obj)
     }
+
+    func showInfoIfNeed(_ item: RNSCoordinateModel?) {
+        mapCenter(item?.point)
+        var vc: UIViewController?
+        if let item = item as? RNSBus {
+            vc = RNSBusDetailController.initController(item)
+        }
+        if let item = item as? RNSBusStop {
+            vc = RNSBusStopDetailController.initController(item)
+        }
+        dismissPresent(vc)
+    }
 }
