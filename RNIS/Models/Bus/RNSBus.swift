@@ -19,6 +19,9 @@ class RNSBus: RNSCoordinateModel {
     
     dynamic var driver: String? = nil
     dynamic var conductor: String? = nil
+    dynamic var depo: String? = nil
+    dynamic var carrier: String? = nil
+    dynamic var phone: String? = nil
     
     func generate() {
         minute = Int.rand(1, limit: 200)
@@ -34,5 +37,9 @@ class RNSBus: RNSCoordinateModel {
         
         driver = "Петров Сергей Иванович"
         conductor = "Константинова Василиана Валерьяновна"
+        depo = "№1151 | E13222 777"
+        carrier = "ООО ТРОЙКА"
+        depo = "№1151 | E13222 777"
+        phone = "+ 7 (912) 213-32-32"
     }
 }

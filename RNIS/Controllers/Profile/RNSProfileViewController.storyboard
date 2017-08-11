@@ -53,30 +53,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gW3-PU-jT5" customClass="RNSNameField" customModule="RNIS" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gW3-PU-jT5" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="280" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomLineOffset">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Как вас зовут?"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Имя пользователя"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-sp-FVm" customClass="RNSEmailField" customModule="RNIS" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-sp-FVm" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="363" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomLineOffset">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Электронная почта"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>

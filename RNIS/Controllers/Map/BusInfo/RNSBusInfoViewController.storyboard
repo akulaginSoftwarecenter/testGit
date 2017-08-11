@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vJY-75-y2X">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bus Info View Controller-->
+        <scene sceneID="Esc-Fj-Nlm">
+            <objects>
+                <viewController id="vJY-75-y2X" customClass="RNSBusInfoViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pno-RA-Zcx"/>
+                        <viewControllerLayoutGuide type="bottom" id="40K-cZ-Ugg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3yz-ly-fZ8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBj-Sv-0Bp" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="27" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Информация о транспорте" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GP-1b-2US" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="140" y="11" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUv-xU-uu9" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="140" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="ФИО Водителя"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n05-Aa-aqd" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="223" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="ФИО Кондуктора"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pjI-ds-h5k" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="306" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Депо-автоколонна"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C35-sH-NAG" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="389" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Наименование Перевозчика"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="248-xA-pF7" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="472" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Номер автоколонны"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value=" "/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JW3-Vd-oLY" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="580" width="315" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="914-ZL-qSW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Пожаловаться"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pjI-ds-h5k" secondAttribute="trailing" constant="30" id="4Ga-c8-xzr"/>
+                            <constraint firstAttribute="trailing" secondItem="JW3-Vd-oLY" secondAttribute="trailing" constant="30" id="8wh-Af-fkk"/>
+                            <constraint firstItem="248-xA-pF7" firstAttribute="bottom" secondItem="C35-sH-NAG" secondAttribute="bottom" constant="83" id="Cfg-Hb-eNM"/>
+                            <constraint firstItem="C35-sH-NAG" firstAttribute="bottom" secondItem="pjI-ds-h5k" secondAttribute="bottom" constant="83" id="KUP-X2-2FT"/>
+                            <constraint firstItem="n05-Aa-aqd" firstAttribute="bottom" secondItem="UUv-xU-uu9" secondAttribute="bottom" constant="83" id="LOB-E1-9Ym"/>
+                            <constraint firstAttribute="trailing" secondItem="C35-sH-NAG" secondAttribute="trailing" constant="30" id="Nx1-1s-OE6"/>
+                            <constraint firstItem="pjI-ds-h5k" firstAttribute="bottom" secondItem="n05-Aa-aqd" secondAttribute="bottom" constant="83" id="Obk-1Z-RBa"/>
+                            <constraint firstItem="n05-Aa-aqd" firstAttribute="leading" secondItem="3yz-ly-fZ8" secondAttribute="leading" constant="30" id="Q2Y-Wq-JEt"/>
+                            <constraint firstItem="JW3-Vd-oLY" firstAttribute="leading" secondItem="3yz-ly-fZ8" secondAttribute="leading" constant="30" id="QYF-WW-P8A"/>
+                            <constraint firstItem="C35-sH-NAG" firstAttribute="leading" secondItem="3yz-ly-fZ8" secondAttribute="leading" constant="30" id="Stq-9n-MqS"/>
+                            <constraint firstAttribute="trailing" secondItem="248-xA-pF7" secondAttribute="trailing" constant="30" id="YHI-b6-oVz"/>
+                            <constraint firstItem="UUv-xU-uu9" firstAttribute="bottom" secondItem="3yz-ly-fZ8" secondAttribute="top" constant="170" id="ZOJ-8a-2Bx"/>
+                            <constraint firstItem="40K-cZ-Ugg" firstAttribute="top" secondItem="JW3-Vd-oLY" secondAttribute="bottom" constant="24" id="cOb-eD-hN8"/>
+                            <constraint firstItem="JW3-Vd-oLY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="248-xA-pF7" secondAttribute="bottom" constant="33" id="fGg-fa-S66"/>
+                            <constraint firstAttribute="trailing" secondItem="UUv-xU-uu9" secondAttribute="trailing" constant="30" id="g77-Cc-Cbp"/>
+                            <constraint firstItem="248-xA-pF7" firstAttribute="leading" secondItem="3yz-ly-fZ8" secondAttribute="leading" constant="30" id="qST-kM-iOb"/>
+                            <constraint firstItem="pjI-ds-h5k" firstAttribute="leading" secondItem="3yz-ly-fZ8" secondAttribute="leading" constant="30" id="qZo-kN-Nra"/>
+                            <constraint firstAttribute="trailing" secondItem="n05-Aa-aqd" secondAttribute="trailing" constant="30" id="rS3-dd-LNO"/>
+                            <constraint firstItem="UUv-xU-uu9" firstAttribute="leading" secondItem="3yz-ly-fZ8" secondAttribute="leading" constant="30" id="wGV-II-meI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carrierField" destination="C35-sH-NAG" id="7RN-tw-GPa"/>
+                        <outlet property="conductorField" destination="n05-Aa-aqd" id="IzI-91-1YS"/>
+                        <outlet property="depoField" destination="pjI-ds-h5k" id="xl8-Wp-Zgy"/>
+                        <outlet property="driverField" destination="UUv-xU-uu9" id="aWa-R8-m4g"/>
+                        <outlet property="phoneField" destination="248-xA-pF7" id="xZj-Ng-Oex"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ly-6q-TtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="156"/>
+        </scene>
+    </scenes>
+</document>
