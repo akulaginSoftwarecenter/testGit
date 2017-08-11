@@ -57,6 +57,9 @@
 		8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */; };
 		8356BE4F1F3D451F00560623 /* RNSCircleHole.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8356BE4E1F3D451F00560623 /* RNSCircleHole.xib */; };
 		8356BE531F3D582700560623 /* RNSBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BE521F3D582700560623 /* RNSBackGroundView.swift */; };
+		8356BE561F3D678800560623 /* RNSBusDetailWayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BE551F3D678800560623 /* RNSBusDetailWayCell.swift */; };
+		8356BE581F3D679F00560623 /* RNSBusDetailWayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8356BE571F3D679F00560623 /* RNSBusDetailWayCell.xib */; };
+		8356BE5A1F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BE591F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift */; };
 		8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186B1F219EB600DE5E25 /* STRouter.swift */; };
 		835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */; };
 		835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718731F21A05D00DE5E25 /* UIView+Utils.swift */; };
@@ -317,6 +320,9 @@
 		8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+ScrollView.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+ScrollView.swift"; sourceTree = "<group>"; };
 		8356BE4E1F3D451F00560623 /* RNSCircleHole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSCircleHole.xib; path = Views/Others/CircleHole/RNSCircleHole.xib; sourceTree = "<group>"; };
 		8356BE521F3D582700560623 /* RNSBackGroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBackGroundView.swift; path = Views/Others/BackGroundView/RNSBackGroundView.swift; sourceTree = "<group>"; };
+		8356BE551F3D678800560623 /* RNSBusDetailWayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusDetailWayCell.swift; path = Views/Map/BusDetail/BusDetailWay/Cell/RNSBusDetailWayCell.swift; sourceTree = "<group>"; };
+		8356BE571F3D679F00560623 /* RNSBusDetailWayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSBusDetailWayCell.xib; path = Views/Map/BusDetail/BusDetailWay/Cell/RNSBusDetailWayCell.xib; sourceTree = "<group>"; };
+		8356BE591F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusDetailWayView+TableView.swift"; path = "Views/Map/BusDetail/BusDetailWay/RNSBusDetailWayView+TableView.swift"; sourceTree = "<group>"; };
 		8357186B1F219EB600DE5E25 /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
 		8357186F1F219F1F00DE5E25 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		835718731F21A05D00DE5E25 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Utils.swift"; sourceTree = "<group>"; };
@@ -546,7 +552,9 @@
 		8310D4441F3C6B74000CCD0A /* BusDetailWay */ = {
 			isa = PBXGroup;
 			children = (
+				8356BE541F3D675A00560623 /* Cell */,
 				8310D44A1F3C6C3D000CCD0A /* RNSBusDetailWayView.swift */,
+				8356BE591F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift */,
 				8310D44C1F3C6C4C000CCD0A /* RNSBusDetailWayView.xib */,
 			);
 			name = BusDetailWay;
@@ -840,6 +848,15 @@
 				8356BE521F3D582700560623 /* RNSBackGroundView.swift */,
 			);
 			name = BackGroundView;
+			sourceTree = "<group>";
+		};
+		8356BE541F3D675A00560623 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8356BE551F3D678800560623 /* RNSBusDetailWayCell.swift */,
+				8356BE571F3D679F00560623 /* RNSBusDetailWayCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		8357186A1F219EB600DE5E25 /* Router */ = {
@@ -1345,11 +1362,11 @@
 				83ED5E2D1F27078A007D9F1C /* PGPolyline */,
 				836EEF051F3BFBE3007631D9 /* Random */,
 				832E4B911F2ED53000A4AD77 /* String */,
-				836EEF0A1F3C0188007631D9 /* TableView */,
 				832E4B9D1F2ED5D200A4AD77 /* TextField */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,
 				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				837B66741F3957C50048C5BA /* UIScreen */,
+				836EEF0A1F3C0188007631D9 /* UITableView */,
 				836EEF111F3C02CC007631D9 /* UITableViewCell */,
 				837ABF191F2EE38600AB5E54 /* UITapGestureRecognizer */,
 				8357187B1F21A30F00DE5E25 /* UIViewController */,
@@ -1401,12 +1418,12 @@
 			name = Random;
 			sourceTree = "<group>";
 		};
-		836EEF0A1F3C0188007631D9 /* TableView */ = {
+		836EEF0A1F3C0188007631D9 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
 				836EEF0B1F3C0188007631D9 /* UITableView+Utils.swift */,
 			);
-			name = TableView;
+			name = UITableView;
 			path = "Library/Helpers/Base objects extensions/TableView";
 			sourceTree = "<group>";
 		};
@@ -2027,6 +2044,7 @@
 				8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */,
 				836D80B51F1DB37000FEE390 /* LaunchScreen.storyboard in Resources */,
 				832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
+				8356BE581F3D679F00560623 /* RNSBusDetailWayCell.xib in Resources */,
 				838707F01F3029210094B273 /* RNSCodeViewController.storyboard in Resources */,
 				8369890C1F316B9C003E4D73 /* RNSParoleViewController.storyboard in Resources */,
 				8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */,
@@ -2170,6 +2188,7 @@
 				837ABF1B1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */,
 				837B66761F3957C50048C5BA /* UIScreen+Utils.swift in Sources */,
 				836EEF0E1F3C0204007631D9 /* NibLoadableView.swift in Sources */,
+				8356BE5A1F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift in Sources */,
 				8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
 				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
@@ -2284,6 +2303,7 @@
 				8369891F1F317AB5003E4D73 /* ContainerProtocol.swift in Sources */,
 				837ABF0D1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,
 				837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
+				8356BE561F3D678800560623 /* RNSBusDetailWayCell.swift in Sources */,
 				83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */,
 				83B2E0881F1E139800FA92A4 /* API.swift in Sources */,
 				836277E21F382E85009FB712 /* RNSBusStopDetailController.swift in Sources */,

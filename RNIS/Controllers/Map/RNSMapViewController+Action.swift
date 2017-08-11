@@ -34,6 +34,6 @@ extension RNSMapViewController {
     }
     
     @IBAction func menuAction(_ sender: Any) {
-        STRouter.showLogin()
+
     }
 }

@@ -79,5 +79,9 @@ class RNSMapViewController: UIViewController {
         let vc = RNSBusDetailController.initController(overlay.item)
         dismissPresent(vc)
     }
+    
+    deinit {
+        print("RNSMapViewController deinit")
+    }
 }
 

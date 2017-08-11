@@ -17,8 +17,10 @@ class RNSBusDetailController: UIViewController {
     }
     
     var item: RNSBus?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var viewTotal: RNSBusDetailTotalView!
+    @IBOutlet weak var viewWay: RNSBusDetailWayView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class RNSBusDetailController: UIViewController {
     
     func prepareItems() {
         viewTotal.item = item
+        viewWay.item = item
     }
     
     func prepareTitle() {
