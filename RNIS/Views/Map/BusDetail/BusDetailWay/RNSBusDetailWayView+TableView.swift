@@ -15,8 +15,7 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RNSBusDetailWayCell.reuseIdentifier, for: indexPath) as! RNSBusDetailWayCell
-        //let cell = tableView.dequeueReusableCell(for: indexPath) as! RNSBusDetailWayCell
+        let cell = tableView.dequeueReusableCell(for: indexPath) as RNSBusDetailWayCell
         cell.item = items?[indexPath.row]
         cell.typeItem = typeIndex(indexPath)
         return cell

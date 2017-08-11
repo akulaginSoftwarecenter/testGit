@@ -23,17 +23,7 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
             reloadData()
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        registerCell()
-    }
-    
-    func registerCell() {
-        tableView.register(RNSBusDetailWayCell.self)
-    }
-    
+
     func reloadData() {
         tableView.reloadData()
         heightTableView.constant = tableView.tableViewContentSize

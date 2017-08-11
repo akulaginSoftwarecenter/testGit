@@ -51,7 +51,7 @@ extension UITableView
         }
         return cell
     }
-    
+ 
     func dequeueReusableCell(_ T:UITableViewCell.Type, forIndexPath indexPath: IndexPath) -> UITableViewCell    {
         return self.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath)
     }

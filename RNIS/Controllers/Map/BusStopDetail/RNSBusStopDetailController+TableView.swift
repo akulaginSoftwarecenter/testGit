@@ -20,7 +20,7 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RNSBusStopDetailCell.reuseIdentifier, for: indexPath) as! RNSBusStopDetailCell
+        let cell = tableView.dequeueReusableCell(for: indexPath) as RNSBusStopDetailCell
         cell.item = items[indexPath.row]
         return cell
     }
