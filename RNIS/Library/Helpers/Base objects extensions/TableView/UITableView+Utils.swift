@@ -45,7 +45,7 @@ extension UITableView
         self.register(cellNib, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
     }
     
-    func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
+    func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableView {
         guard let cell = self.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: " + String(T.reuseIdentifier) + " or edit custom class to XIB file")
         }

@@ -11,26 +11,26 @@ import Foundation
 extension RNSScrollShowContainer {
     
     var rangeNav: RNSRangeScroll {
-        return RNSRangeScroll(navOffset...overTopOffset, handlerOne: {
-            self.scrollToTop()
+        return RNSRangeScroll(navOffset...overTopOffset, handlerOne: {[weak self] in
+            self?.scrollToTop()
         })
     }
     
     var rangeHalf: RNSRangeScroll {
-        return RNSRangeScroll(startOffset...halfOffset, handlerOne: {
-            self.scrollToStart()
+        return RNSRangeScroll(startOffset...halfOffset, handlerOne: {[weak self] in
+            self?.scrollToStart()
         })
     }
     
     var rangeThird: RNSRangeScroll {
-        return RNSRangeScroll(almostOffset...startOffset, handlerOne: {
-            self.scrollToStart()
+        return RNSRangeScroll(almostOffset...startOffset, handlerOne: {[weak self] in
+            self?.scrollToStart()
         })
     }
     
     var rangeBottom: RNSRangeScroll {
-        return RNSRangeScroll(bottomOffset...almostOffset, handlerOne: {
-            self.dismiss()
+        return RNSRangeScroll(bottomOffset...almostOffset, handlerOne: { [weak self] in
+            self?.dismiss()
          })
     }
     
