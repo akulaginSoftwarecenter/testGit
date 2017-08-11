@@ -8,6 +8,10 @@
 
 import UIKit
 
-class RNSCircleHole: RNSCircle {
-
+class RNSCircleHole: BaseViewWithXIBInit {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .clear
+    }
 }

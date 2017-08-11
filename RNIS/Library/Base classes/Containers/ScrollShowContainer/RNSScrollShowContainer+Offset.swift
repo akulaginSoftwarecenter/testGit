@@ -31,7 +31,7 @@ extension RNSScrollShowContainer {
     }
     
     var startOffset: CGFloat {
-        return UIScreen.height/3
+        return 200
     }
     
     var almostOffset: CGFloat {
