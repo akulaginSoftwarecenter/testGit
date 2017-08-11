@@ -8,8 +8,10 @@
 
 import UIKit
 
-class RNSCircleRed: UIView {
+class RNSCircle: UIView {
 
-    
-
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        prepareCircle()
+    }
 }

@@ -27,7 +27,7 @@ extension UIColor {
     static var whiteAlpha50: UIColor {
         return white.withAlphaComponent(0.5)
     }
-    
+
     static var E25E55:UIColor {
         return UIColor(hexString: "E25E55")
     }

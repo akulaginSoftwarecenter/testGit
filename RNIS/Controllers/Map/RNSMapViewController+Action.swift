@@ -32,4 +32,8 @@ extension RNSMapViewController {
     @IBAction func userLocationAction(_ sender: Any) {
         startLocation()
     }
+    
+    @IBAction func menuAction(_ sender: Any) {
+        STRouter.showLogin()
+    }
 }

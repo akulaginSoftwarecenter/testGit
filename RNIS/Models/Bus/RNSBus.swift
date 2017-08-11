@@ -14,12 +14,24 @@ class RNSBus: RNSCoordinateModel {
     dynamic var minute: Int = 0
     dynamic var num: Int = 0
     dynamic var showNext: Bool = false
+    let busStops = List<RNSBusStop>()
+    dynamic var currentBusStops: RNSBusStop?
+    
+    dynamic var driver: String? = nil
+    dynamic var conductor: String? = nil
     
     func stubBus() {
         generate()
         latitude = 59.931448
         longitude = 30.292849
-    }
+        
+        let list = RNSBusStop.generateList
+        busStops.append(objectsIn: list)
+        currentBusStops = list.randomItem()
+        
+        driver = "Петров Сергей Иванович"
+        conductor = "Константинова Василиана Валерьяновна"
+   }
     
     func generate() {
         minute = Int.rand(1, limit: 200)
