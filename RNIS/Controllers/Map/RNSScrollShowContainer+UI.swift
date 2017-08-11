@@ -39,8 +39,10 @@ extension RNSScrollShowContainer {
         guard let frame = containerView?.frame else {
             return
         }
-        let rect = scrollView.convert(frame, to: STRouter.rootView)
-        (view as? RNSTouchView)?.rect = CGRect(x: rect.origin.x, y: UIScreen.height + rect.origin.y, width: rect.width, height: rect.height)
+        var rect = scrollView.convert(frame, to: STRouter.rootView)
+        rect = CGRect(x: rect.origin.x, y: UIScreen.height + rect.origin.y, width: rect.width, height: rect.height)
+        handlerRect?(rect)
+        (view as? RNSTouchView)?.rect = rect
     }
     
     func updatePositionTop() {

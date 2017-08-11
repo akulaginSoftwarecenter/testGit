@@ -13,10 +13,20 @@ class RNSBusDetailController: UIViewController {
     static func initController(_ item: RNSBus?) -> UIViewController? {
         let vc = RNSBusDetailController.initialController as? RNSBusDetailController
         vc?.item = item
-        return  STRouter.scrollShowContainer(vc, topTitle: item?.title)
+        
+        let container = STRouter.scrollShowContainer(vc, topTitle: item?.title)
+        
+        container?.handlerRect = { rect in
+            vc?.handlerRect?(rect)
+        }
+        vc?.startBottomOffset = container?.startBottomOffset
+        
+        return  container
     }
     
     var item: RNSBus?
+    var startBottomOffset: CGFloat?
+    var handlerRect: AliasRectBlock?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var viewTotal: RNSBusDetailTotalView!
@@ -27,6 +37,7 @@ class RNSBusDetailController: UIViewController {
         
         prepareItems()
         prepareTitle()
+        observeRectContainer()
     }
     
     func prepareItems() {
@@ -36,6 +47,13 @@ class RNSBusDetailController: UIViewController {
     
     func prepareTitle() {
         titleLabel.text = item?.title
+    }
+    
+    func observeRectContainer() {
+        handlerRect = {[weak self] rect in
+            print("rect",rect)
+            print("startBottomOffset",self?.startBottomOffset ?? 0)
+        }
     }
     
     override class var storyboardName: String {

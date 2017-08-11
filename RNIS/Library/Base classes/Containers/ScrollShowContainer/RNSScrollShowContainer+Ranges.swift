@@ -17,13 +17,13 @@ extension RNSScrollShowContainer {
     }
     
     var rangeHalf: RNSRangeScroll {
-        return RNSRangeScroll(startOffset...halfOffset, handlerOne: {[weak self] in
+        return RNSRangeScroll(startBottomOffset...halfOffset, handlerOne: {[weak self] in
             self?.scrollToStart()
         })
     }
     
     var rangeThird: RNSRangeScroll {
-        return RNSRangeScroll(almostOffset...startOffset, handlerOne: {[weak self] in
+        return RNSRangeScroll(almostOffset...startBottomOffset, handlerOne: {[weak self] in
             self?.scrollToStart()
         })
     }

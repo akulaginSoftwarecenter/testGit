@@ -34,7 +34,7 @@ extension STRouter {
         return redContainer(scrollContainer(viewController))
     }
     
-    static func scrollShowContainer(_ viewController: UIViewController?, topTitle: String? = nil) -> UIViewController? {
+    static func scrollShowContainer(_ viewController: UIViewController?, topTitle: String? = nil) -> RNSScrollShowContainer? {
         return RNSScrollShowContainer.initController(viewController,topTitle: topTitle)
     }
 }

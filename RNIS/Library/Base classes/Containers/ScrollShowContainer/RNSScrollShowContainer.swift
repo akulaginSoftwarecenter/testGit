@@ -13,7 +13,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
-    static func initController(_ container: UIViewController?, topTitle: String? = nil, heightButtonTop: CGFloat = 64) -> UIViewController? {
+    static func initController(_ container: UIViewController?, topTitle: String? = nil, heightButtonTop: CGFloat = 64) -> RNSScrollShowContainer? {
         let vc = RNSScrollShowContainer.initialController as? RNSScrollShowContainer
         vc?.containerVC = container
         vc?.topTitle = topTitle
@@ -35,6 +35,10 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     }
     
     var startOverTopDeselerate: Bool = false
+    
+    var handlerRect: AliasRectBlock?
+    
+    var startBottomOffset: CGFloat = 200
     
     lazy var ranges: [RNSRangeScroll] = {
         return [self.rangeNav, self.rangeHalf, self.rangeThird, self.rangeBottom]

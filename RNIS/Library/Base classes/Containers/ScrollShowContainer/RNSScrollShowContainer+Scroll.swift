@@ -15,7 +15,7 @@ extension RNSScrollShowContainer {
     }
     
     func scrollToStart() {
-        scrollTo(startOffset)
+        scrollTo(startBottomOffset)
     }
     
     func scrollToBottom() {
