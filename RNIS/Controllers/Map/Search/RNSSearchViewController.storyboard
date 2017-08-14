@@ -148,6 +148,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="decorControl" destination="6Bb-WG-GTw" id="227-A3-Os1"/>
                         <outlet property="segmentedControl" destination="8pT-Nm-gqz" id="xaS-L7-6ki"/>
                         <outlet property="tableView" destination="RbW-0W-CJ3" id="NLH-Xp-Z75"/>
                         <outlet property="textField" destination="6n5-Y2-3TC" id="C9g-hA-AeA"/>

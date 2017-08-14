@@ -21,7 +21,7 @@ extension RNSSearchViewController {
     }
       
     func prepareSegmented() {
-        segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.cffazm18],
+        decorControl.setTitleTextAttributes([NSFontAttributeName: UIFont.cffazm18],
                                                 for: .normal)
     }
 }

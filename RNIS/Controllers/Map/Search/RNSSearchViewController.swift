@@ -10,6 +10,8 @@ import UIKit
 
 class RNSSearchViewController: UIViewController {
     
+    @IBOutlet weak var decorControl: UISegmentedControl!
+    
     @IBOutlet weak var textField: RNSTextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
