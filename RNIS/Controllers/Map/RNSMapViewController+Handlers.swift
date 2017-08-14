@@ -31,5 +31,9 @@ extension RNSMapViewController {
         RNSMapManager.handlerShowInfo = { [weak self] item in
             self?.showInfoIfNeed(item)
         }
+        
+        RNSMapManager.handlerMapCenter = { [weak self] item in
+            self?.mapCenter(item)
+        }
     }
 }

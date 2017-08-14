@@ -11,6 +11,10 @@ import ObjectMapper
 
 class RNISMappableBase: Mappable {
     
+    init() {
+        
+    }
+    
     required init?(map: Map) {
     }
     

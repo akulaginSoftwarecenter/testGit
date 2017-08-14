@@ -9,26 +9,24 @@
 import UIKit
 
 class RNSSearchViewController: UIViewController {
-
+    
+    @IBOutlet weak var textField: RNSTextField!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var items = [RNSTextItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    @IBAction func actionSegmented(_ sender: UISegmentedControl) {
-        for indx in 0 ... sender.subviews.count-1 {
-            let subview = sender.subviews[indx]
-            if indx != sender.selectedSegmentIndex {
-                let color = UIColor.D95A53
-                subview.tintColor = color
-                subview.backgroundColor = color
-            } else {
-                subview.tintColor = nil
-                subview.backgroundColor = nil
-            }
-        }
+        
+        prepareSegmented()
     }
     
     override class var storyboardName: String {
         return "RNSSearchViewController"
+    }
+    
+    deinit {
+        print("RNSSearchViewController deinit")
     }
 }

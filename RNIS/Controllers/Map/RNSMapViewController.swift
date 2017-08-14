@@ -52,11 +52,6 @@ class RNSMapViewController: UIViewController {
         prepareLightButton()
         prepareHandlers()
         prepareStub()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         startLocation()
     }
     

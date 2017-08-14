@@ -19,6 +19,7 @@ class RNSMapManager: NSObject {
     static var handlerAddRoute: ((PGPolyline?) -> ())?
     static var handlerDismissOldPresentVC: EmptyBlock?
     static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
+    static var handlerMapCenter: ((PGGeoPoint?) -> ())?
     
     static func prepareRoutePoints() {
         let point = RNSLocationManager.point
@@ -47,5 +48,9 @@ class RNSMapManager: NSObject {
             return
         }
         _ = RNSPinBus(item)
-   }
+    }
+    
+    static func mapCenter(_ point: PGGeoPoint?) {
+        handlerMapCenter?(point)
+    }
 }
