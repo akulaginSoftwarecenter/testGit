@@ -2761,6 +2761,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.t1.rnis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RNIS/RNIS-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "RNIS/Application/RNIS-Bridging-Header.h";
@@ -2794,6 +2795,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.t1.rnis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RNIS/RNIS-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "RNIS/Application/RNIS-Bridging-Header.h";
