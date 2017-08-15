@@ -34,7 +34,6 @@ class RNSMapViewController: UIViewController {
         super.viewDidLoad()
 
         RNSMapManager.prepareStub()
-        prepareLightButton()
         RNSMapManager.startLocation()
     }
     

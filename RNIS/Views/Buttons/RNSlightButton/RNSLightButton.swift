@@ -19,9 +19,13 @@ class RNSLightButton: BaseViewWithXIBInit {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        updateStateLightButton()
+        button.touchUpInside(handler: changeTraffic)
+        /*
         button.touchUpInside{
-            self.handlerAction?()
+            self..changeTraffic()
         }
+ */
     }
     
     func loadTraffic(minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int32?) {
@@ -77,5 +81,9 @@ class RNSLightButton: BaseViewWithXIBInit {
     func hiddenTraffic() {
         setImage(#imageLiteral(resourceName: "svetofor_deselect"))
         label.isHidden = true;
+    }
+    
+    deinit {
+        print("RNSLightButton deinit")
     }
 }

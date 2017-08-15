@@ -18,7 +18,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     }
       
     func onMapEvent() {
-        updateStateLightButton()
+        lightButton.updateStateLightButton()
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
