@@ -93,7 +93,6 @@
 		836277C71F3804B8009FB712 /* RNSChangePhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */; };
 		836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277CA1F380C48009FB712 /* RNSChangeCodeController.swift */; };
 		836277CF1F3814FA009FB712 /* RNSPinBusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277CE1F3814FA009FB712 /* RNSPinBusStop.swift */; };
-		836277D11F3816BE009FB712 /* RNSMapViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277D01F3816BE009FB712 /* RNSMapViewController+Stub.swift */; };
 		836277D71F381DFA009FB712 /* RNSBusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277D61F381DFA009FB712 /* RNSBusStop.swift */; };
 		836277DA1F381FE1009FB712 /* RNSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277D91F381FE1009FB712 /* RNSDataManager.swift */; };
 		836277DD1F382CB2009FB712 /* RNSScrollShowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */; };
@@ -154,6 +153,8 @@
 		836EEF1A1F3C1839007631D9 /* RNSDataManager+Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF191F3C1839007631D9 /* RNSDataManager+Bus.swift */; };
 		836EEF1C1F3C1876007631D9 /* RNSDataManager+BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF1B1F3C1876007631D9 /* RNSDataManager+BusStop.swift */; };
 		836EEF221F3C1FDE007631D9 /* RNSImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836EEF211F3C1FDE007631D9 /* RNSImageFactory.swift */; };
+		837036B01F428B2F00FBD1E9 /* RNSMapManager+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837036AF1F428B2F00FBD1E9 /* RNSMapManager+Stub.swift */; };
+		837036B21F428CB400FBD1E9 /* RNSMapManager+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837036B11F428CB400FBD1E9 /* RNSMapManager+MapView.swift */; };
 		8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE981F204C4000FCA26E /* RNSLightButton.swift */; };
 		8375DE9B1F204C5600FCA26E /* RNSLightButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */; };
 		8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE9D1F204FA700FCA26E /* LoaderView.swift */; };
@@ -373,7 +374,6 @@
 		836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePhoneController.swift; path = Controllers/Profile/ChangePhone/RNSChangePhoneController.swift; sourceTree = "<group>"; };
 		836277CA1F380C48009FB712 /* RNSChangeCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangeCodeController.swift; path = Controllers/Profile/ChangePhone/Code/RNSChangeCodeController.swift; sourceTree = "<group>"; };
 		836277CE1F3814FA009FB712 /* RNSPinBusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinBusStop.swift; path = Views/OVerLays/PinBus/RNSPinBusStop.swift; sourceTree = "<group>"; };
-		836277D01F3816BE009FB712 /* RNSMapViewController+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Stub.swift"; path = "Controllers/Map/RNSMapViewController+Stub.swift"; sourceTree = "<group>"; };
 		836277D61F381DFA009FB712 /* RNSBusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusStop.swift; path = Models/DataBase/BusStop/RNSBusStop.swift; sourceTree = "<group>"; };
 		836277D91F381FE1009FB712 /* RNSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDataManager.swift; path = Managers/Data/RNSDataManager.swift; sourceTree = "<group>"; };
 		836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSScrollShowContainer.swift; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer.swift"; sourceTree = "<group>"; };
@@ -436,6 +436,8 @@
 		836EEF191F3C1839007631D9 /* RNSDataManager+Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSDataManager+Bus.swift"; path = "Managers/Data/RNSDataManager+Bus.swift"; sourceTree = "<group>"; };
 		836EEF1B1F3C1876007631D9 /* RNSDataManager+BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSDataManager+BusStop.swift"; path = "Managers/Data/RNSDataManager+BusStop.swift"; sourceTree = "<group>"; };
 		836EEF211F3C1FDE007631D9 /* RNSImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSImageFactory.swift; path = Library/Factory/Image/RNSImageFactory.swift; sourceTree = "<group>"; };
+		837036AF1F428B2F00FBD1E9 /* RNSMapManager+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapManager+Stub.swift"; path = "Managers/Map/RNSMapManager+Stub.swift"; sourceTree = "<group>"; };
+		837036B11F428CB400FBD1E9 /* RNSMapManager+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapManager+MapView.swift"; path = "Managers/Map/RNSMapManager+MapView.swift"; sourceTree = "<group>"; };
 		8375DE981F204C4000FCA26E /* RNSLightButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLightButton.swift; path = Views/Buttons/RNSlightButton/RNSLightButton.swift; sourceTree = "<group>"; };
 		8375DE9A1F204C5600FCA26E /* RNSLightButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSLightButton.xib; path = Views/Buttons/RNSlightButton/RNSLightButton.xib; sourceTree = "<group>"; };
 		8375DE9D1F204FA700FCA26E /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
@@ -1073,7 +1075,9 @@
 			isa = PBXGroup;
 			children = (
 				835718B11F21C86400DE5E25 /* RNSMapManager.swift */,
+				837036B11F428CB400FBD1E9 /* RNSMapManager+MapView.swift */,
 				83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */,
+				837036AF1F428B2F00FBD1E9 /* RNSMapManager+Stub.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -1403,7 +1407,6 @@
 				83ED5E301F2709D4007D9F1C /* RNSMapViewController+OverLays.swift */,
 				837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */,
 				83ED5E2B1F2706EF007D9F1C /* RNSMapViewController+Route.swift */,
-				836277D01F3816BE009FB712 /* RNSMapViewController+Stub.swift */,
 				8375DEA31F205FB200FCA26E /* RNSMapViewController+Traffic.swift */,
 				83B2E0091F1DEE2500FA92A4 /* RNSMapViewController+Action.swift */,
 				835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */,
@@ -2310,9 +2313,11 @@
 				837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
 				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				838CE93B1F3DB26300C10FBA /* RNSNameFieldLeft.swift in Sources */,
+				837036B01F428B2F00FBD1E9 /* RNSMapManager+Stub.swift in Sources */,
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
+				837036B21F428CB400FBD1E9 /* RNSMapManager+MapView.swift in Sources */,
 				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
 				836EEF031F3BFAB2007631D9 /* RNSBus.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
@@ -2357,7 +2362,6 @@
 				831A85B71F41497F0095F006 /* RNSBusStopTemp.swift in Sources */,
 				836EEF1C1F3C1876007631D9 /* RNSDataManager+BusStop.swift in Sources */,
 				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
-				836277D11F3816BE009FB712 /* RNSMapViewController+Stub.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				836EEF071F3BFC02007631D9 /* Random.swift in Sources */,
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,

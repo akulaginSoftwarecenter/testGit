@@ -11,21 +11,11 @@ import Foundation
 extension RNSMapViewController: PGMapViewDelegate {
     
     func prepareMapView() {
-        mapView.enableCompass()
+        self.view.insertSubview(mapView, at: 0)
+        mapView.autoPinEdgesToSuperviewEdges()
+        mapView.delegate = self
     }
-    
-    func startLocation() {
-        RNSLocationManager.startLocation { [weak self] in
-            self?.centerUserLocation()
-            RNSMapManager.prepareRoutePoints()
-        }
-    }
-    
-    func centerUserLocation() {
-        mapCenter(RNSLocationManager.point)
-        mapView.setZoomLevel(13)
-    }
-    
+      
     func onMapEvent() {
         updateStateLightButton()
     }
@@ -41,13 +31,10 @@ extension RNSMapViewController: PGMapViewDelegate {
     }
     
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
-        showInfoIfNeed((overlay as? RNSPinItem)?.item)
+        RNSMapManager.showInfoIfNeed((overlay as? RNSPinItem)?.item)
     }
     
     func mapCenter(_ point: PGGeoPoint?) {
-        guard let point = point else {
-            return
-        }
-        mapView.setMapCenter(point)
+        RNSMapManager.mapCenter(point)
     }
  }

@@ -10,15 +10,24 @@ import Foundation
 
 extension RNSMapManager {
     
+    static func showInfoIfNeed(_ item: RNSCoordinateModel?) {
+        mapCenter(item?.point)
+        handlerShowInfo?(item)
+    }
+    
+    static var overlays: NSMutableArray? {
+        return mapView.overlays()
+    }
+    
     static func addOverlay(_ obj: Any) {
-        handlerAddOverlay?(obj)
+        guard let overlays = overlays,
+            !overlays.contains(self) else {
+                return
+        }
+        overlays.add(obj)
     }
     
     static func removeOverlay(_ obj: Any) {
-        handlerRemoveOverlay?(obj)
-    }
-    
-    static func showInfoIfNeed(_ item: RNSCoordinateModel?) {
-        handlerShowInfo?(item)
+        overlays?.remove(obj)
     }
 }

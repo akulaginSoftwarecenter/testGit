@@ -12,14 +12,6 @@ extension RNSMapViewController {
     
     func prepareHandlers() {
         
-        RNSMapManager.handlerAddOverlay = { [weak self] item in
-            self?.addOverlay(item)
-        }
-        
-        RNSMapManager.handlerRemoveOverlay = { [weak self] item in
-            self?.removeOverlay(item)
-        }
-        
         RNSMapManager.handlerAddRoute = { [weak self] item in
             self?.addRoute(item)
         }
@@ -30,10 +22,6 @@ extension RNSMapViewController {
         
         RNSMapManager.handlerShowInfo = { [weak self] item in
             self?.showInfoIfNeed(item)
-        }
-        
-        RNSMapManager.handlerMapCenter = { [weak self] item in
-            self?.mapCenter(item)
         }
     }
 }

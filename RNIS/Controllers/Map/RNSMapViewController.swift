@@ -17,24 +17,9 @@ class RNSMapViewController: UIViewController {
     /**
      base mapview PGView
      */
-    lazy var mapView: MapView = {
-        let mapView = MapView()
-        mapView.startApplication()
-        mapView.clearMapCache()
-        mapView.setMapHost(mapHost)
-        mapView.setTrafficMarksHost(mapHost)
-        mapView.enterForeground()
-        mapView.enableMyLocation()
-        mapView.setMapRegime(1)
-        let overlay = mapView.myLocationOverlay()
-        overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
-        overlay?.setRotationEnabled(false)
-        
-        self.view.insertSubview(mapView, at: 0)
-        mapView.autoPinEdgesToSuperviewEdges()
-        mapView.delegate = self
-        return mapView
-    }()
+    var mapView: MapView {
+        return RNSMapManager.mapView
+    }
     
     var presentViewController: UIViewController?
     
@@ -47,12 +32,18 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        prepareMapView()
+
+        RNSMapManager.prepareStub()
         prepareLightButton()
+        RNSMapManager.startLocation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+     
+        print("viewWillAppear")
+        prepareMapView()
         prepareHandlers()
-        prepareStub()
-        startLocation()
     }
     
     override class var storyboardName: String {

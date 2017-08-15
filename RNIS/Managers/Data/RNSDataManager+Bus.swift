@@ -16,6 +16,10 @@ extension RNSDataManager {
     }
     
     static func createStubBusIfNeed() {
+        guard buss?.count == 0  else {
+            return
+        }
+        
          write({
             if let items = buss {
                 realm?.delete(items)

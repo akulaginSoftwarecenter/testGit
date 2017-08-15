@@ -10,16 +10,39 @@ import UIKit
 
 class RNSMapManager: NSObject {
     
+    static let shared = RNSMapManager()
+    
+    static var mapView: MapView {
+        return shared.mapView
+    }
+    
+    /**
+     base mapview PGView
+     */
+    lazy var mapView: MapView = {
+        let mapView = MapView()
+        mapView.startApplication()
+        mapView.clearMapCache()
+        mapView.setMapHost(mapHost)
+        mapView.setTrafficMarksHost(mapHost)
+        mapView.enterForeground()
+        mapView.enableMyLocation()
+        mapView.setMapRegime(1)
+        let overlay = mapView.myLocationOverlay()
+        overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
+        overlay?.setRotationEnabled(false)
+        mapView.enableCompass()
+        return mapView
+    }()
+    
+    
     static var pointFrom: PGGeoPoint?
     static var pointHere: PGGeoPoint?
-
-    static var handlerAddOverlay: AnyBlock?
-    static var handlerRemoveOverlay: AnyBlock?
+    
     static var handlerRemovePinBuild: EmptyBlock?
     static var handlerAddRoute: ((PGPolyline?) -> ())?
     static var handlerDismissOldPresentVC: EmptyBlock?
     static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
-    static var handlerMapCenter: ((PGGeoPoint?) -> ())?
     
     static func prepareRoutePoints() {
         let point = RNSLocationManager.point
@@ -29,28 +52,5 @@ class RNSMapManager: NSObject {
     
     static func removeOldPinBuild() {
         handlerRemovePinBuild?()
-    }
-    
-    static func prepareStubBusStop() {
-        RNSDataManager.createStubBusStopIfNeed()
-        
-        guard let items = RNSDataManager.busStops else {
-            return
-        }
-        for item in items {
-            _ = RNSPinBusStop(item)
-        }
-    }
-    
-    static func prepareStubBus() {
-        RNSDataManager.createStubBusIfNeed()
-        guard let item = RNSDataManager.buss?.first else {
-            return
-        }
-        _ = RNSPinBus(item)
-    }
-    
-    static func mapCenter(_ point: PGGeoPoint?) {
-        handlerMapCenter?(point)
     }
 }
