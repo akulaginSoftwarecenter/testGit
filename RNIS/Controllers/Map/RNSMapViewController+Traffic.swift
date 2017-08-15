@@ -11,7 +11,7 @@ import Foundation
 extension RNSMapViewController {
     
     var getTraffic: Bool {
-        return mapView.getTraffic() 
+        return mapView.getTraffic()
     }
     
     func changeTraffic() {

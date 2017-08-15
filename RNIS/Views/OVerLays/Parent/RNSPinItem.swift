@@ -18,6 +18,7 @@ class RNSPinItem: PGOverlay {
         self.item = item
         preparePoint()
         prepareImage()
+        prepareHandlers()
     }
     
     func prepareImage() {
@@ -36,5 +37,11 @@ class RNSPinItem: PGOverlay {
     
     func addOnMap() {
         RNSMapManager.addOverlay(self)
+    }
+    
+    func prepareHandlers() {
+        item?.handlerRemove = {
+            RNSMapManager.removeOverlay(self)
+        }
     }
 }

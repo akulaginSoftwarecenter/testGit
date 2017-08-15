@@ -14,6 +14,12 @@ class RNSCoordinateModel: Object {
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
     
+    var handlerRemove: EmptyBlock?
+    
+    override static func ignoredProperties() -> [String] {
+        return ["handlerRemove"]
+    }
+    
     var point: PGGeoPoint {
         return PGGeoPoint(latitude: latitude, longitude: longitude)
     }

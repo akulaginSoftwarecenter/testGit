@@ -13,6 +13,7 @@ extension RNSMapViewController: PGMapViewDelegate {
     func prepareMapView() {
         self.view.insertSubview(mapView, at: 0)
         mapView.autoPinEdgesToSuperviewEdges()
+        mapView.clearMapCache()
         mapView.delegate = self
     }
       

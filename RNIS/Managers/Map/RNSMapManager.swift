@@ -19,22 +19,7 @@ class RNSMapManager: NSObject {
     /**
      base mapview PGView
      */
-    lazy var mapView: MapView = {
-        let mapView = MapView()
-        mapView.startApplication()
-        mapView.clearMapCache()
-        mapView.setMapHost(mapHost)
-        mapView.setTrafficMarksHost(mapHost)
-        mapView.enterForeground()
-        mapView.enableMyLocation()
-        mapView.setMapRegime(1)
-        let overlay = mapView.myLocationOverlay()
-        overlay?.setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0)
-        overlay?.setRotationEnabled(false)
-        mapView.enableCompass()
-        return mapView
-    }()
-    
+    var mapView: MapView = RNSMapView()
     
     static var pointFrom: PGGeoPoint?
     static var pointHere: PGGeoPoint?

@@ -18,12 +18,11 @@ extension RNSMapManager {
     static func prepareStubBusStop() {
         RNSDataManager.createStubBusStopIfNeed()
         
-        guard let items = RNSDataManager.busStops else {
+        guard let item = RNSDataManager.busStops?.first else {
             return
         }
-        for item in items {
-            _ = RNSPinBusStop(item)
-        }
+        item.handlerRemove?()
+        _ = RNSPinBusStop(item)
     }
     
     static func prepareStubBus() {
@@ -31,6 +30,7 @@ extension RNSMapManager {
         guard let item = RNSDataManager.buss?.first else {
             return
         }
+        item.handlerRemove?()
         _ = RNSPinBus(item)
     }
 }
