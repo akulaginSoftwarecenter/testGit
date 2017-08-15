@@ -8,17 +8,10 @@
 
 import Foundation
 
-extension RNSMapViewController: PGMapViewDelegate {
+extension RNSMapViewController {
     
-    func prepareMapView() {
-        self.view.insertSubview(mapView, at: 0)
-        mapView.autoPinEdgesToSuperviewEdges()
-        mapView.clearMapCache()
-        mapView.delegate = self
-    }
-      
     func onMapEvent() {
-        lightButton.updateStateLightButton()
+        
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {

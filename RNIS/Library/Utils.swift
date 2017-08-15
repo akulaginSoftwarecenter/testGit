@@ -17,6 +17,8 @@ typealias AliasImagePickerBlock = (UIImagePickerControllerSourceType) -> ()
 typealias AliasThrowsBlock = () throws -> Void
 typealias AliasRangeBlock = (RNSRangeScroll) -> ()
 typealias AliasRectBlock = (CGRect) -> ()
+typealias AliasPointBlock = (PGGeoPoint) -> ()
+typealias AliasOverlayBlock = (PGOverlay) -> ()
 
 
 func NSLoc(_ key: String?) -> String {
