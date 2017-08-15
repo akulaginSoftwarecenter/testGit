@@ -63,6 +63,9 @@
                                     <constraint firstAttribute="width" constant="56" id="uqW-yw-67A"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="ic_prev_route"/>
+                                <connections>
+                                    <action selector="actionRoute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aKU-lS-UkL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-pi-V4l">
                                 <rect key="frame" x="311" y="595" width="56" height="56"/>

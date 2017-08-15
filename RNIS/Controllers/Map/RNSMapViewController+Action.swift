@@ -38,7 +38,10 @@ extension RNSMapViewController {
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        let vc = RNSSearchViewController.initialController
-        STRouter.redContainer(vc)?.pushAnimated()
+        RNSSearchViewController.initialPushAnimatedRed()
+    }
+      
+    @IBAction func actionRoute(_ sender: Any) {
+        RNSDutyViewController.initialPushAnimatedRed()
     }
 }
