@@ -11,9 +11,16 @@ import UIKit
 class RNSDutyViewController: UIViewController {
 
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var fromField: UITextField!
     @IBOutlet weak var inField: UITextField!
+    
+    var fromText: String? {
+        return fromField.text
+    }
+    
+    var inText: String? {
+        return inField.text
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
