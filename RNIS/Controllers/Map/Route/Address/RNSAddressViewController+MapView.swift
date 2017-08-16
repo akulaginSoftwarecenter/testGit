@@ -26,7 +26,11 @@ extension RNSAddressViewController {
         STRouter.showLoader()
         RNSLocationManager.geoCode(point) {[weak self] text in
             STRouter.removeLoader()
-            self?.textField.text = text
+            self?.prepareAddress(text)
         }
+    }
+    
+    func prepareAddress(_ text: String?) {
+        textField.text = text
     }
 }

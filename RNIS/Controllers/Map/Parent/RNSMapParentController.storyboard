@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -179,6 +180,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backAction:" destination="kPS-F3-8vu" eventType="touchUpInside" id="33E-W1-tXU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Откуда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpJ-na-jw6" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="137" y="21" width="71" height="21"/>
@@ -191,7 +195,7 @@
                                 <rect key="frame" x="0.0" y="85" width="375" height="45"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите адрес или укажите на карте" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-X8-s17">
-                                        <rect key="frame" x="30" y="0.0" width="345" height="45"/>
+                                        <rect key="frame" x="15" y="0.0" width="360" height="45"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
@@ -202,13 +206,26 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKD-dZ-eIH">
+                                        <rect key="frame" x="326" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DKD-dZ-eIH" secondAttribute="height" multiplier="1:1" id="SF8-BR-58D"/>
+                                        </constraints>
+                                        <state key="normal" image="MyAddress"/>
+                                        <connections>
+                                            <action selector="actionMyLocation:" destination="kPS-F3-8vu" eventType="touchUpInside" id="Ytd-45-0VS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85098039219999999" green="0.35294117650000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5wi-Ci-q01"/>
                                     <constraint firstItem="4fj-X8-s17" firstAttribute="top" secondItem="E2J-az-pMV" secondAttribute="top" id="9P5-g2-0Xc"/>
+                                    <constraint firstAttribute="bottom" secondItem="DKD-dZ-eIH" secondAttribute="bottom" id="Hor-VG-0VX"/>
                                     <constraint firstAttribute="trailing" secondItem="4fj-X8-s17" secondAttribute="trailing" id="Ltv-aH-Qig"/>
-                                    <constraint firstItem="4fj-X8-s17" firstAttribute="leading" secondItem="E2J-az-pMV" secondAttribute="leading" constant="30" id="b6X-Io-pXS"/>
+                                    <constraint firstItem="DKD-dZ-eIH" firstAttribute="top" secondItem="E2J-az-pMV" secondAttribute="top" id="NUW-hT-FuG"/>
+                                    <constraint firstAttribute="trailing" secondItem="DKD-dZ-eIH" secondAttribute="trailing" constant="4" id="XT6-Lm-eFV"/>
+                                    <constraint firstItem="4fj-X8-s17" firstAttribute="leading" secondItem="E2J-az-pMV" secondAttribute="leading" constant="15" id="b6X-Io-pXS"/>
                                     <constraint firstAttribute="bottom" secondItem="4fj-X8-s17" secondAttribute="bottom" id="yDd-c7-0Sy"/>
                                 </constraints>
                             </view>
@@ -238,6 +255,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MyAddress" width="23" height="32"/>
         <image name="Poisk" width="56" height="56"/>
         <image name="compas" width="56" height="56"/>
         <image name="ic_prev_route" width="50" height="50"/>

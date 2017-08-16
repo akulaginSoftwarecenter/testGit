@@ -9,7 +9,6 @@
 import UIKit
 
 class RNSMapParentController: UIViewController {
-
     /**
      base mapview PGView
      */

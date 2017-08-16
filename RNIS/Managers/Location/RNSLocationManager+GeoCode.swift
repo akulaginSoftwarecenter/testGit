@@ -42,4 +42,8 @@ extension RNSLocationManager {
             }
         }
     }
+    
+    static func geoCodeMylocation(complete: AliasStringBlock?) {
+        geoCode(point, complete: complete)
+    }
 }
