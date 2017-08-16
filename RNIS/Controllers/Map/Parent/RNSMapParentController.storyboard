@@ -169,9 +169,21 @@
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-tc-UKv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ye-Cm-Kgz">
+                                        <rect key="frame" x="70" y="0.0" width="305" height="85"/>
+                                        <connections>
+                                            <action selector="actionTop:" destination="kPS-F3-8vu" eventType="touchUpInside" id="khm-F8-FIU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3ye-Cm-Kgz" secondAttribute="bottom" id="EZA-5P-mFg"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ye-Cm-Kgz" secondAttribute="trailing" id="Gh3-mg-LYO"/>
+                                    <constraint firstItem="3ye-Cm-Kgz" firstAttribute="leading" secondItem="ogo-tc-UKv" secondAttribute="leading" constant="70" id="Zfs-HB-HSY"/>
                                     <constraint firstAttribute="height" constant="85" id="fFO-Pn-Z2o"/>
+                                    <constraint firstItem="3ye-Cm-Kgz" firstAttribute="top" secondItem="ogo-tc-UKv" secondAttribute="top" id="pR7-8u-dwx"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrA-Rc-MD4" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
@@ -194,7 +206,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2J-az-pMV">
                                 <rect key="frame" x="0.0" y="85" width="375" height="45"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите адрес или укажите на карте" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-X8-s17">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите адрес или укажите на карте" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-X8-s17">
                                         <rect key="frame" x="15" y="0.0" width="360" height="45"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,9 +217,12 @@
                                                 <color key="value" red="0.52941176469999995" green="0.20392156859999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="kPS-F3-8vu" id="8Rb-wB-wvU"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKD-dZ-eIH">
-                                        <rect key="frame" x="326" y="0.0" width="45" height="45"/>
+                                        <rect key="frame" x="330" y="0.0" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DKD-dZ-eIH" secondAttribute="height" multiplier="1:1" id="SF8-BR-58D"/>
                                         </constraints>
@@ -224,7 +239,7 @@
                                     <constraint firstAttribute="bottom" secondItem="DKD-dZ-eIH" secondAttribute="bottom" id="Hor-VG-0VX"/>
                                     <constraint firstAttribute="trailing" secondItem="4fj-X8-s17" secondAttribute="trailing" id="Ltv-aH-Qig"/>
                                     <constraint firstItem="DKD-dZ-eIH" firstAttribute="top" secondItem="E2J-az-pMV" secondAttribute="top" id="NUW-hT-FuG"/>
-                                    <constraint firstAttribute="trailing" secondItem="DKD-dZ-eIH" secondAttribute="trailing" constant="4" id="XT6-Lm-eFV"/>
+                                    <constraint firstAttribute="trailing" secondItem="DKD-dZ-eIH" secondAttribute="trailing" id="XT6-Lm-eFV"/>
                                     <constraint firstItem="4fj-X8-s17" firstAttribute="leading" secondItem="E2J-az-pMV" secondAttribute="leading" constant="15" id="b6X-Io-pXS"/>
                                     <constraint firstAttribute="bottom" secondItem="4fj-X8-s17" secondAttribute="bottom" id="yDd-c7-0Sy"/>
                                 </constraints>
@@ -245,6 +260,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonMyLocation" destination="DKD-dZ-eIH" id="fgk-e9-1EJ"/>
                         <outlet property="textField" destination="4fj-X8-s17" id="vEj-St-tfk"/>
                         <outlet property="titleLabel" destination="hpJ-na-jw6" id="qTV-EZ-EjE"/>
                     </connections>

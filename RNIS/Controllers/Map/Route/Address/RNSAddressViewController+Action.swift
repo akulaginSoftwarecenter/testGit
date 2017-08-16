@@ -21,4 +21,8 @@ extension RNSAddressViewController {
     @IBAction func backAction(_ sender: Any) {
         complete?(text)
     }
+    
+    @IBAction func actionTop(_ sender: Any) {
+        endEdit()
+    }
 }

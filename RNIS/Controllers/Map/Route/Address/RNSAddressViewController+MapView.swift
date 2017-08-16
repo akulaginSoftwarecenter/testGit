@@ -23,6 +23,7 @@ extension RNSAddressViewController {
     }
     
     func geoCode(_ point: PGGeoPoint) {
+        endEdit()
         STRouter.showLoader()
         RNSLocationManager.geoCode(point) {[weak self] text in
             STRouter.removeLoader()

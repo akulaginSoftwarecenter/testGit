@@ -25,6 +25,7 @@ class RNSAddressViewController: UIViewController {
     var type: TypeAddress?
     var complete: AliasStringBlock?
     
+    @IBOutlet weak var buttonMyLocation: UIButton!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var titleLabel: RNSTopTitle!
     
