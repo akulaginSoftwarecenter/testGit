@@ -19,7 +19,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     }
     
     func startEdit() {
-        tableView.isHidden = false
+        //tableView.isHidden = false
         prepareTableView()
         buttonMyLocation.isHidden = true
     }

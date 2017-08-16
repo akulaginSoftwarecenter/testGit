@@ -11,6 +11,13 @@ import RealmSwift
 
 extension RNSDataManager {
     
+    static func searchItems(_ text: String?) -> Results<RNSSearchHistory>? {
+        guard let text = text, !text.isEmpty else {
+            return searchItems
+        }
+        return searchItems
+    }
+    
     static var searchItems: Results<RNSSearchHistory>? {
         return realm?.objects(RNSSearchHistory.self)
     }

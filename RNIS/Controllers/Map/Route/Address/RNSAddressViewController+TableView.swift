@@ -12,7 +12,7 @@ import RealmSwift
 extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
     
     var items: Results<RNSSearchHistory>? {
-        return RNSDataManager.searchItems
+        return RNSDataManager.searchItems(text)
     }
     
     func prepareTableView() {
