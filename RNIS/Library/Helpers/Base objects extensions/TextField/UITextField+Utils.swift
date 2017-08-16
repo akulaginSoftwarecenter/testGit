@@ -29,4 +29,27 @@ extension UITextField {
     func actionEditingChanged() {
         handlerEditingChanged?()
     }
+    
+    @IBInspectable var placeholderColor: UIColor? {
+        get {
+            return nil
+        }
+        set {
+            self.preparePlaceholderColor(newValue)
+        }
+    }
+    
+    func preparePlaceholderColor(_ placeholderColor: UIColor?) {
+        guard   let placeholderColor = placeholderColor,
+               let placeholder = placeholder,
+            let font = font else {
+            return
+        }
+
+        let attributes = [NSForegroundColorAttributeName: placeholderColor,
+                          NSFontAttributeName: font]
+        
+        attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                   attributes:attributes)
+    }
 }

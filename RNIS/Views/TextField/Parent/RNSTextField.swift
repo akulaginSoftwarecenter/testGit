@@ -58,7 +58,7 @@ class RNSTextField: UITextField {
         return .cffazm(placeholderFontSize)
     }
     
-    var placeholderColor: UIColor {
+    var placeholderColorText: UIColor {
         return .whiteAlpha50
     }
     
@@ -133,7 +133,7 @@ class RNSTextField: UITextField {
         guard let placeholderKey = placeholderKey else {
             return
         }
-        let attributes = [NSForegroundColorAttributeName: placeholderColor,
+        let attributes = [NSForegroundColorAttributeName: placeholderColorText,
                           NSFontAttributeName: placeholderFont]
         
         attributedPlaceholder = NSAttributedString(string:NSLoc(placeholderKey),

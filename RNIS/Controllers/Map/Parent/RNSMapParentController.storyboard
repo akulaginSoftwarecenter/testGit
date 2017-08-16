@@ -8,6 +8,11 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="wav-VP-EeY">
@@ -61,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1C-o9-MhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="-483"/>
+            <point key="canvasLocation" x="-90" y="-730"/>
         </scene>
         <!--Map Parent Controller-->
         <scene sceneID="ec7-Uu-rQV">
@@ -143,6 +148,94 @@
             </objects>
             <point key="canvasLocation" x="438" y="80"/>
         </scene>
+        <!--Address View Controller-->
+        <scene sceneID="cb8-au-odU">
+            <objects>
+                <viewController storyboardIdentifier="RNSAddressViewController" id="kPS-F3-8vu" customClass="RNSAddressViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ugi-jQ-TNu"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZZt-h4-qvY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YVv-L2-glF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="te7-tk-i73">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="WmS-dc-ejs" kind="embed" id="rc3-r7-Eq4"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-tc-UKv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="fFO-Pn-Z2o"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrA-Rc-MD4" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="41" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Откуда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpJ-na-jw6" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="137" y="21" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2J-az-pMV">
+                                <rect key="frame" x="0.0" y="85" width="375" height="45"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите адрес или укажите на карте" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-X8-s17">
+                                        <rect key="frame" x="30" y="0.0" width="345" height="45"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.52941176469999995" green="0.20392156859999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.35294117650000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5wi-Ci-q01"/>
+                                    <constraint firstItem="4fj-X8-s17" firstAttribute="top" secondItem="E2J-az-pMV" secondAttribute="top" id="9P5-g2-0Xc"/>
+                                    <constraint firstAttribute="trailing" secondItem="4fj-X8-s17" secondAttribute="trailing" id="Ltv-aH-Qig"/>
+                                    <constraint firstItem="4fj-X8-s17" firstAttribute="leading" secondItem="E2J-az-pMV" secondAttribute="leading" constant="30" id="b6X-Io-pXS"/>
+                                    <constraint firstAttribute="bottom" secondItem="4fj-X8-s17" secondAttribute="bottom" id="yDd-c7-0Sy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E2J-az-pMV" firstAttribute="top" secondItem="ogo-tc-UKv" secondAttribute="bottom" id="20k-kS-qjS"/>
+                            <constraint firstAttribute="trailing" secondItem="E2J-az-pMV" secondAttribute="trailing" id="9sg-GW-Laa"/>
+                            <constraint firstAttribute="trailing" secondItem="ogo-tc-UKv" secondAttribute="trailing" id="Ceb-iq-xC6"/>
+                            <constraint firstItem="ZZt-h4-qvY" firstAttribute="top" secondItem="te7-tk-i73" secondAttribute="bottom" id="L0x-Bh-Jat"/>
+                            <constraint firstItem="te7-tk-i73" firstAttribute="leading" secondItem="YVv-L2-glF" secondAttribute="leading" id="Q3T-rb-XT2"/>
+                            <constraint firstItem="te7-tk-i73" firstAttribute="top" secondItem="YVv-L2-glF" secondAttribute="top" id="T5R-fO-fJp"/>
+                            <constraint firstAttribute="trailing" secondItem="te7-tk-i73" secondAttribute="trailing" id="Wpd-7A-dHY"/>
+                            <constraint firstItem="ogo-tc-UKv" firstAttribute="leading" secondItem="YVv-L2-glF" secondAttribute="leading" id="aBg-la-0ez"/>
+                            <constraint firstItem="ogo-tc-UKv" firstAttribute="top" secondItem="YVv-L2-glF" secondAttribute="top" id="aDQ-rp-blh"/>
+                            <constraint firstItem="E2J-az-pMV" firstAttribute="leading" secondItem="YVv-L2-glF" secondAttribute="leading" id="as5-no-iOo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="4fj-X8-s17" id="vEj-St-tfk"/>
+                        <outlet property="titleLabel" destination="hpJ-na-jw6" id="qTV-EZ-EjE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GhX-b0-xtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="-730.88455772113946"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Poisk" width="56" height="56"/>
@@ -153,4 +246,7 @@
         <image name="minus" width="56" height="58"/>
         <image name="plus" width="56" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rc3-r7-Eq4"/>
+    </inferredMetricsTieBreakers>
 </document>

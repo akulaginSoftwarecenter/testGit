@@ -19,6 +19,7 @@ typealias AliasRangeBlock = (RNSRangeScroll) -> ()
 typealias AliasRectBlock = (CGRect) -> ()
 typealias AliasPointBlock = (PGGeoPoint) -> ()
 typealias AliasOverlayBlock = (PGOverlay) -> ()
+typealias AliasStringBlock = (String?) -> ()
 
 
 func NSLoc(_ key: String?) -> String {

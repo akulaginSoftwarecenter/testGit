@@ -18,10 +18,18 @@ extension RNSDutyViewController {
     }
     
     @IBAction func actionFrom(_ sender: Any) {
-        
+        showAddress(.fromAddress) {[weak self] (text) in
+            self?.fromField.text = text
+        }
     }
     
     @IBAction func actionIn(_ sender: Any) {
-        
+        showAddress(.inAddress) {[weak self] (text) in
+            self?.inField.text = text
+        }
+    }
+    
+    func showAddress(_ type: TypeAddress, complete: AliasStringBlock?) {
+        RNSAddressViewController.initController(type, complete: complete)?.pushAnimated()
     }
 }

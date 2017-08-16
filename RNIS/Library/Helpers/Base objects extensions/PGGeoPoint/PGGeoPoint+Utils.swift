@@ -13,4 +13,8 @@ extension PGGeoPoint {
         return ["latitude": latitude,
                 "longitude": longitude]
     }
+    
+    var location: CLLocation {
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
 }
