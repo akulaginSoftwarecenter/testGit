@@ -277,6 +277,8 @@
 		83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58541F25919000A9FE1A /* RNSRoutingPayload.swift */; };
 		83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58581F25923400A9FE1A /* RNISMappableBase.swift */; };
 		83CD58611F25948E00A9FE1A /* RNSPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58601F25948E00A9FE1A /* RNSPostRequest.swift */; };
+		83E183931F4400DE005912C5 /* RNSAddressViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */; };
+		83E183961F440253005912C5 /* RNSAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183951F440253005912C5 /* RNSAddressCell.swift */; };
 		83E2D3921F34332B00035877 /* RNSScrollKeyBoardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D3911F34332B00035877 /* RNSScrollKeyBoardContainer.swift */; };
 		83E2D3941F34336100035877 /* RNSScrollKeyBoardContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D3931F34336100035877 /* RNSScrollKeyBoardContainer.storyboard */; };
 		83ED5E2A1F270383007D9F1C /* RNSMapManager+OverLays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */; };
@@ -547,6 +549,8 @@
 		83CD58541F25919000A9FE1A /* RNSRoutingPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoutingPayload.swift; path = Models/RoutingPayload/RNSRoutingPayload.swift; sourceTree = "<group>"; };
 		83CD58581F25923400A9FE1A /* RNISMappableBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNISMappableBase.swift; path = Models/Base/RNISMappableBase.swift; sourceTree = "<group>"; };
 		83CD58601F25948E00A9FE1A /* RNSPostRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostRequest.swift; path = POST/Parent/RNSPostRequest.swift; sourceTree = "<group>"; };
+		83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+TableView.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift"; sourceTree = "<group>"; };
+		83E183951F440253005912C5 /* RNSAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAddressCell.swift; path = Controllers/Map/Route/Address/Cell/RNSAddressCell.swift; sourceTree = "<group>"; };
 		83E2D3911F34332B00035877 /* RNSScrollKeyBoardContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSScrollKeyBoardContainer.swift; path = "Library/Base classes/Containers/ScrollContainer/RNSScrollKeyBoardContainer.swift"; sourceTree = "<group>"; };
 		83E2D3931F34336100035877 /* RNSScrollKeyBoardContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSScrollKeyBoardContainer.storyboard; path = "Library/Base classes/Containers/ScrollContainer/RNSScrollKeyBoardContainer.storyboard"; sourceTree = "<group>"; };
 		83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapManager+OverLays.swift"; path = "Managers/Map/RNSMapManager+OverLays.swift"; sourceTree = "<group>"; };
@@ -1151,9 +1155,11 @@
 		836221A81F43DE8B005B49DA /* Address */ = {
 			isa = PBXGroup;
 			children = (
+				83E183941F44021F005912C5 /* Cell */,
 				836221A91F43DED1005B49DA /* RNSAddressViewController.swift */,
 				836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */,
 				836221B31F43F8A1005B49DA /* RNSAddressViewController+TextField.swift */,
+				83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */,
 				836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */,
 			);
 			name = Address;
@@ -2145,6 +2151,14 @@
 			name = Parent;
 			sourceTree = "<group>";
 		};
+		83E183941F44021F005912C5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				83E183951F440253005912C5 /* RNSAddressCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		83E2D3901F3432E000035877 /* ScrollContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2461,6 +2475,7 @@
 				836989121F317190003E4D73 /* RNSParoleContainerController.swift in Sources */,
 				83ED5E2F1F2707A0007D9F1C /* PGPolyline+Utils.swift in Sources */,
 				837ABF261F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */,
+				83E183961F440253005912C5 /* RNSAddressCell.swift in Sources */,
 				838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
@@ -2487,6 +2502,7 @@
 				836EEF221F3C1FDE007631D9 /* RNSImageFactory.swift in Sources */,
 				8329DF601F342B5E00D542FF /* RNSRightChevronButton.swift in Sources */,
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
+				83E183931F4400DE005912C5 /* RNSAddressViewController+TableView.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				838CE9311F3D9E0800C10FBA /* RNSPinItem.swift in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,

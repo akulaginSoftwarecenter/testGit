@@ -30,8 +30,4 @@ extension RNSAddressViewController {
             self?.prepareAddress(text)
         }
     }
-    
-    func prepareAddress(_ text: String?) {
-        textField.text = text
-    }
 }

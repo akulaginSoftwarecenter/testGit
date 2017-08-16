@@ -13,7 +13,17 @@ enum TypeAddress: String {
     , inAddress = "Куда"
 }
 
-class RNSAddressViewController: UIViewController {
+class RNSAddressViewController: UIViewController, KeyboardShowable {
+    
+    var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
+        get {
+            return bottomTableView
+        }
+    }
+    
+    var isNeedAddTap: Bool {
+        return false
+    }
     
     static func initController(_ type: TypeAddress?, complete: AliasStringBlock?) -> UIViewController?  {
         let vc = RNSAddressViewController.controller as? RNSAddressViewController
@@ -28,6 +38,10 @@ class RNSAddressViewController: UIViewController {
     @IBOutlet weak var buttonMyLocation: UIButton!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var titleLabel: RNSTopTitle!
+    
+    @IBOutlet weak var bottomTableView: NSLayoutConstraint!
+    @IBOutlet weak var heightTableView: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,5 +81,15 @@ class RNSAddressViewController: UIViewController {
     
     deinit {
         print("RNSAddressViewController deinit")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addKeyboardObservers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeAllObservers()
     }
 }
