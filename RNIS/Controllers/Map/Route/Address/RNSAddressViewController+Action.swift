@@ -20,6 +20,9 @@ extension RNSAddressViewController {
     
     @IBAction func backAction(_ sender: Any) {
         complete?(text)
+        if let text = text {
+            RNSDataManager.createSearchItem(text)
+        }
     }
     
     @IBAction func actionTop(_ sender: Any) {

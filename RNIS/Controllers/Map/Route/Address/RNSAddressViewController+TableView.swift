@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
 extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
     
-    var items: [String] {
-        return ["ул. Ленинская 12"]
+    var items: Results<RNSSearchHistory>? {
+        return RNSDataManager.searchItems
     }
     
     func prepareTableView() {
@@ -20,7 +21,7 @@ extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,14 +30,12 @@ extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func item(_ indexPath: IndexPath) -> String {
-        return items[indexPath.row]
+    func item(_ indexPath: IndexPath) -> String? {
+        return items?[indexPath.row].title
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         prepareAddress(item(indexPath))
         endEdit()
-        print("didSelectRowAt",item(indexPath))
     }
-    
 }
