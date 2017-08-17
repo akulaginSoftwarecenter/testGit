@@ -99,7 +99,6 @@
 		835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */; };
 		836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221A91F43DED1005B49DA /* RNSAddressViewController.swift */; };
 		836221AE1F43EA81005B49DA /* RNSAddressViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */; };
-		836221B01F43EE4B005B49DA /* RNSLocationManager+GeoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221AF1F43EE4B005B49DA /* RNSLocationManager+GeoCode.swift */; };
 		836221B21F43F5C6005B49DA /* RNSAddressViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */; };
 		836221B41F43F8A1005B49DA /* RNSAddressViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221B31F43F8A1005B49DA /* RNSAddressViewController+TextField.swift */; };
 		836277C71F3804B8009FB712 /* RNSChangePhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */; };
@@ -398,7 +397,6 @@
 		835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Handlers.swift"; path = "Controllers/Map/RNSMapViewController+Handlers.swift"; sourceTree = "<group>"; };
 		836221A91F43DED1005B49DA /* RNSAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAddressViewController.swift; path = Controllers/Map/Search/Address/RNSAddressViewController.swift; sourceTree = "<group>"; };
 		836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+MapView.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift"; sourceTree = "<group>"; };
-		836221AF1F43EE4B005B49DA /* RNSLocationManager+GeoCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLocationManager+GeoCode.swift"; path = "Managers/Location/RNSLocationManager+GeoCode.swift"; sourceTree = "<group>"; };
 		836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+Action.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+Action.swift"; sourceTree = "<group>"; };
 		836221B31F43F8A1005B49DA /* RNSAddressViewController+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+TextField.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift"; sourceTree = "<group>"; };
 		836277C61F3804B8009FB712 /* RNSChangePhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSChangePhoneController.swift; path = Controllers/Profile/ChangePhone/RNSChangePhoneController.swift; sourceTree = "<group>"; };
@@ -1501,7 +1499,6 @@
 			children = (
 				836D80D61F1DC6CA00FEE390 /* RNSLocationManager.swift */,
 				836D80D71F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift */,
-				836221AF1F43EE4B005B49DA /* RNSLocationManager+GeoCode.swift */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -2568,7 +2565,6 @@
 				8310D4581F3C7483000CCD0A /* RNSCircle.swift in Sources */,
 				832E4B8A1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
-				836221B01F43EE4B005B49DA /* RNSLocationManager+GeoCode.swift in Sources */,
 				832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */,
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
 				8329DF581F340F1200D542FF /* RNSParentContainer.swift in Sources */,

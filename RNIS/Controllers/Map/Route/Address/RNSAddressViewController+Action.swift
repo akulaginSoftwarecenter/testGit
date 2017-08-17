@@ -11,11 +11,7 @@ import Foundation
 extension RNSAddressViewController {
     
     @IBAction func actionMyLocation(_ sender: Any) {
-        STRouter.showLoader()
-        RNSLocationManager.geoCodeMylocation {[weak self] text in
-            STRouter.removeLoader()
-            self?.prepareAddress(text)
-        }
+        geoCodeMylocation()
     }
     
     @IBAction func backAction(_ sender: Any) {

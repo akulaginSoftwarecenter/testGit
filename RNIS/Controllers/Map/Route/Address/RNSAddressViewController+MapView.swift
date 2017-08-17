@@ -30,4 +30,8 @@ extension RNSAddressViewController {
             self?.prepareAddress(address)
         }
     }
+    
+    func geoCodeMylocation() {
+        geoCode(RNSLocationManager.point)
+    }
 }

@@ -22,7 +22,7 @@ class RNSGetGeoCode: AlamofireAPI {
     }
     
     override var path: String {
-        return "http://95.213.205.92/search/"
+        return mapHost + "search/"
     }
     
     override var parameters: [String : Any] {
