@@ -11,7 +11,7 @@ import RealmSwift
 
 extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
     
-    var items: Results<RNSSearchHistory>? {
+    var items: [RNSSearchHistory]? {
         return RNSDataManager.searchItems(text)
     }
     
@@ -31,11 +31,14 @@ extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func item(_ indexPath: IndexPath) -> String? {
-        return items?[indexPath.row].title
+        return items?.valueAt(indexPath.row)?.title
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        prepareAddress(item(indexPath))
+        guard let cell = tableView.cellForRow(at: indexPath) as? RNSAddressCell, let item = cell.item else {
+            return
+        }
+        prepareAddress(item)
         endEdit()
     }
 }

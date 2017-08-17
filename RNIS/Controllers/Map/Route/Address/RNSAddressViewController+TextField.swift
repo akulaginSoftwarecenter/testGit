@@ -19,7 +19,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     }
     
     func startEdit() {
-        //tableView.isHidden = false
+        tableView.isHidden = false
         prepareTableView()
         buttonMyLocation.isHidden = true
     }
@@ -49,8 +49,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    @IBAction func textFieldEditingChanged(_ sender: Any) {
         prepareTableView()
-        return true
     }
 }

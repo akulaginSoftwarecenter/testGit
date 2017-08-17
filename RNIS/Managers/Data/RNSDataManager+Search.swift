@@ -11,18 +11,31 @@ import RealmSwift
 
 extension RNSDataManager {
     
-    static func searchItems(_ text: String?) -> Results<RNSSearchHistory>? {
+    static func searchItems(_ text: String?) -> [RNSSearchHistory]? {
         guard let text = text, !text.isEmpty else {
             return searchItems
         }
-        return searchItems
+        return searchItems?.filter{
+            let title = $0.title
+            return title.contains(text) && (title != text)
+        }
     }
     
-    static var searchItems: Results<RNSSearchHistory>? {
-        return realm?.objects(RNSSearchHistory.self)
+    static var searchItems: [RNSSearchHistory]? {
+        guard let result =  realm?.objects(RNSSearchHistory.self) else {
+            return nil
+        }
+        return Array(result)
     }
     
     static func createSearchItem(_ text: String) {
+        guard !text.isEmpty else {
+            return
+        }
+        
+        if searchItems?.contains(where: {$0.title == text}) ?? false {
+            return
+        }
         write({
             let item = RNSSearchHistory()
             item.title = text
