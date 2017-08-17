@@ -25,9 +25,9 @@ extension RNSAddressViewController {
     func geoCode(_ point: PGGeoPoint) {
         endEdit()
         STRouter.showLoader()
-        RNSLocationManager.geoCode(point) {[weak self] text in
+        RNSGetGeoCode(point: point) {[weak self] (address) in
             STRouter.removeLoader()
-            self?.prepareAddress(text)
+            self?.prepareAddress(address)
         }
     }
 }
