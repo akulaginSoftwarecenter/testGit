@@ -47,6 +47,8 @@ class RNSMapViewController: UIViewController {
         super.viewDidLoad()
 
         RNSMapManager.prepareStub()
+        
+        STRouter.showAlert("Зарегистрируйтесь, чтобы открыть все возможности приложения")
     }
     
     override func viewWillAppear(_ animated: Bool) {

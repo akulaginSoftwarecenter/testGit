@@ -30,6 +30,10 @@ extension UIFont {
         return cffazm(20)
     }
     
+    static var cffazm22:UIFont {
+        return cffazm(22)
+    }
+    
     static var cffazm24:UIFont {
         return cffazm(24)
     }

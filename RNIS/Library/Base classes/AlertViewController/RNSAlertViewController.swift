@@ -11,14 +11,18 @@ import UIKit
 class RNSAlertViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
     
-    static func controller(_ message: String?) -> UIViewController? {
+    static func controller(_ message: String?) -> RNSAlertViewController? {
         let vc = RNSAlertViewController.initialController as? RNSAlertViewController
         vc?.message = message
         return vc
     }
     
     var message: String?
+    
+    var titleOneButton: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +32,19 @@ class RNSAlertViewController: UIViewController {
     override class var storyboardName: String {
         return "RNSAlertViewController"
     }
-    @IBAction func actionOk(_ sender: Any) {
-        dismiss(animated: false)
+    
+    func addBtn(_ title: String? = "ОК") {
+        let button = UIButton()
+        button.titleLabel?.font = .cffazm22
+        button.setTitle(title, for: UIControlState())
+        button.backgroundColor = .EA4845
+        button.touchUpInside { [weak self] in
+            self?.dismiss(animated: false)
+        }
+        stackView.addArrangedSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.height.equalTo(59)
+            make.width.equalTo(stackView)
+        }
     }
 }

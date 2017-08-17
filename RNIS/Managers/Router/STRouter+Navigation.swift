@@ -25,6 +25,8 @@ extension STRouter {
     
     static func showAlert(_ message: String?) {
         let vc = RNSAlertViewController.controller(message)
-        present(vc, animated: false)
-    }
+        present(vc, animated: false) {
+            vc?.addBtn()
+        }
+   }
 }
