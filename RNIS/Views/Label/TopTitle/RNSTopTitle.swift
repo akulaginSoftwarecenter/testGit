@@ -14,7 +14,7 @@ class RNSTopTitle: UILabel {
         super.awakeFromNib()
         
         textColor = .white
-        font = .cffazm20
+        font = .cffazm24
         prepareConstraint()
         textAlignment = .center
     }

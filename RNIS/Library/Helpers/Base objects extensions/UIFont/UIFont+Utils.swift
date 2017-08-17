@@ -14,6 +14,10 @@ extension UIFont {
         return cffazm(8)
     }
     
+    static var cffazm12:UIFont {
+        return cffazm(12)
+    }
+    
     static var cffazm16:UIFont {
         return cffazm(16)
     }

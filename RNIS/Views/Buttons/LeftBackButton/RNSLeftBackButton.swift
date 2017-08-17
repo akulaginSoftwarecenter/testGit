@@ -10,6 +10,12 @@ import UIKit
 import SnapKit
 
 class RNSLeftBackButton: UIButton {
+    
+    @IBInspectable var leftContentOffset: CGFloat = 0 {
+        didSet {
+            
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +36,8 @@ class RNSLeftBackButton: UIButton {
         snp.makeConstraints { (make) in
             make.height.equalTo(97)
             make.width.equalTo(70)
-            make.left.top.equalTo(view)
+            make.left.equalTo(view).offset(-leftContentOffset)
+            make.top.equalTo(view)
         }
     }
 }
