@@ -15,6 +15,13 @@ enum TypeAddress: String {
 
 class RNSAddressViewController: UIViewController, KeyboardShowable {
     
+    static func initController(_ type: TypeAddress?, complete: AliasStringBlock?) -> UIViewController?  {
+        let vc = RNSAddressViewController.controller as? RNSAddressViewController
+        vc?.type = type
+        vc?.complete = complete
+        return vc
+    }
+    
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         get {
             return bottomTableView
@@ -25,15 +32,11 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         return false
     }
     
-    static func initController(_ type: TypeAddress?, complete: AliasStringBlock?) -> UIViewController?  {
-        let vc = RNSAddressViewController.controller as? RNSAddressViewController
-        vc?.type = type
-        vc?.complete = complete
-        return vc
-    }
-    
     var type: TypeAddress?
     var complete: AliasStringBlock?
+    var containerController: RNSMapParentController?
+    
+    var pin: RNSPinAddress? 
     
     @IBOutlet weak var buttonMyLocation: UIButton!
     @IBOutlet weak var textField: UITextField!
@@ -48,8 +51,6 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         
         prepareType()
     }
-    
-    var containerController: RNSMapParentController?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         containerController = segue.destination as? RNSMapParentController
@@ -91,5 +92,6 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeAllObservers()
+        removePin()
     }
 }

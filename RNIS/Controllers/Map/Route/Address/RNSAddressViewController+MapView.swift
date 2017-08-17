@@ -25,13 +25,23 @@ extension RNSAddressViewController {
     func geoCode(_ point: PGGeoPoint) {
         endEdit()
         STRouter.showLoader()
-        RNSGetGeoCode(point: point) {[weak self] (address) in
+        RNSGetGeoCode(point) {[weak self] (address) in
             STRouter.removeLoader()
+            self?.addPin(point)
             self?.prepareAddress(address)
         }
     }
     
     func geoCodeMylocation() {
         geoCode(RNSLocationManager.point)
+    }
+    
+    func removePin() {
+        pin?.remove()
+    }
+    
+    func addPin(_ point: PGGeoPoint) {
+        removePin()
+        pin = RNSPinAddress(point)
     }
 }
