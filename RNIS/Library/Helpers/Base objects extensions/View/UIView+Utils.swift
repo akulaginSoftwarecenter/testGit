@@ -53,4 +53,21 @@ extension UIView {
     func prepareCircle() {
         layer.cornerRadius =  frame.width/2
     }
+    
+    func roundTopCorners() {
+        roundCorners(.topLeft, radius: 5)
+        roundCorners(.topRight, radius: 5)
+    }
+    
+    func roundBottomCorners() {
+        roundCorners(.bottomLeft, radius: 5)
+        roundCorners(.bottomRight, radius: 5)
+    }
+    
+    func roundCorners(_ corners:UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
 }

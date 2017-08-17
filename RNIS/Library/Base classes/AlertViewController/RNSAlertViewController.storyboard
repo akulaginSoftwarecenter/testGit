@@ -99,6 +99,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="messageLabel" destination="Qk6-bf-9RM" id="pQf-se-pvx"/>
+                        <outlet property="messageView" destination="pKJ-9C-ZWi" id="98h-qs-1bV"/>
                         <outlet property="stackView" destination="v25-Hn-pOv" id="Soo-zI-Qc7"/>
                     </connections>
                 </viewController>

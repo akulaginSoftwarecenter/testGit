@@ -12,6 +12,7 @@ class RNSAlertViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var messageView: UIView!
     
     static func controller(_ message: String?) -> RNSAlertViewController? {
         let vc = RNSAlertViewController.initialController as? RNSAlertViewController
@@ -27,6 +28,8 @@ class RNSAlertViewController: UIViewController {
         super.viewDidLoad()
         
         messageLabel.text = message
+        messageView.backgroundColor = .EA4845
+        //messageView.roundTopCorners()
     }
     
     override class var storyboardName: String {
@@ -35,6 +38,8 @@ class RNSAlertViewController: UIViewController {
     
     func addBtn(_ title: String? = "ОК") {
         let button = UIButton()
+        //button.roundBottomCorners()
+        //button.roundCorners(.topRight, radius: 5)
         button.titleLabel?.font = .cffazm22
         button.setTitle(title, for: UIControlState())
         button.backgroundColor = .EA4845
