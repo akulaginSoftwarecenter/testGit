@@ -31,7 +31,7 @@ extension RNSMapParentController: PGMapViewDelegate {
     }
     
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
-        handlerOnMapTouchEvent?(point)
+        handlerOnMapLongTouchEvent?(point)
     }
     
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {

@@ -8,9 +8,8 @@
 
 import UIKit
 
-class RNSPinItem: PGOverlay {
+class RNSPinItem: RNSPinParent {
     var item: RNSCoordinateModel?
-    lazy var overlayItem = PGOverlayItem()
     
     @discardableResult required init(_ item: RNSCoordinateModel) {
         super.init()
@@ -29,19 +28,12 @@ class RNSPinItem: PGOverlay {
         guard let point = item?.point else {
             return
         }
-        items().add(overlayItem)
-        addOnMap()
-        overlayItem.geoPoint = point
-        populate()
-    }
-    
-    func addOnMap() {
-        RNSMapManager.addOverlay(self)
+        preparePoint(point)
     }
     
     func prepareHandlers() {
-        item?.handlerRemove = {
-            RNSMapManager.removeOverlay(self)
+        item?.handlerRemove = { [weak self] in
+            self?.remove()
         }
     }
 }

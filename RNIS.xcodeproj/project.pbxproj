@@ -206,6 +206,8 @@
 		837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */; };
 		837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66871F396DEF0048C5BA /* RNSTouchView.swift */; };
 		837F71941F452E6200DEAA36 /* RNSGetGeoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71931F452E6200DEAA36 /* RNSGetGeoCode.swift */; };
+		837F71971F45365100DEAA36 /* RNSPinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71961F45365100DEAA36 /* RNSPinAddress.swift */; };
+		837F71991F45369D00DEAA36 /* RNSPinParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71981F45369D00DEAA36 /* RNSPinParent.swift */; };
 		8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */; };
 		8385DB431F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
@@ -492,6 +494,8 @@
 		837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Offset.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Offset.swift"; sourceTree = "<group>"; };
 		837B66871F396DEF0048C5BA /* RNSTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTouchView.swift; path = "Library/Base classes/Containers/ScrollShowContainer/ShowView/RNSTouchView.swift"; sourceTree = "<group>"; };
 		837F71931F452E6200DEAA36 /* RNSGetGeoCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGetGeoCode.swift; path = GET/GeoCode/RNSGetGeoCode.swift; sourceTree = "<group>"; };
+		837F71961F45365100DEAA36 /* RNSPinAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinAddress.swift; path = Views/OVerLays/PinAddress/RNSPinAddress.swift; sourceTree = "<group>"; };
+		837F71981F45369D00DEAA36 /* RNSPinParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinParent.swift; path = Views/OVerLays/Parent/RNSPinParent.swift; sourceTree = "<group>"; };
 		8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Swipe.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Swipe.swift"; sourceTree = "<group>"; };
 		8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Action.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1129,10 +1133,11 @@
 		835718A81F21C39300DE5E25 /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
-				838CE92F1F3D9DC000C10FBA /* Parent */,
+				838CE92F1F3D9DC000C10FBA /* Base */,
+				837F71951F45358100DEAA36 /* PinAddress */,
 				836EEF141F3C12A8007631D9 /* PinBus */,
-				835718A91F21C77A00DE5E25 /* PinBuild */,
 				836277CD1F38146D009FB712 /* PinBusStop */,
+				835718A91F21C77A00DE5E25 /* PinBuild */,
 			);
 			name = Overlays;
 			sourceTree = "<group>";
@@ -1826,6 +1831,14 @@
 			name = GeoGode;
 			sourceTree = "<group>";
 		};
+		837F71951F45358100DEAA36 /* PinAddress */ = {
+			isa = PBXGroup;
+			children = (
+				837F71961F45365100DEAA36 /* RNSPinAddress.swift */,
+			);
+			name = PinAddress;
+			sourceTree = "<group>";
+		};
 		8386B4431F343E8E008A5CC7 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -1907,12 +1920,13 @@
 			name = UIColor;
 			sourceTree = "<group>";
 		};
-		838CE92F1F3D9DC000C10FBA /* Parent */ = {
+		838CE92F1F3D9DC000C10FBA /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				837F71981F45369D00DEAA36 /* RNSPinParent.swift */,
 				838CE9301F3D9E0800C10FBA /* RNSPinItem.swift */,
 			);
-			name = Parent;
+			name = Base;
 			sourceTree = "<group>";
 		};
 		838CE9331F3DA9A000C10FBA /* BusInfo */ = {
@@ -2505,6 +2519,7 @@
 				836EEF091F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift in Sources */,
 				839BCDF81F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift in Sources */,
 				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
+				837F71971F45365100DEAA36 /* RNSPinAddress.swift in Sources */,
 				836221B21F43F5C6005B49DA /* RNSAddressViewController+Action.swift in Sources */,
 				831A85B71F41497F0095F006 /* RNSBusStopTemp.swift in Sources */,
 				837F71941F452E6200DEAA36 /* RNSGetGeoCode.swift in Sources */,
@@ -2523,6 +2538,7 @@
 				839BCDFB1F32E66B00B5CA88 /* RNSProfileViewController.swift in Sources */,
 				837ABF1F1F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
 				836EEF221F3C1FDE007631D9 /* RNSImageFactory.swift in Sources */,
+				837F71991F45369D00DEAA36 /* RNSPinParent.swift in Sources */,
 				8329DF601F342B5E00D542FF /* RNSRightChevronButton.swift in Sources */,
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				83E183931F4400DE005912C5 /* RNSAddressViewController+TableView.swift in Sources */,
