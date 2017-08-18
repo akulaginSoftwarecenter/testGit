@@ -38,7 +38,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     var handlerRect: AliasRectBlock?
     
-    var startBottomOffset: CGFloat = 200
+    var startBottomOffset: CGFloat = 175
     
     lazy var ranges: [RNSRangeScroll] = {
         return [self.rangeNav, self.rangeHalf, self.rangeThird, self.rangeBottom]

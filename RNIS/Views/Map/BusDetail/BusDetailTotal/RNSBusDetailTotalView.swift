@@ -15,15 +15,15 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
             updateUI()
         }
     }
-    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!
     @IBOutlet weak var driverLabel: UILabel!
     @IBOutlet weak var сonductorLabel: UILabel!
-
     
     func updateUI() {
+        titleLabel.text = item?.title
         let stops = item?.busStops
         startLabel.text = stops?.first?.title
         currentLabel.text = item?.currentBusStops?.title

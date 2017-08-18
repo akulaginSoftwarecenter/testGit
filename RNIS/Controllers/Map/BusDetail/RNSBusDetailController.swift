@@ -25,7 +25,6 @@ class RNSBusDetailController: UIViewController {
     var item: RNSBus?
     var startBottomOffset: CGFloat?
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var viewTotal: RNSBusDetailTotalView!
     @IBOutlet weak var viewWay: RNSBusDetailWayView!
     
@@ -33,16 +32,11 @@ class RNSBusDetailController: UIViewController {
         super.viewDidLoad()
         
         prepareItems()
-        prepareTitle()
     }
     
     func prepareItems() {
         viewTotal.item = item
         viewWay.item = item
-    }
-    
-    func prepareTitle() {
-        titleLabel.text = item?.title
     }
     
     override class var storyboardName: String {
