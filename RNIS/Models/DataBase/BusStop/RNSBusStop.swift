@@ -25,9 +25,10 @@ class RNSBusStop: RNSCoordinateModel {
     
     static var generateList:[RNSBusStop] {
         var items = [RNSBusStop]()
-        let rand = Int.rand(0, limit: generateTitles.count - 1)
-        for title in generateTitles[0...rand] {
+        let rand = Int.rand(6, limit: generateTitles.count - 6)
+        for index in 0...rand {
             let item = RNSBusStop()
+            let title = generateTitles.valueAt(index) ?? "Тропарёво"
             item.generate(title)
             items.append(item)
         }
