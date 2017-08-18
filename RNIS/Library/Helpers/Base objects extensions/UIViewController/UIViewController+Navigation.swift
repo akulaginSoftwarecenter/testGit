@@ -10,8 +10,8 @@ import Foundation
 
 extension UIViewController {
     
-    func pushAnimated() {
-        STRouter.pushAnimated(self)
+    func pushAnimated(completion: EmptyBlock? = nil) {
+        STRouter.pushAnimated(self, completion: completion)
     }
     
     func pushAnimatedRedScroll() {

@@ -11,12 +11,19 @@ import UIKit
 extension STRouter {
     
     static func showMap() {
-        RNSMapViewController.controller.pushAnimated()
+        RNSMapViewController.controller.pushAnimated {
+            showAlertRegistrationIfNeed()
+        }
     }
     
     static func showLogin() {
         clearNav()
         push(imageBoardContainer(RNSLoginViewController.controller))
+    }
+    
+    static func showRegistration() {
+        showLogin()
+        push(imageBoardContainer(RNSRegistrationPhoneController.controller))
     }
     
     static func showAlertRepeatCode() {
@@ -25,15 +32,29 @@ extension STRouter {
     
     static func showAlertOk(_ message: String?) {
         let vc = RNSAlertViewController.controller(message)
-        present(vc, animated: false) {
+        vc?.handlerViewDidLoad = {
             vc?.addBtn()
+        }
+        present(vc, animated: true)
+    }
+    
+    static func showAlertBtns(_ message: String?, leftTitle: String? = "OK", rightTitle: String? = "ОТМЕНА", handlerOk: EmptyBlock? = nil) {
+        let vc = RNSAlertViewController.controller(message)
+        vc?.handlerViewDidLoad = {
+            vc?.addBtns(leftTitle, rightTitle, handlerOk: handlerOk)
+        }
+        present(vc, animated: true)
+    }
+    
+    static func showAlertRegistrationIfNeed(){
+        if !UserDefaults.launchedBefore  {
+            showAlertRegistration()
+            UserDefaults.setLaunchedBeforeComplete()
         }
     }
     
-    static func showAlertBtns(_ message: String?, leftTitle: String? = "OK", rightTitle: String? = "ОТМЕНА") {
-        let vc = RNSAlertViewController.controller(message)
-        present(vc, animated: false) {
-            vc?.addBtns(leftTitle, rightTitle)
-        }
+    static func showAlertRegistration() {
+        let message = "Зарегистрируйтесь, чтобы открыть все возможности приложения"
+        STRouter.showAlertBtns(message, leftTitle: "Регистрация", rightTitle: "Позже", handlerOk: STRouter.showRegistration)
     }
 }

@@ -14,6 +14,8 @@ class RNSAlertViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var messageView: UIView!
     
+    var handlerViewDidLoad: EmptyBlock?
+    
     static func controller(_ message: String?) -> RNSAlertViewController? {
         let vc = RNSAlertViewController.initialController as? RNSAlertViewController
         vc?.message = message
@@ -27,6 +29,7 @@ class RNSAlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        handlerViewDidLoad?()
         prepareUI()
     }
     
@@ -52,10 +55,10 @@ class RNSAlertViewController: UIViewController {
         }
     }
     
-    func addBtns(_ leftTitle: String? = "OK", _ rightTitle: String? = "ОТМЕНА") {
+    func addBtns(_ leftTitle: String? = "OK", _ rightTitle: String? = "ОТМЕНА", handlerOk: EmptyBlock? = nil) {
         let view = RNSTwoBtnAlert(leftTitle, rightTitle)
         view.handlerLeft = { [weak self] in
-            self?.dismiss()
+            self?.dismiss(completion: handlerOk)
         }
         view.handlerRight = { [weak self] in
             self?.dismiss()
@@ -66,8 +69,12 @@ class RNSAlertViewController: UIViewController {
         }
     }
     
-    func dismiss() {
-        self.dismiss(animated: false)
+    func dismiss(completion: EmptyBlock? = nil) {
+        dismiss(animated: true, completion: completion)
+    }
+    
+    deinit {
+        print("RNSAlertViewController deinit")
     }
    
     override class var storyboardName: String {

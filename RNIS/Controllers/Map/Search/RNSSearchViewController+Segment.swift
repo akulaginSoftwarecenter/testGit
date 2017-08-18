@@ -8,19 +8,20 @@
 
 import Foundation
 
-enum typeSearch:Int {
-    case address = 0, stop, transport
+enum TypeSearch: Int {
+    case transport = 0, stop, address
 }
 
 extension RNSSearchViewController {
     
-    var typeSegment: typeSearch {
+    var typeSegment: TypeSearch {
         let index = segmentedControl.selectedSegmentIndex
-        let type = typeSearch(rawValue: index)
+        let type = TypeSearch(rawValue: index)
         return type ?? .address
     }
       
     func prepareSegmented() {
+        segmentedControl.selectedSegmentIndex = TypeSearch.transport.rawValue
         decorControl.setTitleTextAttributes([NSFontAttributeName: UIFont.cffazm18],
                                                 for: .normal)
     }
