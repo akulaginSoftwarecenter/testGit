@@ -40,6 +40,8 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     var startBottomOffset: CGFloat = 175
     
+    var contentInsetBottom: CGFloat = 0
+    
     lazy var ranges: [RNSRangeScroll] = {
         return [self.rangeNav, self.rangeHalf, self.rangeThird, self.rangeBottom]
     }()
@@ -58,6 +60,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
         super.viewDidAppear(animated)
         
         scrollToStart()
+        
     }
     
     override class var storyboardName: String {

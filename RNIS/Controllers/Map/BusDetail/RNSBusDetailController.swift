@@ -20,14 +20,17 @@ class RNSBusDetailController: UIViewController {
         container?.heightCoverButtonTop = 130
  
         vc?.startBottomOffset = container?.startBottomOffset
-        
+        let contentInsetBottom = CGFloat(80)
+        container?.contentInsetBottom = contentInsetBottom
         if let bottomView = vc?.bottomView,
             let containerView = container?.view {
             containerView.addSubview(bottomView)
             bottomView.snp.makeConstraints({ (make) in
                 make.bottom.left.right.equalTo(containerView)
+                make.height.equalTo(contentInsetBottom)
             })
         }
+        
         
         return  container
     }

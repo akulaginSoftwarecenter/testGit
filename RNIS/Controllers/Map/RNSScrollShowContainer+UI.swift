@@ -15,6 +15,7 @@ extension RNSScrollShowContainer {
         prepareTouchView()
         prepareTitle()
         prepareButtonTop()
+        prepareScrollView()
     }
     
     func prepareButtonTop() {

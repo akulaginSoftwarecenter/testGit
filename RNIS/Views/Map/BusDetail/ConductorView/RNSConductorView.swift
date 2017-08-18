@@ -20,9 +20,6 @@ class RNSConductorView: BaseViewWithXIBInit {
         self.item = item
         
         updateUI()
-        snp.makeConstraints { (make) in
-            make.height.equalTo(80)
-        }
     }
     
     func updateUI() {

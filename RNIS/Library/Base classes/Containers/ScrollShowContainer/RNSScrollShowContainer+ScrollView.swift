@@ -38,6 +38,10 @@ extension RNSScrollShowContainer {
        startOverTopDeselerate = false
     }
     
+    func prepareScrollView() {
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: contentInsetBottom, right: 0)
+    }
+    
     var offsetY: CGFloat {
         return scrollView.contentOffset.y
     }
