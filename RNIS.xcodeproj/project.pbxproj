@@ -29,6 +29,8 @@
 		831E425B1F4687070016C7D3 /* RNSOneBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */; };
 		831E425E1F4688B80016C7D3 /* RNSTwoBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425D1F4688B80016C7D3 /* RNSTwoBtnAlert.swift */; };
 		831E42601F4688E50016C7D3 /* RNSTwoBtnAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E425F1F4688E50016C7D3 /* RNSTwoBtnAlert.xib */; };
+		831E42661F46A2600016C7D3 /* RNSConductorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E42651F46A2600016C7D3 /* RNSConductorView.swift */; };
+		831E42681F46A2860016C7D3 /* RNSConductorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E42671F46A2860016C7D3 /* RNSConductorView.xib */; };
 		8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA301F1F51A700F893C8 /* Dictionary+Utils.swift */; };
 		8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA341F1F57CF00F893C8 /* RNSTraffickMarkData.swift */; };
 		8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */; };
@@ -345,6 +347,8 @@
 		831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSOneBtnAlert.swift; path = "Library/Base classes/AlertViewController/OneBtn/RNSOneBtnAlert.swift"; sourceTree = "<group>"; };
 		831E425D1F4688B80016C7D3 /* RNSTwoBtnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTwoBtnAlert.swift; path = "Library/Base classes/AlertViewController/TwoBtn/RNSTwoBtnAlert.swift"; sourceTree = "<group>"; };
 		831E425F1F4688E50016C7D3 /* RNSTwoBtnAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSTwoBtnAlert.xib; path = "Library/Base classes/AlertViewController/TwoBtn/RNSTwoBtnAlert.xib"; sourceTree = "<group>"; };
+		831E42651F46A2600016C7D3 /* RNSConductorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSConductorView.swift; path = Views/Map/BusDetail/ConductorView/RNSConductorView.swift; sourceTree = "<group>"; };
+		831E42671F46A2860016C7D3 /* RNSConductorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSConductorView.xib; path = Views/Map/BusDetail/ConductorView/RNSConductorView.xib; sourceTree = "<group>"; };
 		8326AA301F1F51A700F893C8 /* Dictionary+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utils.swift"; sourceTree = "<group>"; };
 		8326AA341F1F57CF00F893C8 /* RNSTraffickMarkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTraffickMarkData.swift; path = Models/TraffickMark/RNSTraffickMarkData.swift; sourceTree = "<group>"; };
 		8326AA371F1F59E600F893C8 /* RNSTrafficData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTrafficData.swift; path = Models/Traffic/RNSTrafficData.swift; sourceTree = "<group>"; };
@@ -626,6 +630,7 @@
 		8310D4431F3C6B51000CCD0A /* BusDetail */ = {
 			isa = PBXGroup;
 			children = (
+				831E42641F46A2350016C7D3 /* ConductorView */,
 				8310D4451F3C6B83000CCD0A /* BusDetailTotal */,
 				8310D4441F3C6B74000CCD0A /* BusDetailWay */,
 			);
@@ -766,6 +771,15 @@
 				831E425F1F4688E50016C7D3 /* RNSTwoBtnAlert.xib */,
 			);
 			name = TwoBtn;
+			sourceTree = "<group>";
+		};
+		831E42641F46A2350016C7D3 /* ConductorView */ = {
+			isa = PBXGroup;
+			children = (
+				831E42651F46A2600016C7D3 /* RNSConductorView.swift */,
+				831E42671F46A2860016C7D3 /* RNSConductorView.xib */,
+			);
+			name = ConductorView;
 			sourceTree = "<group>";
 		};
 		8326AA2F1F1F51A700F893C8 /* Dictionary */ = {
@@ -2353,6 +2367,7 @@
 				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
 				838CE9371F3DAA2000C10FBA /* RNSBusInfoViewController.storyboard in Resources */,
 				832B1DE21F42BAA60024505C /* RNSMapParentController.storyboard in Resources */,
+				831E42681F46A2860016C7D3 /* RNSConductorView.xib in Resources */,
 				839BCDFD1F32E67E00B5CA88 /* RNSProfileViewController.storyboard in Resources */,
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 				838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */,
@@ -2674,6 +2689,7 @@
 				8386B4451F343EC7008A5CC7 /* RNSChangePasswordController.swift in Sources */,
 				838707DC1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */,
 				836277DA1F381FE1009FB712 /* RNSDataManager.swift in Sources */,
+				831E42661F46A2600016C7D3 /* RNSConductorView.swift in Sources */,
 				836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */,
 				8344E1CF1F397F1B004A6F0C /* RNSRangeScroll.swift in Sources */,
 				837ABF021F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */,

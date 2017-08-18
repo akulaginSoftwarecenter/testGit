@@ -24,12 +24,14 @@ extension RNSBusDetailController {
         let alpha = self.alpha(top)
         viewTotal.alpha = alpha
         viewWay.alpha = 1 - alpha
+        bottomView.alpha = viewWay.alpha
     }
     
     func prepareEnabled(_ top: CGFloat) {
         let enabled = top > halfScreen
         viewTotal.isUserInteractionEnabled = enabled
         viewWay.isUserInteractionEnabled = !enabled
+        bottomView.isUserInteractionEnabled = viewWay.isUserInteractionEnabled
     }
     
     func alpha(_ top: CGFloat) -> CGFloat {

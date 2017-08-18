@@ -19,8 +19,6 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!
-    @IBOutlet weak var driverLabel: UILabel!
-    @IBOutlet weak var сonductorLabel: UILabel!
     
     func updateUI() {
         titleLabel.text = item?.title
@@ -28,12 +26,5 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
         startLabel.text = stops?.first?.title
         currentLabel.text = item?.currentBusStops?.title
         endLabel.text = stops?.last?.title
-        
-        driverLabel.text = item?.driver
-        сonductorLabel.text = item?.conductor
-    }
-
-    @IBAction func actionButton(_ sender: Any) {
-        RNSBusInfoViewController.initController(item)?.pushAnimatedRedScroll()
     }
 }

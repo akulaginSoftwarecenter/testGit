@@ -20,8 +20,19 @@ class RNSBusDetailController: UIViewController {
         container?.heightCoverButtonTop = 130
  
         vc?.startBottomOffset = container?.startBottomOffset
+        
+        if let bottomView = vc?.bottomView,
+            let containerView = container?.view {
+            containerView.addSubview(bottomView)
+            bottomView.snp.makeConstraints({ (make) in
+                make.bottom.left.right.equalTo(containerView)
+            })
+        }
+        
         return  container
     }
+    
+    lazy var bottomView: UIView = RNSConductorView(self.item)
     
     var item: RNSBus?
     var startBottomOffset: CGFloat?
