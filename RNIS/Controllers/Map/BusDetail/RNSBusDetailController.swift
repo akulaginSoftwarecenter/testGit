@@ -30,8 +30,6 @@ class RNSBusDetailController: UIViewController {
                 make.height.equalTo(contentInsetBottom)
             })
         }
-        
-        
         return  container
     }
     
