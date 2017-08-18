@@ -20,13 +20,20 @@ extension STRouter {
     }
     
     static func showAlertRepeatCode() {
-        showAlert("Код выслан повторно")
+        showAlertOk("Код выслан повторно")
     }
     
-    static func showAlert(_ message: String?) {
+    static func showAlertOk(_ message: String?) {
         let vc = RNSAlertViewController.controller(message)
         present(vc, animated: false) {
             vc?.addBtn()
         }
-   }
+    }
+    
+    static func showAlertBtns(_ message: String?, leftTitle: String? = "OK", rightTitle: String? = "ОТМЕНА") {
+        let vc = RNSAlertViewController.controller(message)
+        present(vc, animated: false) {
+            vc?.addBtns(leftTitle, rightTitle)
+        }
+    }
 }

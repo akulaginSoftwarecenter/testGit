@@ -27,29 +27,50 @@ class RNSAlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        messageLabel.text = message
-        messageView.backgroundColor = .EA4845
-        //messageView.roundTopCorners()
+        prepareUI()
     }
     
-    override class var storyboardName: String {
-        return "RNSAlertViewController"
+    func prepareUI() {
+        messageLabel.text = message
+        messageView.backgroundColor = .EA4845
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        messageView.roundTopCorners()
     }
     
     func addBtn(_ title: String? = "ОК") {
-        let button = UIButton()
-        //button.roundBottomCorners()
-        //button.roundCorners(.topRight, radius: 5)
-        button.titleLabel?.font = .cffazm22
-        button.setTitle(title, for: UIControlState())
-        button.backgroundColor = .EA4845
+        let button = RNSOneBtnAlert(title)
         button.touchUpInside { [weak self] in
-            self?.dismiss(animated: false)
+            self?.dismiss()
         }
         stackView.addArrangedSubview(button)
         button.snp.makeConstraints { (make) in
-            make.height.equalTo(59)
             make.width.equalTo(stackView)
         }
+    }
+    
+    func addBtns(_ leftTitle: String? = "OK", _ rightTitle: String? = "ОТМЕНА") {
+        let view = RNSTwoBtnAlert(leftTitle, rightTitle)
+        view.handlerLeft = { [weak self] in
+            self?.dismiss()
+        }
+        view.handlerRight = { [weak self] in
+            self?.dismiss()
+        }
+        stackView.addArrangedSubview(view)
+        view.snp.makeConstraints { (make) in
+            make.width.equalTo(stackView)
+        }
+    }
+    
+    func dismiss() {
+        self.dismiss(animated: false)
+    }
+   
+    override class var storyboardName: String {
+        return "RNSAlertViewController"
     }
 }

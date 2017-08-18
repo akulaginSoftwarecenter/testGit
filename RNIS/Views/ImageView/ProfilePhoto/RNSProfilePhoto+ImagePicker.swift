@@ -16,7 +16,7 @@ extension RNSProfilePhoto {
             vc.sourceType = type
             STRouter.present(vc)
         } else {
-            STRouter.showAlert("ACCESS DENIED")
+            STRouter.showAlertOk("ACCESS DENIED")
         }
     }
     

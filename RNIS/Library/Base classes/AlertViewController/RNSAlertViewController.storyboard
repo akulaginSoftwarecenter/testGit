@@ -65,6 +65,11 @@
                                             <constraint firstItem="Qk6-bf-9RM" firstAttribute="leading" secondItem="pKJ-9C-ZWi" secondAttribute="leading" constant="22" id="y04-mT-Ubq"/>
                                             <constraint firstItem="Qk6-bf-9RM" firstAttribute="centerX" secondItem="pKJ-9C-ZWi" secondAttribute="centerX" id="ygK-pX-Y7A"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="LHd-A6-duV"/>
@@ -80,7 +85,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>

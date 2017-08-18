@@ -49,7 +49,7 @@ class RNSChangePasswordController: UIViewController {
     
     func pop() {
         STRouter.pop { 
-            STRouter.showAlert("Ваш пароль успешно изменён")
+            STRouter.showAlertOk("Ваш пароль успешно изменён")
         }
     }
     

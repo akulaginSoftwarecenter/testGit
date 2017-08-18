@@ -55,13 +55,12 @@ extension UIView {
     }
     
     func roundTopCorners() {
-        roundCorners(.topLeft, radius: 5)
-        roundCorners(.topRight, radius: 5)
+        roundCorners([.topLeft,.topRight], radius: 5)
+
     }
     
     func roundBottomCorners() {
-        roundCorners(.bottomLeft, radius: 5)
-        roundCorners(.bottomRight, radius: 5)
+        roundCorners([.bottomLeft,.bottomRight], radius: 5)
     }
     
     func roundCorners(_ corners:UIRectCorner, radius: CGFloat) {

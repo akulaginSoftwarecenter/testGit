@@ -23,7 +23,7 @@ class RNSChangeCodeController: RNSCodeContainerController {
     override func actionNext() {
         STRouter.pop(animated: false) {
             STRouter.pop(animated: false) {
-                STRouter.showAlert("Номер телефона успешно изменён")
+                STRouter.showAlertOk("Номер телефона успешно изменён")
             }
         }
     }

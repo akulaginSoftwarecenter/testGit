@@ -20,6 +20,10 @@ extension UIColor {
         return UIColor(34,178,248)
     }
     
+    static var color234: UIColor {
+        return UIColor(234,72,69)
+    }
+    
     static var color241: UIColor {
         return UIColor(241,100,90)
     }

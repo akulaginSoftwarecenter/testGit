@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSTwoBtnAlert" customModule="RNIS" customModuleProvider="target">
+            <connections>
+                <outlet property="leftBtn" destination="a8c-y5-hBE" id="yPV-FG-oCu"/>
+                <outlet property="rightBtn" destination="8o9-Tx-NeQ" id="pMU-Pz-ioF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="61"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8c-y5-hBE">
+                    <rect key="frame" x="0.0" y="0.0" width="166.5" height="61"/>
+                    <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="22"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="leftAction:" destination="-1" eventType="touchUpInside" id="Q7E-tJ-gp5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o9-Tx-NeQ">
+                    <rect key="frame" x="166.5" y="0.0" width="166.5" height="61"/>
+                    <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="22"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="rightAction:" destination="-1" eventType="touchUpInside" id="KfQ-yq-7xh"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oW-Q5-jVh">
+                    <rect key="frame" x="166.5" y="0.0" width="0.0" height="61"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="0.5" id="RIb-1u-SB1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8o9-Tx-NeQ" secondAttribute="trailing" id="00S-BI-q2o"/>
+                <constraint firstAttribute="bottom" secondItem="9oW-Q5-jVh" secondAttribute="bottom" id="78O-ff-9YP"/>
+                <constraint firstItem="a8c-y5-hBE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Cq-qM-AxL"/>
+                <constraint firstAttribute="bottom" secondItem="8o9-Tx-NeQ" secondAttribute="bottom" id="9Jx-br-psA"/>
+                <constraint firstItem="a8c-y5-hBE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BMT-Tt-OeX"/>
+                <constraint firstItem="8o9-Tx-NeQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZiY-Pq-wH3"/>
+                <constraint firstAttribute="centerX" secondItem="a8c-y5-hBE" secondAttribute="trailing" id="hhC-iy-rpP"/>
+                <constraint firstItem="9oW-Q5-jVh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ihn-tQ-hQE"/>
+                <constraint firstItem="9oW-Q5-jVh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jEM-kn-Xea"/>
+                <constraint firstAttribute="bottom" secondItem="a8c-y5-hBE" secondAttribute="bottom" id="lKn-dF-Fpl"/>
+                <constraint firstItem="8o9-Tx-NeQ" firstAttribute="leading" secondItem="9oW-Q5-jVh" secondAttribute="trailing" id="mZH-IA-Zr5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-57.5" y="-223.5"/>
+        </view>
+    </objects>
+</document>
