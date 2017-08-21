@@ -28,8 +28,4 @@ extension RNSMapParentController {
     @IBAction func userLocationAction(_ sender: Any) {
         RNSMapManager.startLocation()
     }
-    
-    @IBAction func searchAction(_ sender: Any) {
-        RNSSearchViewController.initialPushAnimatedRed()
-    }
 }

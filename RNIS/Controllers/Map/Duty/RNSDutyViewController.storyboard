@@ -189,6 +189,7 @@
                         <outlet property="datePicker" destination="rPY-S5-6Kr" id="cmb-mc-NBK"/>
                         <outlet property="fromField" destination="V7f-CQ-V2A" id="BQj-r8-ytK"/>
                         <outlet property="inField" destination="INT-VM-7oX" id="6j1-f4-lp5"/>
+                        <outlet property="searchButton" destination="Z0Z-23-X4K" id="z88-As-hMT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDe-FM-G5K" userLabel="First Responder" sceneMemberID="firstResponder"/>

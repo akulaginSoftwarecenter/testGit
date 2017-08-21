@@ -13,6 +13,7 @@ class RNSDutyViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var fromField: UITextField!
     @IBOutlet weak var inField: UITextField!
+    @IBOutlet weak var searchButton: RNSBlackButton!
     
     var fromText: String? {
         return fromField.text
@@ -26,6 +27,13 @@ class RNSDutyViewController: UIViewController {
         super.viewDidLoad()
         
         prepareDatePicker()
+        prepareSearchButton()
+    }
+    
+    func prepareSearchButton() {
+        searchButton.handlerAction = {
+            RNSPageRouteController.initController(nil)?.pushAnimated()
+        }
     }
     
     func prepareDatePicker() {
