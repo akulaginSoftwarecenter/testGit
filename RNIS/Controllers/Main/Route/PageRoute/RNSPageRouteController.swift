@@ -10,9 +10,11 @@ import UIKit
 
 class RNSPageRouteController: UIViewController {
 
-    var items: [Any]?
+    var items: [RNSRouteVariant]?
     
-    static func initController(_ items: [Any]?) -> UIViewController?  {
+    @IBOutlet weak var pageView: RNSPageRouteView!
+    
+    static func initController(_ items: [RNSRouteVariant]?) -> UIViewController?  {
         let vc = RNSPageRouteController.controller as? RNSPageRouteController
         vc?.items = items
         return vc
@@ -20,7 +22,8 @@ class RNSPageRouteController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        pageView.items = items
     }
     
     override class var storyboardName: String {
