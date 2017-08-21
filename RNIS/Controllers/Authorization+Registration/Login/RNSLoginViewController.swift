@@ -30,22 +30,41 @@ class RNSLoginViewController: UIViewController {
     }
     
     func stubLogin() {
-        loginField.text = "79136298659"
-        loginField.textFieldDidChange()
-        passwordField.text = "111111"
+        loginField.text = "admin"
+        passwordField.text = "password"
     }
     
     func loginPressed() {
+        
         if let error = fields.checkValidFields {
             errorLabel.text = error
             return
         }
         clearError()
+ /*
+        guard let login = loginField.text,
+        let password = passwordField.text else {
+            return
+        }
+        
         STRouter.showLoader()
+        RNSPostLogin(login, password: password, complete: {
+            STRouter.removeLoader()
+            STRouter.showMap()
+        }, failure: {[weak self] (errorText) in
+            STRouter.removeLoader()
+            self?.prepareError(errorText)
+        })
+         */
+        
         //Utils.delay(2) {
             STRouter.removeLoader()
             STRouter.showMap()
         //}
+    }
+    
+    func  prepareError(_ error: String?) {
+        errorLabel.text = error
     }
     
     func clearError() {

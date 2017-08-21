@@ -9,17 +9,31 @@
 import UIKit
 
 class RNSPostLogin: RNSPostRequest {
+
+    var login: String?
+    var password: String?
     
-    @discardableResult override init() {
-        super.init()
+    @discardableResult convenience init(_ login: String?, password: String?, complete: EmptyBlock?, failure: AliasStringBlock?) {
+        self.init()
         
-        showLoader()
-        sendRequest()
+        sendRequestWithCompletion { (object, error, inot) in
+            print("RNSPostLogin Token",object)
+            print("RNSPostLogin error",error)
+            if let error = error {
+                failure?(error.descriptionError)
+                return
+            }
+            complete?()
+        }
     }
     
     override var payload: AliasDictionary {
-        return ["login":"admin",
-                "password":"password"]
+        guard let login = login,
+        let password = password else {
+            return [:]
+        }
+        return ["login":login,
+                "password":password]
     }
     
     override var subject: String {
@@ -27,7 +41,7 @@ class RNSPostLogin: RNSPostRequest {
     }
 
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        removeLoader()
+        
         guard let model = RNSRequestReply<RNSTokenPayload>(reply: reply) else {
                 superError()
                 return
@@ -36,7 +50,6 @@ class RNSPostLogin: RNSPostRequest {
             return
         }
         UserDefaults.setToken(token)
-        STRouter.showMap()
         super.apiDidReturnReply(token as AnyObject, source: source)
     }
 }
