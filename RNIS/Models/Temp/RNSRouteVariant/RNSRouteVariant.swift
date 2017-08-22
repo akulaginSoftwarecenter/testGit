@@ -10,13 +10,19 @@ import UIKit
 
 class RNSRouteVariant: RNISMappableBase {
     
+    var durationMinute: Int?
+    var endDate: Date?
+    
     var buss: [RNSBusTemp]?
     
     static var generate: RNSRouteVariant {
         let item = RNSRouteVariant()
         var buss = [RNSBusTemp]()
+        let durationMinute = Int.rand(1, limit: 40)
+        item.durationMinute = durationMinute
+        item.endDate = Date().appendMinute(durationMinute)
         
-        for _ in (1...Int.rand(1, limit: 5)) {
+        for _ in (1...Int.rand(1, limit: 4)) {
             buss.append(RNSBusTemp.generate)
         }
         

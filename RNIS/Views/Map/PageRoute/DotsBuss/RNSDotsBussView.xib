@@ -36,19 +36,19 @@
                     </constraints>
                 </view>
                 <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="vVh-sW-mLR">
-                    <rect key="frame" x="52" y="0.0" width="303" height="100"/>
+                    <rect key="frame" x="48" y="0.0" width="309" height="100"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-og-z1Y" customClass="RNSDotsWhite" customModule="RNIS" customModuleProvider="target">
-                    <rect key="frame" x="20" y="47" width="27" height="6"/>
+                    <rect key="frame" x="18" y="47" width="27" height="6"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="27" id="7zv-Sa-0oH"/>
                         <constraint firstAttribute="height" constant="6" id="uu9-ws-ld0"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-6w-2Py">
-                    <rect key="frame" x="203.5" y="0.0" width="0.0" height="100"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-6w-2Py">
+                    <rect key="frame" x="202.5" y="0.0" width="0.0" height="100"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V10-E4-HNG">
                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
@@ -63,11 +63,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="vVh-sW-mLR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EqH-R0-BvC"/>
-                <constraint firstItem="vVh-sW-mLR" firstAttribute="leading" secondItem="l7d-og-z1Y" secondAttribute="trailing" constant="5" id="Fh9-Yi-bRt"/>
+                <constraint firstItem="vVh-sW-mLR" firstAttribute="leading" secondItem="l7d-og-z1Y" secondAttribute="trailing" constant="3" id="Fh9-Yi-bRt"/>
                 <constraint firstItem="6Oc-6w-2Py" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IFS-4L-Rar"/>
-                <constraint firstItem="l7d-og-z1Y" firstAttribute="leading" secondItem="EI4-qj-bAA" secondAttribute="trailing" constant="5" id="JgN-Kp-AIA"/>
+                <constraint firstItem="l7d-og-z1Y" firstAttribute="leading" secondItem="EI4-qj-bAA" secondAttribute="trailing" constant="3" id="JgN-Kp-AIA"/>
                 <constraint firstAttribute="bottom" secondItem="vVh-sW-mLR" secondAttribute="bottom" id="LEu-YB-njY"/>
-                <constraint firstItem="sZP-sG-cNa" firstAttribute="leading" secondItem="vVh-sW-mLR" secondAttribute="trailing" constant="5" id="WG8-3K-db2"/>
+                <constraint firstItem="sZP-sG-cNa" firstAttribute="leading" secondItem="vVh-sW-mLR" secondAttribute="trailing" constant="3" id="WG8-3K-db2"/>
                 <constraint firstItem="EI4-qj-bAA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gMU-JE-zi0"/>
                 <constraint firstAttribute="trailing" secondItem="sZP-sG-cNa" secondAttribute="trailing" id="haR-9I-RdT"/>
                 <constraint firstItem="6Oc-6w-2Py" firstAttribute="centerX" secondItem="vVh-sW-mLR" secondAttribute="centerX" id="i6e-TG-HCp"/>
