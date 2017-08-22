@@ -48,7 +48,10 @@ extension UIColor {
         return UIColor(hexString: "F1645A")
     }
     
-    
+    static var FFB9AF:UIColor {
+        return UIColor(hexString: "FFB9AF")
+    }
+   
     convenience init(_ red255: UInt, _ green255: UInt, _ blue255: UInt) {
         self.init(red255,green255,blue255,1)
     }

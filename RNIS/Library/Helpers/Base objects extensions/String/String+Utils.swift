@@ -13,4 +13,25 @@ extension String{
     var last10:String {
         return String(characters.suffix(10))
     }
+    
+    func width(_ font: UIFont) -> CGFloat {
+        let floatMax = CGFloat.greatestFiniteMagnitude
+        let frame = rectWithFont(font, size: CGSize(width: floatMax, height: floatMax))
+        return frame.width;
+    }
+    
+    func height(_ font: UIFont, width: CGFloat) -> CGFloat {
+        let frame = rectWithFont(font, size: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude))
+        return frame.height;
+    }
+    
+    func rectWithFont(_ font: UIFont, size: CGSize) -> CGRect {
+        let style = NSMutableParagraphStyle()
+        style.lineBreakMode = .byWordWrapping
+        let attributes = [NSForegroundColorAttributeName:UIColor.black,
+                          NSFontAttributeName:font,
+                          NSParagraphStyleAttributeName:style];
+        return self.boundingRect(with: size, options: [.usesLineFragmentOrigin,.usesFontLeading]
+            , attributes: attributes, context: nil)
+    }
 }

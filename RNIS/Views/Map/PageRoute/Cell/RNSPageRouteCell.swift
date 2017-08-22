@@ -10,4 +10,15 @@ import UIKit
 
 class RNSPageRouteCell: UICollectionViewCell {
     
+    @IBOutlet weak var dotsBussView: RNSDotsBussView!
+    
+    var item: RNSRouteVariant? {
+        didSet {
+            reloadData()
+        }
+    }
+    
+    func reloadData() {
+        dotsBussView.item = item
+    }
 }

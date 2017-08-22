@@ -34,7 +34,7 @@ class RNSDutyViewController: UIViewController {
         searchButton.handlerAction = {
             var items = [RNSRouteVariant]()
             for _ in (0...Int.rand(1, limit: 6)) {
-                items.append(RNSRouteVariant())
+                items.append(RNSRouteVariant.generate)
             }
             RNSPageRouteController.initController(items)?.pushAnimated()
         }

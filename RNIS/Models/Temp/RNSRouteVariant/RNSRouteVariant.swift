@@ -9,5 +9,27 @@
 import UIKit
 
 class RNSRouteVariant: RNISMappableBase {
-
+    
+    var buss: [RNSBusTemp]?
+    
+    static var generate: RNSRouteVariant {
+        let item = RNSRouteVariant()
+        var buss = [RNSBusTemp]()
+        
+        for _ in (1...Int.rand(1, limit: 5)) {
+            buss.append(RNSBusTemp.generate)
+        }
+        
+        item.buss = buss
+        return item
+    }
+    
+    var titleWidthBuss: CGFloat {
+        var width = CGFloat(0)
+        for item in buss ?? [] {
+            print("item.titleWidth", item.title, item.titleWidth)
+            width += item.titleWidth
+        }
+        return width
+    }
 }

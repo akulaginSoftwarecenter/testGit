@@ -16,10 +16,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eMB-ZA-E9n" customClass="RNSPageRouteCell" customModule="RNIS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="260" height="142"/>
+            <rect key="frame" x="0.0" y="0.0" width="330" height="166"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="260" height="142"/>
+                <rect key="frame" x="0.0" y="0.0" width="330" height="166"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd0-5V-y1M">
@@ -29,25 +29,25 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 пересадка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9e-dn-nGP">
-                        <rect key="frame" x="156.5" y="19.5" width="85.5" height="20"/>
+                        <rect key="frame" x="226.5" y="19" width="85.5" height="20"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" red="0.95686274509803915" green="0.82352941176470584" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время прибытия: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk6-rM-Fmq">
-                        <rect key="frame" x="17" y="98" width="124" height="20"/>
+                        <rect key="frame" x="17" y="126" width="124" height="16"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-JW-rev">
-                        <rect key="frame" x="141" y="98" width="37.5" height="20"/>
+                        <rect key="frame" x="141" y="124" width="37.5" height="20"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWk-mq-ftU" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
-                        <rect key="frame" x="195.5" y="87.5" width="55.5" height="41"/>
+                        <rect key="frame" x="195.5" y="114" width="125.5" height="41"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="41" id="zqy-cG-29E"/>
@@ -55,6 +55,13 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Поехали"/>
                         </userDefinedRuntimeAttributes>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0R-Fu-QM4" customClass="RNSDotsBussView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="18" y="54" width="294" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="lzp-zu-qTg"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -66,13 +73,20 @@
                 <constraint firstItem="1aK-JW-rev" firstAttribute="centerY" secondItem="tk6-rM-Fmq" secondAttribute="centerY" id="8xI-AT-2YG"/>
                 <constraint firstItem="1aK-JW-rev" firstAttribute="leading" secondItem="tk6-rM-Fmq" secondAttribute="trailing" id="FCZ-JT-p4n"/>
                 <constraint firstAttribute="bottom" secondItem="tk6-rM-Fmq" secondAttribute="bottom" constant="24" id="Lc7-NN-xmY"/>
+                <constraint firstItem="G0R-Fu-QM4" firstAttribute="leading" secondItem="eMB-ZA-E9n" secondAttribute="leading" constant="18" id="NHA-CH-gxJ"/>
                 <constraint firstItem="cd0-5V-y1M" firstAttribute="leading" secondItem="eMB-ZA-E9n" secondAttribute="leading" constant="18" id="SHk-d1-hgE"/>
                 <constraint firstItem="c9e-dn-nGP" firstAttribute="centerY" secondItem="cd0-5V-y1M" secondAttribute="centerY" id="bV7-B8-eFI"/>
+                <constraint firstItem="FWk-mq-ftU" firstAttribute="top" secondItem="G0R-Fu-QM4" secondAttribute="bottom" id="f1M-KS-3Zn"/>
+                <constraint firstItem="G0R-Fu-QM4" firstAttribute="top" secondItem="eMB-ZA-E9n" secondAttribute="top" constant="54" id="nro-dJ-QoE"/>
                 <constraint firstItem="FWk-mq-ftU" firstAttribute="centerY" secondItem="1aK-JW-rev" secondAttribute="centerY" id="owg-mk-WQi"/>
+                <constraint firstAttribute="trailing" secondItem="G0R-Fu-QM4" secondAttribute="trailing" constant="18" id="uV5-Tt-eBc"/>
                 <constraint firstItem="cd0-5V-y1M" firstAttribute="top" secondItem="eMB-ZA-E9n" secondAttribute="top" constant="18" id="zsD-uu-jxh"/>
             </constraints>
-            <size key="customSize" width="374" height="82"/>
-            <point key="canvasLocation" x="126" y="-34"/>
+            <size key="customSize" width="444" height="106"/>
+            <connections>
+                <outlet property="dotsBussView" destination="G0R-Fu-QM4" id="dQ6-mU-uM0"/>
+            </connections>
+            <point key="canvasLocation" x="91" y="-46"/>
         </collectionViewCell>
     </objects>
 </document>

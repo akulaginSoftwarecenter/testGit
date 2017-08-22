@@ -10,8 +10,15 @@ import UIKit
 
 class RNSCircleHole: BaseViewWithXIBInit {
     
+    @IBOutlet var mainCircle: RNSCircle!
+    @IBOutlet weak var smallCircle: RNSCircle!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
+    }
+    
+    override var nibNamed:String {
+        return "RNSCircleHole"
     }
 }
