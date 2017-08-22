@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSDotsBussView" customModule="RNIS" customModuleProvider="target">
             <connections>
-                <outlet property="constraintSmallDots" destination="OhL-jJ-joU" id="DfC-EL-rd9"/>
+                <outlet property="constraintSmallDots" destination="7zv-Sa-0oH" id="PtL-7W-bV8"/>
                 <outlet property="stackView" destination="6Oc-6w-2Py" id="uS6-Xp-jxq"/>
             </connections>
         </placeholder>
@@ -35,19 +35,20 @@
                         <constraint firstAttribute="width" constant="15" id="Jfw-N0-aJe"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SmallDots" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-oc-dX7">
-                    <rect key="frame" x="20" y="47" width="38" height="6"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="6" id="6GS-6P-BPS"/>
-                        <constraint firstAttribute="width" constant="38" id="OhL-jJ-joU"/>
-                    </constraints>
-                </imageView>
                 <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="vVh-sW-mLR">
-                    <rect key="frame" x="63" y="0.0" width="292" height="100"/>
-                    <color key="backgroundColor" red="0.42950770189999998" green="1" blue="0.78372413389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="52" y="0.0" width="303" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-og-z1Y" customClass="RNSDotsWhite" customModule="RNIS" customModuleProvider="target">
+                    <rect key="frame" x="20" y="47" width="27" height="6"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="7zv-Sa-0oH"/>
+                        <constraint firstAttribute="height" constant="6" id="uu9-ws-ld0"/>
+                    </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-6w-2Py">
-                    <rect key="frame" x="209" y="0.0" width="0.0" height="100"/>
+                    <rect key="frame" x="203.5" y="0.0" width="0.0" height="100"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V10-E4-HNG">
                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
@@ -61,17 +62,17 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="vVh-sW-mLR" firstAttribute="leading" secondItem="2rk-oc-dX7" secondAttribute="trailing" constant="5" id="7Ks-SA-1iD"/>
                 <constraint firstItem="vVh-sW-mLR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EqH-R0-BvC"/>
+                <constraint firstItem="vVh-sW-mLR" firstAttribute="leading" secondItem="l7d-og-z1Y" secondAttribute="trailing" constant="5" id="Fh9-Yi-bRt"/>
                 <constraint firstItem="6Oc-6w-2Py" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IFS-4L-Rar"/>
+                <constraint firstItem="l7d-og-z1Y" firstAttribute="leading" secondItem="EI4-qj-bAA" secondAttribute="trailing" constant="5" id="JgN-Kp-AIA"/>
                 <constraint firstAttribute="bottom" secondItem="vVh-sW-mLR" secondAttribute="bottom" id="LEu-YB-njY"/>
-                <constraint firstItem="2rk-oc-dX7" firstAttribute="centerY" secondItem="EI4-qj-bAA" secondAttribute="centerY" id="ONl-rS-Trc"/>
                 <constraint firstItem="sZP-sG-cNa" firstAttribute="leading" secondItem="vVh-sW-mLR" secondAttribute="trailing" constant="5" id="WG8-3K-db2"/>
                 <constraint firstItem="EI4-qj-bAA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gMU-JE-zi0"/>
                 <constraint firstAttribute="trailing" secondItem="sZP-sG-cNa" secondAttribute="trailing" id="haR-9I-RdT"/>
                 <constraint firstItem="6Oc-6w-2Py" firstAttribute="centerX" secondItem="vVh-sW-mLR" secondAttribute="centerX" id="i6e-TG-HCp"/>
+                <constraint firstItem="l7d-og-z1Y" firstAttribute="centerY" secondItem="EI4-qj-bAA" secondAttribute="centerY" id="lb0-A6-3i9"/>
                 <constraint firstItem="EI4-qj-bAA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="p4c-FC-j0G"/>
-                <constraint firstItem="2rk-oc-dX7" firstAttribute="leading" secondItem="EI4-qj-bAA" secondAttribute="trailing" constant="5" id="srw-v3-xBE"/>
                 <constraint firstItem="sZP-sG-cNa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vwz-sF-zFc"/>
                 <constraint firstAttribute="bottom" secondItem="6Oc-6w-2Py" secondAttribute="bottom" id="zyj-hW-rkD"/>
             </constraints>
@@ -79,7 +80,4 @@
             <point key="canvasLocation" x="-11.5" y="-191"/>
         </view>
     </objects>
-    <resources>
-        <image name="SmallDots" width="57" height="6"/>
-    </resources>
 </document>

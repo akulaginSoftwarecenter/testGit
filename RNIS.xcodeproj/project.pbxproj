@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83029BCA1F4BEBC900B0FEE3 /* RNSDotsWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83029BC91F4BEBC900B0FEE3 /* RNSDotsWhite.swift */; };
+		83029BCC1F4BEBD700B0FEE3 /* RNSDotsWhite.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83029BCB1F4BEBD700B0FEE3 /* RNSDotsWhite.xib */; };
+		83029BCF1F4BECBB00B0FEE3 /* UIStackView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83029BCE1F4BECBB00B0FEE3 /* UIStackView+Utils.swift */; };
 		8310D4401F3C6AE3000CCD0A /* RNSBusDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */; };
 		8310D4421F3C6B41000CCD0A /* RNSBusDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8310D4411F3C6B41000CCD0A /* RNSBusDetailController.storyboard */; };
 		8310D4471F3C6C0E000CCD0A /* RNSBusDetailTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D4461F3C6C0E000CCD0A /* RNSBusDetailTotalView.swift */; };
@@ -341,6 +344,9 @@
 
 /* Begin PBXFileReference section */
 		23B4C45A07CC288BB5A83FCE /* Pods-RNIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.debug.xcconfig"; sourceTree = "<group>"; };
+		83029BC91F4BEBC900B0FEE3 /* RNSDotsWhite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDotsWhite.swift; path = Views/Map/PageRoute/DotsWhite/RNSDotsWhite.swift; sourceTree = "<group>"; };
+		83029BCB1F4BEBD700B0FEE3 /* RNSDotsWhite.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSDotsWhite.xib; path = Views/Map/PageRoute/DotsWhite/RNSDotsWhite.xib; sourceTree = "<group>"; };
+		83029BCE1F4BECBB00B0FEE3 /* UIStackView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStackView+Utils.swift"; path = "Library/Helpers/Base objects extensions/UIStackView/UIStackView+Utils.swift"; sourceTree = "<group>"; };
 		8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusDetailController.swift; path = Controllers/Map/BusDetail/RNSBusDetailController.swift; sourceTree = "<group>"; };
 		8310D4411F3C6B41000CCD0A /* RNSBusDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSBusDetailController.storyboard; path = Controllers/Map/BusDetail/RNSBusDetailController.storyboard; sourceTree = "<group>"; };
 		8310D4461F3C6C0E000CCD0A /* RNSBusDetailTotalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusDetailTotalView.swift; path = Views/Map/BusDetail/BusDetailTotal/RNSBusDetailTotalView.swift; sourceTree = "<group>"; };
@@ -647,6 +653,23 @@
 				DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83029BC81F4BEB7D00B0FEE3 /* DotsWhite */ = {
+			isa = PBXGroup;
+			children = (
+				83029BC91F4BEBC900B0FEE3 /* RNSDotsWhite.swift */,
+				83029BCB1F4BEBD700B0FEE3 /* RNSDotsWhite.xib */,
+			);
+			name = DotsWhite;
+			sourceTree = "<group>";
+		};
+		83029BCD1F4BEC9F00B0FEE3 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				83029BCE1F4BECBB00B0FEE3 /* UIStackView+Utils.swift */,
+			);
+			name = UIStackView;
 			sourceTree = "<group>";
 		};
 		8310D43E1F3C69BF000CCD0A /* BusDetail */ = {
@@ -1626,6 +1649,7 @@
 		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				83029BCD1F4BEC9F00B0FEE3 /* UIStackView */,
 				837ABF281F2EEDF800AB5E54 /* Array */,
 				8326AA3C1F1F643E00F893C8 /* Button */,
 				8326AA2F1F1F51A700F893C8 /* Dictionary */,
@@ -2140,6 +2164,7 @@
 		83A53F841F4A968400938969 /* PageRouteView */ = {
 			isa = PBXGroup;
 			children = (
+				83029BC81F4BEB7D00B0FEE3 /* DotsWhite */,
 				83D1558D1F4BCF5400150144 /* DotsName */,
 				83D155851F4BC7E800150144 /* DotsBuss */,
 				83A53F891F4A986500938969 /* Cell */,
@@ -2510,6 +2535,7 @@
 				836277E41F382E97009FB712 /* RNSBusStopDetailController.storyboard in Resources */,
 				838707E41F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */,
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
+				83029BCC1F4BEBD700B0FEE3 /* RNSDotsWhite.xib in Resources */,
 				8310D4491F3C6C1F000CCD0A /* RNSBusDetailTotalView.xib in Resources */,
 				839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */,
 				8310D44D1F3C6C4C000CCD0A /* RNSBusDetailWayView.xib in Resources */,
@@ -2724,6 +2750,7 @@
 				83D1558C1F4BC9B400150144 /* RNSCircleHoleWhite.swift in Sources */,
 				8310D4551F3C72D6000CCD0A /* RNSCircleHole.swift in Sources */,
 				83E2D3921F34332B00035877 /* RNSScrollKeyBoardContainer.swift in Sources */,
+				83029BCA1F4BEBC900B0FEE3 /* RNSDotsWhite.swift in Sources */,
 				83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */,
 				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,
 				835718AE1F21C80600DE5E25 /* RNSPinBuild.swift in Sources */,
@@ -2759,6 +2786,7 @@
 				832B1DCE1F42B2110024505C /* RNSDutyViewController+Action.swift in Sources */,
 				83D155951F4BD11000150144 /* RNSArrowLeft.swift in Sources */,
 				837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
+				83029BCF1F4BECBB00B0FEE3 /* UIStackView+Utils.swift in Sources */,
 				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
 				838707E91F3027410094B273 /* RNSPhoneContrainerController.swift in Sources */,
 				8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */,

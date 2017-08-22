@@ -20,11 +20,9 @@ class RNSDotsBussView: BaseViewWithXIBInit {
     }
     
     func reloadData() {
-        print("widthArraw",widthArraw)
         let widthArrow = self.widthArraw
         constraintSmallDots.constant = widthArrow
-        
-        stackViewRemoveSubViews()
+        stackView.removeArrangedSubviews()
         
         for bus in item?.buss ?? [] {
             let name = RNSDotsName(bus)
@@ -35,13 +33,6 @@ class RNSDotsBussView: BaseViewWithXIBInit {
                 make.width.equalTo(widthArrow)
             })
             stackView.addArrangedSubview(arrow)
-
-        }
-    }
-    
-    func stackViewRemoveSubViews() {
-        for view in stackView.arrangedSubviews {
-            stackView.removeArrangedSubview(view)
         }
     }
     
@@ -50,10 +41,6 @@ class RNSDotsBussView: BaseViewWithXIBInit {
         let countBuss = CGFloat(item?.buss?.count ?? 0)
         let betweens = CGFloat(5 * ((countBuss + 1) * 2))
         let titleWidthBuss = item?.titleWidthBuss ?? 0
-        print("countBuss",countBuss)
-        print("betweens",betweens)
-        print("titleWidthBuss",titleWidthBuss)
-        print("UIScreen.width",UIScreen.width)
         return (UIScreen.width - edge - betweens - titleWidthBuss)/(countBuss + 1)
     }
 }

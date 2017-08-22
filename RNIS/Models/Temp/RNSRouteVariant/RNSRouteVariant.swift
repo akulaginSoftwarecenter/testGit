@@ -27,7 +27,6 @@ class RNSRouteVariant: RNISMappableBase {
     var titleWidthBuss: CGFloat {
         var width = CGFloat(0)
         for item in buss ?? [] {
-            print("item.titleWidth", item.title, item.titleWidth)
             width += item.titleWidth
         }
         return width
