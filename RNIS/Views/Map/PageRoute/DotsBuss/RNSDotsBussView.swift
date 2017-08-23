@@ -38,7 +38,7 @@ class RNSDotsBussView: BaseViewWithXIBInit {
     
     var widthArraw: CGFloat {
         let edge = CGFloat(66)
-        let countBuss = CGFloat(item?.buss?.count ?? 0)
+        let countBuss = CGFloat(item?.buss.count ?? 0)
         let betweens = CGFloat(3 * ((countBuss + 1) * 2))
         let titleWidthBuss = item?.titleWidthBuss ?? 0
         return (UIScreen.width - edge - betweens - titleWidthBuss)/(countBuss + 1)

@@ -11,6 +11,13 @@ import RealmSwift
 
 class RNSDataManager: NSObject {
     
+    static var busStop1: RNSBusStop?
+    static var busStop2: RNSBusStop?
+    static var busStop3: RNSBusStop?
+    static var busStop4: RNSBusStop?
+    static var busStop5: RNSBusStop?
+    
+    
     static var realm: Realm? {
         do {
            return try Realm()

@@ -43,7 +43,7 @@ class RNSPageRouteCell: UICollectionViewCell {
     }
     
     func prepareCount() {
-        guard let count = item?.buss?.count else {
+        guard let count = item?.buss.count else {
             return
         }
         var padeg: String

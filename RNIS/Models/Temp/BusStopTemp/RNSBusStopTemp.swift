@@ -10,4 +10,10 @@ import UIKit
 
 class RNSBusStopTemp: RNISMappableBase, RNSTextItem  {
     var text: String?
+    
+    convenience init(_ text: String?) {
+        self.init()
+        
+        self.text = text
+    }
 }

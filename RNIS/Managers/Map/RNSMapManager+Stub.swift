@@ -21,7 +21,6 @@ extension RNSMapManager {
         guard let items = RNSDataManager.busStops else {
             return
         }
-        print("busStops",items.count)
         for item in items {
             item.handlerRemove?()
             _ = RNSPinBusStop(item)
