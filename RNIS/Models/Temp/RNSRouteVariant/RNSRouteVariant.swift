@@ -10,6 +10,9 @@ import UIKit
 
 class RNSRouteVariant: RNISMappableBase {
     
+    var roadActivate: [PGPolyline]?
+    var roadOff: RNSRoadOff?
+    
     var durationMinute: Int?
     var endDate: Date?
     
@@ -36,6 +39,8 @@ class RNSRouteVariant: RNISMappableBase {
         item.addBusPoint(59.935863, lon: 30.308822, bus: bus3, busStop: busStop4)
         item.addBusPoint(59.936428, lon: 30.310159, bus: bus3)
         item.addBusPoint(59.935282, lon: 30.311911, bus: bus3)
+        item.prepareRoadOff()
+        //item.prepareRoadActivate()
         return item
     }
     
@@ -50,6 +55,7 @@ class RNSRouteVariant: RNISMappableBase {
         item.addBusPoint(59.933299, lon: 30.305892, bus: bus1)
         item.addBusPoint(59.934654, lon: 30.310087, bus: bus1, busStop: busStop5)
         item.addBusPoint(59.935282, lon: 30.311911, bus: bus1)
+        //item.prepareRoadActivate()
         return item
     }
     

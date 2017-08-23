@@ -13,6 +13,7 @@ class RNSPageRouteController: UIViewController {
     var items: [RNSRouteVariant]?
     
     @IBOutlet weak var pageView: RNSPageRouteView!
+    var containerController: RNSMapParentController?
     
     static func initController(_ items: [RNSRouteVariant]?) -> UIViewController?  {
         let vc = RNSPageRouteController.controller as? RNSPageRouteController
@@ -24,6 +25,8 @@ class RNSPageRouteController: UIViewController {
         super.viewDidLoad()
         
         pageView.items = items
+        prepareLines()
+        prepareMapView()
     }
     
     override class var storyboardName: String {
@@ -31,6 +34,7 @@ class RNSPageRouteController: UIViewController {
     }
     
     deinit {
+        removeAllRoute()
         print("RNSPageRouteController deinit")
     }
 }

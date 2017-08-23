@@ -119,7 +119,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Z-23-X4K" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="580" width="315" height="63"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="ag3-L7-T4k"/>
                                 </constraints>

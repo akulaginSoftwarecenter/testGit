@@ -20,6 +20,14 @@ extension UIColor {
         return UIColor(34,178,248)
     }
     
+    static var color125: UIColor {
+        return UIColor(125,125,125,0.7)
+    }
+    
+    static var color163: UIColor {
+        return UIColor(163,162,149)
+    }
+    
     static var color234: UIColor {
         return UIColor(234,72,69)
     }
@@ -31,7 +39,11 @@ extension UIColor {
     static var whiteAlpha50: UIColor {
         return white.withAlphaComponent(0.5)
     }
-
+    
+    static var color01B3FD:UIColor {
+        return UIColor(hexString: "01B3FD")
+    }
+    
     static var E25E55:UIColor {
         return UIColor(hexString: "E25E55")
     }
