@@ -17,10 +17,24 @@ class RNSBusStop: RNSCoordinateModel {
         generate("бул. Конногвардейский")
     }
     
+    static func generate(_ title: String?, lat: Double, lon: Double) -> RNSBusStop {
+        let item = RNSBusStop()
+        item.generate(title, lat: lat, lon: lon)
+        return item
+    }
+    
+    func generate(_ title: String?, lat: Double?, lon: Double?) {
+        self.title = title ?? ""
+        guard let lat = lat,
+            let lon = lon else {
+            return
+        }
+        latitude = lat
+        longitude = lon
+    }
+    
     func generate(_ title: String) {
-        self.title = title
-        latitude = 59.9344377
-        longitude = 30.3010831
+        generate(title, lat: 59.9344377, lon: 0.3010831)
     }
     
     static var generateList:[RNSBusStop] {

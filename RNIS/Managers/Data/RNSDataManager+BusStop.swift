@@ -16,13 +16,23 @@ extension RNSDataManager {
     }
     
     static func createStubBusStopIfNeed() {
-        guard busStops?.count == 0  else {
+        write({
+            removeAllBusStop()
+            addBusStop("бул. Конногвардейский", lat: 59.9344377, lon: 30.3010831)
+            addBusStop("Исакиевский собор", lat: 59.935051, lon: 30.306572)
+            addBusStop("пр. Адмиралтейский", lat: 59.935863, lon: 30.308822)
+            addBusStop("Исакиевский собор", lat: 59.934654, lon: 30.310087)
+        })
+    }
+    
+    static func addBusStop(_ title: String?, lat: Double, lon: Double) {
+        realm?.add(RNSBusStop.generate(title, lat: lat, lon: lon))
+    }
+    
+    static func removeAllBusStop() {
+        guard let busStops = busStops else {
             return
         }
-        write({
-            let item = RNSBusStop()
-            item.generate()
-            realm?.add(item)
-        })
+        realm?.delete(busStops)
     }
 }
