@@ -13,8 +13,8 @@ class RNSMapView: MapView {
     init() {
         super.init(frame: CGRect.zero)
         startApplication()
-        setMapHost(mapHost)
-        setTrafficMarksHost(mapHost)
+        //setMapHost(mapHost)
+        //setTrafficMarksHost(mapHost)
         enterForeground()
         enableMyLocation()
         setMapRegime(1)
