@@ -1,18 +1,17 @@
 //
-//  RNSRequestReply.swift
+//  RNSRequestError.swift
 //  RNIS
 //
-//  Created by Артем Кулагин on 21.07.17.
+//  Created by Артем Кулагин on 24.08.17.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
 import UIKit
 import ObjectMapper
 
-class RNSRequestReply<T1: Mappable,T2: Mappable>: RNISMappableBase {
-    var payload: T1?
-    var errors: [RNSRequestError<T2>]?
-    
+class RNSRequestError<T: Mappable>: RNISMappableBase {
+    var data: T?
+    var text: String?
     
     convenience init?(reply: AnyObject?) {
         guard let dict = reply as? AliasDictionary else {
@@ -22,7 +21,7 @@ class RNSRequestReply<T1: Mappable,T2: Mappable>: RNISMappableBase {
     }
     
     public override func mapping(map: Map) {
-        payload <- map["payload"]
-        errors <- map["errors"]
+        data <- map["data"]
+        text <- map["text"]
     }
 }

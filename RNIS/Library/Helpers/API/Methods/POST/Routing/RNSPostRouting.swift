@@ -49,7 +49,7 @@ class RNSPostRouting: RNSPostRequest {
             print("apiDidReturnReply",reply)
         }
         removeLoader()
-        guard let model = RNSRequestReply<RNSRoutingPayload>(reply: reply),
+        guard let model = RNSRequestReply<RNSRoutingPayload, RNISMappableBase>(reply: reply),
             let route = model.payload?.route else {
             superError()
             return

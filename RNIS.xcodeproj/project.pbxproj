@@ -190,6 +190,8 @@
 		8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE9D1F204FA700FCA26E /* LoaderView.swift */; };
 		8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9E1F204FA700FCA26E /* LoaderView.xib */; };
 		8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */; };
+		837857EA1F4E6F25009DEA26 /* RNSRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837857E91F4E6F25009DEA26 /* RNSRequestError.swift */; };
+		837857EE1F4E700A009DEA26 /* RNSLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837857ED1F4E700A009DEA26 /* RNSLoginError.swift */; };
 		837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */; };
 		837ABEFC1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */; };
 		837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFD1F2EE13100AB5E54 /* STRouter+Containers.swift */; };
@@ -527,6 +529,8 @@
 		8375DE9D1F204FA700FCA26E /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		8375DE9E1F204FA700FCA26E /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+MapView.swift"; path = "Controllers/Map/RNSMapViewController+MapView.swift"; sourceTree = "<group>"; };
+		837857E91F4E6F25009DEA26 /* RNSRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRequestError.swift; path = Models/Temp/Error/ReauestError/RNSRequestError.swift; sourceTree = "<group>"; };
+		837857ED1F4E700A009DEA26 /* RNSLoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLoginError.swift; path = Models/Temp/Error/LoginError/RNSLoginError.swift; sourceTree = "<group>"; };
 		837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPasswordField.swift; sourceTree = "<group>"; };
 		837ABEFD1F2EE13100AB5E54 /* STRouter+Containers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "STRouter+Containers.swift"; sourceTree = "<group>"; };
 		837ABF011F2EE19700AB5E54 /* KeyBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBoardViewController.swift; sourceTree = "<group>"; };
@@ -779,13 +783,12 @@
 		831A85931F413D5A0095F006 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
+				837857EC1F4E6FBA009DEA26 /* Reply */,
+				837857E81F4E6ED5009DEA26 /* Error */,
 				831A85B11F4148B40095F006 /* AddressTemp */,
 				831A85AF1F4148A40095F006 /* BusStopTemp */,
 				831A85B01F4148AE0095F006 /* BusTemp */,
-				835718841F21A6A400DE5E25 /* RequestReply */,
 				83A53F941F4A9E9100938969 /* RouteVariant */,
-				83CD58531F25914200A9FE1A /* RoutingPayload */,
-				835718871F21A79100DE5E25 /* TokenPayload */,
 				8326AA361F1F59C400F893C8 /* Traffic */,
 				8326AA331F1F57AA00F893C8 /* TraffickMark */,
 			);
@@ -1884,6 +1887,41 @@
 			path = Library/Helpers/LoaderView;
 			sourceTree = "<group>";
 		};
+		837857E71F4E6E45009DEA26 /* RequestError */ = {
+			isa = PBXGroup;
+			children = (
+				837857E91F4E6F25009DEA26 /* RNSRequestError.swift */,
+			);
+			name = RequestError;
+			sourceTree = "<group>";
+		};
+		837857E81F4E6ED5009DEA26 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				837857EB1F4E6FA7009DEA26 /* LoginError */,
+				837857E71F4E6E45009DEA26 /* RequestError */,
+			);
+			name = Error;
+			sourceTree = "<group>";
+		};
+		837857EB1F4E6FA7009DEA26 /* LoginError */ = {
+			isa = PBXGroup;
+			children = (
+				837857ED1F4E700A009DEA26 /* RNSLoginError.swift */,
+			);
+			name = LoginError;
+			sourceTree = "<group>";
+		};
+		837857EC1F4E6FBA009DEA26 /* Reply */ = {
+			isa = PBXGroup;
+			children = (
+				835718841F21A6A400DE5E25 /* RequestReply */,
+				83CD58531F25914200A9FE1A /* RoutingPayload */,
+				835718871F21A79100DE5E25 /* TokenPayload */,
+			);
+			name = Reply;
+			sourceTree = "<group>";
+		};
 		837ABEF91F2EDAAD00AB5E54 /* PasswordField */ = {
 			isa = PBXGroup;
 			children = (
@@ -2748,6 +2786,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837857EE1F4E700A009DEA26 /* RNSLoginError.swift in Sources */,
 				831A85951F413E370095F006 /* RNSSearchViewController+Action.swift in Sources */,
 				831A85AE1F4148440095F006 /* RNSTextItem.swift in Sources */,
 				8356BE5F1F3D8B4700560623 /* RNSBusDetailController+Observe.swift in Sources */,
@@ -2953,6 +2992,7 @@
 				8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */,
 				832B1DDE1F42B99B0024505C /* RNSMapParentController+MapView.swift in Sources */,
 				83CD584D1F25879B00A9FE1A /* RNSPostLogin.swift in Sources */,
+				837857EA1F4E6F25009DEA26 /* RNSRequestError.swift in Sources */,
 				8369891F1F317AB5003E4D73 /* ContainerProtocol.swift in Sources */,
 				831A85B51F4149500095F006 /* RNSBusTemp.swift in Sources */,
 				837ABF0D1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,

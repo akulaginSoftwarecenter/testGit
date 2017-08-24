@@ -24,8 +24,6 @@ class RNSPostRequest: AlamofireAPI {
     }
     
     override var parameters: AliasDictionary {
-        print("parameters",["headers": headers,
-                            "payload": payload])
         return ["headers": headers,
                 "payload": payload]
     }

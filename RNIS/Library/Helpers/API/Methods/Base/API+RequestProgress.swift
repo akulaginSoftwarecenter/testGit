@@ -41,7 +41,9 @@ extension API {
         //        if (classForParsingReply != nil) {
         //            classForParsingReply!()
         //        }
-        
+        if showLogApi {
+            print("apiDidReturnReply",reply)
+        }
         apiDidReturnReply(parsedReply, source: reply)
     }
     
