@@ -55,13 +55,6 @@ class RNSLoginViewController: UIViewController {
             STRouter.removeLoader()
             self?.prepareError(errorText)
         })
-        /*
-        
-        //Utils.delay(2) {
-            STRouter.removeLoader()
-            STRouter.showMap()
-        //}
- */
     }
     
     func  prepareError(_ error: String?) {

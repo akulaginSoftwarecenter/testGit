@@ -9,11 +9,7 @@
 import UIKit
 import Alamofire
 
-class RNSPostRequest: AlamofireAPI {
-    
-    override var method: Alamofire.HTTPMethod {
-        return .post
-    }
+class RNSRequest: AlamofireAPI {
     
     override var path: String {
         return serverRnisapi

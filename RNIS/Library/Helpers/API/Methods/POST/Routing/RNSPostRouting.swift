@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
-class RNSPostRouting: RNSPostRequest {
+class RNSPostRouting: RNSTokenRequest {
+    
+    override var method: Alamofire.HTTPMethod {
+        return .post
+    }
     
     @discardableResult convenience init(complete: @escaping APICompletion) {
         self.init()
@@ -16,15 +21,7 @@ class RNSPostRouting: RNSPostRequest {
         showLoader()
         sendRequestWithCompletion(completion: complete)
     }
-    
-    override var headers: AliasDictionary {
-        var headers = super.headers
-        if let token = UserDefaults.token {
-            headers["token"] = "\(token)"
-        }
-        return headers
-    }
-    
+   
     override var payload: AliasDictionary {
         return ["points":points]
     }

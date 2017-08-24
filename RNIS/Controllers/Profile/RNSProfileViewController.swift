@@ -23,8 +23,8 @@ class RNSProfileViewController: UIViewController {
     }
     
     func prepareBlackButton() {
-        blackButton.handlerAction = {
-            STRouter.showLogin()
+        blackButton.handlerAction = { [weak self] in
+            self?.showAlert()
         }
     }
     
@@ -37,5 +37,9 @@ class RNSProfileViewController: UIViewController {
     
     override class var storyboardName: String {
         return "RNSProfileViewController"
+    }
+    
+    deinit {
+        print("RNSProfileViewController deinit")
     }
 }

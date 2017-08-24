@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
-class RNSPostLogin: RNSPostRequest {
+class RNSPostLogin: RNSRequest {
 
+    override var method: Alamofire.HTTPMethod {
+        return .post
+    }
+    
     var login: String?
     var password: String?
     var complete: EmptyBlock?

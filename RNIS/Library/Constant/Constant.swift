@@ -14,7 +14,7 @@ let mapHost = "http://95.213.205.92/"
 
 let serverAddress = ""
 let serverRnisapi = "https://rnisapi.regeora.ru/ajax/request"
-let showLogApi = true
+let showLogApi = false
 
 
 let kPhoneVC = "RNSPhoneViewController"
