@@ -16,6 +16,9 @@ class RNSPostLogin: RNSPostRequest {
     @discardableResult convenience init(_ login: String?, password: String?, complete: EmptyBlock?, failure: AliasStringBlock?) {
         self.init()
         
+        self.login = login
+        self.password = password
+        
         sendRequestWithCompletion { (object, error, inot) in
             print("RNSPostLogin Token",object)
             print("RNSPostLogin error",error)
@@ -41,7 +44,7 @@ class RNSPostLogin: RNSPostRequest {
     }
 
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        
+        print("apiDidReturnReply",reply)
         guard let model = RNSRequestReply<RNSTokenPayload>(reply: reply) else {
                 superError()
                 return

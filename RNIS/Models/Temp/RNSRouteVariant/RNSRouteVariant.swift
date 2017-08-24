@@ -55,7 +55,8 @@ class RNSRouteVariant: RNISMappableBase {
         item.addBusPoint(59.933299, lon: 30.305892, bus: bus1)
         item.addBusPoint(59.934654, lon: 30.310087, bus: bus1, busStop: busStop5)
         item.addBusPoint(59.935282, lon: 30.311911, bus: bus1)
-        //item.prepareRoadActivate()
+        item.prepareRoadOff()
+       // item.prepareRoadActivate()
         return item
     }
     

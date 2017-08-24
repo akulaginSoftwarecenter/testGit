@@ -11,7 +11,7 @@ import Foundation
 extension RNSPageRouteController {
     
     func prepareLines() {
-        items?.first?.addRoadOff()
+        //items?.first?.addRoadOff()
         //items?.last?.addRoadActive()
     }
     

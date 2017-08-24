@@ -41,7 +41,7 @@ class RNSLoginViewController: UIViewController {
             return
         }
         clearError()
- /*
+ 
         guard let login = loginField.text,
         let password = passwordField.text else {
             return
@@ -55,12 +55,13 @@ class RNSLoginViewController: UIViewController {
             STRouter.removeLoader()
             self?.prepareError(errorText)
         })
-         */
+        /*
         
         //Utils.delay(2) {
             STRouter.removeLoader()
             STRouter.showMap()
         //}
+ */
     }
     
     func  prepareError(_ error: String?) {

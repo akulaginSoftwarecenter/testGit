@@ -1,5 +1,5 @@
 //
-//  RNSRouteVariant+Overlay.swift
+//  RNSRouteVariant+RoadActivate.swift
 //  RNIS
 //
 //  Created by Артем Кулагин on 23.08.17.
@@ -9,19 +9,11 @@
 import Foundation
 
 extension RNSRouteVariant {
-    
-    func addRoadOff() {
-        roadOff?.addOnMap()
-    }
-    
+      
     func addRoadActive() {
+        print("addRoadActive")
         roadActivate?.forEach({$0.addOnMap()})
-      }
-    
-    func removeAllRoad() {
-        roadOff?.remove()
     }
-    
     
     func prepareRoadActivate() {
         roadActivate = [PGPolyline]()
@@ -37,9 +29,5 @@ extension RNSRouteVariant {
             let array = [point, points[index + 1]]
             roadActivate?.append(RNSRoadBus(array))
         }
-    }
-    
-    func prepareRoadOff() {
-        roadOff = RNSRoadOff(points)
     }
 }
