@@ -16,4 +16,11 @@ extension Array where Element: Hashable {
         }
         return self[index]
     }
+    
+    func value<T>(_ index: Int?) -> T? {
+        guard let index = index, index < count  else {
+            return nil
+        }
+        return self[index] as? T
+    }
 }

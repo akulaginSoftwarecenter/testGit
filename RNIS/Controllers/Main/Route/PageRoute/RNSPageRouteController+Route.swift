@@ -11,8 +11,8 @@ import Foundation
 extension RNSPageRouteController {
     
     func prepareLines() {
-        items?.first?.prepareRoadOff()
-        items?.last?.prepareRoadActivate()
+        items?.last?.prepareRoadOff()
+        items?.first?.prepareRoadActivate()
     }
     
     func removeAllRoute() {

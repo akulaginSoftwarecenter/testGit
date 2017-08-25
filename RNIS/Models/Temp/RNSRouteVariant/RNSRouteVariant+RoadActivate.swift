@@ -21,13 +21,15 @@ extension RNSRouteVariant {
     }
     
     func prepareBusRoads() {
-        for index in (0..<(points.count-1)) {
+        var buss = [RNSRoutePoint]()
+        for index in (0..<(points.count)) {
             let point = points[index]
-            guard point.type == .bus  else {
-                continue
+            buss.append(point)
+            if point.type != .bus {
+                roadActivate?.append(RNSRoadBus(buss))
+                buss = [RNSRoutePoint]()
             }
-            let array = [point, points[index + 1]]
-            roadActivate?.append(RNSRoadBus(array))
         }
+        roadActivate?.append(RNSRoadBus(buss))
     }
 }
