@@ -32,6 +32,5 @@ extension RNSPageRouteController {
     
     func onMapEvent() {
         activeRoadReload()
-        print("zoom", mapView.getZoomLevel())
     }
 }

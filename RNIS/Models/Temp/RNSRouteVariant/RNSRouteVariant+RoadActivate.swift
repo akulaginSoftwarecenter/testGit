@@ -28,7 +28,6 @@ extension RNSRouteVariant {
         roadActivate = [PGPolyline]()
         prepareRunActivate()
         prepareBusActivate()
-        CounterTime.endTimer()
     }
     
     func prepareBusActivate() {
