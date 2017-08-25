@@ -18,38 +18,49 @@ class RNSRoadRun: PGPolyline {
         self.init()
         
         self.points = points?.flatMap{$0.point}
-        prepareLine()
-        //prepareDots()
+        prepareDots()
     }
-    
-    func prepareLine() {
-        setLineWidth(5)
-        setOutlineColor(.color13)
-        setBorderWidth(1)
-        preparePoints()
-    }
-    
-    func preparePoints() {
-        guard let points = points else {
-            return
-        }
-        print("RNSRoadRun",points)
-        addPoints(points, count: Int32(points.count), color: .red)
-    }
+
     override func clear() {
         polylines.forEach{$0.clear()}
     }
-    /*
+    
     func prepareDots() {
-        guard let points = points else {
+        guard let points = points,
+            points.count > 1 else {
             return
         }
-        
-        polylines.append(RNSDotRun(points.first))
+        for index in (0..<(points.count - 1)) {
+            drawDots(index, index2: index + 1)
+        }
     }
     
-    override func clear() {
-        polylines.forEach{ $0.clear()}
+    func drawDots(_ index1: Int?, index2: Int?) {
+        let point1 = points?.valueAt(index1)
+        let point2 = points?.valueAt(index2)
+        let distance = point1?.distanceTo(point2) ?? 0
+        let azimut =  point1?.azimuth(point2)
+        let step = self.step
+        var offset = step
+        while offset < distance {
+            let point = point1?.coordinate(azimut, distance: offset)
+            drawDot(point)
+            offset += step
+        }
+        drawDot(point1)
+        drawDot(point2)
     }
-    */
+    
+    func drawDot(_ point: PGGeoPoint?) {
+        polylines.append(RNSDotRun(point))
+    }
+    
+    var step: Double {
+        let zoom = RNSMapManager.getZoomLevel
+        var step = Double(1966080)
+        for _ in 1...zoom {
+            step = step/2
+        }
+        return step
+    }
 }

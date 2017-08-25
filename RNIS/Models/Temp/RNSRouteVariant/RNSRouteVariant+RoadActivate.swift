@@ -14,11 +14,21 @@ extension RNSRouteVariant {
         roadActivate?.forEach{$0.clear()}
     }
     
+    var getZoomLevel: Int {
+        return RNSMapManager.getZoomLevel
+    }
+    
     func prepareRoadActivate() {
+       if  let currentZoom = currentZoom,
+            getZoomLevel == currentZoom {
+            return 
+        }
+        currentZoom = getZoomLevel
         removeRoadActivate()
         roadActivate = [PGPolyline]()
-        prepareBusActivate()
         prepareRunActivate()
+        prepareBusActivate()
+        CounterTime.endTimer()
     }
     
     func prepareBusActivate() {

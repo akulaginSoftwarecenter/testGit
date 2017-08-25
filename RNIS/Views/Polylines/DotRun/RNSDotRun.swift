@@ -19,7 +19,7 @@ class RNSDotRun: PGPolyline {
     }
     
     func prepareLine() {
-        setLineWidth(3)
+        setLineWidth(4)
         setOutlineColor(.color13)
         setBorderWidth(1)
         preparePoint()
@@ -29,9 +29,8 @@ class RNSDotRun: PGPolyline {
         guard let point = point else {
             return
         }
-        let tempPoint = PGGeoPoint(latitude: point.latitude, longitude: point.longitude + 0.001)
+        let tempPoint = PGGeoPoint(latitude: point.latitude, longitude: point.longitude + 0.00001)
         let points = [point, tempPoint]
-        print("points",points)
         addPoints(points, count: Int32(points.count), color: .color34)
     }
 }

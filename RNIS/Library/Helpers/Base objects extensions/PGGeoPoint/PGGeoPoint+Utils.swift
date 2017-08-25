@@ -17,4 +17,23 @@ extension PGGeoPoint {
     var location: CLLocation {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
+    
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(latitude, longitude)
+    }
+    
+    func distanceTo(_ point: PGGeoPoint?) -> CLLocationDistance {
+        guard let location = point?.location else {
+            return 0
+        }
+        return self.location.distance(from: location)
+    }
+    
+    func azimuth(_ point: PGGeoPoint?, atAzimuth: Double? = 0) -> Double? {
+        return coordinate.azimuth(point?.coordinate, atAzimuth: atAzimuth)
+    }
+    
+    func coordinate(_ azimuth: Double?, distance: Double?) -> PGGeoPoint? {
+        return coordinate.coordinate(azimuth, distance: distance)?.point
+    }
 }

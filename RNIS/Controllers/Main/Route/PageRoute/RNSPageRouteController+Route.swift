@@ -10,9 +10,17 @@ import Foundation
 
 extension RNSPageRouteController {
     
+    var activeRoad: RNSRouteVariant? {
+        return items?.last
+    }
+    
     func prepareLines() {
-        items?.last?.prepareRoadOff()
-        items?.first?.prepareRoadActivate()
+        items?.first?.prepareRoadOff()
+        activeRoadReload()
+    }
+    
+    func activeRoadReload() {
+        activeRoad?.prepareRoadActivate()
     }
     
     func removeAllRoute() {

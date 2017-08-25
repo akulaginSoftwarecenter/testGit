@@ -13,6 +13,8 @@ class RNSRouteVariant: RNISMappableBase {
     var roadActivate: [PGPolyline]?
     var roadOff: RNSRoadOff?
     
+    var currentZoom: Int?
+    
     var durationMinute: Int?
     var endDate: Date?
     

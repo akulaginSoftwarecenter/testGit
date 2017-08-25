@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element: Hashable {
+extension Array where Element: Any {
     
     func valueAt(_ index: Int?) -> Element? {
         guard let index = index, index < count  else {
@@ -16,6 +16,9 @@ extension Array where Element: Hashable {
         }
         return self[index]
     }
+}
+/*
+extension Array where Element: Any {
     
     func value<T>(_ index: Int?) -> T? {
         guard let index = index, index < count  else {
@@ -24,3 +27,4 @@ extension Array where Element: Hashable {
         return self[index] as? T
     }
 }
+*/
