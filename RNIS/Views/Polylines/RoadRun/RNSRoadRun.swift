@@ -40,7 +40,7 @@ class RNSRoadRun: PGPolyline {
         let point2 = points?.valueAt(index2)
         let distance = point1?.distanceTo(point2) ?? 0
         let azimut =  point1?.azimuth(point2)
-        let step = self.step
+        let step = RNSMapManager.step
         var offset = step
         while offset < distance {
             let point = point1?.coordinate(azimut, distance: offset)
@@ -53,14 +53,5 @@ class RNSRoadRun: PGPolyline {
     
     func drawDot(_ point: PGGeoPoint?) {
         polylines.append(RNSDotRun(point))
-    }
-    
-    var step: Double {
-        let zoom = RNSMapManager.getZoomLevel
-        var step = Double(1966080)
-        for _ in 1...zoom {
-            step = step/2
-        }
-        return step
     }
 }

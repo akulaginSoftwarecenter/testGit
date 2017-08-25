@@ -30,4 +30,13 @@ extension RNSMapManager {
     static func removeOverlay(_ obj: Any) {
         overlays?.remove(obj)
     }
+    
+    static var step: Double {
+        let zoom = getZoomLevel
+        var step = Double(1966080)
+        for _ in 1...zoom {
+            step = step/2
+        }
+        return step
+    }
 }

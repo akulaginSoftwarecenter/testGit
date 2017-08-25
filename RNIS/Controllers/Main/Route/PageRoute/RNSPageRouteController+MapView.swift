@@ -35,7 +35,9 @@ extension RNSPageRouteController {
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
-        print("onMapTouchEvent",point)
+        CounterTime.startTimer()
+        checkContaints(point)
+        CounterTime.endTimer()
     }
     
     func onMapEvent() {

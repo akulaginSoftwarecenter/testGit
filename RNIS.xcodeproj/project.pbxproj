@@ -120,6 +120,11 @@
 		835D853A1F4FDAF300B83EB2 /* CLLocationCoordinate2D+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85391F4FDAF300B83EB2 /* CLLocationCoordinate2D+Utils.swift */; };
 		835D853D1F4FDB5100B83EB2 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D853C1F4FDB5100B83EB2 /* Double+Utils.swift */; };
 		835D85401F4FE63200B83EB2 /* CounterTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D853F1F4FE63200B83EB2 /* CounterTime.swift */; };
+		835D85421F50071800B83EB2 /* RNSRouteVariant+Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85411F50071800B83EB2 /* RNSRouteVariant+Rect.swift */; };
+		835D85451F5017A300B83EB2 /* RNSRectPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85441F5017A300B83EB2 /* RNSRectPoint.swift */; };
+		835D85471F501B9E00B83EB2 /* RNSRectPoint+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85461F501B9E00B83EB2 /* RNSRectPoint+Var.swift */; };
+		835D85491F50229500B83EB2 /* RNSRectPoint+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85481F50229500B83EB2 /* RNSRectPoint+Set.swift */; };
+		835D854B1F5022D100B83EB2 /* RNSRectPoint+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D854A1F5022D100B83EB2 /* RNSRectPoint+Contains.swift */; };
 		836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221A91F43DED1005B49DA /* RNSAddressViewController.swift */; };
 		836221AE1F43EA81005B49DA /* RNSAddressViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */; };
 		836221B21F43F5C6005B49DA /* RNSAddressViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */; };
@@ -466,6 +471,11 @@
 		835D85391F4FDAF300B83EB2 /* CLLocationCoordinate2D+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLLocationCoordinate2D+Utils.swift"; path = "Library/Helpers/Base objects extensions/CLLocationCoordinate2D/CLLocationCoordinate2D+Utils.swift"; sourceTree = "<group>"; };
 		835D853C1F4FDB5100B83EB2 /* Double+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+Utils.swift"; path = "Library/Helpers/Base objects extensions/Double/Double+Utils.swift"; sourceTree = "<group>"; };
 		835D853F1F4FE63200B83EB2 /* CounterTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterTime.swift; sourceTree = "<group>"; };
+		835D85411F50071800B83EB2 /* RNSRouteVariant+Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+Rect.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+Rect.swift"; sourceTree = "<group>"; };
+		835D85441F5017A300B83EB2 /* RNSRectPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRectPoint.swift; path = Models/Temp/RectPoint/RNSRectPoint.swift; sourceTree = "<group>"; };
+		835D85461F501B9E00B83EB2 /* RNSRectPoint+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRectPoint+Var.swift"; path = "Models/Temp/RectPoint/RNSRectPoint+Var.swift"; sourceTree = "<group>"; };
+		835D85481F50229500B83EB2 /* RNSRectPoint+Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRectPoint+Set.swift"; path = "Models/Temp/RectPoint/RNSRectPoint+Set.swift"; sourceTree = "<group>"; };
+		835D854A1F5022D100B83EB2 /* RNSRectPoint+Contains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRectPoint+Contains.swift"; path = "Models/Temp/RectPoint/RNSRectPoint+Contains.swift"; sourceTree = "<group>"; };
 		836221A91F43DED1005B49DA /* RNSAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAddressViewController.swift; path = Controllers/Map/Search/Address/RNSAddressViewController.swift; sourceTree = "<group>"; };
 		836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+MapView.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift"; sourceTree = "<group>"; };
 		836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+Action.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+Action.swift"; sourceTree = "<group>"; };
@@ -801,6 +811,7 @@
 		831A85931F413D5A0095F006 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
+				835D85431F50176800B83EB2 /* RectPoint */,
 				837857EC1F4E6FBA009DEA26 /* Reply */,
 				837857E81F4E6ED5009DEA26 /* Error */,
 				831A85B11F4148B40095F006 /* AddressTemp */,
@@ -1401,6 +1412,17 @@
 			);
 			name = CounterTime;
 			path = Library/Helpers/CounterTime;
+			sourceTree = "<group>";
+		};
+		835D85431F50176800B83EB2 /* RectPoint */ = {
+			isa = PBXGroup;
+			children = (
+				835D85441F5017A300B83EB2 /* RNSRectPoint.swift */,
+				835D85481F50229500B83EB2 /* RNSRectPoint+Set.swift */,
+				835D854A1F5022D100B83EB2 /* RNSRectPoint+Contains.swift */,
+				835D85461F501B9E00B83EB2 /* RNSRectPoint+Var.swift */,
+			);
+			name = RectPoint;
 			sourceTree = "<group>";
 		};
 		836221A81F43DE8B005B49DA /* Address */ = {
@@ -2394,6 +2416,7 @@
 				83A53F951F4A9F0800938969 /* RNSRouteVariant.swift */,
 				8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */,
 				83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */,
+				835D85411F50071800B83EB2 /* RNSRouteVariant+Rect.swift */,
 				835D852F1F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift */,
 			);
 			name = RouteVariant;
@@ -2878,6 +2901,7 @@
 				836277CF1F3814FA009FB712 /* RNSPinBusStop.swift in Sources */,
 				836EEF101F3C023A007631D9 /* ReusableView.swift in Sources */,
 				837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
+				835D85471F501B9E00B83EB2 /* RNSRectPoint+Var.swift in Sources */,
 				837036B51F4297FA00FBD1E9 /* RNSMapView.swift in Sources */,
 				8357188F1F21A9CA00DE5E25 /* UserDefaults+Utils.swift in Sources */,
 				838CE93B1F3DB26300C10FBA /* RNSNameFieldLeft.swift in Sources */,
@@ -2896,6 +2920,7 @@
 				831E425E1F4688B80016C7D3 /* RNSTwoBtnAlert.swift in Sources */,
 				838CE93E1F3DB60C00C10FBA /* RNSSearchViewController.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
+				835D854B1F5022D100B83EB2 /* RNSRectPoint+Contains.swift in Sources */,
 				835D85401F4FE63200B83EB2 /* CounterTime.swift in Sources */,
 				836989291F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */,
 				8310D4511F3C6E64000CCD0A /* RNSScrollShowContainer+UI.swift in Sources */,
@@ -2937,6 +2962,7 @@
 				838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
+				835D85491F50229500B83EB2 /* RNSRectPoint+Set.swift in Sources */,
 				83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */,
 				835D853A1F4FDAF300B83EB2 /* CLLocationCoordinate2D+Utils.swift in Sources */,
 				836EEF091F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift in Sources */,
@@ -2955,6 +2981,7 @@
 				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */,
+				835D85451F5017A300B83EB2 /* RNSRectPoint.swift in Sources */,
 				836EEF071F3BFC02007631D9 /* Random.swift in Sources */,
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
 				83D1558C1F4BC9B400150144 /* RNSCircleHoleWhite.swift in Sources */,
@@ -3029,6 +3056,7 @@
 				8392BAC61F304BB80024E9E5 /* RNSAlertViewController.swift in Sources */,
 				830F41CC1F4BF5DF008E7C0F /* Date+Utils.swift in Sources */,
 				832E4B931F2ED53000A4AD77 /* String+Utils.swift in Sources */,
+				835D85421F50071800B83EB2 /* RNSRouteVariant+Rect.swift in Sources */,
 				836989221F317B64003E4D73 /* STContainerViewController.swift in Sources */,
 				837857F11F4E7D5B009DEA26 /* RNSTokenRequest.swift in Sources */,
 				8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,

@@ -26,4 +26,14 @@ extension RNSPageRouteController {
     func removeAllRoute() {
         items?.forEach{$0.removeAllRoad()}
     }
+    
+    func checkContaints(_ point: PGGeoPoint?){
+        for item in items ?? [] {
+            if item.containts(point) {
+                print("----------------------------")
+                print("checkContaints",item)
+                break
+            }
+        }
+    }
 }
