@@ -17,7 +17,7 @@ extension RNSRouteVariant {
         
         let bus1 = RNSBusTemp.generate
         item.addBusPoint(59.934896, lon: 30.303141, bus: bus1, busStop: busStop2)
-        item.addBusPoint(59.934225, lon: 30.304228, bus: bus1)
+        item.addRunPoint(59.934225, lon: 30.304228)
         
         let bus2 = RNSBusTemp.generate
         item.addBusPoint(59.935051, lon: 30.306572, bus: bus2, busStop: busStop3)
