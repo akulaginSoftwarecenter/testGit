@@ -114,6 +114,7 @@
 		835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */; };
 		835A31221F4D21D100F83BE2 /* RNSRoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835A31211F4D21D100F83BE2 /* RNSRoutePoint.swift */; };
 		835A31251F4D2F6500F83BE2 /* Sequence+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835A31241F4D2F6500F83BE2 /* Sequence+Utils.swift */; };
+		835D85301F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D852F1F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift */; };
 		836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221A91F43DED1005B49DA /* RNSAddressViewController.swift */; };
 		836221AE1F43EA81005B49DA /* RNSAddressViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */; };
 		836221B21F43F5C6005B49DA /* RNSAddressViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */; };
@@ -454,6 +455,7 @@
 		835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Handlers.swift"; path = "Controllers/Map/RNSMapViewController+Handlers.swift"; sourceTree = "<group>"; };
 		835A31211F4D21D100F83BE2 /* RNSRoutePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoutePoint.swift; path = Models/Temp/RNSRouteVariant/Point/RNSRoutePoint.swift; sourceTree = "<group>"; };
 		835A31241F4D2F6500F83BE2 /* Sequence+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Sequence+Utils.swift"; path = "Library/Helpers/Base objects extensions/Sequence/Sequence+Utils.swift"; sourceTree = "<group>"; };
+		835D852F1F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+Generate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+Generate.swift"; sourceTree = "<group>"; };
 		836221A91F43DED1005B49DA /* RNSAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAddressViewController.swift; path = Controllers/Map/Search/Address/RNSAddressViewController.swift; sourceTree = "<group>"; };
 		836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+MapView.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift"; sourceTree = "<group>"; };
 		836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+Action.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+Action.swift"; sourceTree = "<group>"; };
@@ -2336,6 +2338,7 @@
 				83A53F951F4A9F0800938969 /* RNSRouteVariant.swift */,
 				8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */,
 				83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */,
+				835D852F1F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift */,
 			);
 			name = RouteVariant;
 			sourceTree = "<group>";
@@ -3017,6 +3020,7 @@
 				831A85B51F4149500095F006 /* RNSBusTemp.swift in Sources */,
 				837ABF0D1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,
 				837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
+				835D85301F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift in Sources */,
 				8356BE561F3D678800560623 /* RNSBusDetailWayCell.swift in Sources */,
 				83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */,
 				8321D6821F4D358B0022EE1C /* RNSRoadOff.swift in Sources */,

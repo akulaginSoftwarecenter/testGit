@@ -28,6 +28,6 @@ class RNSRoadOff: PGPolyline {
         guard let points = points else {
             return
         }
-        addPoints(points, count: Int32(points.count), color: .color125)
+        addPoints(points, count: Int32(points.count), color: .color163)
     }
 }

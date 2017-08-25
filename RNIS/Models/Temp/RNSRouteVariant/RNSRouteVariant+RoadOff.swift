@@ -10,16 +10,12 @@ import Foundation
 
 extension RNSRouteVariant {
     
-    func addRoadOff() {
-        print("addRoadOff")
-        roadOff?.addOnMap()
-    }
-    
-    func removeAllRoad() {
-        roadOff?.remove()
+    func removeRoadOff() {
+        roadOff?.clear()
     }
     
     func prepareRoadOff() {
+        removeRoadOff()
         roadOff = RNSRoadOff(points)
     }
 }

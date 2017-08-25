@@ -9,13 +9,13 @@
 import Foundation
 
 extension RNSRouteVariant {
-      
-    func addRoadActive() {
-        print("addRoadActive")
-        roadActivate?.forEach({$0.addOnMap()})
+    
+    func removeRoadActivate() {
+        roadActivate?.forEach{$0.clear()}
     }
     
     func prepareRoadActivate() {
+        removeRoadActivate()
         roadActivate = [PGPolyline]()
         prepareBusRoads()
     }
