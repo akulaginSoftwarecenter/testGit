@@ -10,6 +10,11 @@ import Foundation
 
 extension RNSMapViewController {
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        containerController = segue.destination as? RNSMapParentController
+        prepareHandlerMapView()
+    }
+    
     func onMapEvent() {
         
     }

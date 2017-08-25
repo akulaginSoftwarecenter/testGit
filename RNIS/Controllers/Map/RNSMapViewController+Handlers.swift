@@ -11,6 +11,7 @@ import Foundation
 extension RNSMapViewController {
     
     func prepareHandlers() {
+        prepareHandlerMapView()
         
         RNSMapManager.handlerAddRoute = { [weak self] item in
             self?.addRoute(item)
@@ -22,6 +23,24 @@ extension RNSMapViewController {
         
         RNSMapManager.handlerShowInfo = { [weak self] item in
             self?.showInfoIfNeed(item)
+        }
+    }
+    
+    func prepareHandlerMapView(){
+        containerController?.handlerOnMapEvent = {[weak self] in
+            self?.onMapEvent()
+        }
+        
+        containerController?.handlerOnMapTouchEvent = {[weak self] point in
+            self?.onMapTouchEvent(point)
+        }
+        
+        containerController?.handlerOnMapLongTouchEvent = {[weak self] point in
+            self?.onMapLongTouchEvent(point)
+        }
+        
+        containerController?.handlerOnOverlay = {[weak self] point,item in
+            self?.onOverlay(point, item: item)
         }
     }
 }

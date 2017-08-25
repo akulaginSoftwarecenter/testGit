@@ -37,4 +37,12 @@ extension RNSMapParentController: PGMapViewDelegate {
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
         handlerOnOverlay?(overlay, item)
     }
+    
+    func onPoiMarker(_ info: String!) {
+        print("onPoiMarker",info)
+    }
+    
+    func onGeoblogMarker(_ eventid: Int32) {
+        print("onGeoblogMarker")
+    }
 }

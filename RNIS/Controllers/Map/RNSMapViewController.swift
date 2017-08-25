@@ -12,30 +12,7 @@ import PureLayout
 class RNSMapViewController: UIViewController {
 
     var containerController: RNSMapParentController?
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        containerController = segue.destination as? RNSMapParentController
-        prepareEnterViewController()
-    }
-    
-    func prepareEnterViewController(){
-        containerController?.handlerOnMapEvent = {[weak self] in
-            self?.onMapEvent()
-        }
-        
-        containerController?.handlerOnMapTouchEvent = {[weak self] point in
-            self?.onMapTouchEvent(point)
-        }
-        
-        containerController?.handlerOnMapLongTouchEvent = {[weak self] point in
-            self?.onMapLongTouchEvent(point)
-        }
-        
-        containerController?.handlerOnOverlay = {[weak self] point,item in
-            self?.onOverlay(point, item: item)
-        }
-    }
-    
+     
     var presentViewController: UIViewController?
     
     /**

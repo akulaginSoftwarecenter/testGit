@@ -19,6 +19,7 @@ class RNSRoadBus: PGPolyline {
     }
     
     func prepareLine() {
+        setBorderWidth(50)
         setLineWidth(5)
         setOutlineColor(.color13)
         setBorderWidth(1)

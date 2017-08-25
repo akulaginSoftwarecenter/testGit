@@ -28,6 +28,14 @@ extension RNSPageRouteController {
         containerController?.handlerOnMapEvent = {[weak self] in
             self?.onMapEvent()
         }
+        
+        containerController?.handlerOnMapTouchEvent = {[weak self] point in
+            self?.onMapTouchEvent(point)
+        }
+    }
+    
+    func onMapTouchEvent(_ point: PGGeoPoint) {
+        print("onMapTouchEvent",point)
     }
     
     func onMapEvent() {
