@@ -8,21 +8,47 @@
 
 import UIKit
 
-class RNSNoteRoute: BaseViewWithXIBInit {
+class RNSNoteRoute: UIView {
+    
+    lazy var leftView: RNSTriangle = {
+        let view = RNSTriangle( .left)
+        self.addSubview(view)
+        return view
+    }()
+    
+    lazy var upView: RNSTriangle = {
+        let view = RNSTriangle( .up)
+        self.addSubview(view)
+        return view
+    }()
+    
+    lazy var rightView: RNSTriangle = {
+        let view = RNSTriangle( .right)
+        self.addSubview(view)
+        return view
+    }()
+    
+    lazy var downView: RNSTriangle = {
+        let view = RNSTriangle( .down)
+        self.addSubview(view)
+        return view
+    }()
 
-    @IBOutlet weak var leftView: RNSTriangle!
-    @IBOutlet weak var upView: RNSTriangle!
-    @IBOutlet weak var rightView: RNSTriangle!
-    @IBOutlet weak var downView: RNSTriangle!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet var backView: UIView!
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        self.addSubview(label)
+        label.textAlignment = .center
+        
+        return label
+    }()
     
     var type: TypeNote = .left
     
-    let wightArrow = CGFloat(9)
+    let arrow = CGFloat(9)
+    let textHeight = CGFloat(30)
     
-    @discardableResult convenience init(busTitle: String?, type: TypeNote) {
-        self.init()
+    convenience init(busTitle: String?, type: TypeNote) {
+        self.init(frame: CGRect.zero)
         
         titleLabel.text = busTitle
         self.type = type
@@ -30,25 +56,13 @@ class RNSNoteRoute: BaseViewWithXIBInit {
         prepareFrame()
     }
     
-    @discardableResult convenience init(durationMinute: Int?, type: TypeNote) {
-        self.init()
+    convenience init(durationMinute: Int?, type: TypeNote) {
+        self.init(frame: CGRect.zero)
         
         titleLabel.text = "\(durationMinute ?? 0) мин."
         self.type = type
         prepareMinute()
         prepareFrame()
-    }
-     
-    var image: UIImage? {
-        print("bounds",bounds)
-        let view = UIView(frame: bounds)
-        view.backgroundColor = .blue
-        view.addSubview(self)
-        print("superView", superview?.superview)
-        print("superView", superview?.superview?.frame)
-        //self.autoPinEdgesToSuperviewEdges()
-   
-        return self.asImage
     }
 }
 

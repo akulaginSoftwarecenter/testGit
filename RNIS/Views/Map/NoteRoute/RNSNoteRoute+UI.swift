@@ -25,7 +25,8 @@ extension RNSNoteRoute {
     }
     
     func prepareColor(_ color: UIColor) {
-        backView.backgroundColor = color
+        titleLabel.backgroundColor = color
+        
         leftView.backgroundColor = color
         upView.backgroundColor = color
         rightView.backgroundColor = color

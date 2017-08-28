@@ -18,6 +18,13 @@ enum TypeNote: Int {
 class RNSTriangle: UIView {
     
     @IBInspectable var typeNote: Int = 0
+    
+    convenience init(_ type: TypeNote) {
+        self.init(frame: CGRect.zero)
+        typeNote = type.rawValue
+        isHidden = true
+        frame.size = CGSize(width: 9, height: 9)
+    }
 
     override func draw(_ rect: CGRect) {
         let layer = self.layer

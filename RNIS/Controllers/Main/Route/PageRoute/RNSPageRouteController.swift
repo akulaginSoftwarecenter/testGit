@@ -33,32 +33,13 @@ class RNSPageRouteController: UIViewController {
             make.size.equalTo(self.view)
         }
         let busNode = RNSNoteRoute(busTitle: "A86", type: .up)
-        imageView.image = busNode.image
+        //imageView.image = busNode.asImage
         
-        //view.addSubview(busNode)
-        /*
-        let busNode = RNSNoteRoute(busTitle: "A86", type: .up);
         view.addSubview(busNode)
         
-        busNode.snp.makeConstraints { (make) in
-            make.center.equalTo(self.view)
-            make.width.equalTo(50)
-            make.height.equalTo(30)
-        }
-        
         let timeNode = RNSNoteRoute(durationMinute: 5, type: .down)
-        
-        let imageView = UIImageView()
-        
-        view.addSubview(timeNode)
-        
-        timeNode.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.view).offset(100)
-            make.width.equalTo(50)
-            make.height.equalTo(30)
-        }
-        */
+        imageView.image = timeNode.asImage
+
     }
     
     override class var storyboardName: String {
