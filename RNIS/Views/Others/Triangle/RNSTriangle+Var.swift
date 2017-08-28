@@ -31,7 +31,7 @@ extension RNSTriangle {
     }
     
     var downLeftPoint: CGPoint {
-        return CGPoint(x: height, y: 0)
+        return CGPoint(x: 0, y: height)
     }
     
     var downRightPoint: CGPoint {

@@ -14,5 +14,5 @@ class RNSNoteRoute: BaseViewWithXIBInit {
     @IBOutlet weak var upView: RNSTriangle!
     @IBOutlet weak var rightView: RNSTriangle!
     @IBOutlet weak var downView: RNSTriangle!
-
 }
+
