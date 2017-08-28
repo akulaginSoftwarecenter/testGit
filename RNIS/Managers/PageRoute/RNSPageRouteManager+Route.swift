@@ -21,7 +21,7 @@ extension RNSPageRouteManager {
     static func checkContaints(_ point: PGGeoPoint?){
         for item in items ?? [] {
             if item.containts(point) {
-                RNSPageRouteManager.currentItem = item
+                updateAll(item)
                 break
             }
         }

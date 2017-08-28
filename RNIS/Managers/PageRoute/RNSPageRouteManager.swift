@@ -14,22 +14,19 @@ class RNSPageRouteManager: NSObject {
     
     static var items: [RNSRouteVariant]? {
         didSet {
-            currentItem = items?.first
+            updateAll(items?.first)
         }
     }
     
-    static var currentItem: RNSRouteVariant? {
-        didSet{
-            prepareCurrentItem()
+    static var currentItem: RNSRouteVariant?
+    
+    static var currentIndex: Int? {
+        guard let currentItem = currentItem else {
+            return nil
         }
+        return items?.index(of: currentItem)
     }
-    
-    static func prepareCurrentItem() {
-        handlerUpdateCurrent?()
-        prepareRoadsOff()
-        currentItem?.prepareRoadActivate()
-    }
-    
+     
     static func generateItems() {
         var items = [RNSRouteVariant]()
         items.append(RNSRouteVariant.genOne)

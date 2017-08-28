@@ -13,12 +13,6 @@ class RNSPageRouteView: BaseViewWithXIBInit {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var items: [RNSRouteVariant]? {
-        didSet {
-            reloadData()
-        }
-    }
-    
     func reloadData() {
         pageControl.numberOfPages = itemsCount
         collectionView.reloadData()
@@ -27,6 +21,24 @@ class RNSPageRouteView: BaseViewWithXIBInit {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        reloadData()
         prepareSizeCell()
+        prepareHandlers()
+    }
+    
+    func prepareHandlers() {
+        RNSPageRouteManager.handlerUpdateCurrent = { [weak self] in
+            self?.prepareCurrentItem()
+        }
+    }
+    
+    func prepareCurrentItem() {
+        guard let index = RNSPageRouteManager.currentIndex,
+            let collectionIndex = collectionView.indexPathsForVisibleItems.first?.row, collectionIndex != index else {
+            return
+        }
+        
+        let indexPath = IndexPath(item: index, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
     }
 }
