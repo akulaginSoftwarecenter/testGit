@@ -17,40 +17,38 @@ class RNSNoteRoute: BaseViewWithXIBInit {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var backView: UIView!
     
-    @discardableResult convenience init(busTitle: String?) {
+    var type: TypeNote = .left
+    
+    let wightArrow = CGFloat(9)
+    
+    @discardableResult convenience init(busTitle: String?, type: TypeNote) {
         self.init()
         
         titleLabel.text = busTitle
+        self.type = type
         prepareUIBus()
+        prepareFrame()
     }
     
-    func prepareUIBus() {
-        titleLabel.font = .cffazm20
-        titleLabel.textColor = .white
-        
-        prepareColor(.A3423C)
-    }
-    
-    @discardableResult convenience init(durationMinute: Int?) {
+    @discardableResult convenience init(durationMinute: Int?, type: TypeNote) {
         self.init()
         
         titleLabel.text = "\(durationMinute ?? 0) мин."
+        self.type = type
         prepareMinute()
+        prepareFrame()
     }
-    
-    func prepareMinute() {
-        titleLabel.font = .cffazm18
-        titleLabel.textColor = .F1645A
-        
-        prepareColor(.white)
-    }
-    
-    func prepareColor(_ color: UIColor) {
-        backView.backgroundColor = color
-        leftView.backgroundColor = color
-        upView.backgroundColor = color
-        rightView.backgroundColor = color
-        downView.backgroundColor = color
+     
+    var image: UIImage? {
+        print("bounds",bounds)
+        let view = UIView(frame: bounds)
+        view.backgroundColor = .blue
+        view.addSubview(self)
+        print("superView", superview?.superview)
+        print("superView", superview?.superview?.frame)
+        //self.autoPinEdgesToSuperviewEdges()
+   
+        return self.asImage
     }
 }
 

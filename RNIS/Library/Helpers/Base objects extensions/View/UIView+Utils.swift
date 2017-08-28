@@ -69,4 +69,33 @@ extension UIView {
         mask.path = path.cgPath
         self.layer.mask = mask
     }
+    
+    var asImage: UIImage? {
+        if #available(iOS 10.0, *) {
+            print("bounds",bounds.size)
+            /*
+            let renderer = UIGraphicsImageRenderer(size: bounds.size)
+            let image = renderer.image { ctx in
+                drawHierarchy(in: bounds, afterScreenUpdates: true)
+            }
+             */
+            
+            let renderer = UIGraphicsImageRenderer(bounds: bounds)
+            let image = renderer.image { context in
+                //drawHierarchy(in: bounds, afterScreenUpdates: true)
+                layer.render(in: context.cgContext)
+            }
+            
+            print("image", image.size)
+            return image
+        } else {
+            UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0)
+            defer { UIGraphicsEndImageContext() }
+            guard let currentContext = UIGraphicsGetCurrentContext() else {
+                return nil
+            }
+            self.layer.render(in: currentContext)
+            return UIGraphicsGetImageFromCurrentImageContext()
+        }
+    }
 }

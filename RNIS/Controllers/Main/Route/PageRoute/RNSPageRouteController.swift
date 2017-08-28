@@ -21,11 +21,23 @@ class RNSPageRouteController: UIViewController {
         super.viewDidLoad()
         
         prepareMapView()
-        //testNodes()
+        testNodes()
     }
     
     func testNodes() {
-        let busNode = RNSNoteRoute(busTitle: "A86");
+        let imageView = UIImageView()
+        imageView.contentMode = .center
+        view.addSubview(imageView)
+        imageView.snp.makeConstraints { (make) in
+            make.center.equalTo(self.view)
+            make.size.equalTo(self.view)
+        }
+        let busNode = RNSNoteRoute(busTitle: "A86", type: .up)
+        imageView.image = busNode.image
+        
+        //view.addSubview(busNode)
+        /*
+        let busNode = RNSNoteRoute(busTitle: "A86", type: .up);
         view.addSubview(busNode)
         
         busNode.snp.makeConstraints { (make) in
@@ -34,7 +46,10 @@ class RNSPageRouteController: UIViewController {
             make.height.equalTo(30)
         }
         
-        let timeNode = RNSNoteRoute(durationMinute: 5)
+        let timeNode = RNSNoteRoute(durationMinute: 5, type: .down)
+        
+        let imageView = UIImageView()
+        
         view.addSubview(timeNode)
         
         timeNode.snp.makeConstraints { (make) in
@@ -43,6 +58,7 @@ class RNSPageRouteController: UIViewController {
             make.width.equalTo(50)
             make.height.equalTo(30)
         }
+        */
     }
     
     override class var storyboardName: String {

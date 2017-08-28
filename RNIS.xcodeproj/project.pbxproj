@@ -282,6 +282,9 @@
 		838EA03A1F53D64700E9BF20 /* RNSTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0391F53D64700E9BF20 /* RNSTriangle.swift */; };
 		838EA03C1F53DC0E00E9BF20 /* RNSTriangle+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA03B1F53DC0E00E9BF20 /* RNSTriangle+Var.swift */; };
 		838EA03E1F53DC3600E9BF20 /* RNSTriangle+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA03D1F53DC3600E9BF20 /* RNSTriangle+Draw.swift */; };
+		838EA0411F53F8F200E9BF20 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0401F53F8F200E9BF20 /* UIImage+Utils.swift */; };
+		838EA0431F53FB3200E9BF20 /* RNSNoteRoute+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0421F53FB3200E9BF20 /* RNSNoteRoute+UI.swift */; };
+		838EA0451F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0441F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift */; };
 		8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
@@ -623,6 +626,9 @@
 		838EA0391F53D64700E9BF20 /* RNSTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTriangle.swift; path = Views/Others/Triangle/RNSTriangle.swift; sourceTree = "<group>"; };
 		838EA03B1F53DC0E00E9BF20 /* RNSTriangle+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSTriangle+Var.swift"; path = "Views/Others/Triangle/RNSTriangle+Var.swift"; sourceTree = "<group>"; };
 		838EA03D1F53DC3600E9BF20 /* RNSTriangle+Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSTriangle+Draw.swift"; path = "Views/Others/Triangle/RNSTriangle+Draw.swift"; sourceTree = "<group>"; };
+		838EA0401F53F8F200E9BF20 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Utils.swift"; path = "Library/Helpers/Base objects extensions/UIImage/UIImage+Utils.swift"; sourceTree = "<group>"; };
+		838EA0421F53FB3200E9BF20 /* RNSNoteRoute+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSNoteRoute+UI.swift"; path = "Views/Map/NoteRoute/RNSNoteRoute+UI.swift"; sourceTree = "<group>"; };
+		838EA0441F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSNoteRoute+Frame.swift"; path = "Views/Map/NoteRoute/RNSNoteRoute+Frame.swift"; sourceTree = "<group>"; };
 		8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationCodeController.swift; path = "Controllers/Authorization+Registration/Registration/Code/RNSRegistrationCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
@@ -1848,6 +1854,7 @@
 				83A53F8E1F4A9D1300938969 /* UICollectionView */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,
 				832E4B8D1F2ED03400A4AD77 /* UIFont */,
+				838EA03F1F53F8CB00E9BF20 /* UIImage */,
 				837B66741F3957C50048C5BA /* UIScreen */,
 				83029BCD1F4BEC9F00B0FEE3 /* UIStackView */,
 				836EEF0A1F3C0188007631D9 /* UITableView */,
@@ -2315,6 +2322,8 @@
 			isa = PBXGroup;
 			children = (
 				838EA0341F53D41000E9BF20 /* RNSNoteRoute.swift */,
+				838EA0421F53FB3200E9BF20 /* RNSNoteRoute+UI.swift */,
+				838EA0441F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift */,
 				838EA0361F53D48F00E9BF20 /* RNSNoteRoute.xib */,
 			);
 			name = NoteRoute;
@@ -2328,6 +2337,14 @@
 				838EA03D1F53DC3600E9BF20 /* RNSTriangle+Draw.swift */,
 			);
 			name = Triangle;
+			sourceTree = "<group>";
+		};
+		838EA03F1F53F8CB00E9BF20 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				838EA0401F53F8F200E9BF20 /* UIImage+Utils.swift */,
+			);
+			name = UIImage;
 			sourceTree = "<group>";
 		};
 		8392BABD1F303D320024E9E5 /* Code */ = {
@@ -2951,6 +2968,7 @@
 				832B1DE01F42BA1B0024505C /* RNSMapParentController+Action.swift in Sources */,
 				837ABF151F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */,
 				839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */,
+				838EA0411F53F8F200E9BF20 /* UIImage+Utils.swift in Sources */,
 				837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */,
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
 				836277CF1F3814FA009FB712 /* RNSPinBusStop.swift in Sources */,
@@ -3023,6 +3041,7 @@
 				838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
+				838EA0431F53FB3200E9BF20 /* RNSNoteRoute+UI.swift in Sources */,
 				835D85491F50229500B83EB2 /* RNSRectPoint+Set.swift in Sources */,
 				83CD58551F25919000A9FE1A /* RNSRoutingPayload.swift in Sources */,
 				835D853A1F4FDAF300B83EB2 /* CLLocationCoordinate2D+Utils.swift in Sources */,
@@ -3157,6 +3176,7 @@
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
 				8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */,
 				83A53F961F4A9F0800938969 /* RNSRouteVariant.swift in Sources */,
+				838EA0451F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift in Sources */,
 				838EA02E1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift in Sources */,
 				838CE9351F3DA9FE00C10FBA /* RNSBusInfoViewController.swift in Sources */,
 				838EA02C1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift in Sources */,
