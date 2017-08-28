@@ -34,16 +34,19 @@ extension RNSPageRouteView: UICollectionViewDataSource, UICollectionViewDelegate
         return cell
     }
     
-    func item(_ indexPath: IndexPath) -> RNSRouteVariant? {
+    func item(_ indexPath: IndexPath?) -> RNSRouteVariant? {
+        guard let indexPath = indexPath else {
+            return nil
+        }
         return items?[indexPath.row]
     }
     
+    var currentIndexPath: IndexPath? {
+        return collectionView.indexPathForItem(at: collectionView.contentOffset)
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        guard let indexPath = collectionView.indexPathForItem(at: collectionView.contentOffset) else {
-            return
-        }
-
-        pageControl.currentPage = indexPath.row
-        RNSPageRouteManager.updateMap(item(indexPath))
+        updateMap()
+        updatePageControl(currentIndexPath?.row)
     }
 }

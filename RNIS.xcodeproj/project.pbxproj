@@ -276,6 +276,7 @@
 		838EA02C1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA02B1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift */; };
 		838EA02E1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA02D1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift */; };
 		838EA0301F53C64D00E9BF20 /* RNSPageRouteManager+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA02F1F53C64D00E9BF20 /* RNSPageRouteManager+Update.swift */; };
+		838EA0321F53CE4400E9BF20 /* RNSPageRouteView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0311F53CE4400E9BF20 /* RNSPageRouteView+UI.swift */; };
 		8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
@@ -611,6 +612,7 @@
 		838EA02B1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+Hashable.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+Hashable.swift"; sourceTree = "<group>"; };
 		838EA02D1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSPageRouteManager+Route.swift"; path = "Managers/PageRoute/RNSPageRouteManager+Route.swift"; sourceTree = "<group>"; };
 		838EA02F1F53C64D00E9BF20 /* RNSPageRouteManager+Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSPageRouteManager+Update.swift"; path = "Managers/PageRoute/RNSPageRouteManager+Update.swift"; sourceTree = "<group>"; };
+		838EA0311F53CE4400E9BF20 /* RNSPageRouteView+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSPageRouteView+UI.swift"; path = "Views/Map/PageRoute/RNSPageRouteView+UI.swift"; sourceTree = "<group>"; };
 		8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationCodeController.swift; path = "Controllers/Authorization+Registration/Registration/Code/RNSRegistrationCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
@@ -2396,6 +2398,7 @@
 				83D155851F4BC7E800150144 /* DotsBuss */,
 				83A53F891F4A986500938969 /* Cell */,
 				83A53F851F4A96FA00938969 /* RNSPageRouteView.swift */,
+				838EA0311F53CE4400E9BF20 /* RNSPageRouteView+UI.swift */,
 				83A53F971F4AA00E00938969 /* RNSPageRouteView+CollectionView.swift */,
 				83A53F871F4A975900938969 /* RNSPageRouteView.xib */,
 			);
@@ -2943,6 +2946,7 @@
 				835D854B1F5022D100B83EB2 /* RNSRectPoint+Contains.swift in Sources */,
 				835D85401F4FE63200B83EB2 /* CounterTime.swift in Sources */,
 				836989291F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */,
+				838EA0321F53CE4400E9BF20 /* RNSPageRouteView+UI.swift in Sources */,
 				8310D4511F3C6E64000CCD0A /* RNSScrollShowContainer+UI.swift in Sources */,
 				837ABF131F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */,
 				832B1DCC1F42B0DB0024505C /* RNSFieldPlaceholderColor.swift in Sources */,

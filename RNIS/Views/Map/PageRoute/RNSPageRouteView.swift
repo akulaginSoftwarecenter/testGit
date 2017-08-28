@@ -31,14 +31,4 @@ class RNSPageRouteView: BaseViewWithXIBInit {
             self?.prepareCurrentItem()
         }
     }
-    
-    func prepareCurrentItem() {
-        guard let index = RNSPageRouteManager.currentIndex,
-            let collectionIndex = collectionView.indexPathsForVisibleItems.first?.row, collectionIndex != index else {
-            return
-        }
-        
-        let indexPath = IndexPath(item: index, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
-    }
 }
