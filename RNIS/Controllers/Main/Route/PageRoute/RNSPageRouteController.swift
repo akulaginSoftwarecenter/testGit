@@ -21,6 +21,28 @@ class RNSPageRouteController: UIViewController {
         super.viewDidLoad()
         
         prepareMapView()
+        testNodes()
+    }
+    
+    func testNodes() {
+        let busNode = RNSNoteRoute(busTitle: "A86");
+        view.addSubview(busNode)
+        
+        busNode.snp.makeConstraints { (make) in
+            make.center.equalTo(self.view)
+            make.width.equalTo(50)
+            make.height.equalTo(30)
+        }
+        
+        let timeNode = RNSNoteRoute(durationMinute: 5)
+        view.addSubview(timeNode)
+        
+        timeNode.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.view)
+            make.centerY.equalTo(self.view).offset(100)
+            make.width.equalTo(50)
+            make.height.equalTo(30)
+        }
     }
     
     override class var storyboardName: String {

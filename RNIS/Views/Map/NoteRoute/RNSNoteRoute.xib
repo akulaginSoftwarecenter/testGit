@@ -15,9 +15,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSNoteRoute" customModule="RNIS" customModuleProvider="target">
             <connections>
+                <outlet property="backView" destination="iN0-l3-epB" id="6i3-Rl-orC"/>
                 <outlet property="downView" destination="zMY-78-kmB" id="5qm-1e-rk9"/>
                 <outlet property="leftView" destination="w2J-bj-2cX" id="iOg-ck-zry"/>
                 <outlet property="rightView" destination="7nd-4y-DFA" id="c7u-7h-X8f"/>
+                <outlet property="titleLabel" destination="CI1-el-3jU" id="adl-br-93W"/>
                 <outlet property="upView" destination="22n-7a-9ZB" id="iDx-U7-QfB"/>
             </connections>
         </placeholder>

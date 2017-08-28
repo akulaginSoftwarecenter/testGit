@@ -44,6 +44,10 @@ extension UIColor {
         return UIColor(hexString: "01B3FD")
     }
     
+    static var A3423C:UIColor {
+        return UIColor(hexString: "A3423C")
+    }
+    
     static var E25E55:UIColor {
         return UIColor(hexString: "E25E55")
     }
