@@ -21,7 +21,7 @@ class RNSPageRouteController: UIViewController {
         super.viewDidLoad()
         
         prepareMapView()
-        testNodes()
+        //testNodes()
     }
     
     func testNodes() {
