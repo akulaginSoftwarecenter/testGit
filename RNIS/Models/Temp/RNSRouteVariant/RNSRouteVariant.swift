@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSRouteVariant: RNISMappableBase {
+class RNSRouteVariant: RNISMappableBase, Hashable {
     
     var roadActivate: [PGPolyline]?
     var roadOff: RNSRoadOff?
@@ -19,20 +19,7 @@ class RNSRouteVariant: RNISMappableBase {
     var endDate: Date?
     
     var points = [RNSRoutePoint]()
-    
-    var buss: [RNSBusTemp] {
-        let buss = points.flatMap{$0.bus}
-        return buss.unique
-    }
-    
-    var titleWidthBuss: CGFloat {
-        var width = CGFloat(0)
-        for item in buss {
-            width += item.titleWidth
-        }
-        return width
-    }
-    
+     
     func prepareDate() {
         let durationMinute = Int.rand(1, limit: 40)
         self.durationMinute = durationMinute

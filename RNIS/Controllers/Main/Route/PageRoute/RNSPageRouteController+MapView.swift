@@ -35,12 +35,10 @@ extension RNSPageRouteController {
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
-        CounterTime.startTimer()
-        checkContaints(point)
-        CounterTime.endTimer()
+        RNSPageRouteManager.checkContaints(point)
     }
     
     func onMapEvent() {
-        activeRoadReload()
+        RNSPageRouteManager.activeRoadReload()
     }
 }

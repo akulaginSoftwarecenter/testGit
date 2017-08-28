@@ -15,7 +15,7 @@ extension RNSRouteVariant {
     }
     
     func prepareRoadOff() {
-        removeRoadOff()
+        removeAllRoad()
         roadOff = RNSRoadOff(points)
     }
 }
