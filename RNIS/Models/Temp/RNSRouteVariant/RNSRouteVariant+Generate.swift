@@ -15,15 +15,20 @@ extension RNSRouteVariant {
         item.prepareDate()
         item.addRunPoint(59.934338, lon: 30.301333, busStop: busStop1)
         
-        let bus1 = RNSBusTemp.generate
-        item.addBusPoint(59.934896, lon: 30.303141, bus: bus1, busStop: busStop2)
+        
+        let point1 = PGGeoPoint(latitude: 59.934896, longitude: 30.303141)
+        let bus1 = RNSBusTemp.generate(point1)
+        item.addBusPoint(point1.latitude, lon: point1.longitude, bus: bus1, busStop: busStop2)
         item.addBusPoint(59.934225, lon: 30.304228, bus: bus1)
         
-        let bus2 = RNSBusTemp.generate
-        item.addBusPoint(59.935051, lon: 30.306572, bus: bus2, busStop: busStop3)
+        let point2 = PGGeoPoint(latitude: 59.935051, longitude: 30.306572)
+        let bus2 = RNSBusTemp.generate(point2)
+        item.addBusPoint(point2.latitude, lon: point2.longitude, bus: bus2, busStop: busStop3)
         
-        let bus3 = RNSBusTemp.generate
-        item.addBusPoint(59.935863, lon: 30.308822, bus: bus3, busStop: busStop4)
+        let point3 = PGGeoPoint(latitude: 59.935863, longitude: 30.308822)
+        let bus3 = RNSBusTemp.generate(point3)
+        
+        item.addBusPoint(point3.latitude, lon: point3.longitude, bus: bus3, busStop: busStop4)
         item.addBusPoint(59.936428, lon: 30.310159, bus: bus3)
         item.addBusPoint(59.935282, lon: 30.311911, bus: bus3)
         return item
@@ -34,11 +39,12 @@ extension RNSRouteVariant {
         item.prepareDate()
         item.addRunPoint(59.934338, lon: 30.301333, busStop: busStop1)
         
-        let bus1 = RNSBusTemp.generate
+        let point1 = PGGeoPoint(latitude: 59.934654, longitude: 30.310087)
+        let bus1 = RNSBusTemp.generate(point1)
         item.addRunPoint(59.934896, lon: 30.303141)
         item.addRunPoint(59.934225, lon: 30.304228)
         item.addRunPoint(59.933299, lon: 30.305892)
-        item.addBusPoint(59.934654, lon: 30.310087, bus: bus1, busStop: busStop5)
+        item.addBusPoint(point1.latitude, lon: point1.longitude, bus: bus1, busStop: busStop5)
         item.addBusPoint(59.935282, lon: 30.311911, bus: bus1)
         return item
     }

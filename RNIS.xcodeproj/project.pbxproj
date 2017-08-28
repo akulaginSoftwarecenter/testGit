@@ -284,6 +284,7 @@
 		838EA03E1F53DC3600E9BF20 /* RNSTriangle+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA03D1F53DC3600E9BF20 /* RNSTriangle+Draw.swift */; };
 		838EA0431F53FB3200E9BF20 /* RNSNoteRoute+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0421F53FB3200E9BF20 /* RNSNoteRoute+UI.swift */; };
 		838EA0451F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0441F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift */; };
+		838EA0481F54260C00E9BF20 /* RNSPinVariantBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA0471F54260C00E9BF20 /* RNSPinVariantBus.swift */; };
 		8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
@@ -627,6 +628,7 @@
 		838EA03D1F53DC3600E9BF20 /* RNSTriangle+Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSTriangle+Draw.swift"; path = "Views/Others/Triangle/RNSTriangle+Draw.swift"; sourceTree = "<group>"; };
 		838EA0421F53FB3200E9BF20 /* RNSNoteRoute+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSNoteRoute+UI.swift"; path = "Views/Map/NoteRoute/RNSNoteRoute+UI.swift"; sourceTree = "<group>"; };
 		838EA0441F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSNoteRoute+Frame.swift"; path = "Views/Map/NoteRoute/RNSNoteRoute+Frame.swift"; sourceTree = "<group>"; };
+		838EA0471F54260C00E9BF20 /* RNSPinVariantBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinVariantBus.swift; path = Views/OVerLays/RNSPinVariantBus/RNSPinVariantBus.swift; sourceTree = "<group>"; };
 		8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationCodeController.swift; path = "Controllers/Authorization+Registration/Registration/Code/RNSRegistrationCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
@@ -1357,9 +1359,10 @@
 			children = (
 				838CE92F1F3D9DC000C10FBA /* Base */,
 				837F71951F45358100DEAA36 /* PinAddress */,
+				835718A91F21C77A00DE5E25 /* PinBuild */,
 				836EEF141F3C12A8007631D9 /* PinBus */,
 				836277CD1F38146D009FB712 /* PinBusStop */,
-				835718A91F21C77A00DE5E25 /* PinBuild */,
+				838EA0461F5425C400E9BF20 /* PinVariantBus */,
 			);
 			name = Overlays;
 			sourceTree = "<group>";
@@ -2336,6 +2339,14 @@
 			name = Triangle;
 			sourceTree = "<group>";
 		};
+		838EA0461F5425C400E9BF20 /* PinVariantBus */ = {
+			isa = PBXGroup;
+			children = (
+				838EA0471F54260C00E9BF20 /* RNSPinVariantBus.swift */,
+			);
+			name = PinVariantBus;
+			sourceTree = "<group>";
+		};
 		8392BABD1F303D320024E9E5 /* Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -3068,6 +3079,7 @@
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
 				83E183931F4400DE005912C5 /* RNSAddressViewController+TableView.swift in Sources */,
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
+				838EA0481F54260C00E9BF20 /* RNSPinVariantBus.swift in Sources */,
 				838CE9311F3D9E0800C10FBA /* RNSPinItem.swift in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,
 				836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,

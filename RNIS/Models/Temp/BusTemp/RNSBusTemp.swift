@@ -18,10 +18,13 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem, Hashable   {
         return "A" + "\(num ?? 0)"
     }
     
+    var point: PGGeoPoint?
+    
     var num: Int?
     
-    static var generate: RNSBusTemp {
+    static func generate(_ point: PGGeoPoint) -> RNSBusTemp {
         let item = RNSBusTemp()
+        item.point = point
         item.num = Int.rand(1, limit: 200)
         return item
     }

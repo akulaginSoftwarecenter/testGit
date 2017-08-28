@@ -11,6 +11,7 @@ import Foundation
 extension RNSRouteVariant {
     
     func removeRoadActivate() {
+        removeBussPins()
         roadActivate?.forEach{$0.clear()}
     }
     
@@ -32,6 +33,7 @@ extension RNSRouteVariant {
         roadActivate = [PGPolyline]()
         prepareRunActivate()
         prepareBusActivate()
+        //prepareBusNote()
     }
     
     func prepareBusActivate() {
@@ -69,5 +71,18 @@ extension RNSRouteVariant {
             }
         }
         addDraw(items)
+    }
+    
+    func prepareBusNote() {
+        removeBussPins()
+        var bussPins = [RNSPinVariantBus]()
+        for bus in buss {
+            bussPins.append(RNSPinVariantBus(bus))
+        }
+        self.bussPins = bussPins
+    }
+    
+    func removeBussPins() {
+        bussPins?.forEach { $0.remove() }
     }
 }
