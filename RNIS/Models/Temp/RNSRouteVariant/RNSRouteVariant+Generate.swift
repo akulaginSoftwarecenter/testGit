@@ -30,7 +30,7 @@ extension RNSRouteVariant {
         
         item.addBusPoint(point3.latitude, lon: point3.longitude, bus: bus3, busStop: busStop4)
         item.addBusPoint(59.936428, lon: 30.310159, bus: bus3)
-        item.addBusPoint(59.935282, lon: 30.311911, bus: bus3)
+        item.addBusPoint(59.935282, lon: 30.311911, bus: bus3, busStop: busStop6)
         return item
     }
     
@@ -45,7 +45,7 @@ extension RNSRouteVariant {
         item.addRunPoint(59.934225, lon: 30.304228)
         item.addRunPoint(59.933299, lon: 30.305892)
         item.addBusPoint(point1.latitude, lon: point1.longitude, bus: bus1, busStop: busStop5)
-        item.addBusPoint(59.935282, lon: 30.311911, bus: bus1)
+        item.addBusPoint(59.935282, lon: 30.311911, bus: bus1, busStop: busStop6)
         return item
     }
     
@@ -75,5 +75,9 @@ extension RNSRouteVariant {
     
     static var busStop5: RNSBusStop? {
         return RNSDataManager.busStop5
+    }
+    
+    static var busStop6: RNSBusStop? {
+        return RNSDataManager.busStop6
     }
 }

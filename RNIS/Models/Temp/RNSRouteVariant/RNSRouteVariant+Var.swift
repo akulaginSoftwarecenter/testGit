@@ -15,6 +15,11 @@ extension RNSRouteVariant {
         return buss.unique
     }
     
+    var busStops: [RNSBusStop] {
+        let stops = points.flatMap{$0.busStop}
+        return stops.unique
+    }
+    
     var titleWidthBuss: CGFloat {
         var width = CGFloat(0)
         for item in buss {

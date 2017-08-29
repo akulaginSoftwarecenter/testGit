@@ -22,6 +22,7 @@ class RNSRoutePoint: Hashable {
         if let lat = lat, let lon = lon {
             self.point = PGGeoPoint(latitude: lat, longitude: lon)
         }
+        self.busStop = busStop
         self.type = type
         self.bus = bus
     }
@@ -48,6 +49,20 @@ class RNSRoutePoint: Hashable {
     
     func distanceTo(_ point: RNSRoutePoint?) -> CLLocationDistance? {
         return self.point?.distanceTo(point?.point)
+    }
+    
+    var isRun: Bool {
+        guard let type = type else {
+            return false
+        }
+        return type == .run
+    }
+    
+    var isBus: Bool {
+        guard let type = type else {
+            return false
+        }
+        return type == .bus
     }
     
     var removeVariantEnd: EmptyBlock?

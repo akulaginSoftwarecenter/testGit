@@ -16,6 +16,7 @@ class RNSDataManager: NSObject {
     static var busStop3: RNSBusStop?
     static var busStop4: RNSBusStop?
     static var busStop5: RNSBusStop?
+    static var busStop6: RNSBusStop?
     
     
     static var realm: Realm? {

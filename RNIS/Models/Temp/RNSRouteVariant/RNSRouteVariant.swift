@@ -53,4 +53,8 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
         removeRoadOff()
         removeRoadActivate()
     }
+    
+    var tableItem: RNSRouteTable {
+        return RNSRouteTable(self)
+    }
 }

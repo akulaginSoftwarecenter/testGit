@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gjb-WE-MeI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,7 +30,7 @@
                                 <rect key="frame" x="29" y="132" width="317" height="423"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="978-ky-cmL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStopCell" rowHeight="62" id="978-ky-cmL" customClass="RNSRouteStopCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="317" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="978-ky-cmL" id="C0b-C6-2wL">
@@ -63,7 +64,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jer-tX-Xip" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
                                                     <rect key="frame" x="76" y="6.5" width="18" height="18"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-mv-Mi0">
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-mv-Mi0" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
                                                             <rect key="frame" x="6" y="5.5" width="6" height="6"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
@@ -101,8 +102,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="edgeCircle" destination="EXd-mv-Mi0" id="qha-j1-AGE"/>
+                                            <outlet property="text1Label" destination="R4F-Tt-ybx" id="Ht4-nu-cM1"/>
+                                            <outlet property="text2Label" destination="S9Y-MF-nVI" id="nNJ-aB-0ab"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="97u-9L-0dM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStillCell" id="97u-9L-0dM" customClass="RNSRouteStillCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="317" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97u-9L-0dM" id="9iM-tp-1i1">
@@ -167,8 +173,55 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="label" destination="WC9-q6-qI1" id="cH6-Xl-az4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteBusCell" id="z1T-6W-0Ii" customClass="RNSRouteBusCell" customModule="RNIS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="134" width="317" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z1T-6W-0Ii" id="cLL-dt-AJ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJT-jp-Z5B">
+                                                    <rect key="frame" x="54.5" y="0.0" width="57.5" height="37"/>
+                                                    <color key="backgroundColor" red="0.63921568627450975" green="0.25882352941176467" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m9-SW-JN5">
+                                                    <rect key="frame" x="67.5" y="0.0" width="31.5" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="kNW-lx-GpJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9m9-SW-JN5" firstAttribute="top" secondItem="cLL-dt-AJ2" secondAttribute="top" id="4tO-4I-pCg"/>
+                                                <constraint firstItem="aJT-jp-Z5B" firstAttribute="centerX" secondItem="9m9-SW-JN5" secondAttribute="centerX" id="Bfh-SO-s6P"/>
+                                                <constraint firstItem="aJT-jp-Z5B" firstAttribute="height" secondItem="9m9-SW-JN5" secondAttribute="height" id="RoP-cL-BPm"/>
+                                                <constraint firstItem="aJT-jp-Z5B" firstAttribute="width" secondItem="9m9-SW-JN5" secondAttribute="width" constant="26" id="cAO-Zz-4sD"/>
+                                                <constraint firstItem="aJT-jp-Z5B" firstAttribute="centerY" secondItem="9m9-SW-JN5" secondAttribute="centerY" id="eXo-j4-PXg"/>
+                                                <constraint firstItem="9m9-SW-JN5" firstAttribute="centerX" secondItem="cLL-dt-AJ2" secondAttribute="leading" constant="83" id="mpK-ad-MoX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.82352941180000006" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="label" destination="9m9-SW-JN5" id="CH3-Xx-3e4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gjb-WE-MeI" id="Ooj-l4-A0p"/>
+                                    <outlet property="delegate" destination="gjb-WE-MeI" id="BIE-wv-E8z"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -182,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARX-Qc-cMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144.80000000000001" y="40.929535232383813"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="30.134932533733135"/>
         </scene>
     </scenes>
     <resources>

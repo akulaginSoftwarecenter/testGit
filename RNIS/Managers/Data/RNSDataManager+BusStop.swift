@@ -23,6 +23,7 @@ extension RNSDataManager {
             busStop3 = addBusStop("Исакиевский собор", lat: 59.935051, lon: 30.306572)
             busStop4 = addBusStop("пр. Адмиралтейский", lat: 59.935863, lon: 30.308822)
             busStop5 = addBusStop("Исакиевский собор", lat: 59.934654, lon: 30.310087)
+            busStop6 = addBusStop("Пролератарская", lat: 59.935267, lon: 30.311943)
         })
     }
     
