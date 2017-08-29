@@ -14,6 +14,8 @@
 		830E68AE1F5514DE008EFA02 /* RNSPinDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */; };
 		830E68B01F551CBD008EFA02 /* Array+RNSRoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68AF1F551CBD008EFA02 /* Array+RNSRoutePoint.swift */; };
 		830E68B31F552714008EFA02 /* RNSPinVariantEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68B21F552714008EFA02 /* RNSPinVariantEnd.swift */; };
+		830E68B61F552FB3008EFA02 /* RNSRouteDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68B51F552FB3008EFA02 /* RNSRouteDetailController.swift */; };
+		830E68B81F552FC6008EFA02 /* RNSRouteDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830E68B71F552FC6008EFA02 /* RNSRouteDetailController.storyboard */; };
 		830F41CC1F4BF5DF008E7C0F /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830F41CB1F4BF5DF008E7C0F /* Date+Utils.swift */; };
 		830F41D01F4BF795008E7C0F /* DateFormatter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830F41CF1F4BF795008E7C0F /* DateFormatter+Utils.swift */; };
 		8310D4401F3C6AE3000CCD0A /* RNSBusDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */; };
@@ -394,6 +396,8 @@
 		830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinDuration.swift; path = Views/OVerLays/PinDuration/RNSPinDuration.swift; sourceTree = "<group>"; };
 		830E68AF1F551CBD008EFA02 /* Array+RNSRoutePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+RNSRoutePoint.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+RNSRoutePoint.swift"; sourceTree = "<group>"; };
 		830E68B21F552714008EFA02 /* RNSPinVariantEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinVariantEnd.swift; path = Views/OVerLays/PinVariantEnd/RNSPinVariantEnd.swift; sourceTree = "<group>"; };
+		830E68B51F552FB3008EFA02 /* RNSRouteDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRouteDetailController.swift; path = Controllers/Main/RouteDetail/RNSRouteDetailController.swift; sourceTree = "<group>"; };
+		830E68B71F552FC6008EFA02 /* RNSRouteDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSRouteDetailController.storyboard; path = Controllers/Main/RouteDetail/RNSRouteDetailController.storyboard; sourceTree = "<group>"; };
 		830F41CB1F4BF5DF008E7C0F /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Utils.swift"; path = "Library/Helpers/Base objects extensions/Date/Date+Utils.swift"; sourceTree = "<group>"; };
 		830F41CF1F4BF795008E7C0F /* DateFormatter+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Utils.swift"; sourceTree = "<group>"; };
 		8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusDetailController.swift; path = Controllers/Map/BusDetail/RNSBusDetailController.swift; sourceTree = "<group>"; };
@@ -782,6 +786,15 @@
 			name = PinVariantEnd;
 			sourceTree = "<group>";
 		};
+		830E68B41F552B8E008EFA02 /* RouteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				830E68B51F552FB3008EFA02 /* RNSRouteDetailController.swift */,
+				830E68B71F552FC6008EFA02 /* RNSRouteDetailController.storyboard */,
+			);
+			name = RouteDetail;
+			sourceTree = "<group>";
+		};
 		830F41CA1F4BF5C5008E7C0F /* Date */ = {
 			isa = PBXGroup;
 			children = (
@@ -1099,9 +1112,10 @@
 		832B1DC91F42AA2A0024505C /* Route */ = {
 			isa = PBXGroup;
 			children = (
-				83A53F811F4A90FE00938969 /* PageRoute */,
 				836221A81F43DE8B005B49DA /* Address */,
 				837036B71F42A21400FBD1E9 /* Duty */,
+				83A53F811F4A90FE00938969 /* PageRoute */,
+				830E68B41F552B8E008EFA02 /* RouteDetail */,
 			);
 			name = Route;
 			sourceTree = "<group>";
@@ -2857,6 +2871,7 @@
 			files = (
 				83E2D3941F34336100035877 /* RNSScrollKeyBoardContainer.storyboard in Resources */,
 				838EA0371F53D48F00E9BF20 /* RNSNoteRoute.xib in Resources */,
+				830E68B81F552FC6008EFA02 /* RNSRouteDetailController.storyboard in Resources */,
 				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
 				838CE9371F3DAA2000C10FBA /* RNSBusInfoViewController.storyboard in Resources */,
 				832B1DE21F42BAA60024505C /* RNSMapParentController.storyboard in Resources */,
@@ -3140,6 +3155,7 @@
 				831A85B31F4149070095F006 /* RNSAddressTemp.swift in Sources */,
 				837B667F1F396AD20048C5BA /* RNSMapViewController+Present.swift in Sources */,
 				832B1DCE1F42B2110024505C /* RNSDutyViewController+Action.swift in Sources */,
+				830E68B61F552FB3008EFA02 /* RNSRouteDetailController.swift in Sources */,
 				83D155951F4BD11000150144 /* RNSArrowLeft.swift in Sources */,
 				837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				83029BCF1F4BECBB00B0FEE3 /* UIStackView+Utils.swift in Sources */,
