@@ -18,6 +18,9 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
     var durationMinute: Int?
     var endDate: Date?
     
+    var endPoint: RNSRoutePoint? {
+        return points.last
+    }
     var points = [RNSRoutePoint]()
     
     lazy var navels: [RNSDurationItem] = {

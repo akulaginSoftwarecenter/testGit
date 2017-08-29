@@ -49,4 +49,6 @@ class RNSRoutePoint: Hashable {
     func distanceTo(_ point: RNSRoutePoint?) -> CLLocationDistance? {
         return self.point?.distanceTo(point?.point)
     }
+    
+    var removeVariantEnd: EmptyBlock?
 }

@@ -13,6 +13,7 @@
 		830E68AB1F5513BB008EFA02 /* RNSDurationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68AA1F5513BB008EFA02 /* RNSDurationItem.swift */; };
 		830E68AE1F5514DE008EFA02 /* RNSPinDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */; };
 		830E68B01F551CBD008EFA02 /* Array+RNSRoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68AF1F551CBD008EFA02 /* Array+RNSRoutePoint.swift */; };
+		830E68B31F552714008EFA02 /* RNSPinVariantEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68B21F552714008EFA02 /* RNSPinVariantEnd.swift */; };
 		830F41CC1F4BF5DF008E7C0F /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830F41CB1F4BF5DF008E7C0F /* Date+Utils.swift */; };
 		830F41D01F4BF795008E7C0F /* DateFormatter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830F41CF1F4BF795008E7C0F /* DateFormatter+Utils.swift */; };
 		8310D4401F3C6AE3000CCD0A /* RNSBusDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */; };
@@ -392,6 +393,7 @@
 		830E68AA1F5513BB008EFA02 /* RNSDurationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDurationItem.swift; path = Models/Temp/DurationItem/RNSDurationItem.swift; sourceTree = "<group>"; };
 		830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinDuration.swift; path = Views/OVerLays/PinDuration/RNSPinDuration.swift; sourceTree = "<group>"; };
 		830E68AF1F551CBD008EFA02 /* Array+RNSRoutePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+RNSRoutePoint.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+RNSRoutePoint.swift"; sourceTree = "<group>"; };
+		830E68B21F552714008EFA02 /* RNSPinVariantEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinVariantEnd.swift; path = Views/OVerLays/PinVariantEnd/RNSPinVariantEnd.swift; sourceTree = "<group>"; };
 		830F41CB1F4BF5DF008E7C0F /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Utils.swift"; path = "Library/Helpers/Base objects extensions/Date/Date+Utils.swift"; sourceTree = "<group>"; };
 		830F41CF1F4BF795008E7C0F /* DateFormatter+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Utils.swift"; sourceTree = "<group>"; };
 		8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusDetailController.swift; path = Controllers/Map/BusDetail/RNSBusDetailController.swift; sourceTree = "<group>"; };
@@ -770,6 +772,14 @@
 				830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */,
 			);
 			name = PinDuration;
+			sourceTree = "<group>";
+		};
+		830E68B11F552647008EFA02 /* PinVariantEnd */ = {
+			isa = PBXGroup;
+			children = (
+				830E68B21F552714008EFA02 /* RNSPinVariantEnd.swift */,
+			);
+			name = PinVariantEnd;
 			sourceTree = "<group>";
 		};
 		830F41CA1F4BF5C5008E7C0F /* Date */ = {
@@ -1387,6 +1397,7 @@
 				836277CD1F38146D009FB712 /* PinBusStop */,
 				830E68AC1F55148B008EFA02 /* PinDuration */,
 				838EA0461F5425C400E9BF20 /* PinVariantBus */,
+				830E68B11F552647008EFA02 /* PinVariantEnd */,
 			);
 			name = Overlays;
 			sourceTree = "<group>";
@@ -3207,6 +3218,7 @@
 				838EA0451F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift in Sources */,
 				838EA02E1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift in Sources */,
 				838CE9351F3DA9FE00C10FBA /* RNSBusInfoViewController.swift in Sources */,
+				830E68B31F552714008EFA02 /* RNSPinVariantEnd.swift in Sources */,
 				838EA02C1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift in Sources */,
 				83E183991F440DC3005912C5 /* RNSSearchHistory.swift in Sources */,
 				838707E61F30257F0094B273 /* RNSPhoneViewController.swift in Sources */,
