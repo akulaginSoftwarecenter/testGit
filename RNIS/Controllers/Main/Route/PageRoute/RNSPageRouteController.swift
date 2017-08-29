@@ -29,6 +29,7 @@ class RNSPageRouteController: UIViewController {
     
     deinit {
         RNSPageRouteManager.removeAllRoute()
+        RNSPageRouteManager.items = nil
         print("RNSPageRouteController deinit")
     }
 }
