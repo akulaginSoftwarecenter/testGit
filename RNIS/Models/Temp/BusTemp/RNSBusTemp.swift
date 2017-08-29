@@ -22,6 +22,8 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem, Hashable   {
     
     var num: Int?
     
+    var handlerRemove: EmptyBlock?
+    
     static func generate(_ point: PGGeoPoint) -> RNSBusTemp {
         let item = RNSBusTemp()
         item.point = point

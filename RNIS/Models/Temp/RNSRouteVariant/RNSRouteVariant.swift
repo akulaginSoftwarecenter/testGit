@@ -19,8 +19,6 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
     var endDate: Date?
     
     var points = [RNSRoutePoint]()
-    
-    var bussPins: [RNSPinVariantBus]?
      
     func prepareDate() {
         let durationMinute = Int.rand(1, limit: 40)

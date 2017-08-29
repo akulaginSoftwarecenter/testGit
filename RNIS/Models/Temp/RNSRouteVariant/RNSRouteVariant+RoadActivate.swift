@@ -74,20 +74,10 @@ extension RNSRouteVariant {
     }
     
     func prepareBusNote() {
-        print("prepareBusNote",buss.count)
-        var bussPins = [RNSPinVariantBus]()
-        for bus in buss {
-            let pin = RNSPinVariantBus(bus)
-            bussPins.append(pin)
-        }
-        self.bussPins = bussPins
+        buss.forEach{ RNSPinVariantBus($0) }
     }
     
     func removeBussPins() {
-        print("removeBussPins",bussPins?.count)
-        for pin in bussPins ?? [] {
-            print("pin",pin)
-            pin.remove()
-        }
+        buss.forEach{ $0.handlerRemove?() }
     }
 }
