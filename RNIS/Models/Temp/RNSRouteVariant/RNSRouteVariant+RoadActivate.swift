@@ -12,6 +12,7 @@ extension RNSRouteVariant {
     
     func removeRoadActivate() {
         removeBussPins()
+        removeNavels()
         roadActivate?.forEach{$0.clear()}
     }
     
@@ -34,6 +35,7 @@ extension RNSRouteVariant {
         prepareRunActivate()
         prepareBusActivate()
         prepareBusNote()
+        prepareNavels()
     }
     
     func prepareBusActivate() {
@@ -79,5 +81,13 @@ extension RNSRouteVariant {
     
     func removeBussPins() {
         buss.forEach{ $0.handlerRemove?() }
+    }
+    
+    func prepareNavels() {
+        navels.forEach{ RNSPinDuration($0) }
+    }
+    
+    func removeNavels() {
+        navels.forEach{ $0.handlerRemove?() }
     }
 }

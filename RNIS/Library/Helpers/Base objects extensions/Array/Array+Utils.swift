@@ -17,14 +17,4 @@ extension Array where Element: Any {
         return self[index]
     }
 }
-/*
-extension Array where Element: Any {
-    
-    func value<T>(_ index: Int?) -> T? {
-        guard let index = index, index < count  else {
-            return nil
-        }
-        return self[index] as? T
-    }
-}
-*/
+

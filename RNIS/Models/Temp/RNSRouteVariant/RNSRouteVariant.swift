@@ -19,6 +19,26 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
     var endDate: Date?
     
     var points = [RNSRoutePoint]()
+    
+    lazy var navels: [RNSDurationItem] = {
+        var navels = [RNSDurationItem]()
+        var items = [RNSRoutePoint]()
+        let addNavel: ([RNSRoutePoint]) ->() = {
+            if let navel = $0.navel {
+                navels.append(navel)
+            }
+        }
+        for point in self.points {
+            if items.last?.different(point) ?? false {
+                items.append(point)
+                addNavel(items)
+                items = [RNSRoutePoint]()
+            }
+            items.append(point)
+        }
+        addNavel(items)
+        return navels
+    }()
      
     func prepareDate() {
         let durationMinute = Int.rand(1, limit: 40)

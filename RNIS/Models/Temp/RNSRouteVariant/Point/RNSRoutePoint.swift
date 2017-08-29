@@ -36,4 +36,17 @@ class RNSRoutePoint: Hashable {
     static func ==(lhs: RNSRoutePoint, rhs: RNSRoutePoint) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
+    
+    func different(_ point: RNSRoutePoint?) -> Bool {
+        guard let point = point,
+            let selfType = self.type,
+            let pointType = point.type else {
+            return false
+        }
+        return selfType != pointType || bus != point.bus
+    }
+    
+    func distanceTo(_ point: RNSRoutePoint?) -> CLLocationDistance? {
+        return self.point?.distanceTo(point?.point)
+    }
 }
