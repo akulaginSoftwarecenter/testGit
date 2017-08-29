@@ -17,7 +17,7 @@
         <!--Route Detail Controller-->
         <scene sceneID="U5T-xn-yNS">
             <objects>
-                <viewController id="gjb-WE-MeI" customClass="RNSRouteDetailController" sceneMemberID="viewController">
+                <viewController id="gjb-WE-MeI" customClass="RNSRouteDetailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iXN-3U-jOs"/>
                         <viewControllerLayoutGuide type="bottom" id="tDb-5H-kgM"/>
@@ -26,9 +26,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SKI-rk-b7W">
-                                <rect key="frame" x="29" y="132" width="317" height="423"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SKI-rk-b7W">
+                                <rect key="frame" x="29" y="112" width="317" height="468"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStopCell" rowHeight="62" id="978-ky-cmL" customClass="RNSRouteStopCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="317" height="62"/>
@@ -109,10 +109,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStillCell" id="97u-9L-0dM" customClass="RNSRouteStillCell" customModule="RNIS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="317" height="44"/>
+                                        <rect key="frame" x="0.0" y="90" width="317" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97u-9L-0dM" id="9iM-tp-1i1">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-cb-eS9">
@@ -178,10 +178,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteBusCell" id="z1T-6W-0Ii" customClass="RNSRouteBusCell" customModule="RNIS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="134" width="317" height="44"/>
+                                        <rect key="frame" x="0.0" y="150" width="317" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z1T-6W-0Ii" id="cLL-dt-AJ2">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJT-jp-Z5B">
@@ -217,21 +217,117 @@
                                             <outlet property="label" destination="9m9-SW-JN5" id="CH3-Xx-3e4"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteTotalCell" id="uBv-NT-7hV" customClass="RNSRouteTotalCell" customModule="RNIS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="210" width="317" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uBv-NT-7hV" id="7Mp-tu-ZTH">
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9g-1f-Zp9" customClass="RNSTriangle" customModule="RNIS" customModuleProvider="target">
+                                                    <rect key="frame" x="79.5" y="0.0" width="11" height="11"/>
+                                                    <color key="backgroundColor" red="0.85098039215686272" green="0.3529411764705882" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="11" id="Ngz-3m-7aX"/>
+                                                        <constraint firstAttribute="height" constant="11" id="QkY-Pf-4EM"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="typeNote">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzo-nF-9La">
+                                                    <rect key="frame" x="59.5" y="11.5" width="125.5" height="37"/>
+                                                    <color key="backgroundColor" red="0.85098039215686272" green="0.3529411764705882" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого: 36 мин." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt9-Jd-4Ca">
+                                                    <rect key="frame" x="72.5" y="11" width="99.5" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="A1k-iK-ZBi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Qzo-nF-9La" firstAttribute="centerX" secondItem="Bt9-Jd-4Ca" secondAttribute="centerX" id="131-4A-IsT"/>
+                                                <constraint firstItem="Bt9-Jd-4Ca" firstAttribute="leading" secondItem="7Mp-tu-ZTH" secondAttribute="leading" constant="72" id="8a4-vY-t2o"/>
+                                                <constraint firstItem="Qzo-nF-9La" firstAttribute="width" secondItem="Bt9-Jd-4Ca" secondAttribute="width" constant="26" id="8oJ-k1-ZmB"/>
+                                                <constraint firstItem="Qzo-nF-9La" firstAttribute="centerY" secondItem="Bt9-Jd-4Ca" secondAttribute="centerY" id="98t-Gx-JN6"/>
+                                                <constraint firstItem="O9g-1f-Zp9" firstAttribute="centerX" secondItem="7Mp-tu-ZTH" secondAttribute="leading" constant="85" id="9RQ-5s-lDB"/>
+                                                <constraint firstItem="Bt9-Jd-4Ca" firstAttribute="top" secondItem="O9g-1f-Zp9" secondAttribute="bottom" id="EMu-Al-kRO"/>
+                                                <constraint firstItem="Qzo-nF-9La" firstAttribute="height" secondItem="Bt9-Jd-4Ca" secondAttribute="height" id="KYO-e3-kh9"/>
+                                                <constraint firstItem="O9g-1f-Zp9" firstAttribute="top" secondItem="7Mp-tu-ZTH" secondAttribute="top" id="RMm-XH-6K7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="label" destination="Bt9-Jd-4Ca" id="08b-mf-Tqu"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="gjb-WE-MeI" id="Ooj-l4-A0p"/>
                                     <outlet property="delegate" destination="gjb-WE-MeI" id="BIE-wv-E8z"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBX-oo-RM3" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="23" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-o3-zih" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="580" width="315" height="63"/>
+                                <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="ky5-NF-OG6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Поехали"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9f-8m-XIH">
+                                <rect key="frame" x="305" y="0.0" width="70" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="0gh-6v-mKF"/>
+                                    <constraint firstAttribute="width" constant="70" id="Iel-Ip-LaB"/>
+                                </constraints>
+                                <state key="normal" image="flag2"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Детали маршрута" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8v-LE-jeV" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="104" y="24" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="SKI-rk-b7W" secondAttribute="trailing" constant="29" id="7u9-xf-qXF"/>
-                            <constraint firstItem="tDb-5H-kgM" firstAttribute="top" secondItem="SKI-rk-b7W" secondAttribute="bottom" constant="112" id="pky-tQ-Kyv"/>
-                            <constraint firstItem="SKI-rk-b7W" firstAttribute="top" secondItem="iXN-3U-jOs" secondAttribute="bottom" constant="112" id="vc5-e9-p0C"/>
+                            <constraint firstAttribute="bottom" secondItem="SKI-rk-b7W" secondAttribute="bottom" constant="87" id="H9p-wp-YXQ"/>
+                            <constraint firstItem="m9f-8m-XIH" firstAttribute="top" secondItem="uhi-zI-uVc" secondAttribute="top" id="SUH-9W-XSK"/>
+                            <constraint firstAttribute="trailing" secondItem="vmT-o3-zih" secondAttribute="trailing" constant="30" id="bOh-1e-eFF"/>
+                            <constraint firstItem="tDb-5H-kgM" firstAttribute="top" secondItem="vmT-o3-zih" secondAttribute="bottom" constant="24" id="lvQ-5q-ZU1"/>
+                            <constraint firstItem="SKI-rk-b7W" firstAttribute="top" secondItem="uhi-zI-uVc" secondAttribute="top" constant="112" id="uCs-Yf-hd8"/>
+                            <constraint firstAttribute="trailing" secondItem="m9f-8m-XIH" secondAttribute="trailing" id="urd-Ls-tpp"/>
                             <constraint firstItem="SKI-rk-b7W" firstAttribute="leading" secondItem="uhi-zI-uVc" secondAttribute="leading" constant="29" id="wiR-23-oMQ"/>
+                            <constraint firstItem="vmT-o3-zih" firstAttribute="leading" secondItem="uhi-zI-uVc" secondAttribute="leading" constant="30" id="yZZ-e3-SuZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SKI-rk-b7W" id="T3B-Md-kHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARX-Qc-cMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,5 +336,6 @@
     </scenes>
     <resources>
         <image name="ArrowUp" width="12" height="7"/>
+        <image name="flag2" width="20" height="24"/>
     </resources>
 </document>

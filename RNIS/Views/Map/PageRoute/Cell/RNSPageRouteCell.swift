@@ -14,6 +14,7 @@ class RNSPageRouteCell: UICollectionViewCell {
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var labelCount: UILabel!
     @IBOutlet weak var dotsBussView: RNSDotsBussView!
+    @IBOutlet weak var blackButton: RNSBlackButton!
     
     var item: RNSRouteVariant? {
         didSet {
@@ -21,40 +22,15 @@ class RNSPageRouteCell: UICollectionViewCell {
         }
     }
     
-    func reloadData() {
-        dotsBussView.item = item
-        prepareDuration()
-        prepareTime()
-        prepareCount()
-    }
-    
-    func prepareDuration() {
-        guard let duration = item?.durationMinute else {
-            return
-        }
-        labelDurations.text = "\(duration)"
-    }
-    
-    func prepareTime() {
-        guard let endDate = item?.endDate else {
-            return
-        }
-        labelTime.text = endDate.stringHHmm
-    }
-    
-    func prepareCount() {
-        guard let count = item?.buss.count else {
-            return
-        }
-        var padeg: String
-        if count == 1 {
-            padeg = "пересадка"
-        } else if (1...4).contains(count) {
-            padeg = "пересадки"
-        } else {
-            padeg = "пересадок"
-        }
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
-        labelCount.text = "\(count) " + padeg
+        blackButton.handlerAction = { [weak self] in
+            self?.showDetail()
+        }
+    }
+    
+    func showDetail() {
+        RNSRouteDetailController.initController(item?.tableItem)?.pushAnimatedRed()
     }
 }

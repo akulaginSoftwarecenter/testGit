@@ -1,5 +1,5 @@
 //
-//  RNSRouteBusCell.swift
+//  RNSRouteTotalCell.swift
 //  RNIS
 //
 //  Created by Артем Кулагин on 29.08.17.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class RNSRouteBusCell: RNSRouteParentCell {
+class RNSRouteTotalCell: RNSRouteParentCell {
 
     @IBOutlet weak var label: UILabel!
-    
+     
     override func prepareUI() {
         label.text = item?.text1
     }

@@ -8,13 +8,12 @@
 
 import UIKit
 
-class RNSRouteStillCell: RNSBaseTableCell {
+class RNSRouteStillCell: RNSRouteParentCell {
 
     @IBOutlet weak var label: UILabel!
     
-    var item: RNSRouteTableItem? {
-        didSet {
-            label.text = item?.stillText
-        }
+    override func prepareUI() {
+        label.text = item?.stillText
     }
+
 }

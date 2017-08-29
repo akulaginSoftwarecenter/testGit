@@ -8,21 +8,29 @@
 
 import UIKit
 
-class RNSRouteDetailViewController: UIViewController {
+class RNSRouteDetailController: UIViewController {
     
     var item: RNSRouteTable?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var items: [RNSRouteTableItem] {
         return item?.items ?? []
     }
     
     static func initController(_ item: RNSRouteTable?) -> UIViewController?  {
-        let vc = RNSRouteDetailViewController.initialController
+        let vc = RNSRouteDetailController.initialController as? RNSRouteDetailController
+        vc?.item = item
         return vc
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("items count",items.count)
+    }
+    
     override class var storyboardName: String {
-        return "RNSRouteDetailViewController"
+        return "RNSRouteDetailController"
     }
     
     deinit {

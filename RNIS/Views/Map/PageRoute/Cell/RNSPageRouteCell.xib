@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9e-dn-nGP">
-                        <rect key="frame" x="306" y="19.5" width="6" height="20"/>
+                        <rect key="frame" x="306" y="20" width="6" height="20"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" red="0.95686274509803915" green="0.82352941176470584" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-JW-rev">
-                        <rect key="frame" x="141" y="124.5" width="6" height="20"/>
+                        <rect key="frame" x="141" y="125" width="6" height="20"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -92,6 +92,7 @@
             </constraints>
             <size key="customSize" width="444" height="106"/>
             <connections>
+                <outlet property="blackButton" destination="FWk-mq-ftU" id="R50-KD-X4F"/>
                 <outlet property="dotsBussView" destination="G0R-Fu-QM4" id="dQ6-mU-uM0"/>
                 <outlet property="labelCount" destination="c9e-dn-nGP" id="vq8-AF-tnR"/>
                 <outlet property="labelDurations" destination="cd0-5V-y1M" id="7O8-go-N9m"/>

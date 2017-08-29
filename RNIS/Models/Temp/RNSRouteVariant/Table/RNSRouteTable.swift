@@ -55,7 +55,7 @@ class RNSRouteTable: NSObject {
         items.last?.edge = true
         
         let item = RNSRouteTableItem()
-        item.text1 = "Итого 36 мин"
+        item.text1 = "Итого: 36 мин."
         item.type = .total
         items.append(item)
     }
