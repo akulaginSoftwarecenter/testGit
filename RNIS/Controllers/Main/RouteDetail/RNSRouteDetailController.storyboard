@@ -185,7 +185,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJT-jp-Z5B">
-                                                    <rect key="frame" x="54.5" y="0.0" width="57.5" height="37"/>
+                                                    <rect key="frame" x="56.5" y="0.0" width="57.5" height="37"/>
                                                     <color key="backgroundColor" red="0.63921568627450975" green="0.25882352941176467" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -194,7 +194,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m9-SW-JN5">
-                                                    <rect key="frame" x="67.5" y="0.0" width="31.5" height="37"/>
+                                                    <rect key="frame" x="69.5" y="0.0" width="31.5" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="kNW-lx-GpJ"/>
                                                     </constraints>
@@ -209,7 +209,7 @@
                                                 <constraint firstItem="aJT-jp-Z5B" firstAttribute="height" secondItem="9m9-SW-JN5" secondAttribute="height" id="RoP-cL-BPm"/>
                                                 <constraint firstItem="aJT-jp-Z5B" firstAttribute="width" secondItem="9m9-SW-JN5" secondAttribute="width" constant="26" id="cAO-Zz-4sD"/>
                                                 <constraint firstItem="aJT-jp-Z5B" firstAttribute="centerY" secondItem="9m9-SW-JN5" secondAttribute="centerY" id="eXo-j4-PXg"/>
-                                                <constraint firstItem="9m9-SW-JN5" firstAttribute="centerX" secondItem="cLL-dt-AJ2" secondAttribute="leading" constant="83" id="mpK-ad-MoX"/>
+                                                <constraint firstItem="9m9-SW-JN5" firstAttribute="centerX" secondItem="cLL-dt-AJ2" secondAttribute="leading" constant="85" id="mpK-ad-MoX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.82352941180000006" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

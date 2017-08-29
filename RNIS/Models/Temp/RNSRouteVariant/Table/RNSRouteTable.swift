@@ -23,12 +23,15 @@ class RNSRouteTable: NSObject {
     func prepareItems() {
         items = [RNSRouteTableItem]()
         for point in points ?? [] {
-            let stop = RNSRouteTableItem.genStop(point.busStop?.title)
+            guard let busStop = point.busStop else {
+                continue
+            }
+            let stop = RNSRouteTableItem.genStop(busStop.title)
+            items.append(stop)
             if point.isBus {
                 appendBus(point.bus?.title)
                 appendStill()
             }
-            items.append(stop)
         }
         
         prepareEdge()
