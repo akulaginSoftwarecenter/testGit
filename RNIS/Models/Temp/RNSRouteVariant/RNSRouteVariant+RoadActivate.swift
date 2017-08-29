@@ -33,7 +33,7 @@ extension RNSRouteVariant {
         roadActivate = [PGPolyline]()
         prepareRunActivate()
         prepareBusActivate()
-        //prepareBusNote()
+        prepareBusNote()
     }
     
     func prepareBusActivate() {
@@ -74,15 +74,20 @@ extension RNSRouteVariant {
     }
     
     func prepareBusNote() {
-        removeBussPins()
+        print("prepareBusNote",buss.count)
         var bussPins = [RNSPinVariantBus]()
         for bus in buss {
-            bussPins.append(RNSPinVariantBus(bus))
+            let pin = RNSPinVariantBus(bus)
+            bussPins.append(pin)
         }
         self.bussPins = bussPins
     }
     
     func removeBussPins() {
-        bussPins?.forEach { $0.remove() }
+        print("removeBussPins",bussPins?.count)
+        for pin in bussPins ?? [] {
+            print("pin",pin)
+            pin.remove()
+        }
     }
 }
