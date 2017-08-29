@@ -15,7 +15,7 @@ extension RNSRouteDetailController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
+        let item = self.item(indexPath)
         let cell: RNSRouteParentCell
         switch item.type {
         case .stop:
@@ -33,6 +33,18 @@ extension RNSRouteDetailController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.item = item
         return cell
+    }
+    
+    func item(_ indexPath: IndexPath) -> RNSRouteTableItem {
+        return items[indexPath.row]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = self.item(indexPath)
+        if item.type == .still {
+            item.openStill = !item.openStill
+            tableView.reloadData()
+        }
     }
 }
 

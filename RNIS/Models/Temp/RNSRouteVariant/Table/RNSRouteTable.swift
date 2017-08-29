@@ -13,6 +13,12 @@ class RNSRouteTable: NSObject {
     var items = [RNSRouteTableItem]()
     var points: [RNSRoutePoint]?
     
+    var itemsStill: [RNSRouteTableItem] {
+        var items = [RNSRouteTableItem]()
+        
+        return items
+    }
+    
     convenience init(_ main: RNSRouteVariant?) {
         self.init()
         
