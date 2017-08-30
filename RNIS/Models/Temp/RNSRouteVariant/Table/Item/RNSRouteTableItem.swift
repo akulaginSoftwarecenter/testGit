@@ -22,6 +22,8 @@ class RNSRouteTableItem {
     var text1: String?
     var text2: String?
     
+    var height = CGFloat(73)
+    
     var type: TypeTableItem = .stop
     
     static func genStop(_ title: String?) -> RNSRouteTableItem {
@@ -36,6 +38,7 @@ class RNSRouteTableItem {
         let bus = RNSRouteTableItem()
         bus.text1 = title
         bus.type = .bus
+        bus.height = 60
         return bus
     }
 }

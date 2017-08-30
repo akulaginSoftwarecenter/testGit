@@ -30,10 +30,12 @@ extension RNSRouteTable {
         }
         appendStop(points.valueAt(lastIndex)?.busStop?.title)
         prepareEdge()
+        appendTotal()
     }
     
     func appendStop(_ title: String?) {
         let stop = RNSRouteTableItem.genStop(title)
+        stop.height = 60
         items.append(stop)
     }
     
@@ -46,8 +48,15 @@ extension RNSRouteTable {
         let first = items.first
         first?.edge = true
         first?.text1 = "Старт"
-        items.last?.edge = true
+        first?.height = 80
         
+        
+        let last = items.last
+        last?.edge = true
+        last?.height = 41
+    }
+    
+    func appendTotal() {
         let item = RNSRouteTableItem()
         item.text1 = "Итого: 36 мин."
         item.type = .total

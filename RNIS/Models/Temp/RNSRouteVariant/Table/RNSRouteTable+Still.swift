@@ -22,11 +22,7 @@ extension RNSRouteTable {
     }
     
     func appendStill() {
-        let item = RNSRouteTableItem()
-        item.type = .still
-        item.generateItemsStill()
-        item.text1 = "Еще \(item.countStill)"
-        item.text2 = "Свернуть"
+        let item = RNSRouteTableItem.genStill()
         items.append(item)
     }
 }

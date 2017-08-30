@@ -43,4 +43,14 @@ extension RNSRouteTableItem {
         }
         return indexPaths
     }
+    
+    static func genStill() -> RNSRouteTableItem {
+        let item = RNSRouteTableItem()
+        item.type = .still
+        item.generateItemsStill()
+        item.text1 = "Еще \(item.countStill)"
+        item.text2 = "Свернуть"
+        item.height = 60
+        return item
+    }
 }

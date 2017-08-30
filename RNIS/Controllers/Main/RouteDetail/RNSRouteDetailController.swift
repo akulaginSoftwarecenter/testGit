@@ -24,10 +24,6 @@ class RNSRouteDetailController: UIViewController {
         return vc
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override class var storyboardName: String {
         return "RNSRouteDetailController"
     }
