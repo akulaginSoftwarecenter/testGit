@@ -27,8 +27,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SKI-rk-b7W">
-                                <rect key="frame" x="29" y="112" width="317" height="468"/>
+                                <rect key="frame" x="29" y="61" width="317" height="519"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="49" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStopCell" rowHeight="62" id="978-ky-cmL" customClass="RNSRouteStopCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="317" height="62"/>
@@ -121,7 +122,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="8Rj-iy-Nsk" secondAttribute="bottom" constant="-7" id="qEl-1H-4cG"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="busConstraint" destination="qEl-1H-4cG" id="Cp7-3c-adF"/>
                                             <outlet property="busLine" destination="8Rj-iy-Nsk" id="ps2-Kb-gGB"/>
@@ -138,6 +139,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swZ-EW-x5f">
+                                                    <rect key="frame" x="76" y="0.0" width="18" height="18"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="8Yj-RE-i9l"/>
+                                                        <constraint firstAttribute="width" constant="18" id="KOB-CX-VGZ"/>
+                                                    </constraints>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-cb-eS9">
                                                     <rect key="frame" x="102" y="0.0" width="108" height="37"/>
                                                     <subviews>
@@ -186,19 +195,62 @@
                                                         <constraint firstAttribute="height" constant="9" id="kor-69-uFM"/>
                                                     </constraints>
                                                 </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJy-07-IHn" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
+                                                    <rect key="frame" x="84" y="17" width="3" height="3"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="1X6-QS-u4c"/>
+                                                        <constraint firstAttribute="width" constant="3" id="Zp2-hT-55z"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIW-xZ-FQH" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
+                                                    <rect key="frame" x="84" y="23" width="3" height="3"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="0Yp-zN-I7P"/>
+                                                        <constraint firstAttribute="width" constant="3" id="zK2-kl-wI8"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNU-de-UHt" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
+                                                    <rect key="frame" x="84" y="11" width="3" height="3"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="DuQ-tx-5XQ"/>
+                                                        <constraint firstAttribute="height" constant="3" id="Oxg-ik-p1f"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49F-Rg-jKh">
+                                                    <rect key="frame" x="84" y="32" width="3" height="35"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="ry0-3H-Yrp"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="gNU-de-UHt" firstAttribute="bottom" secondItem="NJy-07-IHn" secondAttribute="bottom" constant="-6" id="FIR-f4-zxj"/>
+                                                <constraint firstItem="swZ-EW-x5f" firstAttribute="leading" secondItem="9iM-tp-1i1" secondAttribute="leading" constant="76" id="FaT-Ez-Rra"/>
+                                                <constraint firstItem="49F-Rg-jKh" firstAttribute="centerX" secondItem="NJy-07-IHn" secondAttribute="centerX" id="HsY-Ww-5ER"/>
+                                                <constraint firstItem="NJy-07-IHn" firstAttribute="centerY" secondItem="bkG-Cu-wLR" secondAttribute="centerY" id="Jgt-uZ-M2I"/>
+                                                <constraint firstItem="gNU-de-UHt" firstAttribute="centerX" secondItem="NJy-07-IHn" secondAttribute="centerX" id="Xg7-d6-coK"/>
                                                 <constraint firstItem="3A5-cb-eS9" firstAttribute="top" secondItem="9iM-tp-1i1" secondAttribute="top" id="dxg-dW-TXb"/>
+                                                <constraint firstItem="swZ-EW-x5f" firstAttribute="top" secondItem="9iM-tp-1i1" secondAttribute="top" id="dzF-AR-IdI"/>
+                                                <constraint firstItem="49F-Rg-jKh" firstAttribute="top" secondItem="9iM-tp-1i1" secondAttribute="top" constant="32" id="eJP-S0-495"/>
+                                                <constraint firstItem="rIW-xZ-FQH" firstAttribute="centerX" secondItem="NJy-07-IHn" secondAttribute="centerX" id="fBi-Qb-2gf"/>
                                                 <constraint firstItem="bkG-Cu-wLR" firstAttribute="centerY" secondItem="3A5-cb-eS9" secondAttribute="centerY" id="fXM-kg-RBB"/>
+                                                <constraint firstItem="rIW-xZ-FQH" firstAttribute="bottom" secondItem="NJy-07-IHn" secondAttribute="bottom" constant="6" id="kif-rZ-SXX"/>
                                                 <constraint firstItem="3A5-cb-eS9" firstAttribute="leading" secondItem="bkG-Cu-wLR" secondAttribute="trailing" id="l1E-zx-5Pw"/>
+                                                <constraint firstAttribute="bottom" secondItem="49F-Rg-jKh" secondAttribute="bottom" constant="-7" id="l46-OV-dQs"/>
+                                                <constraint firstItem="rIW-xZ-FQH" firstAttribute="centerX" secondItem="swZ-EW-x5f" secondAttribute="centerX" id="p1k-cT-kOy"/>
                                                 <constraint firstItem="3A5-cb-eS9" firstAttribute="leading" secondItem="9iM-tp-1i1" secondAttribute="leading" constant="102" id="sos-CT-HHA"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="imageArrow" destination="lcL-wH-1U9" id="dfU-m5-vtX"/>
                                             <outlet property="label" destination="WC9-q6-qI1" id="cH6-Xl-az4"/>
+                                            <outlet property="line" destination="49F-Rg-jKh" id="G3K-ZC-uR5"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteBusCell" id="z1T-6W-0Ii" customClass="RNSRouteBusCell" customModule="RNIS" customModuleProvider="target">
@@ -226,19 +278,30 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9m-8S-hGM">
+                                                    <rect key="frame" x="84.5" y="37" width="3" height="28"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="dpj-r0-aJF"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="9m9-SW-JN5" firstAttribute="top" secondItem="cLL-dt-AJ2" secondAttribute="top" id="4tO-4I-pCg"/>
                                                 <constraint firstItem="aJT-jp-Z5B" firstAttribute="centerX" secondItem="9m9-SW-JN5" secondAttribute="centerX" id="Bfh-SO-s6P"/>
+                                                <constraint firstItem="Y9m-8S-hGM" firstAttribute="top" secondItem="cLL-dt-AJ2" secondAttribute="top" constant="37" id="JX6-oG-aSP"/>
                                                 <constraint firstItem="aJT-jp-Z5B" firstAttribute="height" secondItem="9m9-SW-JN5" secondAttribute="height" id="RoP-cL-BPm"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y9m-8S-hGM" secondAttribute="bottom" constant="-5" id="WOk-mB-hYN"/>
+                                                <constraint firstItem="Y9m-8S-hGM" firstAttribute="centerX" secondItem="9m9-SW-JN5" secondAttribute="centerX" id="YZh-L3-Xyz"/>
                                                 <constraint firstItem="aJT-jp-Z5B" firstAttribute="width" secondItem="9m9-SW-JN5" secondAttribute="width" constant="26" id="cAO-Zz-4sD"/>
                                                 <constraint firstItem="aJT-jp-Z5B" firstAttribute="centerY" secondItem="9m9-SW-JN5" secondAttribute="centerY" id="eXo-j4-PXg"/>
                                                 <constraint firstItem="9m9-SW-JN5" firstAttribute="centerX" secondItem="cLL-dt-AJ2" secondAttribute="leading" constant="85" id="mpK-ad-MoX"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.95686274510000002" green="0.82352941180000006" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="label" destination="9m9-SW-JN5" id="CH3-Xx-3e4"/>
+                                            <outlet property="line" destination="Y9m-8S-hGM" id="4JF-yY-iWA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteTotalCell" id="uBv-NT-7hV" customClass="RNSRouteTotalCell" customModule="RNIS" customModuleProvider="target">
@@ -292,7 +355,7 @@
                                                 <constraint firstItem="O9g-1f-Zp9" firstAttribute="top" secondItem="7Mp-tu-ZTH" secondAttribute="top" id="RMm-XH-6K7"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="label" destination="Bt9-Jd-4Ca" id="08b-mf-Tqu"/>
                                         </connections>
@@ -343,7 +406,7 @@
                             <constraint firstItem="m9f-8m-XIH" firstAttribute="top" secondItem="uhi-zI-uVc" secondAttribute="top" id="SUH-9W-XSK"/>
                             <constraint firstAttribute="trailing" secondItem="vmT-o3-zih" secondAttribute="trailing" constant="30" id="bOh-1e-eFF"/>
                             <constraint firstItem="tDb-5H-kgM" firstAttribute="top" secondItem="vmT-o3-zih" secondAttribute="bottom" constant="24" id="lvQ-5q-ZU1"/>
-                            <constraint firstItem="SKI-rk-b7W" firstAttribute="top" secondItem="uhi-zI-uVc" secondAttribute="top" constant="112" id="uCs-Yf-hd8"/>
+                            <constraint firstItem="SKI-rk-b7W" firstAttribute="top" secondItem="uhi-zI-uVc" secondAttribute="top" constant="61" id="uCs-Yf-hd8"/>
                             <constraint firstAttribute="trailing" secondItem="m9f-8m-XIH" secondAttribute="trailing" id="urd-Ls-tpp"/>
                             <constraint firstItem="SKI-rk-b7W" firstAttribute="leading" secondItem="uhi-zI-uVc" secondAttribute="leading" constant="29" id="wiR-23-oMQ"/>
                             <constraint firstItem="vmT-o3-zih" firstAttribute="leading" secondItem="uhi-zI-uVc" secondAttribute="leading" constant="30" id="yZZ-e3-SuZ"/>

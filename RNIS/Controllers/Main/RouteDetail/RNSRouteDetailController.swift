@@ -24,6 +24,11 @@ class RNSRouteDetailController: UIViewController {
         return vc
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.contentInset = UIEdgeInsetsMake(47, 0, 0, 0)
+    }
+    
     override class var storyboardName: String {
         return "RNSRouteDetailController"
     }

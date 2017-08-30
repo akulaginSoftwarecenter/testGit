@@ -10,9 +10,11 @@ import UIKit
 
 class RNSRouteBusCell: RNSRouteParentCell {
 
+    @IBOutlet weak var line: UIView!
     @IBOutlet weak var label: UILabel!
     
     override func prepareUI() {
         label.text = item?.text1
+        line.roundBottomCorners()
     }
 }
