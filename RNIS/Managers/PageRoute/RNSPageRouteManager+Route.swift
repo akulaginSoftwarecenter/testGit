@@ -18,6 +18,11 @@ extension RNSPageRouteManager {
         items?.forEach{$0.removeAllRoad()}
     }
     
+    
+    static func removeNonActivRoute() {
+        routeNonActive?.forEach {$0.removeAllRoad() }
+    }
+    
     static func checkContaints(_ point: PGGeoPoint?){
         for item in items ?? [] {
             if item.containts(point) {
@@ -30,5 +35,9 @@ extension RNSPageRouteManager {
     static func prepareRoadsOff() {
         let offRoutes = self.items?.filter{ !$0.isActive }
         offRoutes?.forEach{$0.prepareRoadOff()}
+    }
+    
+    static var routeNonActive: [RNSRouteVariant]? {
+        return items?.filter{ $0 !=  self.currentItem}
     }
 }

@@ -12,6 +12,7 @@ class RNSRouteDetailController: UIViewController {
     
     var item: RNSRouteTable?
     
+    @IBOutlet weak var blackButton: RNSBlackButton!
     @IBOutlet weak var tableView: UITableView!
     
     var items: [RNSRouteTableItem] {
@@ -26,7 +27,25 @@ class RNSRouteDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        prepareUI()
+    }
+    
+    func prepareUI() {
         tableView.contentInset = UIEdgeInsetsMake(47, 0, 0, 0)
+        prepareBlackButton()
+    }
+    
+    func prepareBlackButton() {
+        blackButton.handlerAction = { [weak self] in
+            self?.showMoveMap()
+        }
+    }
+    
+    func showMoveMap() {
+        RNSPageRouteManager.removeNonActivRoute()
+        RNSMoveMapViewController.controller.pushAnimated()
     }
     
     override class var storyboardName: String {

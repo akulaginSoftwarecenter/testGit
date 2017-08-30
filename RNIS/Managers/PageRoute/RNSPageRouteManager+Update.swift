@@ -23,6 +23,11 @@ extension RNSPageRouteManager {
             return
         }
         self.currentItem = currentItem
+        
+        updateRoads()
+    }
+    
+    static func updateRoads() {
         prepareRoadsOff()
         currentItem?.prepareRoadActivate()
     }
