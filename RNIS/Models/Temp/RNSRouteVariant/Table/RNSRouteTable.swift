@@ -27,20 +27,30 @@ class RNSRouteTable: NSObject {
     }
     
     func prepareItems() {
+        guard let points = points else {
+            return
+        }
+        
         items = [RNSRouteTableItem]()
-        for point in points ?? [] {
-            guard let busStop = point.busStop else {
+        let lastIndex = points.count - 1
+        for i in 0..<lastIndex {
+            guard let point = points.valueAt(i),
+                let busStop = point.busStop else {
                 continue
             }
-            let stop = RNSRouteTableItem.genStop(busStop.title)
-            items.append(stop)
+            appendStop(busStop.title)
             if point.isBus {
                 appendBus(point.bus?.title)
                 appendStill()
             }
         }
-        
+        appendStop(points.valueAt(lastIndex)?.busStop?.title)
         prepareEdge()
+    }
+    
+    func appendStop(_ title: String?) {
+        let stop = RNSRouteTableItem.genStop(title)
+        items.append(stop)
     }
     
     func appendBus(_ title: String?) {
