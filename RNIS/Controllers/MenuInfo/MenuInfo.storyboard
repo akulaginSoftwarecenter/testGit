@@ -19,7 +19,7 @@
         <scene sceneID="5h0-dR-Ncb">
             <objects>
                 <navigationController id="i3S-S3-4X5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="HTn-7d-bwo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HTn-7d-bwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705882352937" green="0.29803921568627451" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,7 +36,7 @@
         <scene sceneID="5GO-7X-MDh">
             <objects>
                 <navigationController id="fme-Uz-9f9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Aso-tc-jYk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Aso-tc-jYk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,13 +158,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение уведомит Вас о прибытии автобуса за определенное время" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-QZ-g7f">
-                                <rect key="frame" x="16" y="20" width="343" height="40"/>
+                                <rect key="frame" x="16" y="20" width="343" height="70"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PHe-cB-xFZ">
-                                <rect key="frame" x="0.0" y="88" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="485"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -405,7 +405,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение РНИС Разработано T1Group 2017 г." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjP-HU-LZA">
-                                <rect key="frame" x="16" y="24" width="343" height="72"/>
+                                <rect key="frame" x="16" y="24" width="343" height="84"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -550,6 +550,16 @@
                                     <constraint firstAttribute="height" constant="1" id="7L8-xf-P5K"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wlm-de-3PA" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="516" width="315" height="63"/>
+                                <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="6xo-zl-sab"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Отправить"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -557,6 +567,7 @@
                             <constraint firstItem="9nC-8f-cme" firstAttribute="top" secondItem="wvb-Wl-c0Y" secondAttribute="bottom" constant="16" id="6ii-Xn-3Pk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qcm-Il-nzW" secondAttribute="trailing" constant="9" id="6kF-6F-LGD"/>
                             <constraint firstItem="PtH-Ul-znC" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="8Mg-no-fkm"/>
+                            <constraint firstAttribute="trailing" secondItem="Wlm-de-3PA" secondAttribute="trailing" constant="30" id="8bc-AG-THj"/>
                             <constraint firstItem="5Cd-g0-jpZ" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="9Bd-1s-04K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FMs-Hp-gHb" secondAttribute="trailing" constant="9" id="BD3-rD-GjM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n8d-AR-3Dq" secondAttribute="trailing" constant="9" id="Bw7-IM-nQw"/>
@@ -570,10 +581,12 @@
                             <constraint firstItem="FMs-Hp-gHb" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="ZJG-yx-JTE"/>
                             <constraint firstItem="Qcm-Il-nzW" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="aMO-R9-og0"/>
                             <constraint firstItem="9nC-8f-cme" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="be2-T5-8uu"/>
+                            <constraint firstItem="RVk-7d-0s2" firstAttribute="top" secondItem="Wlm-de-3PA" secondAttribute="bottom" constant="24" id="d4D-34-bwF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q2G-Dr-lBg" secondAttribute="trailing" constant="9" id="eq1-Bl-Fo9"/>
                             <constraint firstItem="Qcm-Il-nzW" firstAttribute="top" secondItem="PtH-Ul-znC" secondAttribute="bottom" constant="44" id="hPK-RH-9TM"/>
                             <constraint firstItem="ZrA-w9-D5f" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="ira-1P-Op6"/>
                             <constraint firstItem="Q2G-Dr-lBg" firstAttribute="top" secondItem="Qcm-Il-nzW" secondAttribute="bottom" constant="3" id="jB1-QG-gUa"/>
+                            <constraint firstItem="Wlm-de-3PA" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leading" constant="30" id="nMd-4f-m4q"/>
                             <constraint firstItem="n8d-AR-3Dq" firstAttribute="top" secondItem="MAb-3Z-sZF" secondAttribute="bottom" constant="3" id="nsR-aI-PEh"/>
                             <constraint firstItem="PtH-Ul-znC" firstAttribute="top" secondItem="5Cd-g0-jpZ" secondAttribute="bottom" id="rHJ-gv-q4n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZrA-w9-D5f" secondAttribute="trailing" constant="9" id="rrx-C5-NWx"/>
