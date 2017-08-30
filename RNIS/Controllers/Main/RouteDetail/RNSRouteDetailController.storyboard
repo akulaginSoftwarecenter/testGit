@@ -30,13 +30,20 @@
                                 <rect key="frame" x="29" y="112" width="317" height="468"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStopCell" rowHeight="62" id="978-ky-cmL" customClass="RNSRouteStopCell" customModule="RNIS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStopCell" rowHeight="62" id="978-ky-cmL" customClass="RNSRouteStopCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="317" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="978-ky-cmL" id="C0b-C6-2wL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="978-ky-cmL" id="C0b-C6-2wL">
                                             <rect key="frame" x="0.0" y="0.0" width="317" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rj-iy-Nsk">
+                                                    <rect key="frame" x="83" y="18" width="3" height="51"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="1G3-5O-8Ls"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R4F-Tt-ybx">
                                                     <rect key="frame" x="0.0" y="0.0" width="59" height="31"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,16 +89,16 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9Y-MF-nVI">
-                                                    <rect key="frame" x="102" y="5.5" width="215" height="20"/>
+                                                    <rect key="frame" x="102" y="6" width="215" height="20"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hm7-Hh-nEC" customClass="RNSDotsWhiteVertical" customModule="RNIS" customModuleProvider="target">
-                                                    <rect key="frame" x="80.5" y="31" width="9" height="31"/>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hm7-Hh-nEC" customClass="RNSDotsWhiteVertical" customModule="RNIS" customModuleProvider="target">
+                                                    <rect key="frame" x="83.5" y="31" width="3" height="31"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="9" id="cIJ-Cm-5qM"/>
+                                                        <constraint firstAttribute="width" constant="3" id="cIJ-Cm-5qM"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -100,6 +107,7 @@
                                                 <constraint firstItem="R4F-Tt-ybx" firstAttribute="top" secondItem="C0b-C6-2wL" secondAttribute="top" id="AWK-Pk-RXC"/>
                                                 <constraint firstItem="hm7-Hh-nEC" firstAttribute="top" secondItem="R4F-Tt-ybx" secondAttribute="bottom" id="Cud-Rl-GHy"/>
                                                 <constraint firstItem="S9Y-MF-nVI" firstAttribute="centerY" secondItem="jer-tX-Xip" secondAttribute="centerY" id="JaS-Yl-uvR"/>
+                                                <constraint firstItem="8Rj-iy-Nsk" firstAttribute="top" secondItem="jer-tX-Xip" secondAttribute="bottom" constant="-6" id="Kdi-Y6-uWU"/>
                                                 <constraint firstItem="GfA-9C-4aw" firstAttribute="centerY" secondItem="R4F-Tt-ybx" secondAttribute="centerY" id="NA0-YC-Jug"/>
                                                 <constraint firstItem="jer-tX-Xip" firstAttribute="leading" secondItem="GfA-9C-4aw" secondAttribute="trailing" constant="8" id="OkS-I3-kvA"/>
                                                 <constraint firstItem="GfA-9C-4aw" firstAttribute="leading" secondItem="R4F-Tt-ybx" secondAttribute="trailing" id="S2X-r5-twJ"/>
@@ -108,20 +116,25 @@
                                                 <constraint firstAttribute="trailing" secondItem="S9Y-MF-nVI" secondAttribute="trailing" id="U75-1C-jGl"/>
                                                 <constraint firstItem="hm7-Hh-nEC" firstAttribute="centerX" secondItem="EXd-mv-Mi0" secondAttribute="centerX" id="aQP-uu-8PT"/>
                                                 <constraint firstAttribute="bottom" secondItem="hm7-Hh-nEC" secondAttribute="bottom" id="b5R-kR-PED"/>
+                                                <constraint firstItem="8Rj-iy-Nsk" firstAttribute="centerX" secondItem="EXd-mv-Mi0" secondAttribute="centerX" id="hCa-GH-XuG"/>
                                                 <constraint firstItem="S9Y-MF-nVI" firstAttribute="leading" secondItem="jer-tX-Xip" secondAttribute="trailing" constant="8" id="imI-NE-XhT"/>
+                                                <constraint firstAttribute="bottom" secondItem="8Rj-iy-Nsk" secondAttribute="bottom" constant="-7" id="qEl-1H-4cG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="busConstraint" destination="qEl-1H-4cG" id="Cp7-3c-adF"/>
+                                            <outlet property="busLine" destination="8Rj-iy-Nsk" id="ps2-Kb-gGB"/>
                                             <outlet property="edgeCircle" destination="EXd-mv-Mi0" id="qha-j1-AGE"/>
+                                            <outlet property="runLine" destination="hm7-Hh-nEC" id="zha-Ut-lqD"/>
                                             <outlet property="text1Label" destination="R4F-Tt-ybx" id="Ht4-nu-cM1"/>
                                             <outlet property="text2Label" destination="S9Y-MF-nVI" id="nNJ-aB-0ab"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStillCell" id="97u-9L-0dM" customClass="RNSRouteStillCell" customModule="RNIS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteStillCell" id="97u-9L-0dM" customClass="RNSRouteStillCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="317" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97u-9L-0dM" id="9iM-tp-1i1">
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97u-9L-0dM" id="9iM-tp-1i1">
                                             <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -188,15 +201,15 @@
                                             <outlet property="label" destination="WC9-q6-qI1" id="cH6-Xl-az4"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteBusCell" id="z1T-6W-0Ii" customClass="RNSRouteBusCell" customModule="RNIS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteBusCell" id="z1T-6W-0Ii" customClass="RNSRouteBusCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150" width="317" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z1T-6W-0Ii" id="cLL-dt-AJ2">
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z1T-6W-0Ii" id="cLL-dt-AJ2">
                                             <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJT-jp-Z5B">
-                                                    <rect key="frame" x="56.5" y="0.0" width="57.5" height="37"/>
+                                                    <rect key="frame" x="57" y="0.0" width="57.5" height="37"/>
                                                     <color key="backgroundColor" red="0.63921568627450975" green="0.25882352941176467" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -205,7 +218,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m9-SW-JN5">
-                                                    <rect key="frame" x="69.5" y="0.0" width="31.5" height="37"/>
+                                                    <rect key="frame" x="70" y="0.0" width="31.5" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="kNW-lx-GpJ"/>
                                                     </constraints>
@@ -228,10 +241,10 @@
                                             <outlet property="label" destination="9m9-SW-JN5" id="CH3-Xx-3e4"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteTotalCell" id="uBv-NT-7hV" customClass="RNSRouteTotalCell" customModule="RNIS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteTotalCell" id="uBv-NT-7hV" customClass="RNSRouteTotalCell" customModule="RNIS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="210" width="317" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uBv-NT-7hV" id="7Mp-tu-ZTH">
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uBv-NT-7hV" id="7Mp-tu-ZTH">
                                             <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>

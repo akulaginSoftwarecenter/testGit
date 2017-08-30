@@ -30,7 +30,7 @@ extension RNSRouteTableItem {
         itemsStill = [RNSRouteTableItem]()
         for index in 0...Int.rand(3, limit: 15) {
             let title = RNSBusStop.randTitle(index)
-            let item = RNSRouteTableItem.genStop(title)
+            let item = RNSRouteTableItem.genStop(title, typeLine: .bus)
             itemsStill.append(item)
         }
     }

@@ -26,13 +26,17 @@ class RNSRouteTableItem {
     
     var type: TypeTableItem = .stop
     
+    var typeLine: TypePoint = .bus
+    
+    var shortLine = false
     var showLine = true
     
-    static func genStop(_ title: String?) -> RNSRouteTableItem {
+    static func genStop(_ title: String?, typeLine: TypePoint?) -> RNSRouteTableItem {
         let stop = RNSRouteTableItem()
         stop.text1 = "\(Int.rand(1, limit: 15))" + " мин"
         stop.text2 = title
         stop.type = .stop
+        stop.typeLine = typeLine ?? .bus
         return stop
     }
     
@@ -42,5 +46,9 @@ class RNSRouteTableItem {
         bus.type = .bus
         bus.height = 60
         return bus
+    }
+    
+    var isBus: Bool {
+        return typeLine == .bus
     }
 }

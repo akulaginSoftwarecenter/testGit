@@ -22,21 +22,25 @@ extension RNSRouteTable {
                 let busStop = point.busStop else {
                     continue
             }
-            appendStop(busStop.title)
+            
+            let stop = appendStop(busStop.title, typeLine: point.type)
             if point.isBus {
+                stop.shortLine = true
                 appendBus(point.bus?.title)
                 appendStill()
             }
         }
-        appendStop(points.valueAt(lastIndex)?.busStop?.title)
+        let lastItem = points.valueAt(lastIndex)
+        appendStop(lastItem?.busStop?.title, typeLine: lastItem?.type)
         prepareEdge()
         appendTotal()
     }
     
-    func appendStop(_ title: String?) {
-        let stop = RNSRouteTableItem.genStop(title)
-        stop.height = 60
-        items.append(stop)
+    @discardableResult func appendStop(_ title: String?, typeLine: TypePoint?) -> RNSRouteTableItem {
+        let item = RNSRouteTableItem.genStop(title, typeLine: typeLine)
+        item.height = 60
+        items.append(item)
+        return item
     }
     
     func appendBus(_ title: String?) {

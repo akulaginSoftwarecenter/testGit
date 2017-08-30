@@ -28,7 +28,7 @@ class RNSDotsWhiteHorizontal: BaseViewWithXIBInit {
         
         stackView.axis = axis
            
-        let count = Int(length/(sizeCircle + 3))
+        let count = Int((length - sizeCircle)/(sizeCircle + 3))
         stackView.removeArrangedSubviews()
         for _ in (0...count) {
             stackView.addArrangedSubview(circle)
