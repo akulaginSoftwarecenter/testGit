@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportInfoViewController: UIViewController {
+class ReportInfoViewController: UIViewController, KeyboardShowable {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
@@ -19,11 +19,14 @@ class ReportInfoViewController: UIViewController {
         self.navigationItem.title = "Пожаловаться"
         self.sendButton.layer.cornerRadius = 5
     }
-
-    //MARK: Others methods
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addKeyboardObservers()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeAllObservers()
+    }
 }
