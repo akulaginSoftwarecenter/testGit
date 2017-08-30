@@ -18,10 +18,13 @@ class ContactsInfoTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func updateCell(model: ContactsInfoModel) {
+    func updateCell(_ model: ContactsInfoModel?) {
+        guard let model = model else {
+            return
+        }
         self.title.text = model.contactTitle
         self.descr.text = model.contactDescr
-        if model.contactType == contactType.contactTypePhone.rawValue {
+        if model.contactType == .contactTypePhone{
             self.contactInfoImageView.image = UIImage(named: "contactPhoneImage")
         } else {
             self.contactInfoImageView.image = UIImage(named: "contactMailImage")

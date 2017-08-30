@@ -207,6 +207,9 @@
 		8375DE9F1F204FA700FCA26E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DE9D1F204FA700FCA26E /* LoaderView.swift */; };
 		8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8375DE9E1F204FA700FCA26E /* LoaderView.xib */; };
 		8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */; };
+		8375FF5E1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375FF5D1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift */; };
+		8375FF611F56BE8E00795A66 /* ContactsInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375FF601F56BE8E00795A66 /* ContactsInfoModel.swift */; };
+		8375FF631F56C20000795A66 /* ContactsInfoModel+Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375FF621F56C20000795A66 /* ContactsInfoModel+Send.swift */; };
 		837857EA1F4E6F25009DEA26 /* RNSRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837857E91F4E6F25009DEA26 /* RNSRequestError.swift */; };
 		837857EE1F4E700A009DEA26 /* RNSLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837857ED1F4E700A009DEA26 /* RNSLoginError.swift */; };
 		837857F11F4E7D5B009DEA26 /* RNSTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837857F01F4E7D5B009DEA26 /* RNSTokenRequest.swift */; };
@@ -612,6 +615,9 @@
 		8375DE9D1F204FA700FCA26E /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		8375DE9E1F204FA700FCA26E /* LoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		8375DEA61F205FFD00FCA26E /* RNSMapViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+MapView.swift"; path = "Controllers/Map/RNSMapViewController+MapView.swift"; sourceTree = "<group>"; };
+		8375FF5D1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContactsInfoViewController+TableView.swift"; sourceTree = "<group>"; };
+		8375FF601F56BE8E00795A66 /* ContactsInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsInfoModel.swift; path = Models/HelpersModel/ContactsInfoModel/ContactsInfoModel.swift; sourceTree = "<group>"; };
+		8375FF621F56C20000795A66 /* ContactsInfoModel+Send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ContactsInfoModel+Send.swift"; path = "Models/HelpersModel/ContactsInfoModel/ContactsInfoModel+Send.swift"; sourceTree = "<group>"; };
 		837857E91F4E6F25009DEA26 /* RNSRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRequestError.swift; path = Models/Temp/Error/ReauestError/RNSRequestError.swift; sourceTree = "<group>"; };
 		837857ED1F4E700A009DEA26 /* RNSLoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLoginError.swift; path = Models/Temp/Error/LoginError/RNSLoginError.swift; sourceTree = "<group>"; };
 		837857F01F4E7D5B009DEA26 /* RNSTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTokenRequest.swift; path = POST/Parent/RNSTokenRequest.swift; sourceTree = "<group>"; };
@@ -1345,6 +1351,7 @@
 		8344E1CC1F397E31004A6F0C /* HelpersModels */ = {
 			isa = PBXGroup;
 			children = (
+				8375FF5F1F56BE6E00795A66 /* ContactsInfoModel */,
 				831E42691F46B7280016C7D3 /* StopsModel */,
 				8344E1CD1F397EF3004A6F0C /* RangeScroll */,
 			);
@@ -2143,6 +2150,15 @@
 			path = Library/Helpers/LoaderView;
 			sourceTree = "<group>";
 		};
+		8375FF5F1F56BE6E00795A66 /* ContactsInfoModel */ = {
+			isa = PBXGroup;
+			children = (
+				8375FF601F56BE8E00795A66 /* ContactsInfoModel.swift */,
+				8375FF621F56C20000795A66 /* ContactsInfoModel+Send.swift */,
+			);
+			name = ContactsInfoModel;
+			sourceTree = "<group>";
+		};
 		837857E71F4E6E45009DEA26 /* RequestError */ = {
 			isa = PBXGroup;
 			children = (
@@ -2667,6 +2683,7 @@
 			children = (
 				83AA6A3A1F5668C000B2139C /* cells */,
 				83AA6A3E1F5668C000B2139C /* ContactsInfoViewController.swift */,
+				8375FF5D1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift */,
 			);
 			name = ContactsInfoViewController;
 			path = Controllers/MenuInfo/ContactsInfoViewController;
@@ -3427,6 +3444,7 @@
 				836221B41F43F8A1005B49DA /* RNSAddressViewController+TextField.swift in Sources */,
 				8356BE5A1F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift in Sources */,
 				8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
+				8375FF611F56BE8E00795A66 /* ContactsInfoModel.swift in Sources */,
 				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				838EA03E1F53DC3600E9BF20 /* RNSTriangle+Draw.swift in Sources */,
 				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
@@ -3607,6 +3625,7 @@
 				838CE9351F3DA9FE00C10FBA /* RNSBusInfoViewController.swift in Sources */,
 				83AA6A6A1F5668C000B2139C /* QRScannerInfoViewController.swift in Sources */,
 				830E68B31F552714008EFA02 /* RNSPinVariantEnd.swift in Sources */,
+				8375FF5E1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift in Sources */,
 				838EA02C1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift in Sources */,
 				83E183991F440DC3005912C5 /* RNSSearchHistory.swift in Sources */,
 				838707E61F30257F0094B273 /* RNSPhoneViewController.swift in Sources */,
@@ -3636,6 +3655,7 @@
 				831E42661F46A2600016C7D3 /* RNSConductorView.swift in Sources */,
 				836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */,
 				8344E1CF1F397F1B004A6F0C /* RNSRangeScroll.swift in Sources */,
+				8375FF631F56C20000795A66 /* ContactsInfoModel+Send.swift in Sources */,
 				837ABF021F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */,
 				835718A01F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */,
 				836989421F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */,

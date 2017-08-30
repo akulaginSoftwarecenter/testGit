@@ -12,27 +12,25 @@ class LostThingsInfoViewController: UIViewController, UITableViewDataSource, UIT
 
     @IBOutlet weak var tableView: UITableView!
     
-    var testArray: NSMutableArray!
+    var testArray = [ContactsInfoModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "Забытые вещи"
         
-        self.testArray = NSMutableArray()
-        
         for i in 0...5 {
             let model = ContactsInfoModel()
             if i % 2 == 1 {
-                model.contactType = contactType.contactTypePhone.rawValue
+                model.contactType = .contactTypePhone
                 model.contactTitle = "Номер службны находок (Выборгский район)"
                 model.contactDescr = "+7 (931) 305-17-68"
             } else {
-                model.contactType = contactType.contactTypeEmail.rawValue
+                model.contactType = .contactTypeEmail
                 model.contactTitle = "Почта службы находок (Выборгский район)"
                 model.contactDescr = "trsaltn@yandex.ru"
             }
-            self.testArray.add(model)
+            self.testArray.append(model)
         }
         
         self.tableView.tableFooterView = UIView();
@@ -57,15 +55,18 @@ class LostThingsInfoViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsInfoTableViewCell", for: indexPath) as! ContactsInfoTableViewCell;
-        let model = self.testArray[indexPath.row] as! ContactsInfoModel
-        cell.updateCell(model: model)
+        cell.updateCell(item(indexPath))
         return cell
     }
     
     //MARK: UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        
+        item(indexPath)?.callOrSend()
+    }
+    
+    func item(_ indexPath: IndexPath) -> ContactsInfoModel? {
+        return testArray[indexPath.row]
     }
     
     //MARK: Others methods

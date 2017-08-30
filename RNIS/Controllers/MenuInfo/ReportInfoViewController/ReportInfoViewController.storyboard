@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UUp-8j-zqa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Пожаловаться-->
+        <scene sceneID="l47-69-dqC">
+            <objects>
+                <viewController id="UUp-8j-zqa" customClass="ReportInfoViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s8O-nN-6eX"/>
+                        <viewControllerLayoutGuide type="bottom" id="rsa-xS-68q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pZR-9x-k00">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите текст обращения:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVE-O2-zFf">
+                                <rect key="frame" x="25" y="28" width="325" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="ohE-Z8-XF0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-xU-DDn">
+                                <rect key="frame" x="25" y="47" width="325" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="uCF-Zf-ucL"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljD-tS-J3S" userLabel="separator">
+                                <rect key="frame" x="25" y="83" width="325" height="1"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.25882352939999997" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="dwz-jJ-5eG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czt-sa-zdf">
+                                <rect key="frame" x="25" y="584" width="325" height="63"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="2Ba-FF-h4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <state key="normal" title="Отправить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="czt-sa-zdf" secondAttribute="trailing" constant="9" id="DCk-oG-K7S"/>
+                            <constraint firstItem="dYl-xU-DDn" firstAttribute="top" secondItem="kVE-O2-zFf" secondAttribute="bottom" constant="3" id="DUM-Zp-qYV"/>
+                            <constraint firstItem="kVE-O2-zFf" firstAttribute="top" secondItem="s8O-nN-6eX" secondAttribute="bottom" constant="8" id="I0L-4e-8XE"/>
+                            <constraint firstItem="rsa-xS-68q" firstAttribute="top" secondItem="czt-sa-zdf" secondAttribute="bottom" constant="20" id="QfO-fF-CEV"/>
+                            <constraint firstItem="czt-sa-zdf" firstAttribute="leading" secondItem="pZR-9x-k00" secondAttribute="leadingMargin" constant="9" id="Vpy-vg-N99"/>
+                            <constraint firstItem="ljD-tS-J3S" firstAttribute="top" secondItem="dYl-xU-DDn" secondAttribute="bottom" constant="3" id="Zlo-Pl-hLM"/>
+                            <constraint firstItem="ljD-tS-J3S" firstAttribute="leading" secondItem="pZR-9x-k00" secondAttribute="leadingMargin" constant="9" id="hcG-CX-f1E"/>
+                            <constraint firstItem="dYl-xU-DDn" firstAttribute="leading" secondItem="pZR-9x-k00" secondAttribute="leadingMargin" constant="9" id="j37-S2-fdT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ljD-tS-J3S" secondAttribute="trailing" constant="9" id="nE0-Gg-wck"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dYl-xU-DDn" secondAttribute="trailing" constant="9" id="oOo-JI-MXE"/>
+                            <constraint firstItem="kVE-O2-zFf" firstAttribute="leading" secondItem="pZR-9x-k00" secondAttribute="leadingMargin" constant="9" id="q4m-og-yaa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kVE-O2-zFf" secondAttribute="trailing" constant="9" id="us9-Ku-akV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Пожаловаться" id="eum-sM-yEN"/>
+                    <connections>
+                        <outlet property="sendButton" destination="czt-sa-zdf" id="pQY-ue-y4k"/>
+                        <outlet property="textView" destination="dYl-xU-DDn" id="XHn-QX-Fzj"/>
+                        <outlet property="textViewHeightConstraint" destination="uCF-Zf-ucL" id="6Z2-Ln-X4A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ssw-dd-e9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781.5999999999999" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+</document>
