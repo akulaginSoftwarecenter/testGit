@@ -15,7 +15,7 @@ class RNSRouteDetailController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var items: [RNSRouteTableItem] {
-        return item?.items ?? []
+        return item?.itemsStill ?? []
     }
     
     static func initController(_ item: RNSRouteTable?) -> UIViewController?  {
@@ -26,7 +26,6 @@ class RNSRouteDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("items count",items.count)
     }
     
     override class var storyboardName: String {

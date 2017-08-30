@@ -25,4 +25,8 @@ extension UIViewController {
     func pushAnimatedRed() {
         STRouter.pushAnimatedRed(self)
     }
+    
+    func pushAnimated() {
+        STRouter.pushAnimated(self)
+    }
 }

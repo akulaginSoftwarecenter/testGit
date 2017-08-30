@@ -11,9 +11,11 @@ import UIKit
 class RNSRouteStillCell: RNSRouteParentCell {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageArrow: UIImageView!
     
     override func prepareUI() {
         label.text = item?.stillText
+        imageArrow.image = (item?.openStill ?? false) ? #imageLiteral(resourceName: "ArrowUp") : #imageLiteral(resourceName: "ArrowDown")
     }
 
 }

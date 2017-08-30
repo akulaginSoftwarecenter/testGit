@@ -26,4 +26,9 @@ extension RNSLoginViewController {
     @IBAction func actionProfile(_ sender: Any) {
         RNSProfileViewController.initialController.pushAnimatedRedScroll()
     }
+    
+    @IBAction func infoAction(_ sender: Any) {
+        STRouter.showInfo()
+        //MenuViewController.ini
+    }
 }

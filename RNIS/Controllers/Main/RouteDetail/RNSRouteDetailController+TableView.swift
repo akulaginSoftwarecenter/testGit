@@ -41,10 +41,23 @@ extension RNSRouteDetailController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = self.item(indexPath)
-        if item.type == .still {
+        if item.isStill {
             item.openStill = !item.openStill
-            tableView.reloadData()
+            animateInsertStill(indexPath)
         }
+    }
+    
+    func animateInsertStill(_ indexPath: IndexPath) {
+        let item = self.item(indexPath)
+        let indexPaths = item.indexPatchs(indexPath)
+        tableView.beginUpdates()
+        tableView.reloadRows(at: [indexPath], with: .fade)
+        if item.openStill {
+            tableView.insertRows(at: indexPaths, with: .bottom)
+        } else {
+            tableView.deleteRows(at: indexPaths, with: .top)
+        }
+        tableView.endUpdates()
     }
 }
 

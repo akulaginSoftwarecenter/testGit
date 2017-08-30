@@ -13,6 +13,7 @@ enum TypeTableItem {
 }
 
 class RNSRouteTableItem {
+    
     var edge: Bool = false
     
     var openStill: Bool = false
@@ -22,15 +23,6 @@ class RNSRouteTableItem {
     var text2: String?
     
     var type: TypeTableItem = .stop
-    
-    func generateItemsStill() {
-        itemsStill = [RNSRouteTableItem]()
-        for index in 0...RNSBusStop.randCount {
-            let title = RNSBusStop.randTitle(index)
-            let item = RNSRouteTableItem.genBus(title)
-            itemsStill.append(item)
-        }
-    }
     
     static func genStop(_ title: String?) -> RNSRouteTableItem {
         let stop = RNSRouteTableItem()
@@ -45,14 +37,5 @@ class RNSRouteTableItem {
         bus.text1 = title
         bus.type = .bus
         return bus
-    }
-    
-    
-    var stillText: String? {
-        if openStill {
-            return text2
-        } else {
-            return text1
-        }
     }
 }

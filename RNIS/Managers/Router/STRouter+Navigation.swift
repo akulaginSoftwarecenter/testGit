@@ -10,6 +10,15 @@ import UIKit
 
 extension STRouter {
     
+    static func showInfo() {
+        prepareRoot(MainInfoViewController.initialController)
+    }
+    
+    static func revertLogin() {
+        prepareRoot(RNSLoginViewController.initialController)
+        showLogin()
+    }
+    
     static func showMap() {
         RNSMapViewController.controller.pushAnimated {
             showAlertRegistrationIfNeed()

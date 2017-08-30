@@ -87,6 +87,18 @@
                                     <action selector="actionProfile:" destination="ieL-F5-6Fm" eventType="touchUpInside" id="B6y-B7-SRa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMx-c4-Qfb">
+                                <rect key="frame" x="0.0" y="62" width="89" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="8J5-xO-ZXU"/>
+                                    <constraint firstAttribute="width" constant="89" id="psA-v5-QmE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Инфо"/>
+                                <connections>
+                                    <action selector="infoAction:" destination="ieL-F5-6Fm" eventType="touchUpInside" id="efy-LX-QJp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,6 +107,7 @@
                             <constraint firstAttribute="trailing" secondItem="pz7-OO-cHU" secondAttribute="trailing" constant="30" id="DeA-4g-5bZ"/>
                             <constraint firstItem="gm8-Dj-mD7" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" id="J1e-es-wbJ"/>
                             <constraint firstItem="LIe-zO-afW" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="JfM-ud-qYu"/>
+                            <constraint firstItem="dMx-c4-Qfb" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" id="PJu-48-wf9"/>
                             <constraint firstAttribute="trailing" secondItem="RMr-V4-Wpw" secondAttribute="trailing" constant="30" id="PMO-xh-puW"/>
                             <constraint firstItem="LIe-zO-afW" firstAttribute="bottom" secondItem="RMr-V4-Wpw" secondAttribute="bottom" constant="85" id="RpE-Ru-yTB"/>
                             <constraint firstItem="gm8-Dj-mD7" firstAttribute="top" secondItem="UvM-4L-QkF" secondAttribute="bottom" id="ULl-6n-qPh"/>
@@ -102,6 +115,7 @@
                             <constraint firstAttribute="trailing" secondItem="LIe-zO-afW" secondAttribute="trailing" constant="30" id="XmT-pr-dcD"/>
                             <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="yKu-xF-If7" secondAttribute="bottom" constant="3" id="a51-C8-BrW"/>
                             <constraint firstItem="RMr-V4-Wpw" firstAttribute="centerY" secondItem="sNt-JM-pvk" secondAttribute="centerY" constant="-30" id="ay2-gV-wGQ"/>
+                            <constraint firstItem="dMx-c4-Qfb" firstAttribute="top" secondItem="gm8-Dj-mD7" secondAttribute="bottom" id="bfF-FH-LY2"/>
                             <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="ReY-FI-gw3" secondAttribute="bottom" constant="3" id="nZp-ia-beg"/>
                             <constraint firstAttribute="trailing" secondItem="yKu-xF-If7" secondAttribute="trailing" constant="30" id="xaX-g2-Sho"/>
                             <constraint firstItem="pz7-OO-cHU" firstAttribute="top" secondItem="LIe-zO-afW" secondAttribute="bottom" constant="20" id="yKc-ca-g2J"/>
@@ -122,14 +136,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5MD-eh-Z6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18.399999999999999" y="139.880059970015"/>
+            <point key="canvasLocation" x="-370" y="140"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="fSW-02-Hx0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5BO-cQ-P5L" customClass="BaseNavigationController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="rWi-Cg-Olq">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="rWi-Cg-Olq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -137,7 +151,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asx-Bo-gqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-788" y="140"/>
+            <point key="canvasLocation" x="-1162" y="140"/>
         </scene>
     </scenes>
 </document>

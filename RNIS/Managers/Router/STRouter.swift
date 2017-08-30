@@ -16,6 +16,10 @@ class STRouter: NSObject {
         return UIApplication.shared.delegate!.window!!.rootViewController as! BaseNavigationController?
     }
     
+    static func prepareRoot(_ vc: UIViewController) {
+        UIApplication.shared.delegate!.window!!.rootViewController = vc
+    }
+    
     static var rootView: UIView? {
         return rootViewController?.view
     }
