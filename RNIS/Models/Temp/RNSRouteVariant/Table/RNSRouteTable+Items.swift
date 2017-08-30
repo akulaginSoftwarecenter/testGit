@@ -54,6 +54,7 @@ extension RNSRouteTable {
         let last = items.last
         last?.edge = true
         last?.height = 33
+        last?.showLine = false
     }
     
     func appendTotal() {

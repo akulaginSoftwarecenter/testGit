@@ -39,7 +39,7 @@
                     <rect key="frame" x="48" y="0.0" width="309" height="100"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-og-z1Y" customClass="RNSDotsWhite" customModule="RNIS" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-og-z1Y" customClass="RNSDotsWhiteHorizontal" customModule="RNIS" customModuleProvider="target">
                     <rect key="frame" x="18" y="47" width="27" height="6"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
