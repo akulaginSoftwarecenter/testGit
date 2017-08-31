@@ -33,4 +33,9 @@ class RNSPageRouteManager: NSObject {
         items.append(RNSRouteVariant.genTwo)
         self.items = items
     }
+    
+    static func prepareFirstNavel(_ distance: CLLocationDistance?) {
+        currentItem?.navels.first?.distance = distance
+        currentItem?.updateNodes()
+    }
 }

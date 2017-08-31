@@ -36,13 +36,31 @@ class RNSNoteRoute: UIView {
 
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        self.addSubview(label)
+        self.backView.addSubview(label)
         label.textAlignment = .center
-        
+        label.backgroundColor = .clear
         return label
     }()
     
+    lazy var distanceLabel: UILabel = {
+        let label = UILabel()
+        self.backView.addSubview(label)
+        label.textAlignment = .right
+        label.backgroundColor = .clear
+        label.font = .cffazm12
+        label.isHidden = true
+        label.textColor = .AFAFAF
+        return label
+    }()
+    
+    lazy var backView: UIView = {
+        let view = UIView()
+        self.addSubview(view)
+        return view
+    }()
+    
     var type: TypeNote = .left
+    var distance: CLLocationDistance?
     
     let arrow = CGFloat(9)
     let textHeight = CGFloat(30)
@@ -56,11 +74,11 @@ class RNSNoteRoute: UIView {
         prepareFrame()
     }
     
-    convenience init(durationMinute: Int?, type: TypeNote) {
+    convenience init(durationMinute: Int?, distance: CLLocationDistance? = nil, type: TypeNote) {
         self.init(frame: CGRect.zero)
-        
         titleLabel.text = "\(durationMinute ?? 0) мин."
         self.type = type
+        self.distance = distance
         prepareMinute()
         prepareFrame()
     }

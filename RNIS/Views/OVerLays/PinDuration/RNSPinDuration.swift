@@ -19,7 +19,7 @@ class RNSPinDuration: RNSPinParent {
             let point = item.point else {
                 return
         }
-        let view = RNSNoteRoute(durationMinute: item.durationMinute, type: .up)
+        let view = RNSNoteRoute(durationMinute: item.durationMinute, distance: item.distance, type: .up)
         setBitmap(view.asImage, xOffset: 0, yOffset: 1.0, isPlain: false, sizeInMeters: 50)
         preparePoint(point)
         prepareHandlers()

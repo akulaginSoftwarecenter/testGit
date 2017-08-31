@@ -17,6 +17,12 @@ class RNSMoveMapViewController: UIViewController {
         
         prepareMapView()
         
+        prepareStub()
+    }
+    
+    func prepareStub() {
+        RNSPageRouteManager.prepareFirstNavel(523)
+        
         item?.points.first?.doneMove = true
         viewVariant.item = item
     }
@@ -28,10 +34,10 @@ class RNSMoveMapViewController: UIViewController {
     override class var storyboardName: String {
         return "RNSMapParentController"
     }
-    
+     
     deinit {
         RNSPageRouteManager.updateRoads()
-        print("RNSMoveMapViewController deinit")
+        RNSPageRouteManager.prepareFirstNavel(nil)
     }
     
     @IBAction func actionDots(_ sender: Any) {

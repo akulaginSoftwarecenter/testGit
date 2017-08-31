@@ -10,59 +10,34 @@ import Foundation
 
 extension RNSNoteRoute {
     
-    var widthText: CGFloat {
-        guard let font = titleLabel.font,
-            let text = titleLabel.text else {
-                return 0
-        }
-        return text.width(font) + 22
-    }
-    
-    var xT: CGFloat {
-        return type == .left ? arrow : 0
-    }
-    
-    var yT: CGFloat {
-        return type == .up ? arrow : 0
-    }
-    
-    
-    var widthType: CGFloat {
-        var widthText = self.widthText
-        if type == .left || type == .right {
-            widthText += arrow
-        }
-        return widthText
-    }
-    
-    
-    var heightType: CGFloat {
-        var height = CGFloat(30)
-        if type == .up || type == .down {
-            height += arrow
-        }
-        return height
-    }
-    
-    var height: CGFloat {
-        return frame.size.height
-    }
-    
-    var width: CGFloat {
-        return frame.size.width
-    }
-    
     func prepareFrame() {
         frame = CGRect(x: 0, y: 0, width: widthType, height: heightType)
+        prepareBackView()
         prepareFrameTitle()
         prepareTriangle()
+        prepareDistanceLabel()
+    }
+    
+    func prepareBackView() {
+        backView.frame = CGRect(x: xT, y: yT, width: widthText, height: backViewHeight)
+        backView.layer.cornerRadius = 5
+        backView.clipsToBounds = true
+        backView.layer.masksToBounds = true
     }
     
     func prepareFrameTitle() {
-        titleLabel.frame = CGRect(x: xT, y: yT, width: widthText, height: textHeight)
-        titleLabel.layer.cornerRadius = 5
-        titleLabel.clipsToBounds = true
-        titleLabel.layer.masksToBounds = true
+        let rect = CGRect(x: 4, y: 5, width: widthText - 8, height: 18)
+        titleLabel.frame = isHaveDistance ? rect : backView.bounds
+        titleLabel.textAlignment = isHaveDistance ? .right : .center
+    }
+    
+    func prepareDistanceLabel() {
+        guard let distance = self.distance else {
+            return
+        }
+        distanceLabel.frame = CGRect(x: 4, y: 23, width: widthText - 8, height: 12)
+        distanceLabel.text = "\(Int(distance)) м."
+        distanceLabel.isHidden = false
     }
    
     func prepareTriangle() {

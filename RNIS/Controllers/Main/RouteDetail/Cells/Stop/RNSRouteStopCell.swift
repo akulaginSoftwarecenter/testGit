@@ -51,7 +51,8 @@ class RNSRouteStopCell: RNSRouteParentCell {
         
         runLine.colorCircle = color
         busLine.backgroundColor = color
-        circleView.backgroundColor = color
+        circleView.backgroundColor = doneMove ? .A3423C : .FFB9AF
+        
         text1Label.isHidden = doneMove
         arrowLabel.isHidden = doneMove
     }
