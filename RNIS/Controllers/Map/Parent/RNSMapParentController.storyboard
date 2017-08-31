@@ -92,28 +92,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQT-9R-h05">
-                                <rect key="frame" x="8" y="336.5" width="56" height="56"/>
+                                <rect key="frame" x="8" y="336.5" width="55" height="55"/>
                                 <state key="normal" image="compas"/>
                                 <connections>
                                     <action selector="compasAction:" destination="WmS-dc-ejs" eventType="touchUpInside" id="S28-yd-dCX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5X-SA-iTE">
-                                <rect key="frame" x="311" y="277.5" width="56" height="58"/>
+                                <rect key="frame" x="312" y="280.5" width="55" height="55"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
                                     <action selector="plusAction:" destination="WmS-dc-ejs" eventType="touchUpInside" id="9HQ-bY-ToW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLT-DT-BPk">
-                                <rect key="frame" x="311" y="338.5" width="56" height="58"/>
+                                <rect key="frame" x="312" y="339.5" width="55" height="55"/>
                                 <state key="normal" image="minus"/>
                                 <connections>
                                     <action selector="minusAction:" destination="WmS-dc-ejs" eventType="touchUpInside" id="QZS-El-Pk8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-am-Q4N">
-                                <rect key="frame" x="311" y="595" width="56" height="56"/>
+                                <rect key="frame" x="311.5" y="595" width="56" height="56"/>
                                 <state key="normal" image="mestopologenie"/>
                                 <connections>
                                     <action selector="userLocationAction:" destination="WmS-dc-ejs" eventType="touchUpInside" id="G3H-Ea-DCX"/>
@@ -472,12 +472,12 @@
     <resources>
         <image name="MyAddress" width="23" height="32"/>
         <image name="Poisk" width="56" height="56"/>
-        <image name="compas" width="56" height="56"/>
+        <image name="compas" width="55" height="55"/>
         <image name="ic_prev_route" width="50" height="50"/>
         <image name="menu" width="56" height="56"/>
         <image name="mestopologenie" width="56" height="56"/>
-        <image name="minus" width="56" height="58"/>
-        <image name="plus" width="56" height="58"/>
+        <image name="minus" width="55" height="55"/>
+        <image name="plus" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="X9n-Pb-O8k"/>

@@ -21,17 +21,12 @@ class RNSLightButton: BaseViewWithXIBInit {
         
         updateStateLightButton()
         button.touchUpInside(handler: changeTraffic)
-        /*
-        button.touchUpInside{
-            self..changeTraffic()
-        }
- */
     }
     
     func loadTraffic(minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int32?) {
-        loaderView.showInView(self)
+        //loaderView.showInView(self)
         RNSGetTraffic(minCoord: minCoord, maxCoord: maxCoord, zoom: zoom) {[weak self] (reply, error, handleError) in
-            self?.loaderView.remove()
+            //self?.loaderView.remove()
             self?.prepareAverageTraffic(reply as? Int)
         }
     }
