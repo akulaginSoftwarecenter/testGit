@@ -18,6 +18,8 @@ class RNSRoutePoint: Hashable {
     var bus: RNSBusTemp?
     var busStop: RNSBusStop?
     
+    var doneMove = false
+    
     init(_ lat: Double?, lon: Double?, type: TypePoint? = nil, bus: RNSBusTemp? = nil, busStop: RNSBusStop? = nil) {
         if let lat = lat, let lon = lon {
             self.point = PGGeoPoint(latitude: lat, longitude: lon)

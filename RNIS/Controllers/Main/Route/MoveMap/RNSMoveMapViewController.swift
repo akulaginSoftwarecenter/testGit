@@ -16,8 +16,9 @@ class RNSMoveMapViewController: UIViewController {
         super.viewDidLoad()
         
         prepareMapView()
-
-        viewVariant.item = RNSPageRouteManager.currentItem
+        
+        item?.points.first?.doneMove = true
+        viewVariant.item = item
     }
     
     var item: RNSRouteVariant? {

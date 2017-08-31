@@ -15,5 +15,8 @@ class RNSCircleHoleWhite: RNSCircleHole {
         mainCircle.backgroundColor = .FFB9AF
         smallCircle.backgroundColor = .white
     }
-
+    
+    func prepareDone() {
+        mainCircle.backgroundColor = .A3423C
+    }
 }

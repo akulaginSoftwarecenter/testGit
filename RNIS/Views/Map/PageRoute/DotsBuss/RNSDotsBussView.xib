@@ -11,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSDotsBussView" customModule="RNIS" customModuleProvider="target">
             <connections>
                 <outlet property="constraintSmallDots" destination="7zv-Sa-0oH" id="PtL-7W-bV8"/>
+                <outlet property="dotsWhite" destination="l7d-og-z1Y" id="WWh-SL-Bt3"/>
+                <outlet property="firstCircle" destination="EI4-qj-bAA" id="eFi-SU-ZbB"/>
+                <outlet property="lastCircle" destination="sZP-sG-cNa" id="7fe-v3-02k"/>
                 <outlet property="stackView" destination="6Oc-6w-2Py" id="uS6-Xp-jxq"/>
             </connections>
         </placeholder>

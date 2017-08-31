@@ -31,6 +31,8 @@ class RNSRouteTableItem {
     var shortLine = false
     var showLine = true
     
+    var doneMove = false
+    
     static func genStop(_ title: String?, typeLine: TypePoint?) -> RNSRouteTableItem {
         let stop = RNSRouteTableItem()
         stop.text1 = "\(Int.rand(1, limit: 15))" + " мин"

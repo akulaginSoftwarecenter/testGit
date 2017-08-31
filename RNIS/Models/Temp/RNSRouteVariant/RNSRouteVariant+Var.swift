@@ -11,8 +11,20 @@ import Foundation
 extension RNSRouteVariant {
     
     var buss: [RNSBusTemp] {
-        let buss = points.flatMap{$0.bus}
-        return buss.unique
+        var buss = [RNSBusTemp]()
+        for point in points {
+            if point.doneMove {
+                buss.last?.doneMove = true
+            }
+            guard let bus = point.bus else {
+                continue
+            }
+            if !buss.contains(bus) {
+                buss.append(bus)
+
+            }
+        }
+        return buss
     }
     
     var titleWidthBuss: CGFloat {

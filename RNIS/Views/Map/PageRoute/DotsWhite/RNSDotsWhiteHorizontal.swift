@@ -23,6 +23,22 @@ class RNSDotsWhiteHorizontal: BaseViewWithXIBInit {
         return .horizontal
     }
     
+    var colorCircle = UIColor.white {
+        didSet{
+            prepareColor()
+        }
+    }
+    
+    func prepareDone() {
+        colorCircle = .A3423C
+    }
+    
+    func prepareColor() {
+        for view in stackView.arrangedSubviews {
+            view.backgroundColor = colorCircle
+        }
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -55,7 +71,7 @@ class RNSDotsWhiteHorizontal: BaseViewWithXIBInit {
         circle.snp.makeConstraints { (make) in
             make.size.equalTo(sizeCircle)
         }
-        circle.backgroundColor = .white
+        circle.backgroundColor = colorCircle
         return circle
     }
     
