@@ -10,7 +10,8 @@ import UIKit
 
 class RNSDutyViewController: UIViewController {
 
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var viewLabelDate: UIView!
+    @IBOutlet weak var rightDateConstraint: NSLayoutConstraint!
     @IBOutlet weak var fromField: UITextField!
     @IBOutlet weak var inField: UITextField!
     @IBOutlet weak var searchButton: RNSBlackButton!
@@ -26,21 +27,9 @@ class RNSDutyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareDatePicker()
         prepareSearchButton()
     }
-    
-    func prepareSearchButton() {
-        searchButton.handlerAction = {
-            RNSPageRouteManager.generateItems()
-            RNSPageRouteController.controller.pushAnimated()
-        }
-    }
-    
-    func prepareDatePicker() {
-        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
-    }
-    
+
     override class var storyboardName: String {
         return "RNSDutyViewController"
     }

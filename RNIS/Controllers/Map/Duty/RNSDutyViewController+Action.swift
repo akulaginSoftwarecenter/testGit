@@ -29,6 +29,19 @@ extension RNSDutyViewController {
         }
     }
     
+    @IBAction func dateAction(_ sender: Any) {
+        
+        viewLabelDate.isHidden = true
+        let vc = RNSDateSelectViewController.initialController as? RNSDateSelectViewController
+        vc?.handlerDate = { [weak self] date in
+            self?.prepareDate(date)
+        }
+        vc?.handlerDismiss = { [weak self] in
+            self?.viewLabelDate.isHidden = false
+        }
+        STRouter.present(vc)
+    }
+    
     func showAddress(_ type: TypeAddress, complete: AliasStringBlock?) {
         RNSAddressViewController.initController(type, complete: complete)?.pushAnimated()
     }

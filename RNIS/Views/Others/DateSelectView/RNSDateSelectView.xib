@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSDateSelectView" customModule="RNIS" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="KDB-7B-2Nc" id="BhJ-Pj-TV1"/>
+                <outlet property="datePicker" destination="ovi-qd-Mjo" id="73M-N5-Ug7"/>
+                <outlet property="oKButton" destination="fPR-gf-mC1" id="JIb-y2-d6K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="453"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите дату и время" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAk-V3-fCa">
+                    <rect key="frame" x="0.0" y="17" width="384" height="24"/>
+                    <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDB-7B-2Nc" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                    <rect key="frame" x="22" y="362" width="159" height="63"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="aOC-gn-CME"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Отмена"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPR-gf-mC1" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                    <rect key="frame" x="203" y="362" width="159" height="63"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="9nX-0x-EKu"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="zOf-V4-VPs"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Принять"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-qd-Mjo">
+                    <rect key="frame" x="0.0" y="64" width="384" height="275"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <date key="date" timeIntervalSinceReferenceDate="524461948.67947">
+                        <!--2017-08-15 03:52:28 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="0.94509803921568625" green="0.39215686274509803" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="KDB-7B-2Nc" secondAttribute="trailing" constant="11" id="13V-8x-neo"/>
+                <constraint firstItem="fPR-gf-mC1" firstAttribute="leading" secondItem="KDB-7B-2Nc" secondAttribute="trailing" constant="22" id="8ui-6Y-d4N"/>
+                <constraint firstAttribute="trailing" secondItem="tAk-V3-fCa" secondAttribute="trailing" id="HO0-QY-jRg"/>
+                <constraint firstItem="ovi-qd-Mjo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JMF-bj-9uq"/>
+                <constraint firstItem="tAk-V3-fCa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nk7-JZ-ctK"/>
+                <constraint firstItem="KDB-7B-2Nc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="22" id="P2m-L5-AvI"/>
+                <constraint firstAttribute="bottom" secondItem="fPR-gf-mC1" secondAttribute="bottom" constant="28" id="PoI-uj-kW3"/>
+                <constraint firstItem="fPR-gf-mC1" firstAttribute="top" secondItem="ovi-qd-Mjo" secondAttribute="bottom" constant="23" id="SFE-uY-bbO"/>
+                <constraint firstAttribute="trailing" secondItem="fPR-gf-mC1" secondAttribute="trailing" constant="22" id="WrS-Ip-4FV"/>
+                <constraint firstAttribute="bottom" secondItem="KDB-7B-2Nc" secondAttribute="bottom" constant="28" id="bLK-4j-39O"/>
+                <constraint firstItem="tAk-V3-fCa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="niL-Bs-Nb8"/>
+                <constraint firstItem="ovi-qd-Mjo" firstAttribute="top" secondItem="tAk-V3-fCa" secondAttribute="bottom" constant="23" id="pg0-0o-unw"/>
+                <constraint firstAttribute="trailing" secondItem="ovi-qd-Mjo" secondAttribute="trailing" id="rVk-uG-E83"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="31" y="-54.5"/>
+        </view>
+    </objects>
+</document>
