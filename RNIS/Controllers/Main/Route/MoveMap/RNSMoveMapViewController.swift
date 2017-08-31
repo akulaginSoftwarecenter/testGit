@@ -10,14 +10,14 @@ import UIKit
 
 class RNSMoveMapViewController: UIViewController {
     
-    var item: RNSRouteVariant?
-    
     @IBOutlet weak var viewVariant: RNSDotsBussView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareMapView()
+
+        viewVariant.item = RNSPageRouteManager.currentItem
     }
     
     override class var storyboardName: String {
