@@ -13,7 +13,7 @@ class RNSPinAddress: RNSPinParent {
     convenience init(_ point: PGGeoPoint) {
         self.init()
         
-        setBitmap(#imageLiteral(resourceName: "PinBuild"), xOffset: 0, yOffset: -1.0, isPlain: false, sizeInMeters: 50)
+        setBitmap(#imageLiteral(resourceName: "PinEnd"), xOffset: 0, yOffset: -1.0, isPlain: false, sizeInMeters: 50)
         preparePoint(point)
     }
 }
