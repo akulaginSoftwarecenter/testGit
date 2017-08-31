@@ -29,7 +29,11 @@ extension DateFormatter {
     static var DDMMyyyy_HHmm: DateFormatter{
         return format(textDDMMyyyy + " " + textHHmm)
     }
-    
+    /*
+    static var DDMMyyyy_HHmm: DateFormatter{
+        return format("d MMMM" + " / " + textHHmm)
+    }
+    */
     static func format(_ format: String) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = format
