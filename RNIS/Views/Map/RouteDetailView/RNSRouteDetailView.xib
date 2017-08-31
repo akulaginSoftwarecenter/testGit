@@ -25,6 +25,10 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="registerCellIdentifier2" value="RNSRouteBusCell"/>
                 <userDefinedRuntimeAttribute type="string" keyPath="registerCellIdentifier3" value="RNSRouteTotalCell"/>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="fZI-tQ-wfr"/>
+                <outlet property="delegate" destination="-1" id="lNG-cT-n0K"/>
+            </connections>
         </tableView>
     </objects>
 </document>
