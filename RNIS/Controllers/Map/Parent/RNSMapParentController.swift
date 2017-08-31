@@ -21,12 +21,23 @@ class RNSMapParentController: UIViewController {
     var handlerOnMapLongTouchEvent: AliasPointBlock?
     var handlerOnOverlay: ((PGOverlay,PGOverlayItem) -> ())?
     
+    var bottomTargetConstant: CGFloat?
+     @IBOutlet weak var bottomTarget: NSLayoutConstraint!
+    
     @IBOutlet weak var lightButton: RNSLightButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         RNSMapManager.startLocation()
+        prepareTargetIcon()
+    }
+    
+    func prepareTargetIcon() {
+        guard let constant = bottomTargetConstant else {
+            return
+        }
+        bottomTarget.constant = constant
     }
     
     override func viewWillAppear(_ animated: Bool) {

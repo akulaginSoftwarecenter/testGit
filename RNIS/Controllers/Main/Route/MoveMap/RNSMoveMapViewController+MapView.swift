@@ -10,6 +10,11 @@ import Foundation
 
 extension RNSMoveMapViewController {
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let containerController = segue.destination as? RNSMapParentController
+        containerController?.bottomTargetConstant = 75
+    }
+    
     var mapView: MapView {
         return RNSMapManager.mapView
     }

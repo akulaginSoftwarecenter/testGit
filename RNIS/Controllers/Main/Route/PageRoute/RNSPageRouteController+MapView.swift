@@ -21,6 +21,7 @@ extension RNSPageRouteController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         containerController = segue.destination as? RNSMapParentController
+        containerController?.bottomTargetConstant = 180
         prepareEnterViewController()
     }
     
