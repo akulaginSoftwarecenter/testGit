@@ -90,12 +90,12 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9Y-MF-nVI">
-                                                    <rect key="frame" x="102" y="6" width="215" height="20"/>
+                                                    <rect key="frame" x="102" y="5.5" width="215" height="20"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hm7-Hh-nEC" customClass="RNSDotsWhiteVertical" customModule="RNIS" customModuleProvider="target">
+                                                <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hm7-Hh-nEC" customClass="RNSDotsWhiteVertical" customModule="RNIS" customModuleProvider="target">
                                                     <rect key="frame" x="83.5" y="31" width="3" height="31"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -124,8 +124,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="arrowLabel" destination="GfA-9C-4aw" id="uom-Eh-DqP"/>
                                             <outlet property="busConstraint" destination="qEl-1H-4cG" id="Cp7-3c-adF"/>
                                             <outlet property="busLine" destination="8Rj-iy-Nsk" id="ps2-Kb-gGB"/>
+                                            <outlet property="circleView" destination="jer-tX-Xip" id="jFM-vg-cw4"/>
                                             <outlet property="edgeCircle" destination="EXd-mv-Mi0" id="qha-j1-AGE"/>
                                             <outlet property="runLine" destination="hm7-Hh-nEC" id="zha-Ut-lqD"/>
                                             <outlet property="text1Label" destination="R4F-Tt-ybx" id="Ht4-nu-cM1"/>
@@ -261,7 +263,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJT-jp-Z5B">
-                                                    <rect key="frame" x="57" y="0.0" width="57.5" height="37"/>
+                                                    <rect key="frame" x="56.5" y="0.0" width="57.5" height="37"/>
                                                     <color key="backgroundColor" red="0.63921568627450975" green="0.25882352941176467" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -270,7 +272,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m9-SW-JN5">
-                                                    <rect key="frame" x="70" y="0.0" width="31.5" height="37"/>
+                                                    <rect key="frame" x="69.5" y="0.0" width="31.5" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="kNW-lx-GpJ"/>
                                                     </constraints>

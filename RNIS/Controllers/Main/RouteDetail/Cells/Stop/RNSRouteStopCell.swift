@@ -10,6 +10,7 @@ import UIKit
 
 class RNSRouteStopCell: RNSRouteParentCell {
 
+    @IBOutlet weak var arrowLabel: RNSTriangle!
     @IBOutlet weak var text1Label: UILabel!
     @IBOutlet weak var text2Label: UILabel!
     @IBOutlet weak var edgeCircle: RNSCircle!
@@ -18,12 +19,14 @@ class RNSRouteStopCell: RNSRouteParentCell {
     @IBOutlet weak var busConstraint: NSLayoutConstraint!
     @IBOutlet weak var runLine: RNSDotsWhiteVertical!
     
+    @IBOutlet weak var circleView: RNSCircle!
     override func prepareUI() {
         text1Label.text = item?.text1
         text2Label.text = item?.text2
         edgeCircle.isHidden = !(item?.edge ?? true)
         
         prepareTypeRoute()
+        prepareDone()
     }
     
     func prepareTypeRoute() {
@@ -40,5 +43,16 @@ class RNSRouteStopCell: RNSRouteParentCell {
     func hiddenLine() {
         busLine.isHidden = true
         runLine.isHidden = true
+    }
+    
+    func prepareDone() {
+        let doneMove = item?.doneMove ?? false
+        let color: UIColor = doneMove ? .A3423C : .white
+        
+        runLine.colorCircle = color
+        busLine.backgroundColor = color
+        circleView.backgroundColor = color
+        text1Label.isHidden = doneMove
+        arrowLabel.isHidden = doneMove
     }
 }

@@ -14,4 +14,12 @@ class RNSCircle: UIView {
         super.layoutSubviews()
         prepareCircle()
     }
+    
+    func prepareDone() {
+        backgroundColor = .A3423C
+    }
+    
+    func prepareUnDone() {
+        backgroundColor = .white
+    }
 }
