@@ -41,6 +41,6 @@ class RNSMoveMapViewController: UIViewController {
     }
     
     @IBAction func actionDots(_ sender: Any) {
-        //STRouter.showRouteDetail(item?.tableItem, hiddenMoveButton: true)
+        RNSMoveDetailController.initController(item?.tableItem)?.pushAnimatedRed()
     }
 }
