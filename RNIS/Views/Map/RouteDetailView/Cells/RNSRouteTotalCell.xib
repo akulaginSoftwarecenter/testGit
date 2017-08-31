@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RNSRouteTotalCell" id="U4e-UZ-IwL" customClass="RNSRouteTotalCell" customModule="RNIS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U4e-UZ-IwL" id="pXw-iU-Prg">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvX-SW-gbp" customClass="RNSTriangle" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="79.5" y="0.0" width="11" height="11"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.35294117650000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="2aV-o6-WTp"/>
+                            <constraint firstAttribute="width" constant="11" id="jQU-io-Rk3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="typeNote">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fH-OZ-RDz">
+                        <rect key="frame" x="59.5" y="11.5" width="125.5" height="37"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.35294117650000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого: 36 мин." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMY-JM-5n8">
+                        <rect key="frame" x="72.5" y="11" width="99.5" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="zuR-ch-oIN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="rMY-JM-5n8" firstAttribute="leading" secondItem="pXw-iU-Prg" secondAttribute="leading" constant="72" id="0Vb-FR-hev"/>
+                    <constraint firstItem="5fH-OZ-RDz" firstAttribute="width" secondItem="rMY-JM-5n8" secondAttribute="width" constant="26" id="BMC-Vv-CF1"/>
+                    <constraint firstItem="rMY-JM-5n8" firstAttribute="top" secondItem="xvX-SW-gbp" secondAttribute="bottom" id="Hgo-cf-bXr"/>
+                    <constraint firstItem="5fH-OZ-RDz" firstAttribute="height" secondItem="rMY-JM-5n8" secondAttribute="height" id="Qr2-si-9L5"/>
+                    <constraint firstItem="5fH-OZ-RDz" firstAttribute="centerX" secondItem="rMY-JM-5n8" secondAttribute="centerX" id="VbV-Cl-G3U"/>
+                    <constraint firstItem="xvX-SW-gbp" firstAttribute="centerX" secondItem="pXw-iU-Prg" secondAttribute="leading" constant="85" id="csI-Se-8Oh"/>
+                    <constraint firstItem="5fH-OZ-RDz" firstAttribute="centerY" secondItem="rMY-JM-5n8" secondAttribute="centerY" id="k5i-bO-LcK"/>
+                    <constraint firstItem="xvX-SW-gbp" firstAttribute="top" secondItem="pXw-iU-Prg" secondAttribute="top" id="xIh-SP-q04"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="label" destination="rMY-JM-5n8" id="UBW-d7-cNi"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -18,4 +18,31 @@ class RNSRegisterTableView: UITableView {
             }
         }
     }
+    
+    @IBInspectable var registerCellIdentifier1: String {
+        get { return "" }
+        set {
+            if !newValue.isEmpty {
+                self.registerCell(newValue)
+            }
+        }
+    }
+    
+    @IBInspectable var registerCellIdentifier2: String {
+        get { return "" }
+        set {
+            if !newValue.isEmpty {
+                self.registerCell(newValue)
+            }
+        }
+    }
+    
+    @IBInspectable var registerCellIdentifier3: String {
+        get { return "" }
+        set {
+            if !newValue.isEmpty {
+                self.registerCell(newValue)
+            }
+        }
+    }
 }
