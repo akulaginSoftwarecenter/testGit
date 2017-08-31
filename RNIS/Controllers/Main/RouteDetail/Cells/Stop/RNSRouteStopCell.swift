@@ -46,6 +46,10 @@ class RNSRouteStopCell: RNSRouteParentCell {
     }
     
     func prepareDone() {
+        guard showMove else {
+            return
+        }
+        
         let doneMove = item?.doneMove ?? false
         let color: UIColor = doneMove ? .A3423C : .white
         

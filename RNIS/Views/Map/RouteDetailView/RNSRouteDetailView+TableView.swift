@@ -31,7 +31,7 @@ extension RNSRouteDetailView: UITableViewDelegate, UITableViewDataSource {
             cell =  tableView.dequeueReusableCell(for: indexPath) as RNSRouteTotalCell
             break
         }
-        cell.item = item
+        cell.prepareItem(item, showMove: showMove)
         return cell
     }
     

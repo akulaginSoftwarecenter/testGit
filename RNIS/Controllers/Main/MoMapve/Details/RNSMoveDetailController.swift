@@ -23,6 +23,7 @@ class RNSMoveDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        detailView.showMove = true
         detailView.item = item
     }
     

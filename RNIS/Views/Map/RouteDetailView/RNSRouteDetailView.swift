@@ -18,6 +18,8 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
     
     @IBOutlet var tableView: RNSRegisterTableView!
     
+    var showMove = false
+    
     var items: [RNSRouteTableItem] {
         return item?.itemsStill ?? []
     }

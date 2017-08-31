@@ -10,6 +10,8 @@ import UIKit
 
 class RNSRouteParentCell: RNSBaseTableCell {
 
+    var showMove = false
+    
     var item: RNSRouteTableItem? {
         didSet {
             prepareUI()
@@ -18,5 +20,10 @@ class RNSRouteParentCell: RNSBaseTableCell {
     
     func prepareUI() {
         
+    }
+    
+    func prepareItem(_ item: RNSRouteTableItem?, showMove: Bool = false) {
+        self.showMove = showMove
+        self.item = item
     }
 }
