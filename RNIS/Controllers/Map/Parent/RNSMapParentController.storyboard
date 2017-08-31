@@ -427,36 +427,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-aK-rcY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KW4-Wx-OW8">
                                 <rect key="frame" x="0.0" y="593" width="375" height="74"/>
-                                <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFW-15-5bk" customClass="RNSDotsBussView" customModule="RNIS" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="0.0" width="339" height="74"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.39215686274509803" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="KFW-15-5bk" firstAttribute="top" secondItem="9Mj-aK-rcY" secondAttribute="top" id="Wui-g7-vFG"/>
-                                    <constraint firstAttribute="trailing" secondItem="KFW-15-5bk" secondAttribute="trailing" constant="18" id="hSV-AW-uZ0"/>
-                                    <constraint firstAttribute="height" constant="74" id="lSk-Zp-WpB"/>
-                                    <constraint firstAttribute="bottom" secondItem="KFW-15-5bk" secondAttribute="bottom" id="vNt-ND-siV"/>
-                                    <constraint firstItem="KFW-15-5bk" firstAttribute="leading" secondItem="9Mj-aK-rcY" secondAttribute="leading" constant="18" id="zRi-Hh-Ru2"/>
+                                    <constraint firstAttribute="height" constant="74" id="SHz-uu-UcA"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="actionDots:" destination="b0S-Li-6J8" eventType="touchUpInside" id="MOL-h8-qf9"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFW-15-5bk" customClass="RNSDotsBussView" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="18" y="593" width="339" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o5L-c8-3KN" firstAttribute="top" secondItem="Vme-aL-EXW" secondAttribute="bottom" id="0ji-Ok-Vbg"/>
-                            <constraint firstItem="o5L-c8-3KN" firstAttribute="top" secondItem="9Mj-aK-rcY" secondAttribute="bottom" id="2m5-bA-hiC"/>
-                            <constraint firstAttribute="trailing" secondItem="9Mj-aK-rcY" secondAttribute="trailing" id="6bs-ES-la7"/>
                             <constraint firstAttribute="trailing" secondItem="Vme-aL-EXW" secondAttribute="trailing" id="D8l-ci-uEg"/>
                             <constraint firstItem="2q1-O1-bJY" firstAttribute="leading" secondItem="fPu-Dp-LFb" secondAttribute="leading" id="ISs-nE-n2u"/>
+                            <constraint firstAttribute="bottom" secondItem="KW4-Wx-OW8" secondAttribute="bottom" id="JaR-5b-cIw"/>
+                            <constraint firstItem="KFW-15-5bk" firstAttribute="leading" secondItem="KW4-Wx-OW8" secondAttribute="leading" constant="18" id="Onb-2m-5IC"/>
                             <constraint firstItem="Vme-aL-EXW" firstAttribute="top" secondItem="fPu-Dp-LFb" secondAttribute="top" id="Pd0-n4-Qez"/>
+                            <constraint firstAttribute="trailing" secondItem="KW4-Wx-OW8" secondAttribute="trailing" id="R3X-Q0-BVa"/>
+                            <constraint firstItem="KW4-Wx-OW8" firstAttribute="leading" secondItem="fPu-Dp-LFb" secondAttribute="leading" id="SQx-aK-KQQ"/>
                             <constraint firstAttribute="trailing" secondItem="2q1-O1-bJY" secondAttribute="trailing" id="T6q-ec-I8l"/>
                             <constraint firstItem="Vme-aL-EXW" firstAttribute="leading" secondItem="fPu-Dp-LFb" secondAttribute="leading" id="bQ9-5a-gHb"/>
-                            <constraint firstItem="9Mj-aK-rcY" firstAttribute="leading" secondItem="fPu-Dp-LFb" secondAttribute="leading" id="jgv-IT-yDc"/>
+                            <constraint firstItem="KFW-15-5bk" firstAttribute="trailing" secondItem="KW4-Wx-OW8" secondAttribute="trailing" constant="-18" id="eDh-Ga-BTz"/>
+                            <constraint firstItem="KFW-15-5bk" firstAttribute="top" secondItem="KW4-Wx-OW8" secondAttribute="top" id="ifP-cO-XG1"/>
                             <constraint firstItem="2q1-O1-bJY" firstAttribute="top" secondItem="fPu-Dp-LFb" secondAttribute="top" id="mDS-au-wux"/>
+                            <constraint firstItem="KFW-15-5bk" firstAttribute="bottom" secondItem="KW4-Wx-OW8" secondAttribute="bottom" id="oXe-qH-qBm"/>
                         </constraints>
                     </view>
                     <connections>

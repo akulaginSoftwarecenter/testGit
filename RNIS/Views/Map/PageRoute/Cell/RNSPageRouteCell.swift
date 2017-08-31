@@ -31,6 +31,6 @@ class RNSPageRouteCell: UICollectionViewCell {
     }
     
     func showDetail() {
-        RNSRouteDetailController.initController(item?.tableItem)?.pushAnimatedRed()
+        STRouter.showRouteDetail(item?.tableItem)
     }
 }

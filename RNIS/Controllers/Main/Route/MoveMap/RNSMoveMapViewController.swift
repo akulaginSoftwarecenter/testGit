@@ -20,6 +20,10 @@ class RNSMoveMapViewController: UIViewController {
         viewVariant.item = RNSPageRouteManager.currentItem
     }
     
+    var item: RNSRouteVariant? {
+        return RNSPageRouteManager.currentItem
+    }
+    
     override class var storyboardName: String {
         return "RNSMapParentController"
     }
@@ -27,5 +31,9 @@ class RNSMoveMapViewController: UIViewController {
     deinit {
         RNSPageRouteManager.updateRoads()
         print("RNSMoveMapViewController deinit")
+    }
+    
+    @IBAction func actionDots(_ sender: Any) {
+        STRouter.showRouteDetail(item?.tableItem, hiddenMoveButton: true)
     }
 }

@@ -66,4 +66,8 @@ extension STRouter {
         let message = "Зарегистрируйтесь, чтобы открыть все возможности приложения"
         STRouter.showAlertBtns(message, leftTitle: "Регистрация", rightTitle: "Позже", handlerOk: STRouter.showRegistration)
     }
+    
+    static func showRouteDetail(_ item: RNSRouteTable?, hiddenMoveButton: Bool = false) {
+        RNSRouteDetailController.initController(item, hiddenMoveButton: hiddenMoveButton)?.pushAnimatedRed()
+    }
 }

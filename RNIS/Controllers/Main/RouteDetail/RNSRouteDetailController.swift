@@ -12,6 +12,10 @@ class RNSRouteDetailController: UIViewController {
     
     var item: RNSRouteTable?
     
+    @IBOutlet weak var tableBottomConstraint: NSLayoutConstraint!
+    
+    var hiddenMoveButton = false
+    
     @IBOutlet weak var blackButton: RNSBlackButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,15 +23,15 @@ class RNSRouteDetailController: UIViewController {
         return item?.itemsStill ?? []
     }
     
-    static func initController(_ item: RNSRouteTable?) -> UIViewController?  {
+    static func initController(_ item: RNSRouteTable?, hiddenMoveButton: Bool = false) -> UIViewController?  {
         let vc = RNSRouteDetailController.initialController as? RNSRouteDetailController
         vc?.item = item
+        vc?.hiddenMoveButton = hiddenMoveButton
         return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         prepareUI()
     }
@@ -38,6 +42,10 @@ class RNSRouteDetailController: UIViewController {
     }
     
     func prepareBlackButton() {
+        
+        blackButton.isHidden = hiddenMoveButton
+        tableBottomConstraint.constant = hiddenMoveButton ? 0 : 87
+        
         blackButton.handlerAction = { [weak self] in
             self?.showMoveMap()
         }
