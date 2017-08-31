@@ -17,7 +17,7 @@ class RNSCoordinateModel: Object {
     var handlerRemove: EmptyBlock?
     
     override static func ignoredProperties() -> [String] {
-        return ["handlerRemove"]
+        return ["handlerRemove","point","isHaveCoordinate"]
     }
     
     var point: PGGeoPoint {
