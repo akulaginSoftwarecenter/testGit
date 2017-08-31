@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -143,6 +144,16 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXI-ST-daw">
+                                        <rect key="frame" x="318" y="0.0" width="57" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XXI-ST-daw" secondAttribute="height" multiplier="1:1" id="vUN-uU-6Wv"/>
+                                        </constraints>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="crossAction:" destination="Yv4-9c-fRf" eventType="touchUpInside" id="8NU-qN-nJF"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Выберите дату и время  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-Yf-EiR">
                                         <rect key="frame" x="140" y="18" width="220" height="20"/>
                                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
@@ -159,6 +170,9 @@
                                     <constraint firstItem="V5n-JW-M2Q" firstAttribute="centerY" secondItem="osd-rG-1gv" secondAttribute="centerY" id="Kp9-8U-jjg"/>
                                     <constraint firstAttribute="height" constant="57" id="NFG-fK-NCA"/>
                                     <constraint firstAttribute="trailing" secondItem="BXU-Yf-EiR" secondAttribute="trailing" constant="15" id="WU5-ne-ahg"/>
+                                    <constraint firstAttribute="bottom" secondItem="XXI-ST-daw" secondAttribute="bottom" id="Zcy-St-DMR"/>
+                                    <constraint firstItem="XXI-ST-daw" firstAttribute="top" secondItem="osd-rG-1gv" secondAttribute="top" id="fGL-YN-aFc"/>
+                                    <constraint firstAttribute="trailing" secondItem="XXI-ST-daw" secondAttribute="trailing" id="ffB-qM-sxg"/>
                                     <constraint firstItem="BXU-Yf-EiR" firstAttribute="leading" secondItem="V5n-JW-M2Q" secondAttribute="trailing" constant="15" id="gZx-QZ-g8u"/>
                                     <constraint firstItem="qh0-TW-0GE" firstAttribute="leading" secondItem="osd-rG-1gv" secondAttribute="leading" id="jfz-38-SDY"/>
                                     <constraint firstItem="BXU-Yf-EiR" firstAttribute="centerY" secondItem="qh0-TW-0GE" secondAttribute="centerY" id="vqh-qm-98e"/>
@@ -205,6 +219,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="crossButton" destination="XXI-ST-daw" id="KlK-ub-iTg"/>
+                        <outlet property="dateLabel" destination="BXU-Yf-EiR" id="4l5-Rt-0EW"/>
                         <outlet property="fromField" destination="V7f-CQ-V2A" id="BQj-r8-ytK"/>
                         <outlet property="inField" destination="INT-VM-7oX" id="6j1-f4-lp5"/>
                         <outlet property="rightDateConstraint" destination="WU5-ne-ahg" id="bap-cq-cjn"/>
@@ -219,6 +235,7 @@
     </scenes>
     <resources>
         <image name="Arrow" width="15" height="41"/>
+        <image name="cross" width="12" height="12"/>
         <image name="exchange" width="23" height="23"/>
     </resources>
 </document>

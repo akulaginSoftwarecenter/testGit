@@ -10,11 +10,15 @@ import UIKit
 
 class RNSDutyViewController: UIViewController {
 
+    @IBOutlet weak var crossButton: UIButton!
     @IBOutlet weak var viewLabelDate: UIView!
     @IBOutlet weak var rightDateConstraint: NSLayoutConstraint!
     @IBOutlet weak var fromField: UITextField!
     @IBOutlet weak var inField: UITextField!
     @IBOutlet weak var searchButton: RNSBlackButton!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    var currentDate: Date?
     
     var fromText: String? {
         return fromField.text

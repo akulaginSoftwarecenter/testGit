@@ -18,6 +18,20 @@ extension RNSDutyViewController {
     }
     
     func prepareDate(_ date: Date?) {
-        print("prepareDate", date)
+        currentDate = date
+        updateDate()
     }
+    
+    func updateDate() {
+        dateLabel.text = isHaveDate ? currentDate?.stringDDMMyyyy_HHmm : "Выберите дату и время"
+        rightDateConstraint.constant = isHaveDate ? 44 : 15
+        crossButton.isHidden = !isHaveDate
+    }
+    
+    var isHaveDate: Bool {
+        return currentDate != nil
+    }
+    
+    
+
 }

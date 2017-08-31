@@ -42,6 +42,10 @@ extension RNSDutyViewController {
         STRouter.present(vc)
     }
     
+    @IBAction func crossAction(_ sender: Any) {
+        prepareDate(nil)
+    }
+    
     func showAddress(_ type: TypeAddress, complete: AliasStringBlock?) {
         RNSAddressViewController.initController(type, complete: complete)?.pushAnimated()
     }
