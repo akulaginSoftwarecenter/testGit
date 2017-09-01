@@ -9,10 +9,6 @@
 import Foundation
 
 extension RNSBusDetailController {
-
-    var halfScreen: CGFloat {
-        return UIScreen.halfHeight
-    }
     
     func prepareViews(_ rect: CGRect) {
         let y = rect.origin.y
@@ -21,29 +17,16 @@ extension RNSBusDetailController {
     }
     
     func prepareAlpha(_ top: CGFloat) {
-        let alpha = self.alpha(top)
+        let alpha = Utils.alpha(top, startBottomOffset: startBottomOffset)
         viewTotal.alpha = alpha
         viewWay.alpha = 1 - alpha
         bottomView.alpha = viewWay.alpha
     }
     
     func prepareEnabled(_ top: CGFloat) {
-        let enabled = top > halfScreen
+        let enabled = top > UIScreen.halfHeight
         viewTotal.isUserInteractionEnabled = enabled
         viewWay.isUserInteractionEnabled = !enabled
         bottomView.isUserInteractionEnabled = viewWay.isUserInteractionEnabled
-    }
-    
-    func alpha(_ top: CGFloat) -> CGFloat {
-        let delta = halfScreen - (startBottomOffset ?? 0)
-        let offset = top - halfScreen
-        var alpha = offset/delta
-        if alpha < 0 {
-            alpha = 0
-        }
-        if alpha > 1 {
-            alpha = 1
-        }
-        return alpha
     }
 }

@@ -42,5 +42,18 @@ class Utils {
     static func stringFromSwiftClass(_ swiftClass: AnyClass) -> String {
         return NSStringFromClass(swiftClass).components(separatedBy: ".").last!
     }
-
+    
+    static func alpha(_ top: CGFloat, startBottomOffset: CGFloat?) -> CGFloat {
+        let halfScreen = UIScreen.halfHeight
+        let delta = halfScreen - (startBottomOffset ?? 0)
+        let offset = top - halfScreen
+        var alpha = offset/delta
+        if alpha < 0 {
+            alpha = 0
+        }
+        if alpha > 1 {
+            alpha = 1
+        }
+        return alpha
+    }
 }

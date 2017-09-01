@@ -16,7 +16,10 @@ class RNSBusStopDetailController: UIViewController {
     static func initController(_ item: RNSBusStop?) -> UIViewController? {
         let vc = RNSBusStopDetailController.initialController as? RNSBusStopDetailController
         vc?.item = item
-        return  STRouter.scrollShowContainer(vc, topTitle: item?.title)
+        let container = STRouter.scrollShowContainer(vc, topTitle: item?.title)
+        container?.handlerRect = vc?.prepareViews(_:)
+        vc?.startBottomOffset = container?.startBottomOffset
+        return  container
     }
     
     var item: RNSBusStop?
@@ -24,6 +27,8 @@ class RNSBusStopDetailController: UIViewController {
     lazy var loaderView:LoaderView = LoaderView()
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleStop: UILabel!
+    var startBottomOffset: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +63,7 @@ class RNSBusStopDetailController: UIViewController {
     }
     
     func showLoader() {
-        let rect = CGRect(x: 0, y: 64, width: UIScreen.width, height: UIScreen.height - 184)
+        let rect = CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height - 184)
         loaderView.showInView(view, frame: rect)
     }
     

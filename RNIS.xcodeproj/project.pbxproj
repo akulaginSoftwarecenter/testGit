@@ -46,6 +46,7 @@
 		831E42681F46A2860016C7D3 /* RNSConductorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E42671F46A2860016C7D3 /* RNSConductorView.xib */; };
 		831E426B1F46B7CD0016C7D3 /* RNSTableStopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E426A1F46B7CD0016C7D3 /* RNSTableStopsModel.swift */; };
 		831FDD8E1F5960C6004D69FB /* RNSBusStop+Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FDD8D1F5960C6004D69FB /* RNSBusStop+Generate.swift */; };
+		831FDD901F59683C004D69FB /* RNSBusStopDetailController+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FDD8F1F59683C004D69FB /* RNSBusStopDetailController+Observe.swift */; };
 		83204B271F5908500033ACA1 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B261F5908500033ACA1 /* MenuItem.swift */; };
 		83204B2A1F5911850033ACA1 /* RNSMenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B291F5911850033ACA1 /* RNSMenuBarItem.swift */; };
 		83204B2C1F5917270033ACA1 /* RNSLeftMenuController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */; };
@@ -507,6 +508,7 @@
 		831E42671F46A2860016C7D3 /* RNSConductorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSConductorView.xib; path = Views/Map/BusDetail/ConductorView/RNSConductorView.xib; sourceTree = "<group>"; };
 		831E426A1F46B7CD0016C7D3 /* RNSTableStopsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTableStopsModel.swift; path = Models/HelpersModel/StopsModel/RNSTableStopsModel.swift; sourceTree = "<group>"; };
 		831FDD8D1F5960C6004D69FB /* RNSBusStop+Generate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusStop+Generate.swift"; path = "Models/DataBase/BusStop/RNSBusStop+Generate.swift"; sourceTree = "<group>"; };
+		831FDD8F1F59683C004D69FB /* RNSBusStopDetailController+Observe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusStopDetailController+Observe.swift"; path = "Controllers/Map/BusStopDetail/RNSBusStopDetailController+Observe.swift"; sourceTree = "<group>"; };
 		83204B261F5908500033ACA1 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = Models/HelpersModel/MenuItem/MenuItem.swift; sourceTree = "<group>"; };
 		83204B291F5911850033ACA1 /* RNSMenuBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMenuBarItem.swift; path = Views/MenuBarItem/RNSMenuBarItem.swift; sourceTree = "<group>"; };
 		83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSLeftMenuController+Action.swift"; sourceTree = "<group>"; };
@@ -1930,6 +1932,7 @@
 				836EEEFB1F3BF7C5007631D9 /* Cell */,
 				836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */,
 				836EEF081F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift */,
+				831FDD8F1F59683C004D69FB /* RNSBusStopDetailController+Observe.swift */,
 				836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */,
 			);
 			name = BusStopDetail;
@@ -3785,6 +3788,7 @@
 				836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
 				832E4B721F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				838EA0351F53D41000E9BF20 /* RNSNoteRoute.swift in Sources */,
+				831FDD901F59683C004D69FB /* RNSBusStopDetailController+Observe.swift in Sources */,
 				8310D44F1F3C6DD7000CCD0A /* RNSScrollShowContainer+Scroll.swift in Sources */,
 				8357188D1F21A9CA00DE5E25 /* UserDefaults+Auth.swift in Sources */,
 				836989121F317190003E4D73 /* RNSParoleContainerController.swift in Sources */,
