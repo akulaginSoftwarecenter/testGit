@@ -32,6 +32,18 @@ class RNSBusStopDetailController: UIViewController {
         loadItems()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        prepareCurrent(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        prepareCurrent(false)
+    }
+    
     func loadItems() {
         showLoader()
         RNSDataManager.generateBusList { [weak self] (items) in
@@ -60,5 +72,9 @@ class RNSBusStopDetailController: UIViewController {
     
     deinit {
         print("RNSBusStopDetailController deinit")
+    }
+    
+    func prepareCurrent(_ value: Bool) {
+        item?.handlerCurrent?(value)
     }
 }

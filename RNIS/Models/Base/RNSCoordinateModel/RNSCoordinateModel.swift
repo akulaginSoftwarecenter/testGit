@@ -14,10 +14,12 @@ class RNSCoordinateModel: Object {
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
     
+    
+    var handlerCurrent: AliasBoolBlock?
     var handlerRemove: EmptyBlock?
     
     override static func ignoredProperties() -> [String] {
-        return ["handlerRemove","point","isHaveCoordinate"]
+        return ["handlerRemove", "point", "isHaveCoordinate", "handlerCurrent"]
     }
     
     var point: PGGeoPoint {
@@ -26,5 +28,9 @@ class RNSCoordinateModel: Object {
     
     var isHaveCoordinate: Bool {
         return !((latitude == 0) && (longitude == 0))
+    }
+     
+    func prepareCurrent(_ value: Bool) {
+        handlerCurrent?(value)
     }
 }

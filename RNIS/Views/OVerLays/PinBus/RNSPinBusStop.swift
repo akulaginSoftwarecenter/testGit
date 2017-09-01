@@ -10,7 +10,20 @@ import UIKit
 
 class RNSPinBusStop: RNSPinItem {
     
+    override func prepareHandlers() {
+        super.prepareHandlers()
+        
+        item?.handlerCurrent = { [weak self] value in
+            self?.prepareCurrent(value)
+        }
+    }
+    
     override func prepareImage() {
-        setBitmap(#imageLiteral(resourceName: "Bus_stop"), xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 15)
+        prepareCurrent()
+    }
+    
+    func prepareCurrent(_ current: Bool = false) {
+        let image = current ? #imageLiteral(resourceName: "Bus_stop_current") : #imageLiteral(resourceName: "Bus_stop")
+        setBitmap(image, xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 15)
     }
 }
