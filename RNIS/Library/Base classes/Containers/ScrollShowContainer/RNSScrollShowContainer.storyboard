@@ -72,19 +72,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d21-RD-YKd" customClass="RNSBackGroundView" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="-64" width="375" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6O-Cj-8UP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6O-Cj-8UP">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="b6O-Cj-8UP" secondAttribute="height" multiplier="1:1" id="2cU-YR-zwF"/>
                                         </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                         <state key="normal" image="Сross"/>
                                         <connections>
                                             <action selector="actionCross:" destination="SL3-9c-wD9" eventType="touchUpInside" id="Eok-xi-P5S"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-lD-eBy">
-                                        <rect key="frame" x="50" y="0.0" width="275" height="64"/>
-                                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пискарёвский, 63б" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-lD-eBy">
+                                        <rect key="frame" x="50" y="37" width="275" height="24"/>
+                                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -93,11 +94,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="4GH-ab-nVR"/>
                                     <constraint firstItem="b6O-Cj-8UP" firstAttribute="leading" secondItem="d21-RD-YKd" secondAttribute="leading" id="8as-i8-v7g"/>
-                                    <constraint firstItem="Crm-lD-eBy" firstAttribute="top" secondItem="d21-RD-YKd" secondAttribute="top" id="CBm-B7-m2Q"/>
                                     <constraint firstAttribute="trailing" secondItem="Crm-lD-eBy" secondAttribute="trailing" constant="50" id="LhJ-J6-DEv"/>
                                     <constraint firstAttribute="bottom" secondItem="b6O-Cj-8UP" secondAttribute="bottom" id="WEd-gm-Jf6"/>
                                     <constraint firstItem="b6O-Cj-8UP" firstAttribute="top" secondItem="d21-RD-YKd" secondAttribute="top" id="WO0-Ae-W8Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="Crm-lD-eBy" secondAttribute="bottom" id="l32-JF-xyg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Crm-lD-eBy" secondAttribute="bottom" constant="3" id="l32-JF-xyg"/>
                                     <constraint firstItem="Crm-lD-eBy" firstAttribute="leading" secondItem="d21-RD-YKd" secondAttribute="leading" constant="50" id="u1g-vc-hcy"/>
                                 </constraints>
                             </view>
