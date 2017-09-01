@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q4f-gV-USP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <scene sceneID="sBP-XW-uvq">
             <objects>
                 <navigationController id="q4f-gV-USP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0zE-Ei-9l1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="0zE-Ei-9l1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,12 +24,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05o-RO-VaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-751" y="3340"/>
+            <point key="canvasLocation" x="-1030" y="3340"/>
         </scene>
         <!--Мой транспорт-->
         <scene sceneID="4IH-GI-aTo">
             <objects>
-                <viewController id="d4g-Rq-0fC" customClass="TransportViewController" customModule="menuInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d4g-Rq-0fC" customClass="TransportViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TD8-n4-BhP"/>
                         <viewControllerLayoutGuide type="bottom" id="dX9-tc-I8d"/>
@@ -44,6 +44,7 @@
                                     <segment title="" image="segmentBusIcon"/>
                                     <segment title="" image="segmentRouteIcon"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="segmentControlAction:" destination="d4g-Rq-0fC" eventType="valueChanged" id="kBN-Ab-5bt"/>
                                 </connections>
@@ -66,7 +67,11 @@
                             <constraint firstItem="MWf-Zk-Y9g" firstAttribute="top" secondItem="ALO-xf-KRM" secondAttribute="bottom" constant="16" id="vRX-wW-ikx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Мой транспорт" id="cr7-kB-7W8"/>
+                    <navigationItem key="navigationItem" title="Мой транспорт" id="cr7-kB-7W8">
+                        <barButtonItem key="leftBarButtonItem" image="ArrowLefrNav" style="plain" id="oMq-B8-DsP" customClass="RNSMenuBarItem" customModule="RNIS" customModuleProvider="target">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="segmentControl" destination="ALO-xf-KRM" id="h7L-i7-cq8"/>
                         <outlet property="tableView" destination="MWf-Zk-Y9g" id="dlT-cg-ePb"/>
@@ -78,7 +83,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="segmentBusIcon" width="16" height="16"/>
-        <image name="segmentRouteIcon" width="16" height="16"/>
+        <image name="ArrowLefrNav" width="14" height="22"/>
+        <image name="segmentBusIcon" width="22" height="22"/>
+        <image name="segmentRouteIcon" width="22" height="22"/>
     </resources>
 </document>

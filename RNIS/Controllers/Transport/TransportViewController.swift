@@ -143,8 +143,6 @@ class TransportViewController: UIViewController, UITableViewDataSource, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyTransportTopCell", for: indexPath) as! MyTransportTopCell
             return cell;
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTransportTopCell", for: indexPath) as! MyTransportTopCell
-        return cell;
     }
     
     //MARK: Actions
@@ -159,9 +157,7 @@ class TransportViewController: UIViewController, UITableViewDataSource, UITableV
     
     //MARK: Others Methods
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+    override class var storyboardName: String {
+        return "TransportViewController"
     }
-    
 }

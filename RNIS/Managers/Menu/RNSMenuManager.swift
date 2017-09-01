@@ -16,7 +16,7 @@ class RNSMenuManager: NSObject {
     }
     
     lazy var menuItems = [MenuItem("Карта", RNSMapViewController.controller, #imageLiteral(resourceName: "menuMapIcon")),
-                     MenuItem("Избранное", nil, #imageLiteral(resourceName: "menuStarIcon")),
+                     MenuItem("Избранное", TransportViewController.initialController, #imageLiteral(resourceName: "menuStarIcon")),
                      MenuItem("Оповещения", nil, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem("Новости", nil, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", nil, #imageLiteral(resourceName: "menuSettingsIcon")),
