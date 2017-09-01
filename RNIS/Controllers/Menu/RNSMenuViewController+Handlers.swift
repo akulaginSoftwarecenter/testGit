@@ -14,5 +14,9 @@ extension RNSMenuViewController {
         RNSMenuManager.handlerShowLeftMenu = { [weak self] in
             self?.showLeftView(animated: true)
         }
+        
+        RNSMenuManager.handlerShowVC = { [weak self] (vc) in
+            self?.showVC(vc)
+        }
     }
 }

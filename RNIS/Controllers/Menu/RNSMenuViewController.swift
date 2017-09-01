@@ -22,20 +22,32 @@ class RNSMenuViewController: LGSideMenuController {
         
         leftViewController = RNSLeftMenuController.initialController
         
-        rootViewController = RNSMapViewController.controller
+        prepareHandlers()
+        RNSMenuManager.showFirst()
         
         let menuWidth = UIScreen.width - 123
         leftViewWidth = menuWidth
         leftViewPresentationStyle = .slideBelow
         leftViewAlwaysVisibleOptions = LGSideMenuAlwaysVisibleOptions()
-        
-        prepareHandlers()
     }
     
     override func leftViewWillLayoutSubviews(with size: CGSize) {
         super.leftViewWillLayoutSubviews(with: size)
         
         leftViewController?.view.frame = CGRect(origin: CGPoint.zero, size: size)
+    }
+    
+    func showVC(_ vc: UIViewController?) {
+        guard let vc = vc else {
+            return
+        }
+        hideLeftView(animated: true)
+        
+        guard rootViewController != vc else {
+            return
+        }
+        print("showVC")
+        rootViewController = vc
     }
     
     override class var storyboardName: String {

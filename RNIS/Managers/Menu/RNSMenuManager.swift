@@ -9,10 +9,32 @@
 import UIKit
 
 class RNSMenuManager: NSObject {
+    static let shared = RNSMenuManager()
+    
+    static var menuItems: [MenuItem] {
+        return shared.menuItems
+    }
+    
+    lazy var menuItems = [MenuItem("Карта", RNSMapViewController.controller, #imageLiteral(resourceName: "menuMapIcon")),
+                     MenuItem("Избранное", nil, #imageLiteral(resourceName: "menuStarIcon")),
+                     MenuItem("Оповещения", nil, #imageLiteral(resourceName: "menuBellIcon")),
+                     MenuItem("Новости", nil, #imageLiteral(resourceName: "menuNewspaperIcon")),
+                     MenuItem("Настройки", nil, #imageLiteral(resourceName: "menuSettingsIcon")),
+                     MenuItem("Стрелка", nil, #imageLiteral(resourceName: "menuCreditcardIcon")),
+                     MenuItem("Информация", nil, #imageLiteral(resourceName: "menuInfoIcon"))]
     
     static var handlerShowLeftMenu: EmptyBlock?
+    static var handlerShowVC: ((UIViewController?) -> ())?
     
     static func showLeftMenu() {
         handlerShowLeftMenu?()
+    }
+    
+    static func showVC(_ vc: UIViewController?) {
+        handlerShowVC?(vc)
+    }
+    
+    static func showFirst() {
+        showVC(menuItems.first?.vc)
     }
 }

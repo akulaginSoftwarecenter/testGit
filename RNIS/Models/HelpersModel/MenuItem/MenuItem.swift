@@ -19,4 +19,8 @@ struct MenuItem {
         self.vc = vc
         self.image = image
     }
+    
+    func show() {
+        RNSMenuManager.showVC(vc)
+    }
 }

@@ -10,13 +10,9 @@ import UIKit
 
 class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-     let menuItems = [MenuItem("Карта", RNSMapViewController.controller, #imageLiteral(resourceName: "menuMapIcon")),
-                     MenuItem("Избранное", nil, #imageLiteral(resourceName: "menuStarIcon")),
-                     MenuItem("Оповещения", nil, #imageLiteral(resourceName: "menuBellIcon")),
-                     MenuItem("Новости", nil, #imageLiteral(resourceName: "menuNewspaperIcon")),
-                     MenuItem("Настройки", nil, #imageLiteral(resourceName: "menuSettingsIcon")),
-                     MenuItem("Стрелка", nil, #imageLiteral(resourceName: "menuCreditcardIcon")),
-                     MenuItem("Информация", nil, #imageLiteral(resourceName: "menuInfoIcon"))]
+    var menuItems: [MenuItem] {
+        return RNSMenuManager.menuItems
+    }
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!

@@ -1407,10 +1407,10 @@
 		8344E1CC1F397E31004A6F0C /* HelpersModels */ = {
 			isa = PBXGroup;
 			children = (
-				83204B251F59083F0033ACA1 /* MenuItem */,
 				8375FF5F1F56BE6E00795A66 /* ContactsInfoModel */,
-				831E42691F46B7280016C7D3 /* StopsModel */,
+				83204B251F59083F0033ACA1 /* MenuItem */,
 				8344E1CD1F397EF3004A6F0C /* RangeScroll */,
+				831E42691F46B7280016C7D3 /* StopsModel */,
 			);
 			name = HelpersModels;
 			sourceTree = "<group>";
