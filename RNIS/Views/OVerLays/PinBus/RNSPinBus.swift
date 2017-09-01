@@ -12,6 +12,6 @@ class RNSPinBus: RNSPinItem {
     
     override func prepareImage() {
         let image = RNSImageFactory.imageBus(item as? RNSBus)
-        setBitmap(image, xOffset: 0.3, yOffset: -1.0, isPlain: false, sizeInMeters: 15)
+         setBitmap(image, xOffset: 0.05, yOffset: -1.0, isPlain: false, sizeInMeters: 15)
     }
 }

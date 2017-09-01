@@ -23,7 +23,7 @@ class RNSImageFactory: NSObject {
         let style = NSMutableParagraphStyle()
         style.alignment = NSTextAlignment.center
         return [
-            NSFontAttributeName: UIFont.cffazm12,
+            NSFontAttributeName: UIFont.cffazm18,
             NSForegroundColorAttributeName: UIColor.white,
             NSParagraphStyleAttributeName: style,
         ]
@@ -43,8 +43,9 @@ class RNSImageFactory: NSObject {
         let scale = UIScreen.main.scale
         let size = inImage.size
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        inImage.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let rect = CGRect(x: 31, y: 11, width: 21, height: 12)
+        let width = size.width
+        inImage.draw(in: CGRect(x: 0, y: 0, width: width, height: size.height))
+        let rect = CGRect(x: 0, y: 15, width: width, height: 18)
         
         text.draw(in: rect, withAttributes: shared.textFontAttributes)
         let newImage = UIGraphicsGetImageFromCurrentImageContext() ?? inImage
