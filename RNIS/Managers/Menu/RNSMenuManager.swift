@@ -19,8 +19,8 @@ class RNSMenuManager: NSObject {
                      MenuItem("Избранное", TransportViewController.initialController, #imageLiteral(resourceName: "menuStarIcon")),
                      MenuItem("Оповещения", NotificationsViewController.initialController, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem("Новости", NewsViewController.initialController, #imageLiteral(resourceName: "menuNewspaperIcon")),
-                     MenuItem("Настройки", nil, #imageLiteral(resourceName: "menuSettingsIcon")),
-                     MenuItem("Стрелка", nil, #imageLiteral(resourceName: "menuCreditcardIcon")),
+                     MenuItem("Настройки", SettingsViewController.initialController, #imageLiteral(resourceName: "menuSettingsIcon")),
+                     MenuItem("Стрелка", StrelkaViewController.initialController, #imageLiteral(resourceName: "menuCreditcardIcon")),
                      MenuItem("Информация", MainInfoViewController.initialController, #imageLiteral(resourceName: "menuInfoIcon"))]
     
     lazy var profileVC: UIViewController? = {
