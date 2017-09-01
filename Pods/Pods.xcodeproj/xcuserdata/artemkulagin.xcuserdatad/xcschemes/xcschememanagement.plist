@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LGSideMenuController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,32 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A3247D0592CB552A3240DFE75469B0E</key>
+		<key>03612472C675D101160902A62731F424</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16382B7DAFEE18900FD220771CAF5727</key>
+		<key>0A667609BF9BD15CE73A76A27D5C8C4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1756765BBB1B8D59883EA330BBC8339A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>40562A4548BE1A29F180C8F96C417779</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4C51678EDE9DA1F89D34D4F9C0FE5983</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>73260757CB74994FD89AE9C673F13E12</key>
+		<key>551B40FCFDA300C82F290438D02057DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>939D707EE4D2C04D431012FB4A71D1FB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A83C8FD4ADB3455947136CBFE059B9F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BE85776C8A45D7648B7DE99DA4916471</key>
+		<key>B566AD710D63950F3F7D53EF7618C090</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC6F723386F65DD48B4D968D5B5493F7</key>
+		<key>D20C604098C0358100CCFF77853109BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8A953CBD471A37F16F2B016ABE076E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE537DF2DE694F028B8849DC39F51DCD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

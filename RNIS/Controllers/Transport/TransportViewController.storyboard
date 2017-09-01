@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sBP-XW-uvq">
+            <objects>
+                <navigationController id="q4f-gV-USP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0zE-Ei-9l1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d4g-Rq-0fC" kind="relationship" relationship="rootViewController" id="B0a-rB-03s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05o-RO-VaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751" y="3340"/>
+        </scene>
+        <!--Мой транспорт-->
+        <scene sceneID="4IH-GI-aTo">
+            <objects>
+                <viewController id="d4g-Rq-0fC" customClass="TransportViewController" customModule="menuInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TD8-n4-BhP"/>
+                        <viewControllerLayoutGuide type="bottom" id="dX9-tc-I8d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Kd-KN-bF8">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ALO-xf-KRM">
+                                <rect key="frame" x="16" y="8" width="343" height="29"/>
+                                <segments>
+                                    <segment title="" image="segmentBusIcon"/>
+                                    <segment title="" image="segmentRouteIcon"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlAction:" destination="d4g-Rq-0fC" eventType="valueChanged" id="kBN-Ab-5bt"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWf-Zk-Y9g">
+                                <rect key="frame" x="16" y="52" width="343" height="551"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ALO-xf-KRM" firstAttribute="trailing" secondItem="0Kd-KN-bF8" secondAttribute="trailingMargin" id="2dZ-Oq-7tU"/>
+                            <constraint firstItem="ALO-xf-KRM" firstAttribute="leading" secondItem="0Kd-KN-bF8" secondAttribute="leadingMargin" id="77V-8k-KYx"/>
+                            <constraint firstItem="MWf-Zk-Y9g" firstAttribute="trailing" secondItem="0Kd-KN-bF8" secondAttribute="trailingMargin" id="OAV-qQ-7TI"/>
+                            <constraint firstItem="ALO-xf-KRM" firstAttribute="top" secondItem="TD8-n4-BhP" secondAttribute="bottom" constant="8" id="a5G-CP-1Ps"/>
+                            <constraint firstItem="dX9-tc-I8d" firstAttribute="top" secondItem="MWf-Zk-Y9g" secondAttribute="bottom" id="anI-oL-oR5"/>
+                            <constraint firstItem="MWf-Zk-Y9g" firstAttribute="leading" secondItem="0Kd-KN-bF8" secondAttribute="leadingMargin" id="fUw-TH-1iN"/>
+                            <constraint firstItem="MWf-Zk-Y9g" firstAttribute="top" secondItem="ALO-xf-KRM" secondAttribute="bottom" constant="16" id="vRX-wW-ikx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Мой транспорт" id="cr7-kB-7W8"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="ALO-xf-KRM" id="h7L-i7-cq8"/>
+                        <outlet property="tableView" destination="MWf-Zk-Y9g" id="dlT-cg-ePb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhY-Dn-9KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119.2" y="3339.5802098950526"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="segmentBusIcon" width="16" height="16"/>
+        <image name="segmentRouteIcon" width="16" height="16"/>
+    </resources>
+</document>

@@ -11,7 +11,7 @@ import Foundation
 extension RNSMapViewController {
     
     @IBAction func menuAction(_ sender: Any) {
-        STRouter.showLogin()
+        RNSMenuManager.showLeftMenu()
     }
     
     @IBAction func actionRoute(_ sender: Any) {

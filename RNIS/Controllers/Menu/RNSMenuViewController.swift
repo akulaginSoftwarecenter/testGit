@@ -1,0 +1,44 @@
+//
+//  RNSMenuViewController.swift
+//  RNIS
+//
+//  Created by Артем Кулагин on 01.09.17.
+//  Copyright © 2017 Артем Кулагин. All rights reserved.
+//
+
+import UIKit
+import LGSideMenuController
+
+class RNSMenuViewController: LGSideMenuController {
+
+    override open var rootViewController: UIViewController? {
+        didSet{
+            self.rootViewController?.view.frame = self.view.bounds
+        }
+    }
+    
+    override func awakeFromNib(){
+        super.awakeFromNib()
+        
+        leftViewController = RNSLeftMenuController.initialController
+        
+        rootViewController = RNSMapViewController.controller
+        
+        let menuWidth = UIScreen.width - 123
+        leftViewWidth = menuWidth
+        leftViewPresentationStyle = .slideBelow
+        leftViewAlwaysVisibleOptions = LGSideMenuAlwaysVisibleOptions()
+        
+        prepareHandlers()
+    }
+    
+    override func leftViewWillLayoutSubviews(with size: CGSize) {
+        super.leftViewWillLayoutSubviews(with: size)
+        
+        leftViewController?.view.frame = CGRect(origin: CGPoint.zero, size: size)
+    }
+    
+    override class var storyboardName: String {
+        return "RNSMenuViewController"
+    }
+}

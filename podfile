@@ -11,6 +11,7 @@ pod 'ObjectMapper', '~> 2.0'
 pod 'Fabric'
 pod 'Crashlytics'
 pod ‘RealmSwift’
+pod 'LGSideMenuController'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

@@ -50,7 +50,7 @@ class RNSLoginViewController: UIViewController {
         STRouter.showLoader()
         RNSPostLogin(login, password: password, complete: {
             STRouter.removeLoader()
-            STRouter.showMap()
+            STRouter.showMenu()
         }, failure: {[weak self] (errorText) in
             STRouter.removeLoader()
             self?.prepareError(errorText)

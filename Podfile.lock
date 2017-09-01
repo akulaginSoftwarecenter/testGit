@@ -3,6 +3,7 @@ PODS:
   - Crashlytics (3.8.5):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
+  - LGSideMenuController (2.1.1)
   - ObjectMapper (2.2.7)
   - PureLayout (3.0.2)
   - Realm (2.8.3):
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Crashlytics
   - Fabric
+  - LGSideMenuController
   - ObjectMapper (~> 2.0)
   - PureLayout
   - RealmSwift
@@ -27,6 +29,7 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
@@ -34,6 +37,6 @@ SPEC CHECKSUMS:
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 9cf14fdc15041b4d9715ff3efca7fb805f78f039
+PODFILE CHECKSUM: 352a2f098392b4909e38c695fc4f2dea5f8c6ca4
 
 COCOAPODS: 1.2.0
