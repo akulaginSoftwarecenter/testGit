@@ -19,7 +19,7 @@
         <scene sceneID="5h0-dR-Ncb">
             <objects>
                 <navigationController id="i3S-S3-4X5" customClass="BaseNavigationController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HTn-7d-bwo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="HTn-7d-bwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705882352937" green="0.29803921568627451" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,7 +36,7 @@
         <scene sceneID="5GO-7X-MDh">
             <objects>
                 <navigationController id="fme-Uz-9f9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Aso-tc-jYk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Aso-tc-jYk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -206,32 +206,18 @@
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.81960784313725488" green="0.25882352941176467" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIF-bb-9zj">
-                                <rect key="frame" x="0.0" y="541" width="140" height="62"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="FC1-lZ-8dl"/>
-                                    <constraint firstAttribute="width" constant="140" id="mAW-Ao-ef9"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="qz1-Zn-76f"/>
-                                    <constraint firstAttribute="height" constant="62" id="yCf-Iv-Ge7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <state key="normal" title="Авторизация"/>
-                                <connections>
-                                    <action selector="actionLogin:" destination="6k3-Ob-pT2" eventType="touchUpInside" id="Do5-in-NCP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Yal-p3-iEO" firstAttribute="top" secondItem="qIF-bb-9zj" secondAttribute="bottom" id="8ak-Bx-Alp"/>
                             <constraint firstItem="ZED-xC-eyZ" firstAttribute="leading" secondItem="sQC-o0-ppT" secondAttribute="leading" id="Zp5-zc-jYd"/>
                             <constraint firstAttribute="trailing" secondItem="ZED-xC-eyZ" secondAttribute="trailing" id="deb-vF-PZc"/>
                             <constraint firstItem="Yal-p3-iEO" firstAttribute="top" secondItem="ZED-xC-eyZ" secondAttribute="bottom" id="sEF-Iy-qH4"/>
-                            <constraint firstItem="qIF-bb-9zj" firstAttribute="leading" secondItem="sQC-o0-ppT" secondAttribute="leading" id="uq1-Xb-u7Q"/>
                             <constraint firstItem="ZED-xC-eyZ" firstAttribute="top" secondItem="d9o-pM-chX" secondAttribute="bottom" id="veN-pC-FbN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Информация" id="0pw-2u-o2i"/>
+                    <navigationItem key="navigationItem" title="Информация" id="0pw-2u-o2i">
+                        <barButtonItem key="leftBarButtonItem" image="ArrowLefrNav" style="plain" id="gYb-rD-wtO" customClass="RNSMenuBarItem" customModule="RNIS" customModuleProvider="target"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ZED-xC-eyZ" id="lNQ-s4-sHo"/>
                         <segue destination="nBQ-du-cAc" kind="show" identifier="main_to_contacts" id="Ksf-Mc-vJI"/>
@@ -628,6 +614,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ArrowLefrNav" width="14" height="22"/>
         <image name="avatarPlaceholderImage" width="66" height="72"/>
         <image name="menuShareIcon" width="156" height="156"/>
         <image name="pencilImage" width="18" height="18"/>

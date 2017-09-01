@@ -41,13 +41,10 @@ class RNSMenuViewController: LGSideMenuController {
         guard let vc = vc else {
             return
         }
-        hideLeftView(animated: true)
-        
-        guard rootViewController != vc else {
-            return
+        if rootViewController != vc {
+            rootViewController = vc
         }
-        print("showVC")
-        rootViewController = vc
+        hideLeftView(animated: true)
     }
     
     override class var storyboardName: String {

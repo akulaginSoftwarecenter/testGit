@@ -21,7 +21,7 @@ class RNSMenuManager: NSObject {
                      MenuItem("Новости", nil, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", nil, #imageLiteral(resourceName: "menuSettingsIcon")),
                      MenuItem("Стрелка", nil, #imageLiteral(resourceName: "menuCreditcardIcon")),
-                     MenuItem("Информация", nil, #imageLiteral(resourceName: "menuInfoIcon"))]
+                     MenuItem("Информация", MainInfoViewController.initialController, #imageLiteral(resourceName: "menuInfoIcon"))]
     
     static var handlerShowLeftMenu: EmptyBlock?
     static var handlerShowVC: ((UIViewController?) -> ())?
