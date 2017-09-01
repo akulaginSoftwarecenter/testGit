@@ -116,7 +116,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5BO-cQ-P5L" customClass="BaseNavigationController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="rWi-Cg-Olq">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="rWi-Cg-Olq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

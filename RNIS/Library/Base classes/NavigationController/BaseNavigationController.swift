@@ -17,6 +17,8 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
         self.completion = completion
         self.delegate = self
         pushViewController(viewController, animated: animated)
+        
+        interactivePopGestureRecognizer?.isEnabled = false
     }
     
     func pop(animated: Bool = false, completion:EmptyBlock? = nil) {

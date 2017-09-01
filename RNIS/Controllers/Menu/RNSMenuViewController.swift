@@ -29,6 +29,7 @@ class RNSMenuViewController: LGSideMenuController {
         leftViewWidth = menuWidth
         leftViewPresentationStyle = .slideBelow
         leftViewAlwaysVisibleOptions = LGSideMenuAlwaysVisibleOptions()
+        isLeftViewSwipeGestureEnabled = true
     }
     
     override func leftViewWillLayoutSubviews(with size: CGSize) {
