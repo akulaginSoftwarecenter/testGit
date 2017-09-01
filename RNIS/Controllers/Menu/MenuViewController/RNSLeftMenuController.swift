@@ -9,22 +9,14 @@
 import UIKit
 
 class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    let menuTitles = ["Карта",
-                      "Избранное",
-                      "Оповещения",
-                      "Новости",
-                      "Настройки" ,
-                      "Стрелка",
-                      "Информация"];
     
-    let menuImages = [UIImage.init(named: "menuMapIcon"),
-                      UIImage.init(named: "menuStarIcon"),
-                      UIImage.init(named: "menuBellIcon"),
-                      UIImage.init(named: "menuNewspaperIcon"),
-                      UIImage.init(named: "menuSettingsIcon"),
-                      UIImage.init(named: "menuCreditcardIcon"),
-                      UIImage.init(named: "menuInfoIcon")];
+     let menuItems = [MenuItem("Карта", RNSMapViewController.controller, #imageLiteral(resourceName: "menuMapIcon")),
+                     MenuItem("Избранное", nil, #imageLiteral(resourceName: "menuStarIcon")),
+                     MenuItem("Оповещения", nil, #imageLiteral(resourceName: "menuBellIcon")),
+                     MenuItem("Новости", nil, #imageLiteral(resourceName: "menuNewspaperIcon")),
+                     MenuItem("Настройки", nil, #imageLiteral(resourceName: "menuSettingsIcon")),
+                     MenuItem("Стрелка", nil, #imageLiteral(resourceName: "menuCreditcardIcon")),
+                     MenuItem("Информация", nil, #imageLiteral(resourceName: "menuInfoIcon"))]
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
@@ -45,27 +37,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.dataSource = self;
         
     }
-
-    //MARK: UITableViewDataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuTitles.count;
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as! MenuTableViewCell;
-        cell.updateCell(title: self.menuTitles[indexPath.row], image: self.menuImages[indexPath.row])
-        return cell
-    }
-    
-    //MARK: UITableViewDelegate Methods
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
+   
     override class var storyboardName: String {
         return "RNSLeftMenuController"
     }
