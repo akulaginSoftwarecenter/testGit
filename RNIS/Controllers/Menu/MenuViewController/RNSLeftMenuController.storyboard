@@ -46,17 +46,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZa-xx-fvA">
-                                <rect key="frame" x="0.0" y="170" width="375" height="341"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuShareIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4Ec-6j-V63">
                                 <rect key="frame" x="0.0" y="511" width="156" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4Ec-6j-V63" secondAttribute="height" multiplier="1:1" id="eC1-aI-Vwx"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZa-xx-fvA">
+                                <rect key="frame" x="0.0" y="170" width="375" height="430"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рассказать о приложении" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eB-Rh-OqK">
                                 <rect key="frame" x="103" y="600" width="75" height="30"/>
                                 <constraints>
@@ -90,6 +90,7 @@
                             <constraint firstItem="4Mm-Ez-I1b" firstAttribute="top" secondItem="IVX-ve-Cq0" secondAttribute="bottom" constant="8" id="Lwx-zG-VXT"/>
                             <constraint firstItem="ijo-qL-nEC" firstAttribute="top" secondItem="0eB-Rh-OqK" secondAttribute="bottom" constant="37" id="M4b-ZQ-wdi"/>
                             <constraint firstItem="ijo-qL-nEC" firstAttribute="top" secondItem="4Ec-6j-V63" secondAttribute="bottom" id="QHs-aQ-FD1"/>
+                            <constraint firstItem="0eB-Rh-OqK" firstAttribute="top" secondItem="ZZa-xx-fvA" secondAttribute="bottom" id="TgK-h0-I6c"/>
                             <constraint firstAttribute="trailing" secondItem="ZZa-xx-fvA" secondAttribute="trailing" id="VHQ-1K-6hL"/>
                             <constraint firstItem="IVX-ve-Cq0" firstAttribute="top" secondItem="9BP-WC-1fH" secondAttribute="bottom" constant="19" id="exW-BI-NT1"/>
                             <constraint firstItem="Hdf-J0-0c7" firstAttribute="top" secondItem="4Mm-Ez-I1b" secondAttribute="bottom" constant="5" id="gGJ-ww-bug"/>
@@ -101,6 +102,11 @@
                             <constraint firstItem="a9J-3M-cSg" firstAttribute="trailing" secondItem="IYO-vO-Wvs" secondAttribute="trailingMargin" constant="-19" id="sXr-tf-1hF"/>
                             <constraint firstItem="0eB-Rh-OqK" firstAttribute="leading" secondItem="4Ec-6j-V63" secondAttribute="trailing" constant="-53" id="ua4-vj-PxX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jhq-NK-wbJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="editButton" destination="a9J-3M-cSg" id="rm5-iJ-SJa"/>
