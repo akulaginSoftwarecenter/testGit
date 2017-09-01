@@ -21,13 +21,16 @@ class RNSBusStopDetailController: UIViewController {
         vc?.startBottomOffset = container?.startBottomOffset
         return  container
     }
-    
+   
     var item: RNSBusStop?
     var items = [RNSBus]()
     lazy var loaderView:LoaderView = LoaderView()
     
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleStop: UILabel!
+    @IBOutlet weak var timerlabel: UILabel!
+    
     var startBottomOffset: CGFloat?
     
     override func viewDidLoad() {
