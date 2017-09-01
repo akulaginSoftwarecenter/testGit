@@ -20,7 +20,7 @@ class RNSMenuViewController: LGSideMenuController {
     override func awakeFromNib(){
         super.awakeFromNib()
         
-        leftViewController = RNSLeftMenuController.initialController
+        leftViewController = RNSRedContainer(RNSLeftMenuController.initialController)
         
         prepareHandlers()
         RNSMenuManager.showFirst()

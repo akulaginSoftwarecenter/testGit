@@ -23,6 +23,10 @@ class RNSMenuManager: NSObject {
                      MenuItem("Стрелка", nil, #imageLiteral(resourceName: "menuCreditcardIcon")),
                      MenuItem("Информация", MainInfoViewController.initialController, #imageLiteral(resourceName: "menuInfoIcon"))]
     
+    lazy var profileVC: UIViewController? = {
+        return STRouter.redScrollContainer(RNSProfileViewController.initialController)
+    }()
+    
     static var handlerShowLeftMenu: EmptyBlock?
     static var handlerShowVC: ((UIViewController?) -> ())?
     
@@ -36,5 +40,9 @@ class RNSMenuManager: NSObject {
     
     static func showFirst() {
         showVC(menuItems.first?.vc)
+    }
+    
+    static func showProfile() {
+        showVC(shared.profileVC)
     }
 }

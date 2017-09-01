@@ -24,9 +24,13 @@ class RNSLeftBackButton: UIButton {
         setImage(image, for: .normal)
 
         prepareConstraint()
-        touchUpInside {
-            STRouter.pop()
+        touchUpInside { [weak self] in
+            self?.actionTouch()
         }
+    }
+    
+    func actionTouch() {
+        STRouter.pop()
     }
     
     func prepareConstraint() {

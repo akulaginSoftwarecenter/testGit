@@ -47,6 +47,8 @@
 		831E426B1F46B7CD0016C7D3 /* RNSTableStopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E426A1F46B7CD0016C7D3 /* RNSTableStopsModel.swift */; };
 		83204B271F5908500033ACA1 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B261F5908500033ACA1 /* MenuItem.swift */; };
 		83204B2A1F5911850033ACA1 /* RNSMenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B291F5911850033ACA1 /* RNSMenuBarItem.swift */; };
+		83204B2C1F5917270033ACA1 /* RNSLeftMenuController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */; };
+		83204B2F1F591A590033ACA1 /* RNSLeftMenuBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B2E1F591A590033ACA1 /* RNSLeftMenuBackButton.swift */; };
 		8321D67D1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */; };
 		8321D6821F4D358B0022EE1C /* RNSRoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */; };
 		8321D6841F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */; };
@@ -491,6 +493,8 @@
 		831E426A1F46B7CD0016C7D3 /* RNSTableStopsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTableStopsModel.swift; path = Models/HelpersModel/StopsModel/RNSTableStopsModel.swift; sourceTree = "<group>"; };
 		83204B261F5908500033ACA1 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = Models/HelpersModel/MenuItem/MenuItem.swift; sourceTree = "<group>"; };
 		83204B291F5911850033ACA1 /* RNSMenuBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMenuBarItem.swift; path = Views/MenuBarItem/RNSMenuBarItem.swift; sourceTree = "<group>"; };
+		83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSLeftMenuController+Action.swift"; sourceTree = "<group>"; };
+		83204B2E1F591A590033ACA1 /* RNSLeftMenuBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLeftMenuBackButton.swift; path = Views/Buttons/LeftMenuBackButton/RNSLeftMenuBackButton.swift; sourceTree = "<group>"; };
 		8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadOff.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadOff.swift"; sourceTree = "<group>"; };
 		8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadOff.swift; path = Views/Polylines/RoadOff/RNSRoadOff.swift; sourceTree = "<group>"; };
 		8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSPageRouteController+MapView.swift"; path = "Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift"; sourceTree = "<group>"; };
@@ -1150,6 +1154,14 @@
 			name = MenuBarItem;
 			sourceTree = "<group>";
 		};
+		83204B2D1F591A3C0033ACA1 /* LeftMenuBackButton */ = {
+			isa = PBXGroup;
+			children = (
+				83204B2E1F591A590033ACA1 /* RNSLeftMenuBackButton.swift */,
+			);
+			name = LeftMenuBackButton;
+			sourceTree = "<group>";
+		};
 		8321D67E1F4D34E90022EE1C /* Polylines */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1209,7 @@
 		8326AA391F1F631900F893C8 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				83204B2D1F591A3C0033ACA1 /* LeftMenuBackButton */,
 				832E4B771F2EC65C00A4AD77 /* BlackButton */,
 				838707D11F3017240094B273 /* GrayBackButton */,
 				839BCDFE1F32E83800B5CA88 /* LeftBackButton */,
@@ -2140,6 +2153,7 @@
 				836E91AC1F58F987007CCF5A /* cells */,
 				836E91B01F58F987007CCF5A /* RNSLeftMenuController.swift */,
 				836E91BF1F590481007CCF5A /* RNSLeftMenuController+TableView.swift */,
+				83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */,
 				836E91B41F58F99C007CCF5A /* RNSLeftMenuController.storyboard */,
 			);
 			name = Left;
@@ -3744,6 +3758,7 @@
 				8310D4581F3C7483000CCD0A /* RNSCircle.swift in Sources */,
 				832E4B8A1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
 				836E91B31F58F987007CCF5A /* RNSLeftMenuController.swift in Sources */,
+				83204B2C1F5917270033ACA1 /* RNSLeftMenuController+Action.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */,
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
@@ -3829,6 +3844,7 @@
 				831A85B51F4149500095F006 /* RNSBusTemp.swift in Sources */,
 				837ABF0D1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,
 				837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
+				83204B2F1F591A590033ACA1 /* RNSLeftMenuBackButton.swift in Sources */,
 				83A5C6ED1F57F396006C8D62 /* RNSMoveDetailController.swift in Sources */,
 				835D85301F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift in Sources */,
 				83AA6A671F5668C000B2139C /* NotificationTableViewCell.swift in Sources */,
