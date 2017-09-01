@@ -14,6 +14,10 @@ extension Date {
         return DateFormatter.HHmm.string(from: self)
     }
     
+    var stringE_d_MMMM: String {
+        return DateFormatter.E_d_MMMM.string(from: self)
+    }
+   
     func appendMinute(_ value: Int?) -> Date? {
        return dateByAddingUnit(.second, value: value ?? 0)
     }

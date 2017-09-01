@@ -138,13 +138,13 @@
                                             <action selector="dateAction:" destination="Yv4-9c-fRf" eventType="touchUpInside" id="Vkg-wa-LtM"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата и время:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5n-JW-M2Q">
-                                        <rect key="frame" x="28" y="18.5" width="97" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата и время: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5n-JW-M2Q">
+                                        <rect key="frame" x="28" y="19" width="100.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXI-ST-daw">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXI-ST-daw">
                                         <rect key="frame" x="318" y="0.0" width="57" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XXI-ST-daw" secondAttribute="height" multiplier="1:1" id="vUN-uU-6Wv"/>
@@ -155,7 +155,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Выберите дату и время  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-Yf-EiR">
-                                        <rect key="frame" x="140" y="18" width="220" height="20"/>
+                                        <rect key="frame" x="128.5" y="18.5" width="231.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -173,7 +173,7 @@
                                     <constraint firstAttribute="bottom" secondItem="XXI-ST-daw" secondAttribute="bottom" id="Zcy-St-DMR"/>
                                     <constraint firstItem="XXI-ST-daw" firstAttribute="top" secondItem="osd-rG-1gv" secondAttribute="top" id="fGL-YN-aFc"/>
                                     <constraint firstAttribute="trailing" secondItem="XXI-ST-daw" secondAttribute="trailing" id="ffB-qM-sxg"/>
-                                    <constraint firstItem="BXU-Yf-EiR" firstAttribute="leading" secondItem="V5n-JW-M2Q" secondAttribute="trailing" constant="15" id="gZx-QZ-g8u"/>
+                                    <constraint firstItem="BXU-Yf-EiR" firstAttribute="leading" secondItem="V5n-JW-M2Q" secondAttribute="trailing" id="gZx-QZ-g8u"/>
                                     <constraint firstItem="qh0-TW-0GE" firstAttribute="leading" secondItem="osd-rG-1gv" secondAttribute="leading" id="jfz-38-SDY"/>
                                     <constraint firstItem="BXU-Yf-EiR" firstAttribute="centerY" secondItem="qh0-TW-0GE" secondAttribute="centerY" id="vqh-qm-98e"/>
                                 </constraints>
