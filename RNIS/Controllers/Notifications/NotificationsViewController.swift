@@ -79,17 +79,15 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
     //MARK: UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        
+        self.performSegue(withIdentifier: "notifications_to_notifySettings", sender: self)
     }
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      
     }
-    //MARK: - Others Methods
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    override class var storyboardName: String {
+        return "NotificationsViewController"
+    }
 }
