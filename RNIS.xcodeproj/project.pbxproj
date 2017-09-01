@@ -60,6 +60,8 @@
 		83204B4B1F591FBD0033ACA1 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B481F591FBD0033ACA1 /* NotificationsViewController.swift */; };
 		83204B4D1F591FCA0033ACA1 /* NotificationsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83204B4C1F591FCA0033ACA1 /* NotificationsViewController.storyboard */; };
 		83204B501F5921370033ACA1 /* NotificationsSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B4F1F5921370033ACA1 /* NotificationsSettingsViewController.swift */; };
+		83204B531F59225A0033ACA1 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B521F59225A0033ACA1 /* NewsViewController.swift */; };
+		83204B551F5922660033ACA1 /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83204B541F5922660033ACA1 /* NewsViewController.storyboard */; };
 		8321D67D1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */; };
 		8321D6821F4D358B0022EE1C /* RNSRoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */; };
 		8321D6841F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */; };
@@ -514,6 +516,8 @@
 		83204B481F591FBD0033ACA1 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		83204B4C1F591FCA0033ACA1 /* NotificationsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotificationsViewController.storyboard; sourceTree = "<group>"; };
 		83204B4F1F5921370033ACA1 /* NotificationsSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationsSettingsViewController.swift; path = Setting/NotificationsSettingsViewController.swift; sourceTree = "<group>"; };
+		83204B521F59225A0033ACA1 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		83204B541F5922660033ACA1 /* NewsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsViewController.storyboard; sourceTree = "<group>"; };
 		8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadOff.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadOff.swift"; sourceTree = "<group>"; };
 		8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadOff.swift; path = Views/Polylines/RoadOff/RNSRoadOff.swift; sourceTree = "<group>"; };
 		8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSPageRouteController+MapView.swift"; path = "Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift"; sourceTree = "<group>"; };
@@ -1267,6 +1271,16 @@
 				83204B4F1F5921370033ACA1 /* NotificationsSettingsViewController.swift */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		83204B511F59225A0033ACA1 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				83204B521F59225A0033ACA1 /* NewsViewController.swift */,
+				83204B541F5922660033ACA1 /* NewsViewController.storyboard */,
+			);
+			name = News;
+			path = Controllers/News;
 			sourceTree = "<group>";
 		};
 		8321D67E1F4D34E90022EE1C /* Polylines */ = {
@@ -2024,6 +2038,7 @@
 				83AA6A361F5667CA00B2139C /* MenuInfo */,
 				83204B301F591CB70033ACA1 /* Transport */,
 				83204B431F591FBD0033ACA1 /* Notifications */,
+				83204B511F59225A0033ACA1 /* News */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3505,6 +3520,7 @@
 				83A5C6F91F57F55C006C8D62 /* RNSRouteBusCell.xib in Resources */,
 				836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */,
 				838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */,
+				83204B551F5922660033ACA1 /* NewsViewController.storyboard in Resources */,
 				83A5C6FB1F57F579006C8D62 /* RNSRouteTotalCell.xib in Resources */,
 				836277E41F382E97009FB712 /* RNSBusStopDetailController.storyboard in Resources */,
 				83204B401F591CB70033ACA1 /* TransportViewController.storyboard in Resources */,
@@ -3705,6 +3721,7 @@
 				838707DF1F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */,
 				835718891F21A7B700DE5E25 /* RNSTokenPayload.swift in Sources */,
 				832E4B8F1F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
+				83204B531F59225A0033ACA1 /* NewsViewController.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
 				83AA6A7A1F56863000B2139C /* RNSDotsWhiteVertical.swift in Sources */,
 				83F555371F5565BF00D1221C /* RNSRouteBusCell.swift in Sources */,

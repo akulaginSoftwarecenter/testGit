@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pbB-RQ-RBL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wfJ-AP-4Od">
+            <objects>
+                <navigationController id="pbB-RQ-RBL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="eZV-Zw-e8V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CD8-VF-YiI" kind="relationship" relationship="rootViewController" id="aNE-yZ-pY8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQe-E3-EpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751" y="2056"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="Kc7-mf-XyX">
+            <objects>
+                <viewController id="CD8-VF-YiI" customClass="NewsViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="npq-xc-OTX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fjv-5d-S6c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dpu-Lo-hbj">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frF-uE-Yh7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fjv-5d-S6c" firstAttribute="top" secondItem="frF-uE-Yh7" secondAttribute="bottom" id="3M2-6T-iV0"/>
+                            <constraint firstAttribute="trailing" secondItem="frF-uE-Yh7" secondAttribute="trailing" id="bak-aQ-Tqe"/>
+                            <constraint firstItem="frF-uE-Yh7" firstAttribute="top" secondItem="npq-xc-OTX" secondAttribute="bottom" id="f5Y-0N-tWx"/>
+                            <constraint firstItem="frF-uE-Yh7" firstAttribute="leading" secondItem="Dpu-Lo-hbj" secondAttribute="leading" id="jSW-32-rBL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Новости" id="Vqg-FM-lKO">
+                        <barButtonItem key="leftBarButtonItem" image="ArrowLefrNav" style="plain" id="z7I-IO-0du" customClass="RNSMenuBarItem" customModule="RNIS" customModuleProvider="target">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="frF-uE-Yh7" id="DEK-Zf-gWN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkc-YQ-XFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119.2" y="2055.92203898051"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArrowLefrNav" width="14" height="22"/>
+    </resources>
+</document>
