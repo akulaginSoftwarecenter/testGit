@@ -38,6 +38,10 @@ extension UIFont {
         return cffazm(24)
     }
     
+    static var cffazm26:UIFont {
+        return cffazm(26)
+    }
+    
     static func cffazm(_ size: CGFloat) -> UIFont {
         return UIFont(name: "Cffazmiakhaddpiofffvylaqekz", size: size)!
     }

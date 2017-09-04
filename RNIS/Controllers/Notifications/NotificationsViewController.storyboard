@@ -105,6 +105,11 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0J-6W-TdZ">
                                 <rect key="frame" x="0.0" y="68" width="375" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oc5-ZW-urR" id="zrO-8z-drx"/>
+                                    <outlet property="delegate" destination="oc5-ZW-urR" id="Xt6-IE-GgL"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxe-Pq-ELD">
                                 <rect key="frame" x="25" y="416" width="325" height="63"/>
@@ -116,6 +121,14 @@
                                 <state key="normal" title="Сохранить">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionSave:" destination="oc5-ZW-urR" eventType="touchUpInside" id="uEW-Ox-lL7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,10 +145,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Выбрать интервал" id="muL-4z-njS"/>
-                    <connections>
-                        <outlet property="pickerView" destination="I0J-6W-TdZ" id="m9i-i2-75m"/>
-                        <outlet property="saveButton" destination="Kxe-Pq-ELD" id="7OH-hd-Siz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdX-Rk-CaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
