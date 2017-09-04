@@ -426,6 +426,8 @@
 		83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B701F4D484500246DFA /* RNSRoadBus.swift */; };
 		83D62B731F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */; };
 		83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */; };
+		83D7137E1F5D02EA005206C5 /* TransportViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137D1F5D02EA005206C5 /* TransportViewController+TableView.swift */; };
+		83D713801F5D03DC005206C5 /* TransportViewController+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */; };
 		83E183931F4400DE005912C5 /* RNSAddressViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */; };
 		83E183961F440253005912C5 /* RNSAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183951F440253005912C5 /* RNSAddressCell.swift */; };
 		83E183991F440DC3005912C5 /* RNSSearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183981F440DC3005912C5 /* RNSSearchHistory.swift */; };
@@ -854,6 +856,8 @@
 		83D62B701F4D484500246DFA /* RNSRoadBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadBus.swift; path = Views/Polylines/RoadBus/RNSRoadBus.swift; sourceTree = "<group>"; };
 		83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadActivate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadActivate.swift"; sourceTree = "<group>"; };
 		83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackMoveButton.swift; path = Views/Buttons/BlackMoveButton/RNSBlackMoveButton.swift; sourceTree = "<group>"; };
+		83D7137D1F5D02EA005206C5 /* TransportViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransportViewController+TableView.swift"; sourceTree = "<group>"; };
+		83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransportViewController+Segment.swift"; sourceTree = "<group>"; };
 		83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+TableView.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift"; sourceTree = "<group>"; };
 		83E183951F440253005912C5 /* RNSAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAddressCell.swift; path = Controllers/Map/Route/Address/Cell/RNSAddressCell.swift; sourceTree = "<group>"; };
 		83E183981F440DC3005912C5 /* RNSSearchHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSSearchHistory.swift; path = Models/DataBase/Search/RNSSearchHistory.swift; sourceTree = "<group>"; };
@@ -1203,6 +1207,8 @@
 			children = (
 				83204B311F591CB70033ACA1 /* cells */,
 				83204B3B1F591CB70033ACA1 /* TransportViewController.swift */,
+				83D7137D1F5D02EA005206C5 /* TransportViewController+TableView.swift */,
+				83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */,
 				83204B3A1F591CB70033ACA1 /* TransportViewController.storyboard */,
 			);
 			name = Transport;
@@ -3975,6 +3981,7 @@
 				83AA6A311F565D0A00B2139C /* RNSRouteTable+Items.swift in Sources */,
 				836EEF131F3C02E3007631D9 /* UITableViewCell+Utils.swift in Sources */,
 				837857F51F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift in Sources */,
+				83D7137E1F5D02EA005206C5 /* TransportViewController+TableView.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
 				83AA6A331F565D5D00B2139C /* RNSRouteTable+Still.swift in Sources */,
 				836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */,
@@ -4020,6 +4027,7 @@
 				83204B2F1F591A590033ACA1 /* RNSLeftMenuBackButton.swift in Sources */,
 				83A5C6ED1F57F396006C8D62 /* RNSMoveDetailController.swift in Sources */,
 				835D85301F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift in Sources */,
+				83D713801F5D03DC005206C5 /* TransportViewController+Segment.swift in Sources */,
 				8356BE561F3D678800560623 /* RNSBusDetailWayCell.swift in Sources */,
 				83CD58591F25923400A9FE1A /* RNISMappableBase.swift in Sources */,
 				8321D6821F4D358B0022EE1C /* RNSRoadOff.swift in Sources */,
