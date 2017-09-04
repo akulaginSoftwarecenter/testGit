@@ -308,6 +308,7 @@
 		838707F11F3029210094B273 /* RNSCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */; };
 		838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */; };
 		838707F41F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */; };
+		8389CA301F5CF26B0003E8FD /* RNSPinMyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389CA2F1F5CF26B0003E8FD /* RNSPinMyLocation.swift */; };
 		838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */; };
 		838CE9311F3D9E0800C10FBA /* RNSPinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838CE9301F3D9E0800C10FBA /* RNSPinItem.swift */; };
 		838CE9351F3DA9FE00C10FBA /* RNSBusInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838CE9341F3DA9FE00C10FBA /* RNSBusInfoViewController.swift */; };
@@ -738,6 +739,7 @@
 		838707EC1F30290C0094B273 /* RNSCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSCodeViewController.swift; path = "Controllers/Authorization+Registration/Parent/Code/RNSCodeViewController.swift"; sourceTree = "<group>"; };
 		838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSCodeViewController.storyboard; path = "Controllers/Authorization+Registration/Parent/Code/RNSCodeViewController.storyboard"; sourceTree = "<group>"; };
 		838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSCodeContainerController.swift; path = "Controllers/Authorization+Registration/Parent/Code/RNSCodeContainerController.swift"; sourceTree = "<group>"; };
+		8389CA2F1F5CF26B0003E8FD /* RNSPinMyLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinMyLocation.swift; path = Views/OVerLays/PinMyLocation/RNSPinMyLocation.swift; sourceTree = "<group>"; };
 		838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utils.swift"; path = "Library/Helpers/Base objects extensions/Color/UIColor+Utils.swift"; sourceTree = "<group>"; };
 		838CE9301F3D9E0800C10FBA /* RNSPinItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinItem.swift; path = Views/OVerLays/Parent/RNSPinItem.swift; sourceTree = "<group>"; };
 		838CE9341F3DA9FE00C10FBA /* RNSBusInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusInfoViewController.swift; path = Controllers/Map/BusInfo/RNSBusInfoViewController.swift; sourceTree = "<group>"; };
@@ -1740,6 +1742,7 @@
 				836EEF141F3C12A8007631D9 /* PinBus */,
 				836277CD1F38146D009FB712 /* PinBusStop */,
 				830E68AC1F55148B008EFA02 /* PinDuration */,
+				8389CA2E1F5CF1F20003E8FD /* PinMyLocation */,
 				838EA0461F5425C400E9BF20 /* PinVariantBus */,
 				830E68B11F552647008EFA02 /* PinVariantEnd */,
 			);
@@ -2720,6 +2723,14 @@
 				8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */,
 			);
 			name = Code;
+			sourceTree = "<group>";
+		};
+		8389CA2E1F5CF1F20003E8FD /* PinMyLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8389CA2F1F5CF26B0003E8FD /* RNSPinMyLocation.swift */,
+			);
+			name = PinMyLocation;
 			sourceTree = "<group>";
 		};
 		838AB8C51F26FB7C009E9C40 /* UIColor */ = {
@@ -3865,6 +3876,7 @@
 				83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */,
 				831A85BD1F414C730095F006 /* RNSSearchViewController+Data.swift in Sources */,
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
+				8389CA301F5CF26B0003E8FD /* RNSPinMyLocation.swift in Sources */,
 				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
 				836277DD1F382CB2009FB712 /* RNSScrollShowContainer.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,

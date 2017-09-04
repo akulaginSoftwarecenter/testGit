@@ -14,6 +14,7 @@ class RNSLocationManager: NSObject {
     static let shared = RNSLocationManager()
     
     var handlerStartLocation: EmptyBlock?
+    static var handlerMyLocation: EmptyBlock?
     
     lazy var locationManager:CLLocationManager = {
         let locationManager = CLLocationManager()

@@ -21,6 +21,10 @@ class RNSMapManager: NSObject {
      */
     var mapView: MapView = RNSMapView()
     
+    lazy var pinMyLocation: RNSPinMyLocation = {
+        return RNSPinMyLocation()
+    }()
+    
     static var pointFrom: PGGeoPoint?
     static var pointHere: PGGeoPoint?
     

@@ -17,4 +17,8 @@ extension RNSLocationManager: CLLocationManagerDelegate {
             handlerStartLocation?()
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        RNSLocationManager.handlerMyLocation?()
+    }
 }

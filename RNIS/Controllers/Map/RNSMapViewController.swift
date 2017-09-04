@@ -24,6 +24,7 @@ class RNSMapViewController: UIViewController {
         super.viewDidLoad()
 
         RNSMapManager.prepareStub()
+        _ = RNSMapManager.shared.pinMyLocation
     }
     
     override func viewWillAppear(_ animated: Bool) {
