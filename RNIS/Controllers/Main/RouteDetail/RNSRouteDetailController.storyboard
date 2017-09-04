@@ -27,15 +27,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-o3-zih" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-o3-zih" customClass="RNSBlackMoveButton" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="580" width="315" height="63"/>
                                 <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="ky5-NF-OG6"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Поехали"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9f-8m-XIH">
                                 <rect key="frame" x="305" y="0.0" width="70" height="97"/>
@@ -79,7 +76,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="blackButton" destination="vmT-o3-zih" id="QqA-S8-joT"/>
                         <outlet property="detailView" destination="Jth-as-pwa" id="xv6-56-U3G"/>
                     </connections>
                 </viewController>

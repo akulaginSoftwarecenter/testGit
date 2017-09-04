@@ -32,4 +32,8 @@ class RNSBlackButton: BaseViewWithXIBInit {
     @IBAction func action(_ sender: Any) {
         handlerAction?()
     }
+    
+    override var nibNamed:String {
+        return String(describing: RNSBlackButton.self)
+    }
 }

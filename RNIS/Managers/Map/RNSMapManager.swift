@@ -46,4 +46,9 @@ class RNSMapManager: NSObject {
     static var getZoomLevel: Int {
         return Int(mapView.getZoomLevel())
     }
+    
+    static func showMoveMap() {
+        RNSPageRouteManager.removeNonActivRoute()
+        RNSMoveMapViewController.controller.pushAnimated()
+    }
 }

@@ -425,6 +425,7 @@
 		83D155951F4BD11000150144 /* RNSArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D155941F4BD11000150144 /* RNSArrowLeft.swift */; };
 		83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B701F4D484500246DFA /* RNSRoadBus.swift */; };
 		83D62B731F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */; };
+		83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */; };
 		83E183931F4400DE005912C5 /* RNSAddressViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */; };
 		83E183961F440253005912C5 /* RNSAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183951F440253005912C5 /* RNSAddressCell.swift */; };
 		83E183991F440DC3005912C5 /* RNSSearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E183981F440DC3005912C5 /* RNSSearchHistory.swift */; };
@@ -852,6 +853,7 @@
 		83D155941F4BD11000150144 /* RNSArrowLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSArrowLeft.swift; path = Views/Others/ArrowLeft/RNSArrowLeft.swift; sourceTree = "<group>"; };
 		83D62B701F4D484500246DFA /* RNSRoadBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadBus.swift; path = Views/Polylines/RoadBus/RNSRoadBus.swift; sourceTree = "<group>"; };
 		83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadActivate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadActivate.swift"; sourceTree = "<group>"; };
+		83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackMoveButton.swift; path = Views/Buttons/BlackMoveButton/RNSBlackMoveButton.swift; sourceTree = "<group>"; };
 		83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+TableView.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift"; sourceTree = "<group>"; };
 		83E183951F440253005912C5 /* RNSAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAddressCell.swift; path = Controllers/Map/Route/Address/Cell/RNSAddressCell.swift; sourceTree = "<group>"; };
 		83E183981F440DC3005912C5 /* RNSSearchHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSSearchHistory.swift; path = Models/DataBase/Search/RNSSearchHistory.swift; sourceTree = "<group>"; };
@@ -1365,6 +1367,7 @@
 			isa = PBXGroup;
 			children = (
 				83204B2D1F591A3C0033ACA1 /* LeftMenuBackButton */,
+				83D7137A1F5D001C005206C5 /* BlackMoveButton */,
 				832E4B771F2EC65C00A4AD77 /* BlackButton */,
 				838707D11F3017240094B273 /* GrayBackButton */,
 				839BCDFE1F32E83800B5CA88 /* LeftBackButton */,
@@ -3353,6 +3356,14 @@
 			name = RoadBus;
 			sourceTree = "<group>";
 		};
+		83D7137A1F5D001C005206C5 /* BlackMoveButton */ = {
+			isa = PBXGroup;
+			children = (
+				83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */,
+			);
+			name = BlackMoveButton;
+			sourceTree = "<group>";
+		};
 		83E183941F44021F005912C5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3853,6 +3864,7 @@
 				83A5C6F01F57F488006C8D62 /* RNSRouteDetailView.swift in Sources */,
 				837ABF1F1F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
 				836EEF221F3C1FDE007631D9 /* RNSImageFactory.swift in Sources */,
+				83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */,
 				83204B2A1F5911850033ACA1 /* RNSMenuBarItem.swift in Sources */,
 				837F71991F45369D00DEAA36 /* RNSPinParent.swift in Sources */,
 				8329DF601F342B5E00D542FF /* RNSRightChevronButton.swift in Sources */,

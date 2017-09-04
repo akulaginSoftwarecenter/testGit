@@ -24,19 +24,7 @@ class RNSRouteDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareBlackButton()
         detailView.item = item
-    }
-    
-    func prepareBlackButton() {
-        blackButton.handlerAction = { [weak self] in
-            self?.showMoveMap()
-        }
-    }
-    
-    func showMoveMap() {
-        RNSPageRouteManager.removeNonActivRoute()
-        RNSMoveMapViewController.controller.pushAnimated()
     }
     
     override class var storyboardName: String {

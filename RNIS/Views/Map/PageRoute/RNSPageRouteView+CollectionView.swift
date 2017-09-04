@@ -10,20 +10,6 @@ import Foundation
 
 extension RNSPageRouteView: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     
-    func prepareSizeCell() {
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-             layout.itemSize = CGSize(width: UIScreen.width, height: 179)
-        }
-    }
-    
-    var items: [RNSRouteVariant]? {
-        return RNSPageRouteManager.items
-    }
-    
-    var itemsCount: Int {
-        return items?.count ?? 0
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemsCount
     }
@@ -41,12 +27,12 @@ extension RNSPageRouteView: UICollectionViewDataSource, UICollectionViewDelegate
         return items?[indexPath.row]
     }
     
-    var currentIndexPath: IndexPath? {
-        return collectionView.indexPathForItem(at: collectionView.contentOffset)
-    }
-    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updateMap()
         updatePageControl(currentIndexPath?.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         RNSRouteDetailController.initController(item(indexPath)?.tableItem)?.pushAnimatedRed()
     }
 }
