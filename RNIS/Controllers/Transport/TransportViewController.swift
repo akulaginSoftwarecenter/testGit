@@ -12,6 +12,7 @@ class TransportViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var myRoutesView: RNSTransportTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
