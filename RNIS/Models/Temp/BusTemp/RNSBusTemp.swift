@@ -39,4 +39,8 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem, Hashable   {
     var carrier_name: String?
     var unit_name: String?
     var unit_phone: String?
+    
+    var tableModel: RNSBusTableModel {
+        return RNSBusTableModel(self)
+    }
 }

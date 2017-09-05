@@ -25,4 +25,13 @@ extension RNSBusTableItem {
     var countStill: Int {
         return itemsStill.count
     }
+    
+    func indexPatchs(_ indexPath: IndexPath) -> [IndexPath] {
+        var indexPaths = [IndexPath]()
+        for (index,_) in itemsStill.enumerated() {
+            let patch = IndexPath(row: indexPath.row + 1 + index, section: 0)
+            indexPaths.append(patch)
+        }
+        return indexPaths
+    }
 }

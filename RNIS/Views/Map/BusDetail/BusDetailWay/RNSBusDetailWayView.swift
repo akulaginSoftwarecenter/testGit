@@ -14,18 +14,40 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
     
-    var items: [RNSBusStopTemp]? {
-        return item?.stop_points
+    var items: [RNSBusTableItem]? {
+        return tableModel?.itemsStill
+    }
+    
+    var tableModel: RNSBusTableModel? {
+        didSet {
+            reloadData()
+        }
     }
     
     var item: RNSBusTemp?{
-        didSet{
-            reloadData()
+        didSet {
+            tableModel = item?.tableModel
         }
     }
 
     func reloadData() {
         tableView.reloadData()
         heightTableView.constant = tableView.tableViewContentSize
+    }
+    
+    func animateInsertStill(_ indexPath: IndexPath) {
+        guard let item = self.item(indexPath) else {
+            return
+        }
+        let indexPaths = item.indexPatchs(indexPath)
+        tableView.beginUpdates()
+        tableView.reloadRows(at: [indexPath], with: .fade)
+        if item.openStill {
+            tableView.insertRows(at: indexPaths, with: .bottom)
+        } else {
+            tableView.deleteRows(at: indexPaths, with: .top)
+        }
+        tableView.endUpdates()
+        self.heightTableView.constant = self.tableView.tableViewContentSize
     }
 }

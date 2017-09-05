@@ -23,8 +23,7 @@ extension RNSBusTableModel {
     
     func addOnePart(_ indCurrent: Int) {
         if indCurrent < 3 {
-            addFirst()
-            addItemDefRange(1..<indCurrent)
+             addItemDefRange(0..<indCurrent)
         } else {
             let beforeInd = indCurrent - 1
             let itemsStill = itemsRange(0..<beforeInd)
@@ -40,7 +39,7 @@ extension RNSBusTableModel {
         if indCurrent == indLast {
             return
         }
-        let count = indCurrent - indLast
+        let count = indLast - indCurrent
         if count < 4 {
             addItemDefRange((indCurrent+1)..<indLast+1)
         } else {
@@ -50,19 +49,10 @@ extension RNSBusTableModel {
             addItemDef(indLast - 1)
             addItemDef(indLast)
         }
-        prepareEnd()
     }
     
-    func addFirst() {
-        addItem(stop_points?.first, type: .start)
-    }
-    
-    func prepareEnd() {
-        items.last?.type = .end
-    }
-    
-    func addItem(_ stop: RNSBusStopTemp?, type: TypeBusTableItem) {
-        let item = RNSBusTableItem(stop, type: type)
+    func addItem(_ stop: RNSBusStopTemp?, type: TypeBusTableItem, typeEdge: TypeEdgeBusItem = .none) {
+        let item = RNSBusTableItem(stop, type: type, typeEdge: typeEdge)
         items.append(item)
     }
     

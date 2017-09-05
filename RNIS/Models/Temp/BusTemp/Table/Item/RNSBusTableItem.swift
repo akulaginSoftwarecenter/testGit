@@ -9,17 +9,24 @@
 import UIKit
 
 enum TypeBusTableItem {
-    case start, def, still, current, end
+    case def, still, current
+}
+
+enum TypeEdgeBusItem {
+    case start, none, end
 }
 
 class RNSBusTableItem {
+    
+    var typeEdge: TypeEdgeBusItem = .none
+    
     var type: TypeBusTableItem = .def
     var title: String? = ""
     
     var itemsStill = [RNSBusTableItem]()
     var openStill: Bool = false
     
-    init(_ stop: RNSBusStopTemp? = nil, type: TypeBusTableItem) {
+    init(_ stop: RNSBusStopTemp? = nil, type: TypeBusTableItem = .def, typeEdge: TypeEdgeBusItem = .none) {
         self.type = type
         title = stop?.name
     }
@@ -36,7 +43,11 @@ class RNSBusTableItem {
     }
     
     func prepareStart() {
-        type = .start
+        typeEdge = .start
+    }
+    
+    var titleTemp: String? {
+        return isStill ? stillText : title
     }
 }
 

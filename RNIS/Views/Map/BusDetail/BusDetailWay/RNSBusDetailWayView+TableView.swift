@@ -17,28 +17,25 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSBusDetailWayCell
         cell.item = item(indexPath)
-        cell.typeItem = typeIndex(indexPath)
         return cell
     }
     
-    func item(_ indexPath: IndexPath) -> RNSBusStopTemp? {
+    func item(_ indexPath: IndexPath) -> RNSBusTableItem? {
         return items?[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let busStop = RNSDataManager.busStop1
-        RNSMapManager.showInfoIfNeed(busStop)
-    }
-    
-    func typeIndex(_ indexPath: IndexPath) -> STTypeItemArray {
-        let index = indexPath.row
-        if index == 0 {
-            return .start
+        //let busStop = RNSDataManager.busStop1
+        //RNSMapManager.showInfoIfNeed(busStop)
+        
+        guard let item = self.item(indexPath)  else {
+            return
         }
-        if index == itemsCount - 1 {
-            return .end
+ 
+        if item.isStill {
+            item.openStill = !item.openStill
+            animateInsertStill(indexPath)
         }
-        return .normal
     }
     
     var itemsCount: Int {

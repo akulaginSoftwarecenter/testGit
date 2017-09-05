@@ -21,11 +21,16 @@ class RNSBusTableModel {
     var itemsStill: [RNSBusTableItem] {
         var itemsStill = [RNSBusTableItem]()
         for item in items {
-            itemsStill.append(item)
+             itemsStill.append(item)
             if item.isStill, item.openStill {
                 itemsStill.append(contentsOf: item.itemsStill)
             }
         }
+        
+        itemsStill.forEach { $0.typeEdge = .none }
+        itemsStill.first?.typeEdge = .start
+        itemsStill.last?.typeEdge = .end
+
         return itemsStill
     }
     
