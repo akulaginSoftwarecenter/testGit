@@ -62,26 +62,16 @@
                                     <constraint firstAttribute="height" constant="40" id="wbf-aW-Meh"/>
                                 </constraints>
                                 <segments>
-                                    <segment title=""/>
-                                    <segment title=""/>
-                                    <segment title=""/>
-                                </segments>
-                                <color key="tintColor" red="0.85098039215686272" green="0.3529411764705882" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="actionSegmented:" destination="f8r-2V-VlC" eventType="valueChanged" id="KA3-1Y-vvV"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-WG-GTw">
-                                <rect key="frame" x="30" y="129" width="315" height="41"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <segments>
                                     <segment title="Транспорт"/>
                                     <segment title="Остановки"/>
                                     <segment title="Адреса"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="actionSegmented:" destination="f8r-2V-VlC" eventType="valueChanged" id="KA3-1Y-vvV"/>
+                                </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-0W-CJ3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-0W-CJ3">
                                 <rect key="frame" x="30" y="189" width="315" height="458"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -96,7 +86,7 @@
                                                     <rect key="frame" x="0.0" y="15" width="33" height="29"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oow-Ve-xdN">
-                                                    <rect key="frame" x="48" y="20" width="37" height="20"/>
+                                                    <rect key="frame" x="48" y="19.5" width="37" height="20"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -137,18 +127,12 @@
                             <constraint firstAttribute="trailing" secondItem="8pT-Nm-gqz" secondAttribute="trailing" constant="30" id="ACy-x9-JtQ"/>
                             <constraint firstAttribute="trailing" secondItem="RbW-0W-CJ3" secondAttribute="trailing" constant="30" id="B8K-XD-6Ew"/>
                             <constraint firstItem="8pT-Nm-gqz" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="30" id="E4L-S2-W6g"/>
-                            <constraint firstItem="6Bb-WG-GTw" firstAttribute="centerY" secondItem="8pT-Nm-gqz" secondAttribute="centerY" id="KDP-QR-195"/>
                             <constraint firstItem="RbW-0W-CJ3" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="30" id="KjY-0h-gf7"/>
                             <constraint firstItem="8pT-Nm-gqz" firstAttribute="top" secondItem="6n5-Y2-3TC" secondAttribute="bottom" constant="10" id="Pg0-BT-VDg"/>
-                            <constraint firstItem="6Bb-WG-GTw" firstAttribute="height" secondItem="8pT-Nm-gqz" secondAttribute="height" id="ZFG-VC-sg3"/>
-                            <constraint firstItem="RbW-0W-CJ3" firstAttribute="top" secondItem="6Bb-WG-GTw" secondAttribute="bottom" constant="20" id="Zja-FM-62P"/>
-                            <constraint firstItem="6Bb-WG-GTw" firstAttribute="centerX" secondItem="8pT-Nm-gqz" secondAttribute="centerX" id="i60-VR-4EZ"/>
-                            <constraint firstItem="6Bb-WG-GTw" firstAttribute="width" secondItem="8pT-Nm-gqz" secondAttribute="width" id="kXz-si-8nC"/>
                             <constraint firstItem="6n5-Y2-3TC" firstAttribute="bottom" secondItem="WFt-Mo-aWU" secondAttribute="top" constant="119" id="uz4-az-cJA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="decorControl" destination="6Bb-WG-GTw" id="227-A3-Os1"/>
                         <outlet property="segmentedControl" destination="8pT-Nm-gqz" id="xaS-L7-6ki"/>
                         <outlet property="tableView" destination="RbW-0W-CJ3" id="NLH-Xp-Z75"/>
                         <outlet property="textField" destination="6n5-Y2-3TC" id="C9g-hA-AeA"/>
