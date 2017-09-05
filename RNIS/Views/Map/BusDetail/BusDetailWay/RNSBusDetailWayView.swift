@@ -14,9 +14,7 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
     
-    var items: [RNSBusTableItem]? {
-        return tableModel?.itemsStill
-    }
+    var items: [RNSBusTableItem]?
     
     var tableModel: RNSBusTableModel? {
         didSet {
@@ -31,6 +29,7 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
     }
 
     func reloadData() {
+        items = tableModel?.itemsStill
         tableView.reloadData()
         heightTableView.constant = tableView.tableViewContentSize
     }
@@ -39,6 +38,7 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
         guard let item = self.item(indexPath) else {
             return
         }
+        items = tableModel?.itemsStill
         let indexPaths = item.indexPatchs(indexPath)
         tableView.beginUpdates()
         tableView.reloadRows(at: [indexPath], with: .fade)

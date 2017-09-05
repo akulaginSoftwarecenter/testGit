@@ -78,23 +78,6 @@ class RNSBusDetailWayCell: RNSBaseTableCell {
             whiteTopLine.isHidden = isStart
             whiteDownLine.isHidden = isEnd
         }
-        /*
-        if isDef || isCurrent {
-            whiteTopLine.isHidden = false
-            whiteDownLine.isHidden = false
-        }
-        
-        if isStart {
-            topLine.isHidden = true
-            whiteTopLine.isHidden = true
-            whiteDownLine.isHidden = false
-        }
-        if isEnd {
-            whiteTopLine.isHidden = false
-            whiteDownLine.isHidden = true
-            separatorLine.isHidden = true
-        }
-     */
     }
     
     func prepareArrows() {

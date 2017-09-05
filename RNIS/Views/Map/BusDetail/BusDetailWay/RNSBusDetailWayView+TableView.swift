@@ -25,9 +25,6 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let busStop = RNSDataManager.busStop1
-        //RNSMapManager.showInfoIfNeed(busStop)
-        
         guard let item = self.item(indexPath)  else {
             return
         }
@@ -35,6 +32,9 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
         if item.isStill {
             item.openStill = !item.openStill
             animateInsertStill(indexPath)
+        } else {
+            let busStop = RNSDataManager.busStop1
+            RNSMapManager.showInfoIfNeed(busStop)
         }
     }
     
