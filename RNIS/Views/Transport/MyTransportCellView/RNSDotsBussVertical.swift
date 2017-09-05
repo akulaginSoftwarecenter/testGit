@@ -25,5 +25,6 @@ class RNSDotsBussVertical: BaseViewWithXIBInit {
     
     func updateUI() {
         tableView.reloadData()
+        durationLabel.text = item?.duration
     }
 }

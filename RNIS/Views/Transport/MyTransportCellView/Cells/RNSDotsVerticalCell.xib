@@ -63,7 +63,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ул. Культуры 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2a-tz-JEc">
-                        <rect key="frame" x="53.5" y="3.5" width="78" height="15"/>
+                        <rect key="frame" x="53.5" y="4.5" width="78" height="15"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -77,11 +77,12 @@
                     <constraint firstItem="vJ0-uf-Lm5" firstAttribute="top" secondItem="aJg-0Z-1ty" secondAttribute="top" id="SLg-2U-TXm"/>
                     <constraint firstAttribute="bottom" secondItem="ArG-U8-UDQ" secondAttribute="bottom" constant="6" id="Upe-dU-kIk"/>
                     <constraint firstItem="R38-Tn-Zbp" firstAttribute="top" secondItem="aJg-0Z-1ty" secondAttribute="top" constant="5" id="Uvq-zC-fyx"/>
-                    <constraint firstItem="L2a-tz-JEc" firstAttribute="leading" secondItem="IkI-rq-xhz" secondAttribute="trailing" constant="5" id="VR6-vv-Di0"/>
+                    <constraint firstItem="L2a-tz-JEc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IkI-rq-xhz" secondAttribute="trailing" constant="5" id="VR6-vv-Di0"/>
                     <constraint firstItem="ArG-U8-UDQ" firstAttribute="top" secondItem="aJg-0Z-1ty" secondAttribute="top" constant="24" id="WXc-wj-IST"/>
                     <constraint firstItem="Fh8-aI-9gc" firstAttribute="centerX" secondItem="vJ0-uf-Lm5" secondAttribute="centerX" id="Xtc-6W-X41"/>
                     <constraint firstItem="IkI-rq-xhz" firstAttribute="width" secondItem="Fh8-aI-9gc" secondAttribute="width" constant="10" id="YRx-0M-Se1"/>
                     <constraint firstItem="L2a-tz-JEc" firstAttribute="centerY" secondItem="IkI-rq-xhz" secondAttribute="centerY" id="fns-kh-tNU"/>
+                    <constraint firstItem="L2a-tz-JEc" firstAttribute="leading" secondItem="aJg-0Z-1ty" secondAttribute="leading" priority="750" constant="53.5" id="kUb-oK-FG4"/>
                     <constraint firstItem="Fh8-aI-9gc" firstAttribute="top" secondItem="aJg-0Z-1ty" secondAttribute="top" constant="5" id="mk5-7e-pIe"/>
                     <constraint firstItem="IkI-rq-xhz" firstAttribute="top" secondItem="aJg-0Z-1ty" secondAttribute="top" id="vOb-q4-1RX"/>
                     <constraint firstItem="R38-Tn-Zbp" firstAttribute="centerX" secondItem="vJ0-uf-Lm5" secondAttribute="centerX" id="xvM-Wz-9oC"/>

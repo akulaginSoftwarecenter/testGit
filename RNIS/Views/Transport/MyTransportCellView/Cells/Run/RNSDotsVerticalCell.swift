@@ -31,9 +31,7 @@ class RNSDotsVerticalCell: RNSBaseTableCell {
         }
         
         cirlce.isHidden = item.isBus
-        
         runLine.isHidden = !item.isRun
-        //busLine.isHidden = !item.isBus
         labelTitle.text = item.title
         labelBus.text = item.titleBus
         
@@ -41,23 +39,13 @@ class RNSDotsVerticalCell: RNSBaseTableCell {
             labelBus.isHidden = false
             viewBus.isHidden = false
             busLine.isHidden = false
-            //cirlce.isHidden = true
-            //viewBus.isHidden = false
-        } else {
-            //labelBus.isHidden = true
-            //busLine.isHidden = true
         }
-        /*
-        labelBus.isHidden = !item.isBus
-        viewBus.isHidden = !item.isBus
- */
     }
     
     func hiddenAll() {
         cirlce.isHidden = true
         runLine.isHidden = true
         busLine.isHidden = true
-        labelTitle.isHidden = true
         labelBus.isHidden = true
         viewBus.isHidden = true
     }

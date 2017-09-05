@@ -12,11 +12,11 @@ extension TransportViewController {
 
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
         tableView.isHidden = !selectedSegmentIndexIsFirst
-        //myRoutesView.isHidden = selectedSegmentIndexIsFirst
+        myRoutesView.isHidden = selectedSegmentIndexIsFirst
         if selectedSegmentIndexIsFirst {
             tableView.reloadData()
         } else {
-            //myRoutesView.generate()
+            myRoutesView.generate()
         }
         reloadTitle()
     }
