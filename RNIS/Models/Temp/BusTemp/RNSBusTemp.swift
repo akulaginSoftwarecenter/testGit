@@ -17,21 +17,11 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem, Hashable   {
     var title: String {
         return "A" + "\(num ?? 0)"
     }
-    
+   
     var point: PGGeoPoint?
-    
     var num: Int?
-    
     var handlerRemove: EmptyBlock?
-    
     var doneMove = false
-    
-    static func generate(_ point: PGGeoPoint) -> RNSBusTemp {
-        let item = RNSBusTemp()
-        item.point = point
-        item.num = Int.rand(1, limit: 200)
-        return item
-    }
     
     var titleWidth: CGFloat {
         return title.width(.cffazm20) + 22
@@ -40,4 +30,13 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem, Hashable   {
     static func ==(lhs: RNSBusTemp, rhs: RNSBusTemp) -> Bool {
         return lhs.title == rhs.title
     }
+    
+    var stop_points: [RNSBusStopTemp]?
+    var next_stop_point: RNSBusStopTemp?
+    
+    var driver: String?
+    var check_taker: String?
+    var carrier_name: String?
+    var unit_name: String?
+    var unit_phone: String?
 }

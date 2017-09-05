@@ -21,12 +21,13 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func item(_ indexPath: IndexPath) -> RNSBusStop? {
+    func item(_ indexPath: IndexPath) -> RNSBusStopTemp? {
         return items?[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        RNSMapManager.showInfoIfNeed(item(indexPath))
+        let busStop = RNSDataManager.busStop1
+        RNSMapManager.showInfoIfNeed(busStop)
     }
     
     func typeIndex(_ indexPath: IndexPath) -> STTypeItemArray {

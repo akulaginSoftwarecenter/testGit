@@ -14,11 +14,11 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
     
-    var items: List<RNSBusStop>? {
-        return item?.busStops
+    var items: [RNSBusStopTemp]? {
+        return item?.stop_points
     }
     
-    var item: RNSBus?{
+    var item: RNSBusTemp?{
         didSet{
             reloadData()
         }

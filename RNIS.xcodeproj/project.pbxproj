@@ -211,6 +211,7 @@
 		836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80F21F1DD62400FEE390 /* UIView+Layer.swift */; };
 		836E69371F5E433D003D9D46 /* RNSDotsBussVertical+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E69361F5E433D003D9D46 /* RNSDotsBussVertical+Action.swift */; };
 		836E693A1F5E448B003D9D46 /* RNSAlertTransportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E69391F5E448B003D9D46 /* RNSAlertTransportController.swift */; };
+		836E693C1F5E49E6003D9D46 /* RNSBusTemp+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E693B1F5E49E6003D9D46 /* RNSBusTemp+Random.swift */; };
 		836E91A71F58F7BD007CCF5A /* RNSMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E91A61F58F7BD007CCF5A /* RNSMenuViewController.swift */; };
 		836E91A91F58F8C2007CCF5A /* RNSMenuViewController+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E91A81F58F8C2007CCF5A /* RNSMenuViewController+Handlers.swift */; };
 		836E91B11F58F987007CCF5A /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E91AE1F58F987007CCF5A /* MenuTableViewCell.swift */; };
@@ -683,6 +684,7 @@
 		836D80F21F1DD62400FEE390 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Layer.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+Layer.swift"; sourceTree = "<group>"; };
 		836E69361F5E433D003D9D46 /* RNSDotsBussVertical+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSDotsBussVertical+Action.swift"; path = "Views/Transport/MyTransportCellView/RNSDotsBussVertical+Action.swift"; sourceTree = "<group>"; };
 		836E69391F5E448B003D9D46 /* RNSAlertTransportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertTransportController.swift; path = Alert/RNSAlertTransportController.swift; sourceTree = "<group>"; };
+		836E693B1F5E49E6003D9D46 /* RNSBusTemp+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusTemp+Random.swift"; path = "Models/Temp/BusTemp/RNSBusTemp+Random.swift"; sourceTree = "<group>"; };
 		836E91A61F58F7BD007CCF5A /* RNSMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMenuViewController.swift; path = ../RNSMenuViewController.swift; sourceTree = "<group>"; };
 		836E91A81F58F8C2007CCF5A /* RNSMenuViewController+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMenuViewController+Handlers.swift"; path = "../RNSMenuViewController+Handlers.swift"; sourceTree = "<group>"; };
 		836E91AE1F58F987007CCF5A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -1146,6 +1148,7 @@
 			isa = PBXGroup;
 			children = (
 				831A85B41F4149500095F006 /* RNSBusTemp.swift */,
+				836E693B1F5E49E6003D9D46 /* RNSBusTemp+Random.swift */,
 			);
 			name = BusTemp;
 			sourceTree = "<group>";
@@ -4064,6 +4067,7 @@
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
 				8329DF581F340F1200D542FF /* RNSParentContainer.swift in Sources */,
 				83ED5E2A1F270383007D9F1C /* RNSMapManager+OverLays.swift in Sources */,
+				836E693C1F5E49E6003D9D46 /* RNSBusTemp+Random.swift in Sources */,
 				836E91B11F58F987007CCF5A /* MenuTableViewCell.swift in Sources */,
 				835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */,
 				83AA6A5C1F5668C000B2139C /* ContactsInfoTableViewCell.swift in Sources */,

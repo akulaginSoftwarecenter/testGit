@@ -20,7 +20,7 @@ class RNSBusDetailWayCell: RNSBaseTableCell {
         }
     }
     
-    var item: RNSBusStop? {
+    var item: RNSBusStopTemp? {
         didSet{
             prepareUI()
         }
@@ -31,7 +31,7 @@ class RNSBusDetailWayCell: RNSBaseTableCell {
     @IBOutlet weak var imageDots: UIImageView!
     
     func prepareUI() {
-        titleLabel.text = item?.title
+        titleLabel.text = item?.name
     }
     
     func prepareType() {

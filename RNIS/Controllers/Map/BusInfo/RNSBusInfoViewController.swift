@@ -10,13 +10,13 @@ import UIKit
 
 class RNSBusInfoViewController: UIViewController {
     
-    static func initController(_ item: RNSBus?) -> UIViewController? {
+    static func initController(_ item: RNSBusTemp?) -> UIViewController? {
         let vc = RNSBusInfoViewController.initialController as? RNSBusInfoViewController
         vc?.item = item
         return  vc
     }
     
-    var item: RNSBus?
+    var item: RNSBusTemp?
     
     @IBOutlet weak var driverField: RNSNameFieldLeft!
     @IBOutlet weak var conductorField: RNSNameFieldLeft!
@@ -32,10 +32,10 @@ class RNSBusInfoViewController: UIViewController {
     
     func prepareUI() {
         driverField.text = item?.driver
-        conductorField.text = item?.conductor
-        depoField.text = item?.depo
-        carrierField.text = item?.carrier
-        phoneField.text = item?.phone
+        conductorField.text = item?.check_taker
+        depoField.text = item?.unit_name
+        carrierField.text = item?.carrier_name
+        phoneField.text = item?.unit_phone
     }
     
     override class var storyboardName: String {

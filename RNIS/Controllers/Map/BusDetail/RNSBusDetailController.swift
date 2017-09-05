@@ -12,7 +12,7 @@ class RNSBusDetailController: UIViewController {
     
     static func initController(_ item: RNSBus?) -> UIViewController? {
         let vc = RNSBusDetailController.initialController as? RNSBusDetailController
-        vc?.item = item
+        vc?.item = RNSBusTemp.gen
         
         let title = "Автобус №" + (item?.title ?? "")
         let container = STRouter.scrollShowContainer(vc, topTitle: title)
@@ -35,7 +35,7 @@ class RNSBusDetailController: UIViewController {
     
     lazy var bottomView: UIView = RNSConductorView(self.item)
     
-    var item: RNSBus?
+    var item: RNSBusTemp?
     var startBottomOffset: CGFloat?
 
     @IBOutlet weak var viewTotal: RNSBusDetailTotalView!

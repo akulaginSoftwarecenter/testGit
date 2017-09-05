@@ -10,21 +10,20 @@ import UIKit
 
 class RNSConductorView: BaseViewWithXIBInit {
     
-    var item: RNSBus?
+    var item: RNSBusTemp?
     
     @IBOutlet weak var driverLabel: UILabel!
     @IBOutlet weak var сonductorLabel: UILabel!
     
-    convenience init(_ item: RNSBus?) {
+    convenience init(_ item: RNSBusTemp?) {
         self.init(frame: CGRect.null)
         self.item = item
-        
         updateUI()
     }
     
     func updateUI() {
         driverLabel.text = item?.driver
-        сonductorLabel.text = item?.conductor
+        сonductorLabel.text = item?.check_taker
     }
     
     @IBAction func actionButton(_ sender: Any) {

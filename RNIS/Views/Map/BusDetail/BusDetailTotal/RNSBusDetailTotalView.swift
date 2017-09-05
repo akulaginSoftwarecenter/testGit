@@ -10,7 +10,7 @@ import UIKit
 
 class RNSBusDetailTotalView: BaseViewWithXIBInit {
     
-    var item: RNSBus?{
+    var item: RNSBusTemp?{
         didSet{
             updateUI()
         }
@@ -21,10 +21,11 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
     @IBOutlet weak var endLabel: UILabel!
     
     func updateUI() {
-        titleLabel.text = item?.title
-        let stops = item?.busStops
-        startLabel.text = stops?.first?.title
-        currentLabel.text = item?.currentBusStops?.title
-        endLabel.text = stops?.last?.title
+
+        titleLabel.text =  "\(item?.num ?? 0)"
+        let stops = item?.stop_points
+        startLabel.text = stops?.first?.name
+        currentLabel.text = item?.next_stop_point?.name
+        endLabel.text = stops?.last?.name
     }
 }
