@@ -15,10 +15,12 @@ class RNSRegisterPayload: RNISMappableBase {
     var phone: String?
     var uuid: String?
     var phone_activation_code: String?
-    var password: String?
     var name: String?
     var token: String?
     
+    var password: String?
+    var old_password: String?
+   
     convenience init(phone: String?) {
         self.init()
         
@@ -30,9 +32,11 @@ class RNSRegisterPayload: RNISMappableBase {
         phone <- map["phone"]
         uuid <- map["uuid"]
         phone_activation_code <- map["phone_activation_code"]
-        password <- map["password"]
         name <- map["name"]
         token <- map["token"]
+        
+        password <- map["password"]
+        old_password <- map["old_password"]
     }
     
     func confirmSend() {
@@ -41,5 +45,14 @@ class RNSRegisterPayload: RNISMappableBase {
         }, failure: {
             STRouter.showAlertOk($0)
         })
+    }
+    
+    static func itemUserDefault() -> RNSRegisterPayload {
+        let item = RNSRegisterPayload()
+        item.token = UserDefaults.token
+        item.uuid = UserDefaults.uuid
+        item.password = UserDefaults.password
+        item.old_password = UserDefaults.password
+        return item
     }
 }

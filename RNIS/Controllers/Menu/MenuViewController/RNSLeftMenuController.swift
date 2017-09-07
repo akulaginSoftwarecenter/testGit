@@ -22,7 +22,19 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+/*
+        let item = RNSRegisterPayload.itemUserDefault()
+        
+        RNSPostUpdate(item, complete: { item in
+            
+        }, failure: { [weak self] error in
+            
+        })
+        prepareUI()
+ */
+    }
+    
+    func prepareUI() {
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
         self.profileImageView.layer.masksToBounds = true
         self.editButton.layer.cornerRadius = self.editButton.frame.width / 2
@@ -31,7 +43,6 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.register(UINib.init(nibName: "MenuTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "MenuTableViewCell")
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        
     }
    
     override class var storyboardName: String {
