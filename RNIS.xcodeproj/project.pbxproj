@@ -356,6 +356,7 @@
 		8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
 		839875BD1F60FDA000B88F0B /* RNSPostUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */; };
 		839875BF1F610FC200B88F0B /* RNSLoginViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */; };
+		839875C21F612FC400B88F0B /* RNSParentAuthPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */; };
 		839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */; };
 		839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */; };
 		839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDF51F32CA9000B5CA88 /* RNSImagePickerController.swift */; };
@@ -816,6 +817,7 @@
 		8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSAlertViewController.storyboard; path = "Library/Base classes/AlertViewController/RNSAlertViewController.storyboard"; sourceTree = "<group>"; };
 		839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUpdate.swift; path = POST/Update/RNSPostUpdate.swift; sourceTree = "<group>"; };
 		839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+UI.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+UI.swift"; sourceTree = "<group>"; };
+		839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParentAuthPost.swift; path = POST/Parent/RNSParentAuthPost.swift; sourceTree = "<group>"; };
 		839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSProfilePhoto.swift; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.swift; sourceTree = "<group>"; };
 		839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSProfilePhoto.xib; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.xib; sourceTree = "<group>"; };
 		839BCDF51F32CA9000B5CA88 /* RNSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSImagePickerController.swift; path = "Controllers/Authorization+Registration/Registration/Name/ImagePicker/RNSImagePickerController.swift"; sourceTree = "<group>"; };
@@ -1239,6 +1241,7 @@
 		831D89901F20749F00082116 /* POST */ = {
 			isa = PBXGroup;
 			children = (
+				839875C01F612F5D00B88F0B /* Parent */,
 				8319C5B11F60DFBE005A1768 /* Register */,
 				8319C5BD1F60F251005A1768 /* ConfirmSend */,
 				8319C5C01F60F657005A1768 /* ConfirmCheck */,
@@ -3017,6 +3020,14 @@
 			name = Update;
 			sourceTree = "<group>";
 		};
+		839875C01F612F5D00B88F0B /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */,
+			);
+			name = Parent;
+			sourceTree = "<group>";
+		};
 		839BCDEC1F32BABC00B5CA88 /* ImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -4296,6 +4307,7 @@
 				836277DA1F381FE1009FB712 /* RNSDataManager.swift in Sources */,
 				83204B271F5908500033ACA1 /* MenuItem.swift in Sources */,
 				831E42661F46A2600016C7D3 /* RNSConductorView.swift in Sources */,
+				839875C21F612FC400B88F0B /* RNSParentAuthPost.swift in Sources */,
 				836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */,
 				8319C5B91F60E96B005A1768 /* RNSTextErrorProtocol.swift in Sources */,
 				836E91A91F58F8C2007CCF5A /* RNSMenuViewController+Handlers.swift in Sources */,

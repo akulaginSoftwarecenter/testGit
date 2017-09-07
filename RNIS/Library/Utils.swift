@@ -22,6 +22,7 @@ typealias AliasOverlayBlock = (PGOverlay) -> ()
 typealias AliasStringBlock = (String?) -> ()
 typealias AliasBoolBlock = (Bool) -> ()
 typealias AliasRegisterPayloadBlock = (RNSRegisterPayload?) -> ()
+typealias AliasPostRegister = RNSRequestReply<RNSRegisterPayload,RNSRegisterError>
 
 func NSLoc(_ key: String?) -> String {
     guard let key = key else {
