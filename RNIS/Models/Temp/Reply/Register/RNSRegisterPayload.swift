@@ -17,6 +17,7 @@ class RNSRegisterPayload: RNISMappableBase {
     var phone_activation_code: String?
     var password: String?
     var name: String?
+    var token: String?
     
     public override func mapping(map: Map) {
         is_phone_activated <- map["is_phone_activated"]
@@ -25,6 +26,7 @@ class RNSRegisterPayload: RNISMappableBase {
         phone_activation_code <- map["phone_activation_code"]
         password <- map["password"]
         name <- map["name"]
+        token <- map["token"]
     }
     
     func confirmSend() {

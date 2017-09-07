@@ -11,17 +11,8 @@ import Foundation
 extension RNSProfileViewController {
     
     func showAlert() {
-        STRouter.showAlertBtns("Выйти из аккаунта?") { [weak self] in
-            self?.logout()
-        }
-    }
-    
-    func logout() {
-        STRouter.showLoader()
-        RNSPostLogout { _, _, _ in
-            STRouter.removeLoader()
-            UserDefaults.removeToken()
-            STRouter.showLogin()
+        STRouter.showAlertBtns("Выйти из аккаунта?") {
+            RNISAuthManager.logout()
         }
     }
 }

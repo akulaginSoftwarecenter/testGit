@@ -355,6 +355,7 @@
 		8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
 		8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
 		839875BD1F60FDA000B88F0B /* RNSPostUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */; };
+		839875BF1F610FC200B88F0B /* RNSLoginViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */; };
 		839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */; };
 		839BCDF11F32BB6500B5CA88 /* RNSProfilePhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */; };
 		839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BCDF51F32CA9000B5CA88 /* RNSImagePickerController.swift */; };
@@ -814,6 +815,7 @@
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
 		8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSAlertViewController.storyboard; path = "Library/Base classes/AlertViewController/RNSAlertViewController.storyboard"; sourceTree = "<group>"; };
 		839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUpdate.swift; path = POST/Update/RNSPostUpdate.swift; sourceTree = "<group>"; };
+		839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+UI.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+UI.swift"; sourceTree = "<group>"; };
 		839BCDED1F32BAF200B5CA88 /* RNSProfilePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSProfilePhoto.swift; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.swift; sourceTree = "<group>"; };
 		839BCDF01F32BB6500B5CA88 /* RNSProfilePhoto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSProfilePhoto.xib; path = Views/ImageView/ProfilePhoto/RNSProfilePhoto.xib; sourceTree = "<group>"; };
 		839BCDF51F32CA9000B5CA88 /* RNSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSImagePickerController.swift; path = "Controllers/Authorization+Registration/Registration/Name/ImagePicker/RNSImagePickerController.swift"; sourceTree = "<group>"; };
@@ -1596,6 +1598,7 @@
 			isa = PBXGroup;
 			children = (
 				832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */,
+				839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */,
 				837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */,
 				832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */,
 			);
@@ -2385,7 +2388,6 @@
 				832E4B9D1F2ED5D200A4AD77 /* TextField */,
 				83A53F8E1F4A9D1300938969 /* UICollectionView */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,
-				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				837B66741F3957C50048C5BA /* UIScreen */,
 				83029BCD1F4BEC9F00B0FEE3 /* UIStackView */,
 				836EEF0A1F3C0188007631D9 /* UITableView */,
@@ -2902,6 +2904,7 @@
 		838AB8C51F26FB7C009E9C40 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
+				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */,
 			);
 			name = UIColor;
@@ -4014,6 +4017,7 @@
 				83AA6A5E1F5668C000B2139C /* ContactsInfoViewController.swift in Sources */,
 				835A31251F4D2F6500F83BE2 /* Sequence+Utils.swift in Sources */,
 				83A53F901F4A9D3C00938969 /* UICollectionView+Utils.swift in Sources */,
+				839875BF1F610FC200B88F0B /* RNSLoginViewController+UI.swift in Sources */,
 				835D85331F4FC72E00B83EB2 /* RNSRoadRun.swift in Sources */,
 				8329DF541F340E8B00D542FF /* RNSRedContainer.swift in Sources */,
 				838707DF1F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */,

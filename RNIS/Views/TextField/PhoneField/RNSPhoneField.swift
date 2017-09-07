@@ -20,6 +20,11 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         return number.last10
     }
     
+    func preparePhone(_ phone: String?) {
+        text = InputFieldsValidator.format(phone).text
+        textFieldDidChange()
+    }
+    
     var handlerDidChange: EmptyBlock?
     
     override var errorText:String? {
@@ -32,8 +37,8 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
     
     convenience init(phone: String?) {
         self.init()
-        text = InputFieldsValidator.format(phone).text
-        textFieldDidChange()
+        
+        preparePhone(phone)
     }
     
     required init() {

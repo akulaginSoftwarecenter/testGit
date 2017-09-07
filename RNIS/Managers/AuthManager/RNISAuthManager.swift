@@ -12,10 +12,20 @@ class RNISAuthManager {
     /**
      *  get токен at com.rnis.auth.action.login, after show map
      */
-    /*
-    class func auth() {
-       RNSPostLogin()
-        //STRouter.showMap()
+    static func checkToken() {
+        if UserDefaults.token != nil {
+            STRouter.showMenu()
+        } else {
+            STRouter.showLogin()
+        }
     }
-    */
+    
+    static func logout() {
+        STRouter.showLoader()
+        RNSPostLogout { _, _, _ in
+            STRouter.removeLoader()
+            UserDefaults.removeToken()
+            STRouter.showLogin()
+        }
+    }
 }

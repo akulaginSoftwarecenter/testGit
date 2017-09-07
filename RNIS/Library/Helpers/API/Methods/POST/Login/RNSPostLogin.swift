@@ -20,6 +20,8 @@ class RNSPostLogin: RNSRequest {
     var complete: EmptyBlock?
     var failure: AliasStringBlock?
     
+    typealias AliasModel = RNSRequestReply<RNSRegisterPayload,RNSLoginError>
+    
     @discardableResult convenience init(_ login: String?, password: String?, complete: EmptyBlock?, failure: AliasStringBlock?) {
         self.init()
         
@@ -29,20 +31,23 @@ class RNSPostLogin: RNSRequest {
         self.failure = failure
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
-            self?.parseReply(RNSRequestReply<RNSTokenPayload,RNSLoginError>(reply: object))
+            self?.parseReply(AliasModel(reply: object))
         }
     }
     
-    func parseReply(_ model: RNSRequestReply<RNSTokenPayload,RNSLoginError>?) {
-        if let token = model?.payload?.token {
+    func parseReply(_ model: AliasModel?) {
+        if let payload = model?.payload,
+            let token = payload.token,
+            let uuid = payload.uuid {
             UserDefaults.setToken(token)
+            UserDefaults.setUuid(uuid)
             complete?()
             return
         }
         parseError(model)
     }
     
-    func parseError(_ model: RNSRequestReply<RNSTokenPayload,RNSLoginError>?) {
+    func parseError(_ model: AliasModel?) {
         guard let error = model?.errors?.first,
             var text = error.text else {
             return
@@ -59,11 +64,11 @@ class RNSPostLogin: RNSRequest {
         let password = password else {
             return [:]
         }
-        return ["login":login,
+        return ["phone":login,
                 "password":password]
     }
     
     override var subject: String {
-        return "com.rnis.auth.action.login"
+        return "com.rnis.mobile.action.mobile_user.login"
     }
 }

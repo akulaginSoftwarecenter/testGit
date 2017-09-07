@@ -15,6 +15,8 @@ class RNSLoginViewController: UIViewController {
     @IBOutlet weak var passwordField: STPasswordField!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var item: RNSRegisterPayload?
+    
     lazy var fields:[RNSTextField] = {
         return [self.loginField, self.passwordField]
     }()
@@ -26,12 +28,7 @@ class RNSLoginViewController: UIViewController {
             self?.loginPressed()
         }
         
-        stubLogin()
-    }
-    
-    func stubLogin() {
-        loginField.text = "admin"
-        passwordField.text = "password"
+        prepareLoginIfNeed()
     }
     
     func loginPressed() {
@@ -41,11 +38,14 @@ class RNSLoginViewController: UIViewController {
             return
         }
         clearError()
- 
-        guard let login = loginField.text,
-        let password = passwordField.text else {
+        
+        guard let password = passwordField.text else {
             return
         }
+        let login = "+7" + loginField.last10
+        
+        UserDefaults.setLogin(login)
+        UserDefaults.setPassword(password)
         
         STRouter.showLoader()
         RNSPostLogin(login, password: password, complete: {
@@ -55,15 +55,6 @@ class RNSLoginViewController: UIViewController {
             STRouter.removeLoader()
             self?.prepareError(errorText)
         })
-    }
-    
-    func  prepareError(_ error: String?) {
-        errorLabel.text = error
-    }
-    
-    func clearError() {
-        fields.clearError()
-        errorLabel.text = nil
     }
     
     override class var storyboardName: String {

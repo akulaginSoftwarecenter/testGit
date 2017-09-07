@@ -12,18 +12,37 @@ extension UserDefaults {
     
     static let kLaunchedBefore = "launchedBefore"
     
+    static let kLoginField = "loginField"
+    static let kPasswordField = "passwordField"
     static let kToken = "token"
+    static let kUuid = "uuid"
     
-    static var token:String? {
+    static var uuid: String? {
+        return standard.string(forKey: kUuid)
+    }
+    
+    static var token: String? {
         return standard.string(forKey: kToken)
     }
     
-    static var launchedBefore:Bool {
+    static var launchedBefore: Bool {
         return standard.bool(forKey: kLaunchedBefore)
+    }
+    
+    static var login: String? {
+        return standard.string(forKey: kLoginField)
+    }
+    
+    static var password: String? {
+        return standard.string(forKey: kPasswordField)
     }
      
     static func setToken(_ value: String) {
         standard.set(value, forKey: kToken)
+    }
+    
+    static func setUuid(_ value: String) {
+        standard.set(value, forKey: kUuid)
     }
     
     static func setLaunchedBeforeComplete() {
@@ -32,5 +51,13 @@ extension UserDefaults {
     
     static func removeToken() {
         standard.removeObject(forKey: kToken)
+    }
+    
+    static func setLogin(_ value: String?) {
+        standard.set(value, forKey: kLoginField)
+    }
+    
+    static func setPassword(_ value: String?) {
+        standard.set(value, forKey: kPasswordField)
     }
 }

@@ -37,16 +37,30 @@ class RNSRegistrationNameController: UIViewController {
     func buttonPressed() {
         if !nameField.isValid {
             nameField.setStateNotValid()
-            errorLabel.text = "Введите имя"
+            prepareError("Введите имя")
             return
         }
         clearError()
-        //STRouter.showLogin()
+        send()
+    }
+    
+    func send() {
+        item?.name = nameField.text
+        
+        RNSPostUpdate(item, complete: {
+            STRouter.showLogin($0)
+            }, failure: { [weak self] error in
+                self?.prepareError(error)
+        })
+    }
+    
+    func prepareError(_ error: String?) {
+        errorLabel.text = error
     }
     
     func clearError() {
         nameField.setStateValid()
-        errorLabel.text = nil
+        prepareError(nil)
     }
    
     override class var storyboardName: String {

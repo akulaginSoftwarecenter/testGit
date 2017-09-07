@@ -22,8 +22,4 @@ extension RNSLoginViewController {
     func push(_ viewController: UIViewController) {
         STRouter.pushAnimatedImageBoard(viewController)
     }
-    
-    @IBAction func actionProfile(_ sender: Any) {
-        RNSProfileViewController.initialController.pushAnimatedRedScroll()
-    }
 }
