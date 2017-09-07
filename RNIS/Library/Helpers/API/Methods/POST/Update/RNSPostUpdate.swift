@@ -1,5 +1,5 @@
 //
-//  RNSPostConfirmCheck.swift
+//  RNSPostUpdate.swift
 //  RNIS
 //
 //  Created by Артем Кулагин on 07.09.17.
@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class RNSPostConfirmCheck: RNSRequest {
+class RNSPostUpdate: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post
     }
@@ -32,9 +32,9 @@ class RNSPostConfirmCheck: RNSRequest {
     }
     
     func parseReply(_ model: AliasPostRegister?) {
-        if  model?.success ?? false, let payload = model?.payload {
-            let vc = RNSRegistrationParoleController.initController(payload)
-            STRouter.pushAnimatedImageBoard(vc)
+        if  model?.success ?? false {
+            print("parseReply success")
+                    //STRouter.pushAnimatedImageBoard(RNSRegistrationNameController.initialController)
             return
         }
         parseError(model)
@@ -51,10 +51,11 @@ class RNSPostConfirmCheck: RNSRequest {
         guard let item = item else {
             return [:]
         }
+
         return item.toJSON()
     }
     
     override var subject: String {
-        return "com.rnis.mobile.action.mobile_user.confirm.check"
+        return "com.rnis.mobile.action.mobile_user.update"
     }
 }

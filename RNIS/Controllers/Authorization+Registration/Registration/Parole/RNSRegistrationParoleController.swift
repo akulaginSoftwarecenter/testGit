@@ -31,6 +31,14 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
     }
     
     override func actionNext() {
-        STRouter.pushAnimatedImageBoard(RNSRegistrationNameController.initialController)
+        item?.password = passwordOne
+        
+        RNSPostUpdate(item) {[weak self] error in
+            self?.prepareError(error)
+        }
+    }
+    
+    func prepareError(_ error: String?) {
+        containerViewController?.errorLabel.text = error
     }
 }
