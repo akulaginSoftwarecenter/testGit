@@ -15,16 +15,16 @@ class RNSPostRegister: RNSRequest {
         return .post
     }
     
-    var phone: String?
+    var item: RNSRegisterPayload?
     var failure: AliasStringBlock?
     var complete: AliasRegisterPayloadBlock?
     
     typealias AliasPostRegister = RNSRequestReply<RNSRegisterPayload,RNSRegisterError>
     
-    @discardableResult convenience init(_ phone: String?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
+    @discardableResult convenience init(_ item: RNSRegisterPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
         self.init()
         
-        self.phone = phone
+        self.item = item
         self.failure = failure
         self.complete = complete
         STRouter.showLoader()
@@ -50,10 +50,10 @@ class RNSPostRegister: RNSRequest {
     }
     
     override var payload: AliasDictionary {
-        guard let phone = phone else {
-                return [:]
+        guard let item = item else {
+            return [:]
         }
-        return ["phone": phone]
+        return item.toJSON()
     }
     
     override var subject: String {

@@ -48,13 +48,8 @@ class RNSPhoneContrainerController: STContainerViewController {
     }
     
     override func actionNext() {
-        let phone = "+7" + (phoneText ?? "")
-        
-        RNSPostRegister(phone, complete: { [weak self] item in
-            self?.actionComplete(item)
-        }, failure: { [weak self] error in
-            self?.prepareError(error)
-        })
+        let item = RNSRegisterPayload(phone: "+7" + (phoneText ?? ""))
+        actionComplete(item)
     }
     
     func actionComplete(_ item: RNSRegisterPayload?) {

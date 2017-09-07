@@ -19,6 +19,12 @@ class RNSRegisterPayload: RNISMappableBase {
     var name: String?
     var token: String?
     
+    convenience init(phone: String?) {
+        self.init()
+        
+        self.phone = phone
+    }
+    
     public override func mapping(map: Map) {
         is_phone_activated <- map["is_phone_activated"]
         phone <- map["phone"]
@@ -30,6 +36,10 @@ class RNSRegisterPayload: RNISMappableBase {
     }
     
     func confirmSend() {
-        RNSPostConfirmSend(phone)
+        RNSPostConfirmSend(self, complete: { item in
+            STRouter.showAlertRepeatCode()
+        }, failure: {
+            STRouter.showAlertOk($0)
+        })
     }
 }

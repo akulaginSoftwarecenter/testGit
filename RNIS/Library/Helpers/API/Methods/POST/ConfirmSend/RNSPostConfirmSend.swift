@@ -15,14 +15,18 @@ class RNSPostConfirmSend: RNSRequest {
         return .post
     }
     
-    var phone: String?
+    var item: RNSRegisterPayload?
+    var failure: AliasStringBlock?
+    var complete: AliasRegisterPayloadBlock?
     
     typealias AliasPostRegister = RNSRequestReply<RNSRegisterPayload,RNSRegisterError>
     
-    @discardableResult convenience init(_ phone: String?) {
+    @discardableResult convenience init(_ item: RNSRegisterPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
         self.init()
         
-        self.phone = phone
+        self.item = item
+        self.failure = failure
+        self.complete = complete
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             STRouter.removeLoader()
@@ -32,7 +36,7 @@ class RNSPostConfirmSend: RNSRequest {
     
     func parseReply(_ model: AliasPostRegister?) {
         if  model?.success ?? false {
-            STRouter.showAlertRepeatCode()
+            complete?(item)
             return
         }
         parseError(model)
@@ -42,15 +46,14 @@ class RNSPostConfirmSend: RNSRequest {
         guard let error = model?.errors?.first?.textError else {
             return
         }
-        
-        STRouter.showAlertOk(error)
+        failure?(error)
     }
     
     override var payload: AliasDictionary {
-        guard let phone = phone else {
+        guard let item = item else {
             return [:]
         }
-        return ["phone": phone]
+        return item.toJSON()
     }
     
     override var subject: String {
