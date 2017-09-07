@@ -9,7 +9,13 @@
 import UIKit
 
 class RNSRecoveryParoleController: RNSParoleContainerController {
-
+    
+    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+        let vc = RNSRecoveryParoleController.controller as? RNSRecoveryParoleController
+        vc?.item = item
+        return vc
+    }
+ 
     override var typeTitle: TypeTitle {
         return .recovery
     }
@@ -22,7 +28,15 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
         return "Сохранить"
     }
     
-    override func actionNext() {
-        STRouter.showLogin()
+    override func actionComplete(_ item: RNSRegisterPayload?) {
+        RNSPostUpdate(item, complete: {
+            STRouter.showLogin($0)
+        }, failure: { [weak self] error in
+            self?.prepareError(error)
+        })
+    }
+    
+    func prepareError(_ error: String?) {
+        containerViewController?.errorLabel.text = error
     }
 }

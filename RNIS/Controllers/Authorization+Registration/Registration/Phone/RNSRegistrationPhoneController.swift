@@ -14,17 +14,7 @@ class RNSRegistrationPhoneController: RNSPhoneContrainerController {
         return .registration
     }
     
-    override func actionNext() {
-        let phone = "+7" + (phoneText ?? "")
-        
-        RNSPostRegister(phone, complete: {
-            RNSRegistrationCodeController.initController($0)?.pushAnimatedImageBoard()
-        }, failure: { [weak self] error in
-            self?.prepareError(error)
-        })
-    }
-    
-    func prepareError(_ error: String?) {
-        containerViewController?.errorLabel.text = error
+    override func actionComplete(_ item: RNSRegisterPayload?) {
+        RNSRegistrationCodeController.initController(item)?.pushAnimatedImageBoard()
     }
 }

@@ -12,7 +12,7 @@ class RNSChangeCodeController: RNSCodeContainerController {
     
     static func initController(_ phone: String?) -> UIViewController? {
         let vc = RNSChangeCodeController.controller as? RNSCodeContainerController
-        vc?.phone = phone
+        //vc?.phone = phone
         return vc
     }
     

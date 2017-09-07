@@ -10,8 +10,6 @@ import UIKit
 
 class RNSRegistrationParoleController: RNSParoleContainerController {
     
-    var item: RNSRegisterPayload?
-    
     static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
         let vc = RNSRegistrationParoleController.controller as? RNSRegistrationParoleController
         vc?.item = item
@@ -30,8 +28,7 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
         return "Далее"
     }
     
-    override func actionNext() {
-        item?.password = passwordOne
+    override func actionComplete(_ item: RNSRegisterPayload?) {
         RNSRegistrationNameController.initController(item)?.pushAnimatedImageBoard()
     }
 }

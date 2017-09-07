@@ -10,11 +10,11 @@ import UIKit
 
 class RNSCodeContainerController: STContainerViewController {
    
+   var item: RNSRegisterPayload?
+    
    var containerViewController: RNSCodeViewController? {
         return (enterViewController as? RNSCodeViewController)
    }
-
-   var phone: String?
     
    override func prepareEnterViewController(){
         super.prepareEnterViewController()
@@ -22,7 +22,7 @@ class RNSCodeContainerController: STContainerViewController {
         containerViewController?.handlerRepeatCode = { [weak self] in
             self?.repeatCodeAction()
         }
-        containerViewController?.phone = phone
+        containerViewController?.phone = item?.phone
     }
 
     
@@ -31,7 +31,24 @@ class RNSCodeContainerController: STContainerViewController {
     }
     
     func repeatCodeAction() {
+        item?.confirmSend()
+    }
+    
+    override func actionNext() {
+        item?.phone_activation_code = codeText
+        RNSPostConfirmCheck(item, complete: { [weak self] item in
+            self?.actionComplete(item)
+        }, failure: { [weak self] error in
+            self?.prepareError(error)
+        })
+    }
+    
+    func actionComplete(_ item: RNSRegisterPayload?) {
         
+    }
+    
+    func prepareError(_ error: String?) {
+        containerViewController?.errorLabel.text = error
     }
     
     override class var storyboardName: String {

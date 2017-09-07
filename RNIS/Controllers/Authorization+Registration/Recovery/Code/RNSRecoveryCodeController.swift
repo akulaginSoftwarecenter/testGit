@@ -10,9 +10,9 @@ import UIKit
 
 class RNSRecoveryCodeController: RNSCodeContainerController {
     
-    static func initController(_ phone: String?) -> UIViewController? {
-        let vc = RNSRecoveryCodeController.controller as? RNSCodeContainerController
-        vc?.phone = phone
+    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+        let vc = RNSRecoveryCodeController.controller as? RNSRecoveryCodeController
+        vc?.item = item
         return vc
     }
   
@@ -20,11 +20,7 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
         return .recovery
     }
     
-    override func actionNext() {
-        STRouter.pushAnimatedImageBoard(RNSRecoveryParoleController.controller)
-    }
-    
-    override func repeatCodeAction() {
-        STRouter.showAlertRepeatCode()
+    override func actionComplete(_ item: RNSRegisterPayload?) {
+        RNSRecoveryParoleController.initController(item)?.pushAnimatedImageBoard()
     }
 }

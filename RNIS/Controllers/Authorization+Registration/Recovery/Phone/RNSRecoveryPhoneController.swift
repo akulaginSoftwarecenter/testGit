@@ -13,9 +13,8 @@ class RNSRecoveryPhoneController: RNSPhoneContrainerController {
     override var typeTitle: TypeTitle {
         return .recovery
     }
-    
-    override func actionNext() {
-        let vc = RNSRecoveryCodeController.initController(phoneText)
-        STRouter.pushAnimatedImageBoard(vc)
-     }
+
+    override func actionComplete(_ item: RNSRegisterPayload?) {
+        RNSRecoveryCodeController.initController(item)?.pushAnimatedImageBoard()
+    }
 }

@@ -47,6 +47,25 @@ class RNSPhoneContrainerController: STContainerViewController {
         containerViewController?.backButton.title = text
     }
     
+    override func actionNext() {
+        let phone = "+7" + (phoneText ?? "")
+        
+        RNSPostRegister(phone, complete: { [weak self] item in
+            self?.actionComplete(item)
+        }, failure: { [weak self] error in
+            self?.prepareError(error)
+        })
+    }
+    
+    func actionComplete(_ item: RNSRegisterPayload?) {
+
+    }
+    
+    func prepareError(_ error: String?) {
+        containerViewController?.errorLabel.text = error
+    }
+    
+    
     override class var storyboardName: String {
         return kPhoneVC
     }

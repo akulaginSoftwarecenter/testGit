@@ -10,6 +10,8 @@ import UIKit
 
 class RNSParoleContainerController: STContainerViewController {
 
+    var item: RNSRegisterPayload?
+    
     var containerViewController: RNSParoleViewController? {
         return (enterViewController as? RNSParoleViewController)
     }
@@ -35,6 +37,15 @@ class RNSParoleContainerController: STContainerViewController {
     
     var titleBlackButton: String? {
         return ""
+    }
+    
+    override func actionNext() {
+        item?.password = passwordOne
+        actionComplete(item)
+    }
+    
+    func actionComplete(_ item: RNSRegisterPayload?) {
+        
     }
   
     override class var storyboardName: String {
