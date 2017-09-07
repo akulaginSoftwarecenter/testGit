@@ -38,6 +38,7 @@
 		8319C5B91F60E96B005A1768 /* RNSTextErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */; };
 		8319C5BC1F60EDAE005A1768 /* RNSRegisterPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5BB1F60EDAE005A1768 /* RNSRegisterPayload.swift */; };
 		8319C5BF1F60F2AA005A1768 /* RNSPostConfirmSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */; };
+		8319C5C21F60F6A7005A1768 /* RNSPostConfirmCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5C11F60F6A7005A1768 /* RNSPostConfirmCheck.swift */; };
 		831A85951F413E370095F006 /* RNSSearchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85941F413E370095F006 /* RNSSearchViewController+Action.swift */; };
 		831A85AB1F4145830095F006 /* RNSSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85AA1F4145830095F006 /* RNSSearchCell.swift */; };
 		831A85AE1F4148440095F006 /* RNSTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85AD1F4148440095F006 /* RNSTextItem.swift */; };
@@ -531,6 +532,7 @@
 		8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTextErrorProtocol.swift; path = TextError/RNSTextErrorProtocol.swift; sourceTree = "<group>"; };
 		8319C5BB1F60EDAE005A1768 /* RNSRegisterPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegisterPayload.swift; path = Models/Temp/Reply/Register/RNSRegisterPayload.swift; sourceTree = "<group>"; };
 		8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostConfirmSend.swift; path = POST/ConfirmSend/RNSPostConfirmSend.swift; sourceTree = "<group>"; };
+		8319C5C11F60F6A7005A1768 /* RNSPostConfirmCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostConfirmCheck.swift; path = POST/ConfirmCheck/RNSPostConfirmCheck.swift; sourceTree = "<group>"; };
 		831A85941F413E370095F006 /* RNSSearchViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+Action.swift"; path = "Controllers/Map/Search/RNSSearchViewController+Action.swift"; sourceTree = "<group>"; };
 		831A85AA1F4145830095F006 /* RNSSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSSearchCell.swift; path = Controllers/Map/Search/Cell/RNSSearchCell.swift; sourceTree = "<group>"; };
 		831A85AD1F4148440095F006 /* RNSTextItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTextItem.swift; path = Text/RNSTextItem.swift; sourceTree = "<group>"; };
@@ -1163,6 +1165,14 @@
 			name = ConfirmSend;
 			sourceTree = "<group>";
 		};
+		8319C5C01F60F657005A1768 /* ConfirmCheck */ = {
+			isa = PBXGroup;
+			children = (
+				8319C5C11F60F6A7005A1768 /* RNSPostConfirmCheck.swift */,
+			);
+			name = ConfirmCheck;
+			sourceTree = "<group>";
+		};
 		831A85931F413D5A0095F006 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1227,6 +1237,7 @@
 			children = (
 				8319C5B11F60DFBE005A1768 /* Register */,
 				8319C5BD1F60F251005A1768 /* ConfirmSend */,
+				8319C5C01F60F657005A1768 /* ConfirmCheck */,
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				83CD58491F25870900A9FE1A /* Routing */,
@@ -4227,6 +4238,7 @@
 				838707D31F3017870094B273 /* RNSGrayBackButton.swift in Sources */,
 				836D80DD1F1DC87100FEE390 /* Utils.swift in Sources */,
 				8357186C1F219EB600DE5E25 /* STRouter.swift in Sources */,
+				8319C5C21F60F6A7005A1768 /* RNSPostConfirmCheck.swift in Sources */,
 				83A53F961F4A9F0800938969 /* RNSRouteVariant.swift in Sources */,
 				838EA0451F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift in Sources */,
 				838EA02E1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift in Sources */,

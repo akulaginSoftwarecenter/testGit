@@ -10,6 +10,14 @@ import UIKit
 
 class RNSRegistrationParoleController: RNSParoleContainerController {
     
+    var item: RNSRegisterPayload?
+    
+    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+        let vc = RNSRegistrationParoleController.controller as? RNSRegistrationParoleController
+        vc?.item = item
+        return vc
+    }
+    
     override var typeTitle: TypeTitle {
         return .registration
     }

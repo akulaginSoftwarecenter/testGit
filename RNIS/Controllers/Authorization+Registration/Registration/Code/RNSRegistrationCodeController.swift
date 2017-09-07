@@ -24,7 +24,14 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     }
     
     override func actionNext() {
-        STRouter.pushAnimatedImageBoard(RNSRegistrationParoleController.controller)
+        item?.phone_activation_code = codeText
+        RNSPostConfirmCheck(item) {[weak self] error in
+            self?.prepareError(error)
+        }
+    }
+    
+    func prepareError(_ error: String?) {
+        containerViewController?.errorLabel.text = error
     }
     
     override func repeatCodeAction() {

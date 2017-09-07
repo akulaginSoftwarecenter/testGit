@@ -14,6 +14,7 @@ class RNSRegisterPayload: RNISMappableBase {
     var is_phone_activated: Int?
     var phone: String?
     var uuid: String?
+    var phone_activation_code: String?
     
     public override func mapping(map: Map) {
         is_phone_activated <- map["is_phone_activated"]
