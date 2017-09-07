@@ -25,9 +25,8 @@ class RNSRequest: AlamofireAPI {
     }
     
     var headers: AliasDictionary {
-        return ["version": "1.0.0",
-                "requester": "ios",
-                "timestamp": ""]
+        return ["version": "1.0",
+                "requester": "web"]
     }
     
     var payload: AliasDictionary {

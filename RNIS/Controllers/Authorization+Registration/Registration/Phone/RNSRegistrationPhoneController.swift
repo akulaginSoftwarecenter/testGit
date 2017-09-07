@@ -15,7 +15,17 @@ class RNSRegistrationPhoneController: RNSPhoneContrainerController {
     }
     
     override func actionNext() {
-        let vc = RNSRegistrationCodeController.initController(phoneText)
-        STRouter.pushAnimatedImageBoard(vc)
+        clearError()
+        RNSPostRegister(phoneText) {[weak self] error in
+            self?.prepareError(error)
+        }
+    }
+    
+    func prepareError(_ error: String?) {
+        containerViewController?.errorLabel.text = error
+    }
+    
+    func clearError() {
+        containerViewController?.clearError()
     }
 }

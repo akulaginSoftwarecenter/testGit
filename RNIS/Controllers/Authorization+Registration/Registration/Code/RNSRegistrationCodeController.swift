@@ -10,9 +10,12 @@ import UIKit
 
 class RNSRegistrationCodeController: RNSCodeContainerController {
     
-    static func initController(_ phone: String?) -> UIViewController? {
-        let vc = RNSRegistrationCodeController.controller as? RNSCodeContainerController
-        vc?.phone = phone
+    var item: RNSRegisterPayload?
+    
+    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+        let vc = RNSRegistrationCodeController.controller as? RNSRegistrationCodeController
+        vc?.item = item
+        vc?.phone = item?.phone
         return vc
     }
     

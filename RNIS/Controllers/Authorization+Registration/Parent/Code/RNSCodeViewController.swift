@@ -25,7 +25,7 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
         guard let phone = phone else {
             return
         }
-        phoneLabel.text = InputFieldsValidator.format("+7" + phone).text
+        phoneLabel.text = InputFieldsValidator.format(phone).text
     }
     
     override func loginPressed() {

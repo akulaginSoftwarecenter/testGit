@@ -24,4 +24,18 @@ class RNSRequestError<T: Mappable>: RNISMappableBase {
         data <- map["data"]
         text <- map["text"]
     }
+    
+    var textError: String {
+        var textError = ""
+        
+        if let text = self.text {
+            textError += text
+        }
+        
+        if let data = data as? RNSTextErrorProtocol,
+            let error = data.textError  {
+            textError += "," + error
+        }
+        return textError
+    }
 }
