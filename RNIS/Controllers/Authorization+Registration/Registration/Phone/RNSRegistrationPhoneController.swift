@@ -16,7 +16,8 @@ class RNSRegistrationPhoneController: RNSPhoneContrainerController {
     
     override func actionNext() {
         clearError()
-        RNSPostRegister(phoneText) {[weak self] error in
+        let phone = "+7" + (phoneText ?? "")
+        RNSPostRegister(phone) {[weak self] error in
             self?.prepareError(error)
         }
     }

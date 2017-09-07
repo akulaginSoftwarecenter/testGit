@@ -20,5 +20,8 @@ class RNSRegisterPayload: RNISMappableBase {
         phone <- map["phone"]
         uuid <- map["uuid"]
     }
-
+    
+    func confirmSend() {
+        RNSPostConfirmSend(phone)
+    }
 }

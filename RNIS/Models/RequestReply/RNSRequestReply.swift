@@ -12,6 +12,7 @@ import ObjectMapper
 class RNSRequestReply<T1: Mappable,T2: Mappable>: RNISMappableBase {
     var payload: T1?
     var errors: [RNSRequestError<T2>]?
+    var success: Bool?
     
     
     convenience init?(reply: AnyObject?) {
@@ -24,5 +25,6 @@ class RNSRequestReply<T1: Mappable,T2: Mappable>: RNISMappableBase {
     public override func mapping(map: Map) {
         payload <- map["payload"]
         errors <- map["errors"]
+        success <- map["success"]
     }
 }

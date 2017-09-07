@@ -37,6 +37,7 @@
 		8319C5B61F60E4BD005A1768 /* RNSRegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */; };
 		8319C5B91F60E96B005A1768 /* RNSTextErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */; };
 		8319C5BC1F60EDAE005A1768 /* RNSRegisterPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5BB1F60EDAE005A1768 /* RNSRegisterPayload.swift */; };
+		8319C5BF1F60F2AA005A1768 /* RNSPostConfirmSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */; };
 		831A85951F413E370095F006 /* RNSSearchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85941F413E370095F006 /* RNSSearchViewController+Action.swift */; };
 		831A85AB1F4145830095F006 /* RNSSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85AA1F4145830095F006 /* RNSSearchCell.swift */; };
 		831A85AE1F4148440095F006 /* RNSTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85AD1F4148440095F006 /* RNSTextItem.swift */; };
@@ -529,6 +530,7 @@
 		8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegisterError.swift; path = Models/Temp/Error/Register/RNSRegisterError.swift; sourceTree = "<group>"; };
 		8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTextErrorProtocol.swift; path = TextError/RNSTextErrorProtocol.swift; sourceTree = "<group>"; };
 		8319C5BB1F60EDAE005A1768 /* RNSRegisterPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegisterPayload.swift; path = Models/Temp/Reply/Register/RNSRegisterPayload.swift; sourceTree = "<group>"; };
+		8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostConfirmSend.swift; path = POST/ConfirmSend/RNSPostConfirmSend.swift; sourceTree = "<group>"; };
 		831A85941F413E370095F006 /* RNSSearchViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+Action.swift"; path = "Controllers/Map/Search/RNSSearchViewController+Action.swift"; sourceTree = "<group>"; };
 		831A85AA1F4145830095F006 /* RNSSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSSearchCell.swift; path = Controllers/Map/Search/Cell/RNSSearchCell.swift; sourceTree = "<group>"; };
 		831A85AD1F4148440095F006 /* RNSTextItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTextItem.swift; path = Text/RNSTextItem.swift; sourceTree = "<group>"; };
@@ -1153,6 +1155,14 @@
 			name = Register;
 			sourceTree = "<group>";
 		};
+		8319C5BD1F60F251005A1768 /* ConfirmSend */ = {
+			isa = PBXGroup;
+			children = (
+				8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */,
+			);
+			name = ConfirmSend;
+			sourceTree = "<group>";
+		};
 		831A85931F413D5A0095F006 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1216,6 +1226,7 @@
 			isa = PBXGroup;
 			children = (
 				8319C5B11F60DFBE005A1768 /* Register */,
+				8319C5BD1F60F251005A1768 /* ConfirmSend */,
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				83CD58491F25870900A9FE1A /* Routing */,
@@ -4103,6 +4114,7 @@
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
 				8389CA301F5CF26B0003E8FD /* RNSPinMyLocation.swift in Sources */,
 				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
+				8319C5BF1F60F2AA005A1768 /* RNSPostConfirmSend.swift in Sources */,
 				836277DD1F382CB2009FB712 /* RNSScrollShowContainer.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,

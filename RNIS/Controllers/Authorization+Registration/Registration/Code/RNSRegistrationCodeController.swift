@@ -28,6 +28,6 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     }
     
     override func repeatCodeAction() {
-        STRouter.showAlertRepeatCode()
+        item?.confirmSend()
     }
 }

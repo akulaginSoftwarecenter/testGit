@@ -1,5 +1,5 @@
 //
-//  RNSPostRegister.swift
+//  RNSPostConfirmSend.swift
 //  RNIS
 //
 //  Created by Артем Кулагин on 07.09.17.
@@ -9,22 +9,20 @@
 import UIKit
 import Alamofire
 
-class RNSPostRegister: RNSRequest {
+class RNSPostConfirmSend: RNSRequest {
     
     override var method: Alamofire.HTTPMethod {
         return .post
     }
     
     var phone: String?
-    var failure: AliasStringBlock?
     
     typealias AliasPostRegister = RNSRequestReply<RNSRegisterPayload,RNSRegisterError>
     
-    @discardableResult convenience init(_ phone: String?, failure: AliasStringBlock?) {
+    @discardableResult convenience init(_ phone: String?) {
         self.init()
         
         self.phone = phone
-        self.failure = failure
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             STRouter.removeLoader()
@@ -33,9 +31,8 @@ class RNSPostRegister: RNSRequest {
     }
     
     func parseReply(_ model: AliasPostRegister?) {
-        if let payload = model?.payload, payload.uuid != nil  {
-            let vc = RNSRegistrationCodeController.initController(payload)
-            STRouter.pushAnimatedImageBoard(vc)
+        if  model?.success ?? false {
+            STRouter.showAlertRepeatCode()
             return
         }
         parseError(model)
@@ -43,19 +40,20 @@ class RNSPostRegister: RNSRequest {
     
     func parseError(_ model: AliasPostRegister?) {
         guard let error = model?.errors?.first?.textError else {
-             return
+            return
         }
-        failure?(error)
+        
+        STRouter.showAlertOk(error)
     }
     
     override var payload: AliasDictionary {
         guard let phone = phone else {
-                return [:]
+            return [:]
         }
         return ["phone": phone]
     }
     
     override var subject: String {
-        return "com.rnis.mobile.action.mobile_user.register"
+        return "com.rnis.mobile.action.mobile_user.confirm.send"
     }
 }
