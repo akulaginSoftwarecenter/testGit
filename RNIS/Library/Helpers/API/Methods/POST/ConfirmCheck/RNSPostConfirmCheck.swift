@@ -32,9 +32,9 @@ class RNSPostConfirmCheck: RNSRequest {
     }
     
     func parseReply(_ model: AliasPostRegister?) {
-        if  model?.success ?? false, let payload = model?.payload {
-            let vc = RNSRegistrationParoleController.initController(payload)
-            STRouter.pushAnimatedImageBoard(vc)
+        if  model?.success ?? false,
+            let payload = model?.payload {
+            RNSRegistrationParoleController.initController(payload)?.pushAnimatedImageBoard()
             return
         }
         parseError(model)

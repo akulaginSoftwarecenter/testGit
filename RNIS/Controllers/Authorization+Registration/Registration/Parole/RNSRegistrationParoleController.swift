@@ -33,9 +33,15 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
     override func actionNext() {
         item?.password = passwordOne
         
-        RNSPostUpdate(item) {[weak self] error in
-            self?.prepareError(error)
-        }
+        RNSPostUpdate(item, complete: { [weak self] item in
+            self?.showNameVC(item)
+            }, failure: { [weak self] error in
+                self?.prepareError(error)
+        })
+    }
+    
+    func showNameVC(_ item: RNSRegisterPayload?) {
+        RNSRegistrationNameController.initController(item)?.pushAnimatedImageBoard()
     }
     
     func prepareError(_ error: String?) {

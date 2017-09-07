@@ -16,14 +16,17 @@ class RNSPostUpdate: RNSRequest {
     
     var item: RNSRegisterPayload?
     var failure: AliasStringBlock?
+    var complete: AliasRegisterPayloadBlock?
     
     typealias AliasPostRegister = RNSRequestReply<RNSRegisterPayload,RNSRegisterError>
+    typealias AliasRegisterPayloadBlock = (RNSRegisterPayload?) -> ()
     
-    @discardableResult convenience init(_ item: RNSRegisterPayload?, failure: AliasStringBlock?) {
+    @discardableResult convenience init(_ item: RNSRegisterPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
         self.init()
         
         self.item = item
         self.failure = failure
+        self.complete = complete
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             STRouter.removeLoader()
@@ -32,9 +35,9 @@ class RNSPostUpdate: RNSRequest {
     }
     
     func parseReply(_ model: AliasPostRegister?) {
-        if  model?.success ?? false {
-            print("parseReply success")
-                    //STRouter.pushAnimatedImageBoard(RNSRegistrationNameController.initialController)
+        if  model?.success ?? false,
+            let payload = model?.payload  {
+            self.complete?(payload)
             return
         }
         parseError(model)
@@ -51,7 +54,6 @@ class RNSPostUpdate: RNSRequest {
         guard let item = item else {
             return [:]
         }
-
         return item.toJSON()
     }
     

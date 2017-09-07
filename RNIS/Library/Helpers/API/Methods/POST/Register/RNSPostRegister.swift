@@ -34,9 +34,8 @@ class RNSPostRegister: RNSRequest {
     
     func parseReply(_ model: AliasPostRegister?) {
         if let payload = model?.payload, payload.uuid != nil  {
-            let vc = RNSRegistrationCodeController.initController(payload)
-            STRouter.pushAnimatedImageBoard(vc)
-            return
+            RNSRegistrationCodeController.initController(payload)?.pushAnimatedImageBoard()
+             return
         }
         parseError(model)
     }

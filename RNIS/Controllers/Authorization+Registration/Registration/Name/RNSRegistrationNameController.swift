@@ -14,6 +14,14 @@ class RNSRegistrationNameController: UIViewController {
     @IBOutlet var coverView: RNSLoginView!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var item: RNSRegisterPayload?
+    
+    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+        let vc = RNSRegistrationNameController.initialController as? RNSRegistrationNameController
+        vc?.item = item
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +41,7 @@ class RNSRegistrationNameController: UIViewController {
             return
         }
         clearError()
-        STRouter.showLogin()
+        //STRouter.showLogin()
     }
     
     func clearError() {
