@@ -25,10 +25,13 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     
     override func actionNext() {
         item?.phone_activation_code = codeText
-        RNSPostConfirmCheck(item) {[weak self] error in
+        
+        RNSPostConfirmCheck(item, complete: {
+            RNSRegistrationParoleController.initController($0)?.pushAnimatedImageBoard()
+        }, failure: { [weak self] error in
             self?.prepareError(error)
-        }
-    }
+        })
+     }
     
     func prepareError(_ error: String?) {
         containerViewController?.errorLabel.text = error

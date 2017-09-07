@@ -17,14 +17,16 @@ class RNSPostRegister: RNSRequest {
     
     var phone: String?
     var failure: AliasStringBlock?
+    var complete: AliasRegisterPayloadBlock?
     
     typealias AliasPostRegister = RNSRequestReply<RNSRegisterPayload,RNSRegisterError>
     
-    @discardableResult convenience init(_ phone: String?, failure: AliasStringBlock?) {
+    @discardableResult convenience init(_ phone: String?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
         self.init()
         
         self.phone = phone
         self.failure = failure
+        self.complete = complete
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             STRouter.removeLoader()
@@ -34,8 +36,8 @@ class RNSPostRegister: RNSRequest {
     
     func parseReply(_ model: AliasPostRegister?) {
         if let payload = model?.payload, payload.uuid != nil  {
-            RNSRegistrationCodeController.initController(payload)?.pushAnimatedImageBoard()
-             return
+            self.complete?(payload)
+            return
         }
         parseError(model)
     }

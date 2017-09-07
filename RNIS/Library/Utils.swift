@@ -21,7 +21,7 @@ typealias AliasPointBlock = (PGGeoPoint) -> ()
 typealias AliasOverlayBlock = (PGOverlay) -> ()
 typealias AliasStringBlock = (String?) -> ()
 typealias AliasBoolBlock = (Bool) -> ()
-
+typealias AliasRegisterPayloadBlock = (RNSRegisterPayload?) -> ()
 
 func NSLoc(_ key: String?) -> String {
     guard let key = key else {

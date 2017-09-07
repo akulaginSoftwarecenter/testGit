@@ -32,10 +32,6 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
     
     override func actionNext() {
         item?.password = passwordOne
-        showNameVC(item)
-    }
-    
-    func showNameVC(_ item: RNSRegisterPayload?) {
         RNSRegistrationNameController.initController(item)?.pushAnimatedImageBoard()
     }
 }

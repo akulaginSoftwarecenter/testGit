@@ -16,9 +16,12 @@ class RNSRegistrationPhoneController: RNSPhoneContrainerController {
     
     override func actionNext() {
         let phone = "+7" + (phoneText ?? "")
-        RNSPostRegister(phone) {[weak self] error in
+        
+        RNSPostRegister(phone, complete: {
+            RNSRegistrationCodeController.initController($0)?.pushAnimatedImageBoard()
+        }, failure: { [weak self] error in
             self?.prepareError(error)
-        }
+        })
     }
     
     func prepareError(_ error: String?) {

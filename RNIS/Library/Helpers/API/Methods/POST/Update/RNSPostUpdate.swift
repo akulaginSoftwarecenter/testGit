@@ -19,7 +19,6 @@ class RNSPostUpdate: RNSRequest {
     var complete: AliasRegisterPayloadBlock?
     
     typealias AliasPostRegister = RNSRequestReply<RNSRegisterPayload,RNSRegisterError>
-    typealias AliasRegisterPayloadBlock = (RNSRegisterPayload?) -> ()
     
     @discardableResult convenience init(_ item: RNSRegisterPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
         self.init()
