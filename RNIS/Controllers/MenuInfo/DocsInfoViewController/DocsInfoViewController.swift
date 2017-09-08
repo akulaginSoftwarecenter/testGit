@@ -8,36 +8,33 @@
 
 import UIKit
 
-enum vcType: Int {
-    case userGuide = 0
-    case termOfUse = 1
+enum RNSDocsType: String {
+    case userGuide = "guide"
+    case termOfUse = "term"
 }
 
 class DocsInfoViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-    var docsInfoVCType: Int!
-    
-    let userGuideText = "Текст руководста пользователя, раз два три четыре пять шесть семь восемь"
-    let termOfUseText = "Текст пользовательского соглашения, раз два три четыре пять шесть семь восемь"
+    var type: RNSDocsType = .userGuide
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if self.docsInfoVCType == vcType.userGuide.rawValue {
-            self.navigationItem.title = "Руководство пользователя"
-            self.textView.text = self.userGuideText;
-        } else {
-            self.navigationItem.title = "Пользовательское соглашение";
-            self.textView.text = self.termOfUseText;
-        }
+        loadText()
+    }
+    
+    func loadText() {
+        navigationItem.title = type == .userGuide ? "Руководство пользователя" : "Пользовательское соглашение"
         
+        RNSPostMobilePageGet(type, complete: { [weak self] (item) in
+            self?.prepareText(item?.text)
+        }) { [weak self] (error) in
+            self?.prepareText(error)
+        }
     }
     
-    //MARK: Others methods
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func prepareText(_ text: String?) {
+        textView.text = text
     }
-    
 }

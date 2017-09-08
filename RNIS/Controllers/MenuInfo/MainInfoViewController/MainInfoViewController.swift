@@ -88,16 +88,11 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    //MARK: Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "main_to_docsInfo" {
-            let docsInfoVC = segue.destination as! DocsInfoViewController
-            if sender as! Int == 5 {
-                docsInfoVC.docsInfoVCType = vcType.userGuide.rawValue
-            } else {
-                docsInfoVC.docsInfoVCType = vcType.termOfUse.rawValue
-            }
+        if segue.identifier == "main_to_docsInfo",
+            let send = sender as? Int {
+            let docsInfoVC = segue.destination as? DocsInfoViewController
+            docsInfoVC?.type = send == 5 ? .userGuide : .termOfUse
         }
     }
     

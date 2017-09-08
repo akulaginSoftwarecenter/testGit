@@ -22,16 +22,8 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-/*
-        let item = RNSRegisterPayload.itemUserDefault()
-        
-        RNSPostUpdate(item, complete: { item in
-            
-        }, failure: { [weak self] error in
-            
-        })
+
         prepareUI()
- */
     }
     
     func prepareUI() {

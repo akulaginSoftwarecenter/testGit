@@ -203,6 +203,10 @@
 		836989391F318B54003E4D73 /* RNSNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989371F318B54003E4D73 /* RNSNameField.swift */; };
 		836989421F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */; };
 		836989431F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */; };
+		836A9D611F62332C00B5EB55 /* RNSPostContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D601F62332C00B5EB55 /* RNSPostContactList.swift */; };
+		836A9D641F62341700B5EB55 /* RNSContactPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D631F62341700B5EB55 /* RNSContactPayload.swift */; };
+		836A9D671F62374C00B5EB55 /* RNSPostMobilePageGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D661F62374C00B5EB55 /* RNSPostMobilePageGet.swift */; };
+		836A9D6A1F62380100B5EB55 /* RNSMobilePagePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D691F62380100B5EB55 /* RNSMobilePagePayload.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836D80A51F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle */; };
 		836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80AD1F1DB33900FEE390 /* AppDelegate.swift */; };
@@ -677,6 +681,10 @@
 		836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSRegistrationNameController.storyboard; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController.storyboard"; sourceTree = "<group>"; };
 		836989371F318B54003E4D73 /* RNSNameField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSNameField.swift; path = LoginField/RNSNameField.swift; sourceTree = "<group>"; };
 		836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertPhotoController.swift; path = "Controllers/Authorization+Registration/Registration/Name/AlertPhoto/RNSAlertPhotoController.swift"; sourceTree = "<group>"; };
+		836A9D601F62332C00B5EB55 /* RNSPostContactList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostContactList.swift; path = "POST/СontactList/RNSPostContactList.swift"; sourceTree = "<group>"; };
+		836A9D631F62341700B5EB55 /* RNSContactPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSContactPayload.swift; path = Models/Temp/Reply/Contact/RNSContactPayload.swift; sourceTree = "<group>"; };
+		836A9D661F62374C00B5EB55 /* RNSPostMobilePageGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostMobilePageGet.swift; path = POST/MobilePageGet/RNSPostMobilePageGet.swift; sourceTree = "<group>"; };
+		836A9D691F62380100B5EB55 /* RNSMobilePagePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMobilePagePayload.swift; path = Models/Temp/Reply/Page/RNSMobilePagePayload.swift; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D809B1F1DB29D00FEE390 /* RNIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RNIS-Bridging-Header.h"; path = "Application/RNIS-Bridging-Header.h"; sourceTree = "<group>"; };
 		836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProgorodLiteLibrary.a; path = Library/Helpers/ProgorodLiteLibrary/libProgorodLiteLibrary.a; sourceTree = "<group>"; };
@@ -1246,6 +1254,8 @@
 				8319C5BD1F60F251005A1768 /* ConfirmSend */,
 				8319C5C01F60F657005A1768 /* ConfirmCheck */,
 				839875BB1F60FD6A00B88F0B /* Update */,
+				836A9D5F1F62328A00B5EB55 /* СontactList */,
+				836A9D651F62370B00B5EB55 /* MobilePageGet */,
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				83CD58491F25870900A9FE1A /* Routing */,
@@ -2162,6 +2172,38 @@
 			name = AlertPhoto;
 			sourceTree = "<group>";
 		};
+		836A9D5F1F62328A00B5EB55 /* СontactList */ = {
+			isa = PBXGroup;
+			children = (
+				836A9D601F62332C00B5EB55 /* RNSPostContactList.swift */,
+			);
+			name = "СontactList";
+			sourceTree = "<group>";
+		};
+		836A9D621F6233AE00B5EB55 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				836A9D631F62341700B5EB55 /* RNSContactPayload.swift */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		836A9D651F62370B00B5EB55 /* MobilePageGet */ = {
+			isa = PBXGroup;
+			children = (
+				836A9D661F62374C00B5EB55 /* RNSPostMobilePageGet.swift */,
+			);
+			name = MobilePageGet;
+			sourceTree = "<group>";
+		};
+		836A9D681F6237E100B5EB55 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				836A9D691F62380100B5EB55 /* RNSMobilePagePayload.swift */,
+			);
+			name = Page;
+			sourceTree = "<group>";
+		};
 		836D80511F1DAC0400FEE390 = {
 			isa = PBXGroup;
 			children = (
@@ -2209,7 +2251,7 @@
 				83204B511F59225A0033ACA1 /* News */,
 				83204B561F5923900033ACA1 /* Settings */,
 				83204B5C1F5924800033ACA1 /* Strelka */,
-				83AA6A361F5667CA00B2139C /* MenuInfo */,
+				83AA6A361F5667CA00B2139C /* Info */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2655,8 +2697,10 @@
 		837857EC1F4E6FBA009DEA26 /* Reply */ = {
 			isa = PBXGroup;
 			children = (
-				835718841F21A6A400DE5E25 /* RequestReply */,
+				836A9D621F6233AE00B5EB55 /* Contact */,
+				836A9D681F6237E100B5EB55 /* Page */,
 				8319C5BA1F60ED80005A1768 /* Register */,
+				835718841F21A6A400DE5E25 /* RequestReply */,
 				83CD58531F25914200A9FE1A /* Routing */,
 				835718871F21A79100DE5E25 /* Token */,
 			);
@@ -3234,7 +3278,7 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
-		83AA6A361F5667CA00B2139C /* MenuInfo */ = {
+		83AA6A361F5667CA00B2139C /* Info */ = {
 			isa = PBXGroup;
 			children = (
 				83AA6A371F5668C000B2139C /* AboutAppInfoViewController */,
@@ -3248,7 +3292,7 @@
 				83AA6A591F5668C000B2139C /* SupportInfoViewController */,
 				83AA6A6F1F566C4900B2139C /* MenuInfo.storyboard */,
 			);
-			name = MenuInfo;
+			name = Info;
 			sourceTree = "<group>";
 		};
 		83AA6A371F5668C000B2139C /* AboutAppInfoViewController */ = {
@@ -4009,6 +4053,7 @@
 				831381671F5E782A00A85CBD /* RNSBusTableModel+Items.swift in Sources */,
 				836EEF031F3BFAB2007631D9 /* RNSBus.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
+				836A9D6A1F62380100B5EB55 /* RNSMobilePagePayload.swift in Sources */,
 				83A53F981F4AA00E00938969 /* RNSPageRouteView+CollectionView.swift in Sources */,
 				838EA03C1F53DC0E00E9BF20 /* RNSTriangle+Var.swift in Sources */,
 				836EEF1A1F3C1839007631D9 /* RNSDataManager+Bus.swift in Sources */,
@@ -4096,6 +4141,7 @@
 				831381691F5E789700A85CBD /* RNSBusTableItem+Still.swift in Sources */,
 				83A667EA1F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift in Sources */,
 				83AA6A6C1F5668C000B2139C /* SupportInfoViewController.swift in Sources */,
+				836A9D611F62332C00B5EB55 /* RNSPostContactList.swift in Sources */,
 				837F71941F452E6200DEAA36 /* RNSGetGeoCode.swift in Sources */,
 				837036B91F42A29B00FBD1E9 /* RNSDutyViewController.swift in Sources */,
 				836EEF1C1F3C1876007631D9 /* RNSDataManager+BusStop.swift in Sources */,
@@ -4110,6 +4156,7 @@
 				83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */,
 				836E91BE1F58FE9A007CCF5A /* RNSMenuManager.swift in Sources */,
 				83AA6A631F5668C000B2139C /* MainInfoViewController.swift in Sources */,
+				836A9D671F62374C00B5EB55 /* RNSPostMobilePageGet.swift in Sources */,
 				83D1558C1F4BC9B400150144 /* RNSCircleHoleWhite.swift in Sources */,
 				8310D4551F3C72D6000CCD0A /* RNSCircleHole.swift in Sources */,
 				83E2D3921F34332B00035877 /* RNSScrollKeyBoardContainer.swift in Sources */,
@@ -4254,6 +4301,7 @@
 				835A31221F4D21D100F83BE2 /* RNSRoutePoint.swift in Sources */,
 				83204B501F5921370033ACA1 /* NotificationsSettingsViewController.swift in Sources */,
 				83A667F21F5D1F8B00A1A7BC /* RNSTransportTableView.swift in Sources */,
+				836A9D641F62341700B5EB55 /* RNSContactPayload.swift in Sources */,
 				836EEF001F3BF85E007631D9 /* RNSBaseTableCell.swift in Sources */,
 				83B2E0961F1E139800FA92A4 /* Parser.swift in Sources */,
 				835718A61F21BB2500DE5E25 /* RNSBuildRouteView+Animation.swift in Sources */,
