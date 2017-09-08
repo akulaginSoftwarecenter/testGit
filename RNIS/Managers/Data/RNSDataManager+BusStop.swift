@@ -40,25 +40,28 @@ extension RNSDataManager {
                       "uuid": "6",
                       "latitude": 59.935267,
                       "longitude" : 30.311943]]
-
-        parseBusStopItems(dicts) { (items) in
-            print("result",items.count)
-        }
-        /*
-        write({
-            removeAllBusStop()
-            busStop1 = addBusStop("бул. Конногвардейский", lat: 59.9344377, lon: 30.3010831)
-            busStop2 = addBusStop("Тестовая один", lat: 59.934896, lon: 30.303141)
-            busStop3 = addBusStop("Исакиевский собор", lat: 59.935051, lon: 30.306572)
-            busStop4 = addBusStop("пр. Адмиралтейский", lat: 59.935863, lon: 30.308822)
-            busStop5 = addBusStop("Исакиевский собор", lat: 59.934654, lon: 30.310087)
-            busStop6 = addBusStop("Пролератарская", lat: 59.935267, lon: 30.311943)
-         
-        })
-    */
+        let items = parseBusStopItems(dicts)
+        print("result",items.count)
+        busStop1 = items.valueAt(0)
+        busStop2 = items.valueAt(2)
+        busStop3 = items.valueAt(3)
+        busStop4 = items.valueAt(4)
+        busStop5 = items.valueAt(5)
+        busStop6 = items.valueAt(6)
     }
-    /*
-    func createStubDictStops(complete: (([AliasDictionary]) -> ())?) {
+    
+    static func createStubBusStopAsync(complete: (([RNSBusStop])->())?) {
+       CounterTime.startTimer()
+        createStubDictStops { (dicts) in
+            CounterTime.endTimer()
+            parseBusStopItemsAsync(dicts, complete: { (items) in
+                CounterTime.endTimer()
+                complete?(items)
+            })
+        }
+    }
+    
+    static func createStubDictStops(complete: (([AliasDictionary]) -> ())?) {
         DispatchQueue.main.async {
             var dicts = [["name":"бул. Конногвардейский",
                           "uuid": "1",
@@ -85,16 +88,22 @@ extension RNSDataManager {
                           "latitude": 59.935267,
                           "longitude" : 30.311943]]
             CounterTime.startTimer()
-            for index in 7...100000 {
-                dicts.append(["name":"test",
-                              "uuid": "\(index)",
-                    "latitude": 59.9344377,
-                    "longitude" : 30 + Float(index)/1000 ])
+            DispatchQueue.global(qos: .userInitiated).async {
+                for index in 7...10000 {
+                    dicts.append(["name":"test",
+                                  "uuid": "\(index)",
+                        "latitude": 59.9344377,
+                        "longitude" : 30 + Float(index)/1000 ])
+                }
+                Utils.mainQueue {
+                    complete?(dicts)
+                }
             }
+            
         }
         
     }
-    */
+    
     static func addBusStop(_ uuid: String ,title: String?, lat: Double, lon: Double) -> RNSBusStop {
         let item = RNSBusStop.generate(uuid, name: title, lat: lat, lon: lon)
         realm?.add(item)
@@ -108,17 +117,26 @@ extension RNSDataManager {
         realm?.delete(busStops)
     }
     
-    static func parseBusStopItems(_ dicts: [AliasDictionary], complete: (([RNSBusStop]) -> ())?) {
-            var items = [RNSBusStop]()
-            write ({
-                for dict in dicts {
-                    guard let busStop = realm?.create(RNSBusStop.self, value: dict, update: true) else {
-                        continue
-                    }
-                    items.append(busStop)
+    static func parseBusStopItems(_ dicts: [AliasDictionary]) -> [RNSBusStop] {
+        var items = [RNSBusStop]()
+        write ({
+            for dict in dicts {
+                guard let busStop = realm?.create(RNSBusStop.self, value: dict, update: true) else {
+                    continue
                 }
-                
-            })
-            complete?(items)
+                items.append(busStop)
+            }
+            
+        })
+        return items
     }
+    
+    static func parseBusStopItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBusStop]) -> ())?) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let items = parseBusStopItems(dicts)
+            DispatchQueue.main.async {
+                complete?(items)
+            }
+        }
+   }
 }
