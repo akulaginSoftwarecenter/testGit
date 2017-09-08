@@ -1,32 +1,25 @@
 //
-//  ContactsInfoModel.swift
+//  RNSContactItem+Send.swift
 //  RNIS
 //
-//  Created by Артем Кулагин on 30.08.17.
+//  Created by Артем Кулагин on 08.09.17.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
 import Foundation
-import MessageUI
 
-class ContactsInfoModel: NSObject {
-    
-    var contactType: contactType?
-    var contactTitle: String?
-    var contactDescr: String?
-    
-    var composeVC: MFMailComposeViewController?
+extension RNSContactItem {
     
     func callOrSend() {
-        if contactType == .contactTypePhone {
+        if isPhone {
             call()
         } else {
-            send()
+            RNSInfoManager.shared.send(self)
         }
     }
     
     func call() {
-        if let contactDescr = self.contactDescr  {
+        if let contactDescr = self.value  {
             let phone = InputFieldsValidator.strip(contactDescr)
             if let phoneCallURL = URL(string:"tel://"+phone) {
                 let application = UIApplication.shared

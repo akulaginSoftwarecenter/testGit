@@ -55,15 +55,15 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    //MARK: UITableViewDelegate Methods
+    let main_to_contacts = "main_to_contacts"
+    let main_to_docsInfo = "main_to_docsInfo"
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        let row = indexPath.row
         switch indexPath.row {
-        case 0:
-            self.performSegue(withIdentifier: "main_to_contacts", sender: self)
-            break;
-        case 1:
-            self.performSegue(withIdentifier: "main_to_lostThings", sender: self)
+        case 0,1:
+            self.performSegue(withIdentifier: main_to_contacts, sender: row)
             break;
         case 2:
             self.performSegue(withIdentifier: "main_to_qrScanner", sender: self)
@@ -77,11 +77,8 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
         case 7:
             self.performSegue(withIdentifier: "main_to_aboutApp", sender: self)
             break;
-        case 5:
-            self.performSegue(withIdentifier: "main_to_docsInfo", sender: 5);
-            break;
-        case 6:
-            self.performSegue(withIdentifier: "main_to_docsInfo", sender: 6);
+        case 5,6:
+            self.performSegue(withIdentifier: main_to_docsInfo, sender: row);
             break;
         default:
             break;
@@ -89,10 +86,16 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "main_to_docsInfo",
+        if segue.identifier == main_to_contacts,
             let send = sender as? Int {
-            let docsInfoVC = segue.destination as? DocsInfoViewController
-            docsInfoVC?.type = send == 5 ? .userGuide : .termOfUse
+            let vc = segue.destination as? ContactsInfoViewController
+            vc?.type = send == 0 ? .contact : .forgotten
+        }
+        
+        if segue.identifier == main_to_docsInfo,
+            let send = sender as? Int {
+            let vc = segue.destination as? DocsInfoViewController
+            vc?.type = send == 5 ? .userGuide : .termOfUse
         }
     }
     

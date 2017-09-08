@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension ContactsInfoViewController {
+extension ContactsInfoViewController: UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.testArray.count;
+        return items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -23,7 +23,7 @@ extension ContactsInfoViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsInfoTableViewCell", for: indexPath) as! ContactsInfoTableViewCell;
+        let cell = tableView.dequeueReusableCell(for: indexPath) as ContactsInfoTableViewCell;
         cell.updateCell(item(indexPath))
         return cell
     }
@@ -33,7 +33,7 @@ extension ContactsInfoViewController {
         item(indexPath)?.callOrSend()
     }
     
-    func item(_ indexPath: IndexPath) -> ContactsInfoModel? {
-        return testArray[indexPath.row]
+    func item(_ indexPath: IndexPath) -> RNSContactItem? {
+        return items?[indexPath.row]
     }
 }

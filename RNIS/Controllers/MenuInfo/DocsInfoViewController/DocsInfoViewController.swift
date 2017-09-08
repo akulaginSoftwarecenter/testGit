@@ -10,7 +10,7 @@ import UIKit
 
 enum RNSDocsType: String {
     case userGuide = "guide"
-    case termOfUse = "term"
+    case termOfUse = "agreement"
 }
 
 class DocsInfoViewController: UIViewController {

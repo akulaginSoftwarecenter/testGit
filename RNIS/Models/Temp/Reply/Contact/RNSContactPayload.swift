@@ -10,5 +10,10 @@ import UIKit
 import ObjectMapper
 
 class RNSContactPayload: RNISMappableBase {
-
+    
+    var items: [RNSContactItem]?
+    
+    public override func mapping(map: Map) {
+        items <- map["items"]
+    }
 }

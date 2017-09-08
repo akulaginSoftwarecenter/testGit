@@ -8,40 +8,33 @@
 
 import UIKit
 
-enum contactType: Int {
-    case contactTypePhone = 0
-    case contactTypeEmail = 1
+enum RNSContactInfoType: String {
+    case contact = "contact"
+    case forgotten = "forgotten"
+    
+    var title: String {
+        return self == .contact ? "Полезные контакты" : "Забытые вещи"
+    }
 }
 
-class ContactsInfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ContactsInfoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var testArray = [ContactsInfoModel]()
+    var type: RNSContactInfoType = .contact
+    
+    var items: [RNSContactItem]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Полезные контакты"
-        
-        for i in 0...5 {
-            let model = ContactsInfoModel()
-            if i % 2 == 0 {
-                model.contactType = contactType.contactTypePhone
-                model.contactTitle = "Номер службны находок (Выборгский район)"
-                model.contactDescr = "+7 (913) 629-86-58"
-            } else {
-                model.contactType = contactType.contactTypeEmail
-                model.contactTitle = "Почта службы находок (Выборгский район)"
-                model.contactDescr = "trsaltn@yandex.ru"
-            }
-            self.testArray.append(model)
-        }
-        
-        self.tableView.tableFooterView = UIView();
-        self.tableView.register(UINib.init(nibName: "ContactsInfoTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "ContactsInfoTableViewCell")
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-        
+        self.navigationItem.title = type.title
+        loadItems()
+    }
+    
+    func loadItems() {
+        RNSPostContactList(type, complete: { [weak self] item in
+            self?.items = item?.items
+        })
     }
 }

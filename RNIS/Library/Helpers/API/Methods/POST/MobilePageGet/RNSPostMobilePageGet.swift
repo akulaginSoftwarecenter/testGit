@@ -18,8 +18,9 @@ class RNSPostMobilePageGet: RNSRequest {
     var failure: AliasStringBlock?
     var type: RNSDocsType = .userGuide
     
-    typealias AliasReply = RNSRequestReply<RNSMobilePagePayload,RNSRegisterError>
-    typealias AliasComplete = (RNSMobilePagePayload?) -> ()
+    typealias AliasPayload = RNSMobilePagePayload
+    typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
+    typealias AliasComplete = (AliasPayload?) -> ()
     
     @discardableResult convenience init(_ type: RNSDocsType, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()

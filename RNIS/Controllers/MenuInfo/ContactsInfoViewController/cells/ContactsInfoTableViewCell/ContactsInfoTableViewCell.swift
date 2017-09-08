@@ -18,17 +18,12 @@ class ContactsInfoTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func updateCell(_ model: ContactsInfoModel?) {
+    func updateCell(_ model: RNSContactItem?) {
         guard let model = model else {
             return
         }
-        self.title.text = model.contactTitle
-        self.descr.text = model.contactDescr
-        if model.contactType == .contactTypePhone{
-            self.contactInfoImageView.image = UIImage(named: "contactPhoneImage")
-        } else {
-            self.contactInfoImageView.image = UIImage(named: "contactMailImage")
-        }
+        title.text = model.name
+        descr.text = model.value
+        contactInfoImageView.image = model.isPhone ? #imageLiteral(resourceName: "contactPhoneImage") : #imageLiteral(resourceName: "contactMailImage")
     }
-    
 }

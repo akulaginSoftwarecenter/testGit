@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import ObjectMapper
 
 class RNSPostContactList: RNSRequest {
     
@@ -15,20 +16,53 @@ class RNSPostContactList: RNSRequest {
         return .post
     }
     
-    var failure: AliasStringBlock?
-    var complete: AliasRegisterPayloadBlock?
+    var complete: AliasComplete?
+    var type: RNSContactInfoType = .contact
     
-    @discardableResult convenience init(_ item: RNSRegisterPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
+    
+    typealias AliasPayload = RNSContactPayload
+    typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
+    typealias AliasComplete = (AliasPayload?) -> ()
+    
+    @discardableResult convenience init(_ type: RNSContactInfoType, complete: AliasComplete?) {
         self.init()
-        /*
-        self.item = item
-        self.failure = failure
+        
+        self.type = type
         self.complete = complete
+        
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             STRouter.removeLoader()
-            self?.parseReply(AliasPostRegister(reply: object))
+            self?.parseReply(AliasReply(reply: object))
         }
- */
+    }
+    
+    func parseReply(_ model: AliasReply?) {
+        if  model?.success ?? false {
+            complete?(model?.payload)
+            return
+        }
+        parseError(model)
+    }
+    
+    func parseError(_ model: AliasReply?) {
+        guard let error = model?.errors?.first?.textError else {
+            return
+        }
+        STRouter.showAlertOk(error)
+    }
+    
+    override var headers: AliasDictionary {
+        var dict = super.headers
+        
+        let withType = ["withType": type.rawValue]
+        let filters = ["filters": withType]
+        let meta = ["meta": filters]
+        dict["meta"] = meta
+        return  dict
+    }
+    
+    override var subject: String {
+        return "com.rnis.mobile.action.contact.list"
     }
 }
