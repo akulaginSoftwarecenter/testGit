@@ -35,6 +35,7 @@ class ContactsInfoViewController: UIViewController {
     func loadItems() {
         RNSPostContactList(type, complete: { [weak self] item in
             self?.items = item?.items
+            self?.tableView.reloadData()
         })
     }
 }

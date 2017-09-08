@@ -56,9 +56,7 @@ class RNSPostContactList: RNSRequest {
         var dict = super.headers
         
         let withType = ["withType": type.rawValue]
-        let filters = ["filters": withType]
-        let meta = ["meta": filters]
-        dict["meta"] = meta
+        dict["meta"] = ["filters": withType]
         return  dict
     }
     
