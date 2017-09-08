@@ -9,8 +9,8 @@
 import UIKit
 
 class RNISAuthManager {
-    /**
-     *  get токен at com.rnis.auth.action.login, after show map
+     /**
+     *  check have Token
      */
     static func checkToken() {
         if UserDefaults.token != nil {
