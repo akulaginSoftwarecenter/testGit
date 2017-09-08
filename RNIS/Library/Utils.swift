@@ -57,4 +57,8 @@ class Utils {
         }
         return alpha
     }
+    
+    static func mainQueue(_ handler: @escaping EmptyBlock) {
+        DispatchQueue.main.async(execute: handler)
+    }
 }
