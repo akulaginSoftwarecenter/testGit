@@ -35,10 +35,12 @@ extension RNSMapManager {
     }
     
     func removeOLdBusStops() {
+        /*
         for item in items {
             item.handlerRemove?()
             _ = RNSPinBusStop(item)
         }
+ */
     }
     
     static func prepareStubBus() {
