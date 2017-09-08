@@ -16,6 +16,34 @@ extension RNSDataManager {
     }
     
     static func createStubBusStopIfNeed() {
+        let dicts = [["name":"бул. Конногвардейский",
+                     "uuid": "1",
+                     "latitude": 59.9344377,
+                     "longitude" : 30.3010831],
+                     ["name":"Тестовая один",
+                      "uuid": "2",
+                      "latitude": 59.934896,
+                      "longitude" : 30.303141],
+                     ["name":"Исакиевский собор",
+                      "uuid": "3",
+                      "latitude": 59.935051,
+                      "longitude" : 30.306572],
+                     ["name":"пр. Адмиралтейский",
+                      "uuid": "4",
+                      "latitude": 59.935863,
+                      "longitude" : 30.308822],
+                     ["name":"Исакиевский собор",
+                      "uuid": "5",
+                      "latitude": 59.934654,
+                      "longitude" : 30.310087],
+                     ["name":"Пролератарская",
+                      "uuid": "6",
+                      "latitude": 59.935267,
+                      "longitude" : 30.311943]]
+        parseBusStopItems(dicts) { (items) in
+            print("result",items)
+        }
+        /*
         write({
             removeAllBusStop()
             busStop1 = addBusStop("бул. Конногвардейский", lat: 59.9344377, lon: 30.3010831)
@@ -24,11 +52,13 @@ extension RNSDataManager {
             busStop4 = addBusStop("пр. Адмиралтейский", lat: 59.935863, lon: 30.308822)
             busStop5 = addBusStop("Исакиевский собор", lat: 59.934654, lon: 30.310087)
             busStop6 = addBusStop("Пролератарская", lat: 59.935267, lon: 30.311943)
+         
         })
+    */
     }
     
-    static func addBusStop(_ title: String?, lat: Double, lon: Double) -> RNSBusStop {
-        let item = RNSBusStop.generate(title, lat: lat, lon: lon)
+    static func addBusStop(_ uuid: String ,title: String?, lat: Double, lon: Double) -> RNSBusStop {
+        let item = RNSBusStop.generate(uuid, name: title, lat: lat, lon: lon)
         realm?.add(item)
         return item
     }
@@ -38,5 +68,18 @@ extension RNSDataManager {
             return
         }
         realm?.delete(busStops)
+    }
+    
+    static func parseBusStopItems(_ dicts: [AliasDictionary], complete: (([RNSBusStop]) -> ())?) {
+        write ({
+            var items = [RNSBusStop]()
+            for dict in dicts {
+                guard let busStop = realm?.create(RNSBusStop.self, value: dict, update: true) else {
+                    continue
+                }
+                items.append(busStop)
+            }
+            complete?(items)
+       })
     }
 }

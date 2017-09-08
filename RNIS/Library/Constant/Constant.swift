@@ -20,4 +20,5 @@ let showLogApi = true
 let kPhoneVC = "RNSPhoneViewController"
 let kCodeVC = "RNSCodeViewController"
 let kParoleVC = "RNSParoleViewController"
+let kUuid = "uuid"
 

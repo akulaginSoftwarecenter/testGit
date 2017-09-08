@@ -24,17 +24,18 @@ class RNSBus: RNSCoordinateModel {
     dynamic var phone: String? = nil
     
     func generate() {
+        
         minute = Int.rand(1, limit: 200)
         title = String(Int.rand(1, limit: 30))
         showNext = Bool.random
         
         latitude = 59.931448
         longitude = 30.292849
-        
+        /*
         let list = RNSBusStop.generateList
         busStops.append(objectsIn: list)
         currentBusStops = list.randomItem()
-        
+        */
         driver = "Петров Сергей Иванович"
         conductor = "Константинова Василиана Валерьяновна"
         depo = "№1151 | E13222 777"
@@ -42,4 +43,5 @@ class RNSBus: RNSCoordinateModel {
         depo = "№1151 | E13222 777"
         phone = "+ 7 (912) 213-32-32"
     }
+ 
 }

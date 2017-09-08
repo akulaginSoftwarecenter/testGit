@@ -11,5 +11,5 @@ import RealmSwift
 
 class RNSBusStop: RNSCoordinateModel {
     
-    dynamic var title: String = ""
+    dynamic var name: String = ""
 }

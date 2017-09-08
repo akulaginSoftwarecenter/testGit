@@ -16,6 +16,7 @@ extension RNSDataManager {
     }
     
     static func createStubBusIfNeed() {
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         guard buss?.count == 0  else {
             return
         }
@@ -34,10 +35,11 @@ extension RNSDataManager {
     static func generateBusList(complete: (([RNSBus])->())? ) {
         var items = [RNSBus]()
         write({
-            for _ in 0...Int.rand(1, limit: 20) {
-                let item = RNSBus()
+            for index in 0...Int.rand(1, limit: 20) {
+                guard let item = realm?.create(RNSBus.self, value: [kUuid: "\(index)"], update: true) else {
+                    continue
+                }
                 item.generate()
-                realm?.add(item)
                 items.append(item)
             }
         }, complete: {

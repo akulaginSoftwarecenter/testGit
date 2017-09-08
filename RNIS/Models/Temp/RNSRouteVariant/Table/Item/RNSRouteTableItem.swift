@@ -43,7 +43,7 @@ class RNSRouteTableItem {
     }
     
     static func genStop(_ point: RNSRoutePoint?) -> RNSRouteTableItem {
-        let stop = RNSRouteTableItem.genStop(point?.busStop?.title, typeLine: point?.type ?? .bus)
+        let stop = RNSRouteTableItem.genStop(point?.busStop?.name, typeLine: point?.type ?? .bus)
         stop.doneMove = point?.doneMove ?? false
         return stop
     }

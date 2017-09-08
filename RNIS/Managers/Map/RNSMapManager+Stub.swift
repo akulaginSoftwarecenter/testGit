@@ -17,7 +17,7 @@ extension RNSMapManager {
     
     static func prepareStubBusStop() {
         RNSDataManager.createStubBusStopIfNeed()
-        
+        print("buss?.count",RNSDataManager.busStops?.count as Any)
         guard let items = RNSDataManager.busStops else {
             return
         }

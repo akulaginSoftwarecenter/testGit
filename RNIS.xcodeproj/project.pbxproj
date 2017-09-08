@@ -33,6 +33,7 @@
 		831381671F5E782A00A85CBD /* RNSBusTableModel+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831381661F5E782A00A85CBD /* RNSBusTableModel+Items.swift */; };
 		831381691F5E789700A85CBD /* RNSBusTableItem+Still.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */; };
 		8313816B1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313816A1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift */; };
+		831588981F6280C900CA485A /* RNSPostStopPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831588971F6280C900CA485A /* RNSPostStopPointList.swift */; };
 		8319C5B31F60E026005A1768 /* RNSPostRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B21F60E026005A1768 /* RNSPostRegister.swift */; };
 		8319C5B61F60E4BD005A1768 /* RNSRegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */; };
 		8319C5B91F60E96B005A1768 /* RNSTextErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */; };
@@ -537,6 +538,7 @@
 		831381661F5E782A00A85CBD /* RNSBusTableModel+Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusTableModel+Items.swift"; path = "Models/Temp/BusTemp/Table/RNSBusTableModel+Items.swift"; sourceTree = "<group>"; };
 		831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusTableItem+Still.swift"; path = "Models/Temp/BusTemp/Table/Item/RNSBusTableItem+Still.swift"; sourceTree = "<group>"; };
 		8313816A1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusDetailWayCell+Var.swift"; path = "Views/Map/BusDetail/BusDetailWay/Cell/RNSBusDetailWayCell+Var.swift"; sourceTree = "<group>"; };
+		831588971F6280C900CA485A /* RNSPostStopPointList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostStopPointList.swift; path = POST/StopPointList/RNSPostStopPointList.swift; sourceTree = "<group>"; };
 		8319C5B21F60E026005A1768 /* RNSPostRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostRegister.swift; path = POST/Register/RNSPostRegister.swift; sourceTree = "<group>"; };
 		8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegisterError.swift; path = Models/Temp/Error/Register/RNSRegisterError.swift; sourceTree = "<group>"; };
 		8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTextErrorProtocol.swift; path = TextError/RNSTextErrorProtocol.swift; sourceTree = "<group>"; };
@@ -1264,6 +1266,7 @@
 				836A9D5F1F62328A00B5EB55 /* СontactList */,
 				836A9D781F62570A00B5EB55 /* Feedback */,
 				836A9D7B1F625F7400B5EB55 /* Complaint */,
+				836A9D7E1F627E2700B5EB55 /* StopPointList */,
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				83CD58491F25870900A9FE1A /* Routing */,
@@ -2251,6 +2254,14 @@
 				836A9D7C1F625FE000B5EB55 /* RNSPostComplaint.swift */,
 			);
 			name = Complaint;
+			sourceTree = "<group>";
+		};
+		836A9D7E1F627E2700B5EB55 /* StopPointList */ = {
+			isa = PBXGroup;
+			children = (
+				831588971F6280C900CA485A /* RNSPostStopPointList.swift */,
+			);
+			name = StopPointList;
 			sourceTree = "<group>";
 		};
 		836D80511F1DAC0400FEE390 = {
@@ -4272,6 +4283,7 @@
 				832E4B8A1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
 				836E91B31F58F987007CCF5A /* RNSLeftMenuController.swift in Sources */,
 				831FDD8E1F5960C6004D69FB /* RNSBusStop+Generate.swift in Sources */,
+				831588981F6280C900CA485A /* RNSPostStopPointList.swift in Sources */,
 				83204B2C1F5917270033ACA1 /* RNSLeftMenuController+Action.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */,

@@ -9,19 +9,20 @@
 import Foundation
 
 extension RNSBusStop {
-    
+    /*
     func generate() {
         generate("бул. Конногвардейский")
     }
-    
-    static func generate(_ title: String?, lat: Double, lon: Double) -> RNSBusStop {
+    */
+    static func generate(_ uuid: String, name: String?, lat: Double, lon: Double) -> RNSBusStop {
         let item = RNSBusStop()
-        item.generate(title, lat: lat, lon: lon)
+        item.generate(uuid, name: name, lat: lat, lon: lon)
         return item
     }
     
-    func generate(_ title: String?, lat: Double?, lon: Double?) {
-        self.title = title ?? ""
+    func generate(_ uuid: String, name: String?, lat: Double?, lon: Double?) {
+        self.name = name ?? ""
+        self.uuid = uuid
         guard let lat = lat,
             let lon = lon else {
                 return
@@ -29,22 +30,7 @@ extension RNSBusStop {
         latitude = lat
         longitude = lon
     }
-    
-    func generate(_ title: String) {
-        generate(title, lat: 59.9344377, lon: 0.3010831)
-    }
-    
-    static var generateList:[RNSBusStop] {
-        var items = [RNSBusStop]()
-        let rand = randCount
-        for index in 0...rand {
-            let item = RNSBusStop()
-            item.generate(randTitle(index))
-            items.append(item)
-        }
-        return items
-    }
-    
+
     static var randCount: Int {
         return Int.rand(6, limit: generateTitles.count - 6)
     }
@@ -52,7 +38,7 @@ extension RNSBusStop {
     static func randTitle(_ index: Int) -> String {
         return generateTitles.valueAt(index) ?? "Тропарёво"
     }
-    
+ 
     static var generateTitles: [String] {
         return ["Бульвар Рокоссовского",
                 "Черкизовская",
@@ -99,4 +85,5 @@ extension RNSBusStop {
                 "Красногвардейская",
                 "Алма-Атинская",]
     }
+ 
 }

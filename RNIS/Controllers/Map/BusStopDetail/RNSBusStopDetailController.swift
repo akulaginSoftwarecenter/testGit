@@ -16,7 +16,7 @@ class RNSBusStopDetailController: UIViewController {
     static func initController(_ item: RNSBusStop?) -> UIViewController? {
         let vc = RNSBusStopDetailController.initialController as? RNSBusStopDetailController
         vc?.item = item
-        let container = STRouter.scrollShowContainer(vc, topTitle: item?.title)
+        let container = STRouter.scrollShowContainer(vc, topTitle: item?.name)
         container?.handlerRect = vc?.prepareViews(_:)
         vc?.startBottomOffset = container?.startBottomOffset
         return  container
@@ -54,6 +54,7 @@ class RNSBusStopDetailController: UIViewController {
     
     func loadItems() {
         showLoader()
+        
         RNSDataManager.generateBusList { [weak self] (items) in
             self?.prepareItems(items)
             self?.loaderView.remove()
@@ -71,7 +72,7 @@ class RNSBusStopDetailController: UIViewController {
     }
     
     func prepareTitle() {
-        titleLabel.text = item?.title
+        titleLabel.text = item?.name
     }
     
     override class var storyboardName: String {

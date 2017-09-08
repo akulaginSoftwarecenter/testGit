@@ -11,9 +11,13 @@ import RealmSwift
 
 class RNSCoordinateModel: Object {
     
+    dynamic var uuid = ""
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
     
+    override static func primaryKey() -> String? {
+        return kUuid
+    }
     
     var handlerCurrent: AliasBoolBlock?
     var handlerRemove: EmptyBlock?
