@@ -40,9 +40,15 @@ class SupportInfoViewController: UIViewController, KeyboardShowable {
     }
     
     func send() {
-       RNSPostFeedback(name, contact: contact, body: body) { item in
-            STRouter.showAlertOk("Ваше сообщение отправлено")
+       RNSPostFeedback(name, contact: contact, body: body) { [weak self] item in
+          self?.showAlert()
        }
+    }
+        
+    func showAlert() {
+        STRouter.showAlertOk("Ваше сообщение отправлено!") { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
     }
     
     func checkValidFields() {

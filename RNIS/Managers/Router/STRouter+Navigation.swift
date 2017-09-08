@@ -41,10 +41,10 @@ extension STRouter {
         showAlertOk("Код выслан повторно")
     }
     
-    static func showAlertOk(_ message: String?) {
+    static func showAlertOk(_ message: String?, handler: EmptyBlock? = nil) {
         let vc = RNSAlertViewController.controller(message)
         vc?.handlerViewDidLoad = {
-            vc?.addBtn()
+            vc?.addBtn(handler: handler)
         }
         present(vc, animated: true)
     }

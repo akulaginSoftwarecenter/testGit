@@ -212,6 +212,7 @@
 		836A9D741F62527A00B5EB55 /* RNSInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D731F62527A00B5EB55 /* RNSInfoManager.swift */; };
 		836A9D771F6255BF00B5EB55 /* RNSFeedbackPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D761F6255BF00B5EB55 /* RNSFeedbackPayload.swift */; };
 		836A9D7A1F62573F00B5EB55 /* RNSPostFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */; };
+		836A9D7D1F625FE000B5EB55 /* RNSPostComplaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D7C1F625FE000B5EB55 /* RNSPostComplaint.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836D80A51F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle */; };
 		836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80AD1F1DB33900FEE390 /* AppDelegate.swift */; };
@@ -692,6 +693,7 @@
 		836A9D731F62527A00B5EB55 /* RNSInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSInfoManager.swift; path = Managers/Info/RNSInfoManager.swift; sourceTree = "<group>"; };
 		836A9D761F6255BF00B5EB55 /* RNSFeedbackPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSFeedbackPayload.swift; path = Models/Temp/Reply/Feedback/RNSFeedbackPayload.swift; sourceTree = "<group>"; };
 		836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostFeedback.swift; path = POST/Feedback/RNSPostFeedback.swift; sourceTree = "<group>"; };
+		836A9D7C1F625FE000B5EB55 /* RNSPostComplaint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostComplaint.swift; path = POST/Complaint/RNSPostComplaint.swift; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D809B1F1DB29D00FEE390 /* RNIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RNIS-Bridging-Header.h"; path = "Application/RNIS-Bridging-Header.h"; sourceTree = "<group>"; };
 		836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProgorodLiteLibrary.a; path = Library/Helpers/ProgorodLiteLibrary/libProgorodLiteLibrary.a; sourceTree = "<group>"; };
@@ -1261,6 +1263,7 @@
 				836A9D651F62370B00B5EB55 /* MobilePageGet */,
 				836A9D5F1F62328A00B5EB55 /* СontactList */,
 				836A9D781F62570A00B5EB55 /* Feedback */,
+				836A9D7B1F625F7400B5EB55 /* Complaint */,
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				83CD58491F25870900A9FE1A /* Routing */,
@@ -2240,6 +2243,14 @@
 				836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */,
 			);
 			name = Feedback;
+			sourceTree = "<group>";
+		};
+		836A9D7B1F625F7400B5EB55 /* Complaint */ = {
+			isa = PBXGroup;
+			children = (
+				836A9D7C1F625FE000B5EB55 /* RNSPostComplaint.swift */,
+			);
+			name = Complaint;
 			sourceTree = "<group>";
 		};
 		836D80511F1DAC0400FEE390 = {
@@ -4099,6 +4110,7 @@
 				8329DF541F340E8B00D542FF /* RNSRedContainer.swift in Sources */,
 				838707DF1F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */,
 				835718891F21A7B700DE5E25 /* RNSTokenPayload.swift in Sources */,
+				836A9D7D1F625FE000B5EB55 /* RNSPostComplaint.swift in Sources */,
 				832E4B8F1F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
 				83204B531F59225A0033ACA1 /* NewsViewController.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,

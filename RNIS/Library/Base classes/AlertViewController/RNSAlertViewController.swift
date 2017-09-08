@@ -44,10 +44,12 @@ class RNSAlertViewController: UIViewController {
         messageView.roundTopCorners()
     }
     
-    func addBtn(_ title: String? = "ОК") {
+    func addBtn(_ title: String? = "ОК", handler: EmptyBlock? = nil) {
         let button = RNSOneBtnAlert(title)
         button.touchUpInside { [weak self] in
-            self?.dismiss()
+            self?.dismiss {
+                handler?()
+            }
         }
         stackView.addArrangedSubview(button)
         button.snp.makeConstraints { (make) in
