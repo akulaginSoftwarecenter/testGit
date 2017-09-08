@@ -15,11 +15,55 @@ class SupportInfoViewController: UIViewController, KeyboardShowable {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var blackButton: RNSBlackButton!
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    var name: String? {
+        return nameField.text
+    }
+    
+    var contact: String? {
+        return contactField.text
+    }
+    
+    var body: String? {
+        return textView.text
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationItem.title = "Связь с разработчиками"
         
+        blackButton.handlerAction = { [weak self] in
+            self?.checkValidFields()
+        }
+    }
+    
+    func send() {
+       RNSPostFeedback(name, contact: contact, body: body) { item in
+            STRouter.showAlertOk("Ваше сообщение отправлено")
+       }
+    }
+    
+    func checkValidFields() {
+        prepareError(nil)
+        guard let name = name, !name.isEmpty else {
+            prepareError("Заполните имя")
+            return
+        }
+        guard let contact = contact, !contact.isEmpty else {
+            prepareError("Заполните Почта / Телефон")
+            return
+        }
+        guard let body = body, !body.isEmpty else {
+            prepareError("Заполните сообщение")
+            return
+        }
+        send()
+    }
+    
+    func prepareError(_ error: String?) {
+        errorLabel.text = error
     }
     
     override func viewWillAppear(_ animated: Bool) {

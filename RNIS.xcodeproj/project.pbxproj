@@ -210,6 +210,8 @@
 		836A9D6D1F62410C00B5EB55 /* RNSContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D6C1F62410C00B5EB55 /* RNSContactItem.swift */; };
 		836A9D6F1F624B5300B5EB55 /* RNSContactItem+Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D6E1F624B5300B5EB55 /* RNSContactItem+Send.swift */; };
 		836A9D741F62527A00B5EB55 /* RNSInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D731F62527A00B5EB55 /* RNSInfoManager.swift */; };
+		836A9D771F6255BF00B5EB55 /* RNSFeedbackPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D761F6255BF00B5EB55 /* RNSFeedbackPayload.swift */; };
+		836A9D7A1F62573F00B5EB55 /* RNSPostFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836D80A51F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle */; };
 		836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80AD1F1DB33900FEE390 /* AppDelegate.swift */; };
@@ -688,6 +690,8 @@
 		836A9D6C1F62410C00B5EB55 /* RNSContactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSContactItem.swift; path = Models/Temp/Reply/Contact/Item/RNSContactItem.swift; sourceTree = "<group>"; };
 		836A9D6E1F624B5300B5EB55 /* RNSContactItem+Send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSContactItem+Send.swift"; path = "Models/Temp/Reply/Contact/Item/RNSContactItem+Send.swift"; sourceTree = "<group>"; };
 		836A9D731F62527A00B5EB55 /* RNSInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSInfoManager.swift; path = Managers/Info/RNSInfoManager.swift; sourceTree = "<group>"; };
+		836A9D761F6255BF00B5EB55 /* RNSFeedbackPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSFeedbackPayload.swift; path = Models/Temp/Reply/Feedback/RNSFeedbackPayload.swift; sourceTree = "<group>"; };
+		836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostFeedback.swift; path = POST/Feedback/RNSPostFeedback.swift; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D809B1F1DB29D00FEE390 /* RNIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RNIS-Bridging-Header.h"; path = "Application/RNIS-Bridging-Header.h"; sourceTree = "<group>"; };
 		836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProgorodLiteLibrary.a; path = Library/Helpers/ProgorodLiteLibrary/libProgorodLiteLibrary.a; sourceTree = "<group>"; };
@@ -1251,11 +1255,12 @@
 			children = (
 				839875C01F612F5D00B88F0B /* Parent */,
 				8319C5B11F60DFBE005A1768 /* Register */,
-				8319C5BD1F60F251005A1768 /* ConfirmSend */,
 				8319C5C01F60F657005A1768 /* ConfirmCheck */,
+				8319C5BD1F60F251005A1768 /* ConfirmSend */,
 				839875BB1F60FD6A00B88F0B /* Update */,
-				836A9D5F1F62328A00B5EB55 /* СontactList */,
 				836A9D651F62370B00B5EB55 /* MobilePageGet */,
+				836A9D5F1F62328A00B5EB55 /* СontactList */,
+				836A9D781F62570A00B5EB55 /* Feedback */,
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				83CD58491F25870900A9FE1A /* Routing */,
@@ -2221,6 +2226,22 @@
 			name = Info;
 			sourceTree = "<group>";
 		};
+		836A9D751F62555300B5EB55 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				836A9D761F6255BF00B5EB55 /* RNSFeedbackPayload.swift */,
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
+		836A9D781F62570A00B5EB55 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */,
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
 		836D80511F1DAC0400FEE390 = {
 			isa = PBXGroup;
 			children = (
@@ -2707,6 +2728,7 @@
 			isa = PBXGroup;
 			children = (
 				836A9D621F6233AE00B5EB55 /* Contact */,
+				836A9D751F62555300B5EB55 /* Feedback */,
 				836A9D681F6237E100B5EB55 /* Page */,
 				8319C5BA1F60ED80005A1768 /* Register */,
 				835718841F21A6A400DE5E25 /* RequestReply */,
@@ -4191,6 +4213,7 @@
 				830E68BC1F55386C008EFA02 /* RNSRouteTableItem.swift in Sources */,
 				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				838707ED1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,
+				836A9D771F6255BF00B5EB55 /* RNSFeedbackPayload.swift in Sources */,
 				836D80DA1F1DC6CA00FEE390 /* RNSLocationManager+Delegate.swift in Sources */,
 				83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */,
 				831A85BD1F414C730095F006 /* RNSSearchViewController+Data.swift in Sources */,
@@ -4285,6 +4308,7 @@
 				838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,
 				83AA6A311F565D0A00B2139C /* RNSRouteTable+Items.swift in Sources */,
 				836EEF131F3C02E3007631D9 /* UITableViewCell+Utils.swift in Sources */,
+				836A9D7A1F62573F00B5EB55 /* RNSPostFeedback.swift in Sources */,
 				837857F51F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift in Sources */,
 				83D7137E1F5D02EA005206C5 /* TransportViewController+TableView.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,

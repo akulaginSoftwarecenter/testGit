@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
         <array key="mainFont.otf">
             <string>Cffazmiakhaddpiofffvylaqekz</string>
         </array>
@@ -19,7 +22,7 @@
         <scene sceneID="5h0-dR-Ncb">
             <objects>
                 <navigationController id="i3S-S3-4X5" customClass="BaseNavigationController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="HTn-7d-bwo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HTn-7d-bwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705882352937" green="0.29803921568627451" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,7 +39,7 @@
         <scene sceneID="5GO-7X-MDh">
             <objects>
                 <navigationController id="fme-Uz-9f9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Aso-tc-jYk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Aso-tc-jYk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -505,6 +508,12 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Отправить"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zd-Ba-gUM">
+                                <rect key="frame" x="25" y="276" width="325" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -514,10 +523,12 @@
                             <constraint firstItem="PtH-Ul-znC" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="8Mg-no-fkm"/>
                             <constraint firstAttribute="trailing" secondItem="Wlm-de-3PA" secondAttribute="trailing" constant="30" id="8bc-AG-THj"/>
                             <constraint firstItem="5Cd-g0-jpZ" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="9Bd-1s-04K"/>
+                            <constraint firstItem="1zd-Ba-gUM" firstAttribute="top" secondItem="FMs-Hp-gHb" secondAttribute="bottom" constant="20" id="AbE-Kq-pPG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FMs-Hp-gHb" secondAttribute="trailing" constant="9" id="BD3-rD-GjM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n8d-AR-3Dq" secondAttribute="trailing" constant="9" id="Bw7-IM-nQw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Cd-g0-jpZ" secondAttribute="trailing" constant="9" id="Cf6-KQ-0fF"/>
                             <constraint firstItem="n8d-AR-3Dq" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="EGa-Te-QTj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1zd-Ba-gUM" secondAttribute="trailing" constant="9" id="Ehm-UI-bn4"/>
                             <constraint firstItem="FMs-Hp-gHb" firstAttribute="top" secondItem="n8d-AR-3Dq" secondAttribute="bottom" constant="3" id="G5O-WO-Du9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PtH-Ul-znC" secondAttribute="trailing" constant="9" id="HKS-uA-vYj"/>
                             <constraint firstItem="MAb-3Z-sZF" firstAttribute="top" secondItem="ZrA-w9-D5f" secondAttribute="bottom" constant="36" id="MFh-Nn-RO0"/>
@@ -531,6 +542,7 @@
                             <constraint firstItem="Qcm-Il-nzW" firstAttribute="top" secondItem="PtH-Ul-znC" secondAttribute="bottom" constant="44" id="hPK-RH-9TM"/>
                             <constraint firstItem="ZrA-w9-D5f" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="ira-1P-Op6"/>
                             <constraint firstItem="Q2G-Dr-lBg" firstAttribute="top" secondItem="Qcm-Il-nzW" secondAttribute="bottom" constant="3" id="jB1-QG-gUa"/>
+                            <constraint firstItem="1zd-Ba-gUM" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leadingMargin" constant="9" id="m6r-Id-mDq"/>
                             <constraint firstItem="Wlm-de-3PA" firstAttribute="leading" secondItem="vVr-Sf-WhF" secondAttribute="leading" constant="30" id="nMd-4f-m4q"/>
                             <constraint firstItem="n8d-AR-3Dq" firstAttribute="top" secondItem="MAb-3Z-sZF" secondAttribute="bottom" constant="3" id="nsR-aI-PEh"/>
                             <constraint firstItem="PtH-Ul-znC" firstAttribute="top" secondItem="5Cd-g0-jpZ" secondAttribute="bottom" id="rHJ-gv-q4n"/>
@@ -542,7 +554,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Связь с разработчиками" id="UIY-hD-hnT"/>
                     <connections>
+                        <outlet property="blackButton" destination="Wlm-de-3PA" id="ryi-P4-iIh"/>
                         <outlet property="contactField" destination="Q2G-Dr-lBg" id="uEr-cb-Jk3"/>
+                        <outlet property="errorLabel" destination="1zd-Ba-gUM" id="kiz-fq-uSh"/>
                         <outlet property="nameField" destination="5Cd-g0-jpZ" id="caw-yG-8TE"/>
                         <outlet property="textView" destination="n8d-AR-3Dq" id="lVL-0f-P3j"/>
                         <outlet property="textViewHeightConstraint" destination="qdu-0u-B2U" id="HK0-UC-ZvC"/>
