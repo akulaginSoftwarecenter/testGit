@@ -22,7 +22,7 @@
         <scene sceneID="5h0-dR-Ncb">
             <objects>
                 <navigationController id="i3S-S3-4X5" customClass="BaseNavigationController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HTn-7d-bwo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="HTn-7d-bwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705882352937" green="0.29803921568627451" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,7 +39,7 @@
         <scene sceneID="5GO-7X-MDh">
             <objects>
                 <navigationController id="fme-Uz-9f9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Aso-tc-jYk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Aso-tc-jYk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -312,17 +312,34 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                                 <state key="normal" title="Отправить"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionButton:" destination="9E6-B9-S1u" eventType="touchUpInside" id="K9n-A5-N3N"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw9-bU-jcA">
+                                <rect key="frame" x="25" y="84" width="325" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UP0-KI-iXV" firstAttribute="top" secondItem="Bem-Av-UyE" secondAttribute="bottom" constant="20" id="7sF-Dt-hBt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uw9-bU-jcA" secondAttribute="trailing" constant="9" id="BEZ-W6-FZ5"/>
                             <constraint firstItem="AbX-YR-WUY" firstAttribute="top" secondItem="fNz-ab-aaf" secondAttribute="bottom" constant="3" id="Bqw-NJ-NoU"/>
                             <constraint firstItem="yQr-Pk-Fj0" firstAttribute="top" secondItem="e37-2b-coQ" secondAttribute="bottom" constant="8" id="CHi-ex-ut8"/>
+                            <constraint firstItem="uw9-bU-jcA" firstAttribute="top" secondItem="AbX-YR-WUY" secondAttribute="bottom" constant="20" id="DzQ-mC-huu"/>
                             <constraint firstItem="yQr-Pk-Fj0" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="McM-ah-fqD"/>
                             <constraint firstItem="AbX-YR-WUY" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="TWH-UR-LRl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yQr-Pk-Fj0" secondAttribute="trailing" constant="9" id="Uxg-Af-UuA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fNz-ab-aaf" secondAttribute="trailing" constant="9" id="V58-wk-4K4"/>
+                            <constraint firstItem="uw9-bU-jcA" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="Vgh-4f-dQg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AbX-YR-WUY" secondAttribute="trailing" constant="9" id="dvn-Uu-tic"/>
                             <constraint firstItem="Bem-Av-UyE" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="nXw-7d-gyP"/>
                             <constraint firstItem="fNz-ab-aaf" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="qQ1-gC-iKB"/>
@@ -332,7 +349,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Пожаловаться" id="I0E-Ir-VGg"/>
                     <connections>
-                        <outlet property="sendButton" destination="Bem-Av-UyE" id="DhC-G7-UpS"/>
+                        <outlet property="errorLabel" destination="uw9-bU-jcA" id="CQh-Zo-aUy"/>
                         <outlet property="textView" destination="fNz-ab-aaf" id="XFP-fd-h3G"/>
                         <outlet property="textViewHeightConstraint" destination="esC-wI-oPp" id="ZVY-PB-7Gl"/>
                     </connections>
