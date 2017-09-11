@@ -31,7 +31,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-28-Wvy">
-                        <rect key="frame" x="25" y="10" width="248" height="23.5"/>
+                        <rect key="frame" x="25" y="0.0" width="248" height="43.5"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -39,12 +39,12 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="aZf-28-Wvy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="5hF-EC-Gbk"/>
                     <constraint firstItem="Qc5-MD-HKH" firstAttribute="leading" secondItem="aZf-28-Wvy" secondAttribute="trailing" constant="8" id="9Br-2e-nZ7"/>
                     <constraint firstItem="aZf-28-Wvy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="JFi-yd-zdb"/>
                     <constraint firstItem="Qc5-MD-HKH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Km0-d5-j8m"/>
+                    <constraint firstItem="aZf-28-Wvy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WFq-AS-a6J"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Qc5-MD-HKH" secondAttribute="trailing" constant="17" id="fFS-JB-tBC"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="aZf-28-Wvy" secondAttribute="bottom" constant="2" id="sHP-sF-Ggg"/>
+                    <constraint firstAttribute="bottom" secondItem="aZf-28-Wvy" secondAttribute="bottom" id="kvO-do-hMW"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
