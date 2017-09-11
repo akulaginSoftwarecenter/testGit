@@ -36,4 +36,18 @@ class RNSContactItem: RNISMappableBase {
     var isPhone: Bool {
         return contactType == .phone
     }
+    
+    var height: CGFloat {
+        let defaultHaight = CGFloat(86)
+        var height = heightText + 46
+        if height < defaultHaight {
+            height = defaultHaight
+        }
+        return height
+    }
+    
+    var heightText: CGFloat {
+        let width = UIScreen.width - 25 - 65
+        return name?.height(.cffazm18, width: width) ?? 0
+    }
  }

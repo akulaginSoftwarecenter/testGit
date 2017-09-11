@@ -17,42 +17,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ContactsInfoTableViewCell" id="KGk-i7-Jjw" customClass="ContactsInfoTableViewCell" customModule="RNIS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-jM-hTl">
-                        <rect key="frame" x="25" y="8" width="230" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1111" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-jM-hTl">
+                        <rect key="frame" x="25" y="23.5" width="230" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contactPhoneImage" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-17-PUG">
-                        <rect key="frame" x="260" y="14" width="35" height="35"/>
+                        <rect key="frame" x="260" y="25.5" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="fAo-Ac-2OH"/>
                             <constraint firstAttribute="height" constant="35" id="sIP-sh-ykZ"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5g-xj-xsS">
-                        <rect key="frame" x="25" y="29" width="230" height="24"/>
+                        <rect key="frame" x="25" y="44.5" width="230" height="24"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="c5g-xj-xsS" firstAttribute="top" secondItem="Xb6-jM-hTl" secondAttribute="bottom" constant="5" id="5En-fG-35k"/>
                     <constraint firstItem="c0K-17-PUG" firstAttribute="leading" secondItem="c5g-xj-xsS" secondAttribute="trailing" constant="5" id="Fko-tB-0c7"/>
-                    <constraint firstItem="c0K-17-PUG" firstAttribute="leading" secondItem="Xb6-jM-hTl" secondAttribute="trailing" constant="5" id="Qh1-kh-XZu"/>
-                    <constraint firstItem="Xb6-jM-hTl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="SiL-Nc-1q9"/>
+                    <constraint firstItem="c0K-17-PUG" firstAttribute="leading" secondItem="Xb6-jM-hTl" secondAttribute="trailing" constant="5" id="GLh-Fy-sWn"/>
+                    <constraint firstItem="Xb6-jM-hTl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="Ttn-Eh-cw2"/>
+                    <constraint firstAttribute="bottom" secondItem="c5g-xj-xsS" secondAttribute="top" constant="41" id="VY2-Dp-Hyn"/>
                     <constraint firstItem="c5g-xj-xsS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="YLY-SE-PRc"/>
+                    <constraint firstItem="Xb6-jM-hTl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" id="co9-2M-v0X"/>
                     <constraint firstItem="c0K-17-PUG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ew4-D1-qhy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="c0K-17-PUG" secondAttribute="trailing" constant="17" id="fTS-ou-ZJM"/>
-                    <constraint firstItem="Xb6-jM-hTl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jsZ-0s-OC5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="c5g-xj-xsS" secondAttribute="bottom" constant="3" id="lZZ-3k-dCa"/>
+                    <constraint firstItem="c5g-xj-xsS" firstAttribute="top" secondItem="Xb6-jM-hTl" secondAttribute="bottom" constant="5" id="zL3-hJ-vau"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,7 +63,7 @@
                 <outlet property="descr" destination="c5g-xj-xsS" id="Zf0-Jh-qUo"/>
                 <outlet property="title" destination="Xb6-jM-hTl" id="pTX-fK-0Nz"/>
             </connections>
-            <point key="canvasLocation" x="-372" y="-25"/>
+            <point key="canvasLocation" x="-372" y="-46"/>
         </tableViewCell>
     </objects>
     <resources>

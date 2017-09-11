@@ -14,10 +14,6 @@ class ContactsInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var descr: UILabel!
     @IBOutlet weak var contactInfoImageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     func updateCell(_ model: RNSContactItem?) {
         guard let model = model else {
             return

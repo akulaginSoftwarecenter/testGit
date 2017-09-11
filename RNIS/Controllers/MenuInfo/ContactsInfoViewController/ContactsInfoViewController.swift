@@ -30,6 +30,7 @@ class ContactsInfoViewController: UIViewController {
         
         self.navigationItem.title = type.title
         loadItems()
+        tableView.tableFooterView = UIView()
     }
     
     func loadItems() {

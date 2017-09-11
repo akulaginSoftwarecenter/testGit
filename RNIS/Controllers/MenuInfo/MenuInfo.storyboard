@@ -177,7 +177,6 @@
                     <connections>
                         <outlet property="tableView" destination="ZED-xC-eyZ" id="lNQ-s4-sHo"/>
                         <segue destination="nBQ-du-cAc" kind="show" identifier="main_to_contacts" id="Ksf-Mc-vJI"/>
-                        <segue destination="cAT-h6-zdx" kind="show" identifier="main_to_lostThings" id="4m6-9o-qRy"/>
                         <segue destination="9E6-B9-S1u" kind="show" identifier="main_to_report" id="ULk-hi-vEG"/>
                         <segue destination="bLT-tI-vfl" kind="show" identifier="main_to_aboutApp" id="VW7-xJ-Avu"/>
                         <segue destination="I48-wZ-wbc" kind="show" identifier="main_to_docsInfo" id="V8g-2t-HhN"/>
@@ -205,6 +204,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.91764705882352937" green="0.29803921568627451" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.81960784310000001" green="0.25882352939999997" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ocp-gJ-5yu">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ocp-gJ-5yu" id="e9b-Qk-wyE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="registerCellIdentifier" value="ContactsInfoTableViewCell"/>
                                 </userDefinedRuntimeAttributes>
@@ -230,41 +240,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DzH-bR-fOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="521" y="125"/>
-        </scene>
-        <!--Забытые вещи-->
-        <scene sceneID="oW4-X4-UYq">
-            <objects>
-                <viewController id="cAT-h6-zdx" customClass="LostThingsInfoViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="A7p-Dg-SGG"/>
-                        <viewControllerLayoutGuide type="bottom" id="WIe-EF-TnS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SXr-b1-VoE">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y5X-cU-WHf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" red="0.81960784310000001" green="0.25882352939999997" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Y5X-cU-WHf" firstAttribute="leading" secondItem="SXr-b1-VoE" secondAttribute="leading" id="Jtf-V5-YgZ"/>
-                            <constraint firstAttribute="trailing" secondItem="Y5X-cU-WHf" secondAttribute="trailing" id="aAR-xv-aGM"/>
-                            <constraint firstItem="Y5X-cU-WHf" firstAttribute="top" secondItem="A7p-Dg-SGG" secondAttribute="bottom" id="pGA-Xl-S9r"/>
-                            <constraint firstItem="WIe-EF-TnS" firstAttribute="top" secondItem="Y5X-cU-WHf" secondAttribute="bottom" id="sic-9d-Nf5"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Забытые вещи" id="pBW-Q2-Dlg"/>
-                    <connections>
-                        <outlet property="tableView" destination="Y5X-cU-WHf" id="fEz-Md-2hL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GNm-BD-zLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1149.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--Пожаловаться-->
         <scene sceneID="p0Z-E7-B3B">
