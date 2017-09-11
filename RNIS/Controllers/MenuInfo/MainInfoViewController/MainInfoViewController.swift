@@ -69,7 +69,7 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
             self.performSegue(withIdentifier: "main_to_qrScanner", sender: self)
             break;
         case 3:
-            self.performSegue(withIdentifier: "main_to_report", sender: self)
+            ReportInfoViewController.initialController.pushAnimatedRedScroll()
             break;
         case 4:
             SupportInfoViewController.initialController.pushAnimatedRedScroll()

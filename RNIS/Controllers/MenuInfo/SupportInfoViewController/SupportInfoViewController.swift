@@ -32,7 +32,6 @@ class SupportInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Связь с разработчиками"
         
         blackButton.handlerAction = { [weak self] in
             self?.checkValidFields()

@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="helveticaneuecyr-bold.otf">
-            <string>HelveticaNeueCyr-Bold</string>
-        </array>
         <array key="mainFont.otf">
             <string>Cffazmiakhaddpiofffvylaqekz</string>
         </array>
@@ -177,7 +174,6 @@
                     <connections>
                         <outlet property="tableView" destination="ZED-xC-eyZ" id="lNQ-s4-sHo"/>
                         <segue destination="nBQ-du-cAc" kind="show" identifier="main_to_contacts" id="Ksf-Mc-vJI"/>
-                        <segue destination="9E6-B9-S1u" kind="show" identifier="main_to_report" id="ULk-hi-vEG"/>
                         <segue destination="bLT-tI-vfl" kind="show" identifier="main_to_aboutApp" id="VW7-xJ-Avu"/>
                         <segue destination="I48-wZ-wbc" kind="show" identifier="main_to_docsInfo" id="V8g-2t-HhN"/>
                         <segue destination="joV-KY-1rh" kind="show" identifier="main_to_qrScanner" id="Dly-4x-0dV"/>
@@ -239,98 +235,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DzH-bR-fOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="521" y="125"/>
-        </scene>
-        <!--Пожаловаться-->
-        <scene sceneID="p0Z-E7-B3B">
-            <objects>
-                <viewController id="9E6-B9-S1u" customClass="ReportInfoViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e37-2b-coQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="UP0-KI-iXV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EHv-pj-a6L">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите текст обращения:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQr-Pk-Fj0">
-                                <rect key="frame" x="25" y="8" width="325" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="LkV-HI-wh5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNz-ab-aaf">
-                                <rect key="frame" x="25" y="27" width="325" height="33"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="esC-wI-oPp"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbX-YR-WUY" userLabel="separator">
-                                <rect key="frame" x="25" y="63" width="325" height="1"/>
-                                <color key="backgroundColor" red="0.81960784310000001" green="0.25882352939999997" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="c1U-5r-J6G"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bem-Av-UyE">
-                                <rect key="frame" x="25" y="520" width="325" height="63"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="yT4-OB-1rh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
-                                <state key="normal" title="Отправить"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="actionButton:" destination="9E6-B9-S1u" eventType="touchUpInside" id="K9n-A5-N3N"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw9-bU-jcA">
-                                <rect key="frame" x="25" y="84" width="325" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="UP0-KI-iXV" firstAttribute="top" secondItem="Bem-Av-UyE" secondAttribute="bottom" constant="20" id="7sF-Dt-hBt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uw9-bU-jcA" secondAttribute="trailing" constant="9" id="BEZ-W6-FZ5"/>
-                            <constraint firstItem="AbX-YR-WUY" firstAttribute="top" secondItem="fNz-ab-aaf" secondAttribute="bottom" constant="3" id="Bqw-NJ-NoU"/>
-                            <constraint firstItem="yQr-Pk-Fj0" firstAttribute="top" secondItem="e37-2b-coQ" secondAttribute="bottom" constant="8" id="CHi-ex-ut8"/>
-                            <constraint firstItem="uw9-bU-jcA" firstAttribute="top" secondItem="AbX-YR-WUY" secondAttribute="bottom" constant="20" id="DzQ-mC-huu"/>
-                            <constraint firstItem="yQr-Pk-Fj0" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="McM-ah-fqD"/>
-                            <constraint firstItem="AbX-YR-WUY" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="TWH-UR-LRl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yQr-Pk-Fj0" secondAttribute="trailing" constant="9" id="Uxg-Af-UuA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fNz-ab-aaf" secondAttribute="trailing" constant="9" id="V58-wk-4K4"/>
-                            <constraint firstItem="uw9-bU-jcA" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="Vgh-4f-dQg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AbX-YR-WUY" secondAttribute="trailing" constant="9" id="dvn-Uu-tic"/>
-                            <constraint firstItem="Bem-Av-UyE" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="nXw-7d-gyP"/>
-                            <constraint firstItem="fNz-ab-aaf" firstAttribute="leading" secondItem="EHv-pj-a6L" secondAttribute="leadingMargin" constant="9" id="qQ1-gC-iKB"/>
-                            <constraint firstItem="fNz-ab-aaf" firstAttribute="top" secondItem="yQr-Pk-Fj0" secondAttribute="bottom" constant="3" id="rdk-Xy-ESR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bem-Av-UyE" secondAttribute="trailing" constant="9" id="tVX-HY-y1K"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Пожаловаться" id="I0E-Ir-VGg"/>
-                    <connections>
-                        <outlet property="errorLabel" destination="uw9-bU-jcA" id="CQh-Zo-aUy"/>
-                        <outlet property="textView" destination="fNz-ab-aaf" id="XFP-fd-h3G"/>
-                        <outlet property="textViewHeightConstraint" destination="esC-wI-oPp" id="ZVY-PB-7Gl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixr-gP-jBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1781.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--О приложении-->
         <scene sceneID="Uas-HC-nMe">
