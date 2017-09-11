@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -53,6 +54,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0T-xs-WRK">
+                        <rect key="frame" x="83" y="0.0" width="3" height="15.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="I6f-vO-j9I"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2Q-oo-FIJ" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
                         <rect key="frame" x="76" y="6.5" width="18" height="18"/>
                         <subviews>
@@ -74,7 +82,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teB-kT-mQn">
-                        <rect key="frame" x="102" y="6.5" width="215" height="20"/>
+                        <rect key="frame" x="102" y="5.5" width="215" height="20"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -95,10 +103,13 @@
                     <constraint firstItem="q2Q-oo-FIJ" firstAttribute="leading" secondItem="Tjm-Uw-JuG" secondAttribute="trailing" constant="8" id="7at-j8-6ig"/>
                     <constraint firstItem="teB-kT-mQn" firstAttribute="centerY" secondItem="q2Q-oo-FIJ" secondAttribute="centerY" id="7g7-uy-mzZ"/>
                     <constraint firstItem="ejZ-rU-nZm" firstAttribute="leading" secondItem="jlD-b6-La6" secondAttribute="leading" id="9rW-55-Hwg"/>
+                    <constraint firstItem="M0T-xs-WRK" firstAttribute="centerX" secondItem="q2Q-oo-FIJ" secondAttribute="centerX" id="AvC-Wh-jhO"/>
                     <constraint firstAttribute="bottom" secondItem="C0a-Os-Txw" secondAttribute="bottom" id="B12-dL-sI2"/>
+                    <constraint firstItem="M0T-xs-WRK" firstAttribute="top" secondItem="jlD-b6-La6" secondAttribute="top" id="E5Y-fl-Sdp"/>
                     <constraint firstAttribute="trailing" secondItem="teB-kT-mQn" secondAttribute="trailing" id="FM5-OM-uhK"/>
                     <constraint firstItem="teB-kT-mQn" firstAttribute="leading" secondItem="q2Q-oo-FIJ" secondAttribute="trailing" constant="8" id="J2S-09-ZNo"/>
                     <constraint firstItem="A4B-43-FXq" firstAttribute="top" secondItem="q2Q-oo-FIJ" secondAttribute="bottom" constant="-6" id="LAB-wf-jvb"/>
+                    <constraint firstItem="M0T-xs-WRK" firstAttribute="bottom" secondItem="q2Q-oo-FIJ" secondAttribute="centerY" id="Uhh-1v-rd2"/>
                     <constraint firstItem="Tjm-Uw-JuG" firstAttribute="centerY" secondItem="ejZ-rU-nZm" secondAttribute="centerY" id="Uhl-gV-Fnn"/>
                     <constraint firstItem="ejZ-rU-nZm" firstAttribute="top" secondItem="jlD-b6-La6" secondAttribute="top" id="ZDx-VH-eyH"/>
                     <constraint firstItem="C0a-Os-Txw" firstAttribute="centerX" secondItem="fSL-5g-bEM" secondAttribute="centerX" id="gmE-7Z-Sxu"/>
@@ -116,6 +127,7 @@
                 <outlet property="runLine" destination="C0a-Os-Txw" id="MnJ-Ei-zt4"/>
                 <outlet property="text1Label" destination="ejZ-rU-nZm" id="bzG-qT-ohz"/>
                 <outlet property="text2Label" destination="teB-kT-mQn" id="LzW-Ns-vSO"/>
+                <outlet property="topBusLine" destination="M0T-xs-WRK" id="zQF-y7-OuB"/>
             </connections>
         </tableViewCell>
     </objects>

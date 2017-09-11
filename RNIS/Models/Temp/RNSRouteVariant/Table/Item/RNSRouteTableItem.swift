@@ -30,6 +30,7 @@ class RNSRouteTableItem {
     
     var shortLine = false
     var showLine = true
+    var showTopBusLine = true
     
     var doneMove = false
     
@@ -58,5 +59,9 @@ class RNSRouteTableItem {
     
     var isBus: Bool {
         return typeLine == .bus
+    }
+    
+    var isRun: Bool {
+        return typeLine == .run
     }
 }

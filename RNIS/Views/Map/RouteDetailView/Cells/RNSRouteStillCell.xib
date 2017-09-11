@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bff-rS-cDx" id="jsS-ZW-rRx">
-                <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="317" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lit-lF-OIK">
@@ -78,6 +78,14 @@
                             <constraint firstAttribute="width" constant="9" id="qID-l1-R6o"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWz-wC-sLf" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="84" y="11" width="3" height="3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="0BX-OE-1eK"/>
+                            <constraint firstAttribute="height" constant="3" id="g2R-PV-3Y3"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-fq-SDF" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
                         <rect key="frame" x="84" y="17" width="3" height="3"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,19 +102,18 @@
                             <constraint firstAttribute="width" constant="3" id="Vef-hF-V7j"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWz-wC-sLf" customClass="RNSCircle" customModule="RNIS" customModuleProvider="target">
-                        <rect key="frame" x="84" y="11" width="3" height="3"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="3" id="0BX-OE-1eK"/>
-                            <constraint firstAttribute="height" constant="3" id="g2R-PV-3Y3"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kz-Tw-8dD">
                         <rect key="frame" x="84" y="32" width="3" height="35"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="3" id="Neo-Ss-mIE"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPL-N4-520">
+                        <rect key="frame" x="84" y="0.0" width="3" height="6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="Io7-gK-GvM"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -115,13 +122,16 @@
                     <constraint firstItem="lit-lF-OIK" firstAttribute="top" secondItem="jsS-ZW-rRx" secondAttribute="top" id="1eo-PI-EOg"/>
                     <constraint firstItem="IJT-ty-mIx" firstAttribute="centerX" secondItem="WHU-fq-SDF" secondAttribute="centerX" id="4e3-Mw-fMY"/>
                     <constraint firstItem="IJT-ty-mIx" firstAttribute="bottom" secondItem="WHU-fq-SDF" secondAttribute="bottom" constant="6" id="74n-vZ-Nzb"/>
+                    <constraint firstItem="bPL-N4-520" firstAttribute="bottom" secondItem="iWz-wC-sLf" secondAttribute="top" constant="-5" id="7MQ-P4-JVu"/>
                     <constraint firstItem="u2K-nm-8Nb" firstAttribute="leading" secondItem="jsS-ZW-rRx" secondAttribute="leading" constant="102" id="7fl-Hc-8WU"/>
                     <constraint firstItem="u2K-nm-8Nb" firstAttribute="top" secondItem="jsS-ZW-rRx" secondAttribute="top" id="8oQ-x9-MMc"/>
                     <constraint firstItem="IJT-ty-mIx" firstAttribute="centerX" secondItem="lit-lF-OIK" secondAttribute="centerX" id="FJN-T6-Jdi"/>
                     <constraint firstItem="iWz-wC-sLf" firstAttribute="centerX" secondItem="WHU-fq-SDF" secondAttribute="centerX" id="GOJ-gA-p1U"/>
                     <constraint firstItem="WHU-fq-SDF" firstAttribute="centerY" secondItem="kLp-AR-ORr" secondAttribute="centerY" id="IFe-4j-yWI"/>
+                    <constraint firstItem="bPL-N4-520" firstAttribute="centerX" secondItem="iWz-wC-sLf" secondAttribute="centerX" id="Iqa-Db-Dox"/>
                     <constraint firstItem="lit-lF-OIK" firstAttribute="leading" secondItem="jsS-ZW-rRx" secondAttribute="leading" constant="76" id="Mm8-s8-t7y"/>
                     <constraint firstItem="iWz-wC-sLf" firstAttribute="bottom" secondItem="WHU-fq-SDF" secondAttribute="bottom" constant="-6" id="N32-QD-2pq"/>
+                    <constraint firstItem="bPL-N4-520" firstAttribute="top" secondItem="jsS-ZW-rRx" secondAttribute="top" id="Ujr-Uf-6rr"/>
                     <constraint firstItem="kLp-AR-ORr" firstAttribute="centerY" secondItem="u2K-nm-8Nb" secondAttribute="centerY" id="V7M-YX-CYe"/>
                     <constraint firstAttribute="bottom" secondItem="4kz-Tw-8dD" secondAttribute="bottom" constant="-7" id="XNe-lN-gNc"/>
                     <constraint firstItem="4kz-Tw-8dD" firstAttribute="centerX" secondItem="WHU-fq-SDF" secondAttribute="centerX" id="a1d-cZ-ACc"/>
@@ -134,7 +144,9 @@
                 <outlet property="imageArrow" destination="a65-Kc-Ykg" id="xu4-t8-b3r"/>
                 <outlet property="label" destination="Z7f-WF-g6O" id="oHh-aC-Ku3"/>
                 <outlet property="line" destination="4kz-Tw-8dD" id="fXP-NR-8ga"/>
+                <outlet property="topLine" destination="bPL-N4-520" id="Bg7-Yc-36y"/>
             </connections>
+            <point key="canvasLocation" x="26.5" y="52"/>
         </tableViewCell>
     </objects>
     <resources>

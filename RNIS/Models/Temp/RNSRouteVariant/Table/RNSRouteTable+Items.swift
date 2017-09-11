@@ -33,11 +33,13 @@ extension RNSRouteTable {
         appendStop(points.valueAt(lastIndex))
         prepareEdge()
         appendTotal()
+        prepareFirts()
     }
     
     @discardableResult func appendStop(_ point: RNSRoutePoint?) -> RNSRouteTableItem {
         let item = RNSRouteTableItem.genStop(point)
         item.height = 60
+        item.showTopBusLine = !isLastItemRun
         items.append(item)
         return item
     }
@@ -45,6 +47,10 @@ extension RNSRouteTable {
     func appendBus(_ title: String?) {
         let item = RNSRouteTableItem.genBus(title)
         items.append(item)
+    }
+    
+    var isLastItemRun: Bool {
+        return items.last?.isRun ?? false
     }
     
     func prepareEdge() {
@@ -65,5 +71,9 @@ extension RNSRouteTable {
         item.text1 = "Итого: 36 мин."
         item.type = .total
         items.append(item)
+    }
+    
+    func prepareFirts() {
+        items.first?.showTopBusLine = false
     }
 }

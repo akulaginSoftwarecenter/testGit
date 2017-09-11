@@ -38,11 +38,11 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
         let item = self.item(indexPath)
         let indexPaths = item.indexPatchs(indexPath)
         tableView.beginUpdates()
-        tableView.reloadRows(at: [indexPath], with: .fade)
+        tableView.reloadRows(at: [indexPath], with: .none)
         if item.openStill {
-            tableView.insertRows(at: indexPaths, with: .bottom)
+            tableView.insertRows(at: indexPaths, with: .none)
         } else {
-            tableView.deleteRows(at: indexPaths, with: .top)
+            tableView.deleteRows(at: indexPaths, with: .none)
         }
         tableView.endUpdates()
     }

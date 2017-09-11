@@ -18,8 +18,10 @@ class RNSRouteStopCell: RNSRouteParentCell {
     @IBOutlet weak var busLine: UIView!
     @IBOutlet weak var busConstraint: NSLayoutConstraint!
     @IBOutlet weak var runLine: RNSDotsWhiteVertical!
+    @IBOutlet weak var topBusLine: UIView!
     
     @IBOutlet weak var circleView: RNSCircle!
+    
     override func prepareUI() {
         text1Label.text = item?.text1
         text2Label.text = item?.text2
@@ -37,10 +39,12 @@ class RNSRouteStopCell: RNSRouteParentCell {
         let isBus = item.isBus
         busLine.isHidden = !isBus
         runLine.isHidden = isBus
+        topBusLine.isHidden = !item.showTopBusLine
         busConstraint.constant = item.shortLine ? 0 : -7
     }
     
     func hiddenLine() {
+        topBusLine.isHidden = true
         busLine.isHidden = true
         runLine.isHidden = true
     }
