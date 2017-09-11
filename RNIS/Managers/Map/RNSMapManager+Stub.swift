@@ -28,19 +28,20 @@ extension RNSMapManager {
     }
     
     static func prepareStubBusStopAsunc() {
+        removeOLdBusStops()
         RNSDataManager.createStubBusStopAsync { (items) in
             print("items")
         }
   
     }
     
-    func removeOLdBusStops() {
-        /*
+    static func removeOLdBusStops() {
+        guard let items = RNSDataManager.busStops else {
+            return
+        }
         for item in items {
             item.handlerRemove?()
-            _ = RNSPinBusStop(item)
         }
- */
     }
     
     static func prepareStubBus() {
