@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportInfoViewController: UIViewController, KeyboardShowable {
+class ReportInfoViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
@@ -22,12 +22,12 @@ class ReportInfoViewController: UIViewController, KeyboardShowable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        addKeyboardObservers()
+        navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        removeAllObservers()
+        navigationController?.isNavigationBarHidden = false
     }
 
     @IBAction func actionButton(_ sender: Any) {
@@ -50,5 +50,9 @@ class ReportInfoViewController: UIViewController, KeyboardShowable {
     
     func prepareError(_ error: String?) {
         errorLabel.text = error
+    }
+    
+    override class var storyboardName: String {
+        return "ReportInfoViewController"
     }
 }

@@ -72,7 +72,7 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
             self.performSegue(withIdentifier: "main_to_report", sender: self)
             break;
         case 4:
-            self.performSegue(withIdentifier: "main_to_support", sender: self)
+            ReportInfoViewController.initialController.pushAnimatedRedScroll()
             break;
         case 7:
             self.performSegue(withIdentifier: "main_to_aboutApp", sender: self)
