@@ -8,9 +8,11 @@
 
 import UIKit
 
-class MainInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class MainInfoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    let main_to_contacts = "main_to_contacts"
     
     let menuTitles = ["Полезные контакты",
                       "Забытые вещи",
@@ -24,67 +26,22 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont(name: "Cffazmiakhaddpiofffvylaqekz", size: 24.5)!,
+        prepareNav()
+        tableView.contentInset = UIEdgeInsetsMake(16, 0, 0, 0);
+    }
+    
+    func prepareNav() {
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.barTintColor = .F1645A
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont(name: "Cffazmiakhaddpiofffvylaqekz", size: 24.5)!,
                                                                         NSForegroundColorAttributeName : UIColor.white]
         
-        self.navigationItem.title = "Информация";
+        navigationItem.title = "Информация";
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-        
-        self.tableView.contentInset = UIEdgeInsetsMake(16, 0, 0, 0);
-        self.tableView.tableFooterView = UIView();
-        self.tableView.register(UINib.init(nibName: "MainInfoTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "MainInfoTableViewCell")
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-        
-    }
-    //MARK: UITableViewDataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuTitles.count;
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension >= 54 ? UITableViewAutomaticDimension : 54
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainInfoTableViewCell", for: indexPath) as! MainInfoTableViewCell;
-        cell.updateCell(title:menuTitles[indexPath.row]);
-        return cell
-    }
-    
-    let main_to_contacts = "main_to_contacts"
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        let row = indexPath.row
-        switch indexPath.row {
-        case 0,1:
-            self.performSegue(withIdentifier: main_to_contacts, sender: row)
-            break;
-        case 2:
-            self.performSegue(withIdentifier: "main_to_qrScanner", sender: self)
-            break;
-        case 3:
-            ReportInfoViewController.initialController.pushAnimatedRedScroll()
-            break;
-        case 4:
-            SupportInfoViewController.initialController.pushAnimatedRedScroll()
-            break;
-        case 7:
-            self.performSegue(withIdentifier: "main_to_aboutApp", sender: self)
-            break;
-        case 5:
-            showDocsInfo(.userGuide)
-            break;
-        case 6:
-            showDocsInfo(.termOfUse)
-            break;
-        default:
-            break;
-        }
     }
     
     func showDocsInfo(_ type: RNSDocsType) {
@@ -103,9 +60,5 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
     
     override class var storyboardName: String {
         return "MenuInfo"
-    }
-    
-    @IBAction func actionLogin(_ sender: Any) {
-        STRouter.revertLogin()
     }
 }

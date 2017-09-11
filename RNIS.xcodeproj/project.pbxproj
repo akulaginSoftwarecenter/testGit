@@ -360,6 +360,7 @@
 		8390DFD21F663DFE003C3505 /* SupportInfoViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390DFD11F663DFE003C3505 /* SupportInfoViewController+TableView.swift */; };
 		8390DFD41F663FB2003C3505 /* ReportInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390DFD31F663FB2003C3505 /* ReportInfoViewController.storyboard */; };
 		8390DFD61F6648C3003C3505 /* DocsInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */; };
+		8390DFD81F664C91003C3505 /* MainInfoViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390DFD71F664C91003C3505 /* MainInfoViewController+TableView.swift */; };
 		8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
@@ -838,6 +839,7 @@
 		8390DFD11F663DFE003C3505 /* SupportInfoViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SupportInfoViewController+TableView.swift"; sourceTree = "<group>"; };
 		8390DFD31F663FB2003C3505 /* ReportInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReportInfoViewController.storyboard; sourceTree = "<group>"; };
 		8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DocsInfoViewController.storyboard; sourceTree = "<group>"; };
+		8390DFD71F664C91003C3505 /* MainInfoViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainInfoViewController+TableView.swift"; sourceTree = "<group>"; };
 		8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationCodeController.swift; path = "Controllers/Authorization+Registration/Registration/Code/RNSRegistrationCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
@@ -3409,6 +3411,7 @@
 			children = (
 				83AA6A441F5668C000B2139C /* cells */,
 				83AA6A481F5668C000B2139C /* MainInfoViewController.swift */,
+				8390DFD71F664C91003C3505 /* MainInfoViewController+TableView.swift */,
 			);
 			name = MainInfoViewController;
 			path = Controllers/MenuInfo/MainInfoViewController;
@@ -4347,6 +4350,7 @@
 				83A667F71F5D202C00A1A7BC /* RNSTransportTableViewCell.swift in Sources */,
 				837ABF0A1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */,
 				83AA6A5F1F5668C000B2139C /* DocsInfoViewController.swift in Sources */,
+				8390DFD81F664C91003C3505 /* MainInfoViewController+TableView.swift in Sources */,
 				8329DF5D1F34251200D542FF /* RNSEmailField.swift in Sources */,
 				8310D44B1F3C6C3D000CCD0A /* RNSBusDetailWayView.swift in Sources */,
 				838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,

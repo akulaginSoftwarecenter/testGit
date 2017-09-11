@@ -21,7 +21,7 @@ class RNSMenuManager: NSObject {
                      MenuItem("Новости", NewsViewController.initialController, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", SettingsViewController.initialController, #imageLiteral(resourceName: "menuSettingsIcon")),
                      MenuItem("Стрелка", StrelkaViewController.initialController, #imageLiteral(resourceName: "menuCreditcardIcon")),
-                     MenuItem("Информация", MainInfoViewController.initialController, #imageLiteral(resourceName: "menuInfoIcon"))]
+                     MenuItem("Информация", STRouter.redContainer(MainInfoViewController.initialController), #imageLiteral(resourceName: "menuInfoIcon"))]
     
     lazy var profileVC: UIViewController? = {
         return STRouter.redScrollContainer(RNSProfileViewController.initialController)
