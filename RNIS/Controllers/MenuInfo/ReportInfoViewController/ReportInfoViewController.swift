@@ -51,8 +51,4 @@ class ReportInfoViewController: UIViewController {
     func prepareError(_ error: String?) {
         errorLabel.text = error
     }
-    
-    override class var storyboardName: String {
-        return "ReportInfoViewController"
-    }
 }

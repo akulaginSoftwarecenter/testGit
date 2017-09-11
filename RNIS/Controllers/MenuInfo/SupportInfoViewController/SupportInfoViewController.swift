@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SupportInfoViewController: UIViewController, KeyboardShowable {
+class SupportInfoViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var contactField: UITextField!
@@ -72,13 +72,7 @@ class SupportInfoViewController: UIViewController, KeyboardShowable {
         errorLabel.text = error
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        addKeyboardObservers()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        removeAllObservers()
+    override class var storyboardName: String {
+        return "SupportInfoViewController"
     }
 }
