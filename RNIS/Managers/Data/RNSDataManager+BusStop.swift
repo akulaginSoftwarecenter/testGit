@@ -16,6 +16,10 @@ extension RNSDataManager {
     }
     
     static func createStubBusStopIfNeed() {
+        if (busStops?.count ?? 0) != 0 {
+            return
+        }
+        
         let dicts = [["name":"бул. Конногвардейский",
                      "uuid": "1",
                      "latitude": 59.9344377,
@@ -41,7 +45,6 @@ extension RNSDataManager {
                       "latitude": 59.935267,
                       "longitude" : 30.311943]]
         let items = parseBusStopItems(dicts)
-        print("result",items.count)
         busStop1 = items.valueAt(0)
         busStop2 = items.valueAt(2)
         busStop3 = items.valueAt(3)
@@ -63,37 +66,15 @@ extension RNSDataManager {
     
     static func createStubDictStops(complete: (([AliasDictionary]) -> ())?) {
         DispatchQueue.main.async {
-            var dicts = [["name":"бул. Конногвардейский",
-                          "uuid": "1",
-                          "latitude": 59.9344377,
-                          "longitude" : 30.3010831],
-                         ["name":"Тестовая один",
-                          "uuid": "2",
-                          "latitude": 59.934896,
-                          "longitude" : 30.303141],
-                         ["name":"Исакиевский собор",
-                          "uuid": "3",
-                          "latitude": 59.935051,
-                          "longitude" : 30.306572],
-                         ["name":"пр. Адмиралтейский",
-                          "uuid": "4",
-                          "latitude": 59.935863,
-                          "longitude" : 30.308822],
-                         ["name":"Исакиевский собор",
-                          "uuid": "5",
-                          "latitude": 59.934654,
-                          "longitude" : 30.310087],
-                         ["name":"Пролератарская",
-                          "uuid": "6",
-                          "latitude": 59.935267,
-                          "longitude" : 30.311943]]
+            var dicts = [AliasDictionary]()
+       
             CounterTime.startTimer()
             DispatchQueue.global(qos: .userInitiated).async {
                 for index in 7...10000 {
                     dicts.append(["name":"test",
                                   "uuid": "\(index)",
-                        "latitude": 59.9344377,
-                        "longitude" : 30 + Float(index)/1000 ])
+                        "latitude": 54.997372,
+                        "longitude" : 73.363668 + Float(index)/1000 ])
                 }
                 Utils.mainQueue {
                     complete?(dicts)
@@ -138,5 +119,17 @@ extension RNSDataManager {
                 complete?(items)
             }
         }
-   }
+    }
+    
+    static func bussStops(_ min: PGGeoPoint, center: PGGeoPoint) -> [RNSBusStop]? {
+        guard let results = busStops else {
+            return nil
+        }
+        let distance = min.distanceTo(center)
+        return Array(results).filter{
+            //print("distance1",distance)
+            //print("distance2",center.distanceTo($0.point))
+            return center.distanceTo($0.point) < distance
+        }
+    }
 }

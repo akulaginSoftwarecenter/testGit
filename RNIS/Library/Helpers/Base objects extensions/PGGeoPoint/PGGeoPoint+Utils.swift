@@ -36,4 +36,8 @@ extension PGGeoPoint {
     func coordinate(_ azimuth: Double?, distance: Double?) -> PGGeoPoint? {
         return coordinate.coordinate(azimuth, distance: distance)?.point
     }
+    
+    func inverse(centerLocation: PGGeoPoint) -> PGGeoPoint {
+        return coordinate.inverse(centerCoordinate: centerLocation.coordinate).point
+    }
 }
