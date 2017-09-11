@@ -56,7 +56,6 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     let main_to_contacts = "main_to_contacts"
-    let main_to_docsInfo = "main_to_docsInfo"
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
@@ -77,12 +76,21 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
         case 7:
             self.performSegue(withIdentifier: "main_to_aboutApp", sender: self)
             break;
-        case 5,6:
-            self.performSegue(withIdentifier: main_to_docsInfo, sender: row);
+        case 5:
+            showDocsInfo(.userGuide)
+            break;
+        case 6:
+            showDocsInfo(.termOfUse)
             break;
         default:
             break;
         }
+    }
+    
+    func showDocsInfo(_ type: RNSDocsType) {
+        let vc = DocsInfoViewController.initialController as? DocsInfoViewController
+        vc?.type = type
+        vc?.pushAnimatedRed()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,12 +98,6 @@ class MainInfoViewController: UIViewController, UITableViewDelegate, UITableView
             let send = sender as? Int {
             let vc = segue.destination as? ContactsInfoViewController
             vc?.type = send == 0 ? .contact : .forgotten
-        }
-        
-        if segue.identifier == main_to_docsInfo,
-            let send = sender as? Int {
-            let vc = segue.destination as? DocsInfoViewController
-            vc?.type = send == 5 ? .userGuide : .termOfUse
         }
     }
     

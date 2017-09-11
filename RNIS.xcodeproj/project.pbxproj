@@ -359,6 +359,7 @@
 		8390DFD01F663BB8003C3505 /* ReportInfoViewController+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390DFCF1F663BB8003C3505 /* ReportInfoViewController+TextView.swift */; };
 		8390DFD21F663DFE003C3505 /* SupportInfoViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390DFD11F663DFE003C3505 /* SupportInfoViewController+TableView.swift */; };
 		8390DFD41F663FB2003C3505 /* ReportInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390DFD31F663FB2003C3505 /* ReportInfoViewController.storyboard */; };
+		8390DFD61F6648C3003C3505 /* DocsInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */; };
 		8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
@@ -836,6 +837,7 @@
 		8390DFCF1F663BB8003C3505 /* ReportInfoViewController+TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReportInfoViewController+TextView.swift"; sourceTree = "<group>"; };
 		8390DFD11F663DFE003C3505 /* SupportInfoViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SupportInfoViewController+TableView.swift"; sourceTree = "<group>"; };
 		8390DFD31F663FB2003C3505 /* ReportInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReportInfoViewController.storyboard; sourceTree = "<group>"; };
+		8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DocsInfoViewController.storyboard; sourceTree = "<group>"; };
 		8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegistrationCodeController.swift; path = "Controllers/Authorization+Registration/Registration/Code/RNSRegistrationCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
@@ -3396,6 +3398,7 @@
 			isa = PBXGroup;
 			children = (
 				83AA6A401F5668C000B2139C /* DocsInfoViewController.swift */,
+				8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */,
 			);
 			name = DocsInfoViewController;
 			path = Controllers/MenuInfo/DocsInfoViewController;
@@ -3906,6 +3909,7 @@
 			files = (
 				8390DFD41F663FB2003C3505 /* ReportInfoViewController.storyboard in Resources */,
 				83E2D3941F34336100035877 /* RNSScrollKeyBoardContainer.storyboard in Resources */,
+				8390DFD61F6648C3003C3505 /* DocsInfoViewController.storyboard in Resources */,
 				83AA6A621F5668C000B2139C /* MainInfoTableViewCell.xib in Resources */,
 				83A5C6F21F57F4A8006C8D62 /* RNSRouteDetailView.xib in Resources */,
 				838EA0371F53D48F00E9BF20 /* RNSNoteRoute.xib in Resources */,

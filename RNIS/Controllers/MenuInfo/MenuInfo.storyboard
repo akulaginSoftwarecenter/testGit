@@ -175,7 +175,6 @@
                         <outlet property="tableView" destination="ZED-xC-eyZ" id="lNQ-s4-sHo"/>
                         <segue destination="nBQ-du-cAc" kind="show" identifier="main_to_contacts" id="Ksf-Mc-vJI"/>
                         <segue destination="bLT-tI-vfl" kind="show" identifier="main_to_aboutApp" id="VW7-xJ-Avu"/>
-                        <segue destination="I48-wZ-wbc" kind="show" identifier="main_to_docsInfo" id="V8g-2t-HhN"/>
                         <segue destination="joV-KY-1rh" kind="show" identifier="main_to_qrScanner" id="Dly-4x-0dV"/>
                     </connections>
                 </viewController>
@@ -267,43 +266,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRG-Nk-ulg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2408.8000000000002" y="124.58770614692655"/>
-        </scene>
-        <!--Docs-->
-        <scene sceneID="V8D-Og-coj">
-            <objects>
-                <viewController id="I48-wZ-wbc" customClass="DocsInfoViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SL2-wh-DoT"/>
-                        <viewControllerLayoutGuide type="bottom" id="1Oh-Ef-XaV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rNE-zA-aJp">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Загрузка..." translatesAutoresizingMaskIntoConstraints="NO" id="Srk-H4-TBQ">
-                                <rect key="frame" x="16" y="16" width="343" height="579"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Srk-H4-TBQ" firstAttribute="trailing" secondItem="rNE-zA-aJp" secondAttribute="trailingMargin" id="B3u-1L-coe"/>
-                            <constraint firstItem="Srk-H4-TBQ" firstAttribute="leading" secondItem="rNE-zA-aJp" secondAttribute="leadingMargin" id="DuI-Kk-4hG"/>
-                            <constraint firstItem="1Oh-Ef-XaV" firstAttribute="top" secondItem="Srk-H4-TBQ" secondAttribute="bottom" constant="8" id="Fcd-ya-DMW"/>
-                            <constraint firstItem="Srk-H4-TBQ" firstAttribute="top" secondItem="SL2-wh-DoT" secondAttribute="bottom" constant="16" id="lUG-NE-Q9F"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Docs" id="0li-Gj-khB"/>
-                    <connections>
-                        <outlet property="textView" destination="Srk-H4-TBQ" id="M9U-ch-JSv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r4H-dg-AuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3029.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--Сканер QR-->
         <scene sceneID="THk-s0-nwa">

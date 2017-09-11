@@ -15,6 +15,7 @@ enum RNSDocsType: String {
 
 class DocsInfoViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: RNSTopTitle!
     @IBOutlet weak var textView: UITextView!
     var type: RNSDocsType = .userGuide
     
@@ -25,7 +26,7 @@ class DocsInfoViewController: UIViewController {
     }
     
     func loadText() {
-        navigationItem.title = type == .userGuide ? "Руководство пользователя" : "Пользовательское соглашение"
+        titleLabel.text = type == .userGuide ? "Руководство пользователя" : "Пользовательское соглашение"
         
         RNSPostMobilePageGet(type, complete: { [weak self] (item) in
             self?.prepareText(item?.text)
@@ -36,5 +37,9 @@ class DocsInfoViewController: UIViewController {
     
     func prepareText(_ text: String?) {
         textView.text = text
+    }
+    
+    override class var storyboardName: String {
+        return "DocsInfoViewController"
     }
 }
