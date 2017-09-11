@@ -14,12 +14,6 @@ class QRScannerInfoViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "Сканер QR"
-        
+        view.backgroundColor = .F1645A
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }

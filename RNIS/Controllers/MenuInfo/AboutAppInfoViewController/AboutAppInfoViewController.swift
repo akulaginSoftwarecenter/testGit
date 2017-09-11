@@ -13,13 +13,8 @@ class AboutAppInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .F1645A
         self.navigationItem.title = "О приложении"
         
     }
-
-    //MARK: Others methods
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
 }

@@ -220,7 +220,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G5P-zd-1dC" customClass="RNSRegisterTableView" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.91764705882352937" green="0.29803921568627451" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.81960784310000001" green="0.25882352939999997" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ocp-gJ-5yu">
@@ -242,7 +242,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QDO-qI-47y" firstAttribute="top" secondItem="G5P-zd-1dC" secondAttribute="bottom" id="KR5-uR-1Ww"/>
                             <constraint firstAttribute="trailing" secondItem="G5P-zd-1dC" secondAttribute="trailing" id="QhO-WN-TIY"/>
@@ -278,7 +278,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UjP-HU-LZA" firstAttribute="leading" secondItem="AnH-h4-OQO" secondAttribute="leadingMargin" id="hUq-Zy-9Dl"/>
                             <constraint firstItem="UjP-HU-LZA" firstAttribute="top" secondItem="Kk2-f1-HLG" secondAttribute="bottom" constant="24" id="k7s-9S-b5x"/>
@@ -302,7 +302,7 @@
                     <view key="view" contentMode="scaleToFill" id="onk-wB-3B0">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Сканер QR" id="3TL-S0-xlz"/>
                 </viewController>

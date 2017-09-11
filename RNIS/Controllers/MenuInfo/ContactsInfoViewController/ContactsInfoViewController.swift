@@ -28,7 +28,8 @@ class ContactsInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = type.title
+        navigationItem.title = type.title
+        view.backgroundColor = .F1645A
         loadItems()
         tableView.tableFooterView = UIView()
     }
