@@ -462,6 +462,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonDown" destination="KW4-Wx-OW8" id="1T5-iO-csU"/>
+                        <outlet property="viewTop" destination="2q1-O1-bJY" id="92z-gd-S94"/>
                         <outlet property="viewVariant" destination="KFW-15-5bk" id="IrX-Qu-eop"/>
                     </connections>
                 </viewController>
@@ -481,6 +483,6 @@
         <image name="plus" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RF6-Z6-9Gv"/>
+        <segue reference="X9n-Pb-O8k"/>
     </inferredMetricsTieBreakers>
 </document>

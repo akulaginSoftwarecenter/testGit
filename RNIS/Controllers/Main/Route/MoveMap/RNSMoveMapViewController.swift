@@ -12,10 +12,14 @@ class RNSMoveMapViewController: UIViewController {
     
     @IBOutlet weak var viewVariant: RNSDotsBussView!
 
+    @IBOutlet weak var viewTop: UIView!
+    @IBOutlet weak var buttonDown: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareMapView()
+        prepareColor()
         
         prepareStub()
     }
@@ -25,6 +29,11 @@ class RNSMoveMapViewController: UIViewController {
         
         item?.points.first?.doneMove = true
         viewVariant.item = item
+    }
+    
+    func prepareColor() {
+        buttonDown.backgroundColor = .F1645A
+        viewTop.backgroundColor = .F1645A
     }
     
     var item: RNSRouteVariant? {
