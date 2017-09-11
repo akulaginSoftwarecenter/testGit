@@ -82,7 +82,7 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXg-cc-apJ">
                                 <rect key="frame" x="25" y="270" width="325" height="30"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lOa-Qz-HxV"/>
                                 </constraints>
@@ -138,6 +138,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="58o-7H-iMa" secondAttribute="trailing" constant="9" id="1dY-Ji-DYl"/>
                             <constraint firstItem="wfc-0Q-0nT" firstAttribute="top" secondItem="8ik-tA-wrR" secondAttribute="bottom" constant="44" id="5sB-hW-cri"/>
                             <constraint firstAttribute="trailing" secondItem="zqu-hs-N8y" secondAttribute="trailing" constant="30" id="6KF-Kc-x9d"/>
+                            <constraint firstItem="zqu-hs-N8y" firstAttribute="top" relation="greaterThanOrEqual" secondItem="obB-LQ-4t8" secondAttribute="bottom" constant="20" id="Cbx-WO-LMR"/>
                             <constraint firstItem="Pma-9i-guq" firstAttribute="bottom" secondItem="wfc-0Q-0nT" secondAttribute="bottom" constant="63" id="ExI-Fq-oma"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GLV-uT-Lz0" secondAttribute="trailing" constant="9" id="FcC-fo-QUx"/>
                             <constraint firstItem="58o-7H-iMa" firstAttribute="top" secondItem="GLV-uT-Lz0" secondAttribute="bottom" constant="5" id="Grx-Sq-JZn"/>

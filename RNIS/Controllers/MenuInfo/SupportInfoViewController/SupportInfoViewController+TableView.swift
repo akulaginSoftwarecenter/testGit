@@ -10,6 +10,8 @@ import Foundation
 
 extension SupportInfoViewController {
     public func textViewDidChange(_ textView: UITextView) {
-        textViewHeightConstraint.constant = textView.contentSize.height + 5
+        UIView.animateConstrains(self.view) {
+            self.textViewHeightConstraint.constant = self.textView.contentSize.height
+        }
     }
 }
