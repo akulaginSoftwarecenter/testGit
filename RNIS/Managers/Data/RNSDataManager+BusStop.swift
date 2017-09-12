@@ -54,6 +54,7 @@ extension RNSDataManager {
     }
     
     static func createStubBusStopAsync(complete: (([RNSBusStop])->())?) {
+       removeAllBusStop()
        CounterTime.startTimer()
         createStubDictStops { (dicts) in
             CounterTime.endTimer()
@@ -65,24 +66,21 @@ extension RNSDataManager {
     }
     
     static func createStubDictStops(complete: (([AliasDictionary]) -> ())?) {
-        DispatchQueue.main.async {
-            var dicts = [AliasDictionary]()
-       
-            CounterTime.startTimer()
-            DispatchQueue.global(qos: .userInitiated).async {
-                for index in 7...10000 {
-                    dicts.append(["name":"test",
-                                  "uuid": "\(index)",
-                        "latitude": 54.997372,
-                        "longitude" : 73.363668 + Float(index)/1000 ])
-                }
-                Utils.mainQueue {
-                    complete?(dicts)
-                }
-            }
-            
-        }
+        var dicts = [AliasDictionary]()
         
+        CounterTime.startTimer()
+        let location = RNSLocationManager.point
+        DispatchQueue.global(qos: .background).async {
+            for index in 7...10000 {
+                dicts.append(["name":"test",
+                              "uuid": "\(index)",
+                    "latitude": location.latitude,
+                    "longitude" : location.longitude + Double(index)/1000 ])
+            }
+            Utils.mainQueue {
+                complete?(dicts)
+            }
+        }
     }
     
     static func addBusStop(_ uuid: String ,title: String?, lat: Double, lon: Double) -> RNSBusStop {
@@ -95,7 +93,9 @@ extension RNSDataManager {
         guard let busStops = busStops else {
             return
         }
-        realm?.delete(busStops)
+        write ({
+            realm?.delete(busStops)
+        })
     }
     
     static func parseBusStopItems(_ dicts: [AliasDictionary]) -> [RNSBusStop] {
@@ -127,9 +127,20 @@ extension RNSDataManager {
         }
         let distance = min.distanceTo(center)
         return Array(results).filter{
-            //print("distance1",distance)
-            //print("distance2",center.distanceTo($0.point))
             return center.distanceTo($0.point) < distance
+        }
+    }
+    
+    static func bussStopsAsync(_ min: PGGeoPoint, center: PGGeoPoint, complete: (([RNSBusStop]?) -> ())?) {
+          DispatchQueue.global(qos: .background).async {
+            let items = bussStops(min, center: center)
+            let uuids = items?.flatMap{$0.uuid}
+            DispatchQueue.main.async {
+                let result = uuids?.flatMap({ (uuid) -> RNSBusStop? in
+                    return realm?.object(ofType: RNSBusStop.self, forPrimaryKey: uuid)
+                })
+                complete?(result)
+            }
         }
     }
 }

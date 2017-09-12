@@ -57,9 +57,6 @@ extension RNSMapManager {
         print("removeOLdBusStops",items.count)
         for item in items {
             item.handlerRemove?()
-            if let handlerRemove = item.handlerRemove {
-                print("handlerRemove")
-            }
         }
     }
     

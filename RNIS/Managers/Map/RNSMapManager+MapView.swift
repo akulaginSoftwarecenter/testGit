@@ -32,16 +32,18 @@ extension RNSMapManager {
     static func bussStopsUpdateShow() {
         removeOLdBusStops()
         print("bussStopsUpdateShow",getZoomLevel)
-        if getZoomLevel < 16 {
+        if getZoomLevel < 15 {
             return
         }
         CounterTime.startTimer()
-        guard let items = RNSDataManager.bussStops(mapView.lastMinCoord, center: mapView.lastCenterCoord) else {
-            return
+        RNSDataManager.bussStopsAsync(mapView.lastMinCoord, center: mapView.lastCenterCoord) { items in
+            CounterTime.endTimer()
+            guard let items = items else {
+                return
+            }
+            print("items",items.count)
+            showPinBusStop(items)
+            CounterTime.endTimer()
         }
-        CounterTime.endTimer()
-        print("items",items.count)
-        showPinBusStop(items)
-        CounterTime.endTimer()
     }
 }
