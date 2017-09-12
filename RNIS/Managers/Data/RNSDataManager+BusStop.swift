@@ -70,7 +70,7 @@ extension RNSDataManager {
         
         CounterTime.startTimer()
         let location = RNSLocationManager.point
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .userInitiated).async {
             for index in 7...10000 {
                 dicts.append(["name":"test",
                               "uuid": "\(index)",
@@ -90,12 +90,14 @@ extension RNSDataManager {
     }
     
     static func removeAllBusStop() {
-        guard let busStops = busStops else {
-            return
+        DispatchQueue.main.async {
+            guard let busStops = busStops else {
+                return
+            }
+            write ({
+                realm?.delete(busStops)
+            })
         }
-        write ({
-            realm?.delete(busStops)
-        })
     }
     
     static func parseBusStopItems(_ dicts: [AliasDictionary]) -> [RNSBusStop] {
@@ -131,16 +133,8 @@ extension RNSDataManager {
         }
     }
     
-    static func bussStopsAsync(_ min: PGGeoPoint, center: PGGeoPoint, complete: (([RNSBusStop]?) -> ())?) {
-          DispatchQueue.global(qos: .background).async {
-            let items = bussStops(min, center: center)
-            let uuids = items?.flatMap{$0.uuid}
-            DispatchQueue.main.async {
-                let result = uuids?.flatMap({ (uuid) -> RNSBusStop? in
-                    return realm?.object(ofType: RNSBusStop.self, forPrimaryKey: uuid)
-                })
-                complete?(result)
-            }
-        }
+    static func bussStopsUuids(_ min: PGGeoPoint, center: PGGeoPoint) -> [String]? {
+        let items = bussStops(min, center: center)
+        return items?.flatMap{$0.uuid}
     }
 }

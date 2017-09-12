@@ -50,16 +50,6 @@ extension RNSMapManager {
         }
     }
     
-    static func removeOLdBusStops() {
-        guard let items = showedStops else {
-            return
-        }
-        print("removeOLdBusStops",items.count)
-        for item in items {
-            item.handlerRemove?()
-        }
-    }
-    
     static func prepareStubBus() {
         RNSDataManager.createStubBusIfNeed()
         guard let item = RNSDataManager.buss?.first else {

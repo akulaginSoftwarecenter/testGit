@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class RNSDataManager: NSObject {
+    static let shared = RNSDataManager()
     
     static var busStop1: RNSBusStop?
     static var busStop2: RNSBusStop?
@@ -17,7 +18,6 @@ class RNSDataManager: NSObject {
     static var busStop4: RNSBusStop?
     static var busStop5: RNSBusStop?
     static var busStop6: RNSBusStop?
-    
     
     static var realm: Realm? {
         do {

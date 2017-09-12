@@ -29,21 +29,49 @@ extension RNSMapManager {
         mapView.setZoomLevel(13)
     }
     
-    static func bussStopsUpdateShow() {
-        removeOLdBusStops()
-        print("bussStopsUpdateShow",getZoomLevel)
-        if getZoomLevel < 15 {
+    static func bussStopsUpdate() {
+        
+        let operation = BlockOperation(block:{
+            bussStopsUpdateOperation()
+        })
+   
+        queue.cancelAllOperations()
+        queue.addOperation(operation)
+    }
+
+    static func bussStopsUpdateOperation() {
+        guard getZoomLevel > 14 else {
+            Utils.mainQueue {
+                removeOLdBusStops()
+            }
             return
         }
-        CounterTime.startTimer()
-        RNSDataManager.bussStopsAsync(mapView.lastMinCoord, center: mapView.lastCenterCoord) { items in
-            CounterTime.endTimer()
-            guard let items = items else {
-                return
-            }
-            print("items",items.count)
-            showPinBusStop(items)
+        
+        let uuids = RNSDataManager.bussStopsUuids(mapView.lastMinCoord, center: mapView.lastCenterCoord)
+        Utils.mainQueue {
+            CounterTime.startTimer()
+            removeOLdBusStops()
+            showPinBusStopUuids(uuids)
             CounterTime.endTimer()
         }
+    }
+    
+    static func showPinBusStopUuids(_ uuids: [String]?) {
+        guard let items = uuids?.flatMap({ (uuid) -> RNSBusStop? in
+            return RNSDataManager.realm?.object(ofType: RNSBusStop.self, forPrimaryKey: uuid)
+        }) else {
+            return
+        }
+        showPinBusStop(items)
+    }
+    
+    static func removeOLdBusStops() {
+        guard let items = showedStops else {
+            return
+        }
+        for item in items {
+            item.handlerRemove?()
+        }
+        showedStops = nil
     }
 }
