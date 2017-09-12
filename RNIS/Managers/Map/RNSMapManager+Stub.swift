@@ -16,9 +16,11 @@ extension RNSMapManager {
     }
     
     static func prepareStubBusStop() {
+        /*
         removeOLdBusStops()
         RNSDataManager.createStubBusStopIfNeed()
         showPinBusStopAll()
+         */
     }
     
     static func prepareStubBusStopAsunc() {
@@ -34,18 +36,14 @@ extension RNSMapManager {
         guard let items = RNSDataManager.busStops else {
             return
         }
-        
-        for item in items {
-            item.handlerRemove?()
-            _ = RNSPinBusStop(item)
-        }
+        showPinBusStop(Array(items))
     }
     
     static func showPinBusStop(_ items: [RNSBusStop]?) {
         guard let items = items else {
             return
         }
-        
+        showedStops = items
         for item in items {
             item.handlerRemove?()
             _ = RNSPinBusStop(item)
@@ -53,7 +51,7 @@ extension RNSMapManager {
     }
     
     static func removeOLdBusStops() {
-        guard let items = RNSDataManager.busStops else {
+        guard let items = showedStops else {
             return
         }
         print("removeOLdBusStops",items.count)

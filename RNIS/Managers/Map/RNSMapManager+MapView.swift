@@ -31,7 +31,7 @@ extension RNSMapManager {
     
     static func bussStopsUpdateShow() {
         removeOLdBusStops()
-        //print("bussStopsUpdateShow",getZoomLevel)
+        print("bussStopsUpdateShow",getZoomLevel)
         if getZoomLevel < 16 {
             return
         }
@@ -40,7 +40,7 @@ extension RNSMapManager {
             return
         }
         CounterTime.endTimer()
-        //print("items",items.count)
+        print("items",items.count)
         showPinBusStop(items)
         CounterTime.endTimer()
     }
