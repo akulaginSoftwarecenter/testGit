@@ -294,7 +294,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DKD-dZ-eIH" secondAttribute="height" multiplier="1:1" id="SF8-BR-58D"/>
                                         </constraints>
-                                        <state key="normal" image="MyAddress"/>
+                                        <state key="normal" image="Target"/>
                                         <connections>
                                             <action selector="actionMyLocation:" destination="kPS-F3-8vu" eventType="touchUpInside" id="Ytd-45-0VS"/>
                                         </connections>
@@ -473,8 +473,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MyAddress" width="23" height="32"/>
         <image name="Poisk" width="55" height="55"/>
+        <image name="Target" width="24" height="24"/>
         <image name="compas" width="55" height="55"/>
         <image name="ic_prev_route" width="55" height="55"/>
         <image name="menu" width="55" height="55"/>
