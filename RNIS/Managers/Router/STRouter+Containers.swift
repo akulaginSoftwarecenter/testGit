@@ -26,6 +26,10 @@ extension STRouter {
         return RNSScrollKeyBoardContainer.initController(viewController)
     }
     
+    static func imageScrollContainer(_ viewController: UIViewController?) -> UIViewController? {
+        return imageContainer(scrollContainer(viewController))
+    }
+    
     static func imageBoardContainer(_ viewController: UIViewController?) -> UIViewController? {
         return imageContainer(boardContainer(viewController))
     }

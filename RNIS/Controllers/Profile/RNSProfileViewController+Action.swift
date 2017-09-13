@@ -11,10 +11,10 @@ import Foundation
 extension RNSProfileViewController {
     
     @IBAction func actionPhone(_ sender: Any) {
-        RNSChangePhoneController.controller.pushAnimatedRedScroll()
+        RNSChangePhoneController.controller.pushAnimatedImageScroll()
     }
     
     @IBAction func actionPassword(_ sender: Any) {
-        RNSChangePasswordController.initialController.pushAnimatedRedScroll()
+        RNSChangePasswordController.initialController.pushAnimatedImageScroll()
     }
 }

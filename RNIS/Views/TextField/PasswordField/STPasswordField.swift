@@ -11,14 +11,14 @@ import UIKit
 class STPasswordField: RNSTextField {
 
     override var isValid:Bool {
-        return (text?.characters.count ?? 0) >= 6
+        return (text?.characters.count ?? 0) >= 3
     }
     
     override var errorText:String? {
         return isValid ? nil : errorTextNoValid
     }
     
-    @IBInspectable var errorTextNoValid: String = "Пароль не может содержать менее 6 символов"
+    @IBInspectable var errorTextNoValid: String = "Пароль должен состоять не менее чем из 3 символов"
     
     convenience init(placeholderKey: String) {
         self.init()

@@ -22,6 +22,7 @@ class RNSChangePasswordController: UIViewController {
         super.viewDidLoad()
         
         prepareCoverView()
+
     }
     
     func prepareCoverView() {

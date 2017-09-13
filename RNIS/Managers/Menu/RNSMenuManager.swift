@@ -24,7 +24,7 @@ class RNSMenuManager: NSObject {
                      MenuItem("Информация", STRouter.redContainer(MainInfoViewController.initialController), #imageLiteral(resourceName: "menuInfoIcon"))]
     
     lazy var profileVC: UIViewController? = {
-        return STRouter.redScrollContainer(RNSProfileViewController.initialController)
+        return STRouter.imageScrollContainer(RNSProfileViewController.initialController)
     }()
     
     static var handlerShowLeftMenu: EmptyBlock?

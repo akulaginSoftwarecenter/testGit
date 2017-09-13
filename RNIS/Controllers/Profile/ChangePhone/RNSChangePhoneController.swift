@@ -23,6 +23,6 @@ class RNSChangePhoneController: RNSPhoneContrainerController {
     }
     
     override func actionNext() {
-        RNSChangeCodeController.initController(phoneText)?.pushAnimatedRedScroll()
+        RNSChangeCodeController.initController(phoneText)?.pushAnimatedImageScroll()
     }
 }

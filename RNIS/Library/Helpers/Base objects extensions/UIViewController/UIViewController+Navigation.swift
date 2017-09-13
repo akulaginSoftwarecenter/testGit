@@ -21,6 +21,10 @@ extension UIViewController {
     func pushAnimatedImageBoard() {
         STRouter.pushAnimatedImageBoard(self)
     }
+    
+    func pushAnimatedImageScroll() {
+        STRouter.pushAnimatedImageScroll(self)
+    }
    
     static func initialPushAnimatedRed() {
         return initialController.pushAnimatedRed()
