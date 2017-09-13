@@ -71,7 +71,7 @@
                                     <action selector="actionSegmented:" destination="f8r-2V-VlC" eventType="valueChanged" id="KA3-1Y-vvV"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-0W-CJ3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-0W-CJ3">
                                 <rect key="frame" x="30" y="189" width="315" height="458"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -86,7 +86,7 @@
                                                     <rect key="frame" x="0.0" y="15" width="33" height="29"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oow-Ve-xdN">
-                                                    <rect key="frame" x="48" y="19.5" width="37" height="20"/>
+                                                    <rect key="frame" x="48" y="20" width="37" height="20"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -127,6 +127,7 @@
                             <constraint firstAttribute="trailing" secondItem="8pT-Nm-gqz" secondAttribute="trailing" constant="30" id="ACy-x9-JtQ"/>
                             <constraint firstAttribute="trailing" secondItem="RbW-0W-CJ3" secondAttribute="trailing" constant="30" id="B8K-XD-6Ew"/>
                             <constraint firstItem="8pT-Nm-gqz" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="30" id="E4L-S2-W6g"/>
+                            <constraint firstItem="RbW-0W-CJ3" firstAttribute="top" secondItem="8pT-Nm-gqz" secondAttribute="bottom" constant="20" id="IFZ-8a-Zoz"/>
                             <constraint firstItem="RbW-0W-CJ3" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="30" id="KjY-0h-gf7"/>
                             <constraint firstItem="8pT-Nm-gqz" firstAttribute="top" secondItem="6n5-Y2-3TC" secondAttribute="bottom" constant="10" id="Pg0-BT-VDg"/>
                             <constraint firstItem="6n5-Y2-3TC" firstAttribute="bottom" secondItem="WFt-Mo-aWU" secondAttribute="top" constant="119" id="uz4-az-cJA"/>
