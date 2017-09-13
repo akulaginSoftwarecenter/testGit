@@ -16,20 +16,17 @@ extension RNSMapManager {
     }
     
     static func prepareStubBusStop() {
-        /*
-        removeOLdBusStops()
+        removeOLdBusStopsAll()
         RNSDataManager.createStubBusStopIfNeed()
         showPinBusStopAll()
-         */
     }
     
     static func prepareStubBusStopAsunc() {
-        removeOLdBusStops()
+        removeOLdBusStopsAll()
         RNSDataManager.createStubBusStopAsync { (items) in
-            print("items")
+            print("createStubBusStopAsync", items.count)
             //showPinBusStop()
         }
-  
     }
     
     static func showPinBusStopAll() {
@@ -37,17 +34,6 @@ extension RNSMapManager {
             return
         }
         showPinBusStop(Array(items))
-    }
-    
-    static func showPinBusStop(_ items: [RNSBusStop]?) {
-        guard let items = items else {
-            return
-        }
-        showedStops = items
-        for item in items {
-            item.handlerRemove?()
-            _ = RNSPinBusStop(item)
-        }
     }
     
     static func prepareStubBus() {

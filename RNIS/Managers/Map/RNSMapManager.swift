@@ -47,7 +47,8 @@ class RNSMapManager: NSObject {
         return Int(mapView.getZoomLevel())
     }
     
-    static var showedStops: [RNSBusStop]?
+    static var showedStops = [RNSBusStop]()
+    static var showedStopsUuids = [String]()
     
     static func showMoveMap() {
         RNSPageRouteManager.removeNonActivRoute()

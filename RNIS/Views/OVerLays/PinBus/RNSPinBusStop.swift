@@ -23,7 +23,7 @@ class RNSPinBusStop: RNSPinItem {
     }
     
     func prepareCurrent(_ current: Bool = false) {
-        let image = current ? #imageLiteral(resourceName: "Bus_stop_current") : #imageLiteral(resourceName: "Bus_stop")
+        let image = current ? RNSImageFactory.bus_stop_current : RNSImageFactory.bus_stop
         setBitmap(image, xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 15)
     }
 }

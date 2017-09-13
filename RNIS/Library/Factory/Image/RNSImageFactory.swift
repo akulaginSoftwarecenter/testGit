@@ -18,6 +18,8 @@ class RNSImageFactory: NSObject {
     }
    
     let inImage = #imageLiteral(resourceName: "BusIcon")
+    static let bus_stop_current = #imageLiteral(resourceName: "Bus_stop_current")
+    static let bus_stop = #imageLiteral(resourceName: "Bus_stop")
     
     lazy var textFontAttributes: AliasDictionary = {
         let style = NSMutableParagraphStyle()
