@@ -10,7 +10,7 @@ import UIKit
 
 enum TypeTitle: String {
     case registration = "Регистрация"
-    case recovery = "Забыли пароль"
+    case recovery = "Восстановление пароля"
     case change = "Сменить номер"
     case none = ""
 }

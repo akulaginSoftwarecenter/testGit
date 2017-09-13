@@ -47,11 +47,11 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReY-FI-gw3">
-                                <rect key="frame" x="30" y="602" width="89" height="62"/>
+                                <rect key="frame" x="30" y="602" width="106" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="aoj-CP-0fp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                                 <state key="normal" title="Регистрация">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,12 +60,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKu-xF-If7">
-                                <rect key="frame" x="229" y="602" width="116" height="62"/>
+                                <rect key="frame" x="206" y="602" width="139" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="3gA-RK-GVB"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="M7G-Uu-rDh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                                 <state key="normal" title="Забыли пароль?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
