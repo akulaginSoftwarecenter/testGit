@@ -16,10 +16,7 @@ extension RNSDataManager {
     }
     
     static func createStubBusStopIfNeed() {
-        if (busStops?.count ?? 0) != 0 {
-            return
-        }
-        
+       
         let dicts = [["name":"бул. Конногвардейский",
                      "uuid": "1",
                      "latitude": 59.9344377,

@@ -15,10 +15,25 @@ class RNSRouteStillCell: RNSRouteParentCell {
     @IBOutlet weak var line: UIView!
     
     @IBOutlet weak var topLine: UIView!
+    
+    @IBOutlet var circles: [RNSCircle]!
+    
+    var openStill: Bool {
+        return item?.openStill ?? false
+    }
+    
     override func prepareUI() {
         line.roundTopCorners()
         topLine.roundBottomCorners()
         label.text = item?.stillText
-        imageArrow.image = (item?.openStill ?? false) ? #imageLiteral(resourceName: "ArrowUp") : #imageLiteral(resourceName: "ArrowDown")
+        imageArrow.image = openStill ? #imageLiteral(resourceName: "ArrowUp") : #imageLiteral(resourceName: "ArrowDown")
+        updateCircles()
+    }
+    
+    func updateCircles() {
+        let color: UIColor = openStill ? .white : .FFB9AF
+        for view in circles {
+            view.backgroundColor = color
+        }
     }
 }

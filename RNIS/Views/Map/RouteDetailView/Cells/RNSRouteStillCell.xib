@@ -145,6 +145,9 @@
                 <outlet property="label" destination="Z7f-WF-g6O" id="oHh-aC-Ku3"/>
                 <outlet property="line" destination="4kz-Tw-8dD" id="fXP-NR-8ga"/>
                 <outlet property="topLine" destination="bPL-N4-520" id="Bg7-Yc-36y"/>
+                <outletCollection property="circles" destination="IJT-ty-mIx" collectionClass="NSMutableArray" id="aMb-2x-cMd"/>
+                <outletCollection property="circles" destination="WHU-fq-SDF" collectionClass="NSMutableArray" id="km9-mv-Tfc"/>
+                <outletCollection property="circles" destination="iWz-wC-sLf" collectionClass="NSMutableArray" id="yMy-5g-mEq"/>
             </connections>
             <point key="canvasLocation" x="26.5" y="52"/>
         </tableViewCell>
