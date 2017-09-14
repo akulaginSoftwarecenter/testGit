@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R8d-aI-xtI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Сканер QR-->
+        <scene sceneID="tiX-UO-oOD">
+            <objects>
+                <viewController id="R8d-aI-xtI" customClass="QRScannerInfoViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fhT-ff-3xH"/>
+                        <viewControllerLayoutGuide type="bottom" id="peF-D2-jdv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EKY-R0-Z2B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H9-l0-a3P" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="74" y="10" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Сканер QR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ4-Zf-h9y" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="62" y="15" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRImage" translatesAutoresizingMaskIntoConstraints="NO" id="A88-Us-iEi">
+                                <rect key="frame" x="0.0" y="82" width="375" height="585"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="A88-Us-iEi" secondAttribute="bottom" id="T2W-wc-W0c"/>
+                            <constraint firstItem="A88-Us-iEi" firstAttribute="leading" secondItem="EKY-R0-Z2B" secondAttribute="leading" id="gx3-h5-zn2"/>
+                            <constraint firstItem="A88-Us-iEi" firstAttribute="top" secondItem="EKY-R0-Z2B" secondAttribute="top" constant="82" id="iHb-9R-pzM"/>
+                            <constraint firstAttribute="trailing" secondItem="A88-Us-iEi" secondAttribute="trailing" id="rOc-GT-gBv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Сканер QR" id="FgP-Tr-Z1W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEc-7c-P2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4274" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="QRImage" width="375" height="585"/>
+    </resources>
+</document>

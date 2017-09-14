@@ -30,6 +30,10 @@ extension UIViewController {
         return initialController.pushAnimatedRed()
     }
     
+    static func initialPushAnimatedRedScroll() {
+        return initialController.pushAnimatedRedScroll()
+    }
+    
     func pushAnimatedRed() {
         STRouter.pushAnimatedRed(self)
     }

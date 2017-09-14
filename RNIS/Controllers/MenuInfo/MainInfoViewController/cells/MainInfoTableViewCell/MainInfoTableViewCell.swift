@@ -11,14 +11,9 @@ import UIKit
 class MainInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     func updateCell(title: String) {
         self.title.text = title
     }
-    
 }
 

@@ -32,13 +32,13 @@ extension MainInfoViewController: UITableViewDelegate, UITableViewDataSource  {
             self.performSegue(withIdentifier: main_to_contacts, sender: row)
             break;
         case 2:
-            self.performSegue(withIdentifier: "main_to_qrScanner", sender: self)
+            QRScannerInfoViewController.initialPushAnimatedRed()
             break;
         case 3:
-            ReportInfoViewController.initialController.pushAnimatedRedScroll()
+            ReportInfoViewController.initialPushAnimatedRedScroll()
             break;
         case 4:
-            SupportInfoViewController.initialController.pushAnimatedRedScroll()
+            SupportInfoViewController.initialPushAnimatedRedScroll()
             break;
         case 7:
             self.performSegue(withIdentifier: "main_to_aboutApp", sender: self)

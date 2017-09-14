@@ -181,6 +181,7 @@
 		836277DF1F382CC8009FB712 /* RNSScrollShowContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */; };
 		836277E21F382E85009FB712 /* RNSBusStopDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */; };
 		836277E41F382E97009FB712 /* RNSBusStopDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */; };
+		8362CE261F6A76C400BE912D /* QRScannerInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8362CE251F6A76C400BE912D /* QRScannerInfoViewController.storyboard */; };
 		83674FDC1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83674FDB1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift */; };
 		83674FDE1F56CCA000F0A2C0 /* RNSMoveMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83674FDD1F56CCA000F0A2C0 /* RNSMoveMapViewController+MapView.swift */; };
 		8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989091F316B8E003E4D73 /* RNSParoleViewController.swift */; };
@@ -688,6 +689,7 @@
 		836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSScrollShowContainer.storyboard; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer.storyboard"; sourceTree = "<group>"; };
 		836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusStopDetailController.swift; path = Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift; sourceTree = "<group>"; };
 		836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSBusStopDetailController.storyboard; path = Controllers/Map/BusStopDetail/RNSBusStopDetailController.storyboard; sourceTree = "<group>"; };
+		8362CE251F6A76C400BE912D /* QRScannerInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRScannerInfoViewController.storyboard; sourceTree = "<group>"; };
 		83674FDB1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMoveMapViewController.swift; path = Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift; sourceTree = "<group>"; };
 		83674FDD1F56CCA000F0A2C0 /* RNSMoveMapViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMoveMapViewController+MapView.swift"; path = "Controllers/Main/Route/MoveMap/RNSMoveMapViewController+MapView.swift"; sourceTree = "<group>"; };
 		836989091F316B8E003E4D73 /* RNSParoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParoleViewController.swift; path = "Controllers/Authorization+Registration/Parent/Parole/RNSParoleViewController.swift"; sourceTree = "<group>"; };
@@ -904,8 +906,8 @@
 		83AA6A321F565D5D00B2139C /* RNSRouteTable+Still.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteTable+Still.swift"; path = "Models/Temp/RNSRouteVariant/Table/RNSRouteTable+Still.swift"; sourceTree = "<group>"; };
 		83AA6A341F565DA900B2139C /* RNSRouteTableItem+Still.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteTableItem+Still.swift"; path = "Models/Temp/RNSRouteVariant/Table/Item/RNSRouteTableItem+Still.swift"; sourceTree = "<group>"; };
 		83AA6A381F5668C000B2139C /* AboutAppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAppInfoViewController.swift; sourceTree = "<group>"; };
-		83AA6A3C1F5668C000B2139C /* ContactsInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsInfoTableViewCell.swift; sourceTree = "<group>"; };
-		83AA6A3D1F5668C000B2139C /* ContactsInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsInfoTableViewCell.xib; sourceTree = "<group>"; };
+		83AA6A3C1F5668C000B2139C /* ContactsInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsInfoTableViewCell.swift; path = ContactsInfoTableViewCell/ContactsInfoTableViewCell.swift; sourceTree = "<group>"; };
+		83AA6A3D1F5668C000B2139C /* ContactsInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactsInfoTableViewCell.xib; path = ContactsInfoTableViewCell/ContactsInfoTableViewCell.xib; sourceTree = "<group>"; };
 		83AA6A3E1F5668C000B2139C /* ContactsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsInfoViewController.swift; sourceTree = "<group>"; };
 		83AA6A401F5668C000B2139C /* DocsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocsInfoViewController.swift; sourceTree = "<group>"; };
 		83AA6A461F5668C000B2139C /* MainInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -3398,18 +3400,10 @@
 		83AA6A3A1F5668C000B2139C /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				83AA6A3B1F5668C000B2139C /* ContactsInfoTableViewCell */,
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		83AA6A3B1F5668C000B2139C /* ContactsInfoTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
 				83AA6A3C1F5668C000B2139C /* ContactsInfoTableViewCell.swift */,
 				83AA6A3D1F5668C000B2139C /* ContactsInfoTableViewCell.xib */,
 			);
-			path = ContactsInfoTableViewCell;
+			path = cells;
 			sourceTree = "<group>";
 		};
 		83AA6A3F1F5668C000B2139C /* DocsInfoViewController */ = {
@@ -3454,6 +3448,7 @@
 			isa = PBXGroup;
 			children = (
 				83AA6A561F5668C000B2139C /* QRScannerInfoViewController.swift */,
+				8362CE251F6A76C400BE912D /* QRScannerInfoViewController.storyboard */,
 			);
 			name = QRScannerInfoViewController;
 			path = Controllers/MenuInfo/QRScannerInfoViewController;
@@ -3962,6 +3957,7 @@
 				8390DFD61F6648C3003C3505 /* DocsInfoViewController.storyboard in Resources */,
 				83AA6A621F5668C000B2139C /* MainInfoTableViewCell.xib in Resources */,
 				83A5C6F21F57F4A8006C8D62 /* RNSRouteDetailView.xib in Resources */,
+				8362CE261F6A76C400BE912D /* QRScannerInfoViewController.storyboard in Resources */,
 				838EA0371F53D48F00E9BF20 /* RNSNoteRoute.xib in Resources */,
 				830E68B81F552FC6008EFA02 /* RNSRouteDetailController.storyboard in Resources */,
 				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
