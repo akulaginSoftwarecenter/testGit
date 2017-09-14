@@ -42,6 +42,6 @@ class RNSBusStopTemp: RNISMappableBase, RNSTextItem, Hashable  {
     }
     
     var height: CGFloat {
-        return CGFloat(33 + (forecast?.count ?? 0) * 49)
+        return CGFloat(45 + (forecast?.count ?? 0) * 49)
     }
 }

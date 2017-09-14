@@ -440,7 +440,6 @@
 		83AFEB4F1F6A32DB00C2A251 /* RNSFavoritesBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFEB4E1F6A32DB00C2A251 /* RNSFavoritesBusView.swift */; };
 		83AFEB521F6A330000C2A251 /* RNSFavoritesBusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AFEB511F6A330000C2A251 /* RNSFavoritesBusView.xib */; };
 		83AFEB551F6A337100C2A251 /* RNSFavoritesBusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFEB541F6A337100C2A251 /* RNSFavoritesBusCell.swift */; };
-		83AFEB571F6A338800C2A251 /* RNSFavoritesBusCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AFEB561F6A338800C2A251 /* RNSFavoritesBusCell2.xib */; };
 		83AFEB5B1F6A364500C2A251 /* RNSForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFEB5A1F6A364500C2A251 /* RNSForecastCell.swift */; };
 		83AFEB5D1F6A365900C2A251 /* RNSForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AFEB5C1F6A365900C2A251 /* RNSForecastCell.xib */; };
 		83AFEB5F1F6A3A9B00C2A251 /* RNSFavoritesBusCell+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFEB5E1F6A3A9B00C2A251 /* RNSFavoritesBusCell+TableView.swift */; };
@@ -478,7 +477,6 @@
 		83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B701F4D484500246DFA /* RNSRoadBus.swift */; };
 		83D62B731F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */; };
 		83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */; };
-		83D7137E1F5D02EA005206C5 /* TransportViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137D1F5D02EA005206C5 /* TransportViewController+TableView.swift */; };
 		83D713801F5D03DC005206C5 /* TransportViewController+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */; };
 		83D713821F5D069C005206C5 /* NotificationsSettingsViewController+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D713811F5D069C005206C5 /* NotificationsSettingsViewController+PickerView.swift */; };
 		83D713841F5D0926005206C5 /* NotificationsSettingsViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D713831F5D0926005206C5 /* NotificationsSettingsViewController+Action.swift */; };
@@ -926,7 +924,6 @@
 		83AFEB4E1F6A32DB00C2A251 /* RNSFavoritesBusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSFavoritesBusView.swift; path = Views/Transport/RNSFavoritesBusView.swift; sourceTree = "<group>"; };
 		83AFEB511F6A330000C2A251 /* RNSFavoritesBusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSFavoritesBusView.xib; path = Views/Transport/FavoritesBusView/RNSFavoritesBusView.xib; sourceTree = "<group>"; };
 		83AFEB541F6A337100C2A251 /* RNSFavoritesBusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSFavoritesBusCell.swift; path = Views/Transport/FavoritesBusView/Cell/RNSFavoritesBusCell.swift; sourceTree = "<group>"; };
-		83AFEB561F6A338800C2A251 /* RNSFavoritesBusCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSFavoritesBusCell2.xib; path = Views/Transport/FavoritesBusView/Cell/RNSFavoritesBusCell2.xib; sourceTree = "<group>"; };
 		83AFEB5A1F6A364500C2A251 /* RNSForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSForecastCell.swift; path = Views/Transport/FavoritesBusView/Cell/Forecast/RNSForecastCell.swift; sourceTree = "<group>"; };
 		83AFEB5C1F6A365900C2A251 /* RNSForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSForecastCell.xib; path = Views/Transport/FavoritesBusView/Cell/Forecast/RNSForecastCell.xib; sourceTree = "<group>"; };
 		83AFEB5E1F6A3A9B00C2A251 /* RNSFavoritesBusCell+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSFavoritesBusCell+TableView.swift"; path = "Views/Transport/FavoritesBusView/Cell/RNSFavoritesBusCell+TableView.swift"; sourceTree = "<group>"; };
@@ -964,7 +961,6 @@
 		83D62B701F4D484500246DFA /* RNSRoadBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadBus.swift; path = Views/Polylines/RoadBus/RNSRoadBus.swift; sourceTree = "<group>"; };
 		83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadActivate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadActivate.swift"; sourceTree = "<group>"; };
 		83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackMoveButton.swift; path = Views/Buttons/BlackMoveButton/RNSBlackMoveButton.swift; sourceTree = "<group>"; };
-		83D7137D1F5D02EA005206C5 /* TransportViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransportViewController+TableView.swift"; sourceTree = "<group>"; };
 		83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransportViewController+Segment.swift"; sourceTree = "<group>"; };
 		83D713811F5D069C005206C5 /* NotificationsSettingsViewController+PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NotificationsSettingsViewController+PickerView.swift"; path = "Setting/NotificationsSettingsViewController+PickerView.swift"; sourceTree = "<group>"; };
 		83D713831F5D0926005206C5 /* NotificationsSettingsViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NotificationsSettingsViewController+Action.swift"; path = "Setting/NotificationsSettingsViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1381,7 +1377,6 @@
 				836E69381F5E441A003D9D46 /* Alert */,
 				83204B311F591CB70033ACA1 /* cells */,
 				83204B3B1F591CB70033ACA1 /* TransportViewController.swift */,
-				83D7137D1F5D02EA005206C5 /* TransportViewController+TableView.swift */,
 				83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */,
 				83204B3A1F591CB70033ACA1 /* TransportViewController.storyboard */,
 			);
@@ -2529,6 +2524,7 @@
 				832E4B911F2ED53000A4AD77 /* String */,
 				832E4B9D1F2ED5D200A4AD77 /* TextField */,
 				83A53F8E1F4A9D1300938969 /* UICollectionView */,
+				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,
 				837B66741F3957C50048C5BA /* UIScreen */,
 				83029BCD1F4BEC9F00B0FEE3 /* UIStackView */,
@@ -3040,7 +3036,6 @@
 		838AB8C51F26FB7C009E9C40 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				838AB8C61F26FBCD009E9C40 /* UIColor+Utils.swift */,
 			);
 			name = UIColor;
@@ -3556,7 +3551,6 @@
 			children = (
 				83AFEB541F6A337100C2A251 /* RNSFavoritesBusCell.swift */,
 				83AFEB5E1F6A3A9B00C2A251 /* RNSFavoritesBusCell+TableView.swift */,
-				83AFEB561F6A338800C2A251 /* RNSFavoritesBusCell2.xib */,
 				8322792E1F6A509900CF83F2 /* RNSFavoritesBusCell.xib */,
 			);
 			name = FavoritesBus;
@@ -3991,7 +3985,6 @@
 				838EA0371F53D48F00E9BF20 /* RNSNoteRoute.xib in Resources */,
 				830E68B81F552FC6008EFA02 /* RNSRouteDetailController.storyboard in Resources */,
 				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
-				83AFEB571F6A338800C2A251 /* RNSFavoritesBusCell2.xib in Resources */,
 				838CE9371F3DAA2000C10FBA /* RNSBusInfoViewController.storyboard in Resources */,
 				83204B3F1F591CB70033ACA1 /* MyTransportTopCell.xib in Resources */,
 				832B1DE21F42BAA60024505C /* RNSMapParentController.storyboard in Resources */,
@@ -4439,7 +4432,6 @@
 				836EEF131F3C02E3007631D9 /* UITableViewCell+Utils.swift in Sources */,
 				836A9D7A1F62573F00B5EB55 /* RNSPostFeedback.swift in Sources */,
 				837857F51F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift in Sources */,
-				83D7137E1F5D02EA005206C5 /* TransportViewController+TableView.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
 				83AA6A331F565D5D00B2139C /* RNSRouteTable+Still.swift in Sources */,
 				836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */,

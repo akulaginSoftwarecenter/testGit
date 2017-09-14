@@ -31,4 +31,18 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
     func item(_ indexPath: IndexPath) -> RNSBusStopTemp? {
         return items[indexPath.section][indexPath.row]
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        let label = UILabel()
+        label.font = .cffazm20
+        label.textColor = .white
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.left.equalTo(view).inset(15)
+            make.bottom.equalTo(view)
+        }
+        label.text = section == 0 ? "Рядом с вами" : "Далеко"
+        return view
+    }
 }

@@ -11,7 +11,6 @@ import Foundation
 extension RNSFavoritesBusCell: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRowsInSection",items?.count ?? 0)
         return items?.count ?? 0
     }
     
