@@ -11,29 +11,8 @@ import Foundation
 extension RNSMapManager {
     
     static func prepareStub() {
-        prepareStubBusStop()
+        RNSBusStopManager.prepareStubBusStop()
         prepareStubBus()
-    }
-    
-    static func prepareStubBusStop() {
-        removeOLdBusStopsAll()
-        RNSDataManager.createStubBusStopIfNeed()
-        showPinBusStopAll()
-    }
-    
-    static func prepareStubBusStopAsunc() {
-        removeOLdBusStopsAll()
-        RNSDataManager.createStubBusStopAsync { (items) in
-            print("createStubBusStopAsync", items.count)
-            //showPinBusStop()
-        }
-    }
-    
-    static func showPinBusStopAll() {
-        guard let items = RNSDataManager.busStops else {
-            return
-        }
-        showPinBusStop(Array(items))
     }
     
     static func prepareStubBus() {

@@ -42,6 +42,6 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     @IBAction func testAction(_ sender: Any) {
-        RNSMapManager.prepareStubBusStopAsunc()
+        RNSBusStopManager.prepareStubBusStopAsunc()
     }
 }

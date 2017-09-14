@@ -46,22 +46,9 @@ class RNSMapManager: NSObject {
     static var getZoomLevel: Int {
         return Int(mapView.getZoomLevel())
     }
-    
-    static var showedStops = [RNSBusStop]()
-    static var showedStopsUuids = [String]()
-    
+   
     static func showMoveMap() {
         RNSPageRouteManager.removeNonActivRoute()
         RNSMoveMapViewController.controller.pushAnimated()
     }
-    
-    static var queue: OperationQueue {
-        return shared.queue
-    }
-    
-    lazy var queue: OperationQueue = {
-        let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = 1
-        return queue
-    }()
 }

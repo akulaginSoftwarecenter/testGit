@@ -16,7 +16,7 @@ extension RNSMapViewController {
     }
     
     func onMapEvent() {
-        //RNSMapManager.bussStopsUpdate()
+        //RNSBusStopManager.bussStopsUpdate()
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
