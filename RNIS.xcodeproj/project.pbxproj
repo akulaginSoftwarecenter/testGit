@@ -428,7 +428,6 @@
 		83AA6A611F5668C000B2139C /* MainInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A461F5668C000B2139C /* MainInfoTableViewCell.swift */; };
 		83AA6A621F5668C000B2139C /* MainInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA6A471F5668C000B2139C /* MainInfoTableViewCell.xib */; };
 		83AA6A631F5668C000B2139C /* MainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A481F5668C000B2139C /* MainInfoViewController.swift */; };
-		83AA6A661F5668C000B2139C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A4E1F5668C000B2139C /* MenuViewController.swift */; };
 		83AA6A6A1F5668C000B2139C /* QRScannerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A561F5668C000B2139C /* QRScannerInfoViewController.swift */; };
 		83AA6A6B1F5668C000B2139C /* ReportInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A581F5668C000B2139C /* ReportInfoViewController.swift */; };
 		83AA6A6C1F5668C000B2139C /* SupportInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A5A1F5668C000B2139C /* SupportInfoViewController.swift */; };
@@ -912,7 +911,6 @@
 		83AA6A461F5668C000B2139C /* MainInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInfoTableViewCell.swift; sourceTree = "<group>"; };
 		83AA6A471F5668C000B2139C /* MainInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainInfoTableViewCell.xib; sourceTree = "<group>"; };
 		83AA6A481F5668C000B2139C /* MainInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInfoViewController.swift; sourceTree = "<group>"; };
-		83AA6A4E1F5668C000B2139C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		83AA6A561F5668C000B2139C /* QRScannerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerInfoViewController.swift; sourceTree = "<group>"; };
 		83AA6A581F5668C000B2139C /* ReportInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportInfoViewController.swift; sourceTree = "<group>"; };
 		83AA6A5A1F5668C000B2139C /* SupportInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportInfoViewController.swift; sourceTree = "<group>"; };
@@ -3369,7 +3367,6 @@
 				83AA6A391F5668C000B2139C /* ContactsInfoViewController */,
 				83AA6A3F1F5668C000B2139C /* DocsInfoViewController */,
 				83AA6A431F5668C000B2139C /* MainInfoViewController */,
-				83AA6A491F5668C000B2139C /* MenuViewController */,
 				83AA6A551F5668C000B2139C /* QRScannerInfoViewController */,
 				83AA6A571F5668C000B2139C /* ReportInfoViewController */,
 				83AA6A591F5668C000B2139C /* SupportInfoViewController */,
@@ -3451,23 +3448,6 @@
 				83AA6A471F5668C000B2139C /* MainInfoTableViewCell.xib */,
 			);
 			path = MainInfoTableViewCell;
-			sourceTree = "<group>";
-		};
-		83AA6A491F5668C000B2139C /* MenuViewController */ = {
-			isa = PBXGroup;
-			children = (
-				83AA6A4A1F5668C000B2139C /* cells */,
-				83AA6A4E1F5668C000B2139C /* MenuViewController.swift */,
-			);
-			name = MenuViewController;
-			path = Controllers/MenuInfo/MenuViewController;
-			sourceTree = "<group>";
-		};
-		83AA6A4A1F5668C000B2139C /* cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cells;
 			sourceTree = "<group>";
 		};
 		83AA6A551F5668C000B2139C /* QRScannerInfoViewController */ = {
@@ -4183,7 +4163,6 @@
 				837036B21F428CB400FBD1E9 /* RNSMapManager+MapView.swift in Sources */,
 				83A667FB1F5D213500A1A7BC /* RNSTransportTableView+TableView.swift in Sources */,
 				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
-				83AA6A661F5668C000B2139C /* MenuViewController.swift in Sources */,
 				831381671F5E782A00A85CBD /* RNSBusTableModel+Items.swift in Sources */,
 				836EEF031F3BFAB2007631D9 /* RNSBus.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
