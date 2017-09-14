@@ -9,7 +9,7 @@
 import Foundation
 
 extension TransportViewController {
-    
+    /*
     func numberOfSections(in tableView: UITableView) -> Int {
         if self.segmentControl.selectedSegmentIndex == 0 {
             return 2
@@ -97,4 +97,5 @@ extension TransportViewController {
             return cell;
         }
     }
+ */
 }

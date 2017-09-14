@@ -11,11 +11,9 @@ import Foundation
 extension TransportViewController {
 
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
-        tableView.isHidden = !selectedSegmentIndexIsFirst
         myRoutesView.isHidden = selectedSegmentIndexIsFirst
-        if selectedSegmentIndexIsFirst {
-            tableView.reloadData()
-        } else {
+        favoritesBusView.isHidden = !selectedSegmentIndexIsFirst
+        if !selectedSegmentIndexIsFirst {
             myRoutesView.generate()
         }
         reloadTitle()

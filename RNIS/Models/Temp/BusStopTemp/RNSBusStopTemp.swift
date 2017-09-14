@@ -20,6 +20,8 @@ class RNSBusStopTemp: RNISMappableBase, RNSTextItem, Hashable  {
     var uuid: String?
     var name: String?
     
+    var forecast: [RNSRouteBusTemp]?
+    
     var text: String? {
         get {
             return name
@@ -37,5 +39,9 @@ class RNSBusStopTemp: RNISMappableBase, RNSTextItem, Hashable  {
     
     static func ==(lhs: RNSBusStopTemp, rhs: RNSBusStopTemp) -> Bool {
         return lhs.uuid == rhs.uuid
+    }
+    
+    var height: CGFloat {
+        return CGFloat(33 + (forecast?.count ?? 0) * 49)
     }
 }
