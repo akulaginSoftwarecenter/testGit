@@ -50,11 +50,11 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-1c-tbX" customClass="RNSFavoritesBusView" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="63" width="343" height="540"/>
+                                <rect key="frame" x="16" y="36" width="343" height="567"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Yf-Kvs" customClass="RNSTransportTableView" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="63" width="343" height="540"/>
+                                <rect key="frame" x="16" y="36" width="343" height="567"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -62,14 +62,14 @@
                         <constraints>
                             <constraint firstItem="dX9-tc-I8d" firstAttribute="top" secondItem="qCR-Yf-Kvs" secondAttribute="bottom" id="1Rx-lj-lVW"/>
                             <constraint firstItem="ALO-xf-KRM" firstAttribute="trailing" secondItem="0Kd-KN-bF8" secondAttribute="trailingMargin" id="2dZ-Oq-7tU"/>
-                            <constraint firstItem="rnK-1c-tbX" firstAttribute="top" secondItem="ALO-xf-KRM" secondAttribute="bottom" constant="27" id="6ZJ-Fg-U4g"/>
+                            <constraint firstItem="rnK-1c-tbX" firstAttribute="top" secondItem="ALO-xf-KRM" secondAttribute="bottom" id="6ZJ-Fg-U4g"/>
                             <constraint firstItem="ALO-xf-KRM" firstAttribute="leading" secondItem="0Kd-KN-bF8" secondAttribute="leadingMargin" id="77V-8k-KYx"/>
                             <constraint firstAttribute="trailing" secondItem="qCR-Yf-Kvs" secondAttribute="trailing" constant="16" id="Gvx-HH-reZ"/>
                             <constraint firstItem="qCR-Yf-Kvs" firstAttribute="leading" secondItem="0Kd-KN-bF8" secondAttribute="leading" constant="16" id="LV9-YO-Off"/>
                             <constraint firstItem="rnK-1c-tbX" firstAttribute="leading" secondItem="0Kd-KN-bF8" secondAttribute="leading" constant="16" id="M1n-H0-6e4"/>
                             <constraint firstAttribute="trailing" secondItem="rnK-1c-tbX" secondAttribute="trailing" constant="16" id="MXT-0v-zRS"/>
                             <constraint firstItem="ALO-xf-KRM" firstAttribute="top" secondItem="TD8-n4-BhP" secondAttribute="bottom" constant="8" id="a5G-CP-1Ps"/>
-                            <constraint firstItem="qCR-Yf-Kvs" firstAttribute="top" secondItem="ALO-xf-KRM" secondAttribute="bottom" constant="27" id="hVl-Zy-42a"/>
+                            <constraint firstItem="qCR-Yf-Kvs" firstAttribute="top" secondItem="ALO-xf-KRM" secondAttribute="bottom" id="hVl-Zy-42a"/>
                             <constraint firstItem="dX9-tc-I8d" firstAttribute="top" secondItem="rnK-1c-tbX" secondAttribute="bottom" id="mrj-9A-KEo"/>
                         </constraints>
                     </view>

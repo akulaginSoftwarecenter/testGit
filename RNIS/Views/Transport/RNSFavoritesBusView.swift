@@ -42,6 +42,7 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
         tableView.reloadData()
     }
 }

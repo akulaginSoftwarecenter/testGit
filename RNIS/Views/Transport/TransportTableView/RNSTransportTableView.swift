@@ -17,6 +17,12 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     }
     @IBOutlet var tableView: RNSRegisterTableView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
+    }
+    
     func updateUI() {
         tableView.reloadData()
     }
