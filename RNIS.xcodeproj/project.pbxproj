@@ -167,7 +167,6 @@
 		835D85471F501B9E00B83EB2 /* RNSRectPoint+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85461F501B9E00B83EB2 /* RNSRectPoint+Var.swift */; };
 		835D85491F50229500B83EB2 /* RNSRectPoint+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85481F50229500B83EB2 /* RNSRectPoint+Set.swift */; };
 		835D854B1F5022D100B83EB2 /* RNSRectPoint+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D854A1F5022D100B83EB2 /* RNSRectPoint+Contains.swift */; };
-		83621B501F68CA490065D80A /* RNSMapManager+BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83621B4F1F68CA490065D80A /* RNSMapManager+BusStop.swift */; };
 		836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221A91F43DED1005B49DA /* RNSAddressViewController.swift */; };
 		836221AE1F43EA81005B49DA /* RNSAddressViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */; };
 		836221B21F43F5C6005B49DA /* RNSAddressViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */; };
@@ -679,7 +678,6 @@
 		835D85461F501B9E00B83EB2 /* RNSRectPoint+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRectPoint+Var.swift"; path = "Models/Temp/RectPoint/RNSRectPoint+Var.swift"; sourceTree = "<group>"; };
 		835D85481F50229500B83EB2 /* RNSRectPoint+Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRectPoint+Set.swift"; path = "Models/Temp/RectPoint/RNSRectPoint+Set.swift"; sourceTree = "<group>"; };
 		835D854A1F5022D100B83EB2 /* RNSRectPoint+Contains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRectPoint+Contains.swift"; path = "Models/Temp/RectPoint/RNSRectPoint+Contains.swift"; sourceTree = "<group>"; };
-		83621B4F1F68CA490065D80A /* RNSMapManager+BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapManager+BusStop.swift"; path = "Managers/Map/RNSMapManager+BusStop.swift"; sourceTree = "<group>"; };
 		836221A91F43DED1005B49DA /* RNSAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAddressViewController.swift; path = Controllers/Map/Search/Address/RNSAddressViewController.swift; sourceTree = "<group>"; };
 		836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+MapView.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift"; sourceTree = "<group>"; };
 		836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSAddressViewController+Action.swift"; path = "Controllers/Map/Route/Address/RNSAddressViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1953,7 +1951,6 @@
 				835718B11F21C86400DE5E25 /* RNSMapManager.swift */,
 				837036B11F428CB400FBD1E9 /* RNSMapManager+MapView.swift */,
 				83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */,
-				83621B4F1F68CA490065D80A /* RNSMapManager+BusStop.swift */,
 				837036AF1F428B2F00FBD1E9 /* RNSMapManager+Stub.swift */,
 			);
 			name = Map;
@@ -4353,7 +4350,6 @@
 				838707E91F3027410094B273 /* RNSPhoneContrainerController.swift in Sources */,
 				8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */,
 				83877AAB1F5D1215007888DE /* RNSDotsVerticalCell.swift in Sources */,
-				83621B501F68CA490065D80A /* RNSMapManager+BusStop.swift in Sources */,
 				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
 				8356BE531F3D582700560623 /* RNSBackGroundView.swift in Sources */,
 				832B1DDC1F42B9410024505C /* RNSMapParentController.swift in Sources */,
