@@ -31,13 +31,9 @@ class RNSImageFactory: NSObject {
         ]
     }()
     
-    static func imageBus(_ item: RNSBus?) -> UIImage {
+    static func imageBusAt(_ text: String) -> UIImage {
         let inImage = shared.inImage
-        guard let item = item else {
-            return inImage
-        }
         
-        let text = item.route_number
         let key = text as NSString
         if let icon = cache.object(forKey: key) {
             return icon

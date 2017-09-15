@@ -11,7 +11,20 @@ import UIKit
 class RNSPinBus: RNSPinItem {
     
     override func prepareImage() {
-        let image = RNSImageFactory.imageBus(item as? RNSBus)
-         setBitmap(image, xOffset: 0.05, yOffset: -1.0, isPlain: false, sizeInMeters: 15)
+        prepareIcon(#imageLiteral(resourceName: "BusIcon"))
+        
+        guard  let text = (self.item as? RNSBus)?.route_number else {
+            return
+        }
+        DispatchQueue.global(qos: .background).async {
+            let image = RNSImageFactory.imageBusAt(text)
+            Utils.mainQueue {
+                 self.prepareIcon(image)
+            }
+        }
+    }
+    
+    func prepareIcon(_ image: UIImage) {
+        setBitmap(image, xOffset: 0.05, yOffset: -1.0, isPlain: false, sizeInMeters: 15)
     }
 }
