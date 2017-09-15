@@ -44,14 +44,23 @@ class RNSDataManager: NSObject {
         var items = [T]()
         write ({
             for dict in dicts {
-                guard let busStop = realm?.create(T.self, value: dict, update: true) else {
+                guard let item = realm?.create(T.self, value: dict, update: true) else {
                     continue
                 }
-                items.append(busStop)
+                items.append(item)
             }
             
         })
         return items
+    }
+    
+    static func parseItemsAsync<T: RNSCoordinateModel>(_ dicts: [AliasDictionary], complete: (([T]) -> ())?) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let items = parseItems(dicts) as [T]
+            Utils.mainQueue {
+                complete?(items)
+            }
+        }
     }
     
     static func models<T: RNSCoordinateModel>(_ items: [RNSCoordinateModel], min: PGGeoPoint, center: PGGeoPoint) -> [T]? {

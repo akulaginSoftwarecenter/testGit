@@ -15,7 +15,7 @@ extension RNSDataManager {
         return realm?.objects(RNSBusStop.self)
     }
     
-    static func createStubBusStopIfNeed() {
+    static func createStubBusStopIfNeed(complete: EmptyBlock?) {
        
         let dicts = [["name":"бул. Конногвардейский",
                      "uuid": "1",
@@ -41,13 +41,15 @@ extension RNSDataManager {
                       "uuid": "6",
                       "latitude": 59.935267,
                       "longitude" : 30.311943]]
-        let items = parseBusStopItems(dicts)
-        busStop1 = items.valueAt(0)
-        busStop2 = items.valueAt(2)
-        busStop3 = items.valueAt(3)
-        busStop4 = items.valueAt(4)
-        busStop5 = items.valueAt(5)
-        busStop6 = items.valueAt(6)
+        parseBusStopItemsAsync(dicts) { items in
+            busStop1 = items.valueAt(0)
+            busStop2 = items.valueAt(2)
+            busStop3 = items.valueAt(3)
+            busStop4 = items.valueAt(4)
+            busStop5 = items.valueAt(5)
+            busStop6 = items.valueAt(6)
+            complete?()
+        }
     }
     
     static func removeAllBusStop() {
@@ -61,17 +63,8 @@ extension RNSDataManager {
         }
     }
     
-    static func parseBusStopItems(_ dicts: [AliasDictionary]) -> [RNSBusStop] {
-        return parseItems(dicts)
-    }
-    
     static func parseBusStopItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBusStop]) -> ())?) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            let items = parseBusStopItems(dicts)
-            Utils.mainQueue {
-                complete?(items)
-            }
-        }
+        parseItemsAsync(dicts, complete: complete)
     }
     
     static func bussStops(_ min: PGGeoPoint, center: PGGeoPoint) -> [RNSBusStop]? {
