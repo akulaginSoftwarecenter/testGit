@@ -9,5 +9,44 @@
 import Foundation
 
 extension RNSBusManager {
+    static func update() {
+        queue.cancelAllOperations()
+        queue.addOperation(updateOperation)
+    }
     
+    static func updateOperation() {
+        
+        guard RNSMapManager.getZoomLevel > 14 else {
+            Utils.mainQueue {
+                removeOldAll()
+            }
+            return
+        }
+        let uuids = RNSDataManager.bussUuids(mapView.lastMinCoord, center: mapView.lastCenterCoord)
+        let addUuids = self.addUuids(uuids)
+        let removeUuids = self.removeUuids(uuids)
+        Utils.mainQueue {
+            removeOld(removeUuids)
+            showPinsUuids(addUuids)
+            showedUuids = showedItems.flatMap{$0.uuid}
+            print("showedBuss",showedUuids.count)
+        }
+    }
+    
+    static func addUuids(_ uuids: [String]?) -> [String]? {
+        return uuids?.filter{!showedUuids.contains($0)}
+    }
+    
+    static func removeUuids(_ uuids: [String]?) -> [String]? {
+        guard let uuids = uuids else {
+            return nil
+        }
+        return showedUuids.filter{ !uuids.contains($0) }
+    }
+    
+    static func busItems(_ uuids: [String]?) -> [RNSBus]? {
+        return uuids?.flatMap({ (uuid) -> RNSBus? in
+            return RNSDataManager.realm?.object(ofType: RNSBus.self, forPrimaryKey: uuid)
+        })
+    }
 }

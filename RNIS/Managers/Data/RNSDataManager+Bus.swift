@@ -48,4 +48,43 @@ extension RNSDataManager {
             }
         })
     }
+    
+    static func parseBusItems(_ dicts: [AliasDictionary]) -> [RNSBusStop] {
+        return parseItems(dicts)
+    }
+    
+    static func parseBusItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBusStop]) -> ())?) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let items = parseBusItems(dicts)
+            Utils.mainQueue {
+                complete?(items)
+            }
+        }
+    }
+    
+    static func buss(_ min: PGGeoPoint, center: PGGeoPoint) -> [RNSBusStop]? {
+        guard let results = busStops else {
+            return nil
+        }
+        let distance = min.distanceTo(center)
+        return Array(results).filter{
+            return center.distanceTo($0.point) < distance
+        }
+    }
+    
+    static func bussUuids(_ min: PGGeoPoint, center: PGGeoPoint) -> [String]? {
+        let items = buss(min, center: center)
+        return items?.flatMap{$0.uuid}
+    }
+    
+    static func removeAllBuss() {
+        Utils.mainQueue {
+            guard let buss = buss else {
+                return
+            }
+            write ({
+                realm?.delete(buss)
+            })
+        }
+    }
 }

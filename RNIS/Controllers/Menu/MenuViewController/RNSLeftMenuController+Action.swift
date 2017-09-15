@@ -13,4 +13,12 @@ extension RNSLeftMenuController {
     @IBAction func actionProfile(_ sender: Any) {
         RNSMenuManager.showProfile()
     }
+    
+    @IBAction func testAction(_ sender: Any) {
+        RNSBusStopManager.prepareStubAsunc()
+    }
+    
+    @IBAction func testBuss(_ sender: Any) {
+        RNSBusManager.prepareStubAsunc()
+    }
 }

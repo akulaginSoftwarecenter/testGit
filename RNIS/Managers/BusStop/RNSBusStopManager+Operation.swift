@@ -11,13 +11,8 @@ import Foundation
 extension RNSBusStopManager {
     
     static func update() {
-        
-        let operation = BlockOperation(block:{
-            updateOperation()
-        })
-        
         queue.cancelAllOperations()
-        queue.addOperation(operation)
+        queue.addOperation(updateOperation)
     }
     
     static func updateOperation() {

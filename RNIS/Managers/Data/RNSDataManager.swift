@@ -39,4 +39,25 @@ class RNSDataManager: NSObject {
             complete?()
         } catch {}
     }
+    
+    static func parseItems<T: RNSCoordinateModel>(_ dicts: [AliasDictionary]) -> [T] {
+        var items = [T]()
+        write ({
+            for dict in dicts {
+                guard let busStop = realm?.create(T.self, value: dict, update: true) else {
+                    continue
+                }
+                items.append(busStop)
+            }
+            
+        })
+        return items
+    }
+    
+    static func models<T: RNSCoordinateModel>(_ items: [RNSCoordinateModel], min: PGGeoPoint, center: PGGeoPoint) -> [T]? {
+        let distance = min.distanceTo(center)
+        return items.filter {
+            return center.distanceTo($0.point) < distance
+        } as? [T]
+    }
 }

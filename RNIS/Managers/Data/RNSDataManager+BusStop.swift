@@ -51,7 +51,7 @@ extension RNSDataManager {
     }
     
     static func removeAllBusStop() {
-        Utils.mainQueue{
+        Utils.mainQueue {
             guard let busStops = busStops else {
                 return
             }
@@ -62,23 +62,13 @@ extension RNSDataManager {
     }
     
     static func parseBusStopItems(_ dicts: [AliasDictionary]) -> [RNSBusStop] {
-        var items = [RNSBusStop]()
-        write ({
-            for dict in dicts {
-                guard let busStop = realm?.create(RNSBusStop.self, value: dict, update: true) else {
-                    continue
-                }
-                items.append(busStop)
-            }
-            
-        })
-        return items
+        return parseItems(dicts)
     }
     
     static func parseBusStopItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBusStop]) -> ())?) {
         DispatchQueue.global(qos: .userInitiated).async {
             let items = parseBusStopItems(dicts)
-            DispatchQueue.main.async {
+            Utils.mainQueue {
                 complete?(items)
             }
         }
@@ -88,10 +78,8 @@ extension RNSDataManager {
         guard let results = busStops else {
             return nil
         }
-        let distance = min.distanceTo(center)
-        return Array(results).filter{
-            return center.distanceTo($0.point) < distance
-        }
+        
+        return models(Array(results), min: min, center: center)
     }
     
     static func bussStopsUuids(_ min: PGGeoPoint, center: PGGeoPoint) -> [String]? {

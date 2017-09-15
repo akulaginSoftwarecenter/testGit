@@ -40,8 +40,4 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     override class var storyboardName: String {
         return "RNSLeftMenuController"
     }
-
-    @IBAction func testAction(_ sender: Any) {
-        RNSBusStopManager.prepareStubAsunc()
-    }
 }
