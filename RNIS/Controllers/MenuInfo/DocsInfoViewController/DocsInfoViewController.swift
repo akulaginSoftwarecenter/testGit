@@ -15,7 +15,7 @@ enum RNSDocsType: String {
 
 class DocsInfoViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: RNSTopTitle!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     var type: RNSDocsType = .userGuide
     
@@ -41,5 +41,8 @@ class DocsInfoViewController: UIViewController {
     
     override class var storyboardName: String {
         return "DocsInfoViewController"
+    }
+    @IBAction func actionBack(_ sender: Any) {
+        STRouter.pop()
     }
 }

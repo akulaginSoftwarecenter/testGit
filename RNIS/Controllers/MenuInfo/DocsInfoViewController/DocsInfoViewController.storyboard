@@ -33,38 +33,41 @@
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-Vg-hQJ" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="142" y="30" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leftContentOffset">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Руководство пользователя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nJJ-g1-E8T" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="142" y="31" width="71" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство пользователя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rQO-59-M1D">
+                                <rect key="frame" x="75" y="38" width="226.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAy-9k-AcM">
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="DlZ-0E-WRt"/>
+                                    <constraint firstAttribute="height" constant="97" id="mZK-rN-5pL"/>
+                                </constraints>
+                                <state key="normal" image="chevronLeft"/>
+                                <connections>
+                                    <action selector="actionBack:" destination="ceI-a8-wPb" eventType="touchUpInside" id="Fo3-VP-j1B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rQO-59-M1D" firstAttribute="top" secondItem="mVo-gT-Vin" secondAttribute="top" constant="38" id="1XS-uI-z4h"/>
+                            <constraint firstItem="aAy-9k-AcM" firstAttribute="leading" secondItem="mVo-gT-Vin" secondAttribute="leading" priority="750" id="Tb3-jP-0I2"/>
+                            <constraint firstItem="rQO-59-M1D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aAy-9k-AcM" secondAttribute="trailing" constant="5" id="XQd-9h-WXX"/>
                             <constraint firstItem="TIF-U4-2d4" firstAttribute="leading" secondItem="mVo-gT-Vin" secondAttribute="leadingMargin" id="igE-53-nfA"/>
                             <constraint firstItem="OAW-5X-DId" firstAttribute="top" secondItem="TIF-U4-2d4" secondAttribute="bottom" constant="8" id="rf5-aE-7q6"/>
+                            <constraint firstItem="rQO-59-M1D" firstAttribute="centerX" secondItem="mVo-gT-Vin" secondAttribute="centerX" id="rsu-LZ-vIt"/>
                             <constraint firstItem="TIF-U4-2d4" firstAttribute="top" secondItem="mVo-gT-Vin" secondAttribute="top" constant="90" id="tbp-29-73J"/>
+                            <constraint firstItem="aAy-9k-AcM" firstAttribute="top" secondItem="mVo-gT-Vin" secondAttribute="top" id="xJ7-SP-wxh"/>
                             <constraint firstItem="TIF-U4-2d4" firstAttribute="trailing" secondItem="mVo-gT-Vin" secondAttribute="trailingMargin" id="yTD-2H-Cye"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Docs" id="nMU-GN-Vjm"/>
                     <connections>
                         <outlet property="textView" destination="TIF-U4-2d4" id="nVf-3C-gWV"/>
-                        <outlet property="titleLabel" destination="nJJ-g1-E8T" id="rai-2l-bnB"/>
+                        <outlet property="titleLabel" destination="rQO-59-M1D" id="hWi-Kw-nJw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rva-9Q-4pW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,4 +75,7 @@
             <point key="canvasLocation" x="2878" y="17"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevronLeft" width="14" height="22"/>
+    </resources>
 </document>

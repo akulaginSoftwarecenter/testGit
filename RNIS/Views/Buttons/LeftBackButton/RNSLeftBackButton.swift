@@ -11,11 +11,8 @@ import SnapKit
 
 class RNSLeftBackButton: UIButton {
     
-    @IBInspectable var leftContentOffset: CGFloat = 0 {
-        didSet {
-            
-        }
-    }
+    @IBInspectable var leftContentOffset: CGFloat = 0
+    @IBInspectable var actionDefault: Bool = true
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +21,13 @@ class RNSLeftBackButton: UIButton {
         setImage(image, for: .normal)
 
         prepareConstraint()
+        prepareDefaultAction()
+    }
+    
+    func prepareDefaultAction() {
+        guard actionDefault else {
+            return
+        }
         touchUpInside { [weak self] in
             self?.actionTouch()
         }

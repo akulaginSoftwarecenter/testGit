@@ -18,6 +18,7 @@ enum RNSContactInfoType: String {
 }
 
 class ContactsInfoViewController: UIViewController {
+    @IBOutlet weak var topTitle: RNSTopTitle!
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,8 +29,7 @@ class ContactsInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = type.title
-        view.backgroundColor = .F1645A
+        topTitle.text = type.title
         loadItems()
         tableView.tableFooterView = UIView()
     }
@@ -39,5 +39,9 @@ class ContactsInfoViewController: UIViewController {
             self?.items = item?.items
             self?.tableView.reloadData()
         })
+    }
+    
+    override class var storyboardName: String {
+        return "ContactsInfoViewController"
     }
 }

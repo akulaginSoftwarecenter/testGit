@@ -372,6 +372,9 @@
 		8392BAC71F304BB80024E9E5 /* RNSAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */; };
 		8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
 		8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
+		83940B841F6B7443005654DE /* MainInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83940B831F6B7443005654DE /* MainInfoViewController.storyboard */; };
+		83940B861F6B773D005654DE /* ContactsInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83940B851F6B773D005654DE /* ContactsInfoViewController.storyboard */; };
+		83940B881F6B79D4005654DE /* AboutAppInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83940B871F6B79D4005654DE /* AboutAppInfoViewController.storyboard */; };
 		839875BD1F60FDA000B88F0B /* RNSPostUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */; };
 		839875BF1F610FC200B88F0B /* RNSLoginViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */; };
 		839875C21F612FC400B88F0B /* RNSParentAuthPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */; };
@@ -431,7 +434,6 @@
 		83AA6A6A1F5668C000B2139C /* QRScannerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A561F5668C000B2139C /* QRScannerInfoViewController.swift */; };
 		83AA6A6B1F5668C000B2139C /* ReportInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A581F5668C000B2139C /* ReportInfoViewController.swift */; };
 		83AA6A6C1F5668C000B2139C /* SupportInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A5A1F5668C000B2139C /* SupportInfoViewController.swift */; };
-		83AA6A701F566C4900B2139C /* MenuInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83AA6A6F1F566C4900B2139C /* MenuInfo.storyboard */; };
 		83AA6A721F566C8F00B2139C /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A711F566C8F00B2139C /* Random.swift */; };
 		83AA6A741F566CDD00B2139C /* RNSPageRouteCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A731F566CDD00B2139C /* RNSPageRouteCell+UI.swift */; };
 		83AA6A7A1F56863000B2139C /* RNSDotsWhiteVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A791F56863000B2139C /* RNSDotsWhiteVertical.swift */; };
@@ -855,6 +857,9 @@
 		8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRecoveryCodeController.swift; path = "Controllers/Authorization+Registration/Recovery/Code/RNSRecoveryCodeController.swift"; sourceTree = "<group>"; };
 		8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSAlertViewController.swift; path = "Library/Base classes/AlertViewController/RNSAlertViewController.swift"; sourceTree = "<group>"; };
 		8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RNSAlertViewController.storyboard; path = "Library/Base classes/AlertViewController/RNSAlertViewController.storyboard"; sourceTree = "<group>"; };
+		83940B831F6B7443005654DE /* MainInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInfoViewController.storyboard; sourceTree = "<group>"; };
+		83940B851F6B773D005654DE /* ContactsInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactsInfoViewController.storyboard; sourceTree = "<group>"; };
+		83940B871F6B79D4005654DE /* AboutAppInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutAppInfoViewController.storyboard; sourceTree = "<group>"; };
 		839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUpdate.swift; path = POST/Update/RNSPostUpdate.swift; sourceTree = "<group>"; };
 		839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+UI.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+UI.swift"; sourceTree = "<group>"; };
 		839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParentAuthPost.swift; path = POST/Parent/RNSParentAuthPost.swift; sourceTree = "<group>"; };
@@ -914,7 +919,6 @@
 		83AA6A561F5668C000B2139C /* QRScannerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerInfoViewController.swift; sourceTree = "<group>"; };
 		83AA6A581F5668C000B2139C /* ReportInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportInfoViewController.swift; sourceTree = "<group>"; };
 		83AA6A5A1F5668C000B2139C /* SupportInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportInfoViewController.swift; sourceTree = "<group>"; };
-		83AA6A6F1F566C4900B2139C /* MenuInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MenuInfo.storyboard; path = Controllers/MenuInfo/MenuInfo.storyboard; sourceTree = "<group>"; };
 		83AA6A711F566C8F00B2139C /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = "Library/Helpers/Base objects extensions/Random/Random.swift"; sourceTree = "<group>"; };
 		83AA6A731F566CDD00B2139C /* RNSPageRouteCell+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSPageRouteCell+UI.swift"; path = "Views/Map/PageRoute/Cell/RNSPageRouteCell+UI.swift"; sourceTree = "<group>"; };
 		83AA6A791F56863000B2139C /* RNSDotsWhiteVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDotsWhiteVertical.swift; path = Views/DotsWhite/Vertical/RNSDotsWhiteVertical.swift; sourceTree = "<group>"; };
@@ -3337,7 +3341,6 @@
 				83AA6A551F5668C000B2139C /* QRScannerInfoViewController */,
 				83AA6A571F5668C000B2139C /* ReportInfoViewController */,
 				83AA6A591F5668C000B2139C /* SupportInfoViewController */,
-				83AA6A6F1F566C4900B2139C /* MenuInfo.storyboard */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -3346,6 +3349,7 @@
 			isa = PBXGroup;
 			children = (
 				83AA6A381F5668C000B2139C /* AboutAppInfoViewController.swift */,
+				83940B871F6B79D4005654DE /* AboutAppInfoViewController.storyboard */,
 			);
 			name = AboutAppInfoViewController;
 			path = Controllers/MenuInfo/AboutAppInfoViewController;
@@ -3357,6 +3361,7 @@
 				83AA6A3A1F5668C000B2139C /* cells */,
 				83AA6A3E1F5668C000B2139C /* ContactsInfoViewController.swift */,
 				8375FF5D1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift */,
+				83940B851F6B773D005654DE /* ContactsInfoViewController.storyboard */,
 			);
 			name = ContactsInfoViewController;
 			path = Controllers/MenuInfo/ContactsInfoViewController;
@@ -3387,6 +3392,7 @@
 				83AA6A441F5668C000B2139C /* cells */,
 				83AA6A481F5668C000B2139C /* MainInfoViewController.swift */,
 				8390DFD71F664C91003C3505 /* MainInfoViewController+TableView.swift */,
+				83940B831F6B7443005654DE /* MainInfoViewController.storyboard */,
 			);
 			name = MainInfoViewController;
 			path = Controllers/MenuInfo/MainInfoViewController;
@@ -3953,6 +3959,7 @@
 				83A667F91F5D203900A1A7BC /* RNSTransportTableViewCell.xib in Resources */,
 				83A5C70D1F5812FC006C8D62 /* RNSDateSelectViewController.storyboard in Resources */,
 				83D155911F4BCF9C00150144 /* RNSDotsName.xib in Resources */,
+				83940B861F6B773D005654DE /* ContactsInfoViewController.storyboard in Resources */,
 				8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */,
 				8386B4491F344196008A5CC7 /* RNSChangePasswordController.storyboard in Resources */,
 				836277DF1F382CC8009FB712 /* RNSScrollShowContainer.storyboard in Resources */,
@@ -3963,6 +3970,7 @@
 				83A5C7061F580BF1006C8D62 /* RNSDateSelectView.xib in Resources */,
 				83AA6A5D1F5668C000B2139C /* ContactsInfoTableViewCell.xib in Resources */,
 				836E91B81F58FC0E007CCF5A /* RNSMenuViewController.storyboard in Resources */,
+				83940B881F6B79D4005654DE /* AboutAppInfoViewController.storyboard in Resources */,
 				83877AAD1F5D1293007888DE /* RNSDotsVerticalCell.xib in Resources */,
 				83A53F881F4A975900938969 /* RNSPageRouteView.xib in Resources */,
 				8356BE581F3D679F00560623 /* RNSBusDetailWayCell.xib in Resources */,
@@ -3980,8 +3988,8 @@
 				832E4B7F1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */,
 				8356BE4F1F3D451F00560623 /* RNSCircleHole.xib in Resources */,
 				832E4B7C1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */,
-				83AA6A701F566C4900B2139C /* MenuInfo.storyboard in Resources */,
 				8310D4421F3C6B41000CCD0A /* RNSBusDetailController.storyboard in Resources */,
+				83940B841F6B7443005654DE /* MainInfoViewController.storyboard in Resources */,
 				83A5C7011F57FA1C006C8D62 /* RNSMoveDetailController.storyboard in Resources */,
 				831E42601F4688E50016C7D3 /* RNSTwoBtnAlert.xib in Resources */,
 				83AFEB5D1F6A365900C2A251 /* RNSForecastCell.xib in Resources */,

@@ -27,6 +27,7 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         scannerView.setupComponents(showCancelButton: false, showSwitchCameraButton: false, showTorchButton: false, showOverlayView: false, reader: reader)
         
         reader.startScanning()
@@ -36,7 +37,6 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
                 STRouter.pop()
             }
         }
-
     }
     
     private func checkScanPermissions() -> Bool {

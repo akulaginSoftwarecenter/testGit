@@ -9,12 +9,8 @@
 import UIKit
 
 class AboutAppInfoViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .F1645A
-        self.navigationItem.title = "О приложении"
-        
+    
+    override class var storyboardName: String {
+        return "AboutAppInfoViewController"
     }
 }

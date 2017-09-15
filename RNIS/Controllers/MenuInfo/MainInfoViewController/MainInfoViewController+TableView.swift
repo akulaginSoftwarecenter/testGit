@@ -26,10 +26,12 @@ extension MainInfoViewController: UITableViewDelegate, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        let row = indexPath.row
         switch indexPath.row {
-        case 0,1:
-            self.performSegue(withIdentifier: main_to_contacts, sender: row)
+        case 0:
+            showContact(.contact)
+            break;
+        case 1:
+            showContact(.forgotten)
             break;
         case 2:
             QRScannerInfoViewController.initialPushAnimatedRed()
@@ -41,7 +43,7 @@ extension MainInfoViewController: UITableViewDelegate, UITableViewDataSource  {
             SupportInfoViewController.initialPushAnimatedRedScroll()
             break;
         case 7:
-            self.performSegue(withIdentifier: "main_to_aboutApp", sender: self)
+            AboutAppInfoViewController.initialPushAnimatedRed()
             break;
         case 5:
             showDocsInfo(.userGuide)
