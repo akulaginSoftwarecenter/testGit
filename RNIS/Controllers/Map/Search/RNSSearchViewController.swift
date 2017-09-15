@@ -20,6 +20,22 @@ class RNSSearchViewController: UIViewController {
         super.viewDidLoad()
         
         prepareSegmented()
+        checkSaved()
+    }
+    
+    func checkSaved() {
+        prepareSegment(RNSSearchManager.type ?? .transport)
+        guard let text = RNSSearchManager.text, !text.isEmpty else {
+            return
+        }
+        textField.text = text
+        updateSearch()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
     }
     
     override class var storyboardName: String {

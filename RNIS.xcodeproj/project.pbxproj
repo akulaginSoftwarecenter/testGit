@@ -380,6 +380,7 @@
 		83940B8F1F6B8DAD005654DE /* RNSBusManager+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B8E1F6B8DAD005654DE /* RNSBusManager+Pin.swift */; };
 		83940B911F6B8DE9005654DE /* RNSBusManager+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B901F6B8DE9005654DE /* RNSBusManager+Stub.swift */; };
 		83940B931F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B921F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift */; };
+		83940B961F6BE6A4005654DE /* RNSSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B951F6BE6A4005654DE /* RNSSearchManager.swift */; };
 		839875BD1F60FDA000B88F0B /* RNSPostUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */; };
 		839875BF1F610FC200B88F0B /* RNSLoginViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */; };
 		839875C21F612FC400B88F0B /* RNSParentAuthPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */; };
@@ -870,6 +871,7 @@
 		83940B8E1F6B8DAD005654DE /* RNSBusManager+Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusManager+Pin.swift"; path = "Managers/Bus/RNSBusManager+Pin.swift"; sourceTree = "<group>"; };
 		83940B901F6B8DE9005654DE /* RNSBusManager+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusManager+Stub.swift"; path = "Managers/Bus/RNSBusManager+Stub.swift"; sourceTree = "<group>"; };
 		83940B921F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Delegate.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Delegate.swift"; sourceTree = "<group>"; };
+		83940B951F6BE6A4005654DE /* RNSSearchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSSearchManager.swift; path = Managers/Search/RNSSearchManager.swift; sourceTree = "<group>"; };
 		839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUpdate.swift; path = POST/Update/RNSPostUpdate.swift; sourceTree = "<group>"; };
 		839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+UI.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+UI.swift"; sourceTree = "<group>"; };
 		839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParentAuthPost.swift; path = POST/Parent/RNSParentAuthPost.swift; sourceTree = "<group>"; };
@@ -2380,6 +2382,7 @@
 				836E91BC1F58FE68007CCF5A /* Menu */,
 				838EA0261F53AE1F00E9BF20 /* PageRoute */,
 				8357186A1F219EB600DE5E25 /* Router */,
+				83940B941F6BE678005654DE /* Search */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -3130,6 +3133,14 @@
 				83940B901F6B8DE9005654DE /* RNSBusManager+Stub.swift */,
 			);
 			name = Bus;
+			sourceTree = "<group>";
+		};
+		83940B941F6BE678005654DE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				83940B951F6BE6A4005654DE /* RNSSearchManager.swift */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		839875BB1F60FD6A00B88F0B /* Update */ = {
@@ -4326,6 +4337,7 @@
 				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
 				838707E91F3027410094B273 /* RNSPhoneContrainerController.swift in Sources */,
 				8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */,
+				83940B961F6BE6A4005654DE /* RNSSearchManager.swift in Sources */,
 				83877AAB1F5D1215007888DE /* RNSDotsVerticalCell.swift in Sources */,
 				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
 				8356BE531F3D582700560623 /* RNSBackGroundView.swift in Sources */,

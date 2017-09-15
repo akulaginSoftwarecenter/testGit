@@ -15,7 +15,12 @@ extension RNSSearchViewController {
     }
     
     func updateSearch() {
+        RNSSearchManager.text = text
+        RNSSearchManager.type = typeSegment
+        
         if text == "" {
+            items = [RNSTextItem]()
+            tableReload()
             return
         }
         

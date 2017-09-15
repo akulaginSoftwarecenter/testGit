@@ -21,8 +21,12 @@ extension RNSSearchViewController {
     }
       
     func prepareSegmented() {
-        segmentedControl.selectedSegmentIndex = TypeSearch.transport.rawValue
+        prepareSegment(.transport)
         segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.cffazm18],
                                             for: .normal)
+    }
+    
+    func prepareSegment(_ type: TypeSearch) {
+        segmentedControl.selectedSegmentIndex = type.rawValue
     }
 }

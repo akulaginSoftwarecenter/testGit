@@ -19,6 +19,6 @@ extension RNSMapViewController {
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        RNSSearchViewController.initialPushAnimatedRed()
+        RNSSearchViewController.initialPushAnimatedRedScroll()
     }
 }
