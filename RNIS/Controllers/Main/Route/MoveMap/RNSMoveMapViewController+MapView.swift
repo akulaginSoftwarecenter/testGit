@@ -12,7 +12,7 @@ extension RNSMoveMapViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let containerController = segue.destination as? RNSMapParentController
-        containerController?.bottomTargetConstant = 75
+        containerController?.bottomTargetConstant = 91
     }
     
     var mapView: MapView {

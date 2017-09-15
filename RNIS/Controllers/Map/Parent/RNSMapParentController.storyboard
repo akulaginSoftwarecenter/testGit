@@ -34,14 +34,14 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uql-jK-qvA">
-                                <rect key="frame" x="8" y="16" width="55" height="55"/>
+                                <rect key="frame" x="8" y="91" width="55" height="55"/>
                                 <state key="normal" image="menu"/>
                                 <connections>
                                     <action selector="menuAction:" destination="e6b-pZ-5iA" eventType="touchUpInside" id="3Y6-3j-HIh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujk-ie-65h">
-                                <rect key="frame" x="8" y="595" width="56" height="56"/>
+                                <rect key="frame" x="8" y="520" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="dcW-jz-wSW"/>
                                     <constraint firstAttribute="width" constant="56" id="mII-rY-dsl"/>
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-88-HQb">
-                                <rect key="frame" x="312" y="16" width="55" height="55"/>
+                                <rect key="frame" x="312" y="91" width="55" height="55"/>
                                 <state key="normal" image="Poisk"/>
                                 <connections>
                                     <action selector="searchAction:" destination="e6b-pZ-5iA" eventType="touchUpInside" id="Ywc-Kk-zuA"/>
@@ -62,15 +62,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uql-jK-qvA" firstAttribute="top" secondItem="Odq-Ht-jAb" secondAttribute="top" constant="16" id="4es-KT-z9C"/>
+                            <constraint firstItem="uql-jK-qvA" firstAttribute="top" secondItem="Odq-Ht-jAb" secondAttribute="top" constant="91" id="4es-KT-z9C"/>
                             <constraint firstItem="uql-jK-qvA" firstAttribute="leading" secondItem="Odq-Ht-jAb" secondAttribute="leading" constant="8" id="7oG-px-IPn"/>
                             <constraint firstItem="Ujk-ie-65h" firstAttribute="leading" secondItem="Odq-Ht-jAb" secondAttribute="leading" constant="8" id="8U2-Rn-FE7"/>
                             <constraint firstItem="iNw-zb-JRN" firstAttribute="top" secondItem="s4p-dg-u60" secondAttribute="bottom" id="N75-dq-uj7"/>
                             <constraint firstAttribute="trailing" secondItem="s4p-dg-u60" secondAttribute="trailing" id="bXC-4T-uXB"/>
-                            <constraint firstItem="iNw-zb-JRN" firstAttribute="top" secondItem="Ujk-ie-65h" secondAttribute="bottom" constant="16" id="fix-ie-poE"/>
+                            <constraint firstItem="iNw-zb-JRN" firstAttribute="top" secondItem="Ujk-ie-65h" secondAttribute="bottom" constant="91" id="fix-ie-poE"/>
                             <constraint firstItem="s4p-dg-u60" firstAttribute="top" secondItem="Odq-Ht-jAb" secondAttribute="top" id="i4f-8Z-ZYC"/>
                             <constraint firstAttribute="trailing" secondItem="tQk-88-HQb" secondAttribute="trailing" constant="8" id="j8c-0H-qRn"/>
-                            <constraint firstItem="tQk-88-HQb" firstAttribute="top" secondItem="Odq-Ht-jAb" secondAttribute="top" constant="16" id="puy-3f-AXr"/>
+                            <constraint firstItem="tQk-88-HQb" firstAttribute="top" secondItem="Odq-Ht-jAb" secondAttribute="top" constant="91" id="puy-3f-AXr"/>
                             <constraint firstItem="s4p-dg-u60" firstAttribute="leading" secondItem="Odq-Ht-jAb" secondAttribute="leading" id="zSI-NE-hL3"/>
                         </constraints>
                     </view>
@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQT-9R-h05">
-                                <rect key="frame" x="8" y="336.5" width="55" height="55"/>
+                                <rect key="frame" x="8" y="335.5" width="55" height="55"/>
                                 <state key="normal" image="compas"/>
                                 <connections>
                                     <action selector="compasAction:" destination="WmS-dc-ejs" eventType="touchUpInside" id="S28-yd-dCX"/>
@@ -106,14 +106,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLT-DT-BPk">
-                                <rect key="frame" x="312" y="339.5" width="55" height="55"/>
+                                <rect key="frame" x="312" y="338.5" width="55" height="55"/>
                                 <state key="normal" image="minus"/>
                                 <connections>
                                     <action selector="minusAction:" destination="WmS-dc-ejs" eventType="touchUpInside" id="QZS-El-Pk8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-am-Q4N">
-                                <rect key="frame" x="312" y="596" width="55" height="55"/>
+                                <rect key="frame" x="312" y="521" width="55" height="55"/>
                                 <state key="normal" image="mestopologenie"/>
                                 <connections>
                                     <action selector="userLocationAction:" destination="WmS-dc-ejs" eventType="touchUpInside" id="G3H-Ea-DCX"/>
@@ -130,17 +130,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="g7i-u4-M0q" firstAttribute="top" secondItem="AxG-am-Q4N" secondAttribute="bottom" constant="16" id="17Y-GM-lQ8"/>
+                            <constraint firstItem="g7i-u4-M0q" firstAttribute="top" secondItem="AxG-am-Q4N" secondAttribute="bottom" constant="91" id="17Y-GM-lQ8"/>
                             <constraint firstAttribute="trailing" secondItem="f5X-SA-iTE" secondAttribute="trailing" constant="8" id="Bl7-Ig-eug"/>
                             <constraint firstItem="lsn-cY-i8Z" firstAttribute="leading" secondItem="6bh-fW-otG" secondAttribute="leading" constant="8" id="GBN-zm-WcR"/>
                             <constraint firstItem="qQT-9R-h05" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="centerY" constant="3" id="Mvc-EE-7Rl"/>
+                            <constraint firstItem="KLT-DT-BPk" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="centerY" priority="750" constant="5" id="N3Y-OY-fe4"/>
                             <constraint firstItem="AxG-am-Q4N" firstAttribute="centerX" secondItem="KLT-DT-BPk" secondAttribute="centerX" id="Ngc-7n-4NX"/>
                             <constraint firstItem="qQT-9R-h05" firstAttribute="leading" secondItem="6bh-fW-otG" secondAttribute="leading" constant="8" id="a70-8y-Acy"/>
+                            <constraint firstItem="AxG-am-Q4N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KLT-DT-BPk" secondAttribute="bottom" constant="3" id="nmy-wf-aYS"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="centerY" secondItem="qQT-9R-h05" secondAttribute="centerY" constant="3" id="oFm-P4-gGM"/>
                             <constraint firstItem="lsn-cY-i8Z" firstAttribute="bottom" secondItem="6bh-fW-otG" secondAttribute="centerY" id="ptc-mA-Jsj"/>
                             <constraint firstItem="f5X-SA-iTE" firstAttribute="bottom" secondItem="6bh-fW-otG" secondAttribute="centerY" constant="2" id="tQF-4e-Rgt"/>
+                            <constraint firstItem="qQT-9R-h05" firstAttribute="top" secondItem="lsn-cY-i8Z" secondAttribute="bottom" constant="2" id="yxu-Es-H0F"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="centerX" secondItem="f5X-SA-iTE" secondAttribute="centerX" id="zE3-Rr-osR"/>
+                            <constraint firstItem="KLT-DT-BPk" firstAttribute="top" secondItem="f5X-SA-iTE" secondAttribute="bottom" constant="3" id="zsz-tL-7f4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ptc-mA-Jsj"/>
+                                <exclude reference="Mvc-EE-7Rl"/>
+                                <exclude reference="tQF-4e-Rgt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomTarget" destination="17Y-GM-lQ8" id="0Zt-Xk-iqf"/>
@@ -329,7 +340,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-cV-S8G">
-                                                    <rect key="frame" x="15" y="14.5" width="360" height="20"/>
+                                                    <rect key="frame" x="15" y="14" width="360" height="20"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
