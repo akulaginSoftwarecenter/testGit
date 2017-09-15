@@ -29,6 +29,7 @@ class RNSLoginViewController: UIViewController {
         }
         
         prepareLoginIfNeed()
+        addDoneButtonOnKeyboard()
     }
     
     func loginPressed() {

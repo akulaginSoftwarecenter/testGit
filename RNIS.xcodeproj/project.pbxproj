@@ -379,6 +379,7 @@
 		83940B8D1F6B8D99005654DE /* RNSBusManager+Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B8C1F6B8D99005654DE /* RNSBusManager+Operation.swift */; };
 		83940B8F1F6B8DAD005654DE /* RNSBusManager+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B8E1F6B8DAD005654DE /* RNSBusManager+Pin.swift */; };
 		83940B911F6B8DE9005654DE /* RNSBusManager+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B901F6B8DE9005654DE /* RNSBusManager+Stub.swift */; };
+		83940B931F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940B921F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift */; };
 		839875BD1F60FDA000B88F0B /* RNSPostUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */; };
 		839875BF1F610FC200B88F0B /* RNSLoginViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */; };
 		839875C21F612FC400B88F0B /* RNSParentAuthPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */; };
@@ -868,6 +869,7 @@
 		83940B8C1F6B8D99005654DE /* RNSBusManager+Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusManager+Operation.swift"; path = "Managers/Bus/RNSBusManager+Operation.swift"; sourceTree = "<group>"; };
 		83940B8E1F6B8DAD005654DE /* RNSBusManager+Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusManager+Pin.swift"; path = "Managers/Bus/RNSBusManager+Pin.swift"; sourceTree = "<group>"; };
 		83940B901F6B8DE9005654DE /* RNSBusManager+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusManager+Stub.swift"; path = "Managers/Bus/RNSBusManager+Stub.swift"; sourceTree = "<group>"; };
+		83940B921F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+Delegate.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+Delegate.swift"; sourceTree = "<group>"; };
 		839875BC1F60FDA000B88F0B /* RNSPostUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUpdate.swift; path = POST/Update/RNSPostUpdate.swift; sourceTree = "<group>"; };
 		839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSLoginViewController+UI.swift"; path = "Controllers/Authorization+Registration/Login/RNSLoginViewController+UI.swift"; sourceTree = "<group>"; };
 		839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSParentAuthPost.swift; path = POST/Parent/RNSParentAuthPost.swift; sourceTree = "<group>"; };
@@ -1619,6 +1621,7 @@
 			children = (
 				832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */,
 				839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */,
+				83940B921F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift */,
 				837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */,
 				832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */,
 			);
@@ -4350,6 +4353,7 @@
 				831FDD8E1F5960C6004D69FB /* RNSBusStop+Generate.swift in Sources */,
 				831588981F6280C900CA485A /* RNSPostStopPointList.swift in Sources */,
 				83204B2C1F5917270033ACA1 /* RNSLeftMenuController+Action.swift in Sources */,
+				83940B931F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */,
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
