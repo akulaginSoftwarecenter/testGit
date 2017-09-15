@@ -38,7 +38,7 @@ extension RNSLoginViewController {
         doneToolbar.barStyle = .blackTranslucent
         doneToolbar.barTintColor = .white
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done = UIBarButtonItem(title: "Войти   ", style: .done, target: self, action: #selector(doneButtonAction))
+        let done = UIBarButtonItem(title: "Ввод   ", style: .done, target: self, action: #selector(doneButtonAction))
         
         let items = [flexSpace,done]
         
