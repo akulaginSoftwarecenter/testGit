@@ -83,12 +83,6 @@ extension RNSDataManager {
         }
     }
     
-    static func addBusStop(_ uuid: String ,title: String?, lat: Double, lon: Double) -> RNSBusStop {
-        let item = RNSBusStop.generate(uuid, name: title, lat: lat, lon: lon)
-        realm?.add(item)
-        return item
-    }
-    
     static func removeAllBusStop() {
         DispatchQueue.main.async {
             guard let busStops = busStops else {

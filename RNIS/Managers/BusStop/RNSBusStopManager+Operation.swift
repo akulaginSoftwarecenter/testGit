@@ -34,20 +34,20 @@ extension RNSBusStopManager {
         Utils.mainQueue {
             removeOLdBusStops(removeUuids)
             showPinBusStopUuids(addUuids)
-            showedStopsUuids = showedStops.flatMap{$0.uuid}
-            print("showedStops",showedStopsUuids.count)
+            showedUuids = showedItems.flatMap{$0.uuid}
+            print("showedStops",showedUuids.count)
         }
     }
     
     static func addUuids(_ uuids: [String]?) -> [String]? {
-        return uuids?.filter{!showedStopsUuids.contains($0)}
+        return uuids?.filter{!showedUuids.contains($0)}
     }
     
     static func removeUuids(_ uuids: [String]?) -> [String]? {
         guard let uuids = uuids else {
             return nil
         }
-        return showedStopsUuids.filter{ !uuids.contains($0) }
+        return showedUuids.filter{ !uuids.contains($0) }
     }
      
     static func busStops(_ uuids: [String]?) -> [RNSBusStop]? {

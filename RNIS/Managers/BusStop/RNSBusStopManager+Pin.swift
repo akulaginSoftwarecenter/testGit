@@ -21,7 +21,7 @@ extension RNSBusStopManager {
         guard let items = items else {
             return
         }
-        showedStops.append(contentsOf: items)
+        showedItems.append(contentsOf: items)
         for item in items {
             item.handlerRemove?()
             _ = RNSPinBusStop(item)
@@ -29,21 +29,21 @@ extension RNSBusStopManager {
     }
     
     static func removeOLdBusStopsAll() {
-        for item in showedStops {
+        for item in showedItems {
             item.handlerRemove?()
         }
-        self.showedStops = [RNSBusStop]()
-        self.showedStopsUuids = [String]()
+        self.showedItems = [RNSBusStop]()
+        self.showedUuids = [String]()
     }
     
     static func removeOLdBusStops(_ uuids: [String]?) {
         guard let uuids = uuids else {
             return
         }
-        let items = showedStops.filter{ uuids.contains($0.uuid) }
+        let items = showedItems.filter{ uuids.contains($0.uuid) }
         for item in items {
             item.handlerRemove?()
         }
-        showedStops = showedStops.filter{ !items.contains($0) }
+        showedItems = showedItems.filter{ !items.contains($0) }
     }
 }

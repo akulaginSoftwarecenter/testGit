@@ -12,8 +12,8 @@ class RNSBusStopManager: NSObject {
     
     static let shared = RNSBusStopManager()
     
-    static var showedStops = [RNSBusStop]()
-    static var showedStopsUuids = [String]()
+    static var showedItems = [RNSBusStop]()
+    static var showedUuids = [String]()
     
     static var queue: OperationQueue {
         return shared.queue
