@@ -52,20 +52,12 @@ extension RNSDataManager {
     static func parseBusItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBus]) -> ())?) {
         parseItemsAsync(dicts, complete: complete)
     }
-    
-    static func buss(_ min: PGGeoPoint, center: PGGeoPoint) -> [RNSBus]? {
+
+    static func bussUuids(_ min: PGGeoPoint, center: PGGeoPoint) -> [String]? {
         guard let results = buss else {
             return nil
         }
-        let distance = min.distanceTo(center)
-        return Array(results).filter{
-            return center.distanceTo($0.point) < distance
-        }
-    }
-    
-    static func bussUuids(_ min: PGGeoPoint, center: PGGeoPoint) -> [String]? {
-        let items = buss(min, center: center)
-        return items?.flatMap{$0.uuid}
+        return modelsUuids(Array(results), min: min, center: center)
     }
     
     static func removeAllBuss() {

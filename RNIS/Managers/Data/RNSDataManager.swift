@@ -69,4 +69,9 @@ class RNSDataManager: NSObject {
             return center.distanceTo($0.point) < distance
         } as? [T]
     }
+    
+    static func modelsUuids(_ items: [RNSCoordinateModel], min: PGGeoPoint, center: PGGeoPoint) -> [String]? {
+        let items = models(items, min: min, center: center)
+        return items?.flatMap{$0.uuid}
+    }
 }
