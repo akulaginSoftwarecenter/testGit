@@ -85,7 +85,7 @@
                                     <action selector="actionProfile:" destination="T8u-3s-L8k" eventType="touchUpInside" id="KmX-SK-cbS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjq-7j-EDO">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjq-7j-EDO">
                                 <rect key="frame" x="0.0" y="600" width="101" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="Kh3-zB-v2R"/>
@@ -95,7 +95,7 @@
                                     <action selector="testAction:" destination="T8u-3s-L8k" eventType="touchUpInside" id="YDv-sB-iJF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuL-8m-0YT">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuL-8m-0YT">
                                 <rect key="frame" x="101" y="600" width="69" height="67"/>
                                 <state key="normal" title="Автобусы"/>
                                 <connections>
