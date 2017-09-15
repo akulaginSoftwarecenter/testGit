@@ -11,13 +11,11 @@ import Foundation
 extension RNSBusStopManager {
     
     static func prepareStubBusStop() {
-        /*
         removeOldAll()
         RNSDataManager.createStubBusStopIfNeed {
             showPinAll()
         }
-         */
-   }
+    }
     
     static func prepareStubAsunc() {
         removeOldAll()
