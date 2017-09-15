@@ -70,8 +70,12 @@ class RNSDataManager: NSObject {
         } as? [T]
     }
     
-    static func modelsUuids(_ items: [RNSCoordinateModel], min: PGGeoPoint, center: PGGeoPoint) -> [String]? {
-        let items = models(items, min: min, center: center)
+    static func modelsUuids(_ items: [RNSCoordinateModel], min: PGGeoPoint, center: PGGeoPoint, maxCount: Int? = nil) -> [String]? {
+        var items = models(items, min: min, center: center)
+        if let maxCount = maxCount,
+            let array = items {
+            items = Array(array.prefix(maxCount))
+        }
         return items?.flatMap{$0.uuid}
     }
 }

@@ -17,13 +17,11 @@ extension RNSBusStopManager {
     
     static func updateOperation() {
         
-        guard RNSMapManager.getZoomLevel > 14 else {
-            Utils.mainQueue {
-                removeOldAll()
-            }
-            return
+        var maxCount: Int?
+        if RNSMapManager.getZoomLevel <= 14 {
+            maxCount = 50
         }
-        let uuids = RNSDataManager.bussStopsUuids(mapView.lastMinCoord, center: mapView.lastCenterCoord)
+        let uuids = RNSDataManager.bussStopsUuids(mapView.lastMinCoord, center: mapView.lastCenterCoord, maxCount: maxCount)
         let addUuids = self.addUuids(uuids)
         let removeUuids = self.removeUuids(uuids)
         Utils.mainQueue {
