@@ -11,11 +11,9 @@ import Foundation
 extension RNSBusStopManager {
     
     static func prepareStubBusStop() {
-        /*
-        removeOLdBusStopsAll()
+        removeOldAll()
         RNSDataManager.createStubBusStopIfNeed()
-        showPinBusStopAll()
-         */
+        showPinAll()
     }
     
     static func prepareStubAsunc() {
@@ -24,13 +22,6 @@ extension RNSBusStopManager {
             print("createStubBusStopAsync", items.count)
             //showPinBusStop()
         }
-    }
-    
-    static func showPinAll() {
-        guard let items = RNSDataManager.busStops else {
-            return
-        }
-        showPinsItems(Array(items))
     }
     
     static func createStubItemsAsync(complete: (([RNSBusStop])->())?) {

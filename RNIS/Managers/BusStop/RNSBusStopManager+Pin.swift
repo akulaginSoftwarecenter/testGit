@@ -28,6 +28,13 @@ extension RNSBusStopManager {
         }
     }
     
+    static func showPinAll() {
+        guard let items = RNSDataManager.busStops else {
+            return
+        }
+        showPinsItems(Array(items))
+    }
+    
     static func removeOldAll() {
         for item in showedItems {
             item.handlerRemove?()
