@@ -10,14 +10,14 @@ import Foundation
 
 extension RNSBusStopManager {
     
-    static func showPinBusStopUuids(_ uuids: [String]?) {
+    static func showPinsUuids(_ uuids: [String]?) {
         guard let items = busStops(uuids) else {
             return
         }
-        showPinBusStop(items)
+        showPinsItems(items)
     }
     
-    static func showPinBusStop(_ items: [RNSBusStop]?) {
+    static func showPinsItems(_ items: [RNSBusStop]?) {
         guard let items = items else {
             return
         }
@@ -28,7 +28,7 @@ extension RNSBusStopManager {
         }
     }
     
-    static func removeOLdBusStopsAll() {
+    static func removeOldAll() {
         for item in showedItems {
             item.handlerRemove?()
         }
@@ -36,7 +36,7 @@ extension RNSBusStopManager {
         self.showedUuids = [String]()
     }
     
-    static func removeOLdBusStops(_ uuids: [String]?) {
+    static func removeOld(_ uuids: [String]?) {
         guard let uuids = uuids else {
             return
         }

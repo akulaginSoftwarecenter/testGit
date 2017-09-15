@@ -10,21 +10,21 @@ import Foundation
 
 extension RNSBusStopManager {
     
-    static func bussStopsUpdate() {
+    static func update() {
         
         let operation = BlockOperation(block:{
-            bussStopsUpdateOperation()
+            updateOperation()
         })
         
         queue.cancelAllOperations()
         queue.addOperation(operation)
     }
     
-    static func bussStopsUpdateOperation() {
+    static func updateOperation() {
         
         guard RNSMapManager.getZoomLevel > 14 else {
             Utils.mainQueue {
-                removeOLdBusStopsAll()
+                removeOldAll()
             }
             return
         }
@@ -32,8 +32,8 @@ extension RNSBusStopManager {
         let addUuids = self.addUuids(uuids)
         let removeUuids = self.removeUuids(uuids)
         Utils.mainQueue {
-            removeOLdBusStops(removeUuids)
-            showPinBusStopUuids(addUuids)
+            removeOld(removeUuids)
+            showPinsUuids(addUuids)
             showedUuids = showedItems.flatMap{$0.uuid}
             print("showedStops",showedUuids.count)
         }

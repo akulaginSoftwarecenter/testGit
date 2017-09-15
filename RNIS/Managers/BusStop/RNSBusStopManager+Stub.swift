@@ -11,23 +11,58 @@ import Foundation
 extension RNSBusStopManager {
     
     static func prepareStubBusStop() {
+        /*
         removeOLdBusStopsAll()
         RNSDataManager.createStubBusStopIfNeed()
         showPinBusStopAll()
+         */
     }
     
-    static func prepareStubBusStopAsunc() {
-        removeOLdBusStopsAll()
-        RNSDataManager.createStubBusStopAsync { (items) in
+    static func prepareStubAsunc() {
+        removeOldAll()
+        createStubItemsAsync { (items) in
             print("createStubBusStopAsync", items.count)
             //showPinBusStop()
         }
     }
     
-    static func showPinBusStopAll() {
+    static func showPinAll() {
         guard let items = RNSDataManager.busStops else {
             return
         }
-        showPinBusStop(Array(items))
+        showPinsItems(Array(items))
+    }
+    
+    static func createStubItemsAsync(complete: (([RNSBusStop])->())?) {
+        RNSDataManager.removeAllBusStop()
+        CounterTime.startTimer()
+        createStubDicts { (dicts) in
+            CounterTime.endTimer()
+            RNSDataManager.parseBusStopItemsAsync(dicts, complete: { (items) in
+                CounterTime.endTimer()
+                complete?(items)
+            })
+        }
+    }
+    
+    static func createStubDicts(complete: (([AliasDictionary]) -> ())?) {
+        var dicts = [AliasDictionary]()
+        
+        CounterTime.startTimer()
+        let point = RNSLocationManager.point
+        DispatchQueue.global(qos: .userInitiated).async {
+            for index in 7...10000 {
+                let lat = point.latitude - 0.2 + (Double(Int.rand(0, limit: 4000))/10000)
+                let lon = point.longitude - 0.25 + (Double(Int.rand(0, limit: 5000))/10000)
+                
+                dicts.append(["name":"test",
+                              "uuid": "\(index)",
+                    "latitude": lat,
+                    "longitude" : lon])
+            }
+            Utils.mainQueue {
+                complete?(dicts)
+            }
+        }
     }
 }
