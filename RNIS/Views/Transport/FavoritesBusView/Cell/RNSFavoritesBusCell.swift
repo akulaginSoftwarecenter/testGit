@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSFavoritesBusCell: UITableViewCell {
+class RNSFavoritesBusCell: RNSBaseTableCell {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topTitle: UILabel!

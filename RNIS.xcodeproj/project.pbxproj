@@ -61,10 +61,6 @@
 		83204B2A1F5911850033ACA1 /* RNSMenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B291F5911850033ACA1 /* RNSMenuBarItem.swift */; };
 		83204B2C1F5917270033ACA1 /* RNSLeftMenuController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */; };
 		83204B2F1F591A590033ACA1 /* RNSLeftMenuBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B2E1F591A590033ACA1 /* RNSLeftMenuBackButton.swift */; };
-		83204B3C1F591CB70033ACA1 /* MyTransportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B351F591CB70033ACA1 /* MyTransportCell.swift */; };
-		83204B3D1F591CB70033ACA1 /* MyTransportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83204B361F591CB70033ACA1 /* MyTransportCell.xib */; };
-		83204B3E1F591CB70033ACA1 /* MyTransportTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B381F591CB70033ACA1 /* MyTransportTopCell.swift */; };
-		83204B3F1F591CB70033ACA1 /* MyTransportTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83204B391F591CB70033ACA1 /* MyTransportTopCell.xib */; };
 		83204B401F591CB70033ACA1 /* TransportViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83204B3A1F591CB70033ACA1 /* TransportViewController.storyboard */; };
 		83204B411F591CB70033ACA1 /* TransportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B3B1F591CB70033ACA1 /* TransportViewController.swift */; };
 		83204B491F591FBD0033ACA1 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B461F591FBD0033ACA1 /* NotificationTableViewCell.swift */; };
@@ -584,10 +580,6 @@
 		83204B291F5911850033ACA1 /* RNSMenuBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSMenuBarItem.swift; path = Views/MenuBarItem/RNSMenuBarItem.swift; sourceTree = "<group>"; };
 		83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSLeftMenuController+Action.swift"; sourceTree = "<group>"; };
 		83204B2E1F591A590033ACA1 /* RNSLeftMenuBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSLeftMenuBackButton.swift; path = Views/Buttons/LeftMenuBackButton/RNSLeftMenuBackButton.swift; sourceTree = "<group>"; };
-		83204B351F591CB70033ACA1 /* MyTransportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTransportCell.swift; sourceTree = "<group>"; };
-		83204B361F591CB70033ACA1 /* MyTransportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTransportCell.xib; sourceTree = "<group>"; };
-		83204B381F591CB70033ACA1 /* MyTransportTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTransportTopCell.swift; sourceTree = "<group>"; };
-		83204B391F591CB70033ACA1 /* MyTransportTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTransportTopCell.xib; sourceTree = "<group>"; };
 		83204B3A1F591CB70033ACA1 /* TransportViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TransportViewController.storyboard; sourceTree = "<group>"; };
 		83204B3B1F591CB70033ACA1 /* TransportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportViewController.swift; sourceTree = "<group>"; };
 		83204B461F591FBD0033ACA1 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -1381,56 +1373,12 @@
 			isa = PBXGroup;
 			children = (
 				836E69381F5E441A003D9D46 /* Alert */,
-				83204B311F591CB70033ACA1 /* cells */,
 				83204B3B1F591CB70033ACA1 /* TransportViewController.swift */,
 				83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */,
 				83204B3A1F591CB70033ACA1 /* TransportViewController.storyboard */,
 			);
 			name = Transport;
 			path = Controllers/Transport;
-			sourceTree = "<group>";
-		};
-		83204B311F591CB70033ACA1 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-				83204B321F591CB70033ACA1 /* MyRouteTableViewCell */,
-				83204B331F591CB70033ACA1 /* MyTransportTableViewCell */,
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		83204B321F591CB70033ACA1 /* MyRouteTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyRouteTableViewCell;
-			sourceTree = "<group>";
-		};
-		83204B331F591CB70033ACA1 /* MyTransportTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				83204B341F591CB70033ACA1 /* MyTransportCell */,
-				83204B371F591CB70033ACA1 /* MyTransportTopCell */,
-			);
-			path = MyTransportTableViewCell;
-			sourceTree = "<group>";
-		};
-		83204B341F591CB70033ACA1 /* MyTransportCell */ = {
-			isa = PBXGroup;
-			children = (
-				83204B351F591CB70033ACA1 /* MyTransportCell.swift */,
-				83204B361F591CB70033ACA1 /* MyTransportCell.xib */,
-			);
-			path = MyTransportCell;
-			sourceTree = "<group>";
-		};
-		83204B371F591CB70033ACA1 /* MyTransportTopCell */ = {
-			isa = PBXGroup;
-			children = (
-				83204B381F591CB70033ACA1 /* MyTransportTopCell.swift */,
-				83204B391F591CB70033ACA1 /* MyTransportTopCell.xib */,
-			);
-			path = MyTransportTopCell;
 			sourceTree = "<group>";
 		};
 		83204B431F591FBD0033ACA1 /* Notifications */ = {
@@ -3979,7 +3927,6 @@
 				830E68B81F552FC6008EFA02 /* RNSRouteDetailController.storyboard in Resources */,
 				8375DEA11F204FA700FCA26E /* LoaderView.xib in Resources */,
 				838CE9371F3DAA2000C10FBA /* RNSBusInfoViewController.storyboard in Resources */,
-				83204B3F1F591CB70033ACA1 /* MyTransportTopCell.xib in Resources */,
 				832B1DE21F42BAA60024505C /* RNSMapParentController.storyboard in Resources */,
 				836E91B51F58F99D007CCF5A /* RNSLeftMenuController.storyboard in Resources */,
 				836E91B21F58F987007CCF5A /* MenuTableViewCell.xib in Resources */,
@@ -4015,7 +3962,6 @@
 				832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
 				83A5C7061F580BF1006C8D62 /* RNSDateSelectView.xib in Resources */,
 				83AA6A5D1F5668C000B2139C /* ContactsInfoTableViewCell.xib in Resources */,
-				83204B3D1F591CB70033ACA1 /* MyTransportCell.xib in Resources */,
 				836E91B81F58FC0E007CCF5A /* RNSMenuViewController.storyboard in Resources */,
 				83877AAD1F5D1293007888DE /* RNSDotsVerticalCell.xib in Resources */,
 				83A53F881F4A975900938969 /* RNSPageRouteView.xib in Resources */,
@@ -4279,7 +4225,6 @@
 				8362CE291F6A8E0600BE912D /* RNSBusStopManager.swift in Sources */,
 				837F719B1F45415100DEAA36 /* Array+Utils.swift in Sources */,
 				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
-				83204B3C1F591CB70033ACA1 /* MyTransportCell.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
 				83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */,
 				83AFEB5F1F6A3A9B00C2A251 /* RNSFavoritesBusCell+TableView.swift in Sources */,
@@ -4321,7 +4266,6 @@
 				836277D71F381DFA009FB712 /* RNSBusStop.swift in Sources */,
 				8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */,
 				832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
-				83204B3E1F591CB70033ACA1 /* MyTransportTopCell.swift in Sources */,
 				830E68BC1F55386C008EFA02 /* RNSRouteTableItem.swift in Sources */,
 				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				838707ED1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,

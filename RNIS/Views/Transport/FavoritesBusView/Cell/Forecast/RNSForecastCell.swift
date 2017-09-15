@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSForecastCell: UITableViewCell {
+class RNSForecastCell: RNSBaseTableCell {
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
