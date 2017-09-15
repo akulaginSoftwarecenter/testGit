@@ -12,7 +12,7 @@ import RealmSwift
 class RNSBus: RNSCoordinateModel {
     
     dynamic var minute: Int = 0
-    dynamic var title: String = ""
+    dynamic var route_number: String = ""
     dynamic var showNext: Bool = false
     let busStops = List<RNSBusStop>()
     dynamic var currentBusStops: RNSBusStop?
@@ -26,7 +26,7 @@ class RNSBus: RNSCoordinateModel {
     func generate() {
         
         minute = Int.rand(1, limit: 200)
-        title = String(Int.rand(1, limit: 30))
+        route_number = String(Int.rand(1, limit: 30))
         showNext = Bool.random
         
         latitude = 59.931448

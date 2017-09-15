@@ -37,7 +37,7 @@ class RNSImageFactory: NSObject {
             return inImage
         }
         
-        let text = item.title
+        let text = item.route_number
         let key = text as NSString
         if let icon = cache.object(forKey: key) {
             return icon

@@ -49,11 +49,11 @@ extension RNSDataManager {
         })
     }
     
-    static func parseBusItems(_ dicts: [AliasDictionary]) -> [RNSBusStop] {
+    static func parseBusItems(_ dicts: [AliasDictionary]) -> [RNSBus] {
         return parseItems(dicts)
     }
     
-    static func parseBusItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBusStop]) -> ())?) {
+    static func parseBusItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBus]) -> ())?) {
         DispatchQueue.global(qos: .userInitiated).async {
             let items = parseBusItems(dicts)
             Utils.mainQueue {
@@ -62,8 +62,8 @@ extension RNSDataManager {
         }
     }
     
-    static func buss(_ min: PGGeoPoint, center: PGGeoPoint) -> [RNSBusStop]? {
-        guard let results = busStops else {
+    static func buss(_ min: PGGeoPoint, center: PGGeoPoint) -> [RNSBus]? {
+        guard let results = buss else {
             return nil
         }
         let distance = min.distanceTo(center)

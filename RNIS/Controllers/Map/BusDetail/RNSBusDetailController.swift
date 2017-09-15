@@ -14,7 +14,7 @@ class RNSBusDetailController: UIViewController {
         let vc = RNSBusDetailController.initialController as? RNSBusDetailController
         vc?.item = RNSBusTemp.gen
         
-        let title = "Автобус №" + (item?.title ?? "")
+        let title = "Автобус №" + (item?.route_number ?? "")
         let container = STRouter.scrollShowContainer(vc, topTitle: title)
         container?.handlerRect = vc?.prepareViews(_:)
         container?.heightCoverButtonTop = 130

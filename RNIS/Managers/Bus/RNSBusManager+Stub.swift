@@ -13,11 +13,11 @@ extension RNSBusManager {
     static func prepareStubAsunc() {
         removeOldAll()
         createStubItemsAsync { (items) in
-            print("createStubBussAsync", items.count)
+            print("createBussAsync", items.count)
         }
     }
     
-    static func createStubItemsAsync(complete: (([RNSBusStop])->())?) {
+    static func createStubItemsAsync(complete: (([RNSBus])->())?) {
         RNSDataManager.removeAllBuss()
         CounterTime.startTimer()
         createStubDicts { (dicts) in
@@ -39,7 +39,7 @@ extension RNSBusManager {
                 let lat = point.latitude - 0.2 + (Double(Int.rand(0, limit: 4000))/10000)
                 let lon = point.longitude - 0.25 + (Double(Int.rand(0, limit: 5000))/10000)
                 
-                dicts.append(["route_number":"test",
+                dicts.append(["route_number":"\(index)",
                               "uuid": "\(index)",
                     "latitude": lat,
                     "longitude" : lon])
