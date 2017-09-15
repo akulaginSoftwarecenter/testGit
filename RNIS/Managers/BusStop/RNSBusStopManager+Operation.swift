@@ -21,13 +21,13 @@ extension RNSBusStopManager {
     }
     
     static func bussStopsUpdateOperation() {
+        
         guard RNSMapManager.getZoomLevel > 14 else {
             Utils.mainQueue {
                 removeOLdBusStopsAll()
             }
             return
         }
-        
         let uuids = RNSDataManager.bussStopsUuids(mapView.lastMinCoord, center: mapView.lastCenterCoord)
         let addUuids = self.addUuids(uuids)
         let removeUuids = self.removeUuids(uuids)
@@ -35,6 +35,7 @@ extension RNSBusStopManager {
             removeOLdBusStops(removeUuids)
             showPinBusStopUuids(addUuids)
             showedStopsUuids = showedStops.flatMap{$0.uuid}
+            print("showedStops",showedStopsUuids.count)
         }
     }
     

@@ -66,13 +66,16 @@ extension RNSDataManager {
         var dicts = [AliasDictionary]()
         
         CounterTime.startTimer()
-        let location = RNSLocationManager.point
+        let point = RNSLocationManager.point
         DispatchQueue.global(qos: .userInitiated).async {
             for index in 7...10000 {
+                let lat = point.latitude - 0.2 + (Double(Int.rand(0, limit: 4000))/10000)
+                let lon = point.longitude - 0.25 + (Double(Int.rand(0, limit: 5000))/10000)
+                
                 dicts.append(["name":"test",
                               "uuid": "\(index)",
-                    "latitude": location.latitude,
-                    "longitude" : location.longitude + Double(index)/1000 ])
+                    "latitude": lat,
+                    "longitude" : lon])
             }
             Utils.mainQueue {
                 complete?(dicts)
