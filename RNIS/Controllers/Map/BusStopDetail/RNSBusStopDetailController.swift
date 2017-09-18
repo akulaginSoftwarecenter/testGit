@@ -57,17 +57,10 @@ class RNSBusStopDetailController: UIViewController {
         RNSStopPointRoutes(item, complete: { [weak self] items in
              self?.prepareItems(items)
              self?.loaderView.remove()
-            }, failure: { [weak self] error in
+            }, failure: { error in
                // self?.prepareError(error)
         })
-        /*
-        showLoader()
-        
-        RNSDataManager.generateBusList { [weak self] (items) in
-            self?.prepareItems(items)
-            self?.loaderView.remove()
-        }
-         */
+
     }
        
     func prepareItems(_ items: [RNSBusRouteTemp]?) {

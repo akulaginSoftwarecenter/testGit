@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSProfilePhoto" customModule="RNIS" customModuleProvider="target">
             <connections>
+                <outlet property="backImage" destination="7uy-Iu-F14" id="bea-LQ-g0q"/>
                 <outlet property="imageView" destination="arX-Hk-VVD" id="H7F-fu-jaF"/>
             </connections>
         </placeholder>
@@ -19,9 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="arX-Hk-VVD">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="7uy-Iu-F14">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                    <color key="backgroundColor" red="0.72156862745098038" green="0.25490196078431371" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.72156862749999995" green="0.25490196079999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7uy-Iu-F14" secondAttribute="height" multiplier="200:200" id="0JQ-GM-dDM"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="J6Q-2K-I8Z"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="OfZ-s4-A6a"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="arX-Hk-VVD">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="0aK-3a-v3i"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="vE1-WI-Uf8"/>
@@ -54,10 +64,16 @@
                 <constraint firstAttribute="trailing" secondItem="yPv-r9-Ffb" secondAttribute="trailing" constant="-4" id="3PA-0i-Uh6"/>
                 <constraint firstAttribute="bottom" secondItem="yPv-r9-Ffb" secondAttribute="bottom" constant="-11" id="3fz-G6-Zjo"/>
                 <constraint firstItem="e8F-76-LPt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EP5-7q-BF7"/>
+                <constraint firstItem="7uy-Iu-F14" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FnA-CI-trd"/>
                 <constraint firstAttribute="trailing" secondItem="arX-Hk-VVD" secondAttribute="trailing" id="GHa-X8-hqd"/>
                 <constraint firstItem="arX-Hk-VVD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NCO-sS-386"/>
+                <constraint firstAttribute="bottom" secondItem="7uy-Iu-F14" secondAttribute="bottom" id="RM8-9F-cXH"/>
+                <constraint firstItem="7uy-Iu-F14" firstAttribute="width" secondItem="7uy-Iu-F14" secondAttribute="height" multiplier="200:200" id="Shq-af-O2p"/>
                 <constraint firstItem="e8F-76-LPt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XkU-5w-wpo"/>
                 <constraint firstItem="arX-Hk-VVD" firstAttribute="width" secondItem="arX-Hk-VVD" secondAttribute="height" multiplier="200:200" id="cK7-al-RxA"/>
+                <constraint firstAttribute="trailing" secondItem="7uy-Iu-F14" secondAttribute="trailing" id="csw-w7-uXM"/>
+                <constraint firstItem="7uy-Iu-F14" firstAttribute="width" secondItem="7uy-Iu-F14" secondAttribute="height" multiplier="200:200" id="cyB-V9-tFK"/>
+                <constraint firstItem="7uy-Iu-F14" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dRh-BT-D9c"/>
                 <constraint firstAttribute="bottom" secondItem="arX-Hk-VVD" secondAttribute="bottom" id="fI1-wy-lRI"/>
                 <constraint firstItem="arX-Hk-VVD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="g1y-zx-ufr"/>
                 <constraint firstAttribute="bottom" secondItem="e8F-76-LPt" secondAttribute="bottom" id="jaC-bR-7da"/>

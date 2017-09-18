@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class RNSParentAuthPost: RNSRequest {
+class RNSParentAuthPost: RNSTokenRequest {
     override var method: Alamofire.HTTPMethod {
         return .post
     }
@@ -18,7 +18,7 @@ class RNSParentAuthPost: RNSRequest {
     var failure: AliasStringBlock?
     var complete: AliasRegisterPayloadBlock?
      
-    @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
+    @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
         self.init()
         
         self.item = item

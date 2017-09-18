@@ -13,6 +13,7 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
     var photo: UIImage?
     @IBInspectable var colorImageView: UIColor?
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var backImage: UIImageView!
     
     var isHavePhoto: Bool {
         return photo != nil
@@ -28,7 +29,7 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
         guard let color = colorImageView else {
             return
         }
-        imageView.backgroundColor = color
+        backImage.backgroundColor = color
     }
     
     @IBAction func actionButton(_ sender: Any) {
@@ -37,12 +38,13 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
 
     func removePhoto() {
         photo = nil
-        imageView.image = #imageLiteral(resourceName: "EmptyPhoto")
+        imageView.image = nil
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
 
         imageView.layer.cornerRadius =  frame.width/2
+        backImage.layer.cornerRadius =  frame.width/2
     }
 }

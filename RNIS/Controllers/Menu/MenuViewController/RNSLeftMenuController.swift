@@ -24,7 +24,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         prepareUI()
-       // loadData()
+        loadData()
     }
     
     func prepareUI() {
@@ -37,17 +37,19 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
     }
-    /*
+    
     func loadData() {
-        
         let item = RNSUserPayload.itemUserDefault()
-        RNSPostUpdate(item, complete: { item in
-            print("RNSPostUpdate",item)
-        }, failure: { [weak self] error in
-            print("error",error)
+        RNSPostUpdate(item, complete: {[weak self] item in
+            self?.updateUI(item)
         })
     }
-   */
+    
+    func updateUI(_ item: RNSUserPayload?) {
+        nameLabel.text = item?.name
+        phoneLabel.text =  InputFieldsValidator.format(item?.phone).text
+    }
+    
     override class var storyboardName: String {
         return "RNSLeftMenuController"
     }

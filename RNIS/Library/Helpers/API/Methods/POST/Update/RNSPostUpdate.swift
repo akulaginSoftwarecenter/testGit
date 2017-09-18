@@ -19,6 +19,14 @@ class RNSPostUpdate: RNSParentAuthPost {
         parseError(model)
     }
     
+    override var headers: AliasDictionary {
+        var headers = super.headers
+        if let token = UserDefaults.token {
+            headers["mobile_token"] = "\(token)"
+        }
+        return headers
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.mobile_user.update"
     }
