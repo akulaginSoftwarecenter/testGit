@@ -13,7 +13,7 @@ extension RNSBusStopManager {
     static func prepareStubBusStop() {
         //removeOldAll()
         RNSDataManager.createStubBusStopIfNeed()
-        showPinAll()
+        //showPinAll()
     }
     
     static func prepareStubAsunc() {
