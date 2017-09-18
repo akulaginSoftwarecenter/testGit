@@ -13,7 +13,7 @@ class RNSRegistrationNameController: UIViewController {
     @IBOutlet weak var nameField: RNSTextField!
     @IBOutlet var coverView: RNSLoginView!
     @IBOutlet weak var errorLabel: UILabel!
-    
+    @IBOutlet weak var photo: RNSProfilePhoto!
     var item: RNSUserPayload?
     
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
@@ -46,6 +46,7 @@ class RNSRegistrationNameController: UIViewController {
     
     func send() {
         item?.name = nameField.text
+        item?.avatar = photo.imageData
         
         RNSPostUpdate(item, complete: {
             STRouter.showLogin($0)

@@ -18,6 +18,7 @@ class RNSUserPayload: RNISMappableBase {
     var name: String?
     var token: String?
     var mobile_token: String?
+    var avatar: String?
     
     var password: String?
     var old_password: String?
@@ -39,6 +40,7 @@ class RNSUserPayload: RNISMappableBase {
         token <- map["token"]
         user <- map["user"]
         mobile_token <- map["mobile_token"]
+        avatar <- map["avatar"]
         
         password <- map["password"]
         old_password <- map["old_password"]

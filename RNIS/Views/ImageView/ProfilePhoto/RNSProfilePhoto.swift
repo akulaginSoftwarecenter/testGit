@@ -41,6 +41,14 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
         imageView.image = nil
     }
     
+    var imageData: String? {
+        guard let image = imageView.image else {
+            return nil
+        }
+        let imageData = UIImageJPEGRepresentation(image, 0.1)!
+        return imageData.base64EncodedString()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
 

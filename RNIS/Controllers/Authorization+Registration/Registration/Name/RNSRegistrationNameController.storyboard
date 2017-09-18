@@ -97,6 +97,7 @@
                         <outlet property="coverView" destination="3SO-Er-NRQ" id="a8I-S7-7tO"/>
                         <outlet property="errorLabel" destination="M54-Z0-rE4" id="UJO-Dl-FLK"/>
                         <outlet property="nameField" destination="bzV-rA-o14" id="BfO-hc-aWJ"/>
+                        <outlet property="photo" destination="uA1-nt-8CO" id="8Fz-a2-Tnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVq-Zj-YOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
