@@ -23,6 +23,7 @@ class RNSMapViewController: UIViewController {
     lazy var loaderView:LoaderView = {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
+        view.labelText.text = "Обновление остановок..."
         return view
     }()
     

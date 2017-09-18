@@ -15,22 +15,23 @@ class RNSBusStopDetailCell: RNSBaseTableCell {
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var nextLabel: UILabel!
     
-    var item: RNSBus? {
+    var item: RNSBusRouteTemp? {
         didSet {
             prepareUI()
         }
     }
     
     func prepareUI() {
-        minuteLabel.text = String(item?.minute ?? 0) + " мин."
-        numLabel.text = item?.route_number
+        //minuteLabel.text = String(item?.minute ?? 0) + " мин."
+        numLabel.text = item?.number
         
-        prepareShowNext()
+        //prepareShowNext()
     }
-    
+    /*
     func prepareShowNext() {
         let showNext = item?.showNext ?? false
         nextLabel.isHidden = !showNext
         numCenterConstraint.constant = showNext ? -6 : 0
     }
+    */
 }

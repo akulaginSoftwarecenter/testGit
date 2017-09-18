@@ -23,7 +23,7 @@ class RNSBusStopDetailController: UIViewController {
     }
    
     var item: RNSBusStop?
-    var items = [RNSBus]()
+    var items: [RNSBusRouteTemp]?
     lazy var loaderView:LoaderView = LoaderView()
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
@@ -54,14 +54,23 @@ class RNSBusStopDetailController: UIViewController {
     
     func loadItems() {
         showLoader()
+        RNSStopPointRoutes(item, complete: { [weak self] items in
+             self?.prepareItems(items)
+             self?.loaderView.remove()
+            }, failure: { [weak self] error in
+               // self?.prepareError(error)
+        })
+        /*
+        showLoader()
         
         RNSDataManager.generateBusList { [weak self] (items) in
             self?.prepareItems(items)
             self?.loaderView.remove()
         }
+         */
     }
-    
-    func prepareItems(_ items: [RNSBus]) {
+       
+    func prepareItems(_ items: [RNSBusRouteTemp]?) {
         self.items = items
         prepareTableView()
     }

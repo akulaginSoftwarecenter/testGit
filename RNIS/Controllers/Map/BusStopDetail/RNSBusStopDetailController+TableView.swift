@@ -16,7 +16,7 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -25,11 +25,11 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
-    func item(_ indexPath: IndexPath) -> RNSBus {
-        return items[indexPath.row]
+    func item(_ indexPath: IndexPath) -> RNSBusRouteTemp? {
+        return items?[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        RNSMapManager.showInfoIfNeed(item(indexPath))
+        //RNSMapManager.showInfoIfNeed(item(indexPath))
     }
 }
