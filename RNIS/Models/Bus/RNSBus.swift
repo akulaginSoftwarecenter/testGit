@@ -29,8 +29,8 @@ class RNSBus: RNSCoordinateModel {
         route_number = String(Int.rand(1, limit: 30))
         showNext = Bool.random
         
-        latitude = 59.931448
-        longitude = 30.292849
+        latitude = redPlaceLocation.coordinate.latitude
+        longitude = redPlaceLocation.coordinate.longitude
         /*
         let list = RNSBusStop.generateList
         busStops.append(objectsIn: list)

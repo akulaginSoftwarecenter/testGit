@@ -12,7 +12,7 @@ extension RNSMapManager {
     
     static func prepareStub() {
         RNSBusStopManager.prepareStubBusStop()
-        //prepareStubBus()
+        prepareStubBus()
     }
     
     static func prepareStubBus() {

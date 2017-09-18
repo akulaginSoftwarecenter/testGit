@@ -16,7 +16,6 @@ extension RNSDataManager {
     }
     
     static func createStubBusIfNeed() {
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
         guard buss?.count == 0  else {
             return
         }
