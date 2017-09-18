@@ -37,7 +37,7 @@
 		8319C5B31F60E026005A1768 /* RNSPostRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B21F60E026005A1768 /* RNSPostRegister.swift */; };
 		8319C5B61F60E4BD005A1768 /* RNSRegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */; };
 		8319C5B91F60E96B005A1768 /* RNSTextErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */; };
-		8319C5BC1F60EDAE005A1768 /* RNSRegisterPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5BB1F60EDAE005A1768 /* RNSRegisterPayload.swift */; };
+		8319C5BC1F60EDAE005A1768 /* RNSUserPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5BB1F60EDAE005A1768 /* RNSUserPayload.swift */; };
 		8319C5BF1F60F2AA005A1768 /* RNSPostConfirmSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */; };
 		8319C5C21F60F6A7005A1768 /* RNSPostConfirmCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5C11F60F6A7005A1768 /* RNSPostConfirmCheck.swift */; };
 		831A85951F413E370095F006 /* RNSSearchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85941F413E370095F006 /* RNSSearchViewController+Action.swift */; };
@@ -564,7 +564,7 @@
 		8319C5B21F60E026005A1768 /* RNSPostRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostRegister.swift; path = POST/Register/RNSPostRegister.swift; sourceTree = "<group>"; };
 		8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegisterError.swift; path = Models/Temp/Error/Register/RNSRegisterError.swift; sourceTree = "<group>"; };
 		8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTextErrorProtocol.swift; path = TextError/RNSTextErrorProtocol.swift; sourceTree = "<group>"; };
-		8319C5BB1F60EDAE005A1768 /* RNSRegisterPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRegisterPayload.swift; path = Models/Temp/Reply/Register/RNSRegisterPayload.swift; sourceTree = "<group>"; };
+		8319C5BB1F60EDAE005A1768 /* RNSUserPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSUserPayload.swift; path = Models/Temp/Reply/Register/RNSUserPayload.swift; sourceTree = "<group>"; };
 		8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostConfirmSend.swift; path = POST/ConfirmSend/RNSPostConfirmSend.swift; sourceTree = "<group>"; };
 		8319C5C11F60F6A7005A1768 /* RNSPostConfirmCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostConfirmCheck.swift; path = POST/ConfirmCheck/RNSPostConfirmCheck.swift; sourceTree = "<group>"; };
 		831A85941F413E370095F006 /* RNSSearchViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+Action.swift"; path = "Controllers/Map/Search/RNSSearchViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1215,12 +1215,12 @@
 			name = textError;
 			sourceTree = "<group>";
 		};
-		8319C5BA1F60ED80005A1768 /* Register */ = {
+		8319C5BA1F60ED80005A1768 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				8319C5BB1F60EDAE005A1768 /* RNSRegisterPayload.swift */,
+				8319C5BB1F60EDAE005A1768 /* RNSUserPayload.swift */,
 			);
-			name = Register;
+			name = User;
 			sourceTree = "<group>";
 		};
 		8319C5BD1F60F251005A1768 /* ConfirmSend */ = {
@@ -2768,7 +2768,7 @@
 				836A9D621F6233AE00B5EB55 /* Contact */,
 				836A9D751F62555300B5EB55 /* Feedback */,
 				836A9D681F6237E100B5EB55 /* Page */,
-				8319C5BA1F60ED80005A1768 /* Register */,
+				8319C5BA1F60ED80005A1768 /* User */,
 				835718841F21A6A400DE5E25 /* RequestReply */,
 				83CD58531F25914200A9FE1A /* Routing */,
 				835718871F21A79100DE5E25 /* Token */,
@@ -4203,7 +4203,7 @@
 				8329DF5A1F34117200D542FF /* UIViewController+Navigation.swift in Sources */,
 				8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */,
 				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
-				8319C5BC1F60EDAE005A1768 /* RNSRegisterPayload.swift in Sources */,
+				8319C5BC1F60EDAE005A1768 /* RNSUserPayload.swift in Sources */,
 				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,
 				832E4B991F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
 				831E425B1F4687070016C7D3 /* RNSOneBtnAlert.swift in Sources */,

@@ -15,7 +15,7 @@ class RNSLoginViewController: UIViewController {
     @IBOutlet weak var passwordField: STPasswordField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var item: RNSRegisterPayload?
+    var item: RNSUserPayload?
     
     lazy var fields:[RNSTextField] = {
         return [self.loginField, self.passwordField]

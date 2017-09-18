@@ -10,7 +10,7 @@ import UIKit
 
 class RNSParoleContainerController: STContainerViewController {
 
-    var item: RNSRegisterPayload?
+    var item: RNSUserPayload?
     
     var containerViewController: RNSParoleViewController? {
         return (enterViewController as? RNSParoleViewController)
@@ -44,7 +44,7 @@ class RNSParoleContainerController: STContainerViewController {
         actionComplete(item)
     }
     
-    func actionComplete(_ item: RNSRegisterPayload?) {
+    func actionComplete(_ item: RNSUserPayload?) {
         
     }
   

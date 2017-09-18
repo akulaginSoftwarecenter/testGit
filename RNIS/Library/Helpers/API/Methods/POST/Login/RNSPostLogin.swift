@@ -20,7 +20,7 @@ class RNSPostLogin: RNSRequest {
     var complete: EmptyBlock?
     var failure: AliasStringBlock?
     
-    typealias AliasModel = RNSRequestReply<RNSRegisterPayload,RNSLoginError>
+    typealias AliasModel = RNSRequestReply<RNSUserPayload,RNSLoginError>
     
     @discardableResult convenience init(_ login: String?, password: String?, complete: EmptyBlock?, failure: AliasStringBlock?) {
         self.init()

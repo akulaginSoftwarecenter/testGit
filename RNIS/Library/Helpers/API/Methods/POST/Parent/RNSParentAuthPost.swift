@@ -14,11 +14,11 @@ class RNSParentAuthPost: RNSRequest {
         return .post
     }
     
-    var item: RNSRegisterPayload?
+    var item: RNSUserPayload?
     var failure: AliasStringBlock?
     var complete: AliasRegisterPayloadBlock?
      
-    @discardableResult convenience init(_ item: RNSRegisterPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
+    @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock?) {
         self.init()
         
         self.item = item

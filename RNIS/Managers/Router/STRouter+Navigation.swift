@@ -25,7 +25,7 @@ extension STRouter {
         RNSMenuViewController.initialController.pushAnimated()
     }
     
-    static func showLogin(_ item: RNSRegisterPayload? = nil) {
+    static func showLogin(_ item: RNSUserPayload? = nil) {
         clearNav()
         let vc = RNSLoginViewController.controller as? RNSLoginViewController
         vc?.item = item

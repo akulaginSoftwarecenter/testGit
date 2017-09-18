@@ -14,7 +14,7 @@ class RNSRecoveryPhoneController: RNSPhoneContrainerController {
         return .recovery
     }
 
-    override func actionComplete(_ item: RNSRegisterPayload?) {
+    override func actionComplete(_ item: RNSUserPayload?) {
         RNSPostConfirmSend(item, complete: {
             RNSRecoveryCodeController.initController($0)?.pushAnimatedImageBoard()
         }, failure: {[weak self] item in

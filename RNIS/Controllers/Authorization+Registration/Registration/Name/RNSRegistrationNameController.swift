@@ -14,9 +14,9 @@ class RNSRegistrationNameController: UIViewController {
     @IBOutlet var coverView: RNSLoginView!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var item: RNSRegisterPayload?
+    var item: RNSUserPayload?
     
-    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+    static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRegistrationNameController.initialController as? RNSRegistrationNameController
         vc?.item = item
         return vc

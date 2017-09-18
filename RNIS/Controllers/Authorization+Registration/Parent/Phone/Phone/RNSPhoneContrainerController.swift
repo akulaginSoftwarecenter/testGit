@@ -48,11 +48,11 @@ class RNSPhoneContrainerController: STContainerViewController {
     }
     
     override func actionNext() {
-        let item = RNSRegisterPayload(phone: "+7" + (phoneText ?? ""))
+        let item = RNSUserPayload(phone: "+7" + (phoneText ?? ""))
         actionComplete(item)
     }
     
-    func actionComplete(_ item: RNSRegisterPayload?) {
+    func actionComplete(_ item: RNSUserPayload?) {
 
     }
     

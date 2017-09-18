@@ -10,7 +10,7 @@ import UIKit
 
 class RNSRecoveryCodeController: RNSCodeContainerController {
     
-    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+    static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRecoveryCodeController.controller as? RNSRecoveryCodeController
         vc?.item = item
         return vc
@@ -20,7 +20,7 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
         return .recovery
     }
     
-    override func actionComplete(_ item: RNSRegisterPayload?) {
+    override func actionComplete(_ item: RNSUserPayload?) {
         RNSRecoveryParoleController.initController(item)?.pushAnimatedImageBoard()
     }
 }

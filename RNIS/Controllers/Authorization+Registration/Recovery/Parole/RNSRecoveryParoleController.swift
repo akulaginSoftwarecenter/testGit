@@ -10,7 +10,7 @@ import UIKit
 
 class RNSRecoveryParoleController: RNSParoleContainerController {
     
-    static func initController(_ item: RNSRegisterPayload?) -> UIViewController? {
+    static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRecoveryParoleController.controller as? RNSRecoveryParoleController
         vc?.item = item
         return vc
@@ -28,7 +28,7 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
         return "Сохранить"
     }
     
-    override func actionComplete(_ item: RNSRegisterPayload?) {
+    override func actionComplete(_ item: RNSUserPayload?) {
         RNSPostUpdate(item, complete: {
             STRouter.showLogin($0)
         }, failure: { [weak self] error in

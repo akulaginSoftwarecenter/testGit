@@ -1,5 +1,5 @@
 //
-//  RNSRegisterPayload.swift
+//  RNSUserPayload.swift
 //  RNIS
 //
 //  Created by Артем Кулагин on 07.09.17.
@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class RNSRegisterPayload: RNISMappableBase {
+class RNSUserPayload: RNISMappableBase {
     
     var is_phone_activated: Int?
     var phone: String?
@@ -47,8 +47,8 @@ class RNSRegisterPayload: RNISMappableBase {
         })
     }
     
-    static func itemUserDefault() -> RNSRegisterPayload {
-        let item = RNSRegisterPayload()
+    static func itemUserDefault() -> RNSUserPayload {
+        let item = RNSUserPayload()
         item.token = UserDefaults.token
         item.uuid = UserDefaults.uuid
         item.password = UserDefaults.password
