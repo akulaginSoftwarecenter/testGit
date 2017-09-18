@@ -11,7 +11,7 @@ import UIKit
 class RNSPostRegister: RNSParentAuthPost {
     
     override func parseReply(_ model: AliasPostRegister?) {
-        if let payload = model?.payload, payload.uuid != nil  {
+        if let payload = model?.payload?.user, payload.uuid != nil  {
             self.complete?(payload)
             return
         }

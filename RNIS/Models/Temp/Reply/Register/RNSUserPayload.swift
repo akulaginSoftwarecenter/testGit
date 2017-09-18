@@ -20,6 +20,8 @@ class RNSUserPayload: RNISMappableBase {
     
     var password: String?
     var old_password: String?
+    
+    var user: RNSUserPayload?
    
     convenience init(phone: String?) {
         self.init()
@@ -34,6 +36,7 @@ class RNSUserPayload: RNISMappableBase {
         phone_activation_code <- map["phone_activation_code"]
         name <- map["name"]
         token <- map["token"]
+        user <- map["user"]
         
         password <- map["password"]
         old_password <- map["old_password"]
