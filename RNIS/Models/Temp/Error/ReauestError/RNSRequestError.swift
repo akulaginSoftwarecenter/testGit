@@ -38,4 +38,8 @@ class RNSRequestError<T: Mappable>: RNISMappableBase {
         }
         return textError
     }
+    
+    var error: NSError  {
+       return NSError(domain: textError, code: 0, userInfo: [:])
+    }
 }

@@ -18,7 +18,9 @@ extension RNSBusStopManager {
     static func updateOperation() {
         
         var maxCount: Int?
-        if RNSMapManager.getZoomLevel <= 14 {
+        print("zoom max 14 current",RNSMapManager.getZoomLevel)
+        print("zoom ",mapView.lastMinCoord, mapView.lastCenterCoord)
+        if RNSMapManager.getZoomLevel < 14 {
             maxCount = 50
         }
         let uuids = RNSDataManager.bussStopsUuids(mapView.lastMinCoord, center: mapView.lastCenterCoord, maxCount: maxCount)

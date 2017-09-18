@@ -28,4 +28,8 @@ extension RNSMapParentController {
     @IBAction func userLocationAction(_ sender: Any) {
         RNSMapManager.startLocation()
     }
+    
+    @IBAction func actionTest(_ sender: Any) {
+        RNSMapManager.testRedPlace()
+    }
 }

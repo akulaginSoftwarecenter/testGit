@@ -127,16 +127,26 @@
                                     <constraint firstAttribute="height" constant="56" id="fWD-ex-YIf"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8S-DH-CIL">
+                                <rect key="frame" x="312" y="8" width="55" height="55"/>
+                                <state key="normal" image="mestopologenie"/>
+                                <connections>
+                                    <action selector="actionTest:" destination="WmS-dc-ejs" eventType="touchUpInside" id="PhS-jA-Rlr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="g7i-u4-M0q" firstAttribute="top" secondItem="AxG-am-Q4N" secondAttribute="bottom" constant="91" id="17Y-GM-lQ8"/>
                             <constraint firstAttribute="trailing" secondItem="f5X-SA-iTE" secondAttribute="trailing" constant="8" id="Bl7-Ig-eug"/>
                             <constraint firstItem="lsn-cY-i8Z" firstAttribute="leading" secondItem="6bh-fW-otG" secondAttribute="leading" constant="8" id="GBN-zm-WcR"/>
+                            <constraint firstItem="q8S-DH-CIL" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="top" constant="8" id="ISb-ZQ-ZEM"/>
                             <constraint firstItem="qQT-9R-h05" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="centerY" constant="3" id="Mvc-EE-7Rl"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="centerY" priority="750" constant="5" id="N3Y-OY-fe4"/>
                             <constraint firstItem="AxG-am-Q4N" firstAttribute="centerX" secondItem="KLT-DT-BPk" secondAttribute="centerX" id="Ngc-7n-4NX"/>
+                            <constraint firstItem="q8S-DH-CIL" firstAttribute="top" secondItem="5dG-yE-KFg" secondAttribute="bottom" constant="16" id="a2M-Zj-Dit"/>
                             <constraint firstItem="qQT-9R-h05" firstAttribute="leading" secondItem="6bh-fW-otG" secondAttribute="leading" constant="8" id="a70-8y-Acy"/>
+                            <constraint firstAttribute="trailing" secondItem="q8S-DH-CIL" secondAttribute="trailing" constant="8" id="dEx-V3-JvK"/>
                             <constraint firstItem="AxG-am-Q4N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KLT-DT-BPk" secondAttribute="bottom" constant="3" id="nmy-wf-aYS"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="centerY" secondItem="qQT-9R-h05" secondAttribute="centerY" constant="3" id="oFm-P4-gGM"/>
                             <constraint firstItem="lsn-cY-i8Z" firstAttribute="bottom" secondItem="6bh-fW-otG" secondAttribute="centerY" id="ptc-mA-Jsj"/>
@@ -148,6 +158,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="ptc-mA-Jsj"/>
+                                <exclude reference="a2M-Zj-Dit"/>
                                 <exclude reference="Mvc-EE-7Rl"/>
                                 <exclude reference="tQF-4e-Rgt"/>
                             </mask>

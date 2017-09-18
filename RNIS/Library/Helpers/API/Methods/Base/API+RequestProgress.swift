@@ -30,6 +30,10 @@ extension API {
     func cancel() {
         preconditionFailure("Concrete API object should override cancel method like 'alamofireRequest?.cancel()'")
     }
+    
+    var isShowLogReply: Bool {
+        return showLogApi
+    }
 
     /**
      Return Reply
@@ -41,7 +45,7 @@ extension API {
         //        if (classForParsingReply != nil) {
         //            classForParsingReply!()
         //        }
-        if showLogApi {
+        if isShowLogReply {
             print("apiDidReturnReply",reply)
         }
         apiDidReturnReply(parsedReply, source: reply)

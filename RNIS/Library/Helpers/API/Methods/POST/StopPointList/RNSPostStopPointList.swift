@@ -13,60 +13,46 @@ class RNSPostStopPointList: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post
     }
-    /*
-    var complete: AliasComplete?
-    var text: String?
     
+    typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
     
-    typealias AliasPayload = RNSFeedbackPayload
-    typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
-    typealias AliasComplete = (AliasPayload?) -> ()
-    
-    @discardableResult convenience init(_ text: String?, complete: AliasComplete?) {
-        self.init()
-        
-        self.text = text
-        self.complete = complete
-        
-        STRouter.showLoader()
-        sendRequestWithCompletion {[weak self] (object, error, inot) in
-            STRouter.removeLoader()
-            self?.parseReply(AliasReply(reply: object))
-        }
+    override var payload: AliasDictionary {
+        return ["left": 55.905883,
+                "top": 37.849311,
+                "right": 55.573518,
+                "bottom": 37.363166]
     }
- 
-    func parseReply(_ model: AliasReply?) {
-        if  model?.success ?? false {
-            complete?(model?.payload)
+    
+    override var isShowLogReply: Bool {
+        return false
+    }
+    
+    override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
+        parseReply(AliasReply(reply: reply), source: source)
+    }
+    
+    func parseReply(_ model: AliasReply?, source: AnyObject) {
+        if  model?.success ?? false,
+            let items = model?.payload?.items {
+            print("RNSPostStopPointList",items.count)
+            CounterTime.endTimer()
+            RNSDataManager.parseBusStopItemsAsync(items) { (stops) in
+                print("stops",stops.count)
+                super.apiDidReturnReply(stops as AnyObject, source: source)
+            }
             return
         }
         parseError(model)
     }
     
     func parseError(_ model: AliasReply?) {
-        guard let error = model?.errors?.first?.textError else {
+        guard let item = model?.errors?.first else {
             return
         }
+        let error = "Ошибка загрузки остановок. " + item.textError
         STRouter.showAlertOk(error)
+        super.apiDidFailWithError(item.error)
     }
-    */
-    
-    override var payload: AliasDictionary {
-         return ["left": 0,
-                "bottom": 0,
-                "right": 0,
-                "top": 0]
-    }
-    
-    
-    override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        guard let dict = reply as? AliasDictionary,
-            let items = dict["items"] as? [AliasDictionary] else {
-                superError()
-                return
-        }
-        
-   }
     
     override var subject: String {
         return "com.rnis.mobile.action.stop_point.list"

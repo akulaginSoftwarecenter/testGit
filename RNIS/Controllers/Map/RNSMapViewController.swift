@@ -20,11 +20,28 @@ class RNSMapViewController: UIViewController {
      */
     var route: PGPolyline?
     
+    lazy var loaderView:LoaderView = {
+        let view = LoaderView()
+        view.isUserInteractionEnabled = false
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
+        loadData()
+    }
+    
+    func loadData() {
+        loaderView.showInView(self.view)
+        CounterTime.startTimer()
+        RNSPostStopPointList().sendRequestWithCompletion {[weak self] (reply, error, _) in
+            CounterTime.endTimer()
+            self?.busStopUpdate()
+            self?.loaderView.remove()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

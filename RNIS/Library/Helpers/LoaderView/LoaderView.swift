@@ -14,6 +14,7 @@ class LoaderView: BaseViewWithXIBInit {
         
         self.delay = delay
     }
+    @IBOutlet weak var labelText: UILabel!
     
     var delay: TimeInterval = 0
     

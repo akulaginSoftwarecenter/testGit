@@ -481,6 +481,7 @@
 		83D1558F1F4BCF8400150144 /* RNSDotsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1558E1F4BCF8400150144 /* RNSDotsName.swift */; };
 		83D155911F4BCF9C00150144 /* RNSDotsName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D155901F4BCF9C00150144 /* RNSDotsName.xib */; };
 		83D155951F4BD11000150144 /* RNSArrowLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D155941F4BD11000150144 /* RNSArrowLeft.swift */; };
+		83D370051F6F733B008F6A0F /* RNSItemsPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D370041F6F733B008F6A0F /* RNSItemsPayload.swift */; };
 		83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B701F4D484500246DFA /* RNSRoadBus.swift */; };
 		83D62B731F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */; };
 		83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */; };
@@ -972,6 +973,7 @@
 		83D1558E1F4BCF8400150144 /* RNSDotsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDotsName.swift; path = Views/Map/PageRoute/DotsName/RNSDotsName.swift; sourceTree = "<group>"; };
 		83D155901F4BCF9C00150144 /* RNSDotsName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSDotsName.xib; path = Views/Map/PageRoute/DotsName/RNSDotsName.xib; sourceTree = "<group>"; };
 		83D155941F4BD11000150144 /* RNSArrowLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSArrowLeft.swift; path = Views/Others/ArrowLeft/RNSArrowLeft.swift; sourceTree = "<group>"; };
+		83D370041F6F733B008F6A0F /* RNSItemsPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSItemsPayload.swift; path = Models/Temp/Reply/StopPointList/RNSItemsPayload.swift; sourceTree = "<group>"; };
 		83D62B701F4D484500246DFA /* RNSRoadBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadBus.swift; path = Views/Polylines/RoadBus/RNSRoadBus.swift; sourceTree = "<group>"; };
 		83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadActivate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadActivate.swift"; sourceTree = "<group>"; };
 		83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackMoveButton.swift; path = Views/Buttons/BlackMoveButton/RNSBlackMoveButton.swift; sourceTree = "<group>"; };
@@ -1303,18 +1305,18 @@
 			isa = PBXGroup;
 			children = (
 				839875C01F612F5D00B88F0B /* Parent */,
-				8319C5B11F60DFBE005A1768 /* Register */,
+				836A9D5F1F62328A00B5EB55 /* СontactList */,
+				836A9D7B1F625F7400B5EB55 /* Complaint */,
 				8319C5C01F60F657005A1768 /* ConfirmCheck */,
 				8319C5BD1F60F251005A1768 /* ConfirmSend */,
-				839875BB1F60FD6A00B88F0B /* Update */,
-				836A9D651F62370B00B5EB55 /* MobilePageGet */,
-				836A9D5F1F62328A00B5EB55 /* СontactList */,
 				836A9D781F62570A00B5EB55 /* Feedback */,
-				836A9D7B1F625F7400B5EB55 /* Complaint */,
-				836A9D7E1F627E2700B5EB55 /* StopPointList */,
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
+				836A9D651F62370B00B5EB55 /* MobilePageGet */,
+				8319C5B11F60DFBE005A1768 /* Register */,
 				83CD58491F25870900A9FE1A /* Routing */,
+				836A9D7E1F627E2700B5EB55 /* StopPointList */,
+				839875BB1F60FD6A00B88F0B /* Update */,
 			);
 			name = POST;
 			sourceTree = "<group>";
@@ -2772,6 +2774,7 @@
 				835718841F21A6A400DE5E25 /* RequestReply */,
 				83CD58531F25914200A9FE1A /* Routing */,
 				835718871F21A79100DE5E25 /* Token */,
+				83D370031F6F72D5008F6A0F /* Items */,
 			);
 			name = Reply;
 			sourceTree = "<group>";
@@ -3721,6 +3724,14 @@
 			name = ArrowLeft;
 			sourceTree = "<group>";
 		};
+		83D370031F6F72D5008F6A0F /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				83D370041F6F733B008F6A0F /* RNSItemsPayload.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
 		83D62B6F1F4D47F200246DFA /* RoadBus */ = {
 			isa = PBXGroup;
 			children = (
@@ -4301,6 +4312,7 @@
 				836D80BD1F1DB38D00FEE390 /* RNIS.xcdatamodeld in Sources */,
 				836E69411F5E5428003D9D46 /* RNSBusTableModel.swift in Sources */,
 				838EA0481F54260C00E9BF20 /* RNSPinVariantBus.swift in Sources */,
+				83D370051F6F733B008F6A0F /* RNSItemsPayload.swift in Sources */,
 				836A9D6D1F62410C00B5EB55 /* RNSContactItem.swift in Sources */,
 				838CE9311F3D9E0800C10FBA /* RNSPinItem.swift in Sources */,
 				836D80EB1F1DD5AB00FEE390 /* BaseViewWithXIBInit.swift in Sources */,

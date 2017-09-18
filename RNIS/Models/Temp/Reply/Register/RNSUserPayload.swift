@@ -17,6 +17,7 @@ class RNSUserPayload: RNISMappableBase {
     var phone_activation_code: String?
     var name: String?
     var token: String?
+    var mobile_token: String?
     
     var password: String?
     var old_password: String?
@@ -37,6 +38,7 @@ class RNSUserPayload: RNISMappableBase {
         name <- map["name"]
         token <- map["token"]
         user <- map["user"]
+        mobile_token <- map["mobile_token"]
         
         password <- map["password"]
         old_password <- map["old_password"]
@@ -52,10 +54,9 @@ class RNSUserPayload: RNISMappableBase {
     
     static func itemUserDefault() -> RNSUserPayload {
         let item = RNSUserPayload()
-        item.token = UserDefaults.token
+        item.mobile_token = UserDefaults.token
         item.uuid = UserDefaults.uuid
-        item.password = UserDefaults.password
-        item.old_password = UserDefaults.password
+        item.phone = UserDefaults.login
         return item
     }
 }

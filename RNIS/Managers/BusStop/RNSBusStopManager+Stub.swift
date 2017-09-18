@@ -11,7 +11,7 @@ import Foundation
 extension RNSBusStopManager {
     
     static func prepareStubBusStop() {
-        removeOldAll()
+        //removeOldAll()
         RNSDataManager.createStubBusStopIfNeed()
         showPinAll()
     }
