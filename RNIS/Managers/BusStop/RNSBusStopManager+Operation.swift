@@ -18,8 +18,6 @@ extension RNSBusStopManager {
     static func updateOperation() {
         
         var maxCount: Int?
-        print("zoom max 14 current",RNSMapManager.getZoomLevel)
-        print("zoom ",mapView.lastMinCoord, mapView.lastCenterCoord)
         if RNSMapManager.getZoomLevel < 14 {
             maxCount = 50
         }
@@ -30,7 +28,7 @@ extension RNSBusStopManager {
             removeOld(removeUuids)
             showPinsUuids(addUuids)
             showedUuids = showedItems.flatMap{$0.uuid}
-            print("showedStops",showedUuids.count)
+            print("showedStops",showedUuids.count, RNSMapManager.getZoomLevel)
         }
     }
     
