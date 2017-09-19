@@ -18,11 +18,21 @@ class RNSChangePasswordController: UIViewController {
     
     @IBOutlet var fields: [STPasswordField]!
     
+    var item: RNSUserPayload?
+    
+    func loadData() {
+        STRouter.showLoader()
+        RNSPostUserGet {[weak self] (reply, error, _) in
+            self?.item = reply as? RNSUserPayload
+            STRouter.removeLoader()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadData()
         prepareCoverView()
-
     }
     
     func prepareCoverView() {
@@ -31,21 +41,45 @@ class RNSChangePasswordController: UIViewController {
         }
     }
     
+    var passwordOld: String? {
+        return passwordOldField.text
+    }
+    
     func savePressed() {
         if let error = fields.checkValidFields {
-            errorLabel.text = error
+            prepareError(error)
+            return
+        }
+        
+        if passwordOld != UserDefaults.password {
+            prepareError("Не правильный старый пароль")
             return
         }
         
         if passwordOneField.text !=  passwordTwoField.text {
-            errorLabel.text = "Пароли не совпадают"
+            prepareError("Пароли не совпадают")
             passwordOneField.setStateNotValid()
             passwordTwoField.setStateNotValid()
             return
         }
         
         clearError()
-        pop()
+        actionNext()
+    }
+    
+    func actionNext() {
+        let newPassword = passwordTwoField.text
+        item?.password = newPassword
+        RNSPostUpdate(item, complete: { [weak self] item in
+            UserDefaults.setPassword(newPassword)
+            self?.pop()
+        }, failure: { [weak self] error in
+            self?.prepareError(error)
+        })
+    }
+    
+    func prepareError(_ error: String?) {
+        errorLabel.text = error
     }
     
     func pop() {
@@ -56,7 +90,7 @@ class RNSChangePasswordController: UIViewController {
     
     func clearError() {
         fields.clearError()
-        errorLabel.text = nil
+        prepareError(nil)
     }
     
     override class var storyboardName: String {
