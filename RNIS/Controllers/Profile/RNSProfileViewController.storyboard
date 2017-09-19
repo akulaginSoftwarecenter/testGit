@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
         <array key="mainFont.otf">
             <string>Cffazmiakhaddpiofffvylaqekz</string>
         </array>
@@ -62,15 +65,22 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Как вас зовут?"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Имя пользователя"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Tda-Cz-cXr" id="3Ec-Ay-klE"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-sp-FVm" customClass="RNSNameFieldLeft" customModule="RNIS" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHl-sp-FVm" customClass="RNSEmailField" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="363" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Электронная почта"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Tda-Cz-cXr" id="4IQ-AW-K3c"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="89S-Yo-PlB" customClass="RNSPhoneField" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="446" width="315" height="30"/>
@@ -121,10 +131,17 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Выйти из аккаунта"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvH-Pi-c86">
+                                <rect key="frame" x="30" y="556.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BLA-Go-8UB" secondAttribute="trailing" constant="30" id="2uH-jR-1Ps"/>
+                            <constraint firstItem="AvH-Pi-c86" firstAttribute="top" secondItem="qxU-QA-nnz" secondAttribute="bottom" constant="10" id="4Ch-FW-icZ"/>
                             <constraint firstAttribute="trailing" secondItem="xHl-sp-FVm" secondAttribute="trailing" constant="30" id="6iA-xA-hih"/>
                             <constraint firstItem="xHl-sp-FVm" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="8gF-2S-tok"/>
                             <constraint firstItem="gW3-PU-jT5" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="Dev-SM-DJx"/>
@@ -132,6 +149,7 @@
                             <constraint firstAttribute="trailing" secondItem="gW3-PU-jT5" secondAttribute="trailing" constant="30" id="Fjv-6H-ihR"/>
                             <constraint firstItem="He8-hz-3g9" firstAttribute="top" secondItem="MPX-75-nWd" secondAttribute="top" constant="84" id="JTi-TP-j17"/>
                             <constraint firstItem="89S-Yo-PlB" firstAttribute="bottom" secondItem="xHl-sp-FVm" secondAttribute="bottom" constant="83" id="KpT-DH-l6S"/>
+                            <constraint firstAttribute="trailing" secondItem="AvH-Pi-c86" secondAttribute="trailing" constant="30" id="Nz9-dF-Vrt"/>
                             <constraint firstItem="pT7-5p-UAB" firstAttribute="top" secondItem="BLA-Go-8UB" secondAttribute="bottom" constant="24" id="QnR-of-7Io"/>
                             <constraint firstItem="qxU-QA-nnz" firstAttribute="top" secondItem="eQc-H9-pkS" secondAttribute="bottom" id="W5I-Cg-l3d"/>
                             <constraint firstItem="He8-hz-3g9" firstAttribute="centerX" secondItem="MPX-75-nWd" secondAttribute="centerX" id="a8D-y6-PcC"/>
@@ -147,6 +165,7 @@
                             <constraint firstAttribute="trailing" secondItem="qxU-QA-nnz" secondAttribute="trailing" constant="30" id="oiu-Fe-nzK"/>
                             <constraint firstAttribute="trailing" secondItem="eQc-H9-pkS" secondAttribute="trailing" constant="30" id="pRY-UQ-B8x"/>
                             <constraint firstItem="qxU-QA-nnz" firstAttribute="top" secondItem="89S-Yo-PlB" secondAttribute="bottom" constant="70" id="qK6-3p-82h"/>
+                            <constraint firstItem="AvH-Pi-c86" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="vDo-6Q-6f7"/>
                             <constraint firstAttribute="trailing" secondItem="89S-Yo-PlB" secondAttribute="trailing" constant="30" id="w53-vv-7jg"/>
                             <constraint firstAttribute="trailing" secondItem="rpT-QZ-9JN" secondAttribute="trailing" constant="30" id="xSN-MA-JaI"/>
                             <constraint firstItem="89S-Yo-PlB" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="xup-0D-1mF"/>
@@ -156,6 +175,7 @@
                     <connections>
                         <outlet property="blackButton" destination="BLA-Go-8UB" id="wJ5-eh-piY"/>
                         <outlet property="emailField" destination="xHl-sp-FVm" id="0Rc-ok-HVV"/>
+                        <outlet property="errorLabel" destination="AvH-Pi-c86" id="3wy-jL-xDp"/>
                         <outlet property="nameField" destination="gW3-PU-jT5" id="iur-Qh-jvy"/>
                         <outlet property="phoneField" destination="89S-Yo-PlB" id="ohd-zG-6Zh"/>
                     </connections>

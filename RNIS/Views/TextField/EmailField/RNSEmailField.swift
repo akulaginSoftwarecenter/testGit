@@ -14,6 +14,10 @@ class RNSEmailField: RNSTextField {
         return InputFieldsValidator.isValidEmail(text)
     }
     
+    override var errorText:String? {
+        return isValid ? nil : "Введите корректный email"
+    }
+    
     convenience init(email: String?) {
         self.init()
         text = email

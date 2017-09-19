@@ -21,10 +21,13 @@ class RNSChangeCodeController: RNSCodeContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
+        RNSMenuManager.leftMenuUpdate()
+        /*
         STRouter.pop(animated: false) {
             STRouter.pop(animated: false) {
                 STRouter.showAlertOk("Номер телефона успешно изменён")
             }
         }
+        */
     }
 }

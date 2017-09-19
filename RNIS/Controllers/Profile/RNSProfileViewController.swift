@@ -14,11 +14,13 @@ class RNSProfileViewController: UIViewController {
     @IBOutlet weak var emailField: RNSEmailField!
     @IBOutlet weak var phoneField: RNSPhoneField!
     @IBOutlet weak var blackButton: RNSBlackButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
-     override func viewDidLoad() {
+    var item: RNSUserPayload?
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+            
         prepareBlackButton()
     }
     
@@ -42,6 +44,7 @@ class RNSProfileViewController: UIViewController {
     }
     
     func updateUI(_ item: RNSUserPayload?) {
+        self.item = item
         nameField.text = item?.name
         phoneField.text = item?.formatPhone
         emailField.text = item?.email

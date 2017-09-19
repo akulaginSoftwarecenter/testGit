@@ -9,6 +9,9 @@
 import UIKit
 
 class RNSMenuManager: NSObject {
+    
+    static var handlerLeftMenuUpdate: EmptyBlock?
+    
     static let shared = RNSMenuManager()
     
     static var menuItems: [MenuItem] {
@@ -44,5 +47,9 @@ class RNSMenuManager: NSObject {
     
     static func showProfile() {
         showVC(shared.profileVC)
+    }
+    
+    static func leftMenuUpdate() {
+        RNSMenuManager.handlerLeftMenuUpdate?()
     }
 }

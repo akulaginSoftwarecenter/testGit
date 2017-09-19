@@ -312,6 +312,7 @@
 		837F71991F45369D00DEAA36 /* RNSPinParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71981F45369D00DEAA36 /* RNSPinParent.swift */; };
 		837F719B1F45415100DEAA36 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F719A1F45415100DEAA36 /* Array+Utils.swift */; };
 		838540C41F70CF9D00B30772 /* RNSPostUserGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */; };
+		838540C91F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */; };
 		8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */; };
 		8385DB431F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
@@ -820,6 +821,7 @@
 		837F71981F45369D00DEAA36 /* RNSPinParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinParent.swift; path = Views/OVerLays/Parent/RNSPinParent.swift; sourceTree = "<group>"; };
 		837F719A1F45415100DEAA36 /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utils.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+Utils.swift"; sourceTree = "<group>"; };
 		838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUserGet.swift; path = POST/UserGet/RNSPostUserGet.swift; sourceTree = "<group>"; };
+		838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Delegate.swift"; path = "Controllers/Profile/RNSProfileViewController+Delegate.swift"; sourceTree = "<group>"; };
 		8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Swipe.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Swipe.swift"; sourceTree = "<group>"; };
 		8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Action.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
@@ -3215,6 +3217,7 @@
 				836277C51F38044D009FB712 /* ChangePhone */,
 				839BCDFA1F32E66B00B5CA88 /* RNSProfileViewController.swift */,
 				837857F41F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift */,
+				838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */,
 				8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */,
 				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
 			);
@@ -4433,6 +4436,7 @@
 				836E91B11F58F987007CCF5A /* MenuTableViewCell.swift in Sources */,
 				835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */,
 				83AA6A5C1F5668C000B2139C /* ContactsInfoTableViewCell.swift in Sources */,
+				838540C91F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift in Sources */,
 				83B2E08C1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */,
 				83D155871F4BC83A00150144 /* RNSDotsBussView.swift in Sources */,
 				83B2E0941F1E139800FA92A4 /* Parser+KeyConversion.swift in Sources */,

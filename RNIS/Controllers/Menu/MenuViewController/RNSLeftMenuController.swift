@@ -25,6 +25,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
 
         prepareUI()
         loadData()
+        prepareHandlers() 
     }
     
     func prepareUI() {
@@ -47,6 +48,12 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     func updateUI(_ item: RNSUserPayload?) {
         nameLabel.text = item?.name
         phoneLabel.text = item?.formatPhone
+    }
+    
+    func prepareHandlers() {
+        RNSMenuManager.handlerLeftMenuUpdate = { [weak self] in
+            self?.loadData()
+        }
     }
     
     override class var storyboardName: String {
