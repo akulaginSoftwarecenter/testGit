@@ -51,11 +51,6 @@ class RNSChangePasswordController: UIViewController {
             return
         }
         
-        if passwordOld != UserDefaults.password {
-            prepareError("Не правильный старый пароль")
-            return
-        }
-        
         if passwordOneField.text !=  passwordTwoField.text {
             prepareError("Пароли не совпадают")
             passwordOneField.setStateNotValid()
@@ -68,10 +63,10 @@ class RNSChangePasswordController: UIViewController {
     }
     
     func actionNext() {
-        let newPassword = passwordTwoField.text
-        item?.password = newPassword
+        item?.password = passwordTwoField.text
+        item?.old_password = passwordOld
+        
         RNSPostUpdate(item, complete: { [weak self] item in
-            UserDefaults.setPassword(newPassword)
             self?.pop()
         }, failure: { [weak self] error in
             self?.prepareError(error)
