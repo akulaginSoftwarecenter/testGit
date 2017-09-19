@@ -21,4 +21,14 @@ extension RNSLeftMenuController {
     @IBAction func testBuss(_ sender: Any) {
         RNSBusManager.prepareStubAsunc()
     }
+     
+    @IBAction func actionShare(_ sender: Any) {
+        let text = "Добро пожаловать в РНИС!"
+        let vc = UIActivityViewController(activityItems: [text], applicationActivities: [])
+        if vc.responds(to: #selector(getter: UIActivityViewController.popoverPresentationController)) {
+            vc.popoverPresentationController?.sourceView = self.view
+        }
+        vc.excludedActivityTypes = [.postToFacebook,.postToTwitter,.assignToContact]
+        STRouter.present(vc)
+    }
 }

@@ -313,6 +313,7 @@
 		837F719B1F45415100DEAA36 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F719A1F45415100DEAA36 /* Array+Utils.swift */; };
 		838540C41F70CF9D00B30772 /* RNSPostUserGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */; };
 		838540C91F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */; };
+		838540CB1F71173900B30772 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838540CA1F71173900B30772 /* Social.framework */; };
 		8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */; };
 		8385DB431F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
@@ -822,6 +823,7 @@
 		837F719A1F45415100DEAA36 /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utils.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+Utils.swift"; sourceTree = "<group>"; };
 		838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUserGet.swift; path = POST/UserGet/RNSPostUserGet.swift; sourceTree = "<group>"; };
 		838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Delegate.swift"; path = "Controllers/Profile/RNSProfileViewController+Delegate.swift"; sourceTree = "<group>"; };
+		838540CA1F71173900B30772 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Swipe.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Swipe.swift"; sourceTree = "<group>"; };
 		8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Action.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1019,6 +1021,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838540CB1F71173900B30772 /* Social.framework in Frameworks */,
 				836D80CE1F1DBF2B00FEE390 /* OpenAL.framework in Frameworks */,
 				AFCB50069DBF94697662C88D /* Pods_RNIS.framework in Frameworks */,
 				836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */,
@@ -1038,6 +1041,7 @@
 		41FEA048396AAE9F5C6E5CE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				838540CA1F71173900B30772 /* Social.framework */,
 				836D80CC1F1DBE9300FEE390 /* CoreGraphics.framework */,
 				836D80CA1F1DBE7C00FEE390 /* QuartzCore.framework */,
 				836D80C71F1DBB9600FEE390 /* OpenGLES.framework */,
