@@ -15,10 +15,16 @@ class RNSProfileViewController: UIViewController {
     @IBOutlet weak var phoneField: RNSPhoneField!
     @IBOutlet weak var blackButton: RNSBlackButton!
     
+    lazy var loaderView:LoaderView = {
+        let view = LoaderView()
+        view.labelText.text = "Обновление реквизитов"
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareStubText()
+        loadData()
         prepareBlackButton()
     }
     
@@ -28,11 +34,18 @@ class RNSProfileViewController: UIViewController {
         }
     }
     
-    func prepareStubText() {
-        nameField.text = "Артем Кулагин"
-        emailField.text = "akula_84@mail.ru"
-        phoneField.text = "89136298659"
-        phoneField.textFieldDidChange()
+    func loadData() {
+        loaderView.showInView(self.view)
+        RNSPostUserGet {[weak self] (reply, error, _) in
+            self?.updateUI(reply as? RNSUserPayload)
+            self?.loaderView.remove()
+        }
+    }
+    
+    func updateUI(_ item: RNSUserPayload?) {
+        nameField.text = item?.name
+        phoneField.text = item?.formatPhone
+        emailField.text = item?.email
     }
     
     override class var storyboardName: String {

@@ -46,7 +46,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     
     func updateUI(_ item: RNSUserPayload?) {
         nameLabel.text = item?.name
-        phoneLabel.text =  InputFieldsValidator.format(item?.phone).text
+        phoneLabel.text = item?.formatPhone
     }
     
     override class var storyboardName: String {

@@ -19,6 +19,7 @@ class RNSUserPayload: RNISMappableBase {
     var token: String?
     var mobile_token: String?
     var avatar: String?
+    var email: String?
     
     var password: String?
     var old_password: String?
@@ -41,6 +42,7 @@ class RNSUserPayload: RNISMappableBase {
         user <- map["user"]
         mobile_token <- map["mobile_token"]
         avatar <- map["avatar"]
+        email <- map["email"]
         
         password <- map["password"]
         old_password <- map["old_password"]
@@ -60,5 +62,12 @@ class RNSUserPayload: RNISMappableBase {
         item.uuid = UserDefaults.uuid
         item.phone = UserDefaults.login
         return item
+    }
+    
+    var formatPhone: String? {
+        guard let phone = phone else {
+            return nil
+        }
+        return InputFieldsValidator.format(phone).text
     }
 }
