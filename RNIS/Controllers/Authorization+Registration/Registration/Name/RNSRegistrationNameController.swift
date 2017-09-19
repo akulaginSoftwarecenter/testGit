@@ -8,6 +8,9 @@
 
 import UIKit
 
+import Alamofire
+import ObjectMapper
+
 class RNSRegistrationNameController: UIViewController {
     
     @IBOutlet weak var nameField: RNSTextField!
@@ -46,14 +49,18 @@ class RNSRegistrationNameController: UIViewController {
     
     func send() {
         item?.name = nameField.text
-        item?.avatar = photo.imageData
-        
+        /*
+        if let imageData = photo.imageData {
+           item?.avatar = imageData
+        }
+         */
         RNSPostUpdate(item, complete: {
             STRouter.showLogin($0)
             }, failure: { [weak self] error in
                 self?.prepareError(error)
         })
     }
+
     
     func prepareError(_ error: String?) {
         errorLabel.text = error

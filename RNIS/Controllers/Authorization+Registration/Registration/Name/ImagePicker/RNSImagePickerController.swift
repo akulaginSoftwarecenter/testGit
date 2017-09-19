@@ -26,8 +26,11 @@ class RNSImagePickerController: UIImagePickerController, UIImagePickerController
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        complete?(image)
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            complete?(image)
+        } else{
+            print("Something went wrong")
+        }
         dismiss()
     }
     

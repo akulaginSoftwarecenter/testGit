@@ -77,6 +77,7 @@ class AlamofireAPI: API {
                 self.requestDidReturnReply(json as AnyObject)
             } catch {
                 let string = String(data: response.data!, encoding: String.Encoding.utf8) ?? ""
+                print("alamofireRequest.response",string)
                 self.apiDidFailWithError(NSError(domain: "", code: 1000, userInfo: ["NSLocalizedDescriptionKey": string]))
             }
             self.apiDidEnd()

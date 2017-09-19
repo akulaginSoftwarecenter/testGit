@@ -42,10 +42,13 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
     }
     
     var imageData: String? {
+        /*
         guard let image = imageView.image else {
             return nil
         }
-        let imageData = UIImageJPEGRepresentation(image, 0.1)!
+        */
+        let imageData = UIImageJPEGRepresentation(#imageLiteral(resourceName: "EmptyPhoto"), 0.1)!
+       // return imageData.base64EncodedString()
         return imageData.base64EncodedString()
     }
     
