@@ -41,7 +41,7 @@ extension RNSScrollShowContainer {
             return
         }
         var rect = scrollView.convert(frame, to: STRouter.rootView)
-        rect = CGRect(x: rect.origin.x, y: UIScreen.height + rect.origin.y, width: rect.width, height: rect.height)
+        rect = CGRect(x: rect.origin.x, y: UIScreen.height + rect.origin.y, width: rect.width, height: rect.height + contentInsetBottom)
         handlerRect?(rect)
         prepareCoverBotton(rect)
         (view as? RNSTouchView)?.rect = rect
