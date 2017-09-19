@@ -22,7 +22,32 @@ class RNSChangePhoneController: RNSPhoneContrainerController {
         return "Назад"
     }
     
+    var item: RNSUserPayload?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadData()
+    }
+    
+    func loadData() {
+        STRouter.showLoader()
+        RNSPostUserGet {[weak self] (reply, error, _) in
+            self?.item = reply as? RNSUserPayload
+            STRouter.removeLoader()
+        }
+    }
+    
     override func actionNext() {
-        RNSChangeCodeController.initController(phoneText)?.pushAnimatedImageScroll()
+        item?.new_phone = "+7" + (phoneText ?? "")
+        RNSPostUpdate(item, complete: {
+            RNSChangeCodeController.initController($0)?.pushAnimatedImageBoard()
+        }, failure: { [weak self] error in
+            self?.prepareError(error)
+        })
+    }
+    
+    override func prepareError(_ error: String?) {
+        containerViewController?.errorLabel.text = error
     }
 }

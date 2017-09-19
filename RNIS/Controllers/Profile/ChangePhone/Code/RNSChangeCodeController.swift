@@ -10,9 +10,9 @@ import UIKit
 
 class RNSChangeCodeController: RNSCodeContainerController {
     
-    static func initController(_ phone: String?) -> UIViewController? {
-        let vc = RNSChangeCodeController.controller as? RNSCodeContainerController
-        //vc?.phone = phone
+    static func initController(_ item: RNSUserPayload?) -> UIViewController? {
+        let vc = RNSChangeCodeController.controller as? RNSChangeCodeController
+        vc?.item = item
         return vc
     }
     
@@ -20,15 +20,11 @@ class RNSChangeCodeController: RNSCodeContainerController {
         return .change
     }
     
-    override func actionNext() {
+    override func actionComplete(_ item: RNSUserPayload?) {
         STRouter.pop(animated: false) {
             STRouter.pop(animated: false) {
                 STRouter.showAlertOk("Номер телефона успешно изменён")
             }
         }
-    }
-    
-    override func repeatCodeAction() {
-        STRouter.showAlertRepeatCode()
     }
 }

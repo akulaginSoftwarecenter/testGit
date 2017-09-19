@@ -15,16 +15,10 @@ class RNSProfileViewController: UIViewController {
     @IBOutlet weak var phoneField: RNSPhoneField!
     @IBOutlet weak var blackButton: RNSBlackButton!
     
-    lazy var loaderView:LoaderView = {
-        let view = LoaderView()
-        view.labelText.text = "Обновление реквизитов"
-        return view
-    }()
-    
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadData()
+        
         prepareBlackButton()
     }
     
@@ -34,11 +28,16 @@ class RNSProfileViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
+    
     func loadData() {
-        loaderView.showInView(self.view)
+        STRouter.showLoader()
         RNSPostUserGet {[weak self] (reply, error, _) in
             self?.updateUI(reply as? RNSUserPayload)
-            self?.loaderView.remove()
+            STRouter.removeLoader()
         }
     }
     
