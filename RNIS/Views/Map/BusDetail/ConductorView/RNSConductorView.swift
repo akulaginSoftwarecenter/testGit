@@ -22,8 +22,8 @@ class RNSConductorView: BaseViewWithXIBInit {
     }
     
     func updateUI() {
-        driverLabel.text = item?.driver
-        сonductorLabel.text = item?.check_taker
+        driverLabel.text = "Водитель: " + (item?.driver ?? "")
+        сonductorLabel.text = "Кондуктор: " + (item?.check_taker ?? "")
     }
     
     @IBAction func actionButton(_ sender: Any) {
