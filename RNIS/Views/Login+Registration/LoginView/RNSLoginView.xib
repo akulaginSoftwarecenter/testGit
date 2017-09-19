@@ -24,11 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="E1e-mt-v4h">
-                    <rect key="frame" x="111" y="66" width="152" height="44"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LK6-E7-SZX">
-                    <rect key="frame" x="146.5" y="147" width="82.5" height="29.5"/>
+                    <rect key="frame" x="146" y="141" width="82.5" height="29.5"/>
                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="29"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -40,21 +37,24 @@
                         <constraint firstAttribute="height" constant="63" id="4ZX-Mv-pid"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoMoscow" translatesAutoresizingMaskIntoConstraints="NO" id="ZWc-fX-rH3">
+                    <rect key="frame" x="70.5" y="61" width="233" height="52"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="E1e-mt-v4h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6J9-8f-w83"/>
-                <constraint firstItem="E1e-mt-v4h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="A8c-Nr-Dv4"/>
                 <constraint firstItem="brh-YF-4gx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="R0h-9b-p95"/>
                 <constraint firstAttribute="trailing" secondItem="brh-YF-4gx" secondAttribute="trailing" constant="30" id="XFd-SR-fxt"/>
                 <constraint firstAttribute="bottom" secondItem="brh-YF-4gx" secondAttribute="bottom" constant="65" id="bIf-Ot-L18"/>
-                <constraint firstItem="LK6-E7-SZX" firstAttribute="top" secondItem="E1e-mt-v4h" secondAttribute="bottom" constant="37" id="fHT-Fb-8Vq"/>
-                <constraint firstItem="LK6-E7-SZX" firstAttribute="centerX" secondItem="E1e-mt-v4h" secondAttribute="centerX" id="gfF-hv-Fdl"/>
+                <constraint firstItem="ZWc-fX-rH3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ezT-Ov-mp5"/>
+                <constraint firstItem="LK6-E7-SZX" firstAttribute="top" secondItem="ZWc-fX-rH3" secondAttribute="bottom" constant="28" id="hoa-v6-231"/>
+                <constraint firstItem="LK6-E7-SZX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jNd-3B-Ilb"/>
+                <constraint firstItem="ZWc-fX-rH3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="61" id="jur-hW-LVV"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Logo" width="152" height="44"/>
+        <image name="LogoMoscow" width="233" height="52"/>
     </resources>
 </document>
