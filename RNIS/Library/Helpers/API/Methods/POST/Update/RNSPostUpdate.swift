@@ -20,11 +20,7 @@ class RNSPostUpdate: RNSParentAuthPost {
     }
     
     override var headers: AliasDictionary {
-        var headers = super.headers
-        if let token = UserDefaults.token {
-            headers["mobile_token"] = "\(token)"
-        }
-        return headers
+        return super.headers.merged(with: Utils.mobileToken)
     }
     
     override var subject: String {

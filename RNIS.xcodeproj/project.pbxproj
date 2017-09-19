@@ -311,6 +311,7 @@
 		837F71971F45365100DEAA36 /* RNSPinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71961F45365100DEAA36 /* RNSPinAddress.swift */; };
 		837F71991F45369D00DEAA36 /* RNSPinParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71981F45369D00DEAA36 /* RNSPinParent.swift */; };
 		837F719B1F45415100DEAA36 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F719A1F45415100DEAA36 /* Array+Utils.swift */; };
+		838540C41F70CF9D00B30772 /* RNSPostUserGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */; };
 		8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */; };
 		8385DB431F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
@@ -818,6 +819,7 @@
 		837F71961F45365100DEAA36 /* RNSPinAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinAddress.swift; path = Views/OVerLays/PinAddress/RNSPinAddress.swift; sourceTree = "<group>"; };
 		837F71981F45369D00DEAA36 /* RNSPinParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinParent.swift; path = Views/OVerLays/Parent/RNSPinParent.swift; sourceTree = "<group>"; };
 		837F719A1F45415100DEAA36 /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utils.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+Utils.swift"; sourceTree = "<group>"; };
+		838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUserGet.swift; path = POST/UserGet/RNSPostUserGet.swift; sourceTree = "<group>"; };
 		8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Swipe.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Swipe.swift"; sourceTree = "<group>"; };
 		8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Action.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1325,6 +1327,7 @@
 				836A9D7E1F627E2700B5EB55 /* StopPointList */,
 				83D370061F6FA905008F6A0F /* StopPointRoutes */,
 				839875BB1F60FD6A00B88F0B /* Update */,
+				838540C21F70CE5400B30772 /* UserGet */,
 			);
 			name = POST;
 			sourceTree = "<group>";
@@ -2939,6 +2942,14 @@
 			name = PinAddress;
 			sourceTree = "<group>";
 		};
+		838540C21F70CE5400B30772 /* UserGet */ = {
+			isa = PBXGroup;
+			children = (
+				838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */,
+			);
+			name = UserGet;
+			sourceTree = "<group>";
+		};
 		8386B4431F343E8E008A5CC7 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -4404,6 +4415,7 @@
 				832E4B9B1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */,
 				831E426B1F46B7CD0016C7D3 /* RNSTableStopsModel.swift in Sources */,
 				83E1839B1F440DF3005912C5 /* RNSDataManager+Search.swift in Sources */,
+				838540C41F70CF9D00B30772 /* RNSPostUserGet.swift in Sources */,
 				8310D4581F3C7483000CCD0A /* RNSCircle.swift in Sources */,
 				836E69371F5E433D003D9D46 /* RNSDotsBussVertical+Action.swift in Sources */,
 				832E4B8A1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,

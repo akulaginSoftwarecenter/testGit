@@ -61,4 +61,12 @@ class Utils {
     static func mainQueue(_ handler: @escaping EmptyBlock) {
         DispatchQueue.main.async(execute: handler)
     }
+    
+    static var mobileToken: AliasDictionary {
+        var dict = AliasDictionary()
+        if let token = UserDefaults.token {
+            dict["mobile_token"] = "\(token)"
+        }
+        return dict
+    }
 }

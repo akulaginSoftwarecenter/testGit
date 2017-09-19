@@ -39,10 +39,9 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func loadData() {
-        let item = RNSUserPayload.itemUserDefault()
-        RNSPostUpdate(item, complete: {[weak self] item in
-            self?.updateUI(item)
-        })
+        RNSPostUserGet {[weak self] (reply, error, _) in
+            self?.updateUI(reply as? RNSUserPayload)
+        }
     }
     
     func updateUI(_ item: RNSUserPayload?) {
