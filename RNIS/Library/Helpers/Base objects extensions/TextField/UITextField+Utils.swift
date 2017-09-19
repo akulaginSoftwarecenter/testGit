@@ -52,4 +52,20 @@ extension UITextField {
         attributedPlaceholder = NSAttributedString(string: placeholder,
                                                    attributes:attributes)
     }
+    
+    func addButtonOnKeyboard(_ title: String?, target: Any?, action: Selector?)  {
+        let rect = CGRect(x: 0, y: 0, width: UIScreen.width, height: 50)
+        let doneToolbar: UIToolbar = UIToolbar(frame: rect)
+        doneToolbar.barStyle = .blackTranslucent
+        doneToolbar.barTintColor = .white
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done = UIBarButtonItem(title: title, style: .done, target: target, action: action)
+        
+        let items = [flexSpace,done]
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        inputAccessoryView = doneToolbar
+    }
 }

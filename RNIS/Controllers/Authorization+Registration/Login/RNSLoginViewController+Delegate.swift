@@ -11,7 +11,11 @@ import Foundation
 extension RNSLoginViewController: UITextFieldDelegate {
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        doneButtonAction()
+        if textField == loginField {
+            passwordNext()
+        } else if textField == passwordField {
+            doneButtonAction()
+        }
         return true
     }
 }

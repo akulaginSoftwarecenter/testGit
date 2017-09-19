@@ -32,7 +32,7 @@
                                 <rect key="frame" x="30" y="288.5" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите номер"/>
                                 </userDefinedRuntimeAttributes>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="30" y="373.5" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите пароль"/>
                                 </userDefinedRuntimeAttributes>

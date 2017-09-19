@@ -1744,12 +1744,12 @@
 			path = Library/Helpers/InputFieldsValidator;
 			sourceTree = "<group>";
 		};
-		832E4B9D1F2ED5D200A4AD77 /* TextField */ = {
+		832E4B9D1F2ED5D200A4AD77 /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
 				832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */,
 			);
-			name = TextField;
+			name = UITextField;
 			path = "Library/Helpers/Base objects extensions/TextField";
 			sourceTree = "<group>";
 		};
@@ -2525,7 +2525,7 @@
 				836EEF051F3BFBE3007631D9 /* Random */,
 				835A31231F4D2F4F00F83BE2 /* Sequence */,
 				832E4B911F2ED53000A4AD77 /* String */,
-				832E4B9D1F2ED5D200A4AD77 /* TextField */,
+				832E4B9D1F2ED5D200A4AD77 /* UITextField */,
 				83A53F8E1F4A9D1300938969 /* UICollectionView */,
 				832E4B8D1F2ED03400A4AD77 /* UIFont */,
 				838AB8C51F26FB7C009E9C40 /* UIColor */,

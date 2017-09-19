@@ -33,25 +33,16 @@ extension RNSLoginViewController {
     }
     
     func addDoneButtonOnKeyboard()  {
-        let rect = CGRect(x: 0, y: 0, width: UIScreen.width, height: 50)
-        let doneToolbar: UIToolbar = UIToolbar(frame: rect)
-        doneToolbar.barStyle = .blackTranslucent
-        doneToolbar.barTintColor = .white
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done = UIBarButtonItem(title: "Ввод   ", style: .done, target: self, action: #selector(doneButtonAction))
-        
-        let items = [flexSpace,done]
-        
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        loginField.inputAccessoryView = doneToolbar
-        passwordField.inputAccessoryView = doneToolbar
-     }
+        loginField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(passwordNext))
+        passwordField.addButtonOnKeyboard("Ввод   ", target: self, action: #selector(doneButtonAction))
+    }
     
     func doneButtonAction() {
-        loginField.resignFirstResponder()
         passwordField.resignFirstResponder()
         loginPressed()
+    }
+    
+    func passwordNext() {
+         passwordField.becomeFirstResponder()
     }
 }
