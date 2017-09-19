@@ -10,7 +10,18 @@ import Foundation
 
 extension RNSProfileViewController: UITextFieldDelegate {
     
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailField.resignFirstResponder()
+        nameField.resignFirstResponder()
+        checkChange(textField)
+        return true
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
+        checkChange(textField)
+    }
+    
+    func checkChange(_ textField: UITextField) {
         if  textField == nameField {
             changeName()
         } else if  textField == emailField {
