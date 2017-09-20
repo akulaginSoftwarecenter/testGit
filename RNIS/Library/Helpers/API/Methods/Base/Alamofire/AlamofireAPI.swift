@@ -56,7 +56,7 @@ class AlamofireAPI: API {
         // This is a point to customize URL request
         // E.g. set timeout interval or cache policy
         var mutableRequest = request
-        mutableRequest.timeoutInterval = 20.0
+        mutableRequest.timeoutInterval = 60.0
         mutableRequest.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
         return mutableRequest
     }
