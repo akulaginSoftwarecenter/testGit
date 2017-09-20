@@ -29,19 +29,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9e-dn-nGP">
-                        <rect key="frame" x="306" y="19.5" width="6" height="20"/>
+                        <rect key="frame" x="306" y="19" width="6" height="20"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" red="0.95686274509803915" green="0.82352941176470584" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время прибытия: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk6-rM-Fmq">
-                        <rect key="frame" x="17" y="126" width="124" height="16"/>
+                        <rect key="frame" x="17" y="128" width="124" height="14"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-JW-rev">
-                        <rect key="frame" x="141" y="124.5" width="6" height="20"/>
+                        <rect key="frame" x="141" y="125" width="6" height="20"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -68,6 +68,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="FWk-mq-ftU" firstAttribute="leading" secondItem="1aK-JW-rev" secondAttribute="trailing" constant="17" id="0Ff-p8-LvE"/>
                 <constraint firstAttribute="trailing" secondItem="c9e-dn-nGP" secondAttribute="trailing" constant="18" id="2z9-qv-qDY"/>
@@ -94,7 +95,7 @@
                 <outlet property="labelDurations" destination="cd0-5V-y1M" id="7O8-go-N9m"/>
                 <outlet property="labelTime" destination="1aK-JW-rev" id="JhX-ad-aOD"/>
             </connections>
-            <point key="canvasLocation" x="91" y="-46"/>
+            <point key="canvasLocation" x="152" y="-46"/>
         </collectionViewCell>
     </objects>
 </document>
