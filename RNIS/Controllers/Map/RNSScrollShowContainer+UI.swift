@@ -54,7 +54,7 @@ extension RNSScrollShowContainer {
     }
     
     func updatePositionTop() {
-        let height = CGFloat(64)
+        let height = heightTopView
         var value  = offsetY - topOffset + height
         if value > height {
             value = height

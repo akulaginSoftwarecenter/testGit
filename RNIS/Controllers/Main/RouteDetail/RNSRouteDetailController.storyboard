@@ -26,6 +26,12 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="actionDefault" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionBack:" destination="gjb-WE-MeI" eventType="touchUpInside" id="OpN-8K-Q4y"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-o3-zih" customClass="RNSBlackMoveButton" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="580" width="315" height="63"/>
@@ -95,13 +101,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Koa-S0-Q6F">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Koa-S0-Q6F">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <segue destination="gjb-WE-MeI" kind="embed" id="UQ7-jS-Es1"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6p-r5-iUt" customClass="RNSPageRouteView" customModule="RNIS" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6p-r5-iUt" customClass="RNSPageRouteView" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>

@@ -12,10 +12,12 @@ class RNSRouteDetailController: UIViewController {
     
     var item: RNSRouteTable?
     
+    var handlerBack: EmptyBlock?
+    
     @IBOutlet weak var detailView: RNSRouteDetailView!
     
     @IBOutlet weak var blackButton: RNSBlackButton!
-    static func initController(_ item: RNSRouteTable?) -> UIViewController?  {
+    static func initController(_ item: RNSRouteTable?) -> RNSRouteDetailController?  {
         let vc = RNSRouteDetailController.initialController as? RNSRouteDetailController
         vc?.item = item
         return vc
@@ -33,5 +35,9 @@ class RNSRouteDetailController: UIViewController {
     
     deinit {
         print("RNSRouteDetailViewController deinit")
+    }
+    
+    @IBAction func actionBack(_ sender: Any) {
+        handlerBack?()
     }
 }

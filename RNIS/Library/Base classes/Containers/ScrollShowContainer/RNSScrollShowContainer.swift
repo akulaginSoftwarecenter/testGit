@@ -35,6 +35,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     var startBottomOffset: CGFloat = 175
     var contentInsetBottom: CGFloat = 0
     var heightCoverButtonTop: CGFloat = 64
+    var heightTopView: CGFloat = 64
     
     var startOverTopDeselerate: Bool = false
     var topTitle: String?

@@ -10,6 +10,8 @@ import UIKit
 
 class RNSPageRoutePopupController: UIViewController {
     
+    var containerController: RNSRouteDetailController?
+    
     static var initController: UIViewController? {
         let vc = RNSPageRoutePopupController.controller as? RNSPageRoutePopupController
         let container = RNSScrollShowContainer.initController(vc)
@@ -17,6 +19,11 @@ class RNSPageRoutePopupController: UIViewController {
         container?.hideImageSlide = true
         container?.hideCoverBotton = true
         container?.allowHideBottom = false
+        container?.heightTopView = 0
+        
+        vc?.handlerDetailBack = {
+            container?.scrollToStart()
+        }
         /*
         container?.handlerRect = vc?.prepareViews(_:)
         container?.heightCoverButtonTop = 130
@@ -35,14 +42,13 @@ class RNSPageRoutePopupController: UIViewController {
  */
         return  container
     }
-
+    
+    var handlerDetailBack: EmptyBlock?
     
     @IBOutlet weak var pageView: RNSPageRouteView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageView.backgroundColor = .blue
-        pageView.isHidden = false
         print("viewDidLoad RNSPageRoutePopupController")
     }
     

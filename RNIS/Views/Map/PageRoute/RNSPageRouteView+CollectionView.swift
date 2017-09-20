@@ -33,6 +33,10 @@ extension RNSPageRouteView: UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         RNSRouteDetailController.initController(item(indexPath)?.tableItem)?.pushAnimatedRed()
+        let vc = RNSRouteDetailController.initController(item(indexPath)?.tableItem)
+        vc?.handlerBack = { 
+            STRouter.pop()
+        }
+        vc?.pushAnimatedRed()
     }
 }
