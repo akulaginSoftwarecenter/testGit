@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension RNSSearchViewController {
+extension RNSSearchViewController: UITextFieldDelegate {
     
     @IBAction func actionSegmented(_ sender: UISegmentedControl) {
         clearTable() 
@@ -17,5 +17,18 @@ extension RNSSearchViewController {
     
     @IBAction func editionChange(_ sender: Any) {
         updateSearch()
+    }
+      
+    @IBAction func actionTop(_ sender: Any) {
+         hideKeyboard()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
+    
+    func hideKeyboard() {
+        view.hideKeyboard()
     }
 }

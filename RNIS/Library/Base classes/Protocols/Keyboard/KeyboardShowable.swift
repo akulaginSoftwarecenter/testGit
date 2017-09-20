@@ -92,12 +92,8 @@ extension KeyboardShowable
     }
     
     fileprivate func additionalKeyboardWillHide(_ notification: Notification) {
-
         animateBottom(0, duration: notification.duration)
         keyboardWillHide()
-        if isNeedAddTap {
-            view?.removeGesture()
-        }
     }
     
     fileprivate func animateBottom(_ constant: CGFloat?, duration: Double?) {
