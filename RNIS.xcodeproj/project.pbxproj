@@ -281,8 +281,6 @@
 		837ABEFF1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFD1F2EE13100AB5E54 /* STRouter+Containers.swift */; };
 		837ABF021F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF011F2EE19700AB5E54 /* KeyBoardViewController.swift */; };
 		837ABF031F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF011F2EE19700AB5E54 /* KeyBoardViewController.swift */; };
-		837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF061F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift */; };
-		837ABF091F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF061F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift */; };
 		837ABF0A1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF071F2EE21B00AB5E54 /* KeyboardShowable.swift */; };
 		837ABF0B1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF071F2EE21B00AB5E54 /* KeyboardShowable.swift */; };
 		837ABF0D1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF0C1F2EE26100AB5E54 /* UIView+TapGesture.swift */; };
@@ -804,7 +802,6 @@
 		837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPasswordField.swift; sourceTree = "<group>"; };
 		837ABEFD1F2EE13100AB5E54 /* STRouter+Containers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "STRouter+Containers.swift"; sourceTree = "<group>"; };
 		837ABF011F2EE19700AB5E54 /* KeyBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBoardViewController.swift; sourceTree = "<group>"; };
-		837ABF061F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyboardShowable+Tap.swift"; sourceTree = "<group>"; };
 		837ABF071F2EE21B00AB5E54 /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShowable.swift; sourceTree = "<group>"; };
 		837ABF0C1F2EE26100AB5E54 /* UIView+TapGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+TapGesture.swift"; path = "Library/Helpers/Base objects extensions/View/UIView+TapGesture.swift"; sourceTree = "<group>"; };
 		837ABF101F2EE2E000AB5E54 /* Notification+KeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+KeyBoard.swift"; sourceTree = "<group>"; };
@@ -2846,7 +2843,6 @@
 		837ABF051F2EE21B00AB5E54 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				837ABF061F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift */,
 				837ABF071F2EE21B00AB5E54 /* KeyboardShowable.swift */,
 			);
 			path = Keyboard;
@@ -4403,7 +4399,6 @@
 				832B1DCE1F42B2110024505C /* RNSDutyViewController+Action.swift in Sources */,
 				830E68B61F552FB3008EFA02 /* RNSRouteDetailController.swift in Sources */,
 				83D155951F4BD11000150144 /* RNSArrowLeft.swift in Sources */,
-				837ABF081F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				83029BCF1F4BECBB00B0FEE3 /* UIStackView+Utils.swift in Sources */,
 				8357187D1F21A33900DE5E25 /* UIViewController+Storyboards.swift in Sources */,
 				838707E91F3027410094B273 /* RNSPhoneContrainerController.swift in Sources */,
@@ -4592,7 +4587,6 @@
 				837ABF201F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
 				8369891B1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
 				8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
-				837ABF091F2EE21B00AB5E54 /* KeyboardShowable+Tap.swift in Sources */,
 				836989431F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */,
 				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				838707F41F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,

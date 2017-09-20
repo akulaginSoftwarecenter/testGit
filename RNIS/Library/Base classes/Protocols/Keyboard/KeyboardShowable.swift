@@ -19,7 +19,6 @@ protocol KeyboardShowable: class {
     func removeAllObservers()
     func keyboardWillShow()
     func keyboardWillHide()
-    func hideKeyboardByTap()
 }
 
 extension KeyboardShowable
@@ -52,9 +51,6 @@ extension KeyboardShowable
     
     func keyboardWillShow() {}
     func keyboardWillHide() {}
-    func hideKeyboardByTap() {
-        view?.hideKeyboard()
-    }
     
     func addKeyboardObservers() {
         removeAllObservers()
@@ -80,9 +76,7 @@ extension KeyboardShowable
             defaultCenter.removeObserver(removeObserver, name: (self?.classNotification).map { NSNotification.Name(rawValue: $0) }, object: nil)
         }
         
-        if isNeedAddTap {
-            addTapGesture()
-        }
+
     }
     
     func addObserverForName(_ name: String, usingBlock block: @escaping NotificationBlock) -> NSObjectProtocol {
@@ -92,12 +86,18 @@ extension KeyboardShowable
     fileprivate func additionalKeyboardWillShow(_ notification: Notification) {
         animateBottom(notification.height, duration: notification.duration)
         keyboardWillShow()
+        if isNeedAddTap {
+            view?.tapGestureHideKeyBoard()
+        }
     }
     
     fileprivate func additionalKeyboardWillHide(_ notification: Notification) {
 
         animateBottom(0, duration: notification.duration)
         keyboardWillHide()
+        if isNeedAddTap {
+            view?.removeGesture()
+        }
     }
     
     fileprivate func animateBottom(_ constant: CGFloat?, duration: Double?) {
