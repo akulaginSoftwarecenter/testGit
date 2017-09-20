@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gjv-zK-pvy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wDc-Sd-Up4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,24 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="W4d-YX-RTJ">
-            <objects>
-                <navigationController id="Gjv-zK-pvy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="g1t-Rz-7tA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="wDc-Sd-Up4" kind="relationship" relationship="rootViewController" id="Qht-f1-dYS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HKb-Xb-KPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-751" y="2699"/>
-        </scene>
-        <!--Стрелка-->
+        <!--Strelka View Controller-->
         <scene sceneID="ZRw-26-fec">
             <objects>
                 <viewController id="wDc-Sd-Up4" customClass="StrelkaViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,31 +17,46 @@
                         <viewControllerLayoutGuide type="bottom" id="dzT-oJ-VXC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vj6-xF-11f">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzn-kO-8Ow">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="541"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="wDc-Sd-Up4" id="QAS-xh-8Dy"/>
                                 </connections>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Стрелка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s7q-lM-Ld9" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="92" y="17" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTO-9P-ysq" customClass="RNSLeftMenuBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="104" y="12" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wzn-kO-8Ow" firstAttribute="top" secondItem="xqI-BD-Dh2" secondAttribute="bottom" id="2Fb-A1-PlZ"/>
                             <constraint firstAttribute="trailing" secondItem="wzn-kO-8Ow" secondAttribute="trailing" id="MTZ-bY-bpF"/>
                             <constraint firstItem="wzn-kO-8Ow" firstAttribute="leading" secondItem="Vj6-xF-11f" secondAttribute="leading" id="gvE-LF-FZl"/>
                             <constraint firstItem="dzT-oJ-VXC" firstAttribute="top" secondItem="wzn-kO-8Ow" secondAttribute="bottom" id="nBd-K2-t5e"/>
+                            <constraint firstItem="wzn-kO-8Ow" firstAttribute="top" secondItem="Vj6-xF-11f" secondAttribute="top" constant="82" id="u7w-fe-gq2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Fb-A1-PlZ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Стрелка" id="TUN-Dj-clk">
-                        <barButtonItem key="leftBarButtonItem" image="ArrowLefrNav" style="plain" id="J5B-Jn-Slo" customClass="RNSMenuBarItem" customModule="RNIS" customModuleProvider="target">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="wzn-kO-8Ow" id="SHB-y8-ELy"/>
@@ -69,7 +67,4 @@
             <point key="canvasLocation" x="-119" y="2698"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ArrowLefrNav" width="14" height="22"/>
-    </resources>
 </document>

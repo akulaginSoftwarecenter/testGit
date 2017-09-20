@@ -22,19 +22,8 @@ class StrelkaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        prepareNav()
         loadStart()
         prepareHandlers()
-    }
-    
-    func prepareNav() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont(name: "Cffazmiakhaddpiofffvylaqekz", size: 24.5)!,
-                                                                        NSForegroundColorAttributeName : UIColor.white]
-        
-        self.navigationItem.title = kStrelka 
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     
     func loadStart() {

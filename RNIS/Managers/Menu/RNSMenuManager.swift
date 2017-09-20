@@ -22,9 +22,9 @@ class RNSMenuManager: NSObject {
     lazy var menuItems = [MenuItem("Карта", RNSMapViewController.controller, #imageLiteral(resourceName: "menuMapIcon")),
                      MenuItem("Избранное", TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
                      MenuItem("Оповещения", NotificationsViewController.initialRed, #imageLiteral(resourceName: "menuBellIcon")),
-                     MenuItem("Новости", NewsViewController.initialController, #imageLiteral(resourceName: "menuNewspaperIcon")),
-                     MenuItem("Настройки", SettingsViewController.initialController, #imageLiteral(resourceName: "menuSettingsIcon")),
-                     MenuItem( kStrelka, StrelkaViewController.initialController, #imageLiteral(resourceName: "menuCreditcardIcon")),
+                     MenuItem("Новости", NewsViewController.initialRed, #imageLiteral(resourceName: "menuNewspaperIcon")),
+                     MenuItem("Настройки", SettingsViewController.initialRed, #imageLiteral(resourceName: "menuSettingsIcon")),
+                     MenuItem( kStrelka, StrelkaViewController.initialRed, #imageLiteral(resourceName: "menuCreditcardIcon")),
                      MenuItem("Информация", MainInfoViewController.initialRed, #imageLiteral(resourceName: "menuInfoIcon"))]
     
     lazy var profileVC: UIViewController? = {
