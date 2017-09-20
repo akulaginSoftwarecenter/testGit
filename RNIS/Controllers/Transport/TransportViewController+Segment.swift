@@ -16,7 +16,12 @@ extension TransportViewController {
         if !selectedSegmentIndexIsFirst {
             myRoutesView.generate()
         }
-        reloadTitle()
+        titleLable.text = titleSelected
+    }
+    
+    func prepareSegment() {
+        segmentControl.selectedSegmentIndex = 0
+        segmentControlAction(self.segmentControl)
     }
     
     var selectedSegmentIndex: Int {

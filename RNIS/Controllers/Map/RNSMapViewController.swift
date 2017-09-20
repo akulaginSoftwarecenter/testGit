@@ -32,7 +32,7 @@ class RNSMapViewController: UIViewController {
 
         RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
-        loadData()
+        //loadData()
     }
     
     func loadData() {

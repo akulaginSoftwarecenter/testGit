@@ -12,6 +12,6 @@ class RNSBackGroundView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .F1645A
+        backgroundColor = .backColor
     }
 }

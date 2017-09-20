@@ -14,7 +14,7 @@ class RNSRedContainer: RNSParentContainer {
         super.prepareView()
         
         let backgroundView = UIView(frame: view.bounds)
-        backgroundView.backgroundColor = .F1645A
+        backgroundView.backgroundColor = .backColor
         view.addSubview(backgroundView)
     }
 }

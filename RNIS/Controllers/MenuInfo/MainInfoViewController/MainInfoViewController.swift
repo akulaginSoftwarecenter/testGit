@@ -41,10 +41,6 @@ class MainInfoViewController: UIViewController {
         vc?.pushAnimatedRed()
     }
     
-    @IBAction func actionBack(_ sender: Any) {
-        RNSMenuManager.showLeftMenu()
-    }
-    
     override class var storyboardName: String {
         return "MainInfoViewController"
     }

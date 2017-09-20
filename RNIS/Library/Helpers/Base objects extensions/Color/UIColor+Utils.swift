@@ -12,6 +12,10 @@ import UIKit
 
 extension UIColor {
     
+    static var backColor: UIColor {
+        return .F1645A
+    }
+    
     static var color13: UIColor {
         return UIColor(13,145,209)
     }

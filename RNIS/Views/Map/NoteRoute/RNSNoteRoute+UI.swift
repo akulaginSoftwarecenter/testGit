@@ -19,7 +19,7 @@ extension RNSNoteRoute {
      
     func prepareMinute() {
         titleLabel.font = .cffazm18
-        titleLabel.textColor = .F1645A
+        titleLabel.textColor = .backColor
         
         prepareColor(.white)
     }

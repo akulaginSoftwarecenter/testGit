@@ -30,4 +30,9 @@ extension UIViewController {
     class var storyboardIdentifier: String {
         return Utils.stringFromSwiftClass(self)
     }
+    
+    
+    static var redInitialController: UIViewController? {
+        return STRouter.redContainer(initialController)
+    }
 }

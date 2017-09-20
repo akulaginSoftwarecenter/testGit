@@ -32,8 +32,8 @@ class RNSMoveMapViewController: UIViewController {
     }
     
     func prepareColor() {
-        buttonDown.backgroundColor = .F1645A
-        viewTop.backgroundColor = .F1645A
+        buttonDown.backgroundColor = .backColor
+        viewTop.backgroundColor = .backColor
     }
     
     var item: RNSRouteVariant? {
