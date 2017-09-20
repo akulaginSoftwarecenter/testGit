@@ -18,6 +18,7 @@ class RNSBusStopDetailController: UIViewController {
         vc?.item = item
         let container = STRouter.scrollShowContainer(vc, topTitle: item?.name)
         container?.handlerRect = vc?.prepareViews(_:)
+        container?.handlerDismiss = RNSMapManager.handlerDismissOldPresentVC
         vc?.startBottomOffset = container?.startBottomOffset
         return  container
     }

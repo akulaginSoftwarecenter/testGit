@@ -18,6 +18,7 @@ class RNSBusDetailController: UIViewController {
         let container = STRouter.scrollShowContainer(vc, topTitle: title)
         container?.handlerRect = vc?.prepareViews(_:)
         container?.heightCoverButtonTop = 130
+        container?.handlerDismiss = RNSMapManager.handlerDismissOldPresentVC
  
         vc?.startBottomOffset = container?.startBottomOffset
         let contentInsetBottom = CGFloat(80)
