@@ -216,28 +216,15 @@
                                     <action selector="backAction:" destination="kPS-F3-8vu" eventType="touchUpInside" id="hkd-TR-P4d"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZh-ka-eoc" customClass="RNSPageRouteView" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="488" width="375" height="179"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="179" id="v6m-1s-P9V"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="34D-x3-nFP" firstAttribute="leading" secondItem="qqg-m5-oaB" secondAttribute="leading" id="5dO-hF-yn6"/>
                             <constraint firstAttribute="trailing" secondItem="34D-x3-nFP" secondAttribute="trailing" id="6BE-GC-KFQ"/>
                             <constraint firstAttribute="bottom" secondItem="34D-x3-nFP" secondAttribute="bottom" id="8wV-DH-oO6"/>
-                            <constraint firstItem="PZh-ka-eoc" firstAttribute="leading" secondItem="qqg-m5-oaB" secondAttribute="leading" id="Iyw-aA-esG"/>
-                            <constraint firstAttribute="trailing" secondItem="PZh-ka-eoc" secondAttribute="trailing" id="QlR-wZ-LPj"/>
                             <constraint firstItem="34D-x3-nFP" firstAttribute="top" secondItem="qqg-m5-oaB" secondAttribute="top" id="qKz-26-jjK"/>
-                            <constraint firstItem="hcn-Sj-zW7" firstAttribute="top" secondItem="PZh-ka-eoc" secondAttribute="bottom" id="zeZ-8T-flH"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="pageView" destination="PZh-ka-eoc" id="v8O-mP-fYa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sV9-ye-xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -361,7 +348,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-cV-S8G">
-                                                    <rect key="frame" x="15" y="14" width="360" height="20"/>
+                                                    <rect key="frame" x="15" y="14.5" width="360" height="20"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -516,6 +503,6 @@
         <image name="plus" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X9n-Pb-O8k"/>
+        <segue reference="RF6-Z6-9Gv"/>
     </inferredMetricsTieBreakers>
 </document>

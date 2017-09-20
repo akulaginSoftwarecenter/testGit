@@ -10,7 +10,6 @@ import UIKit
 
 class RNSPageRouteController: UIViewController {
 
-    @IBOutlet weak var pageView: RNSPageRouteView!
     var containerController: RNSMapParentController?
     
     static func initController() -> UIViewController?  {
@@ -21,6 +20,17 @@ class RNSPageRouteController: UIViewController {
         super.viewDidLoad()
         
         prepareMapView()
+        preparePage()
+    }
+    
+    func preparePage() {
+        guard let containerVC = RNSPageRoutePopupController.initController,
+            let containerView = containerVC.view else {
+                return
+        }
+        addChildViewController(containerVC)
+        view.addSubview(containerView)
+        containerView.autoPinEdgesToSuperviewEdges()
     }
     
     override class var storyboardName: String {
