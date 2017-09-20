@@ -19,7 +19,6 @@ extension RNSMapViewController {
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        let vc = STRouter.scrollContainer(RNSSearchViewController.initialController, isNeedAddTap: false)
-        vc?.pushAnimatedRed()
+        RNSSearchViewController.initialPushAnimatedRed()
     }
 }

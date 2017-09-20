@@ -8,7 +8,17 @@
 
 import UIKit
 
-class RNSSearchViewController: UIViewController {
+class RNSSearchViewController: UIViewController, KeyboardShowable {
+    
+    var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
+        get {
+            return bottomConstraint
+        }
+    }
+    
+    var isNeedAddTap: Bool = false
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var textField: RNSTextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -21,6 +31,7 @@ class RNSSearchViewController: UIViewController {
         
         prepareSegmented()
         checkSaved()
+        tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
     }
     
     func checkSaved() {
@@ -34,8 +45,12 @@ class RNSSearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+        addKeyboardObservers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeAllObservers()
     }
     
     override class var storyboardName: String {
