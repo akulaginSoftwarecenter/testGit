@@ -47,6 +47,7 @@ extension RNSDutyViewController {
     }
     
     func showAddress(_ type: TypeAddress, complete: AliasStringBlock?) {
-        RNSAddressViewController.initController(type, complete: complete)?.pushAnimated()
+        let text = type == .fromAddress ? fromText : inText
+        RNSAddressViewController.initController(text, type: type, complete: complete)?.pushAnimated()
     }
 }

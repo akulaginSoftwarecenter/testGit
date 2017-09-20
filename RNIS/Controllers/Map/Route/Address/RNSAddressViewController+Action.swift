@@ -15,8 +15,8 @@ extension RNSAddressViewController {
     }
     
     @IBAction func backAction(_ sender: Any) {
+        complete?(text)
         if let text = text, !text.isEmpty  {
-            complete?(text)
             RNSDataManager.createSearchItem(text)
         }
     }

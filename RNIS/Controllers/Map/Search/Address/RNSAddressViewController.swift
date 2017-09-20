@@ -15,8 +15,9 @@ enum TypeAddress: String {
 
 class RNSAddressViewController: UIViewController, KeyboardShowable {
     
-    static func initController(_ type: TypeAddress?, complete: AliasStringBlock?) -> UIViewController?  {
+    static func initController(_ text: String?, type: TypeAddress?, complete: AliasStringBlock?) -> UIViewController?  {
         let vc = RNSAddressViewController.controller as? RNSAddressViewController
+        vc?.textInput = text
         vc?.type = type
         vc?.complete = complete
         return vc
@@ -33,6 +34,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     }
     
     var type: TypeAddress?
+    var textInput: String?
     var complete: AliasStringBlock?
     var containerController: RNSMapParentController?
     
@@ -49,6 +51,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareTextField()
         prepareType()
     }
     
