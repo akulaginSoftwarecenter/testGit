@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qAL-6j-04V">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Выбрать интервал-->
+        <scene sceneID="PVP-oL-I2U">
+            <objects>
+                <viewController id="qAL-6j-04V" customClass="NotificationsSettingsViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Xg-2O-lEh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hep-N7-oMu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HhJ-gz-QyO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение уведомит Вас о прибытии автобуса за выбранное время" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlb-o5-cvb">
+                                <rect key="frame" x="16" y="82" width="343" height="40"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEi-jO-9V1">
+                                <rect key="frame" x="0.0" y="130" width="375" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qAL-6j-04V" id="aQu-FE-hwD"/>
+                                    <outlet property="delegate" destination="qAL-6j-04V" id="hV6-vu-PE4"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27d-5v-1Lu">
+                                <rect key="frame" x="25" y="524" width="325" height="63"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="LzO-qi-OBv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionSave:" destination="qAL-6j-04V" eventType="touchUpInside" id="sRr-Ng-OzT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выбрать интервал" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lBc-0x-KGh" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="130" y="28" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie2-Na-JNO" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="61" y="23" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XEi-jO-9V1" secondAttribute="trailing" id="J9g-2U-OFr"/>
+                            <constraint firstItem="27d-5v-1Lu" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leading" constant="25" id="SeD-f9-q8R"/>
+                            <constraint firstItem="Hep-N7-oMu" firstAttribute="top" secondItem="27d-5v-1Lu" secondAttribute="bottom" constant="80" id="ZdX-WX-Z6U"/>
+                            <constraint firstItem="hlb-o5-cvb" firstAttribute="trailing" secondItem="HhJ-gz-QyO" secondAttribute="trailingMargin" id="ZkR-XL-4ds"/>
+                            <constraint firstItem="XEi-jO-9V1" firstAttribute="top" secondItem="hlb-o5-cvb" secondAttribute="bottom" constant="8" id="bne-FW-Etv"/>
+                            <constraint firstItem="XEi-jO-9V1" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leading" id="c4i-7h-3Gk"/>
+                            <constraint firstAttribute="trailing" secondItem="27d-5v-1Lu" secondAttribute="trailing" constant="25" id="l0R-XI-IDT"/>
+                            <constraint firstItem="hlb-o5-cvb" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leadingMargin" id="qfZ-LZ-AiC"/>
+                            <constraint firstItem="hlb-o5-cvb" firstAttribute="top" secondItem="HhJ-gz-QyO" secondAttribute="top" constant="82" id="yWs-2G-dgY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбрать интервал" id="Uuc-4K-H8F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXl-Kx-f0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150" y="770"/>
+        </scene>
+    </scenes>
+</document>

@@ -20,12 +20,12 @@ class RNSMenuManager: NSObject {
     }
     
     lazy var menuItems = [MenuItem("Карта", RNSMapViewController.controller, #imageLiteral(resourceName: "menuMapIcon")),
-                     MenuItem("Избранное", TransportViewController.redInitialController, #imageLiteral(resourceName: "menuStarIcon")),
-                     MenuItem("Оповещения", NotificationsViewController.initialController, #imageLiteral(resourceName: "menuBellIcon")),
+                     MenuItem("Избранное", TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
+                     MenuItem("Оповещения", NotificationsViewController.initialRed, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem("Новости", NewsViewController.initialController, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", SettingsViewController.initialController, #imageLiteral(resourceName: "menuSettingsIcon")),
                      MenuItem( kStrelka, StrelkaViewController.initialController, #imageLiteral(resourceName: "menuCreditcardIcon")),
-                     MenuItem("Информация", MainInfoViewController.redInitialController, #imageLiteral(resourceName: "menuInfoIcon"))]
+                     MenuItem("Информация", MainInfoViewController.initialRed, #imageLiteral(resourceName: "menuInfoIcon"))]
     
     lazy var profileVC: UIViewController? = {
         return STRouter.imageScrollContainer(RNSProfileViewController.initialController)

@@ -79,7 +79,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
     //MARK: UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        self.performSegue(withIdentifier: "notifications_to_notifySettings", sender: self)
+        NotificationsSettingsViewController.initialPushAnimatedRed()
     }
     
     //MARK: - Navigation

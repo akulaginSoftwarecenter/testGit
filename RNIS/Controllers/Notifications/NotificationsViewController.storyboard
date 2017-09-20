@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dtl-Bb-GG9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CP8-DA-59T">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,25 +14,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="hiC-He-lxL">
-            <objects>
-                <navigationController id="dtl-Bb-GG9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="SOy-MX-y2q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="CP8-DA-59T" kind="relationship" relationship="rootViewController" id="d28-tY-Xjq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7xr-bI-ZmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-119" y="772"/>
-        </scene>
-        <!--Оповещения-->
+        <!--Notifications View Controller-->
         <scene sceneID="yrS-zD-xvs">
             <objects>
                 <viewController id="CP8-DA-59T" customClass="NotificationsViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,117 +23,61 @@
                         <viewControllerLayoutGuide type="bottom" id="vza-p6-mzX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p1J-My-BUr">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Оповещения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="H1w-vQ-d2p" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="152" y="323" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7K-OH-agL" customClass="RNSLeftMenuBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение уведомит Вас о прибытии автобуса за определенное время" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzu-EM-dhB">
-                                <rect key="frame" x="16" y="20" width="343" height="40"/>
+                                <rect key="frame" x="16" y="82" width="343" height="40"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GTE-mh-D1S">
-                                <rect key="frame" x="0.0" y="88" width="375" height="471"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="473"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GTE-mh-D1S" firstAttribute="top" secondItem="Gzu-EM-dhB" secondAttribute="bottom" constant="28" id="AUc-zX-vv7"/>
                             <constraint firstAttribute="trailing" secondItem="GTE-mh-D1S" secondAttribute="trailing" id="EXE-O9-9fY"/>
+                            <constraint firstItem="Gzu-EM-dhB" firstAttribute="top" secondItem="p1J-My-BUr" secondAttribute="top" constant="82" id="Ggs-UP-npo"/>
                             <constraint firstItem="Gzu-EM-dhB" firstAttribute="top" secondItem="Rb1-JY-WF1" secondAttribute="bottom" constant="20" id="K7y-rx-qEs"/>
                             <constraint firstItem="Gzu-EM-dhB" firstAttribute="trailing" secondItem="p1J-My-BUr" secondAttribute="trailingMargin" id="Xet-4U-dGW"/>
                             <constraint firstItem="GTE-mh-D1S" firstAttribute="leading" secondItem="p1J-My-BUr" secondAttribute="leading" id="kQz-rd-1fc"/>
                             <constraint firstItem="Gzu-EM-dhB" firstAttribute="leading" secondItem="p1J-My-BUr" secondAttribute="leadingMargin" id="mkq-FU-ZU1"/>
                             <constraint firstItem="vza-p6-mzX" firstAttribute="top" secondItem="GTE-mh-D1S" secondAttribute="bottom" id="nrg-fG-RgR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="K7y-rx-qEs"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Оповещения" id="nfD-J7-gD7">
-                        <barButtonItem key="leftBarButtonItem" image="ArrowLefrNav" style="plain" id="xK3-u6-UPy" customClass="RNSMenuBarItem" customModule="RNIS" customModuleProvider="target">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="GTE-mh-D1S" id="YG5-Bg-hFO"/>
-                        <segue destination="oc5-ZW-urR" kind="show" identifier="notifications_to_notifySettings" id="98G-S0-xpl">
-                            <nil key="action"/>
-                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4Z-pj-WPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521" y="771"/>
-        </scene>
-        <!--Выбрать интервал-->
-        <scene sceneID="hHG-1x-7wb">
-            <objects>
-                <viewController id="oc5-ZW-urR" customClass="NotificationsSettingsViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QSH-i1-HwD"/>
-                        <viewControllerLayoutGuide type="bottom" id="QRQ-xU-Id4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wyV-Ax-ird">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение уведомит Вас о прибытии автобуса за выбранное время" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hui-Tp-aVH">
-                                <rect key="frame" x="16" y="20" width="343" height="40"/>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0J-6W-TdZ">
-                                <rect key="frame" x="0.0" y="68" width="375" height="216"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="oc5-ZW-urR" id="zrO-8z-drx"/>
-                                    <outlet property="delegate" destination="oc5-ZW-urR" id="Xt6-IE-GgL"/>
-                                </connections>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxe-Pq-ELD">
-                                <rect key="frame" x="25" y="416" width="325" height="63"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="bMC-Yo-fMW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
-                                <state key="normal" title="Сохранить">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="actionSave:" destination="oc5-ZW-urR" eventType="touchUpInside" id="uEW-Ox-lL7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Hui-Tp-aVH" firstAttribute="trailing" secondItem="wyV-Ax-ird" secondAttribute="trailingMargin" id="9dU-fk-SzJ"/>
-                            <constraint firstAttribute="trailing" secondItem="I0J-6W-TdZ" secondAttribute="trailing" id="9mW-pz-y3d"/>
-                            <constraint firstAttribute="trailing" secondItem="Kxe-Pq-ELD" secondAttribute="trailing" constant="25" id="CS8-EW-G3n"/>
-                            <constraint firstItem="I0J-6W-TdZ" firstAttribute="top" secondItem="Hui-Tp-aVH" secondAttribute="bottom" constant="8" id="Kfb-NQ-OLl"/>
-                            <constraint firstItem="Hui-Tp-aVH" firstAttribute="leading" secondItem="wyV-Ax-ird" secondAttribute="leadingMargin" id="Ran-2h-1Mv"/>
-                            <constraint firstItem="QRQ-xU-Id4" firstAttribute="top" secondItem="Kxe-Pq-ELD" secondAttribute="bottom" constant="80" id="Ztx-aq-Q8g"/>
-                            <constraint firstItem="I0J-6W-TdZ" firstAttribute="leading" secondItem="wyV-Ax-ird" secondAttribute="leading" id="jVf-Fs-uOD"/>
-                            <constraint firstItem="Hui-Tp-aVH" firstAttribute="top" secondItem="QSH-i1-HwD" secondAttribute="bottom" constant="20" id="oW0-my-Yr3"/>
-                            <constraint firstItem="Kxe-Pq-ELD" firstAttribute="leading" secondItem="wyV-Ax-ird" secondAttribute="leading" constant="25" id="zq6-23-zeY"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Выбрать интервал" id="muL-4z-njS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qdX-Rk-CaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1150" y="770"/>
+            <point key="canvasLocation" x="334" y="770"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ArrowLefrNav" width="14" height="22"/>
-    </resources>
 </document>

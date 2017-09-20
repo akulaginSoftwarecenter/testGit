@@ -10,8 +10,7 @@ import UIKit
 
 class NotificationsSettingsViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = "Выбрать интервал";
+    override class var storyboardName: String {
+        return "NotificationsSettingsViewController"
     }
 }

@@ -489,6 +489,7 @@
 		83D3700B1F6FAB6D008F6A0F /* RNSBusRouteTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D3700A1F6FAB6D008F6A0F /* RNSBusRouteTemp.swift */; };
 		83D3700E1F6FAC41008F6A0F /* RNSStopPointRoutesPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D3700D1F6FAC41008F6A0F /* RNSStopPointRoutesPayload.swift */; };
 		83D492131F72226400A32C4B /* StrelkaViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D492121F72226400A32C4B /* StrelkaViewController+Delegate.swift */; };
+		83D492151F722E3400A32C4B /* NotificationsSettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D492141F722E3400A32C4B /* NotificationsSettingsViewController.storyboard */; };
 		83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B701F4D484500246DFA /* RNSRoadBus.swift */; };
 		83D62B731F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */; };
 		83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */; };
@@ -988,6 +989,7 @@
 		83D3700A1F6FAB6D008F6A0F /* RNSBusRouteTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusRouteTemp.swift; path = Models/Temp/BusRouteTemp/RNSBusRouteTemp.swift; sourceTree = "<group>"; };
 		83D3700D1F6FAC41008F6A0F /* RNSStopPointRoutesPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSStopPointRoutesPayload.swift; path = Models/Temp/Reply/StopPointRoutes/RNSStopPointRoutesPayload.swift; sourceTree = "<group>"; };
 		83D492121F72226400A32C4B /* StrelkaViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StrelkaViewController+Delegate.swift"; sourceTree = "<group>"; };
+		83D492141F722E3400A32C4B /* NotificationsSettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NotificationsSettingsViewController.storyboard; path = Setting/NotificationsSettingsViewController.storyboard; sourceTree = "<group>"; };
 		83D62B701F4D484500246DFA /* RNSRoadBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadBus.swift; path = Views/Polylines/RoadBus/RNSRoadBus.swift; sourceTree = "<group>"; };
 		83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadActivate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadActivate.swift"; sourceTree = "<group>"; };
 		83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackMoveButton.swift; path = Views/Buttons/BlackMoveButton/RNSBlackMoveButton.swift; sourceTree = "<group>"; };
@@ -1453,6 +1455,7 @@
 				83204B4F1F5921370033ACA1 /* NotificationsSettingsViewController.swift */,
 				83D713811F5D069C005206C5 /* NotificationsSettingsViewController+PickerView.swift */,
 				83D713831F5D0926005206C5 /* NotificationsSettingsViewController+Action.swift */,
+				83D492141F722E3400A32C4B /* NotificationsSettingsViewController.storyboard */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -4075,6 +4078,7 @@
 				8356BE581F3D679F00560623 /* RNSBusDetailWayCell.xib in Resources */,
 				83A5C6F51F57F504006C8D62 /* RNSRouteStopCell.xib in Resources */,
 				83AFEB521F6A330000C2A251 /* RNSFavoritesBusView.xib in Resources */,
+				83D492151F722E3400A32C4B /* NotificationsSettingsViewController.storyboard in Resources */,
 				83D7138A1F5D0EB1005206C5 /* RNSDotsBussVertical.xib in Resources */,
 				838CE9401F3DB63400C10FBA /* RNSSearchViewController.storyboard in Resources */,
 				83204B5A1F59239C0033ACA1 /* SettingsViewController.storyboard in Resources */,

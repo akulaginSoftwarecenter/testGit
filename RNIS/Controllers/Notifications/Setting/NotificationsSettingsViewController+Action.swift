@@ -11,6 +11,6 @@ import Foundation
 extension NotificationsSettingsViewController {
     
     @IBAction func actionSave(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        STRouter.pop()
     }
 }

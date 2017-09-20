@@ -32,7 +32,7 @@ extension UIViewController {
     }
     
     
-    static var redInitialController: UIViewController? {
+    static var initialRed: UIViewController? {
         return STRouter.redContainer(initialController)
     }
 }
