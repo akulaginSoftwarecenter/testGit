@@ -22,5 +22,12 @@ struct MenuItem {
     
     func show() {
         RNSMenuManager.showVC(vc)
+        updateStrelkaIfNeed()
+    }
+    
+    func updateStrelkaIfNeed() {
+        if title == kStrelka {
+            RNSMenuManager.handlerStrelkaUpdate?()
+        }
     }
 }

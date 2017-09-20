@@ -11,19 +11,40 @@ import UIKit
 class StrelkaViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
+    let host = "https://strelkacard.ru/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
+        prepareNav()
+        loadStart()
+        prepareHandlers()
+    }
+    
+    func prepareNav() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont(name: "Cffazmiakhaddpiofffvylaqekz", size: 24.5)!,
                                                                         NSForegroundColorAttributeName : UIColor.white]
         
-        self.navigationItem.title = "Стрелка"
+        self.navigationItem.title = kStrelka 
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-        
-        self.webView.loadRequest(URLRequest(url: URL(string: "https://strelkacard.ru/")!))
+    }
+    
+    func loadStart() {
+        webView.loadRequest(URLRequest(url: URL(string: host)!))
+    }
+    
+    func resetIfNeed() {
+        if host != webView.request?.url?.absoluteURL.absoluteString {
+            loadStart()
+        }
+    }
+    
+    func prepareHandlers() {
+        RNSMenuManager.handlerStrelkaUpdate = { [weak self] in
+            self?.resetIfNeed()
+        }
     }
 
     override class var storyboardName: String {

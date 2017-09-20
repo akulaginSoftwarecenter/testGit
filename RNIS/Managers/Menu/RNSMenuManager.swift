@@ -11,6 +11,7 @@ import UIKit
 class RNSMenuManager: NSObject {
     
     static var handlerLeftMenuUpdate: EmptyBlock?
+    static var handlerStrelkaUpdate: EmptyBlock?
     
     static let shared = RNSMenuManager()
     
@@ -23,7 +24,7 @@ class RNSMenuManager: NSObject {
                      MenuItem("Оповещения", NotificationsViewController.initialController, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem("Новости", NewsViewController.initialController, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", SettingsViewController.initialController, #imageLiteral(resourceName: "menuSettingsIcon")),
-                     MenuItem("Стрелка", StrelkaViewController.initialController, #imageLiteral(resourceName: "menuCreditcardIcon")),
+                     MenuItem( kStrelka, StrelkaViewController.initialController, #imageLiteral(resourceName: "menuCreditcardIcon")),
                      MenuItem("Информация", STRouter.redContainer(MainInfoViewController.initialController), #imageLiteral(resourceName: "menuInfoIcon"))]
     
     lazy var profileVC: UIViewController? = {
@@ -50,6 +51,6 @@ class RNSMenuManager: NSObject {
     }
     
     static func leftMenuUpdate() {
-        RNSMenuManager.handlerLeftMenuUpdate?()
+        handlerLeftMenuUpdate?()
     }
 }

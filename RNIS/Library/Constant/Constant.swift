@@ -22,4 +22,5 @@ let kPhoneVC = "RNSPhoneViewController"
 let kCodeVC = "RNSCodeViewController"
 let kParoleVC = "RNSParoleViewController"
 let kUuid = "uuid"
+let kStrelka = "Стрелка"
 
