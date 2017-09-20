@@ -50,6 +50,14 @@ extension RNSScrollShowContainer {
         })
     }
     
+    var rangeHalfBottom: RNSRangeScroll {
+        return RNSRangeScroll(bottomOffset...halfOffset, handlerOne: { [weak self] in
+            self?.scrollToTop()
+            }, handlerTwo: { [weak self] in
+                self?.dismiss()
+        })
+    }
+    
     func checkRange(_ ranges: [RNSRangeScroll], complete: AliasRangeBlock?) {
         let offset = offsetY
         for item in ranges {

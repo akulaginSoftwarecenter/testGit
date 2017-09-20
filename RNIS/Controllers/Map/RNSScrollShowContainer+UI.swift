@@ -16,6 +16,12 @@ extension RNSScrollShowContainer {
         prepareTitle()
         prepareButtonTop()
         prepareScrollView()
+        prepareHiddenIfNeed()
+    }
+    
+    func prepareHiddenIfNeed() {
+        imageSlide.isHidden = hideImageSlide
+        coverBotton.isHidden = hideCoverBotton
     }
     
     func prepareButtonTop() {

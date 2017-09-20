@@ -27,6 +27,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     var topTitle: String?
     @IBOutlet weak var topTitleLabel: UILabel!
     @IBOutlet weak var coverBotton: UIButton!
+    @IBOutlet weak var imageSlide: UIImageView!
     
     var containerVC: UIViewController?
     
@@ -47,7 +48,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     }()
     
     lazy var rangesSwipe: [RNSRangeScroll] = {
-        return [self.rangeHalfTop, self.rangeHalfAlmost]
+        return [self.rangeHalfTop, self.rangeHalfBottom]
     }()
     
     override func viewDidLoad() {
@@ -60,7 +61,6 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
         super.viewDidAppear(animated)
         
         scrollToStart()
-        
     }
     
     override class var storyboardName: String {
@@ -68,7 +68,15 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     }
     
     func dismiss() {
-       scrollToBottom()
-       RNSMapManager.handlerDismissOldPresentVC?()
+        guard allowHideBottom else {
+            scrollToStart()
+            return
+        }
+        scrollToBottom()
+        RNSMapManager.handlerDismissOldPresentVC?()
     }
+    
+    var hideImageSlide = false
+    var hideCoverBotton = false
+    var allowHideBottom = true
 }

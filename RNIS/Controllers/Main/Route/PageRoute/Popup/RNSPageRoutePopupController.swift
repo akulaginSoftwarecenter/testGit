@@ -12,8 +12,11 @@ class RNSPageRoutePopupController: UIViewController {
     
     static var initController: UIViewController? {
         let vc = RNSPageRoutePopupController.controller as? RNSPageRoutePopupController
-
-        let container = STRouter.scrollShowContainer(vc)
+        let container = RNSScrollShowContainer.initController(vc)
+        
+        container?.hideImageSlide = true
+        container?.hideCoverBotton = true
+        container?.allowHideBottom = false
         /*
         container?.handlerRect = vc?.prepareViews(_:)
         container?.heightCoverButtonTop = 130
