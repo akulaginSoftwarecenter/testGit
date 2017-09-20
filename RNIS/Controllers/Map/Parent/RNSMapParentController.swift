@@ -15,6 +15,7 @@ class RNSMapParentController: UIViewController {
     var mapView: MapView {
         return RNSMapManager.mapView
     }
+    @IBOutlet weak var labelZoom: UILabel!
     
     var handlerOnMapEvent: EmptyBlock?
     var handlerOnMapTouchEvent: AliasPointBlock?
@@ -31,6 +32,11 @@ class RNSMapParentController: UIViewController {
         
         RNSMapManager.startLocation()
         prepareTargetIcon()
+        updateZoom()
+    }
+    
+    func updateZoom() {
+        labelZoom.text = "zoom = \(mapView.getZoomLevel())"
     }
     
     func prepareTargetIcon() {

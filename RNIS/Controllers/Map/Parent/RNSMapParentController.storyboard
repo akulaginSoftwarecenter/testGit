@@ -134,6 +134,11 @@
                                     <action selector="actionTest:" destination="WmS-dc-ejs" eventType="touchUpInside" id="PhS-jA-Rlr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB6-uO-BP7">
+                                <rect key="frame" x="8" y="16" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -144,19 +149,23 @@
                             <constraint firstItem="qQT-9R-h05" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="centerY" constant="3" id="Mvc-EE-7Rl"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="centerY" priority="750" constant="5" id="N3Y-OY-fe4"/>
                             <constraint firstItem="AxG-am-Q4N" firstAttribute="centerX" secondItem="KLT-DT-BPk" secondAttribute="centerX" id="Ngc-7n-4NX"/>
+                            <constraint firstItem="UB6-uO-BP7" firstAttribute="leading" secondItem="6bh-fW-otG" secondAttribute="leading" constant="8" id="WJa-GV-9Iq"/>
                             <constraint firstItem="q8S-DH-CIL" firstAttribute="top" secondItem="5dG-yE-KFg" secondAttribute="bottom" constant="16" id="a2M-Zj-Dit"/>
                             <constraint firstItem="qQT-9R-h05" firstAttribute="leading" secondItem="6bh-fW-otG" secondAttribute="leading" constant="8" id="a70-8y-Acy"/>
                             <constraint firstAttribute="trailing" secondItem="q8S-DH-CIL" secondAttribute="trailing" constant="8" id="dEx-V3-JvK"/>
                             <constraint firstItem="AxG-am-Q4N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KLT-DT-BPk" secondAttribute="bottom" constant="3" id="nmy-wf-aYS"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="centerY" secondItem="qQT-9R-h05" secondAttribute="centerY" constant="3" id="oFm-P4-gGM"/>
                             <constraint firstItem="lsn-cY-i8Z" firstAttribute="bottom" secondItem="6bh-fW-otG" secondAttribute="centerY" id="ptc-mA-Jsj"/>
+                            <constraint firstItem="UB6-uO-BP7" firstAttribute="top" secondItem="6bh-fW-otG" secondAttribute="top" constant="16" id="rmE-KB-22v"/>
                             <constraint firstItem="f5X-SA-iTE" firstAttribute="bottom" secondItem="6bh-fW-otG" secondAttribute="centerY" constant="2" id="tQF-4e-Rgt"/>
+                            <constraint firstItem="UB6-uO-BP7" firstAttribute="top" secondItem="5dG-yE-KFg" secondAttribute="bottom" constant="8" id="uZK-id-W99"/>
                             <constraint firstItem="qQT-9R-h05" firstAttribute="top" secondItem="lsn-cY-i8Z" secondAttribute="bottom" constant="2" id="yxu-Es-H0F"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="centerX" secondItem="f5X-SA-iTE" secondAttribute="centerX" id="zE3-Rr-osR"/>
                             <constraint firstItem="KLT-DT-BPk" firstAttribute="top" secondItem="f5X-SA-iTE" secondAttribute="bottom" constant="3" id="zsz-tL-7f4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="uZK-id-W99"/>
                                 <exclude reference="ptc-mA-Jsj"/>
                                 <exclude reference="a2M-Zj-Dit"/>
                                 <exclude reference="Mvc-EE-7Rl"/>
@@ -166,6 +175,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomTarget" destination="17Y-GM-lQ8" id="0Zt-Xk-iqf"/>
+                        <outlet property="labelZoom" destination="UB6-uO-BP7" id="KOU-tc-6cO"/>
                         <outlet property="lightButton" destination="lsn-cY-i8Z" id="nyR-51-nf4"/>
                     </connections>
                 </viewController>
@@ -351,7 +361,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-cV-S8G">
-                                                    <rect key="frame" x="15" y="14" width="360" height="20"/>
+                                                    <rect key="frame" x="15" y="14.5" width="360" height="20"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>

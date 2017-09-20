@@ -23,6 +23,7 @@ extension RNSMapParentController: PGMapViewDelegate {
     
     func onMapEvent() {
         lightButton.updateStateLightButton()
+        updateZoom()
         handlerOnMapEvent?()
     }
     
