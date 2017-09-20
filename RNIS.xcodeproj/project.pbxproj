@@ -488,6 +488,7 @@
 		83D370081F6FA979008F6A0F /* RNSStopPointRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D370071F6FA979008F6A0F /* RNSStopPointRoutes.swift */; };
 		83D3700B1F6FAB6D008F6A0F /* RNSBusRouteTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D3700A1F6FAB6D008F6A0F /* RNSBusRouteTemp.swift */; };
 		83D3700E1F6FAC41008F6A0F /* RNSStopPointRoutesPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D3700D1F6FAC41008F6A0F /* RNSStopPointRoutesPayload.swift */; };
+		83D492131F72226400A32C4B /* StrelkaViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D492121F72226400A32C4B /* StrelkaViewController+Delegate.swift */; };
 		83D62B711F4D484500246DFA /* RNSRoadBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B701F4D484500246DFA /* RNSRoadBus.swift */; };
 		83D62B731F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */; };
 		83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */; };
@@ -986,6 +987,7 @@
 		83D370071F6FA979008F6A0F /* RNSStopPointRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSStopPointRoutes.swift; path = POST/StopPointRoutes/RNSStopPointRoutes.swift; sourceTree = "<group>"; };
 		83D3700A1F6FAB6D008F6A0F /* RNSBusRouteTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBusRouteTemp.swift; path = Models/Temp/BusRouteTemp/RNSBusRouteTemp.swift; sourceTree = "<group>"; };
 		83D3700D1F6FAC41008F6A0F /* RNSStopPointRoutesPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSStopPointRoutesPayload.swift; path = Models/Temp/Reply/StopPointRoutes/RNSStopPointRoutesPayload.swift; sourceTree = "<group>"; };
+		83D492121F72226400A32C4B /* StrelkaViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StrelkaViewController+Delegate.swift"; sourceTree = "<group>"; };
 		83D62B701F4D484500246DFA /* RNSRoadBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadBus.swift; path = Views/Polylines/RoadBus/RNSRoadBus.swift; sourceTree = "<group>"; };
 		83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+RoadActivate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+RoadActivate.swift"; sourceTree = "<group>"; };
 		83D7137B1F5D0076005206C5 /* RNSBlackMoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSBlackMoveButton.swift; path = Views/Buttons/BlackMoveButton/RNSBlackMoveButton.swift; sourceTree = "<group>"; };
@@ -1479,6 +1481,7 @@
 			isa = PBXGroup;
 			children = (
 				83204B5D1F5924800033ACA1 /* StrelkaViewController.swift */,
+				83D492121F72226400A32C4B /* StrelkaViewController+Delegate.swift */,
 				83204B5F1F5924A30033ACA1 /* StrelkaViewController.storyboard */,
 			);
 			name = Strelka;
@@ -4415,6 +4418,7 @@
 				830E68AB1F5513BB008EFA02 /* RNSDurationItem.swift in Sources */,
 				835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */,
 				83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,
+				83D492131F72226400A32C4B /* StrelkaViewController+Delegate.swift in Sources */,
 				835D85371F4FC82F00B83EB2 /* RNSDotRun.swift in Sources */,
 				83F555341F5562B300D1221C /* RNSRouteStillCell.swift in Sources */,
 				832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,

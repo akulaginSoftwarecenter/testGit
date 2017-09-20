@@ -13,6 +13,12 @@ class StrelkaViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     let host = "https://strelkacard.ru/"
     
+    lazy var loaderView: LoaderView = {
+        let view = LoaderView()
+        view.isUserInteractionEnabled = false
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -32,6 +38,7 @@ class StrelkaViewController: UIViewController {
     }
     
     func loadStart() {
+        loaderView.showInView(self.view)
         webView.loadRequest(URLRequest(url: URL(string: host)!))
     }
     
@@ -46,7 +53,7 @@ class StrelkaViewController: UIViewController {
             self?.resetIfNeed()
         }
     }
-
+ 
     override class var storyboardName: String {
         return "StrelkaViewController"
     }
