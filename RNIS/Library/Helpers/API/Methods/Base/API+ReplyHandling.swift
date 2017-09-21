@@ -30,7 +30,7 @@ extension API
     /**
      Return Reply
      */
-    func apiDidReturnReply(_ reply: AnyObject, source: AnyObject)
+    @objc func apiDidReturnReply(_ reply: AnyObject, source: AnyObject)
     {
         lastReply = reply
         lastError = nil
@@ -45,7 +45,7 @@ extension API
     /**
      return error
      */
-    func apiDidFailWithError(_ error: NSError)
+    @objc func apiDidFailWithError(_ error: NSError)
     {
         lastReply = nil
         lastError = error
@@ -64,7 +64,7 @@ extension API
     /**
      re AuthorizeUser if need
      */
-    func reAuthorizeUser()
+    @objc func reAuthorizeUser()
     {   /*
         print("reAuthorizeUser")
         SLTAuthManager.reAuthorizeImeI({ (_) in
@@ -77,7 +77,7 @@ extension API
         */
     }
     
-    func apiDidEnd() {
+    @objc func apiDidEnd() {
        //completion = nil
     }
 }

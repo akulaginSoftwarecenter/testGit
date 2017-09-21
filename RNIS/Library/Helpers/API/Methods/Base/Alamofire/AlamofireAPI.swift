@@ -52,7 +52,7 @@ class AlamofireAPI: API {
         return urlRequest
     }
 
-    func prepareURLRequest(_ request: URLRequest) -> URLRequest {
+    @objc func prepareURLRequest(_ request: URLRequest) -> URLRequest {
         // This is a point to customize URL request
         // E.g. set timeout interval or cache policy
         var mutableRequest = request
@@ -119,7 +119,7 @@ extension AlamofireAPI {
         return String(format: "%@, path:%@", super.description, path)
     }
     
-    func superError() {
+    @objc func superError() {
         super.apiDidFailWithError(NSError(domain: "error", code: 0, userInfo: [:]))
     }
 }

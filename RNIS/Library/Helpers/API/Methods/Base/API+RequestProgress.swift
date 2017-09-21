@@ -27,11 +27,11 @@ extension API {
     /**
      Cancels request
      */
-    func cancel() {
+    @objc func cancel() {
         preconditionFailure("Concrete API object should override cancel method like 'alamofireRequest?.cancel()'")
     }
     
-    var isShowLogReply: Bool {
+    @objc var isShowLogReply: Bool {
         return showLogApi
     }
 
