@@ -17,12 +17,12 @@ extension RNSPageRoutePopupController {
     
     func prepareEnterViewController() {
         updateCurrentItem()
+        containerController?.handlerBack = { [weak self] in
+            self?.handlerDetailBack?()
+        }
     }
     
     func updateCurrentItem() {
         containerController?.item = RNSPageRouteManager.currentItem?.tableItem
-        containerController?.handlerBack = { [weak self] in
-            self?.handlerDetailBack?()
-        }
     }
 }

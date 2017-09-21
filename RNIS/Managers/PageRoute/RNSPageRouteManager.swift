@@ -11,6 +11,7 @@ import UIKit
 class RNSPageRouteManager: NSObject {
     
     static var handlerUpdateCurrent: EmptyBlock?
+    static var handlerUpdateCurrentTwo: EmptyBlock?
     
     static var items: [RNSRouteVariant]? {
         didSet {

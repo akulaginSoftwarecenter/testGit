@@ -25,6 +25,7 @@ extension RNSPageRouteManager {
         self.currentItem = currentItem
         
         updateRoads()
+        handlerUpdateCurrentTwo?()
     }
     
     static func updateRoads() {

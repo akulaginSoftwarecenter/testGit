@@ -2153,6 +2153,7 @@
 		83674FDA1F56CA7E00F0A2C0 /* MoveMap */ = {
 			isa = PBXGroup;
 			children = (
+				83A308131F7370BE0098FAD7 /* Popup */,
 				83A5C6EB1F57F333006C8D62 /* Details */,
 				83674FDB1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift */,
 				83674FDD1F56CCA000F0A2C0 /* RNSMoveMapViewController+MapView.swift */,
@@ -3275,6 +3276,13 @@
 				839BCE051F32EFA400B5CA88 /* RNSTopTitle.swift */,
 			);
 			name = TopTitle;
+			sourceTree = "<group>";
+		};
+		83A308131F7370BE0098FAD7 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Popup;
 			sourceTree = "<group>";
 		};
 		83A53F811F4A90FE00938969 /* PageRoute */ = {

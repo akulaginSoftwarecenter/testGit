@@ -10,7 +10,13 @@ import UIKit
 
 class RNSRouteDetailController: UIViewController {
     
-    var item: RNSRouteTable?
+    var item: RNSRouteTable? {
+        didSet {
+            if detailView != nil {
+                prepareDetailView()
+            }
+        }
+    }
     
     var handlerBack: EmptyBlock?
     
@@ -26,6 +32,10 @@ class RNSRouteDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareDetailView()
+    }
+    
+    func prepareDetailView() {
         detailView.item = item
     }
     

@@ -34,6 +34,18 @@ class RNSPageRoutePopupController: UIViewController {
     var handlerDetailBack: EmptyBlock?
     var startBottomOffset: CGFloat?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        prepareHanlders()
+    }
+    
+    func prepareHanlders() {
+        RNSPageRouteManager.handlerUpdateCurrentTwo = {[weak self] in
+            self?.updateCurrentItem()
+        }
+    }
+    
     override class var storyboardName: String {
         return "RNSRouteDetailController"
     }
