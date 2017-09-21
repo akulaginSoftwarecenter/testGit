@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactsInfoTableViewCell: UITableViewCell {
+class ContactsInfoTableViewCell: RNSBaseTableCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var descr: UILabel!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationTableViewCell: UITableViewCell {
+class NotificationTableViewCell: RNSBaseTableCell {
 
     
     @IBOutlet weak var autoNumberLabel: UILabel!

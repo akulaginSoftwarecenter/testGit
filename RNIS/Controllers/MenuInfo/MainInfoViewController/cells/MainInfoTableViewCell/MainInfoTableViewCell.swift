@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainInfoTableViewCell: UITableViewCell {
+class MainInfoTableViewCell: RNSBaseTableCell {
 
     @IBOutlet weak var title: UILabel!
 

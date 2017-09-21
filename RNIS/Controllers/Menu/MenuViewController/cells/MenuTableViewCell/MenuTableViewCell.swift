@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuTableViewCell: UITableViewCell {
+class MenuTableViewCell: RNSBaseTableCell {
     
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
