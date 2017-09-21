@@ -123,6 +123,9 @@
 		832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */; };
 		832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
 		832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
+		833609781F73758000B42333 /* RNSMovePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609771F73758000B42333 /* RNSMovePopupController.swift */; };
+		8336097A1F7378BF00B42333 /* RNSMovePopupController+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */; };
+		8336097C1F737A8E00B42333 /* RNSMovePopupController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */; };
 		8344E1CB1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */; };
 		8344E1CF1F397F1B004A6F0C /* RNSRangeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1CE1F397F1B004A6F0C /* RNSRangeScroll.swift */; };
 		8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */; };
@@ -648,6 +651,9 @@
 		832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputFieldsValidator+Validation.swift"; sourceTree = "<group>"; };
 		832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldsValidator.swift; sourceTree = "<group>"; };
 		832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Utils.swift"; sourceTree = "<group>"; };
+		833609771F73758000B42333 /* RNSMovePopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSMovePopupController.swift; path = Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift; sourceTree = "<group>"; };
+		833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSMovePopupController+Observe.swift"; path = "Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Observe.swift"; sourceTree = "<group>"; };
+		8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSMovePopupController+Container.swift"; path = "Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Container.swift"; sourceTree = "<group>"; };
 		8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Ranges.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Ranges.swift"; sourceTree = "<group>"; };
 		8344E1CE1F397F1B004A6F0C /* RNSRangeScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRangeScroll.swift; path = Models/HelpersModel/RangeScroll/RNSRangeScroll.swift; sourceTree = "<group>"; };
 		8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+ScrollView.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+ScrollView.swift"; sourceTree = "<group>"; };
@@ -1385,13 +1391,6 @@
 				831E426A1F46B7CD0016C7D3 /* RNSTableStopsModel.swift */,
 			);
 			name = StopsModel;
-			sourceTree = "<group>";
-		};
-		831E6F1B1F725C4700122C4D /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		831E6F1D1F725C7E00122C4D /* Popup */ = {
@@ -3281,6 +3280,9 @@
 		83A308131F7370BE0098FAD7 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
+				833609771F73758000B42333 /* RNSMovePopupController.swift */,
+				8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */,
+				833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */,
 			);
 			name = Popup;
 			sourceTree = "<group>";
@@ -3289,7 +3291,6 @@
 			isa = PBXGroup;
 			children = (
 				831E6F1D1F725C7E00122C4D /* Popup */,
-				831E6F1B1F725C4700122C4D /* New Group */,
 				830E68B41F552B8E008EFA02 /* Detail */,
 				83A53F821F4A918200938969 /* RNSPageRouteController.swift */,
 				8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */,
@@ -4337,6 +4338,7 @@
 				837857F31F4E7E6F009DEA26 /* RNSPostLogout.swift in Sources */,
 				837ABF261F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */,
 				83E183961F440253005912C5 /* RNSAddressCell.swift in Sources */,
+				8336097C1F737A8E00B42333 /* RNSMovePopupController+Container.swift in Sources */,
 				838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
@@ -4474,6 +4476,7 @@
 				8329DF581F340F1200D542FF /* RNSParentContainer.swift in Sources */,
 				83ED5E2A1F270383007D9F1C /* RNSMapManager+OverLays.swift in Sources */,
 				836E693C1F5E49E6003D9D46 /* RNSBusTemp+Random.swift in Sources */,
+				8336097A1F7378BF00B42333 /* RNSMovePopupController+Observe.swift in Sources */,
 				836E91B11F58F987007CCF5A /* MenuTableViewCell.swift in Sources */,
 				835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */,
 				83AA6A5C1F5668C000B2139C /* ContactsInfoTableViewCell.swift in Sources */,
@@ -4521,6 +4524,7 @@
 				836A9D7A1F62573F00B5EB55 /* RNSPostFeedback.swift in Sources */,
 				837857F51F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
+				833609781F73758000B42333 /* RNSMovePopupController.swift in Sources */,
 				83AA6A331F565D5D00B2139C /* RNSRouteTable+Still.swift in Sources */,
 				836277CB1F380C48009FB712 /* RNSChangeCodeController.swift in Sources */,
 				83AFEB5B1F6A364500C2A251 /* RNSForecastCell.swift in Sources */,

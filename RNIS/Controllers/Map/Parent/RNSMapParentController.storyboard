@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -348,7 +349,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-cV-S8G">
-                                                    <rect key="frame" x="15" y="14.5" width="360" height="20"/>
+                                                    <rect key="frame" x="15" y="12.5" width="360" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -437,7 +438,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftContentOffset">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -448,43 +449,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KW4-Wx-OW8">
-                                <rect key="frame" x="0.0" y="593" width="375" height="74"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="SHz-uu-UcA"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="actionDots:" destination="b0S-Li-6J8" eventType="touchUpInside" id="MOL-h8-qf9"/>
-                                </connections>
-                            </button>
-                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFW-15-5bk" customClass="RNSDotsBussView" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="18" y="593" width="339" height="74"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o5L-c8-3KN" firstAttribute="top" secondItem="Vme-aL-EXW" secondAttribute="bottom" id="0ji-Ok-Vbg"/>
                             <constraint firstAttribute="trailing" secondItem="Vme-aL-EXW" secondAttribute="trailing" id="D8l-ci-uEg"/>
                             <constraint firstItem="2q1-O1-bJY" firstAttribute="leading" secondItem="fPu-Dp-LFb" secondAttribute="leading" id="ISs-nE-n2u"/>
-                            <constraint firstAttribute="bottom" secondItem="KW4-Wx-OW8" secondAttribute="bottom" id="JaR-5b-cIw"/>
-                            <constraint firstItem="KFW-15-5bk" firstAttribute="leading" secondItem="KW4-Wx-OW8" secondAttribute="leading" constant="18" id="Onb-2m-5IC"/>
                             <constraint firstItem="Vme-aL-EXW" firstAttribute="top" secondItem="fPu-Dp-LFb" secondAttribute="top" id="Pd0-n4-Qez"/>
-                            <constraint firstAttribute="trailing" secondItem="KW4-Wx-OW8" secondAttribute="trailing" id="R3X-Q0-BVa"/>
-                            <constraint firstItem="KW4-Wx-OW8" firstAttribute="leading" secondItem="fPu-Dp-LFb" secondAttribute="leading" id="SQx-aK-KQQ"/>
                             <constraint firstAttribute="trailing" secondItem="2q1-O1-bJY" secondAttribute="trailing" id="T6q-ec-I8l"/>
                             <constraint firstItem="Vme-aL-EXW" firstAttribute="leading" secondItem="fPu-Dp-LFb" secondAttribute="leading" id="bQ9-5a-gHb"/>
-                            <constraint firstItem="KFW-15-5bk" firstAttribute="trailing" secondItem="KW4-Wx-OW8" secondAttribute="trailing" constant="-18" id="eDh-Ga-BTz"/>
-                            <constraint firstItem="KFW-15-5bk" firstAttribute="top" secondItem="KW4-Wx-OW8" secondAttribute="top" id="ifP-cO-XG1"/>
                             <constraint firstItem="2q1-O1-bJY" firstAttribute="top" secondItem="fPu-Dp-LFb" secondAttribute="top" id="mDS-au-wux"/>
-                            <constraint firstItem="KFW-15-5bk" firstAttribute="bottom" secondItem="KW4-Wx-OW8" secondAttribute="bottom" id="oXe-qH-qBm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonDown" destination="KW4-Wx-OW8" id="1T5-iO-csU"/>
                         <outlet property="viewTop" destination="2q1-O1-bJY" id="92z-gd-S94"/>
-                        <outlet property="viewVariant" destination="KFW-15-5bk" id="IrX-Qu-eop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMM-ng-7ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -503,6 +481,6 @@
         <image name="plus" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RF6-Z6-9Gv"/>
+        <segue reference="X9n-Pb-O8k"/>
     </inferredMetricsTieBreakers>
 </document>

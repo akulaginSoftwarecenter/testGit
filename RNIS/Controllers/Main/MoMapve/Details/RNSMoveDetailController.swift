@@ -11,10 +11,11 @@ import UIKit
 class RNSMoveDetailController: UIViewController {
     
     var item: RNSRouteTable?
+    var handlerBack: EmptyBlock?
     
     @IBOutlet weak var detailView: RNSRouteDetailView!
     
-    static func initController(_ item: RNSRouteTable?) -> UIViewController?  {
+    static func initController(_ item: RNSRouteTable?) -> RNSMoveDetailController?  {
         let vc = RNSMoveDetailController.initialController as? RNSMoveDetailController
         vc?.item = item
         return vc
@@ -29,6 +30,10 @@ class RNSMoveDetailController: UIViewController {
     
     override class var storyboardName: String {
         return "RNSMoveDetailController"
+    }
+    
+    @IBAction func actionBack(_ sender: Any) {
+        handlerBack?()
     }
     
     deinit {

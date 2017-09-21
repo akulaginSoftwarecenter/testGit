@@ -9,11 +9,8 @@
 import UIKit
 
 class RNSMoveMapViewController: UIViewController {
-    
-    @IBOutlet weak var viewVariant: RNSDotsBussView!
 
     @IBOutlet weak var viewTop: UIView!
-    @IBOutlet weak var buttonDown: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +19,25 @@ class RNSMoveMapViewController: UIViewController {
         prepareColor()
         
         prepareStub()
+        preparePopup()
+    }
+    
+    func preparePopup() {
+        guard let containerVC = RNSMovePopupController.initController,
+            let containerView = containerVC.view else {
+                return
+        }
+        addChildViewController(containerVC)
+        view.addSubview(containerView)
+        containerView.autoPinEdgesToSuperviewEdges()
     }
     
     func prepareStub() {
-        RNSPageRouteManager.prepareFirstNavel(523)
-        
         item?.points.first?.doneMove = true
-        viewVariant.item = item
+        RNSPageRouteManager.prepareFirstNavel(523)
     }
     
     func prepareColor() {
-        buttonDown.backgroundColor = .backColor
         viewTop.backgroundColor = .backColor
     }
     
@@ -47,9 +52,5 @@ class RNSMoveMapViewController: UIViewController {
     deinit {
         RNSPageRouteManager.updateRoads()
         RNSPageRouteManager.prepareFirstNavel(nil)
-    }
-    
-    @IBAction func actionDots(_ sender: Any) {
-        RNSMoveDetailController.initController(item?.tableItem)?.pushAnimatedRed()
     }
 }

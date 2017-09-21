@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gSC-sH-Q3x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gSC-sH-Q3x">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,6 +27,15 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="actionDefault" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionBack:" destination="gSC-sH-Q3x" eventType="touchUpInside" id="TVd-0c-S7i"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOc-uu-lmV">
                                 <rect key="frame" x="305" y="0.0" width="70" height="97"/>
@@ -72,6 +82,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6J-Jq-l2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="169" y="61"/>
+        </scene>
+        <!--Move Popup Controller-->
+        <scene sceneID="smj-RZ-QuX">
+            <objects>
+                <viewController storyboardIdentifier="RNSMovePopupController" id="sGb-H0-SGf" customClass="RNSMovePopupController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uFi-fa-XWO"/>
+                        <viewControllerLayoutGuide type="bottom" id="JHB-Lh-gkn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KO7-mf-jZG" customClass="RNSBackGroundView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMa-td-jMz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="gSC-sH-Q3x" kind="embed" id="wzY-YV-fD7"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrB-hn-tas">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="6kO-cp-QQk"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="actionDots:" destination="sGb-H0-SGf" eventType="touchUpInside" id="xmJ-MY-Gfi"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyg-fG-nwV" customClass="RNSDotsBussView" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="18" y="0.0" width="339" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bMa-td-jMz" secondAttribute="bottom" id="71m-NA-bFo"/>
+                            <constraint firstItem="UrB-hn-tas" firstAttribute="top" secondItem="KO7-mf-jZG" secondAttribute="top" id="Mom-Bq-Qtl"/>
+                            <constraint firstItem="gyg-fG-nwV" firstAttribute="bottom" secondItem="UrB-hn-tas" secondAttribute="bottom" id="N3B-wr-YsX"/>
+                            <constraint firstItem="gyg-fG-nwV" firstAttribute="top" secondItem="UrB-hn-tas" secondAttribute="top" id="TvT-8c-sPy"/>
+                            <constraint firstAttribute="trailing" secondItem="UrB-hn-tas" secondAttribute="trailing" id="XGR-AF-sq2"/>
+                            <constraint firstItem="gyg-fG-nwV" firstAttribute="trailing" secondItem="UrB-hn-tas" secondAttribute="trailing" constant="-18" id="ir5-Um-xAr"/>
+                            <constraint firstItem="bMa-td-jMz" firstAttribute="leading" secondItem="KO7-mf-jZG" secondAttribute="leading" id="nA9-8v-Xub"/>
+                            <constraint firstItem="gyg-fG-nwV" firstAttribute="leading" secondItem="UrB-hn-tas" secondAttribute="leading" constant="18" id="pv8-F8-ObP"/>
+                            <constraint firstAttribute="trailing" secondItem="bMa-td-jMz" secondAttribute="trailing" id="rgE-I2-2x9"/>
+                            <constraint firstItem="bMa-td-jMz" firstAttribute="top" secondItem="KO7-mf-jZG" secondAttribute="top" id="rgO-kl-PX4"/>
+                            <constraint firstItem="UrB-hn-tas" firstAttribute="leading" secondItem="KO7-mf-jZG" secondAttribute="leading" id="yKx-L6-eh4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonDown" destination="UrB-hn-tas" id="U9E-Um-JKy"/>
+                        <outlet property="containerView" destination="bMa-td-jMz" id="jJL-mT-UmF"/>
+                        <outlet property="viewVariant" destination="gyg-fG-nwV" id="ck2-IY-tGX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQV-xM-8O8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="-682"/>
         </scene>
     </scenes>
     <resources>
