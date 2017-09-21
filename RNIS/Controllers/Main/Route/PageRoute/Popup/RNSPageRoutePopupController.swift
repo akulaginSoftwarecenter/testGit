@@ -20,37 +20,19 @@ class RNSPageRoutePopupController: UIViewController {
         container?.hideCoverBotton = true
         container?.allowHideBottom = false
         container?.heightTopView = 0
+        container?.handlerRect = vc?.prepareViews(_:)
         
         vc?.handlerDetailBack = {
             container?.scrollToStart()
         }
-        /*
-        container?.handlerRect = vc?.prepareViews(_:)
-        container?.heightCoverButtonTop = 130
-        
         vc?.startBottomOffset = container?.startBottomOffset
-        let contentInsetBottom = CGFloat(80)
-        container?.contentInsetBottom = contentInsetBottom
-        if let bottomView = vc?.bottomView,
-            let containerView = container?.view {
-            containerView.addSubview(bottomView)
-            bottomView.snp.makeConstraints({ (make) in
-                make.bottom.left.right.equalTo(containerView)
-                make.height.equalTo(contentInsetBottom)
-            })
-        }
- */
         return  container
     }
-    
-    var handlerDetailBack: EmptyBlock?
-    
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageView: RNSPageRouteView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("viewDidLoad RNSPageRoutePopupController")
-    }
+    var handlerDetailBack: EmptyBlock?
+    var startBottomOffset: CGFloat?
     
     override class var storyboardName: String {
         return "RNSRouteDetailController"
