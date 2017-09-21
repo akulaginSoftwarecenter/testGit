@@ -27,8 +27,8 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont(name: "Cffazmiakhaddpiofffvylaqekz", size: 24.5)!,
-                                                                        NSForegroundColorAttributeName : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font : UIFont(name: "Cffazmiakhaddpiofffvylaqekz", size: 24.5)!,
+                                                                        NSAttributedStringKey.foregroundColor : UIColor.white]
         
         self.navigationItem.title = "Оповещения"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)

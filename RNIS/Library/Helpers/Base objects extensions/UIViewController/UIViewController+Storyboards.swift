@@ -23,7 +23,7 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier)
     }
     
-    class var storyboardName: String {
+    @objc class var storyboardName: String {
         return "Main"
     }
     

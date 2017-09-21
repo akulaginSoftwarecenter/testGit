@@ -148,7 +148,7 @@ protocol ParsableObject {
 }
 
 extension NSObject: ParsableObject {
-    func valueForAPI() -> AnyObject {
+    @objc func valueForAPI() -> AnyObject {
         return self
     }
 }

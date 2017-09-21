@@ -16,7 +16,7 @@ class RNSMenuBarItem: UIBarButtonItem {
         action = #selector(actionTap)
     }
     
-    func actionTap() {
+    @objc func actionTap() {
         RNSMenuManager.showLeftMenu()
     }
 }

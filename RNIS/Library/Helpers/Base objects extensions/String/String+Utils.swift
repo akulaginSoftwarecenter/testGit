@@ -28,9 +28,9 @@ extension String{
     func rectWithFont(_ font: UIFont, size: CGSize) -> CGRect {
         let style = NSMutableParagraphStyle()
         style.lineBreakMode = .byWordWrapping
-        let attributes = [NSForegroundColorAttributeName:UIColor.black,
-                          NSFontAttributeName:font,
-                          NSParagraphStyleAttributeName:style];
+        let attributes = [NSAttributedStringKey.foregroundColor:UIColor.black,
+                          NSAttributedStringKey.font:font,
+                          NSAttributedStringKey.paragraphStyle:style];
         return self.boundingRect(with: size, options: [.usesLineFragmentOrigin,.usesFontLeading]
             , attributes: attributes, context: nil)
     }
