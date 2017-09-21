@@ -10,6 +10,7 @@ import UIKit
 
 class RNSRouteDetailController: UIViewController {
     
+    @IBOutlet weak var flagView: RNSFlagButton!
     var item: RNSRouteVariant? {
         didSet {
             if detailView != nil {
@@ -33,6 +34,7 @@ class RNSRouteDetailController: UIViewController {
         super.viewDidLoad()
         
         prepareDetailView()
+        prepareFlagView()
     }
     
     func prepareDetailView() {

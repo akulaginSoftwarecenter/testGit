@@ -37,14 +37,6 @@
                                     <action selector="actionBack:" destination="gSC-sH-Q3x" eventType="touchUpInside" id="TVd-0c-S7i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOc-uu-lmV">
-                                <rect key="frame" x="305" y="0.0" width="70" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="50X-tr-ltf"/>
-                                    <constraint firstAttribute="height" constant="97" id="BKs-Xd-dkC"/>
-                                </constraints>
-                                <state key="normal" image="flag2"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Детали маршрута" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKR-me-cVa" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="104" y="24" width="71" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,27 +48,23 @@
                                 <rect key="frame" x="29" y="61" width="317" height="606"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZR3-oV-SfX" customClass="RNSFlagButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="304" y="-3" width="70" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="mOc-uu-lmV" secondAttribute="trailing" id="6gL-EI-eKw"/>
                             <constraint firstItem="aqv-T5-qjQ" firstAttribute="top" secondItem="kJ4-zL-A5P" secondAttribute="top" constant="61" id="AUP-UU-1l1"/>
-                            <constraint firstItem="aqv-T5-qjQ" firstAttribute="top" secondItem="mOc-uu-lmV" secondAttribute="bottom" constant="61" id="IQO-wd-1Nq"/>
                             <constraint firstAttribute="trailing" secondItem="aqv-T5-qjQ" secondAttribute="trailing" constant="29" id="IpL-tO-O12"/>
                             <constraint firstItem="aqv-T5-qjQ" firstAttribute="leading" secondItem="kJ4-zL-A5P" secondAttribute="leading" constant="29" id="U0u-dQ-DrV"/>
-                            <constraint firstItem="mOc-uu-lmV" firstAttribute="top" secondItem="kJ4-zL-A5P" secondAttribute="top" id="baA-69-Hic"/>
-                            <constraint firstItem="aqv-T5-qjQ" firstAttribute="top" secondItem="mOc-uu-lmV" secondAttribute="bottom" constant="61" id="cl9-4D-rAQ"/>
                             <constraint firstItem="hdO-7D-YFc" firstAttribute="top" secondItem="aqv-T5-qjQ" secondAttribute="bottom" id="oBi-Xm-amo"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="IQO-wd-1Nq"/>
-                                <exclude reference="cl9-4D-rAQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="detailView" destination="aqv-T5-qjQ" id="eG3-SK-5YN"/>
+                        <outlet property="flagView" destination="ZR3-oV-SfX" id="997-8t-mO4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6J-Jq-l2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,7 +130,4 @@
             <point key="canvasLocation" x="169" y="-682"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="flag2" width="20" height="24"/>
-    </resources>
 </document>

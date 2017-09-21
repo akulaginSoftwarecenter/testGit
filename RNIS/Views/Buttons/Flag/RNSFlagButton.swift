@@ -17,9 +17,9 @@ class RNSFlagButton: BaseViewWithXIBInit {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
-    var filled: Bool = false {
+    var isFavorite: Bool = false {
         didSet {
-            imageView.image = filled ? #imageLiteral(resourceName: "flagFill") : #imageLiteral(resourceName: "flagClear")
+            imageView.image = isFavorite ? #imageLiteral(resourceName: "flagFill") : #imageLiteral(resourceName: "flagClear")
             removeLoader()
         }
     }

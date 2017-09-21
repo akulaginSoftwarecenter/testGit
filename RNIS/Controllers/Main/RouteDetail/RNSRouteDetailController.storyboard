@@ -71,6 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="detailView" destination="Jth-as-pwa" id="xv6-56-U3G"/>
+                        <outlet property="flagView" destination="9MS-3a-lus" id="J7l-C5-hZ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARX-Qc-cMi" userLabel="First Responder" sceneMemberID="firstResponder"/>

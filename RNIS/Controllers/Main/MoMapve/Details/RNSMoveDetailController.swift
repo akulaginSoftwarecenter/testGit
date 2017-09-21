@@ -13,6 +13,7 @@ class RNSMoveDetailController: UIViewController {
     var handlerBack: EmptyBlock?
     
     var item: RNSRouteVariant?
+    @IBOutlet weak var flagView: RNSFlagButton!
     
     @IBOutlet weak var detailView: RNSRouteDetailView!
     
@@ -27,6 +28,7 @@ class RNSMoveDetailController: UIViewController {
         
         detailView.showMove = true
         detailView.item = item?.tableItem
+        prepareFlagView()
     }
     
     override class var storyboardName: String {

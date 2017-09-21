@@ -10,6 +10,8 @@ import UIKit
 
 class RNSRouteVariant: RNISMappableBase, Hashable {
     
+    var isFavorite: Bool = false
+    
     var roadActivate: [PGPolyline]?
     var roadOff: RNSRoadOff?
     
@@ -56,5 +58,10 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
     
     var tableItem: RNSRouteTable {
         return RNSRouteTable(self)
+    }
+    
+    func changeFavorite(complete: EmptyBlock?) {
+        isFavorite = !isFavorite
+        Utils.delay(1, closure: complete)
     }
 }
