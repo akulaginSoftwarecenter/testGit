@@ -78,7 +78,7 @@ extension UIView {
             }
             return image
         } else {
-            UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0)
+            UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0)
             defer { UIGraphicsEndImageContext() }
             guard let currentContext = UIGraphicsGetCurrentContext() else {
                 return nil
