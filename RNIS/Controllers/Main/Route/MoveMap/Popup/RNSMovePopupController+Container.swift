@@ -16,7 +16,7 @@ extension RNSMovePopupController {
     }
     
     func prepareEnterViewController() {
-        containerController?.item = item?.tableItem
+        containerController?.item = item
         containerController?.handlerBack = { [weak self] in
             self?.handlerDetailBack?()
         }

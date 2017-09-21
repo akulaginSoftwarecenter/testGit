@@ -10,7 +10,7 @@ import UIKit
 
 class RNSRouteDetailController: UIViewController {
     
-    var item: RNSRouteTable? {
+    var item: RNSRouteVariant? {
         didSet {
             if detailView != nil {
                 prepareDetailView()
@@ -23,7 +23,7 @@ class RNSRouteDetailController: UIViewController {
     @IBOutlet weak var detailView: RNSRouteDetailView!
     
     @IBOutlet weak var blackButton: RNSBlackButton!
-    static func initController(_ item: RNSRouteTable?) -> RNSRouteDetailController?  {
+    static func initController(_ item: RNSRouteVariant?) -> RNSRouteDetailController?  {
         let vc = RNSRouteDetailController.initialController as? RNSRouteDetailController
         vc?.item = item
         return vc
@@ -36,7 +36,7 @@ class RNSRouteDetailController: UIViewController {
     }
     
     func prepareDetailView() {
-        detailView.item = item
+        detailView.item = item?.tableItem
     }
     
     override class var storyboardName: String {

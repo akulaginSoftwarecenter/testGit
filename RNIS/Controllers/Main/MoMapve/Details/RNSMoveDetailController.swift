@@ -10,12 +10,13 @@ import UIKit
 
 class RNSMoveDetailController: UIViewController {
     
-    var item: RNSRouteTable?
     var handlerBack: EmptyBlock?
+    
+    var item: RNSRouteVariant?
     
     @IBOutlet weak var detailView: RNSRouteDetailView!
     
-    static func initController(_ item: RNSRouteTable?) -> RNSMoveDetailController?  {
+    static func initController(_ item: RNSRouteVariant?) -> RNSMoveDetailController?  {
         let vc = RNSMoveDetailController.initialController as? RNSMoveDetailController
         vc?.item = item
         return vc
@@ -25,7 +26,7 @@ class RNSMoveDetailController: UIViewController {
         super.viewDidLoad()
         
         detailView.showMove = true
-        detailView.item = item
+        detailView.item = item?.tableItem
     }
     
     override class var storyboardName: String {

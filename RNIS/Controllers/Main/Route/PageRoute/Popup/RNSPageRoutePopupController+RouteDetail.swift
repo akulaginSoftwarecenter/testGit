@@ -23,6 +23,6 @@ extension RNSPageRoutePopupController {
     }
     
     func updateCurrentItem() {
-        containerController?.item = RNSPageRouteManager.currentItem?.tableItem
+        containerController?.item = RNSPageRouteManager.currentItem
     }
 }

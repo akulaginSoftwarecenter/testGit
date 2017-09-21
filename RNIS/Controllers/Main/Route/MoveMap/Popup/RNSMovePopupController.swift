@@ -57,7 +57,7 @@ class RNSMovePopupController: UIViewController {
     }
     
     @IBAction func actionDots(_ sender: Any) {
-        let vc = RNSMoveDetailController.initController(item?.tableItem)
+        let vc = RNSMoveDetailController.initController(item)
         vc?.handlerBack = {
             STRouter.pop()
         }
