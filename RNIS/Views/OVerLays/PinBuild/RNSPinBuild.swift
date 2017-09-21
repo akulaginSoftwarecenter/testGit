@@ -20,7 +20,7 @@ class RNSPinBuild: RNSPinParent {
     
     func prepareHandlers() {
         RNSMapManager.removeOldPinBuild()
-        RNSMapManager.handlerRemovePinBuild = {[weak self] (player) in
+        RNSMapManager.handlerRemovePinBuild = { [weak self] in
              self?.remove()
         }
     }

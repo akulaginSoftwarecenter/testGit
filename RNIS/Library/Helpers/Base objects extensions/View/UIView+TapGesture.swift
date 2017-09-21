@@ -44,7 +44,7 @@ extension UIView {
         }
     }
     
-    func actionTapGesture() {
+    @objc func actionTapGesture() {
         self.handlerActionTap?()
     }
     

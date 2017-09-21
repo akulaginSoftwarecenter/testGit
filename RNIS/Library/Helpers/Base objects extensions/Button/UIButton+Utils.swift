@@ -26,7 +26,7 @@ extension UIButton {
         addTarget(self, action: #selector(actionTouchUpInside), for: .touchUpInside)
     }
     
-    func actionTouchUpInside() {
+    @objc func actionTouchUpInside() {
         handlerActionTouchUpInside?()
     }
 }

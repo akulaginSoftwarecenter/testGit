@@ -10,5 +10,5 @@ import UIKit
 import RealmSwift
 
 class RNSSearchHistory: Object {
-    dynamic var title: String = ""
+    @objc dynamic var title: String = ""
 }

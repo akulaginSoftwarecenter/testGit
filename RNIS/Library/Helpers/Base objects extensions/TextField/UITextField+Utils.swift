@@ -26,7 +26,7 @@ extension UITextField {
         addTarget(self, action: #selector(actionEditingChanged), for: .editingChanged)
     }
     
-    func actionEditingChanged() {
+    @objc func actionEditingChanged() {
         handlerEditingChanged?()
     }
     
@@ -46,8 +46,8 @@ extension UITextField {
             return
         }
 
-        let attributes = [NSForegroundColorAttributeName: placeholderColor,
-                          NSFontAttributeName: font]
+        let attributes = [NSAttributedStringKey.foregroundColor: placeholderColor,
+                          NSAttributedStringKey.font: font]
         
         attributedPlaceholder = NSAttributedString(string: placeholder,
                                                    attributes:attributes)

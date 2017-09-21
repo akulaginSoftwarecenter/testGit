@@ -21,13 +21,13 @@ class RNSImageFactory: NSObject {
     static let bus_stop_current = #imageLiteral(resourceName: "Bus_stop_current")
     static let bus_stop = #imageLiteral(resourceName: "Bus_stop")
     
-    lazy var textFontAttributes: AliasDictionary = {
+    lazy var textFontAttributes: [NSAttributedStringKey: Any] = {
         let style = NSMutableParagraphStyle()
         style.alignment = NSTextAlignment.center
         return [
-            NSFontAttributeName: UIFont.cffazm18,
-            NSForegroundColorAttributeName: UIColor.white,
-            NSParagraphStyleAttributeName: style,
+            NSAttributedStringKey.font: UIFont.cffazm18,
+            NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.paragraphStyle: style,
         ]
     }()
     
@@ -44,7 +44,6 @@ class RNSImageFactory: NSObject {
         let width = size.width
         inImage.draw(in: CGRect(x: 0, y: 0, width: width, height: size.height))
         let rect = CGRect(x: 0, y: 15, width: width, height: 18)
-        
         text.draw(in: rect, withAttributes: shared.textFontAttributes)
         let newImage = UIGraphicsGetImageFromCurrentImageContext() ?? inImage
         UIGraphicsEndImageContext()

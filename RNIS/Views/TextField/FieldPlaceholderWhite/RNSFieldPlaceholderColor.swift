@@ -19,6 +19,6 @@ class RNSFieldPlaceholderColor: UITextField {
         }
         
         attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                   attributes: [NSForegroundColorAttributeName: textColor])
+                                                   attributes: [NSAttributedStringKey.foregroundColor: textColor])
     }
 }

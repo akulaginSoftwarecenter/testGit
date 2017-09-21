@@ -37,12 +37,12 @@ extension RNSLoginViewController {
         passwordField.addButtonOnKeyboard("Ввод   ", target: self, action: #selector(doneButtonAction))
     }
     
-    func doneButtonAction() {
+    @objc func doneButtonAction() {
         passwordField.resignFirstResponder()
         loginPressed()
     }
     
-    func passwordNext() {
+    @objc func passwordNext() {
          passwordField.becomeFirstResponder()
     }
 }

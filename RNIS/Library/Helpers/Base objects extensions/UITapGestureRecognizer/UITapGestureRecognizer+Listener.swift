@@ -14,7 +14,7 @@ extension UITapGestureRecognizer: EventDispatcher
         addTarget(self, action: #selector(tapHandler))
     }
     
-    func tapHandler() {
+    @objc func tapHandler() {
         dispatchEvent(Event(target: self))
     }
 }

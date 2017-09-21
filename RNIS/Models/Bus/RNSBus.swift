@@ -11,17 +11,17 @@ import RealmSwift
 
 class RNSBus: RNSCoordinateModel {
     
-    dynamic var minute: Int = 0
-    dynamic var route_number: String = ""
-    dynamic var showNext: Bool = false
+    @objc dynamic var minute: Int = 0
+    @objc dynamic var route_number: String = ""
+    @objc dynamic var showNext: Bool = false
     let busStops = List<RNSBusStop>()
-    dynamic var currentBusStops: RNSBusStop?
+    @objc dynamic var currentBusStops: RNSBusStop?
     
-    dynamic var driver: String? = nil
-    dynamic var conductor: String? = nil
-    dynamic var depo: String? = nil
-    dynamic var carrier: String? = nil
-    dynamic var phone: String? = nil
+    @objc dynamic var driver: String? = nil
+    @objc dynamic var conductor: String? = nil
+    @objc dynamic var depo: String? = nil
+    @objc dynamic var carrier: String? = nil
+    @objc dynamic var phone: String? = nil
     
     func generate() {
         
