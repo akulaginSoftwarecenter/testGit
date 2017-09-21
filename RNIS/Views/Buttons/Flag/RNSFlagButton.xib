@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSFlagButton" customModule="RNIS" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="FAT-dy-NBp" id="YtE-zH-c0j"/>
+                <outlet property="imageView" destination="ePK-i2-hv0" id="cya-mJ-OtW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Sot-F5-TZu">
+            <rect key="frame" x="0.0" y="0.0" width="108" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAT-dy-NBp">
+                    <rect key="frame" x="0.0" y="0.0" width="108" height="116"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="actionButton:" destination="-1" eventType="touchUpInside" id="UeG-Y4-vLv"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagClear" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-i2-hv0">
+                    <rect key="frame" x="44" y="46" width="20" height="24"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XdP-Qm-daY" firstAttribute="bottom" secondItem="FAT-dy-NBp" secondAttribute="bottom" id="1hu-Jx-f4a"/>
+                <constraint firstItem="ePK-i2-hv0" firstAttribute="centerY" secondItem="FAT-dy-NBp" secondAttribute="centerY" id="CrV-YX-mPb"/>
+                <constraint firstItem="ePK-i2-hv0" firstAttribute="centerX" secondItem="FAT-dy-NBp" secondAttribute="centerX" id="NsT-Cc-ZfA"/>
+                <constraint firstItem="FAT-dy-NBp" firstAttribute="top" secondItem="XdP-Qm-daY" secondAttribute="top" id="i37-sL-hTK"/>
+                <constraint firstItem="FAT-dy-NBp" firstAttribute="leading" secondItem="XdP-Qm-daY" secondAttribute="leading" id="tJF-YB-Fc7"/>
+                <constraint firstItem="XdP-Qm-daY" firstAttribute="trailing" secondItem="FAT-dy-NBp" secondAttribute="trailing" id="z3U-Du-vyl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="XdP-Qm-daY"/>
+            <point key="canvasLocation" x="-35" y="-370"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="flagClear" width="20" height="24"/>
+    </resources>
+</document>

@@ -126,6 +126,8 @@
 		833609781F73758000B42333 /* RNSMovePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609771F73758000B42333 /* RNSMovePopupController.swift */; };
 		8336097A1F7378BF00B42333 /* RNSMovePopupController+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */; };
 		8336097C1F737A8E00B42333 /* RNSMovePopupController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */; };
+		8336097F1F7386C400B42333 /* RNSFlagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336097E1F7386C400B42333 /* RNSFlagButton.swift */; };
+		833609811F73881E00B42333 /* RNSFlagButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833609801F73881E00B42333 /* RNSFlagButton.xib */; };
 		8344E1CB1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */; };
 		8344E1CF1F397F1B004A6F0C /* RNSRangeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1CE1F397F1B004A6F0C /* RNSRangeScroll.swift */; };
 		8344E1D11F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */; };
@@ -654,6 +656,8 @@
 		833609771F73758000B42333 /* RNSMovePopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSMovePopupController.swift; path = Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift; sourceTree = "<group>"; };
 		833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSMovePopupController+Observe.swift"; path = "Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Observe.swift"; sourceTree = "<group>"; };
 		8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSMovePopupController+Container.swift"; path = "Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Container.swift"; sourceTree = "<group>"; };
+		8336097E1F7386C400B42333 /* RNSFlagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSFlagButton.swift; path = Views/Buttons/Flag/RNSFlagButton.swift; sourceTree = "<group>"; };
+		833609801F73881E00B42333 /* RNSFlagButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RNSFlagButton.xib; path = Views/Buttons/Flag/RNSFlagButton.xib; sourceTree = "<group>"; };
 		8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Ranges.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Ranges.swift"; sourceTree = "<group>"; };
 		8344E1CE1F397F1B004A6F0C /* RNSRangeScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRangeScroll.swift; path = Models/HelpersModel/RangeScroll/RNSRangeScroll.swift; sourceTree = "<group>"; };
 		8344E1D01F398309004A6F0C /* RNSScrollShowContainer+ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+ScrollView.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+ScrollView.swift"; sourceTree = "<group>"; };
@@ -1557,6 +1561,7 @@
 		8326AA391F1F631900F893C8 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				8336097D1F73868400B42333 /* Flag */,
 				83204B2D1F591A3C0033ACA1 /* LeftMenuBackButton */,
 				83D7137A1F5D001C005206C5 /* BlackMoveButton */,
 				832E4B771F2EC65C00A4AD77 /* BlackButton */,
@@ -1776,6 +1781,15 @@
 			);
 			name = UITextField;
 			path = "Library/Helpers/Base objects extensions/TextField";
+			sourceTree = "<group>";
+		};
+		8336097D1F73868400B42333 /* Flag */ = {
+			isa = PBXGroup;
+			children = (
+				8336097E1F7386C400B42333 /* RNSFlagButton.swift */,
+				833609801F73881E00B42333 /* RNSFlagButton.xib */,
+			);
+			name = Flag;
 			sourceTree = "<group>";
 		};
 		8344E1CC1F397E31004A6F0C /* HelpersModels */ = {
@@ -4083,6 +4097,7 @@
 				836277E41F382E97009FB712 /* RNSBusStopDetailController.storyboard in Resources */,
 				83204B401F591CB70033ACA1 /* TransportViewController.storyboard in Resources */,
 				838707E41F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */,
+				833609811F73881E00B42333 /* RNSFlagButton.xib in Resources */,
 				83204B4A1F591FBD0033ACA1 /* NotificationTableViewCell.xib in Resources */,
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
 				83029BCC1F4BEBD700B0FEE3 /* RNSDotsWhiteHorizontal.xib in Resources */,
@@ -4444,6 +4459,7 @@
 				83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */,
 				8356BE531F3D582700560623 /* RNSBackGroundView.swift in Sources */,
 				832B1DDC1F42B9410024505C /* RNSMapParentController.swift in Sources */,
+				8336097F1F7386C400B42333 /* RNSFlagButton.swift in Sources */,
 				8326AA311F1F51A700F893C8 /* Dictionary+Utils.swift in Sources */,
 				836EEF181F3C13DB007631D9 /* RNSCoordinateModel.swift in Sources */,
 				830F41D01F4BF795008E7C0F /* DateFormatter+Utils.swift in Sources */,
