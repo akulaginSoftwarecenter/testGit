@@ -9,10 +9,10 @@
 import Foundation
 
 extension ReportInfoViewController: UITextViewDelegate {
-    
     public func textViewDidChange(_ textView: UITextView) {
         UIView.animateConstrains(self.view) {
-            self.textViewHeightConstraint.constant = self.textView.contentSize.height
+            let size = self.textView.sizeThatFits(CGSize(width: self.textView.bounds.width, height: CGFloat.greatestFiniteMagnitude))
+            self.textViewHeightConstraint.constant = size.height
         }
     }
 }
