@@ -20,6 +20,7 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        RNSPageRouteManager.generateItems()
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
     }
     
