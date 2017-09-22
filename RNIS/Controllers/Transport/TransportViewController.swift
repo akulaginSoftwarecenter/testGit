@@ -19,10 +19,15 @@ class TransportViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        generateStub()
         prepareSegment()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        generateStub()
+    }
+     
     func generateStub() {
         RNSPageRouteManager.generateItems()
         myRoutesView.updateUI()
