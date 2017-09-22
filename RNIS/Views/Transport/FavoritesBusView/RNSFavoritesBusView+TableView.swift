@@ -28,6 +28,10 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
          return item(indexPath)?.height ?? 0
     }
     
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32
+    }
+    
     func item(_ indexPath: IndexPath) -> RNSBusStopTemp? {
         return items[indexPath.section][indexPath.row]
     }
