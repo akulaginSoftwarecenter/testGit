@@ -15,7 +15,7 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webView.loadRequest(URLRequest(url: URL(string: "https://m.yandex.ru/")!))
+        self.webView.loadRequest(URLRequest(url: URL(string: "https://dev-rnisportal.regeora.ru/")!))
     }
 
     override class var storyboardName: String {

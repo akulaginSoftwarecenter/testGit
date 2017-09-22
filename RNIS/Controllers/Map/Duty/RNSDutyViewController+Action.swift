@@ -33,6 +33,7 @@ extension RNSDutyViewController {
         
         viewLabelDate.isHidden = true
         let vc = RNSDateSelectViewController.initialController as? RNSDateSelectViewController
+        vc?.modalTransitionStyle = .crossDissolve
         vc?.handlerDate = { [weak self] date in
             self?.prepareDate(date)
         }
