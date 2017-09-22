@@ -23,4 +23,8 @@ extension RNSTransportTableView: UITableViewDelegate, UITableViewDataSource {
     func item(_ indexPath: IndexPath) -> RNSRouteVariant? {
         return items?[indexPath.row]
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return item(indexPath)?.heightDotsVerticalModel ?? 0
+    }
 }

@@ -64,6 +64,10 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
         return RNSDotsVerticalModel(self)
     }()
     
+    var heightDotsVerticalModel: CGFloat {
+        return dotsVerticalModel.height
+    }
+    
     func changeFavorite(complete: EmptyBlock?) {
         isFavorite = !isFavorite
         Utils.delay(1, closure: complete)

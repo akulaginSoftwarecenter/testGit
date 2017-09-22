@@ -10,9 +10,7 @@ import UIKit
 
 class RNSDotsVerticalModel: NSObject {
     var items = [RNSVerticalTableItem]()
-    
     var duration = "20 мин."
-   
     var points: [RNSRoutePoint]?
     
     convenience init(_ main: RNSRouteVariant?) {
@@ -20,5 +18,9 @@ class RNSDotsVerticalModel: NSObject {
         
         self.points = main?.points
         prepareItems()
+    }
+    
+    var height: CGFloat {
+        return CGFloat(48 + items.count * 52)
     }
 }
