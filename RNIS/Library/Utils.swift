@@ -20,6 +20,7 @@ typealias AliasRectBlock = (CGRect) -> ()
 typealias AliasPointBlock = (PGGeoPoint) -> ()
 typealias AliasOverlayBlock = (PGOverlay) -> ()
 typealias AliasStringBlock = (String?) -> ()
+typealias AliasStringArrayBlock = ([String]?) -> ()
 typealias AliasBoolBlock = (Bool) -> ()
 typealias AliasRegisterPayloadBlock = (RNSUserPayload?) -> ()
 typealias AliasPostRegister = RNSRequestReply<RNSUserPayload,RNSRegisterError>

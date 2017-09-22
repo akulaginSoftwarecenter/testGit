@@ -9,7 +9,6 @@
 import UIKit
 
 class RNSBusStopManager: NSObject {
-    
     static let shared = RNSBusStopManager()
     
     static var showedItems = [RNSBusStop]()
@@ -19,6 +18,8 @@ class RNSBusStopManager: NSObject {
         return shared.queue
     }
     
+    static var request: RNSPostStopPointList?
+    
     lazy var queue: OperationQueue = {
         let queue = OperationQueue()
         queue.maxConcurrentOperationCount = 1
@@ -27,5 +28,26 @@ class RNSBusStopManager: NSObject {
     
     static var mapView: MapView {
         return RNSMapManager.mapView
+    }
+    
+    static func prepareOperation(_ complete: @escaping EmptyBlock) {
+        queue.cancelAllOperations()
+        queue.addOperation(complete)
+    }
+    
+    static var maxCount: Int? {
+        var maxCount: Int?
+        if RNSMapManager.getZoomLevel < 14 {
+            maxCount = 50
+        }
+        return maxCount
+    }
+    
+    static var lastMinCoord: PGGeoPoint {
+        return mapView.lastMinCoord
+    }
+    
+    static var lastCenterCoord: PGGeoPoint {
+        return mapView.lastCenterCoord
     }
 }

@@ -49,7 +49,12 @@ extension RNSDataManager {
     }
 
     static func parseBusItemsAsync(_ dicts: [AliasDictionary], complete: (([RNSBus]) -> ())?) {
-        parseItemsAsync(dicts, complete: complete)
+        DispatchQueue.global(qos: .userInitiated).async {
+            let items = parseItems(dicts) as [RNSBus]
+            Utils.mainQueue {
+                complete?(items)
+             }
+        }
     }
 
     static func bussUuids(_ min: PGGeoPoint, center: PGGeoPoint, maxCount: Int? = nil) -> [String]? {

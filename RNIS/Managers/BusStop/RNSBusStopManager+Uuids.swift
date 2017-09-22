@@ -1,8 +1,8 @@
 //
-//  RNSBusStopManager+.swift
+//  RNSBusStopManager+Uuids.swift
 //  RNIS
 //
-//  Created by Артем Кулагин on 14.09.17.
+//  Created by Артем Кулагин on 22.09.17.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
@@ -10,18 +10,7 @@ import Foundation
 
 extension RNSBusStopManager {
     
-    static func update() {
-        queue.cancelAllOperations()
-        queue.addOperation(updateOperation)
-    }
-    
-    static func updateOperation() {
-        
-        var maxCount: Int?
-        if RNSMapManager.getZoomLevel < 14 {
-            maxCount = 50
-        }
-        let uuids = RNSDataManager.bussStopsUuids(mapView.lastMinCoord, center: mapView.lastCenterCoord, maxCount: maxCount)
+    static func updateUuids(_ uuids: [String]?) {
         let addUuids = self.addUuids(uuids)
         let removeUuids = self.removeUuids(uuids)
         Utils.mainQueue {
@@ -31,7 +20,7 @@ extension RNSBusStopManager {
             print("showedStops",showedUuids.count, RNSMapManager.getZoomLevel)
         }
     }
-    
+     
     static func addUuids(_ uuids: [String]?) -> [String]? {
         return uuids?.filter{!showedUuids.contains($0)}
     }
@@ -41,11 +30,5 @@ extension RNSBusStopManager {
             return nil
         }
         return showedUuids.filter{ !uuids.contains($0) }
-    }
-     
-    static func busStops(_ uuids: [String]?) -> [RNSBusStop]? {
-        return uuids?.flatMap({ (uuid) -> RNSBusStop? in
-            return RNSDataManager.realm?.object(ofType: RNSBusStop.self, forPrimaryKey: uuid)
-        })
     }
 }

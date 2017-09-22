@@ -54,15 +54,6 @@ class RNSDataManager: NSObject {
         return items
     }
     
-    static func parseItemsAsync<T: RNSCoordinateModel>(_ dicts: [AliasDictionary], complete: (([T]) -> ())?) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            let items = parseItems(dicts) as [T]
-            Utils.mainQueue {
-                complete?(items)
-            }
-        }
-    }
-    
     static func models<T: RNSCoordinateModel>(_ items: [RNSCoordinateModel], min: PGGeoPoint, center: PGGeoPoint) -> [T]? {
         let distance = min.distanceTo(center)
         return items.filter {

@@ -24,6 +24,7 @@ class RNSMapViewController: UIViewController {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
         view.labelText.text = "Обновление остановок..."
+        view.defaultAlpha = 0.1
         return view
     }()
     
@@ -32,19 +33,8 @@ class RNSMapViewController: UIViewController {
 
         RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
-        loadData()
     }
-    
-    func loadData() {
-        loaderView.showInView(self.view)
-        CounterTime.startTimer()
-        RNSPostStopPointList().sendRequestWithCompletion {[weak self] (reply, error, _) in
-            CounterTime.endTimer()
-            self?.busStopUpdate()
-            self?.loaderView.remove()
-        }
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
      

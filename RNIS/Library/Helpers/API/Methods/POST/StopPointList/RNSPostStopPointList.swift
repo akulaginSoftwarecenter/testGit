@@ -15,30 +15,52 @@ class RNSPostStopPointList: RNSRequest {
     }
     
     typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
+    typealias AliasComplete = ([String]?) -> ()
+    
+    var min: PGGeoPoint?
+    var center: PGGeoPoint?
+    var maxCount: Int?
+    var complete: AliasComplete?
+    
+    convenience init(_ min: PGGeoPoint, center: PGGeoPoint, maxCount: Int? = nil, complete: AliasComplete?) {
+        self.init()
+        
+        self.min = min
+        self.center = center
+        self.maxCount = maxCount
+        self.complete = complete
+        
+        sendRequestWithCompletion {[weak self] (object, error, inot) in
+            self?.parseReply(AliasReply(reply: object))
+        }
+    }
     
     override var payload: AliasDictionary {
-        return ["left": 55.905883,
-                "top": 37.849311,
-                "right": 55.573518,
-                "bottom": 37.363166]
+        guard let center = center,
+            let distance = min?.distanceTo(center),
+            let leftTop = center.coordinate(45, distance: distance),
+            let rightBottom = center.coordinate(225, distance: distance) else {
+            return super.payload
+        }
+        return ["left": leftTop.latitude,
+                "top": leftTop.longitude,
+                "right": rightBottom.latitude,
+                "bottom": rightBottom.longitude]
     }
     
     override var isShowLogReply: Bool {
         return false
     }
-    
-    override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        parseReply(AliasReply(reply: reply), source: source)
-    }
-    
-    func parseReply(_ model: AliasReply?, source: AnyObject) {
+  
+    func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,
-            let items = model?.payload?.items {
+            var items = model?.payload?.items {
+            if let maxCount = maxCount {
+                items = Array(items.prefix(maxCount))
+            }
             print("RNSPostStopPointList",items.count)
-            CounterTime.endTimer()
-            RNSDataManager.parseBusStopItemsAsync(items) { (stops) in
-                print("stops",stops.count)
-                super.apiDidReturnReply(stops as AnyObject, source: source)
+            RNSDataManager.parseBusStopItemsAsync(items) { [weak self] (uuids) in
+                self?.complete?(uuids)
             }
             return
         }
@@ -51,7 +73,6 @@ class RNSPostStopPointList: RNSRequest {
         }
         let error = "Ошибка загрузки остановок. " + item.textError
         STRouter.showAlertOk(error)
-        super.apiDidFailWithError(item.error)
     }
     
     override var subject: String {

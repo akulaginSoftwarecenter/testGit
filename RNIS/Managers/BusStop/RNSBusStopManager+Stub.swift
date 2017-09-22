@@ -23,7 +23,7 @@ extension RNSBusStopManager {
         }
     }
     
-    static func createStubItemsAsync(complete: (([RNSBusStop])->())?) {
+    static func createStubItemsAsync(complete: (([String])->())?) {
         RNSDataManager.removeAllBusStop()
         CounterTime.startTimer()
         createStubDicts { (dicts) in

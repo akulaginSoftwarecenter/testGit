@@ -16,6 +16,7 @@ class LoaderView: BaseViewWithXIBInit {
     }
     @IBOutlet weak var labelText: UILabel!
     
+    var defaultAlpha = CGFloat(0.3)
     var delay: TimeInterval = 0
     
     func showInView(_ view: UIView?) {
@@ -40,7 +41,7 @@ class LoaderView: BaseViewWithXIBInit {
     
     func animationShow() {
         UIView.animate(withDuration: 0.5, delay: delay, options: .curveLinear, animations: {[weak self] in
-            self?.alpha = 0.3
+            self?.alpha = self?.defaultAlpha ?? 0.3
             }, completion:nil)
     }
     
