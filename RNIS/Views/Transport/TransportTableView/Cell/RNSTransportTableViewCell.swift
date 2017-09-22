@@ -11,7 +11,7 @@ import UIKit
 class RNSTransportTableViewCell: RNSBaseTableCell {
     @IBOutlet weak var dotsView: RNSDotsBussVertical!
     
-    var item: RNSDotsVerticalModel? {
+    var item: RNSRouteVariant? {
         didSet {
             dotsView.item = item
         }

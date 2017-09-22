@@ -29,6 +29,10 @@ class RNSDotsVerticalCell: RNSBaseTableCell {
         guard let item = item else {
             return
         }
+        if item.isEnd {
+            cirlce.isHidden = false
+            return
+        }
         
         cirlce.isHidden = item.isBus
         runLine.isHidden = !item.isRun

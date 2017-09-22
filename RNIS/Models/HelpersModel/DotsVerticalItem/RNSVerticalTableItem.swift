@@ -8,24 +8,24 @@
 
 import UIKit
 
-enum TypeVerticalTable {
-    case run, bus, end
-}
-
 class RNSVerticalTableItem: NSObject {
-    var type: TypeVerticalTable = .bus
+    var type: TypePoint? = .bus
     var title = ""
     var titleBus = ""
+    var isEnd = false
     
     var isBus: Bool {
         return type == .bus
     }
     
-    var isEnd: Bool {
-        return type == .end
-    }
-    
     var isRun: Bool {
         return type == .run
+    }
+    
+    convenience init(_ main: RNSRoutePoint?) {
+        self.init()
+        self.type = main?.type ?? .bus
+        self.title = main?.busStop?.name ?? ""
+        self.titleBus = main?.bus?.title ?? ""
     }
 }

@@ -12,28 +12,13 @@ class RNSDotsVerticalModel: NSObject {
     var items = [RNSVerticalTableItem]()
     
     var duration = "20 мин."
+   
+    var points: [RNSRoutePoint]?
     
-    static func generate() -> RNSDotsVerticalModel {
-        let model = RNSDotsVerticalModel()
+    convenience init(_ main: RNSRouteVariant?) {
+        self.init()
         
-        var items = [RNSVerticalTableItem]()
-        let item1 = RNSVerticalTableItem()
-        item1.type = .run
-        item1.title = "ул. Культуры 1"
-        items.append(item1)
-        
-        let item2 = RNSVerticalTableItem()
-        item2.type = .bus
-        item2.title = "ост. Адмирала-Макарова"
-        item2.titleBus = "А86"
-        items.append(item2)
-        
-        let item3 = RNSVerticalTableItem()
-        item3.type = .end
-        item3.title = "ул. Коломяжский"
-        items.append(item3)
-        
-        model.items = items
-        return model
+        self.points = main?.points
+        prepareItems()
     }
 }

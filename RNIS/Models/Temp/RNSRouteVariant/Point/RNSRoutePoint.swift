@@ -68,4 +68,8 @@ class RNSRoutePoint: Hashable {
     }
     
     var removeVariantEnd: EmptyBlock?
+    
+    var verticalTableItem: RNSVerticalTableItem {
+        return RNSVerticalTableItem(self)
+    }
 }

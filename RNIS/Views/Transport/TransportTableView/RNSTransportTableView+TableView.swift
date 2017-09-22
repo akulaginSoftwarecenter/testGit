@@ -20,7 +20,7 @@ extension RNSTransportTableView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func item(_ indexPath: IndexPath) -> RNSDotsVerticalModel? {
+    func item(_ indexPath: IndexPath) -> RNSRouteVariant? {
         return items?[indexPath.row]
     }
 }

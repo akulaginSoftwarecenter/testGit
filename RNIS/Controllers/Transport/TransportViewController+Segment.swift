@@ -13,9 +13,6 @@ extension TransportViewController {
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
         myRoutesView.isHidden = selectedSegmentIndexIsFirst
         favoritesBusView.isHidden = !selectedSegmentIndexIsFirst
-        if !selectedSegmentIndexIsFirst {
-            myRoutesView.generate()
-        }
         titleLable.text = titleSelected
     }
     

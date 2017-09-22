@@ -14,17 +14,20 @@ class RNSDotsBussVertical: BaseViewWithXIBInit {
     @IBOutlet weak var durationLabel: UILabel!
     
     var items: [RNSVerticalTableItem] {
-        return item?.items ?? []
+        return dotsVerticalModel?.items ?? []
     }
     
-    var item: RNSDotsVerticalModel? {
+    var item: RNSRouteVariant? {
         didSet {
+           dotsVerticalModel = item?.dotsVerticalModel
            updateUI()
         }
     }
     
+    var dotsVerticalModel: RNSDotsVerticalModel?
+    
     func updateUI() {
         tableView.reloadData()
-        durationLabel.text = item?.duration
+        durationLabel.text = dotsVerticalModel?.duration
     }
 }

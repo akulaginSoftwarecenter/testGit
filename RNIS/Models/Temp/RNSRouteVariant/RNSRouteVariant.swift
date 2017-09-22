@@ -60,6 +60,10 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
         return RNSRouteTable(self)
     }
     
+    lazy var dotsVerticalModel: RNSDotsVerticalModel = {
+        return RNSDotsVerticalModel(self)
+    }()
+    
     func changeFavorite(complete: EmptyBlock?) {
         isFavorite = !isFavorite
         Utils.delay(1, closure: complete)

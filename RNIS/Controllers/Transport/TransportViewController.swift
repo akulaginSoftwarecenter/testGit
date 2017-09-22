@@ -20,7 +20,6 @@ class TransportViewController: UIViewController{
         super.viewDidLoad()
         
         prepareSegment()
-        myRoutesView.generate()
     }
     
     override class var storyboardName: String {

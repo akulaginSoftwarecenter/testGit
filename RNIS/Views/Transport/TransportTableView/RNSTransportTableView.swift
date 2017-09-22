@@ -10,25 +10,21 @@ import UIKit
 
 class RNSTransportTableView: BaseViewWithXIBInit {
 
-    var items: [RNSDotsVerticalModel]? {
-        didSet {
-            updateUI()
-        }
+    var items: [RNSRouteVariant]? {
+        return RNSPageRouteManager.items
     }
+    
     @IBOutlet var tableView: RNSRegisterTableView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         RNSPageRouteManager.generateItems()
+        updateUI()
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
     }
     
     func updateUI() {
         tableView.reloadData()
-    }
-    
-    func generate() {
-        items = [RNSDotsVerticalModel.generate()]
     }
 }
