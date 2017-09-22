@@ -33,7 +33,10 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
     }
     
     @IBAction func actionButton(_ sender: Any) {
-        RNSAlertPhotoController.controller(isHavePhoto, complete: showImagePicker, handlerRemove:removePhoto)
+       let vc = RNSAlertPhotoController.controller(isHavePhoto, complete: showImagePicker, handlerRemove:removePhoto)
+       vc.popoverPresentationController?.sourceView = self
+       vc.popoverPresentationController?.sourceRect = self.bounds
+       STRouter.present(vc)
     }
 
     func removePhoto() {

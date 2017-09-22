@@ -20,7 +20,6 @@ class RNSAlertPhotoController: UIAlertController {
         vc.complete = complete
         vc.handlerRemove = handlerRemove
         vc.prepareUI()
-        STRouter.present(vc)
         return vc
     }
 
