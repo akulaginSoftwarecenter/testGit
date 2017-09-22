@@ -19,7 +19,13 @@ class TransportViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        generateStub()
         prepareSegment()
+    }
+    
+    func generateStub() {
+        RNSPageRouteManager.generateItems()
+        myRoutesView.updateUI()
     }
     
     override class var storyboardName: String {

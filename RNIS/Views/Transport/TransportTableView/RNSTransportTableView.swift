@@ -18,10 +18,15 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        RNSPageRouteManager.generateItems()
-        updateUI()
+
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
+        prepareHandlers()
+    }
+    
+    func prepareHandlers() {
+        RNSPageRouteManager.handlerUpdateFavorite = { [weak self] in
+            self?.updateUI()
+        }
     }
     
     func updateUI() {

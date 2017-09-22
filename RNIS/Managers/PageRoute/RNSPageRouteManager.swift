@@ -12,6 +12,7 @@ class RNSPageRouteManager: NSObject {
     
     static var handlerUpdateCurrent: EmptyBlock?
     static var handlerUpdateCurrentTwo: EmptyBlock?
+    static var handlerUpdateFavorite: EmptyBlock?
     
     static var items: [RNSRouteVariant]? {
         didSet {
@@ -38,5 +39,17 @@ class RNSPageRouteManager: NSObject {
     static func prepareFirstNavel(_ distance: CLLocationDistance?) {
         currentItem?.navels.first?.distance = distance
         currentItem?.updateNodes()
+    }
+    
+    static func removeItem(_ item: RNSRouteVariant?) {
+        print("removeItem",item)
+        guard let item = item,
+            let index = items?.index(of: item) else {
+            return
+        }
+        print("removeItem 1",index)
+        items?.remove(at: index)
+        print("removeItem 2",items?.count)
+        handlerUpdateFavorite?()
     }
 }

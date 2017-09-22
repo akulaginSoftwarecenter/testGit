@@ -10,9 +10,9 @@ import UIKit
 
 class RNSAlertTransportController: UIAlertController {
 
-    var item: RNSDotsVerticalModel?
+    var item: RNSRouteVariant?
     
-    static func initController(_ item: RNSDotsVerticalModel?) -> RNSAlertTransportController {
+    static func initController(_ item: RNSRouteVariant?) -> RNSAlertTransportController {
         let vc = RNSAlertTransportController(title: nil, message: nil, preferredStyle: .actionSheet)
         vc.prepareUI()
         vc.item = item
@@ -24,8 +24,8 @@ class RNSAlertTransportController: UIAlertController {
             //print("Переименовать")
         }
         
-        addAction("Удалить",style: .destructive) {//[weak self] in
-            //print("Удалить")
+        addAction("Удалить",style: .destructive) {[weak self] in
+            RNSPageRouteManager.removeItem(self?.item)
         }
         
         addAction("Отмена", style: .cancel)

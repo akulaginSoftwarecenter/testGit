@@ -11,6 +11,6 @@ import Foundation
 extension RNSDotsBussVertical {
     
     @IBAction func actionButton(_ sender: Any) {
-        //STRouter.present(RNSAlertTransportController.initController(item))
+        STRouter.present(RNSAlertTransportController.initController(item))
     }
 }
