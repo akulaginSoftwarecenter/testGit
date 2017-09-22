@@ -42,14 +42,24 @@ class RNSPageRouteManager: NSObject {
     }
     
     static func removeItem(_ item: RNSRouteVariant?) {
-        print("removeItem",item)
         guard let item = item,
             let index = items?.index(of: item) else {
             return
         }
-        print("removeItem 1",index)
         items?.remove(at: index)
-        print("removeItem 2",items?.count)
         handlerUpdateFavorite?()
+    }
+    
+    static func showMoveMapStub() {
+        RNSPageRouteManager.removeNonActivRoute()
+        let item = RNSPageRouteManager.currentItem
+        item?.points.first?.doneMove = true
+        RNSPageRouteManager.prepareFirstNavel(523)
+        let vc = RNSMoveMapViewController.initController(item)
+        vc?.handlerDidDisappear = {
+            updateRoads()
+            prepareFirstNavel(nil)
+        }
+        vc?.pushAnimated()
     }
 }
