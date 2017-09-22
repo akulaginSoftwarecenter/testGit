@@ -320,6 +320,8 @@
 		837F71971F45365100DEAA36 /* RNSPinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71961F45365100DEAA36 /* RNSPinAddress.swift */; };
 		837F71991F45369D00DEAA36 /* RNSPinParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71981F45369D00DEAA36 /* RNSPinParent.swift */; };
 		837F719B1F45415100DEAA36 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F719A1F45415100DEAA36 /* Array+Utils.swift */; };
+		837FEF771F7515CA00C5B45F /* RNSPostPhoneConfirmSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FEF761F7515CA00C5B45F /* RNSPostPhoneConfirmSend.swift */; };
+		837FEF7A1F7516E000C5B45F /* RNSPostPhoneConfirmCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837FEF791F7516E000C5B45F /* RNSPostPhoneConfirmCheck.swift */; };
 		838540C41F70CF9D00B30772 /* RNSPostUserGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */; };
 		838540C91F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */; };
 		838540CB1F71173900B30772 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838540CA1F71173900B30772 /* Social.framework */; };
@@ -844,6 +846,8 @@
 		837F71961F45365100DEAA36 /* RNSPinAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinAddress.swift; path = Views/OVerLays/PinAddress/RNSPinAddress.swift; sourceTree = "<group>"; };
 		837F71981F45369D00DEAA36 /* RNSPinParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinParent.swift; path = Views/OVerLays/Parent/RNSPinParent.swift; sourceTree = "<group>"; };
 		837F719A1F45415100DEAA36 /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Utils.swift"; path = "Library/Helpers/Base objects extensions/Array/Array+Utils.swift"; sourceTree = "<group>"; };
+		837FEF761F7515CA00C5B45F /* RNSPostPhoneConfirmSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostPhoneConfirmSend.swift; path = POST/ConfirmSend/Phone/RNSPostPhoneConfirmSend.swift; sourceTree = "<group>"; };
+		837FEF791F7516E000C5B45F /* RNSPostPhoneConfirmCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostPhoneConfirmCheck.swift; path = POST/ConfirmCheck/Phone/RNSPostPhoneConfirmCheck.swift; sourceTree = "<group>"; };
 		838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUserGet.swift; path = POST/UserGet/RNSPostUserGet.swift; sourceTree = "<group>"; };
 		838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Delegate.swift"; path = "Controllers/Profile/RNSProfileViewController+Delegate.swift"; sourceTree = "<group>"; };
 		838540CA1F71173900B30772 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -1270,6 +1274,7 @@
 		8319C5BD1F60F251005A1768 /* ConfirmSend */ = {
 			isa = PBXGroup;
 			children = (
+				837FEF751F75158600C5B45F /* Phone */,
 				8319C5BE1F60F2AA005A1768 /* RNSPostConfirmSend.swift */,
 			);
 			name = ConfirmSend;
@@ -1278,6 +1283,7 @@
 		8319C5C01F60F657005A1768 /* ConfirmCheck */ = {
 			isa = PBXGroup;
 			children = (
+				837FEF781F7516BF00C5B45F /* Phone */,
 				8319C5C11F60F6A7005A1768 /* RNSPostConfirmCheck.swift */,
 			);
 			name = ConfirmCheck;
@@ -3000,6 +3006,22 @@
 			name = PinAddress;
 			sourceTree = "<group>";
 		};
+		837FEF751F75158600C5B45F /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				837FEF761F7515CA00C5B45F /* RNSPostPhoneConfirmSend.swift */,
+			);
+			name = Phone;
+			sourceTree = "<group>";
+		};
+		837FEF781F7516BF00C5B45F /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				837FEF791F7516E000C5B45F /* RNSPostPhoneConfirmCheck.swift */,
+			);
+			name = Phone;
+			sourceTree = "<group>";
+		};
 		838540C21F70CE5400B30772 /* UserGet */ = {
 			isa = PBXGroup;
 			children = (
@@ -4350,6 +4372,7 @@
 				8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
 				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				838EA03E1F53DC3600E9BF20 /* RNSTriangle+Draw.swift in Sources */,
+				837FEF771F7515CA00C5B45F /* RNSPostPhoneConfirmSend.swift in Sources */,
 				835718951F21AA9200DE5E25 /* STRouter+Loader.swift in Sources */,
 				83A667ED1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift in Sources */,
 				836D80F31F1DD62400FEE390 /* UIView+Layer.swift in Sources */,
@@ -4592,6 +4615,7 @@
 				83A53F961F4A9F0800938969 /* RNSRouteVariant.swift in Sources */,
 				838EA0451F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift in Sources */,
 				838EA02E1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift in Sources */,
+				837FEF7A1F7516E000C5B45F /* RNSPostPhoneConfirmCheck.swift in Sources */,
 				83A5C70B1F5812D5006C8D62 /* RNSDateSelectViewController.swift in Sources */,
 				838CE9351F3DA9FE00C10FBA /* RNSBusInfoViewController.swift in Sources */,
 				83AA6A6A1F5668C000B2139C /* QRScannerInfoViewController.swift in Sources */,

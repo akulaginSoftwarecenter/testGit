@@ -15,6 +15,7 @@ class RNSUserPayload: RNISMappableBase {
     var phone: String?
     var uuid: String?
     var phone_activation_code: String?
+    var new_phone_activation_code: String?
     var name: String?
     var token: String?
     var mobile_token: String?
@@ -38,6 +39,7 @@ class RNSUserPayload: RNISMappableBase {
         phone <- map["phone"]
         uuid <- map["uuid"]
         phone_activation_code <- map["phone_activation_code"]
+        new_phone_activation_code <- map["new_phone_activation_code"]
         name <- map["name"]
         token <- map["token"]
         user <- map["user"]
@@ -52,6 +54,14 @@ class RNSUserPayload: RNISMappableBase {
     
     func confirmSend() {
         RNSPostConfirmSend(self, complete: { item in
+            STRouter.showAlertRepeatCode()
+        }, failure: {
+            STRouter.showAlertOk($0)
+        })
+    }
+    
+    func phoneConfirmSend() {
+        RNSPostPhoneConfirmSend(self, complete: { item in
             STRouter.showAlertRepeatCode()
         }, failure: {
             STRouter.showAlertOk($0)

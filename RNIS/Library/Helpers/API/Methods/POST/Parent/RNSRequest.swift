@@ -37,6 +37,9 @@ class RNSRequest: AlamofireAPI {
         var mutableRequest = super.prepareURLRequest(request)
         mutableRequest.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options:[])
         mutableRequest.addValue(subject, forHTTPHeaderField: "Subject")
+        if showLogApi {
+            print("subject",subject)
+        }
         return mutableRequest
     }
    

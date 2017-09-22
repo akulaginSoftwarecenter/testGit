@@ -20,14 +20,25 @@ class RNSChangeCodeController: RNSCodeContainerController {
         return .change
     }
     
-    override func actionComplete(_ item: RNSUserPayload?) {
+    override func repeatCodeAction() {
+        item?.phoneConfirmSend()
+    }
+    
+    override func actionNext() {
+        item?.new_phone_activation_code = codeText
+        RNSPostPhoneConfirmCheck(item, complete: { [weak self] item in
+            self?.popAlert()
+            }, failure: { [weak self] error in
+                self?.prepareError(error)
+        })
+    }
+    
+    func popAlert() {
         RNSMenuManager.leftMenuUpdate()
-        /*
         STRouter.pop(animated: false) {
             STRouter.pop(animated: false) {
                 STRouter.showAlertOk("Номер телефона успешно изменён")
             }
         }
-        */
     }
 }
