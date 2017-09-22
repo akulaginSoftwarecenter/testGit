@@ -36,7 +36,7 @@ class RNSMoveMapViewController: UIViewController {
     }
     
     func preparePopup() {
-        guard let containerVC = RNSMovePopupController.initController,
+        guard let containerVC = RNSMovePopupController.initController(item),
             let containerView = containerVC.view else {
                 return
         }

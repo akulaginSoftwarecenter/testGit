@@ -10,8 +10,9 @@ import UIKit
 
 class RNSMovePopupController: UIViewController {
     
-    static var initController: UIViewController? {
+    static func initController(_ item: RNSRouteVariant?) -> UIViewController? {
         let vc = RNSMovePopupController.controller as? RNSMovePopupController
+        vc?.item = item
         let container = RNSScrollShowContainer.initController(vc)
         
         container?.hideImageSlide = true
@@ -32,15 +33,11 @@ class RNSMovePopupController: UIViewController {
     var containerController: RNSMoveDetailController?
     var handlerDetailBack: EmptyBlock?
     var startBottomOffset: CGFloat?
+    var item: RNSRouteVariant?
     
     @IBOutlet weak var viewVariant: RNSDotsBussView!
     @IBOutlet weak var buttonDown: UIButton!
-    
     @IBOutlet weak var containerView: UIView!
-    
-    var item: RNSRouteVariant? {
-        return RNSPageRouteManager.currentItem
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

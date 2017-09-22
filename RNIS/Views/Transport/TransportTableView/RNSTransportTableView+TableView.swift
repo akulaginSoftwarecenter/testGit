@@ -27,4 +27,8 @@ extension RNSTransportTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return item(indexPath)?.heightDotsVerticalModel ?? 0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        RNSMoveMapViewController.initController(item(indexPath))?.pushAnimated()
+    }
 }

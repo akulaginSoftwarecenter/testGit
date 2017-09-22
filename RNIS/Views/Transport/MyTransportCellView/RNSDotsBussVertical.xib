@@ -62,7 +62,7 @@
                         <constraint firstAttribute="height" constant="6" id="uva-sW-Lv3"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-5c-tKQ" customClass="RNSRegisterTableView" customModule="RNIS" customModuleProvider="target">
+                <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-5c-tKQ" customClass="RNSRegisterTableView" customModule="RNIS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="55" width="265" height="201"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
