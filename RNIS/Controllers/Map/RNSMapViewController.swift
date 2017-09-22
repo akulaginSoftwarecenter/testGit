@@ -24,7 +24,7 @@ class RNSMapViewController: UIViewController {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
         view.labelText.text = "Обновление остановок..."
-        view.defaultAlpha = 0.1
+        view.defaultAlpha = 0.2
         return view
     }()
     
