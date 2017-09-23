@@ -12,5 +12,6 @@ extension NotificationsSettingsViewController {
     
     @IBAction func actionSave(_ sender: Any) {
         STRouter.pop()
+        self.handlerNotification?(notificationPicker.selectedRow(inComponent: 0))
     }
 }

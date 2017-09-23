@@ -24,7 +24,7 @@ class NotificationTableViewCell: RNSBaseTableCell {
     func updateCell(model: NotificationModel) {
         self.autoNumberLabel.text = model.autoNumber
         self.streetLabel.text = model.street
-        self.timeLabel.text = model.time
+        self.timeLabel.text = "\(model.time ?? 0) мин."
     }
     
 }
