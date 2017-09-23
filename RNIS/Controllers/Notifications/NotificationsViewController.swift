@@ -12,14 +12,14 @@ class NotificationModel: NSObject {
     
     var autoNumber: String!
     var street: String!
-    var time: String!
+    var time: Int!
     
 }
 
 class NotificationsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var testArray: [NotificationModel]!
     @IBOutlet weak var tableView: UITableView!
-    var testArray: NSMutableArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,27 +33,25 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
         self.navigationItem.title = "Оповещения"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         
-        self.testArray = NSMutableArray()
-        
+        self.testArray = []
         for i in 0...5 {
             let model = NotificationModel()
             if i % 2 == 0 {
                 model.autoNumber = "A557"
                 model.street = "Лиговский проспект 22"
-                model.time = "60 мин."
+                model.time = 60
             } else {
                 model.autoNumber = "A96"
                 model.street = "Улица Петроградская"
-                model.time = "20 мин."
+                model.time = 20
             }
-            self.testArray.add(model)
+            self.testArray.append(model)
         }
         
         self.tableView.tableFooterView = UIView();
         self.tableView.register(UINib.init(nibName: "NotificationTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "NotificationTableViewCell")
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        
     }
 
     //MARK: UITableViewDataSource Methods
@@ -71,7 +69,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell", for: indexPath) as! NotificationTableViewCell;
-        let model = self.testArray[indexPath.row] as! NotificationModel
+        let model = self.testArray[indexPath.row]
         cell.updateCell(model: model)
         return cell
     }
@@ -79,7 +77,16 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
     //MARK: UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        NotificationsSettingsViewController.initialPushAnimatedRed()
+        let model = self.testArray[indexPath.row]
+
+        let controller = NotificationsSettingsViewController.initialController as! NotificationsSettingsViewController
+        controller.setIntialValue(model.time)
+        controller.handlerNotification = { [weak self] notification in
+            guard let `self` = self else { return }
+            model.time = notification
+            self.tableView.reloadData()
+        }
+        controller.pushAnimatedRed()
     }
     
     //MARK: - Navigation
