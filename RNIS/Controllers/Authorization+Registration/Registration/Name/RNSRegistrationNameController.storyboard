@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="adi-2r-abR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="adi-2r-abR">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +35,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-rA-o14" customClass="RNSNameField" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="389" width="354" height="30"/>
+                                <rect key="frame" x="30" y="409" width="354" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -44,12 +44,12 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA1-nt-8CO" customClass="RNSProfilePhoto" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="132" y="182" width="150" height="150"/>
+                                <rect key="frame" x="132" y="202" width="150" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uA1-nt-8CO" secondAttribute="height" multiplier="200:200" id="1gK-7c-wqg"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="sZZ-eD-GUI"/>
-                                    <constraint firstAttribute="width" priority="750" constant="150" id="xRW-9R-GaD"/>
+                                    <constraint firstAttribute="width" constant="150" id="xRW-9R-GaD"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -58,7 +58,7 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M54-Z0-rE4">
-                                <rect key="frame" x="30" y="429" width="354" height="0.0"/>
+                                <rect key="frame" x="30" y="449" width="354" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
