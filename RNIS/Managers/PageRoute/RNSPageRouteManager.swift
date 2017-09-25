@@ -48,7 +48,7 @@ class RNSPageRouteManager: NSObject {
             return
         }
         items?.remove(at: index)
-        handlerUpdateFavorite?()
+        updateFavorite()
     }
     
     static func showMoveMapStub() {
@@ -62,5 +62,9 @@ class RNSPageRouteManager: NSObject {
             prepareFirstNavel(nil)
         }
         vc?.pushAnimated()
+    }
+    
+    static func updateFavorite() {
+        handlerUpdateFavorite?()
     }
 }

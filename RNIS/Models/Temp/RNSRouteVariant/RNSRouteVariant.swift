@@ -11,19 +11,18 @@ import UIKit
 class RNSRouteVariant: RNISMappableBase, Hashable {
     
     var isFavorite: Bool = false
-    
     var roadActivate: [PGPolyline]?
     var roadOff: RNSRoadOff?
-    
     var currentZoom: Int?
-    
     var durationMinute: Int?
     var endDate: Date?
+    var points = [RNSRoutePoint]()
+    
+    var title: String?
     
     var endPoint: RNSRoutePoint? {
         return points.last
     }
-    var points = [RNSRoutePoint]()
     
     lazy var navels: [RNSDurationItem] = {
         var navels = [RNSDurationItem]()

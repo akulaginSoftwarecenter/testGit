@@ -12,6 +12,7 @@ extension RNSRouteVariant {
     
     static var genOne: RNSRouteVariant {
         let item = RNSRouteVariant()
+        item.title =  "Быстрый маршрут"
         item.prepareDate()
         item.addRunPoint(59.934338, lon: 30.301333, busStop: busStop1)
         
@@ -36,6 +37,7 @@ extension RNSRouteVariant {
     
     static var genTwo: RNSRouteVariant {
         let item = RNSRouteVariant()
+        item.title =  "Дешевый маршрут"
         item.prepareDate()
         item.addRunPoint(59.934338, lon: 30.301333, busStop: busStop1)
         

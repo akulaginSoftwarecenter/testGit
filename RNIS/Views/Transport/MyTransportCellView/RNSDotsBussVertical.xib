@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="durationLabel" destination="18e-xa-erl" id="Lgc-He-Yxd"/>
                 <outlet property="tableView" destination="NO5-5c-tKQ" id="ZC7-V0-soT"/>
+                <outlet property="titleLabel" destination="Hwt-hj-X9L" id="GxX-GO-rNz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

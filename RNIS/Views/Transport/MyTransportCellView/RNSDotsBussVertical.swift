@@ -12,6 +12,7 @@ class RNSDotsBussVertical: BaseViewWithXIBInit {
 
     @IBOutlet weak var tableView: RNSRegisterTableView!
     @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var items: [RNSVerticalTableItem] {
         return dotsVerticalModel?.items ?? []
@@ -29,5 +30,6 @@ class RNSDotsBussVertical: BaseViewWithXIBInit {
     func updateUI() {
         tableView.reloadData()
         durationLabel.text = dotsVerticalModel?.duration
+        titleLabel.text = item?.title
     }
 }
