@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSAlertViewController: UIViewController {
+class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
@@ -19,6 +19,7 @@ class RNSAlertViewController: UIViewController {
     static func controller(_ message: String?) -> RNSAlertViewController? {
         let vc = RNSAlertViewController.initialController as? RNSAlertViewController
         vc?.message = message
+        vc?.transitioningDelegate = CustomTransitionDelegate.shared
         return vc
     }
     
