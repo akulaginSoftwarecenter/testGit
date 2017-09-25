@@ -44,6 +44,7 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
     func removePhoto() {
         photo = nil
         imageView.image = nil
+        handlerUpdateImage?()
     }
     
     var imageData: String? {

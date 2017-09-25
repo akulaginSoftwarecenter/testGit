@@ -21,7 +21,7 @@ extension RNSProfileViewController {
             return
         }
         print("updateProfilePhoto")
-        item?.avatar = imageData
+        //item?.avatar = imageData
         updateItem()
     }
 }
