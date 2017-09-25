@@ -35,12 +35,8 @@ class RNSBusStopManager: NSObject {
         queue.addOperation(complete)
     }
     
-    static var maxCount: Int? {
-        var maxCount: Int?
-        if RNSMapManager.getZoomLevel < 14 {
-            maxCount = 50
-        }
-        return maxCount
+    static var isNeedStopLoad: Bool {
+        return RNSMapManager.getZoomLevel <= 13
     }
     
     static var lastMinCoord: PGGeoPoint {

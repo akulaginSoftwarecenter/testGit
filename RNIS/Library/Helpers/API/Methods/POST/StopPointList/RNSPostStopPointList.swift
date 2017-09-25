@@ -19,15 +19,13 @@ class RNSPostStopPointList: RNSRequest {
     
     var min: PGGeoPoint?
     var center: PGGeoPoint?
-    var maxCount: Int?
     var complete: AliasComplete?
     
-    convenience init(_ min: PGGeoPoint, center: PGGeoPoint, maxCount: Int? = nil, complete: AliasComplete?) {
+    convenience init(_ min: PGGeoPoint, center: PGGeoPoint, complete: AliasComplete?) {
         self.init()
         
         self.min = min
         self.center = center
-        self.maxCount = maxCount
         self.complete = complete
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
@@ -55,9 +53,6 @@ class RNSPostStopPointList: RNSRequest {
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,
             var items = model?.payload?.items {
-            if let maxCount = maxCount {
-                items = Array(items.prefix(maxCount))
-            }
             print("RNSPostStopPointList",items.count)
             RNSDataManager.parseBusStopItemsAsync(items) { [weak self] (uuids) in
                 self?.complete?(uuids)

@@ -15,7 +15,7 @@ extension RNSBusStopManager {
     }
     
     static func updateOperationBD() {
-        let uuids = RNSDataManager.bussStopsUuids(lastMinCoord, center: lastCenterCoord, maxCount: maxCount)
+        let uuids = RNSDataManager.bussStopsUuids(lastMinCoord, center: lastCenterCoord)
         updateUuids(uuids)
     }
      

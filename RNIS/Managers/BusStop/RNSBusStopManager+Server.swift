@@ -10,12 +10,16 @@ import Foundation
 import Alamofire
 
 extension RNSBusStopManager {
-    
     static func updateServer(complete: EmptyBlock?) {
+        if isNeedStopLoad {
+            removeAll()
+            complete?()
+            return
+        }
         CounterTime.startTimer()
         updateBD()
         request?.cancel()
-        request = RNSPostStopPointList(lastMinCoord, center: lastCenterCoord, maxCount: maxCount, complete: { (uuids) in
+        request = RNSPostStopPointList(lastMinCoord, center: lastCenterCoord, complete: { (uuids) in
             CounterTime.endTimer()
             updateOperationServer(uuids)
             complete?()

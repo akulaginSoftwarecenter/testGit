@@ -63,11 +63,11 @@ extension RNSDataManager {
         return parseItems(dicts)
     }
     
-    static func bussStopsUuids(_ min: PGGeoPoint, center: PGGeoPoint, maxCount: Int? = nil) -> [String]? {
+    static func bussStopsUuids(_ min: PGGeoPoint, center: PGGeoPoint) -> [String]? {
         guard let results = busStops else {
             return nil
         }
-        return modelsUuids(Array(results), min: min, center: center, maxCount: maxCount)
+        return modelsUuids(Array(results), min: min, center: center)
     }
     
     static func removeAllBusStop() {

@@ -11,14 +11,20 @@ import Foundation
 extension RNSBusStopManager {
     
     static func updateUuids(_ uuids: [String]?) {
-        let addUuids = self.addUuids(uuids)
-        let removeUuids = self.removeUuids(uuids)
+        updateUuids(addUuids: addUuids(uuids), removeUuids: removeUuids(uuids))
+    }
+    
+    static func updateUuids(addUuids: [String]? = nil, removeUuids:[String]?) {
         Utils.mainQueue {
             removeOld(removeUuids)
             showPinsUuids(addUuids)
             showedUuids = showedItems.flatMap{$0.uuid}
             print("showedStops",showedUuids.count, RNSMapManager.getZoomLevel)
         }
+    }
+    
+    static func removeAll() {
+        updateUuids(removeUuids: showedUuids)
     }
      
     static func addUuids(_ uuids: [String]?) -> [String]? {
