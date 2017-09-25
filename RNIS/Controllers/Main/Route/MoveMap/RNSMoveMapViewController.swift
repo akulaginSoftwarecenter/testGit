@@ -12,18 +12,31 @@ class RNSMoveMapViewController: UIViewController {
 
     @IBOutlet weak var viewTop: UIView!
     
+    var handlerDidDisappear: EmptyBlock?
+    var item: RNSRouteVariant?
+    
+    static func initController(_ item: RNSRouteVariant?) -> RNSMoveMapViewController? {
+        let vc = RNSMoveMapViewController.controller as? RNSMoveMapViewController
+        vc?.item = item
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareMapView()
         prepareColor()
-        
-        prepareStub()
         preparePopup()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        handlerDidDisappear?()
+    }
+    
     func preparePopup() {
-        guard let containerVC = RNSMovePopupController.initController,
+        guard let containerVC = RNSMovePopupController.initController(item),
             let containerView = containerVC.view else {
                 return
         }
@@ -32,25 +45,11 @@ class RNSMoveMapViewController: UIViewController {
         containerView.autoPinEdgesToSuperviewEdges()
     }
     
-    func prepareStub() {
-        item?.points.first?.doneMove = true
-        RNSPageRouteManager.prepareFirstNavel(523)
-    }
-    
     func prepareColor() {
         viewTop.backgroundColor = .backColor
     }
     
-    var item: RNSRouteVariant? {
-        return RNSPageRouteManager.currentItem
-    }
-    
     override class var storyboardName: String {
         return "RNSMapParentController"
-    }
-     
-    deinit {
-        RNSPageRouteManager.updateRoads()
-        RNSPageRouteManager.prepareFirstNavel(nil)
     }
 }
