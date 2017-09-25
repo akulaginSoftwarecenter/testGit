@@ -30,6 +30,7 @@ class RNSPageRouteManager: NSObject {
     }
      
     static func generateItems() {
+        removeAllRoute()
         var items = [RNSRouteVariant]()
         items.append(RNSRouteVariant.genOne)
         items.append(RNSRouteVariant.genTwo)
