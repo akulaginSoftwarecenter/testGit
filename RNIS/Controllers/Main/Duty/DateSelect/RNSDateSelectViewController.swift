@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSDateSelectViewController: UIViewController {
+class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
     
     var handlerDate: ((Date?) -> ())?
     
