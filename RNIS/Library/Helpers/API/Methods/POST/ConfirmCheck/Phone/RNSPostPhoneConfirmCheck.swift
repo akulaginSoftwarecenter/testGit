@@ -9,6 +9,11 @@
 import UIKit
 
 class RNSPostPhoneConfirmCheck: RNSPostConfirmCheck {
+    
+    override var headers: AliasDictionary {
+        return super.headers.merged(with: Utils.mobileToken)
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.mobile_user.phone.confirm.check"
     }
