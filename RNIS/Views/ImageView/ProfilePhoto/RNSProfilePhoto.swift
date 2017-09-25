@@ -10,13 +10,14 @@ import UIKit
 
 class RNSProfilePhoto: BaseViewWithXIBInit {
 
-    var photo: UIImage?
     @IBInspectable var colorImageView: UIColor?
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
     
+    var isChange = false
+     
     var isHavePhoto: Bool {
-        return photo != nil
+        return imageView.image != nil
     }
     
     var handlerUpdateImage: EmptyBlock?
@@ -42,19 +43,14 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
     }
 
     func removePhoto() {
-        photo = nil
-        imageView.image = nil
-        handlerUpdateImage?()
+        prepareImage(nil)
     }
     
-    var imageData: String? {
-        /*
+    var imageData: String {
         guard let image = imageView.image else {
-            return nil
+            return ""
         }
-        */
-        let imageData = UIImageJPEGRepresentation(#imageLiteral(resourceName: "EmptyPhoto"), 0.1)!
-       // return imageData.base64EncodedString()
+        let imageData = UIImageJPEGRepresentation(image, 0.1)!
         return imageData.base64EncodedString()
     }
     

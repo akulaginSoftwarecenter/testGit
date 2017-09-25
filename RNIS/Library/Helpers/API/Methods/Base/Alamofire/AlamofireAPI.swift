@@ -35,13 +35,13 @@ class AlamofireAPI: API {
         let fullPath = serverAddress + path
         let url = URL(string: fullPath)!;
         var urlRequest = URLRequest(url: url)
-        
+        /*
         do {
             urlRequest = try URLEncoding.queryString.encode(urlRequest, with: parameters)
         } catch {
             // Handle error
         }
-        
+        */
         urlRequest.httpMethod = method.rawValue
         urlRequest = prepareURLRequest(urlRequest)
         
@@ -57,7 +57,7 @@ class AlamofireAPI: API {
         // E.g. set timeout interval or cache policy
         var mutableRequest = request
         mutableRequest.timeoutInterval = 60.0
-        mutableRequest.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
+        mutableRequest.cachePolicy = NSURLRequest.CachePolicy.useProtocolCachePolicy
         return mutableRequest
     }
 

@@ -82,4 +82,20 @@ class RNSUserPayload: RNISMappableBase {
         }
         return InputFieldsValidator.format(phone).text
     }
+    
+    
+    func loadImage(complete: ((UIImage?)->())?) {
+        guard let avatar = avatar else {
+            return
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            var image: UIImage?
+            if let imageData = NSData(base64Encoded: avatar, options: .ignoreUnknownCharacters) as? Data {
+                image = UIImage(data: imageData)
+            }
+            Utils.mainQueue {
+                complete?(image)
+            }
+        }
+    }
 }

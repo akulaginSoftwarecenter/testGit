@@ -35,8 +35,13 @@ class RNSRequest: AlamofireAPI {
     
     override func prepareURLRequest(_ request: URLRequest) -> URLRequest{
         var mutableRequest = super.prepareURLRequest(request)
-        mutableRequest.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options:[])
-        mutableRequest.addValue(subject, forHTTPHeaderField: "Subject")
+        let headers = [
+            "x-requested-with": "XMLHttpRequest",
+            "subject": "\(subject)",
+            "cache-control": "no-cache"
+        ]
+        mutableRequest.allHTTPHeaderFields = headers
+        mutableRequest.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
         if showLogApi {
             print("subject",subject)
         }

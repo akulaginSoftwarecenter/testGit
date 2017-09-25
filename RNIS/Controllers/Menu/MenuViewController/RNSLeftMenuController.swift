@@ -14,12 +14,13 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     var menuItems: [MenuItem] {
         return RNSMenuManager.menuItems
     }
-    
+    @IBOutlet weak var backLoaderView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    lazy var loaderView:LoaderView = LoaderView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,9 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func loadData() {
+        loaderView.showInView(backLoaderView)
         RNSPostUserGet {[weak self] (reply, error, _) in
+            self?.loaderView.remove()
             self?.updateUI(reply as? RNSUserPayload)
         }
     }
@@ -49,6 +52,9 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     func updateUI(_ item: RNSUserPayload?) {
         nameLabel.text = item?.name
         phoneLabel.text = item?.formatPhone
+        item?.loadImage { [weak self] image in
+            self?.profileImageView.image = image ?? #imageLiteral(resourceName: "avatarPlaceholderImage")
+        }
     }
     
     func prepareHandlers() {

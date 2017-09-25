@@ -17,11 +17,13 @@ extension RNSProfileViewController {
     }
     
     func updateProfilePhoto() {
-        guard let imageData = profilePhoto.imageData else {
-            return
-        }
-        print("updateProfilePhoto")
-        //item?.avatar = imageData
+        item?.avatar = profilePhoto.imageData
         updateItem()
+    }
+    
+    func decodeImage() {
+        item?.loadImage { [weak self] image in
+            self?.profilePhoto.imageView.image = image
+        }
     }
 }

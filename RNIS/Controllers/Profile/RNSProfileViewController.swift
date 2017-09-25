@@ -50,6 +50,7 @@ class RNSProfileViewController: UIViewController {
         nameField.text = item?.name
         phoneField.text = item?.formatPhone
         emailField.text = item?.email
+        decodeImage()
     }
     
     override class var storyboardName: String {
