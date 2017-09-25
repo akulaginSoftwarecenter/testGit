@@ -19,6 +19,8 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
         return photo != nil
     }
     
+    var handlerUpdateImage: EmptyBlock?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

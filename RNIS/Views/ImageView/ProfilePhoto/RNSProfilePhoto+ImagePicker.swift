@@ -23,5 +23,6 @@ extension RNSProfilePhoto {
     func prepareImage(_ image: UIImage?) {
         photo = image
         imageView.image = image
+        handlerUpdateImage?()
     }
 }

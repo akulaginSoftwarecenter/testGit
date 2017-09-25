@@ -15,6 +15,7 @@ class RNSProfileViewController: UIViewController {
     @IBOutlet weak var phoneField: RNSPhoneField!
     @IBOutlet weak var blackButton: RNSBlackButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var profilePhoto: RNSProfilePhoto!
     
     var item: RNSUserPayload?
     
@@ -22,6 +23,7 @@ class RNSProfileViewController: UIViewController {
         super.viewDidLoad()
             
         prepareBlackButton()
+        prepareProfilePhoto()
     }
     
     func prepareBlackButton() {

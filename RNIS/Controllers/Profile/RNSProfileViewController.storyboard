@@ -179,6 +179,7 @@
                         <outlet property="errorLabel" destination="AvH-Pi-c86" id="3wy-jL-xDp"/>
                         <outlet property="nameField" destination="gW3-PU-jT5" id="iur-Qh-jvy"/>
                         <outlet property="phoneField" destination="89S-Yo-PlB" id="ohd-zG-6Zh"/>
+                        <outlet property="profilePhoto" destination="He8-hz-3g9" id="7c1-DR-JR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2P-Z1-GDj" userLabel="First Responder" sceneMemberID="firstResponder"/>

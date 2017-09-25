@@ -485,6 +485,7 @@
 		83B2E09B1F1E13F700FA92A4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */; };
 		83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */; };
 		83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */; };
+		83C15D671F78A002005FD3F4 /* RNSProfileViewController+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C15D661F78A001005FD3F4 /* RNSProfileViewController+Image.swift */; };
 		83CD584B1F25878900A9FE1A /* RNSPostRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD584A1F25878900A9FE1A /* RNSPostRouting.swift */; };
 		83CD584D1F25879B00A9FE1A /* RNSPostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD584C1F25879B00A9FE1A /* RNSPostLogin.swift */; };
 		83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58501F258BAB00A9FE1A /* PGGeoPoint+Utils.swift */; };
@@ -999,6 +1000,7 @@
 		83B2E09A1F1E13F700FA92A4 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSError+ErrorItem.swift"; path = "Library/Helpers/Base objects extensions/NSError/NSError+ErrorItem.swift"; sourceTree = "<group>"; };
 		83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGetTraffic.swift; path = GET/Traffic/RNSGetTraffic.swift; sourceTree = "<group>"; };
+		83C15D661F78A001005FD3F4 /* RNSProfileViewController+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Image.swift"; path = "Controllers/Profile/RNSProfileViewController+Image.swift"; sourceTree = "<group>"; };
 		83CD584A1F25878900A9FE1A /* RNSPostRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostRouting.swift; path = POST/Routing/RNSPostRouting.swift; sourceTree = "<group>"; };
 		83CD584C1F25879B00A9FE1A /* RNSPostLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostLogin.swift; path = POST/Login/RNSPostLogin.swift; sourceTree = "<group>"; };
 		83CD58501F258BAB00A9FE1A /* PGGeoPoint+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PGGeoPoint+Utils.swift"; path = "Library/Helpers/Base objects extensions/PGGeoPoint/PGGeoPoint+Utils.swift"; sourceTree = "<group>"; };
@@ -3294,6 +3296,7 @@
 				8386B4431F343E8E008A5CC7 /* ChangePassword */,
 				836277C51F38044D009FB712 /* ChangePhone */,
 				839BCDFA1F32E66B00B5CA88 /* RNSProfileViewController.swift */,
+				83C15D661F78A001005FD3F4 /* RNSProfileViewController+Image.swift */,
 				837857F41F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift */,
 				838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */,
 				8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */,
@@ -4641,6 +4644,7 @@
 				837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
 				83204B2F1F591A590033ACA1 /* RNSLeftMenuBackButton.swift in Sources */,
 				83A5C6ED1F57F396006C8D62 /* RNSMoveDetailController.swift in Sources */,
+				83C15D671F78A002005FD3F4 /* RNSProfileViewController+Image.swift in Sources */,
 				835D85301F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift in Sources */,
 				83D713801F5D03DC005206C5 /* TransportViewController+Segment.swift in Sources */,
 				836A9D6F1F624B5300B5EB55 /* RNSContactItem+Send.swift in Sources */,
