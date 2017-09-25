@@ -19,13 +19,15 @@ extension RNSDutyViewController {
     
     @IBAction func actionFrom(_ sender: Any) {
         showAddress(.fromAddress) {[weak self] (text) in
-            self?.fromField.text = text
+            guard let `self` = self else { return }
+            self.fromField.text = text
         }
     }
     
     @IBAction func actionIn(_ sender: Any) {
         showAddress(.inAddress) {[weak self] (text) in
-            self?.inField.text = text
+            guard let `self` = self else { return }
+            self.inField.text = text
         }
     }
     
@@ -33,7 +35,7 @@ extension RNSDutyViewController {
         
         viewLabelDate.isHidden = true
         let vc = RNSDateSelectViewController.initialController as? RNSDateSelectViewController
-        vc?.modalTransitionStyle = .crossDissolve
+        vc?.transitioningDelegate = CustomTransitionDelegate.shared
         vc?.handlerDate = { [weak self] date in
             self?.prepareDate(date)
         }
