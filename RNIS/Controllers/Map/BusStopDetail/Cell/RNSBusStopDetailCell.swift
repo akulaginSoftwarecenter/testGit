@@ -27,11 +27,10 @@ class RNSBusStopDetailCell: RNSBaseTableCell {
         
         //prepareShowNext()
     }
-    /*
+    
     func prepareShowNext() {
-        let showNext = item?.showNext ?? false
+        let showNext = item?.next ?? false
         nextLabel.isHidden = !showNext
         numCenterConstraint.constant = showNext ? -6 : 0
     }
-    */
 }
