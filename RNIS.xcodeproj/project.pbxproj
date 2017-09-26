@@ -161,6 +161,9 @@
 		835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */; };
 		835A31221F4D21D100F83BE2 /* RNSRoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835A31211F4D21D100F83BE2 /* RNSRoutePoint.swift */; };
 		835A31251F4D2F6500F83BE2 /* Sequence+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835A31241F4D2F6500F83BE2 /* Sequence+Utils.swift */; };
+		835AA2201F7A11CB006E1CDE /* RNSTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835AA21F1F7A11CB006E1CDE /* RNSTimeManager.swift */; };
+		835AA2221F7A15BF006E1CDE /* RNSBus+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835AA2211F7A15BF006E1CDE /* RNSBus+Stub.swift */; };
+		835AA2251F7A1994006E1CDE /* RNSMoveBusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835AA2241F7A1994006E1CDE /* RNSMoveBusManager.swift */; };
 		835D85301F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D852F1F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift */; };
 		835D85331F4FC72E00B83EB2 /* RNSRoadRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85321F4FC72E00B83EB2 /* RNSRoadRun.swift */; };
 		835D85371F4FC82F00B83EB2 /* RNSDotRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D85361F4FC82F00B83EB2 /* RNSDotRun.swift */; };
@@ -230,6 +233,7 @@
 		836B960B1F79FE7600531BC6 /* RNSPostBusList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B960A1F79FE7600531BC6 /* RNSPostBusList.swift */; };
 		836B960D1F7A003400531BC6 /* RNSBusManager+Uuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B960C1F7A003400531BC6 /* RNSBusManager+Uuids.swift */; };
 		836B960F1F7A008100531BC6 /* RNSBusManager+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B960E1F7A008100531BC6 /* RNSBusManager+Server.swift */; };
+		836B96121F7A0A0500531BC6 /* RNSMoveStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B96111F7A0A0500531BC6 /* RNSMoveStub.swift */; };
 		836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */; };
 		836D80A81F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836D80A51F1DB31100FEE390 /* ProgorodLiteLibraryResources.bundle */; };
 		836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D80AD1F1DB33900FEE390 /* AppDelegate.swift */; };
@@ -705,6 +709,9 @@
 		835718B41F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Handlers.swift"; path = "Controllers/Map/RNSMapViewController+Handlers.swift"; sourceTree = "<group>"; };
 		835A31211F4D21D100F83BE2 /* RNSRoutePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoutePoint.swift; path = Models/Temp/RNSRouteVariant/Point/RNSRoutePoint.swift; sourceTree = "<group>"; };
 		835A31241F4D2F6500F83BE2 /* Sequence+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Sequence+Utils.swift"; path = "Library/Helpers/Base objects extensions/Sequence/Sequence+Utils.swift"; sourceTree = "<group>"; };
+		835AA21F1F7A11CB006E1CDE /* RNSTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSTimeManager.swift; sourceTree = "<group>"; };
+		835AA2211F7A15BF006E1CDE /* RNSBus+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSBus+Stub.swift"; path = "Models/Bus/RNSBus+Stub.swift"; sourceTree = "<group>"; };
+		835AA2241F7A1994006E1CDE /* RNSMoveBusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSMoveBusManager.swift; path = Managers/Bus/Move/RNSMoveBusManager.swift; sourceTree = "<group>"; };
 		835D852F1F4FBBCB00B83EB2 /* RNSRouteVariant+Generate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+Generate.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+Generate.swift"; sourceTree = "<group>"; };
 		835D85321F4FC72E00B83EB2 /* RNSRoadRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRoadRun.swift; path = Views/Polylines/RoadRun/RNSRoadRun.swift; sourceTree = "<group>"; };
 		835D85361F4FC82F00B83EB2 /* RNSDotRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDotRun.swift; path = Views/Polylines/DotRun/RNSDotRun.swift; sourceTree = "<group>"; };
@@ -763,6 +770,7 @@
 		836B960A1F79FE7600531BC6 /* RNSPostBusList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostBusList.swift; path = POST/BusList/RNSPostBusList.swift; sourceTree = "<group>"; };
 		836B960C1F7A003400531BC6 /* RNSBusManager+Uuids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSBusManager+Uuids.swift"; path = "Managers/Bus/RNSBusManager+Uuids.swift"; sourceTree = "<group>"; };
 		836B960E1F7A008100531BC6 /* RNSBusManager+Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSBusManager+Server.swift"; path = "Managers/Bus/RNSBusManager+Server.swift"; sourceTree = "<group>"; };
+		836B96111F7A0A0500531BC6 /* RNSMoveStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSMoveStub.swift; path = Managers/Bus/MoveGenerator/RNSMoveStub.swift; sourceTree = "<group>"; };
 		836D805A1F1DAC0400FEE390 /* RNIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D809B1F1DB29D00FEE390 /* RNIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RNIS-Bridging-Header.h"; path = "Application/RNIS-Bridging-Header.h"; sourceTree = "<group>"; };
 		836D809C1F1DB31100FEE390 /* libProgorodLiteLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProgorodLiteLibrary.a; path = Library/Helpers/ProgorodLiteLibrary/libProgorodLiteLibrary.a; sourceTree = "<group>"; };
@@ -2027,6 +2035,15 @@
 			name = Sequence;
 			sourceTree = "<group>";
 		};
+		835AA2231F7A1944006E1CDE /* Move */ = {
+			isa = PBXGroup;
+			children = (
+				836B96101F7A09A100531BC6 /* MoveStub */,
+				835AA2241F7A1994006E1CDE /* RNSMoveBusManager.swift */,
+			);
+			name = Move;
+			sourceTree = "<group>";
+		};
 		835D85311F4FC6CF00B83EB2 /* RoadRun */ = {
 			isa = PBXGroup;
 			children = (
@@ -2377,6 +2394,23 @@
 			name = BusList;
 			sourceTree = "<group>";
 		};
+		836B96101F7A09A100531BC6 /* MoveStub */ = {
+			isa = PBXGroup;
+			children = (
+				836B96111F7A0A0500531BC6 /* RNSMoveStub.swift */,
+			);
+			name = MoveStub;
+			sourceTree = "<group>";
+		};
+		836B96131F7A0E6500531BC6 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				835AA21F1F7A11CB006E1CDE /* RNSTimeManager.swift */,
+			);
+			name = Time;
+			path = Managers/Time;
+			sourceTree = "<group>";
+		};
 		836D80511F1DAC0400FEE390 = {
 			isa = PBXGroup;
 			children = (
@@ -2484,6 +2518,7 @@
 				838EA0261F53AE1F00E9BF20 /* PageRoute */,
 				8357186A1F219EB600DE5E25 /* Router */,
 				83940B941F6BE678005654DE /* Search */,
+				836B96131F7A0E6500531BC6 /* Time */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -2730,6 +2765,7 @@
 			isa = PBXGroup;
 			children = (
 				836EEF021F3BFAB2007631D9 /* RNSBus.swift */,
+				835AA2211F7A15BF006E1CDE /* RNSBus+Stub.swift */,
 			);
 			name = Bus;
 			sourceTree = "<group>";
@@ -3254,6 +3290,7 @@
 		83940B891F6B80BF005654DE /* Bus */ = {
 			isa = PBXGroup;
 			children = (
+				835AA2231F7A1944006E1CDE /* Move */,
 				83940B8A1F6B8AF3005654DE /* RNSBusManager.swift */,
 				836B960C1F7A003400531BC6 /* RNSBusManager+Uuids.swift */,
 				836B960E1F7A008100531BC6 /* RNSBusManager+Server.swift */,
@@ -4337,6 +4374,7 @@
 				839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */,
 				837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */,
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
+				836B96121F7A0A0500531BC6 /* RNSMoveStub.swift in Sources */,
 				836B960B1F79FE7600531BC6 /* RNSPostBusList.swift in Sources */,
 				836277CF1F3814FA009FB712 /* RNSPinBusStop.swift in Sources */,
 				836EEF101F3C023A007631D9 /* ReusableView.swift in Sources */,
@@ -4385,6 +4423,7 @@
 				8329DF541F340E8B00D542FF /* RNSRedContainer.swift in Sources */,
 				833609831F738CE700B42333 /* RNSRouteDetailController+Flag.swift in Sources */,
 				838707DF1F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */,
+				835AA2221F7A15BF006E1CDE /* RNSBus+Stub.swift in Sources */,
 				835718891F21A7B700DE5E25 /* RNSTokenPayload.swift in Sources */,
 				836A9D7D1F625FE000B5EB55 /* RNSPostComplaint.swift in Sources */,
 				832E4B8F1F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
@@ -4494,6 +4533,7 @@
 				83D7137C1F5D0076005206C5 /* RNSBlackMoveButton.swift in Sources */,
 				83204B2A1F5911850033ACA1 /* RNSMenuBarItem.swift in Sources */,
 				836E693A1F5E448B003D9D46 /* RNSAlertTransportController.swift in Sources */,
+				835AA2251F7A1994006E1CDE /* RNSMoveBusManager.swift in Sources */,
 				837F71991F45369D00DEAA36 /* RNSPinParent.swift in Sources */,
 				8329DF601F342B5E00D542FF /* RNSRightChevronButton.swift in Sources */,
 				835718741F21A05D00DE5E25 /* UIView+Utils.swift in Sources */,
@@ -4714,6 +4754,7 @@
 				8344E1CF1F397F1B004A6F0C /* RNSRangeScroll.swift in Sources */,
 				837ABF021F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */,
 				835718A01F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */,
+				835AA2201F7A11CB006E1CDE /* RNSTimeManager.swift in Sources */,
 				836989421F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */,
 				836EEF161F3C12E7007631D9 /* RNSPinBus.swift in Sources */,
 				839BCE001F32E87700B5CA88 /* RNSLeftBackButton.swift in Sources */,

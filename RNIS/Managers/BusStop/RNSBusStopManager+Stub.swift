@@ -25,11 +25,11 @@ extension RNSBusStopManager {
     
     static func createStubItemsAsync(complete: AliasStringArrayBlock?) {
         RNSDataManager.removeAllBusStop()
-        CounterTime.startTimer()
+        //CounterTime.startTimer()
         createStubDicts { (dicts) in
-            CounterTime.endTimer()
+            //CounterTime.endTimer()
             RNSDataManager.parseBusStopItemsAsync(dicts, complete: { (items) in
-                CounterTime.endTimer()
+                //CounterTime.endTimer()
                 complete?(items)
             })
         }
@@ -38,7 +38,7 @@ extension RNSBusStopManager {
     static func createStubDicts(complete: (([AliasDictionary]) -> ())?) {
         var dicts = [AliasDictionary]()
         
-        CounterTime.startTimer()
+        //CounterTime.startTimer()
         let point = RNSLocationManager.point
         DispatchQueue.global(qos: .userInitiated).async {
             for index in 7...10000 {

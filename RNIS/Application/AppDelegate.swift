@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         RNISAuthManager.checkToken()
         //STRouter.showMenu()
+        RNSTimeManager()
         return true
     }
 }

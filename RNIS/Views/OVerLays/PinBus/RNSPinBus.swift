@@ -27,4 +27,21 @@ class RNSPinBus: RNSPinItem {
     func prepareIcon(_ image: UIImage) {
         setBitmap(image, xOffset: 0.05, yOffset: -1.0, isPlain: false, sizeInMeters: 15)
     }
+    
+    override func prepareHandlers() {
+        super.prepareHandlers()
+        item?.handlerUpdateLocaton = { [weak self] in
+            self?.updateLocation()
+        }
+    }
+    
+    func updateLocation() {
+        guard let point = item?.point else {
+            return
+        }
+      //  print("uuid",item?.uuid as Any)
+       // print("point",point as Any)
+        overlayItem.geoPoint = point
+        populate()
+    }
 }

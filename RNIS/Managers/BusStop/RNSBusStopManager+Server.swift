@@ -16,11 +16,11 @@ extension RNSBusStopManager {
             complete?()
             return
         }
-        CounterTime.startTimer()
+        //CounterTime.startTimer()
         updateBD()
         request?.cancel()
         request = RNSPostStopPointList(lastMinCoord, center: lastCenterCoord, complete: { (uuids) in
-            CounterTime.endTimer()
+            //CounterTime.endTimer()
             updateOperationServer(uuids)
             complete?()
         })

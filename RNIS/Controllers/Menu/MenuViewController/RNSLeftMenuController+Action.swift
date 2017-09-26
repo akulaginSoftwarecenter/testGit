@@ -31,4 +31,12 @@ extension RNSLeftMenuController {
         vc.excludedActivityTypes = [.postToFacebook,.postToTwitter,.assignToContact]
         STRouter.present(vc)
     }
+      
+    @IBAction func actionStart(_ sender: Any) {
+        RNSMoveStub.start()
+    }
+    
+    @IBAction func actionEnd(_ sender: Any) {
+        RNSMoveStub.end()
+    }
 }
