@@ -9,11 +9,13 @@
 import UIKit
 
 class RNSFavoritesBusCell: RNSBaseTableCell {
+
+    var didTapDelete: ((RNSBusStopTemp) -> ())?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topTitle: UILabel!
     
-    var item: RNSBusStopTemp? {
+    var item: RNSBusStopTemp! {
         didSet {
             updateUI()
         }
@@ -26,5 +28,8 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
     func updateUI() {
         topTitle.text = item?.name ?? ""
         tableView.reloadData()
+    }
+    @IBAction func deleteBusStopAction(_ sender: Any) {
+        self.didTapDelete?(item)
     }
 }

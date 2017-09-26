@@ -9,6 +9,10 @@
 import UIKit
 
 class RNSFavoritesBusView: BaseViewWithXIBInit {
+    struct TableSection {
+        let title: String
+        var items: [RNSBusStopTemp]
+    }
     
     lazy var itemsBeside: [RNSBusStopTemp] = {
         let item1 = RNSBusStopTemp()
@@ -33,10 +37,12 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
         return [item1]
     }()
     
-    var items: [[RNSBusStopTemp]] {
-        return [itemsBeside, itemsFar]
-    }
-    
+//    lazy var items: [[RNSBusStopTemp]] = [itemsBeside, itemsFar]
+    lazy var sections: [TableSection] = [
+        TableSection(title: "Рядом с вами", items: itemsBeside),
+        TableSection(title: "Далеко", items: itemsFar)
+    ]
+
     @IBOutlet weak var tableView: UITableView!
     
     override func awakeFromNib() {
