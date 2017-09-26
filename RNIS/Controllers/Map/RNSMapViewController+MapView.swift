@@ -16,7 +16,7 @@ extension RNSMapViewController {
     }
     
     func onMapEvent() {
-        //RNSBusManager.update()
+        RNSBusManager.updateBD()
         busStopUpdate()
     }
     

@@ -11,6 +11,10 @@ import Foundation
 extension RNSBusManager {
     
     static func updateBD() {
+        if isNeedStopLoad {
+            removeAll()
+            return
+        }
         prepareOperation(updateOperationBD)
     }
     
