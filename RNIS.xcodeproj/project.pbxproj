@@ -124,6 +124,7 @@
 		832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */; };
 		832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
 		832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
+		8334DE651F7A3F6C005DE3DD /* RNSMoveBusManager+Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334DE641F7A3F6C005DE3DD /* RNSMoveBusManager+Operation.swift */; };
 		833609781F73758000B42333 /* RNSMovePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609771F73758000B42333 /* RNSMovePopupController.swift */; };
 		8336097A1F7378BF00B42333 /* RNSMovePopupController+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */; };
 		8336097C1F737A8E00B42333 /* RNSMovePopupController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */; };
@@ -672,6 +673,7 @@
 		832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputFieldsValidator+Validation.swift"; sourceTree = "<group>"; };
 		832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldsValidator.swift; sourceTree = "<group>"; };
 		832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Utils.swift"; sourceTree = "<group>"; };
+		8334DE641F7A3F6C005DE3DD /* RNSMoveBusManager+Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSMoveBusManager+Operation.swift"; path = "Managers/Bus/Move/RNSMoveBusManager+Operation.swift"; sourceTree = "<group>"; };
 		833609771F73758000B42333 /* RNSMovePopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSMovePopupController.swift; path = Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift; sourceTree = "<group>"; };
 		833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSMovePopupController+Observe.swift"; path = "Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Observe.swift"; sourceTree = "<group>"; };
 		8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSMovePopupController+Container.swift"; path = "Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Container.swift"; sourceTree = "<group>"; };
@@ -2040,6 +2042,7 @@
 			children = (
 				836B96101F7A09A100531BC6 /* MoveStub */,
 				835AA2241F7A1994006E1CDE /* RNSMoveBusManager.swift */,
+				8334DE641F7A3F6C005DE3DD /* RNSMoveBusManager+Operation.swift */,
 			);
 			name = Move;
 			sourceTree = "<group>";
@@ -4395,6 +4398,7 @@
 				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
 				831381671F5E782A00A85CBD /* RNSBusTableModel+Items.swift in Sources */,
 				836EEF031F3BFAB2007631D9 /* RNSBus.swift in Sources */,
+				8334DE651F7A3F6C005DE3DD /* RNSMoveBusManager+Operation.swift in Sources */,
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
 				836A9D6A1F62380100B5EB55 /* RNSMobilePagePayload.swift in Sources */,
 				83A53F981F4AA00E00938969 /* RNSPageRouteView+CollectionView.swift in Sources */,

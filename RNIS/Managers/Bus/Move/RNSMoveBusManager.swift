@@ -9,26 +9,20 @@
 import UIKit
 
 class RNSMoveBusManager: NSObject {
-    static func parse(_ items: [AliasDictionary]?) {
-        guard let items = items else {
-            return
-        }
-  
-        RNSDataManager.parseBusItemsAsync(items) {  (uuids) in
-            updateUuids(uuids)
-        }
+    static let shared = RNSMoveBusManager()
+   
+    static var queue: OperationQueue {
+        return shared.queue
     }
     
-    static func updateUuids(_ uuids: [String]?) {
-        guard let uuids = uuids else {
-            return
-        }
-        CounterTime.startTimer()
-        RNSBusManager.showedItems.forEach({
-            if uuids.contains($0.uuid) {
-                $0.handlerUpdateLocaton?()
-            }
-        })
-        CounterTime.endTimer()
+    static func reset() {
+        queue.cancelAllOperations()
     }
+    
+    lazy var queue: OperationQueue = {
+        let queue = OperationQueue()
+        queue.maxConcurrentOperationCount = 1
+        queue.qualityOfService = .background
+        return queue
+    }()
 }

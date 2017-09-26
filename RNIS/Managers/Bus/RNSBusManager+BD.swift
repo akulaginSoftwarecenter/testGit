@@ -11,6 +11,7 @@ import Foundation
 extension RNSBusManager {
     
     static func updateBD() {
+        RNSMoveBusManager.reset()
         if isNeedStopLoad {
             removeAll()
             return
