@@ -22,8 +22,8 @@ extension STRouter {
         return RNSRedContainer(viewController)
     }
     
-    static func scrollContainer(_ viewController: UIViewController?, isNeedAddTap: Bool = true) -> UIViewController? {
-        return RNSScrollKeyBoardContainer.initController(viewController, isNeedAddTap: isNeedAddTap)
+    static func scrollContainer(_ viewController: UIViewController?, isNeedAddTap: Bool = true) -> RNSScrollKeyBoardContainer? {
+        return RNSScrollKeyBoardContainer.initController(viewController, isNeedAddTap: isNeedAddTap) 
     }
     
     static func imageScrollContainer(_ viewController: UIViewController?) -> UIViewController? {

@@ -41,7 +41,7 @@ class RNSChangePhoneController: RNSPhoneContrainerController {
     override func actionNext() {
         item?.new_phone = "+7" + (phoneText ?? "")
         RNSPostUpdate(item, complete: {
-            RNSChangeCodeController.initController($0)?.pushAnimatedImageBoard()
+            RNSChangeCodeController.initController($0)?.pushAnimated()
         }, failure: { [weak self] error in
             self?.prepareError(error)
         })

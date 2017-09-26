@@ -16,6 +16,8 @@ class RNSCodeContainerController: STContainerViewController {
         return (enterViewController as? RNSCodeViewController)
    }
     
+   var handlerUpdateScroll: ((CGFloat) -> ())?
+    
    override func prepareEnterViewController(){
         super.prepareEnterViewController()
     
@@ -43,6 +45,10 @@ class RNSCodeContainerController: STContainerViewController {
         })
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     func actionComplete(_ item: RNSUserPayload?) {
         
     }
@@ -53,5 +59,9 @@ class RNSCodeContainerController: STContainerViewController {
     
     override class var storyboardName: String {
         return kCodeVC
+    }
+    
+    deinit {
+        NotificationCenter.removeObserver(self)
     }
 }

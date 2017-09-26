@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable {
+class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollViewDelegate {
     
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         get {
@@ -16,11 +16,11 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable {
         }
     }
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var isNeedAddTap: Bool = true
-    
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    static func initController(_ container: UIViewController?, isNeedAddTap: Bool = true) -> UIViewController? {
+    static func initController(_ container: UIViewController?, isNeedAddTap: Bool = true) -> RNSScrollKeyBoardContainer? {
         let vc = RNSScrollKeyBoardContainer.initialController as? RNSScrollKeyBoardContainer
         vc?.containerVC = container
         vc?.isNeedAddTap = isNeedAddTap
@@ -35,7 +35,7 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable {
         
         prepareContainer()
     }
-
+ 
     func prepareContainer() {
         guard let containerVC = containerVC,
             let containerView = containerVC.view else {
@@ -44,6 +44,12 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable {
         self.addChildViewController(containerVC)
         coverView.addSubview(containerView)
         containerView.autoPinEdgesToSuperviewEdges()
+    }
+    
+    func prepareContentY(_ y: CGFloat) {
+        var offset = scrollView.contentOffset
+        offset.y = y
+        scrollView.setContentOffset(offset, animated: true)
     }
     
     override class var storyboardName: String {

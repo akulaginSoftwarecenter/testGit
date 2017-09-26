@@ -12,7 +12,7 @@ typealias NotificationBlock = (Notification) -> Void
 
 extension NotificationCenter {
     
-    static func keyboardWillShow(usingBlock block: @escaping NotificationBlock) -> NSObjectProtocol {
+    @discardableResult static func keyboardWillShow(usingBlock block: @escaping NotificationBlock) -> NSObjectProtocol {
        return addObserverForName(NSNotification.Name.UIKeyboardWillShow.rawValue, usingBlock: block)
     }
     

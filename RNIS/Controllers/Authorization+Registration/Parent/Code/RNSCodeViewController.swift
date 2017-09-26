@@ -12,6 +12,7 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     
     @IBOutlet weak var codeField: RNSTextField!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var repeatButton: UIButton!
     
     var handlerRepeatCode: EmptyBlock?
     var phone: String?

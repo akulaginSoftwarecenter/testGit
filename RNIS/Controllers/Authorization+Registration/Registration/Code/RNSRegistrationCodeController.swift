@@ -12,8 +12,13 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRegistrationCodeController.controller as? RNSRegistrationCodeController
+        
+        let container = STRouter.scrollContainer(vc)
+        vc?.handlerUpdateScroll = {
+            container?.prepareContentY($0)
+        }
         vc?.item = item
-        return vc
+        return STRouter.imageContainer(container)
     }
     
     override var typeTitle: TypeTitle {
