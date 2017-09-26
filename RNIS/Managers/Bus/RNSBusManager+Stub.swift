@@ -13,11 +13,11 @@ extension RNSBusManager {
     static func prepareStubAsunc() {
         removeOldAll()
         createStubItemsAsync { (items) in
-            print("createBussAsync", items.count)
+            print("createBussAsync", items?.count as Any)
         }
     }
     
-    static func createStubItemsAsync(complete: (([RNSBus])->())?) {
+    static func createStubItemsAsync(complete: AliasStringArrayBlock?) {
         RNSDataManager.removeAllBuss()
         CounterTime.startTimer()
         createStubDicts { (dicts) in

@@ -1,15 +1,15 @@
 //
-//  RNSPostStopPointList.swift
+//  RNSPostBusList.swift
 //  RNIS
 //
-//  Created by Артем Кулагин on 08.09.17.
+//  Created by Артем Кулагин on 26.09.17.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 
-class RNSPostStopPointList: RNSRequest {
+class RNSPostBusList: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post
     }
@@ -38,23 +38,25 @@ class RNSPostStopPointList: RNSRequest {
             let distance = min?.distanceTo(center),
             let leftTop = center.coordinate(45, distance: distance),
             let rightBottom = center.coordinate(225, distance: distance) else {
-            return super.payload
+                return super.payload
         }
-        return ["left": leftTop.latitude,
-                "top": leftTop.longitude,
-                "right": rightBottom.latitude,
-                "bottom": rightBottom.longitude]
+        let bounding_box = ["left": leftTop.latitude,
+                            "top": leftTop.longitude,
+                            "right": rightBottom.latitude,
+                            "bottom": rightBottom.longitude]
+        return ["bounding_box": bounding_box,
+                "last_update": "test"]
     }
     
     override var isShowLogReply: Bool {
         return false
     }
-  
+    
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,
             let items = model?.payload?.items {
-            print("RNSPostStopPointList",items.count)
-            RNSDataManager.parseBusStopItemsAsync(items) { [weak self] (uuids) in
+            print("RNSPostBusList",items.count)
+            RNSDataManager.parseBusItemsAsync(items) { [weak self] (uuids) in
                 self?.complete?(uuids)
             }
             return
@@ -66,11 +68,11 @@ class RNSPostStopPointList: RNSRequest {
         guard let item = model?.errors?.first else {
             return
         }
-        let error = "Ошибка загрузки остановок. " + item.textError
+        let error = "Ошибка загрузки автобусов. " + item.textError
         STRouter.showAlertOk(error)
     }
     
     override var subject: String {
-        return "com.rnis.mobile.action.stop_point.list"
+        return "com.rnis.mobile.action.bus.list"
     }
 }

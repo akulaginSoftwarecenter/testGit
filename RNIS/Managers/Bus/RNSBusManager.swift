@@ -27,4 +27,23 @@ class RNSBusManager: NSObject {
     static var mapView: MapView {
         return RNSMapManager.mapView
     }
+    
+    static var request: RNSPostBusList?
+    
+    static func prepareOperation(_ complete: @escaping EmptyBlock) {
+        queue.cancelAllOperations()
+        queue.addOperation(complete)
+    }
+    
+    static var isNeedStopLoad: Bool {
+        return RNSMapManager.getZoomLevel <= 13
+    }
+    
+    static var lastMinCoord: PGGeoPoint {
+        return mapView.lastMinCoord
+    }
+    
+    static var lastCenterCoord: PGGeoPoint {
+        return mapView.lastCenterCoord
+    }
 }

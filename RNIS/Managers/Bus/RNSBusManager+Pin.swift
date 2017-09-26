@@ -10,7 +10,7 @@ import Foundation
 
 extension RNSBusManager {
     static func showPinsUuids(_ uuids: [String]?) {
-        guard let items = busItems(uuids) else {
+        guard let items = buss(uuids) else {
             return
         }
         showPinsItems(items)
