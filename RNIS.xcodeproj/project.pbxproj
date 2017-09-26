@@ -12,6 +12,7 @@
 		83029BCF1F4BECBB00B0FEE3 /* UIStackView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83029BCE1F4BECBB00B0FEE3 /* UIStackView+Utils.swift */; };
 		830802AC1F7A4D0C008B496C /* RNSCodeContainerController+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830802AB1F7A4D0C008B496C /* RNSCodeContainerController+KeyBoard.swift */; };
 		830802AE1F7A57FD008B496C /* RNSCodeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830802AD1F7A57FD008B496C /* RNSCodeViewController+Delegate.swift */; };
+		830802B01F7A5BD6008B496C /* RNSRegistrationNameController+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830802AF1F7A5BD6008B496C /* RNSRegistrationNameController+KeyBoard.swift */; };
 		830D157A1F5552CD00DF683E /* RNSRouteTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830D15791F5552CD00DF683E /* RNSRouteTable.swift */; };
 		830E68AB1F5513BB008EFA02 /* RNSDurationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68AA1F5513BB008EFA02 /* RNSDurationItem.swift */; };
 		830E68AE1F5514DE008EFA02 /* RNSPinDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */; };
@@ -575,6 +576,7 @@
 		83029BCE1F4BECBB00B0FEE3 /* UIStackView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStackView+Utils.swift"; path = "Library/Helpers/Base objects extensions/UIStackView/UIStackView+Utils.swift"; sourceTree = "<group>"; };
 		830802AB1F7A4D0C008B496C /* RNSCodeContainerController+KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSCodeContainerController+KeyBoard.swift"; path = "Controllers/Authorization+Registration/Parent/Code/RNSCodeContainerController+KeyBoard.swift"; sourceTree = "<group>"; };
 		830802AD1F7A57FD008B496C /* RNSCodeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSCodeViewController+Delegate.swift"; path = "Controllers/Authorization+Registration/Parent/Code/RNSCodeViewController+Delegate.swift"; sourceTree = "<group>"; };
+		830802AF1F7A5BD6008B496C /* RNSRegistrationNameController+KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSRegistrationNameController+KeyBoard.swift"; path = "Controllers/Authorization+Registration/Registration/Name/RNSRegistrationNameController+KeyBoard.swift"; sourceTree = "<group>"; };
 		830D15791F5552CD00DF683E /* RNSRouteTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRouteTable.swift; path = Models/Temp/RNSRouteVariant/Table/RNSRouteTable.swift; sourceTree = "<group>"; };
 		830E68AA1F5513BB008EFA02 /* RNSDurationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDurationItem.swift; path = Models/Temp/DurationItem/RNSDurationItem.swift; sourceTree = "<group>"; };
 		830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinDuration.swift; path = Views/OVerLays/PinDuration/RNSPinDuration.swift; sourceTree = "<group>"; };
@@ -2289,6 +2291,7 @@
 				839BCDF41F32CA6000B5CA88 /* ImagePicker */,
 				836989401F319A65003E4D73 /* AlertPhoto */,
 				836989301F318778003E4D73 /* RNSRegistrationNameController.swift */,
+				830802AF1F7A5BD6008B496C /* RNSRegistrationNameController+KeyBoard.swift */,
 				836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */,
 			);
 			name = Name;
@@ -4607,6 +4610,7 @@
 				835D85371F4FC82F00B83EB2 /* RNSDotRun.swift in Sources */,
 				83F555341F5562B300D1221C /* RNSRouteStillCell.swift in Sources */,
 				832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,
+				830802B01F7A5BD6008B496C /* RNSRegistrationNameController+KeyBoard.swift in Sources */,
 				8362CE2B1F6A8EDF00BE912D /* RNSBusStopManager+BD.swift in Sources */,
 				832E4B9B1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */,
 				831E426B1F46B7CD0016C7D3 /* RNSTableStopsModel.swift in Sources */,

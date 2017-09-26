@@ -17,12 +17,18 @@ class RNSRegistrationNameController: UIViewController {
     @IBOutlet var coverView: RNSLoginView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var photo: RNSProfilePhoto!
+    var handlerUpdateScroll: ((CGFloat) -> ())?
     var item: RNSUserPayload?
-    
+
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRegistrationNameController.initialController as? RNSRegistrationNameController
+        
+        let container = STRouter.scrollContainer(vc)
+        vc?.handlerUpdateScroll = {
+            container?.prepareContentY($0)
+        }
         vc?.item = item
-        return vc
+        return STRouter.imageContainer(container)
     }
     
     override func viewDidLoad() {

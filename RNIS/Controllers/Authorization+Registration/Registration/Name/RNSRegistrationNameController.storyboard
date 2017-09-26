@@ -59,6 +59,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M54-Z0-rE4">
                                 <rect key="frame" x="30" y="449" width="354" height="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -69,6 +70,7 @@
                             <constraint firstAttribute="trailing" secondItem="pZT-vJ-bGu" secondAttribute="trailing" id="IBK-9i-8ZJ"/>
                             <constraint firstItem="uA1-nt-8CO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="89" id="NTa-MQ-9ML"/>
                             <constraint firstItem="pZT-vJ-bGu" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" id="QcJ-1C-31K"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="M54-Z0-rE4" secondAttribute="bottom" constant="138" id="S4E-Ti-7nZ"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uA1-nt-8CO" secondAttribute="trailing" constant="89" id="TYm-5m-6HZ"/>
                             <constraint firstItem="uA1-nt-8CO" firstAttribute="centerX" secondItem="3SO-Er-NRQ" secondAttribute="centerX" id="WLV-DA-Izx"/>
                             <constraint firstItem="M54-Z0-rE4" firstAttribute="top" secondItem="bzV-rA-o14" secondAttribute="bottom" constant="10" id="Ynt-VU-Rtr"/>

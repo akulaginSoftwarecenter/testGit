@@ -29,6 +29,6 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
-        RNSRegistrationNameController.initController(item)?.pushAnimatedImageBoard()
+        RNSRegistrationNameController.initController(item)?.pushAnimated()
     }
 }
