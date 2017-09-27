@@ -9,7 +9,7 @@
 import CoreLocation
 let redPlaceLocation = CLLocation(latitude: 55.754289, longitude: 37.619800) //Красная площадь
 //var stubLocation: CLLocation?// = CLLocation(latitude: 59.9363783, longitude: 30.3022305) //питер
-var stubLocation: CLLocation?// = redPlaceLocation// = CLLocation(latitude: 55.754289, longitude: 37.619800) //Красная площадь
+var stubLocation: CLLocation? = redPlaceLocation// = CLLocation(latitude: 55.754289, longitude: 37.619800) //Красная площадь
 
 let mapHost = "http://95.213.205.92/"
 
