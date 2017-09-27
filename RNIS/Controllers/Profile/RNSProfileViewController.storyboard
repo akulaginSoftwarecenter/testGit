@@ -78,6 +78,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Электронная почта"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите E-mail"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="Tda-Cz-cXr" id="4IQ-AW-K3c"/>
