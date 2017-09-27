@@ -37,7 +37,6 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
         return [item1]
     }()
     
-//    lazy var items: [[RNSBusStopTemp]] = [itemsBeside, itemsFar]
     lazy var sections: [TableSection] = [
         TableSection(title: "Рядом с вами", items: itemsBeside),
         TableSection(title: "Далеко", items: itemsFar)

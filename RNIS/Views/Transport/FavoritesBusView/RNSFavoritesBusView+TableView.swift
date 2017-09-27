@@ -40,14 +40,14 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return item(indexPath)?.height ?? 0
+         return item(indexPath).height
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 32
     }
     
-    func item(_ indexPath: IndexPath) -> RNSBusStopTemp? {
+    func item(_ indexPath: IndexPath) -> RNSBusStopTemp {
         return sections[indexPath.section].items[indexPath.row]
     }
     
@@ -63,5 +63,14 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
         }
         label.text = sections[section].title
         return view
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        RNSMenuManager.showMap()
+        if let stop = RNSDataManager.busStops?.first {
+            RNSMapManager.mapCenter(PGGeoPoint(latitude: stop.latitude, longitude: stop.longitude))
+            RNSMapManager.mapView.setZoomLevel(16)
+            RNSMapManager.showInfoIfNeed(stop)
+        }
     }
 }
