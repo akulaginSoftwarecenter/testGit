@@ -52,7 +52,11 @@ extension UITextField {
         attributedPlaceholder = NSAttributedString(string: placeholder,
                                                    attributes:attributes)
     }
-    
+
+    func addDoneButton(_ title: String?) {
+        addButtonOnKeyboard(title, target: self, action: #selector(UIResponder.resignFirstResponder))
+    }
+
     func addButtonOnKeyboard(_ title: String?, target: Any?, action: Selector?)  {
         let rect = CGRect(x: 0, y: 0, width: UIScreen.width, height: 50)
         let doneToolbar: UIToolbar = UIToolbar(frame: rect)

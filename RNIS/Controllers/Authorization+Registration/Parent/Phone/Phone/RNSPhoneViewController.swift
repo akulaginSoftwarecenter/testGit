@@ -16,7 +16,12 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
     lazy var fields:[RNSTextField] = {
         return [self.phoneField]
     }()
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addDoneButtonOnKeyboard()
+    }
+
     override func loginPressed() {
         if let error = fields.checkValidFields {
             errorLabel.text = error
@@ -29,6 +34,10 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
     func clearError() {
         fields.clearError()
         errorLabel.text = nil
+    }
+
+    func addDoneButtonOnKeyboard()  {
+        phoneField.addDoneButton("Готово   ")
     }
     
     override class var storyboardName: String {

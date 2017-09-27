@@ -23,6 +23,7 @@ class RNSParoleViewController: RNSCoverViewController,ContainerProtocol {
         super.viewDidLoad()
         
         prepareUI()
+        addDoneButtonOnKeyboard()
     }
    
     override func loginPressed() {
