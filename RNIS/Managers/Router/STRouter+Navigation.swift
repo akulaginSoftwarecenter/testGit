@@ -9,34 +9,22 @@
 import UIKit
 
 extension STRouter {
-    
-    static func revertLogin() {
-        prepareRoot(RNSLoginViewController.initialController)
-        showLogin()
-    }
-    
+    /*
     static func showMap() {
         RNSMapViewController.controller.pushAnimated {
             showAlertRegistrationIfNeed()
         }
     }
-    
+    */
     static func showMenu() {
         RNSMenuViewController.initialController.pushAnimated()
     }
-    
-    static func showLogin(_ item: RNSUserPayload? = nil) {
-        clearNav()
-        let vc = RNSLoginViewController.controller as? RNSLoginViewController
-        vc?.item = item
-        push(imageBoardContainer(vc))
-    }
-    
+    /*
     static func showRegistration() {
         showLogin()
         push(imageBoardContainer(RNSRegistrationPhoneController.controller))
     }
-    
+    */
     static func showAlertRepeatCode() {
         showAlertOk("Код выслан повторно")
     }
@@ -56,16 +44,18 @@ extension STRouter {
         }
         present(vc, animated: true)
     }
-    
+    /*
     static func showAlertRegistrationIfNeed(){
         if !UserDefaults.launchedBefore  {
             showAlertRegistration()
             UserDefaults.setLaunchedBeforeComplete()
         }
     }
-    
+    */
+    /*
     static func showAlertRegistration() {
         let message = "Зарегистрируйтесь, чтобы открыть все возможности приложения"
         STRouter.showAlertBtns(message, leftTitle: "Регистрация", rightTitle: "Позже", handlerOk: STRouter.showRegistration)
     }
+     */
 }

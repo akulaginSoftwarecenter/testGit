@@ -46,6 +46,14 @@ class STRouter: NSObject {
         rootViewController?.pop(animated: animated, completion: completion)
     }
     
+    static func popToRoot(_ animated: Bool = true) {
+        rootViewController?.popToRootViewController(animated: animated)
+    }
+    
+    static func popNoAnimate(completion: EmptyBlock? = nil) {
+        pop(animated: false, completion: completion)
+    }
+    
     static func present(_ viewControllerToPresent:UIViewController?, animated: Bool = true, completion: EmptyBlock? = nil) {
         guard var vc:UIViewController = rootViewController,
             let viewControllerToPresent = viewControllerToPresent  else {

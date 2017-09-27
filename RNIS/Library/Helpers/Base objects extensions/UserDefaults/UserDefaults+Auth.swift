@@ -21,6 +21,10 @@ extension UserDefaults {
         return standard.string(forKey: kUuid)
     }
     
+    static var isHaveToken: Bool {
+        return token != nil
+    }
+    
     static var token: String? {
         return standard.string(forKey: kToken)
     }

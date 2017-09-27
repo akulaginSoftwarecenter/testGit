@@ -29,10 +29,22 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
-        RNSPostUpdate(item, complete: {
-            STRouter.showLogin($0)
+        RNSPostUpdate(item, complete: { [weak self] _ in
+            self?.login()
         }, failure: { [weak self] error in
             self?.prepareError(error)
+        })
+    }
+    
+    func login() {
+        STRouter.showLoader()
+        RNSPostLogin(item?.phone, password: item?.password, complete: {
+            STRouter.removeLoader()
+            STRouter.popToRoot()
+            RNSMenuManager.leftMenuUpdate()
+        }, failure: {[weak self] (errorText) in
+            STRouter.removeLoader()
+            self?.prepareError(errorText)
         })
     }
     

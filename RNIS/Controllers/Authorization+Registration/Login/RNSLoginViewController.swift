@@ -49,9 +49,10 @@ class RNSLoginViewController: UIViewController {
         UserDefaults.setPassword(password)
         
         STRouter.showLoader()
-        RNSPostLogin(login, password: password, complete: {
+        RNSPostLogin(login, password: password, complete: { [weak self] in
             STRouter.removeLoader()
-            STRouter.showMenu()
+            STRouter.popToRoot()
+            RNSMenuManager.leftMenuUpdate()
         }, failure: {[weak self] (errorText) in
             STRouter.removeLoader()
             self?.prepareError(errorText)

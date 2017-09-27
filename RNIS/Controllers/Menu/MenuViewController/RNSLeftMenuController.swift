@@ -26,8 +26,8 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         prepareUI()
-        loadData()
-        prepareHandlers() 
+        prepareHandlers()
+        
     }
     
     func prepareUI() {
@@ -39,27 +39,12 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.register(UINib.init(nibName: "MenuTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "MenuTableViewCell")
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-    }
-    
-    func loadData() {
-        loaderView.showInView(backLoaderView)
-        RNSPostUserGet {[weak self] (reply, error, _) in
-            self?.loaderView.remove()
-            self?.updateUI(reply as? RNSUserPayload)
-        }
-    }
-    
-    func updateUI(_ item: RNSUserPayload?) {
-        nameLabel.text = item?.name
-        phoneLabel.text = item?.formatPhone
-        item?.loadImage { [weak self] image in
-            self?.profileImageView.image = image ?? #imageLiteral(resourceName: "avatarPlaceholderImage")
-        }
+        prepareProfile()
     }
     
     func prepareHandlers() {
         RNSMenuManager.handlerLeftMenuUpdate = { [weak self] in
-            self?.loadData()
+            self?.prepareProfile()
         }
     }
     

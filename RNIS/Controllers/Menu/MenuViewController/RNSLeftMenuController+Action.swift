@@ -11,7 +11,11 @@ import Foundation
 extension RNSLeftMenuController {
     
     @IBAction func actionProfile(_ sender: Any) {
-        RNSMenuManager.showProfile()
+        if isHaveToken {
+            RNSMenuManager.showProfile()
+        } else {
+            RNSLoginViewController.controller.pushAnimatedImageBoard()
+        }
     }
     
     @IBAction func testAction(_ sender: Any) {

@@ -50,6 +50,10 @@ class RNSMenuManager: NSObject {
         showVC(shared.profileVC)
     }
     
+    static func showMap() {
+        showVC(shared.profileVC)
+    }
+    
     static func leftMenuUpdate() {
         handlerLeftMenuUpdate?()
     }
