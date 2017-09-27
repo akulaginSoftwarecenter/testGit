@@ -4,27 +4,27 @@ PODS:
     - Fabric (~> 1.6.3)
   - Fabric (1.6.13)
   - LGSideMenuController (2.1.1)
-  - ObjectMapper (2.2.9)
+  - ObjectMapper (3.0.0)
   - PureLayout (3.0.2)
-  - QRCodeReader.swift (7.5.1)
+  - QRCodeReader.swift (8.0.1)
   - Realm (2.10.1):
     - Realm/Headers (= 2.10.1)
   - Realm/Headers (2.10.1)
   - RealmSwift (2.10.1):
     - Realm (= 2.10.1)
-  - SnapKit (3.0.2)
+  - SnapKit (4.0.0)
   - SVProgressHUD (2.2.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
+  - Alamofire
   - Crashlytics
   - Fabric
   - LGSideMenuController
-  - ObjectMapper (~> 2.0)
+  - ObjectMapper
   - PureLayout
-  - QRCodeReader.swift (~> 7.5.1)
+  - QRCodeReader.swift
   - RealmSwift
-  - SnapKit (~> 3.0.2)
+  - SnapKit
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -32,14 +32,14 @@ SPEC CHECKSUMS:
   Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
   Fabric: 2fb5676bc811af011a04513451f463dac6803206
   LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
-  ObjectMapper: 63cfe41bc6f8e7c8f44344c49901b8ae7de14c52
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  QRCodeReader.swift: 686aa64b260327b8b0c976d8104dec2b088fd493
+  QRCodeReader.swift: 25e6110632fecba8f090f9814b4bd68fc6a519c9
   Realm: fc7a317a5c2c9ba91f5f235ede4e2ea76e9eba0c
   RealmSwift: 505ed6c15942a2e76f5cfa78a8667cfa997ee75b
-  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
 
-PODFILE CHECKSUM: 0c1587a145e39c4caf8a14ab7fb51873701a1930
+PODFILE CHECKSUM: 6e1aa181d5a2afbe841edadacbbb86f715afb5dd
 
 COCOAPODS: 1.2.0

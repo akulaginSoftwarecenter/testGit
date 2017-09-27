@@ -22,8 +22,8 @@ It provides a default view controller to display the camera view with the scan a
 ## Requirements
 
 - iOS 8.0+
-- Xcode 8.0+
-- Swift 3.0+
+- Xcode 9.0+
+- Swift 4.0+
 
 ## Usage
 
@@ -144,7 +144,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'TargetName' do
-    pod 'QRCodeReader.swift', '~> 7.5.1'
+    pod 'QRCodeReader.swift', '~> 8.0.1'
 end
 ```
 
@@ -176,7 +176,7 @@ $ brew install carthage
 To integrate `QRCodeReader` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/QRCodeReader.swift" >= 7.5.1
+github "yannickl/QRCodeReader.swift" >= 8.0.1
 ```
 
 #### Swift Package Manager
@@ -190,7 +190,7 @@ let package = Package(
     name: "YOUR_PROJECT_NAME",
     targets: [],
     dependencies: [
-        .Package(url: "https://github.com/yannickl/QRCodeReader.swift.git", versions: "7.5.1" ..< Version.max)
+        .Package(url: "https://github.com/yannickl/QRCodeReader.swift.git", versions: "8.0.1" ..< Version.max)
     ]
 )
 ```
@@ -204,9 +204,8 @@ Note that the [Swift Package Manager](https://swift.org/package-manager) is stil
 ## Contact
 
 Yannick Loriot
+ - [https://21.co/yannickl/](https://21.co/yannickl/)
  - [https://twitter.com/yannickloriot](https://twitter.com/yannickloriot)
- - [contact@yannickloriot.com](mailto:contact@yannickloriot.com)
-
 
 ## License (MIT)
 
