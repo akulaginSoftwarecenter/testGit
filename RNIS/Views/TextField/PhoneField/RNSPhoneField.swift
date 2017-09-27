@@ -71,7 +71,7 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         }
         
         if string == cross {
-            textField.text = "+7"
+            textField.text = ""
             return false
         }
         return true
@@ -81,13 +81,17 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         let form = format(text)
         if form.haveFormat {
             let value = form.text
-            text = value
+            if value?.isEmpty == false && value?.hasPrefix("+7") == false && value?.hasPrefix("8") == false {
+                text = "+7\(value!)"
+            } else {
+                text = value
+            }
             oldText = value
         }else{
             text = oldText
         }
         if text?.isEmpty ?? true  {
-            text = "+7"
+            text = ""
         }
         handlerDidChange?()
     }
