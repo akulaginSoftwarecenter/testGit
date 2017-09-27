@@ -19,7 +19,7 @@ class RNSMenuManager: NSObject {
         return shared.menuItems
     }
     
-    lazy var menuItems = [MenuItem("Карта", RNSMapViewController.controller, #imageLiteral(resourceName: "menuMapIcon")),
+    lazy var menuItems = [MenuItem("Карта", mapVC, #imageLiteral(resourceName: "menuMapIcon")),
                      MenuItem("Избранное", TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
                      MenuItem("Оповещения", NotificationsViewController.initialRed, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem("Новости", NewsViewController.initialRed, #imageLiteral(resourceName: "menuNewspaperIcon")),
@@ -29,6 +29,10 @@ class RNSMenuManager: NSObject {
     
     lazy var profileVC: UIViewController? = {
         return STRouter.imageScrollContainer(RNSProfileViewController.initialController)
+    }()
+    
+    lazy var mapVC: UIViewController? = {
+        return RNSMapViewController.controller
     }()
     
     static var handlerShowLeftMenu: EmptyBlock?
@@ -51,7 +55,7 @@ class RNSMenuManager: NSObject {
     }
     
     static func showMap() {
-        showVC(shared.profileVC)
+        showVC(shared.mapVC)
     }
     
     static func leftMenuUpdate() {
