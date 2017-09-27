@@ -16,6 +16,7 @@ class RNSMapView: MapView {
         enterForeground()
         enableMyLocation()
         setMapRegime(1)
+        setMyLocationEnabled(false)
         enableCompass()
     }
     
