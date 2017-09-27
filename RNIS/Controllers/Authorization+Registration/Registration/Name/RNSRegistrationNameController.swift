@@ -65,15 +65,9 @@ class RNSRegistrationNameController: UIViewController {
     }
     
     func login() {
-        STRouter.showLoader()
-        RNSPostLogin(item?.phone, password: item?.password, complete: {
-            STRouter.removeLoader()
-            STRouter.popToRoot()
-            RNSMenuManager.leftMenuUpdate()
-            }, failure: {[weak self] (errorText) in
-                STRouter.removeLoader()
-                self?.prepareError(errorText)
-        })
+        RNISAuthManager.login(item?.phone, password: item?.password) {[weak self] (errorText) in
+            self?.prepareError(errorText)
+        }
     }
     
     func prepareError(_ error: String?) {

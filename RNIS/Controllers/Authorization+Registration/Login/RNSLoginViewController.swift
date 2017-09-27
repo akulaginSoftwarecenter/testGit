@@ -48,15 +48,9 @@ class RNSLoginViewController: UIViewController {
         UserDefaults.setLogin(login)
         UserDefaults.setPassword(password)
         
-        STRouter.showLoader()
-        RNSPostLogin(login, password: password, complete: { [weak self] in
-            STRouter.removeLoader()
-            STRouter.popToRoot()
-            RNSMenuManager.leftMenuUpdate()
-        }, failure: {[weak self] (errorText) in
-            STRouter.removeLoader()
+        RNISAuthManager.login(login, password: password) {[weak self] (errorText) in
             self?.prepareError(errorText)
-        })
+        }
     }
     
     override class var storyboardName: String {

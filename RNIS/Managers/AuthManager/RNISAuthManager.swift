@@ -19,4 +19,16 @@ class RNISAuthManager {
             RNSMenuManager.leftMenuUpdate()
         }
     }
+    
+    static func login(_ login: String?, password: String?, failure: AliasStringBlock?) {
+        STRouter.showLoader()
+        RNSPostLogin(login, password: password, complete: {
+            STRouter.removeLoader()
+            STRouter.popToRoot()
+            RNSMenuManager.leftMenuUpdate()
+            }, failure: { (errorText) in
+                STRouter.removeLoader()
+                failure?(errorText)
+        })
+    }
 }
