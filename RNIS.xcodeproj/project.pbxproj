@@ -33,6 +33,7 @@
 		8310D4511F3C6E64000CCD0A /* RNSScrollShowContainer+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D4501F3C6E64000CCD0A /* RNSScrollShowContainer+UI.swift */; };
 		8310D4551F3C72D6000CCD0A /* RNSCircleHole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D4541F3C72D6000CCD0A /* RNSCircleHole.swift */; };
 		8310D4581F3C7483000CCD0A /* RNSCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D4571F3C7483000CCD0A /* RNSCircle.swift */; };
+		8310F13A1F7BA7C500D5C565 /* NotificationsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310F1391F7BA7C500D5C565 /* NotificationsViewController+TableView.swift */; };
 		831381671F5E782A00A85CBD /* RNSBusTableModel+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831381661F5E782A00A85CBD /* RNSBusTableModel+Items.swift */; };
 		831381691F5E789700A85CBD /* RNSBusTableItem+Still.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */; };
 		8313816B1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313816A1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift */; };
@@ -598,6 +599,7 @@
 		8310D4501F3C6E64000CCD0A /* RNSScrollShowContainer+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+UI.swift"; path = "Controllers/Map/RNSScrollShowContainer+UI.swift"; sourceTree = "<group>"; };
 		8310D4541F3C72D6000CCD0A /* RNSCircleHole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSCircleHole.swift; path = Views/Others/CircleHole/RNSCircleHole.swift; sourceTree = "<group>"; };
 		8310D4571F3C7483000CCD0A /* RNSCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSCircle.swift; path = Views/Others/CircleRed/RNSCircle.swift; sourceTree = "<group>"; };
+		8310F1391F7BA7C500D5C565 /* NotificationsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationsViewController+TableView.swift"; sourceTree = "<group>"; };
 		831381661F5E782A00A85CBD /* RNSBusTableModel+Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusTableModel+Items.swift"; path = "Models/Temp/BusTemp/Table/RNSBusTableModel+Items.swift"; sourceTree = "<group>"; };
 		831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusTableItem+Still.swift"; path = "Models/Temp/BusTemp/Table/Item/RNSBusTableItem+Still.swift"; sourceTree = "<group>"; };
 		8313816A1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSBusDetailWayCell+Var.swift"; path = "Views/Map/BusDetail/BusDetailWay/Cell/RNSBusDetailWayCell+Var.swift"; sourceTree = "<group>"; };
@@ -1499,6 +1501,7 @@
 				83204B4E1F5921170033ACA1 /* Setting */,
 				83204B441F591FBD0033ACA1 /* cells */,
 				83204B481F591FBD0033ACA1 /* NotificationsViewController.swift */,
+				8310F1391F7BA7C500D5C565 /* NotificationsViewController+TableView.swift */,
 				83204B4C1F591FCA0033ACA1 /* NotificationsViewController.storyboard */,
 			);
 			name = Notifications;
@@ -4576,6 +4579,7 @@
 				83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */,
 				831A85BD1F414C730095F006 /* RNSSearchViewController+Data.swift in Sources */,
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
+				8310F13A1F7BA7C500D5C565 /* NotificationsViewController+TableView.swift in Sources */,
 				8389CA301F5CF26B0003E8FD /* RNSPinMyLocation.swift in Sources */,
 				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
 				8319C5BF1F60F2AA005A1768 /* RNSPostConfirmSend.swift in Sources */,
