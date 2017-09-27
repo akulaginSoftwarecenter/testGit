@@ -11,7 +11,7 @@ import Foundation
 extension RNSMapManager {
     
     static func prepareStub() {
-        RNSBusStopManager.prepareStubBusStop()
+        //RNSBusStopManager.prepareStubBusStop()
         prepareStubBus()
     }
     
