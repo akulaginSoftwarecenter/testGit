@@ -35,6 +35,7 @@ class RNSRegistrationNameController: UIViewController {
         super.viewDidLoad()
         
         prepareCoverView()
+        nameField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(buttonPressed))
     }
     
     func prepareCoverView() {
@@ -43,7 +44,7 @@ class RNSRegistrationNameController: UIViewController {
         }
     }
     
-    func buttonPressed() {
+    @objc func buttonPressed() {
         if !nameField.isValid {
             nameField.setStateNotValid()
             prepareError("Введите имя")

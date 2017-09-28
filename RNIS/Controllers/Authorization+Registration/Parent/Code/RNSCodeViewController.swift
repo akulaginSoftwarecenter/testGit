@@ -20,7 +20,6 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         preparePhone()
-        addDoneButtonOnKeyboard()
     }
     
     func preparePhone() {
@@ -45,10 +44,6 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
         errorLabel.text = nil
     }
 
-    func addDoneButtonOnKeyboard()  {
-        codeField.addDoneButton("Готово   ")
-    }
-    
     @IBAction func repeatCodeAction(_ sender: Any) {
         handlerRepeatCode?()
     }

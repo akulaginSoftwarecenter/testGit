@@ -34,6 +34,7 @@ class RNSPhoneContrainerController: STContainerViewController {
     }
     
     func preparePhoneField() {
+        containerViewController?.phoneField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(self.actionNext))
         guard let text = placeHolderPhoneField else {
             return
         }

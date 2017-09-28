@@ -31,6 +31,5 @@ extension RNSParoleViewController {
 
     func addDoneButtonOnKeyboard()  {
         passwordOneField.addButtonOnKeyboard("Далее   ", target: passwordTwoField, action: #selector(UIResponder.becomeFirstResponder))
-        passwordTwoField.addDoneButton("Готово   ")
     }
 }
