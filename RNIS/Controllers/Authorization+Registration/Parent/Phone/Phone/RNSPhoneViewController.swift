@@ -19,7 +19,6 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addDoneButtonOnKeyboard()
     }
 
     override func loginPressed() {
@@ -34,10 +33,6 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
     func clearError() {
         fields.clearError()
         errorLabel.text = nil
-    }
-
-    func addDoneButtonOnKeyboard()  {
-        phoneField.addDoneButton("Готово   ")
     }
     
     override class var storyboardName: String {

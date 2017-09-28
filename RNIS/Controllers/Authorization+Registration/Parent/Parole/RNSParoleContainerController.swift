@@ -18,7 +18,9 @@ class RNSParoleContainerController: STContainerViewController {
     
     override func prepareEnterViewController(){
         super.prepareEnterViewController()
-
+        
+        _ = containerViewController?.view  // force viewDidLoad to trigger
+        containerViewController?.passwordTwoField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(self.actionNext))
         containerViewController?.placeholderPassworOne = placeholderPassworOne
         containerViewController?.titleBlackButton = titleBlackButton
     }

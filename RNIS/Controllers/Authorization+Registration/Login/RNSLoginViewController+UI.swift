@@ -34,7 +34,7 @@ extension RNSLoginViewController {
     
     func addDoneButtonOnKeyboard()  {
         loginField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(passwordNext))
-        passwordField.addDoneButton("Готово   ")
+        passwordField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(doneButtonAction))
     }
     
     @objc func doneButtonAction() {

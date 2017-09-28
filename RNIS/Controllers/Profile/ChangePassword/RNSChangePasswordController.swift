@@ -33,6 +33,7 @@ class RNSChangePasswordController: UIViewController {
         
         loadData()
         prepareCoverView()
+        addDoneButtonOnKeyboard()
     }
     
     func prepareCoverView() {
@@ -40,12 +41,18 @@ class RNSChangePasswordController: UIViewController {
             self?.savePressed()
         }
     }
+
+    func addDoneButtonOnKeyboard()  {
+        passwordOldField.addButtonOnKeyboard("Далее   ", target: passwordOneField, action: #selector(UIResponder.becomeFirstResponder))
+        passwordOneField.addButtonOnKeyboard("Далее   ", target: passwordTwoField, action: #selector(UIResponder.becomeFirstResponder))
+        passwordTwoField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(savePressed))
+    }
     
     var passwordOld: String? {
         return passwordOldField.text
     }
     
-    func savePressed() {
+    @objc func savePressed() {
         if let error = fields.checkValidFields {
             prepareError(error)
             return
