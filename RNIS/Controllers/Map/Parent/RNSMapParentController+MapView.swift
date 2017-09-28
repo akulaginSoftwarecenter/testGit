@@ -11,8 +11,8 @@ import Foundation
 extension RNSMapParentController: PGMapViewDelegate {
     
     func prepareMapView() {
-        self.view.insertSubview(mapView, at: 0)
-        mapView.autoPinEdgesToSuperviewEdges()
+        view.insertSubview(mapView, at: 0)
+        mapView.frame = CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height)
         mapView.clearMapCache()
         mapView.delegate = self
     }
