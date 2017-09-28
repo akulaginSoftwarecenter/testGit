@@ -13,7 +13,6 @@ extension RNSProfileViewController: UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailField.resignFirstResponder()
         nameField.resignFirstResponder()
-        checkChange(textField)
         return true
     }
     
@@ -50,7 +49,7 @@ extension RNSProfileViewController: UITextFieldDelegate {
             return
         }
   
-        item?.email = text
+        item?.new_email = text
         updateItem({ [weak self] in
             self?.showAlertOk("Для завершения изменения адреса почты перейдите по ссылке в письме")
         })
