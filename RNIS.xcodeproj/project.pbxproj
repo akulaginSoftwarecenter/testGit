@@ -549,6 +549,7 @@
 		A794FC191F7905BC0091BD20 /* CustomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794FC161F7905BC0091BD20 /* CustomTransitionDelegate.swift */; };
 		A794FC1A1F7905BC0091BD20 /* FadeDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794FC171F7905BC0091BD20 /* FadeDismissAnimationController.swift */; };
 		A794FC1B1F7905BC0091BD20 /* FadePresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794FC181F7905BC0091BD20 /* FadePresentAnimationController.swift */; };
+		A7D869461F7D1A150000938E /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D869451F7D1A150000938E /* UserDefaults+Settings.swift */; };
 		AFCB50069DBF94697662C88D /* Pods_RNIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */; };
 /* End PBXBuildFile section */
 
@@ -1087,6 +1088,7 @@
 		A794FC161F7905BC0091BD20 /* CustomTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionDelegate.swift; sourceTree = "<group>"; };
 		A794FC171F7905BC0091BD20 /* FadeDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeDismissAnimationController.swift; sourceTree = "<group>"; };
 		A794FC181F7905BC0091BD20 /* FadePresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentAnimationController.swift; sourceTree = "<group>"; };
+		A7D869451F7D1A150000938E /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
 		BE5BDD3840B274B802D836D4 /* Pods-RNIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.release.xcconfig"; sourceTree = "<group>"; };
 		DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1994,6 +1996,7 @@
 			isa = PBXGroup;
 			children = (
 				8357188C1F21A9CA00DE5E25 /* UserDefaults+Utils.swift */,
+				A7D869451F7D1A150000938E /* UserDefaults+Settings.swift */,
 				8357188B1F21A9CA00DE5E25 /* UserDefaults+Auth.swift */,
 			);
 			name = UserDefaults;
@@ -4500,6 +4503,7 @@
 				836221B41F43F8A1005B49DA /* RNSAddressViewController+TextField.swift in Sources */,
 				833D6C211F7CC65C00C4A0F3 /* RNSBusStopDetailCell+Action.swift in Sources */,
 				8356BE5A1F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift in Sources */,
+				A7D869461F7D1A150000938E /* UserDefaults+Settings.swift in Sources */,
 				8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
 				835718701F219F1F00DE5E25 /* BaseNavigationController.swift in Sources */,
 				838EA03E1F53DC3600E9BF20 /* RNSTriangle+Draw.swift in Sources */,

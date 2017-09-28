@@ -178,6 +178,8 @@
                         <outlet property="bottomTarget" destination="17Y-GM-lQ8" id="0Zt-Xk-iqf"/>
                         <outlet property="labelZoom" destination="UB6-uO-BP7" id="KOU-tc-6cO"/>
                         <outlet property="lightButton" destination="lsn-cY-i8Z" id="nyR-51-nf4"/>
+                        <outlet property="minusButtonZoom" destination="KLT-DT-BPk" id="Rsg-Wa-EjB"/>
+                        <outlet property="plusButtonZoom" destination="f5X-SA-iTE" id="Dyx-Kx-2VQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4V0-5z-Ohi" sceneMemberID="firstResponder"/>
@@ -481,6 +483,6 @@
         <image name="plus" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X9n-Pb-O8k"/>
+        <segue reference="6hR-h6-KzT"/>
     </inferredMetricsTieBreakers>
 </document>
