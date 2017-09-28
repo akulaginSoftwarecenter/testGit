@@ -21,6 +21,9 @@ class RNSCodeContainerController: STContainerViewController {
    override func prepareEnterViewController(){
         super.prepareEnterViewController()
     
+        _ = containerViewController?.view  // force viewDidLoad to trigger
+        containerViewController?.codeField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(self.actionNext))
+    
         containerViewController?.handlerRepeatCode = { [weak self] in
             self?.repeatCodeAction()
         }
