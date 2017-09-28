@@ -46,15 +46,26 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRG-hm-Ik2">
+                                <rect key="frame" x="166" y="78" width="44" height="24"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RFS-fq-sbc" firstAttribute="leading" secondItem="X3B-Iq-D1u" secondAttribute="leading" constant="16" id="7CM-z9-HM4"/>
                             <constraint firstAttribute="trailing" secondItem="RFS-fq-sbc" secondAttribute="trailing" constant="16" id="919-1p-pQL"/>
+                            <constraint firstItem="pRG-hm-Ik2" firstAttribute="centerX" secondItem="X3B-Iq-D1u" secondAttribute="centerX" id="Bem-fJ-Ggx"/>
+                            <constraint firstItem="RFS-fq-sbc" firstAttribute="top" secondItem="pRG-hm-Ik2" secondAttribute="bottom" id="Ecg-Io-YUi"/>
                             <constraint firstItem="RFS-fq-sbc" firstAttribute="top" secondItem="X3B-Iq-D1u" secondAttribute="top" constant="102" id="c8M-Jw-0Je"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="О приложении" id="Lcf-J6-0Lo"/>
+                    <connections>
+                        <outlet property="appVersionLabel" destination="pRG-hm-Ik2" id="Ux0-yn-1DU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpj-FU-1bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
