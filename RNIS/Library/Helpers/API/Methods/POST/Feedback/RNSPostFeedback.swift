@@ -16,8 +16,7 @@ class RNSPostFeedback: RNSRequest {
     
     var complete: AliasComplete?
     var item: RNSFeedbackPayload?
-    
-    
+     
     typealias AliasPayload = RNSFeedbackPayload
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()

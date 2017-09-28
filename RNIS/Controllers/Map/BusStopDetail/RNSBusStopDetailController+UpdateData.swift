@@ -1,0 +1,47 @@
+//
+//  RNSBusStopDetailController+UpdateData.swift
+//  RNIS
+//
+//  Created by Артем Кулагин on 28.09.17.
+//  Copyright © 2017 Артем Кулагин. All rights reserved.
+//
+
+import Foundation
+
+extension RNSBusStopDetailController {
+    
+    func loadItems() {
+        showLoader()
+        RNSStopPointRoutes(item, complete: { [weak self] items in
+            self?.prepareItems(items)
+            self?.removeLoader()
+            }, failure: { error in
+                // self?.prepareError(error)
+        })
+    }
+    
+    func prepareItems(_ items: [RNSBusRouteTemp]?) {
+        self.items = items
+        prepareTableView()
+    }
+    
+    func showLoader() {
+        loaderView.showInView(self.view)
+    }
+    
+    func removeLoader() {
+        loaderView.remove()
+    }
+    
+    func prepareTitle() {
+        titleLabel.text = item?.name
+    }
+    
+    func updateFavorite(_ item: RNSBusRouteTemp?) {
+        showLoader()
+        RNSPostFavoriteRouteCreate(item) { [weak self] in
+            self?.removeLoader()
+            self?.loadItems()
+        }
+    }
+}

@@ -53,31 +53,6 @@ class RNSBusStopDetailController: UIViewController {
         prepareCurrent(false)
     }
     
-    func loadItems() {
-        showLoader()
-        RNSStopPointRoutes(item, complete: { [weak self] items in
-             self?.prepareItems(items)
-             self?.loaderView.remove()
-            }, failure: { error in
-               // self?.prepareError(error)
-        })
-
-    }
-       
-    func prepareItems(_ items: [RNSBusRouteTemp]?) {
-        self.items = items
-        prepareTableView()
-    }
-    
-    func showLoader() {
-        let rect = CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height - 184)
-        loaderView.showInView(view, frame: rect)
-    }
-    
-    func prepareTitle() {
-        titleLabel.text = item?.name
-    }
-    
     override class var storyboardName: String {
         return "RNSBusStopDetailController"
     }

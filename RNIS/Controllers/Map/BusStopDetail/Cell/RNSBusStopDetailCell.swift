@@ -18,6 +18,8 @@ class RNSBusStopDetailCell: RNSBaseTableCell {
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var nextLabel: UILabel!
     
+    var updateFavorite: EmptyBlock?
+    
     var item: RNSBusRouteTemp? {
         didSet {
             prepareUI()
