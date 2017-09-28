@@ -12,18 +12,18 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
     
     public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
-//        return items.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].items.count
+        return sections[section].items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSFavoritesBusCell
         cell.item = item(indexPath)
+        /*
         cell.didTapDelete = { [weak self] item in
-            guard let section = self?.sections.index(where: { $0.items.contains(item) }),
+            guard let section = self?.sections.index(where: { $0.items?.contains(item) ?? false }),
                 let row = self?.sections[section].items.index(of: item) else {
                     return
             }
@@ -36,19 +36,20 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
                 self?.tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
+ */
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return item(indexPath).height
+         return item(indexPath)?.height ?? 0
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 32
     }
     
-    func item(_ indexPath: IndexPath) -> RNSBusStopTemp {
-        return sections[indexPath.section].items[indexPath.row]
+    func item(_ indexPath: IndexPath) -> RNSFavoriteStopPoint? {
+        return sections[indexPath.section].items?[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

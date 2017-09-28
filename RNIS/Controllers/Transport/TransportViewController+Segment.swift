@@ -14,10 +14,12 @@ extension TransportViewController {
         myRoutesView.isHidden = selectedSegmentIndexIsFirst
         favoritesBusView.isHidden = !selectedSegmentIndexIsFirst
         titleLable.text = titleSelected
+        updateItemsIfNeed()
     }
     
     func updateItemsIfNeed() {
-        if !selectedSegmentIndexIsFirst {
+        if selectedSegmentIndexIsFirst {
+            print("updateItemsIfNeed")
             RNSMenuManager.updateFavoriteBuss()
         }
     }

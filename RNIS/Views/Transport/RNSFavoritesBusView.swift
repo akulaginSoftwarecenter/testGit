@@ -8,12 +8,13 @@
 
 import UIKit
 
+struct TableSection {
+    let title: String?
+    var items: [RNSFavoriteStopPoint]?
+}
+
 class RNSFavoritesBusView: BaseViewWithXIBInit {
-    struct TableSection {
-        let title: String
-        var items: [RNSBusStopTemp]
-    }
-    
+    /*
     lazy var itemsBeside: [RNSBusStopTemp] = {
         let item1 = RNSBusStopTemp()
         item1.uuid = "0"
@@ -41,15 +42,21 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
         TableSection(title: "Рядом с вами", items: itemsBeside),
         TableSection(title: "Далеко", items: itemsFar)
     ]
-
+     */
+    
+    var sections: [TableSection] {
+        return [TableSection(title: "Рядом с вами", items: self.items)]
+    }
+    
+    var items: [RNSFavoriteStopPoint]?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
-        
-        prepareHandlers()
+         prepareHandlers()
     }
     
     func prepareHandlers() {
@@ -60,7 +67,8 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
     
     func loadData() {
         RNSPostFavoriteRouteList {[weak self] (reply, error, _) in
-            
+            self?.items = reply as? [RNSFavoriteStopPoint]
+            self?.tableView.reloadData()
         }
     }
 }

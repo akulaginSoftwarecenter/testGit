@@ -9,10 +9,10 @@
 import UIKit
 import Alamofire
 
-class RNSPostUserGet: RNSRequest {
+class RNSPostUserGet: RNSPostRequestMobileToken {
     
-    override var method: Alamofire.HTTPMethod {
-        return .post
+    override var isShowLogReply: Bool {
+        return false
     }
 
     typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
@@ -34,10 +34,6 @@ class RNSPostUserGet: RNSRequest {
             return
         }
         super.apiDidFailWithError(item.error)
-    }
-
-    override var headers: AliasDictionary {
-        return super.headers.merged(with: Utils.mobileToken)
     }
     
     override var subject: String {

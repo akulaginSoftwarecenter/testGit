@@ -20,7 +20,7 @@ extension RNSFavoritesBusCell: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func item(_ indexPath: IndexPath) -> RNSRouteBusTemp? {
+    func item(_ indexPath: IndexPath) -> RNSForecastBus? {
         return items?[indexPath.row]
     }
 }

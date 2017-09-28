@@ -10,22 +10,22 @@ import UIKit
 
 class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
     
-    typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
+    typealias AliasReply = RNSRequestReply<RNSFavoriteRouteListPayload,RNSRegisterError>
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
         print("RNSPostFavoriteRouteList",reply)
-        parseReply(AliasPostRegister(reply: reply), source: source)
+        parseReply(AliasReply(reply: reply), source: source)
     }
     
-    func parseReply(_ model: AliasPostRegister?, source: AnyObject) {
+    func parseReply(_ model: AliasReply?, source: AnyObject) {
         if  model?.success ?? false {
-            super.apiDidReturnReply(model?.payload as AnyObject, source: source)
+            super.apiDidReturnReply(model?.payload?.stop_points as AnyObject, source: source)
             return
         }
         parseError(model, source: source)
     }
     
-    func parseError(_ model: AliasPostRegister?, source: AnyObject) {
+    func parseError(_ model: AliasReply?, source: AnyObject) {
         guard let item = model?.errors?.first else {
             return
         }
