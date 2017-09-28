@@ -19,7 +19,7 @@ extension RNSLeftMenuController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as! MenuTableViewCell;
+        let cell = tableView.dequeueReusableCell(for: indexPath) as MenuTableViewCell;
         let item = self.item(indexPath)
         cell.updateCell(title: item.title, image: item.image)
         return cell
