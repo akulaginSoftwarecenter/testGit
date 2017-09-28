@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Как вас зовут?"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите Имя"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA1-nt-8CO" customClass="RNSProfilePhoto" customModule="RNIS" customModuleProvider="target">

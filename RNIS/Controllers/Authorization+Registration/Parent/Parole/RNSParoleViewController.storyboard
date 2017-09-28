@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="helveticaneuecyr-bold.otf">
             <string>HelveticaNeueCyr-Bold</string>
+        </array>
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
         </array>
     </customFonts>
     <scenes>
@@ -41,6 +45,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Пароль не может полностью повторять логин" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IS-6A-dlY">
+                                <rect key="frame" x="15" y="234" width="345" height="15"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Пароль должен состоять не менее чем из 3 символов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvI-Er-Lhb">
+                                <rect key="frame" x="15" y="253" width="345" height="15"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-u5-fLb" customClass="STPasswordField" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="288" width="315" height="30"/>
                                 <nil key="textColor"/>
@@ -78,15 +94,21 @@
                         <constraints>
                             <constraint firstItem="JxW-ww-gyf" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="30" id="0qf-c3-wXv"/>
                             <constraint firstAttribute="trailing" secondItem="JxW-ww-gyf" secondAttribute="trailing" constant="30" id="5YB-q2-aqs"/>
+                            <constraint firstItem="KZc-u5-fLb" firstAttribute="top" secondItem="DvI-Er-Lhb" secondAttribute="bottom" constant="20" id="8fc-9l-xMa"/>
                             <constraint firstItem="fz9-tX-ATO" firstAttribute="bottom" secondItem="KZc-u5-fLb" secondAttribute="bottom" constant="85" id="Afs-9V-Qio"/>
+                            <constraint firstItem="3IS-6A-dlY" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="15" id="D4u-Ov-f5d"/>
                             <constraint firstAttribute="trailing" secondItem="KZc-u5-fLb" secondAttribute="trailing" constant="30" id="G2K-uX-rge"/>
                             <constraint firstItem="fz9-tX-ATO" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="30" id="HnB-8k-qFS"/>
+                            <constraint firstAttribute="trailing" secondItem="3IS-6A-dlY" secondAttribute="trailing" constant="15" id="I2c-53-9Ey"/>
                             <constraint firstItem="KZc-u5-fLb" firstAttribute="centerY" secondItem="x6v-Ho-dlG" secondAttribute="centerY" constant="-30" id="JsA-Fz-QCU"/>
+                            <constraint firstAttribute="trailing" secondItem="DvI-Er-Lhb" secondAttribute="trailing" constant="15" id="MxW-gg-j9K"/>
                             <constraint firstItem="JxW-ww-gyf" firstAttribute="top" secondItem="fz9-tX-ATO" secondAttribute="bottom" constant="10" id="Pzh-q9-xx0"/>
                             <constraint firstAttribute="trailing" secondItem="fz9-tX-ATO" secondAttribute="trailing" constant="30" id="QnK-gF-xws"/>
+                            <constraint firstItem="DvI-Er-Lhb" firstAttribute="top" secondItem="3IS-6A-dlY" secondAttribute="bottom" constant="4" id="Yma-sg-WNe"/>
                             <constraint firstAttribute="trailing" secondItem="Jbg-YR-z5S" secondAttribute="trailing" id="fnn-OT-O33"/>
                             <constraint firstItem="KZc-u5-fLb" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="30" id="j8X-fD-dfE"/>
                             <constraint firstItem="Jbg-YR-z5S" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" id="m5B-2h-hco"/>
+                            <constraint firstItem="DvI-Er-Lhb" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="15" id="n7t-Si-VwP"/>
                             <constraint firstItem="tap-f8-YX6" firstAttribute="top" secondItem="Jbg-YR-z5S" secondAttribute="bottom" constant="3" id="uXc-6B-OMU"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

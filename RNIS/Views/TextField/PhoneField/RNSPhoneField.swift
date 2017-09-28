@@ -81,8 +81,8 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         let form = format(text)
         if form.haveFormat {
             let value = form.text
-            if value?.isEmpty == false && value?.hasPrefix("+7") == false && value?.hasPrefix("8") == false {
-                text = "+7\(value!)"
+            if let value = value, !value.isEmpty && !value.hasPrefix("+7") && !value.hasPrefix("8") {
+                text = "+7\(value)"
             } else {
                 text = value
             }

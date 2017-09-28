@@ -28,4 +28,9 @@ extension RNSParoleViewController {
         }
         coverView.titleBlackButton = titleBlackButton
     }
+
+    func addDoneButtonOnKeyboard()  {
+        passwordOneField.addButtonOnKeyboard("Далее   ", target: passwordTwoField, action: #selector(UIResponder.becomeFirstResponder))
+        passwordTwoField.addDoneButton("Готово   ")
+    }
 }

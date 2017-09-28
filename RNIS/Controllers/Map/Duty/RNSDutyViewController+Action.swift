@@ -32,15 +32,10 @@ extension RNSDutyViewController {
     }
     
     @IBAction func dateAction(_ sender: Any) {
-        
-        viewLabelDate.isHidden = true
         let vc = RNSDateSelectViewController.initialController as? RNSDateSelectViewController
         vc?.transitioningDelegate = CustomTransitionDelegate.shared
         vc?.handlerDate = { [weak self] date in
             self?.prepareDate(date)
-        }
-        vc?.handlerDismiss = { [weak self] in
-            self?.viewLabelDate.isHidden = false
         }
         STRouter.present(vc)
     }
