@@ -16,6 +16,8 @@ class RNSMapParentController: UIViewController {
         return RNSMapManager.mapView
     }
     @IBOutlet weak var labelZoom: UILabel!
+    @IBOutlet weak var plusButtonZoom: UIButton!
+    @IBOutlet weak var minusButtonZoom: UIButton!
     
     var handlerOnMapEvent: EmptyBlock?
     var handlerOnMapTouchEvent: AliasPointBlock?
@@ -48,7 +50,8 @@ class RNSMapParentController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        plusButtonZoom.isHidden = UserDefaults.hideZoomButtonInMap
+        minusButtonZoom.isHidden = UserDefaults.hideZoomButtonInMap
         prepareMapView()
     }
     
