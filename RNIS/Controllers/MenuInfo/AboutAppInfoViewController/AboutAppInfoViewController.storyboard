@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9AK-I8-0yc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9AK-I8-0yc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение РНИС Разработано T1Group 2017 г." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFS-fq-sbc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение РНИС Разработано АО &quot;Группа Т-1&quot; 2017 г." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFS-fq-sbc">
                                 <rect key="frame" x="16" y="102" width="343" height="72"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,15 +46,26 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRG-hm-Ik2">
+                                <rect key="frame" x="166" y="78" width="44" height="24"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RFS-fq-sbc" firstAttribute="leading" secondItem="X3B-Iq-D1u" secondAttribute="leading" constant="16" id="7CM-z9-HM4"/>
                             <constraint firstAttribute="trailing" secondItem="RFS-fq-sbc" secondAttribute="trailing" constant="16" id="919-1p-pQL"/>
+                            <constraint firstItem="pRG-hm-Ik2" firstAttribute="centerX" secondItem="X3B-Iq-D1u" secondAttribute="centerX" id="Bem-fJ-Ggx"/>
+                            <constraint firstItem="RFS-fq-sbc" firstAttribute="top" secondItem="pRG-hm-Ik2" secondAttribute="bottom" id="Ecg-Io-YUi"/>
                             <constraint firstItem="RFS-fq-sbc" firstAttribute="top" secondItem="X3B-Iq-D1u" secondAttribute="top" constant="102" id="c8M-Jw-0Je"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="О приложении" id="Lcf-J6-0Lo"/>
+                    <connections>
+                        <outlet property="appVersionLabel" destination="pRG-hm-Ik2" id="Ux0-yn-1DU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpj-FU-1bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

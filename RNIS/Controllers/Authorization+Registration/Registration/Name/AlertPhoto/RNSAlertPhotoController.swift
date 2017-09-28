@@ -15,7 +15,7 @@ class RNSAlertPhotoController: UIAlertController {
     var handlerRemove: EmptyBlock?
     
     @discardableResult static func controller(_ showRemove: Bool?, complete: AliasImagePickerBlock?, handlerRemove: EmptyBlock?) ->  RNSAlertPhotoController {
-        let vc = RNSAlertPhotoController(title: "Откуда взять фотографию?", message: nil, preferredStyle: .actionSheet)
+        let vc = RNSAlertPhotoController(title: "Установка фото", message: nil, preferredStyle: .actionSheet)
         vc.showRemove = showRemove
         vc.complete = complete
         vc.handlerRemove = handlerRemove
@@ -28,7 +28,7 @@ class RNSAlertPhotoController: UIAlertController {
             self?.complete?(.camera)
         }
         
-        addAction("Выбрать из галерии") {[weak self] in
+        addAction("Выбрать из галереи") {[weak self] in
             self?.complete?(.photoLibrary)
         }
         
