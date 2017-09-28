@@ -10,6 +10,9 @@ import UIKit
 
 class RNSBusStopDetailCell: RNSBaseTableCell {
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var alertButton: UIButton!
+    
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var numCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var numLabel: UILabel!
@@ -22,10 +25,27 @@ class RNSBusStopDetailCell: RNSBaseTableCell {
     }
     
     func prepareUI() {
-        //minuteLabel.text = String(item?.minute ?? 0) + " мин."
+        prepareFavorites()
+        prepareTime()
         numLabel.text = item?.number
-        
-        //prepareShowNext()
+        prepareShowNext()
+        prepareAlert()
+    }
+    
+    func prepareTime() {
+        if let time = item?.time {
+            minuteLabel.text = time + " мин."
+        }
+    }
+    
+    func prepareAlert() {
+        let in_notifications = item?.in_notifications ?? false
+        alertButton.setImage(in_notifications ? #imageLiteral(resourceName: "bellFill"): #imageLiteral(resourceName: "bell"), for: UIControlState())
+    }
+    
+    func prepareFavorites() {
+        let in_favorites = item?.in_favorites ?? false
+        favoriteButton.setImage(in_favorites ?#imageLiteral(resourceName: "flagFill2") : #imageLiteral(resourceName: "flag"), for: UIControlState())
     }
     
     func prepareShowNext() {
