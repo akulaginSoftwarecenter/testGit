@@ -20,6 +20,7 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         preparePhone()
+        codeField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(loginPressed))
     }
     
     func preparePhone() {
