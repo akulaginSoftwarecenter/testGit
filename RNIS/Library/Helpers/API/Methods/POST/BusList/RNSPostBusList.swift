@@ -40,12 +40,14 @@ class RNSPostBusList: RNSRequest {
             let rightBottom = center.coordinate(225, distance: distance) else {
                 return super.payload
         }
+        
         let bounding_box = ["left": leftTop.latitude,
                             "top": leftTop.longitude,
                             "right": rightBottom.latitude,
                             "bottom": rightBottom.longitude]
         return ["bounding_box": bounding_box,
-                "last_update": "test"]
+                "last_update": "9999999999"
+            ]
     }
     
     override var isShowLogReply: Bool {

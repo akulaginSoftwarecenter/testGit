@@ -31,7 +31,7 @@ class RNSMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        RNSMapManager.prepareStub()
+        //RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
     }
 
@@ -39,6 +39,14 @@ class RNSMapViewController: UIViewController {
         super.viewWillAppear(animated)
      
         prepareHandlers()
+    }
+    
+    func showLoader() {
+        loaderView.showInView(self.view)
+    }
+    
+    func removeLoader() {
+        loaderView.remove()
     }
     
     override class var storyboardName: String {

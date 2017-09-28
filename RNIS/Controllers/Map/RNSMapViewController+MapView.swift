@@ -16,14 +16,21 @@ extension RNSMapViewController {
     }
     
     func onMapEvent() {
-       // RNSBusManager.updateBD()
+        busUpdate()
         busStopUpdate()
     }
     
+    func busUpdate() {
+        showLoader()
+        RNSBusManager.updateServer { [weak self] in
+            self?.removeLoader()
+        }
+    }
+    
     func busStopUpdate() {
-        loaderView.showInView(self.view)
+        showLoader()
         RNSBusStopManager.updateServer { [weak self] in
-            self?.loaderView.remove()
+            self?.removeLoader()
         }
     }
     
