@@ -15,7 +15,7 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
     override var isValid:Bool {
         return format(text).complete
     }
-    
+
     var last10:String {
         return number.last10
     }
@@ -64,14 +64,26 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
             self?.textFieldDidChange()
         }
     }
-    
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if text == "" {
+            text = "+7"
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if text == "+7" || text == "8" {
+            text = ""
+        }
+    }
+
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if !validPhoneSymbol(string) {
             return false
         }
         
         if string == cross {
-            textField.text = ""
+            textField.text = "+7"
             return false
         }
         return true
@@ -81,17 +93,10 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         let form = format(text)
         if form.haveFormat {
             let value = form.text
-            if let value = value, !value.isEmpty && !value.hasPrefix("+7") && !value.hasPrefix("8") {
-                text = "+7\(value)"
-            } else {
-                text = value
-            }
+            text = value
             oldText = value
         }else{
             text = oldText
-        }
-        if text?.isEmpty ?? true  {
-            text = ""
         }
         handlerDidChange?()
     }
