@@ -48,6 +48,19 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
         super.awakeFromNib()
         
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
-        tableView.reloadData()
+        
+        prepareHandlers()
+    }
+    
+    func prepareHandlers() {
+        RNSMenuManager.handlerUpdateFavoriteBuss = {[weak self] in
+            self?.loadData()
+        }
+    }
+    
+    func loadData() {
+        RNSPostFavoriteRouteList {[weak self] (reply, error, _) in
+            
+        }
     }
 }

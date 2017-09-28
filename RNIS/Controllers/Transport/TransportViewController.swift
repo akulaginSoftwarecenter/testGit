@@ -25,6 +25,7 @@ class TransportViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        updateItemsIfNeed()
         generateStub()
     }
      

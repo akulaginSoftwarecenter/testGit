@@ -16,6 +16,12 @@ extension TransportViewController {
         titleLable.text = titleSelected
     }
     
+    func updateItemsIfNeed() {
+        if !selectedSegmentIndexIsFirst {
+            RNSMenuManager.updateFavoriteBuss()
+        }
+    }
+    
     func prepareSegment() {
         segmentControl.selectedSegmentIndex = 0
         segmentControlAction(self.segmentControl)

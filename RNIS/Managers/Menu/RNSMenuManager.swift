@@ -12,6 +12,7 @@ class RNSMenuManager: NSObject {
     
     static var handlerLeftMenuUpdate: EmptyBlock?
     static var handlerStrelkaUpdate: EmptyBlock?
+    static var handlerUpdateFavoriteBuss: EmptyBlock?
     
     static let shared = RNSMenuManager()
     
@@ -60,5 +61,9 @@ class RNSMenuManager: NSObject {
     
     static func leftMenuUpdate() {
         handlerLeftMenuUpdate?()
+    }
+    
+    static func updateFavoriteBuss() {
+        handlerUpdateFavoriteBuss?()
     }
 }
