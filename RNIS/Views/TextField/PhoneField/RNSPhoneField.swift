@@ -46,11 +46,6 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        textFieldDidChange()
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -72,7 +67,7 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if text == "+7" || text == "8" {
+        if text == "+7" {
             text = ""
         }
     }
@@ -97,6 +92,9 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
             oldText = value
         }else{
             text = oldText
+        }
+        if text?.isEmpty ?? true  {
+            text = "+7"
         }
         handlerDidChange?()
     }
