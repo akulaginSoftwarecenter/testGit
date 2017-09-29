@@ -9,10 +9,15 @@
 import Foundation
 
 extension SupportInfoViewController {
+    
     public func textViewDidChange(_ textView: UITextView) {
         UIView.animateConstrains(self.view) {
             let size = self.textView.sizeThatFits(CGSize(width: self.textView.bounds.width, height: CGFloat.greatestFiniteMagnitude))
             self.textViewHeightConstraint.constant = size.height
         }
+    }
+     
+    func prepareError(_ error: String?) {
+        errorLabel.text = error
     }
 }
