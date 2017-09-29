@@ -17,63 +17,63 @@ extension UIColor {
     }
     
     static var color13: UIColor {
-        return UIColor(13,145,209)
+        return #colorLiteral(red: 0.05098039216, green: 0.568627451, blue: 0.8196078431, alpha: 1)
     }
     
     static var color34: UIColor {
-        return UIColor(34,178,248)
+        return #colorLiteral(red: 0.1333333333, green: 0.6980392157, blue: 0.9725490196, alpha: 1)
     }
     
     static var color125: UIColor {
-        return UIColor(125,125,125,0.7)
+        return #colorLiteral(red: 0.4901960784, green: 0.4901960784, blue: 0.4901960784, alpha: 0.7)
     }
     
     static var color163: UIColor {
-        return UIColor(163,162,149)
+        return #colorLiteral(red: 0.6392156863, green: 0.6352941176, blue: 0.5843137255, alpha: 1)
     }
     
     static var color234: UIColor {
-        return UIColor(234,72,69)
+        return #colorLiteral(red: 0.9176470588, green: 0.2823529412, blue: 0.2705882353, alpha: 1)
     }
     
     static var color241: UIColor {
-        return UIColor(241,100,90)
+        return #colorLiteral(red: 0.9450980392, green: 0.3921568627, blue: 0.3529411765, alpha: 1)
     }
     
     static var whiteAlpha50: UIColor {
-        return white.withAlphaComponent(0.5)
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
     }
     
     static var color01B3FD:UIColor {
-        return UIColor(hexString: "01B3FD")
+        return #colorLiteral(red: 0.003921568627, green: 0.7019607843, blue: 0.9921568627, alpha: 1)
     }
     
     static var A3423C:UIColor {
-        return UIColor(hexString: "A3423C")
+        return #colorLiteral(red: 0.6392156863, green: 0.2588235294, blue: 0.2352941176, alpha: 1)
     }
     
     static var AFAFAF:UIColor {
-        return UIColor(hexString: "AFAFAF")
+        return #colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1)
     }
     
     static var E25E55:UIColor {
-        return UIColor(hexString: "E25E55")
+        return #colorLiteral(red: 0.8862745098, green: 0.368627451, blue: 0.3333333333, alpha: 1)
     }
     
     static var EA4845:UIColor {
-        return UIColor(hexString: "EA4845")
+        return #colorLiteral(red: 0.9176470588, green: 0.2823529412, blue: 0.2705882353, alpha: 1)
     }
     
     static var D95A53:UIColor {
-        return UIColor(hexString: "D95A53")
+        return #colorLiteral(red: 0.8509803922, green: 0.3529411765, blue: 0.3254901961, alpha: 1)
     }
     
     static var F1645A:UIColor {
-        return UIColor(hexString: "F1645A")
+        return #colorLiteral(red: 0.9450980392, green: 0.3921568627, blue: 0.3529411765, alpha: 1)
     }
     
     static var FFB9AF:UIColor {
-        return UIColor(hexString: "FFB9AF")
+        return #colorLiteral(red: 1, green: 0.7254901961, blue: 0.6862745098, alpha: 1)
     }
    
     convenience init(_ red255: UInt, _ green255: UInt, _ blue255: UInt) {
