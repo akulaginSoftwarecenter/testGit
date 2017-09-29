@@ -38,10 +38,20 @@ extension RNSBusStopDetailController {
     }
     
     func updateFavorite(_ item: RNSBusRouteTemp?) {
+        guard let item = item else {
+            return
+        }
         showLoader()
-        RNSPostFavoriteRouteCreate(item) { [weak self] in
-            self?.removeLoader()
-            self?.loadItems()
+        if item.in_favorites ?? false {
+            RNSPostFavoriteRouteCreate(item) { [weak self] in
+                self?.removeLoader()
+                self?.loadItems()
+            }
+        } else {
+            RNSPostFavoriteRouteCreate(item) { [weak self] in
+                self?.removeLoader()
+                self?.loadItems()
+            }
         }
     }
 }
