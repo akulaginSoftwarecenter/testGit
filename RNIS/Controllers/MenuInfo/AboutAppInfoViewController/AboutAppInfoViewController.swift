@@ -14,8 +14,8 @@ class AboutAppInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") {
-            appVersionLabel.text = "Версия : \(version)"
+        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString"), let bundle = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") {
+            appVersionLabel.text = "Версия : \(version).\(bundle)"
         }
     }
     
