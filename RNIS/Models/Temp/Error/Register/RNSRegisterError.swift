@@ -12,6 +12,7 @@ import ObjectMapper
 class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
     var mobile_user_phone: [String]?
     var mobile_user_new_phone: [String]?
+    var mobile_user_new_email: [String]?
     
     public override func mapping(map: Map) {
         
@@ -19,6 +20,7 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
         mobile_user_phone = map.JSON["mobile_user.phone"] as? [String]
         
         mobile_user_new_phone = map.JSON["mobile_user.new_phone"] as? [String]
+        mobile_user_new_email = map.JSON["mobile_user.new_email"] as? [String]
     }
     
     var textError: String? {
@@ -28,6 +30,9 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
         }
         if let mobile_user_new_phone = mobile_user_new_phone?.first {
             error += " " + mobile_user_new_phone
+        }
+        if let mobile_user_new_email = mobile_user_new_email?.first {
+            error += " " + mobile_user_new_email
         }
         return error
     }
