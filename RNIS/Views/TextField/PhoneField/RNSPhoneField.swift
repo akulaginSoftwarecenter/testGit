@@ -21,6 +21,9 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
     }
     
     func preparePhone(_ phone: String?) {
+        guard let phone = phone else {
+            return
+        }
         text = InputFieldsValidator.format(phone).text
         textFieldDidChange()
     }

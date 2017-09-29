@@ -14,10 +14,16 @@ class RNISAuthManager {
         STRouter.showLoader()
         RNSPostLogout { _, _, _ in
             STRouter.removeLoader()
-            UserDefaults.removeToken()
+            clearUserDefaults()
             RNSMenuManager.showMap()
             RNSMenuManager.leftMenuUpdate()
         }
+    }
+    
+    static func clearUserDefaults() {
+        UserDefaults.removeToken()
+        UserDefaults.removeLogin()
+        UserDefaults.removePassword()
     }
     
     static func login(_ login: String?, password: String?, failure: AliasStringBlock?) {

@@ -53,15 +53,23 @@ extension UserDefaults {
         standard.set(true, forKey: kLaunchedBefore)
     }
     
-    static func removeToken() {
-        standard.removeObject(forKey: kToken)
-    }
-    
     static func setLogin(_ value: String?) {
         standard.set(value, forKey: kLoginField)
     }
     
     static func setPassword(_ value: String?) {
         standard.set(value, forKey: kPasswordField)
+    }
+    
+    static func removeToken() {
+        standard.removeObject(forKey: kToken)
+    }
+    
+    static func removeLogin() {
+        standard.removeObject(forKey: kLoginField)
+    }
+    
+    static func removePassword() {
+        standard.removeObject(forKey: kPasswordField)
     }
 }
