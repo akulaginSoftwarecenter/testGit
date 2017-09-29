@@ -18,7 +18,6 @@ extension RNSPageRouteManager {
         items?.forEach{$0.removeAllRoad()}
     }
     
-    
     static func removeNonActivRoute() {
         routeNonActive?.forEach {$0.removeAllRoad() }
     }

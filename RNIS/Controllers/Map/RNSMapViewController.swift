@@ -31,12 +31,14 @@ class RNSMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //RNSMapManager.prepareStub()
+        RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        RNSPageRouteManager.removeAllRoute()
+        RNSPageRouteManager.items = nil
      
         prepareHandlers()
     }
