@@ -15,17 +15,19 @@ class RNSPostComplaint: RNSRequest {
     }
     
     var complete: AliasComplete?
-    var text: String?
+    var body: String?
+    var contact: String?
     
     
     typealias AliasPayload = RNSFeedbackPayload
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()
     
-    @discardableResult convenience init(_ text: String?, complete: AliasComplete?) {
+    @discardableResult convenience init(_ contact: String?, body: String?, complete: AliasComplete?) {
         self.init()
         
-        self.text = text
+        self.body = body
+        self.contact = contact
         self.complete = complete
         
         STRouter.showLoader()
@@ -51,10 +53,12 @@ class RNSPostComplaint: RNSRequest {
     }
     
     override var payload: AliasDictionary {
-        guard let text = text else {
+        guard let body = body,
+            let contact = contact else {
             return [:]
         }
-        return ["body": text]
+        return ["contact":contact,
+                "body": body]
     }
     
     override var subject: String {

@@ -15,6 +15,7 @@ class ReportInfoViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
 
     @IBAction func actionButton(_ sender: Any) {
+        /*
         prepareError(nil)
         guard let body = textView.text, !body.isEmpty else {
             prepareError("Заполните текст обращения")
@@ -24,6 +25,7 @@ class ReportInfoViewController: UIViewController {
         RNSPostComplaint(body) { [weak self]  _ in
             self?.showAlert()
         }
+         */
     }
     
     func showAlert() {

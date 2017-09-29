@@ -21,10 +21,10 @@ class RNSPostFeedback: RNSRequest {
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()
     
-    @discardableResult convenience init(_ name: String?, contact: String?, body: String?, complete: AliasComplete?) {
+    @discardableResult convenience init(_ contact: String?, body: String?, complete: AliasComplete?) {
         self.init()
         
-        self.item = RNSFeedbackPayload(name, contact: contact, body: body)
+        self.item = RNSFeedbackPayload(contact, body: body)
         self.complete = complete
         
         STRouter.showLoader()

@@ -37,10 +37,10 @@ extension MainInfoViewController: UITableViewDelegate, UITableViewDataSource  {
             QRScannerInfoViewController.initialPushAnimatedRed()
             break;
         case 3:
-            ReportInfoViewController.initialPushAnimatedRedScroll()
+            showPetition(.complaint)
             break;
         case 4:
-            SupportInfoViewController.initialPushAnimatedRedScroll()
+            showPetition(.feedback)
             break;
         case 7:
             AboutAppInfoViewController.initialPushAnimatedRed()

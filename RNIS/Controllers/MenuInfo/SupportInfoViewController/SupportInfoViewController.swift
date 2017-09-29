@@ -8,9 +8,14 @@
 
 import UIKit
 
+enum RNSPetitionType: String {
+    case feedback = "Связь с разработчиками"
+    case complaint = "Пожаловаться"
+}
+
 class SupportInfoViewController: UIViewController {
 
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var topTitle: RNSTopTitle!
     @IBOutlet weak var contactField: UITextField!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
@@ -18,9 +23,7 @@ class SupportInfoViewController: UIViewController {
     @IBOutlet weak var blackButton: RNSBlackButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var name: String? {
-        return nameField.text
-    }
+    var type: RNSPetitionType = .feedback
     
     var contact: String? {
         return contactField.text
@@ -33,15 +36,23 @@ class SupportInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        topTitle.text = type.rawValue
+        
         blackButton.handlerAction = { [weak self] in
             self?.checkValidFields()
         }
     }
     
     func send() {
-       RNSPostFeedback(name, contact: contact, body: body) { [weak self] item in
-          self?.showAlert()
-       }
+        if type == .feedback {
+            RNSPostFeedback(contact, body: body) { [weak self] item in
+                self?.showAlert()
+            }
+        } else {
+            RNSPostComplaint(contact, body: body) { [weak self]  _ in
+                self?.showAlert()
+            }
+        }
     }
         
     func showAlert() {
@@ -52,12 +63,8 @@ class SupportInfoViewController: UIViewController {
     
     func checkValidFields() {
         prepareError(nil)
-        guard let name = name, !name.isEmpty else {
-            prepareError("Заполните имя")
-            return
-        }
         guard let contact = contact, !contact.isEmpty else {
-            prepareError("Заполните Почта / Телефон")
+            prepareError("Заполните Почту")
             return
         }
         guard let body = body, !body.isEmpty else {

@@ -41,6 +41,12 @@ class MainInfoViewController: UIViewController {
         vc?.pushAnimatedRed()
     }
     
+    func showPetition(_ type: RNSPetitionType = .feedback) {
+        let vc = SupportInfoViewController.initialController as? SupportInfoViewController
+        vc?.type = type
+        vc?.pushAnimatedRedScroll()
+    }
+    
     override class var storyboardName: String {
         return "MainInfoViewController"
     }

@@ -11,20 +11,17 @@ import ObjectMapper
 
 class RNSFeedbackPayload: RNISMappableBase {
     
-    var name: String?
     var contact: String?
     var body: String?
     
-    convenience init(_ name: String?, contact: String?, body: String?) {
+    convenience init(_ contact: String?, body: String?) {
         self.init()
         
-        self.name = name
         self.contact = contact
         self.body = body
     }
     
     public override func mapping(map: Map) {
-        name <- map["name"]
         contact <- map["contact"]
         body <- map["body"]
     }
