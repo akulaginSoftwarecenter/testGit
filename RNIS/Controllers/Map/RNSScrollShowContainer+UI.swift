@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PureLayout
 
 extension RNSScrollShowContainer {
     
@@ -40,6 +41,13 @@ extension RNSScrollShowContainer {
         self.addChildViewController(containerVC)
         coverView.addSubview(containerView)
         containerView.autoPinEdgesToSuperviewEdges()
+        let extraBottomView = UIView()
+        extraBottomView.backgroundColor = UIColor.backColor
+        coverView.addSubview(extraBottomView)
+        extraBottomView.autoPinEdge(toSuperviewEdge: .left)
+        extraBottomView.autoPinEdge(toSuperviewEdge: .right)
+        extraBottomView.autoPinEdge(.top, to: .bottom, of: coverView)
+        extraBottomView.autoSetDimension(.height, toSize: 1000)
     }
    
     func prepareTouchView() {
