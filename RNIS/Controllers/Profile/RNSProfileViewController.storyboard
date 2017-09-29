@@ -63,7 +63,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Как вас зовут?"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите Имя"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Имя пользователя"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
