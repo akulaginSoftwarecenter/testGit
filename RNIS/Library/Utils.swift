@@ -70,4 +70,14 @@ class Utils {
         }
         return dict
     }
+    
+    static var isHaveToken: Bool {
+        return UserDefaults.isHaveToken
+    }
+    
+    static func checkTokeShowAlert() {
+        if !isHaveToken {
+            STRouter.showAlertRegistration()
+        }
+    }
 }

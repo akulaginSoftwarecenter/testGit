@@ -22,12 +22,12 @@ class RNSForecastCell: RNSBaseTableCell {
     }
     
     func updateUI() {
-        numberLabel.text = String(item?.route_number ?? 0)
+        numberLabel.text = item?.route_number
         
         hiddenAll()
         if let time = item?.time {
-            timeView.isHidden  = false
-            timeLabel.text = "\(time ?? 0) мин."
+            timeView.isHidden = false
+            timeLabel.text = "\(time) мин."
         } else {
            // periodLabel.isHidden = false
            // periodLabel.text = "Каждые \(item?.timePerod ?? 0) мин."

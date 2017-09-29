@@ -11,7 +11,7 @@ import Foundation
 extension RNSLeftMenuController {
     
     var isHaveToken: Bool {
-        return UserDefaults.isHaveToken
+        return Utils.isHaveToken
     }
     
     func prepareProfile() {

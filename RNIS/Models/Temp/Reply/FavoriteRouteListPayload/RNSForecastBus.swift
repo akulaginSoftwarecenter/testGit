@@ -11,7 +11,7 @@ import ObjectMapper
 
 class RNSForecastBus: RNISMappableBase {
  
-    var route_number: Int?
+    var route_number: String?
     var time: Int?
     
     public override func mapping(map: Map) {

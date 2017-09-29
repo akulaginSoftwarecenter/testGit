@@ -13,8 +13,7 @@ class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
     typealias AliasReply = RNSRequestReply<RNSFavoriteRouteListPayload,RNSRegisterError>
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
-        print("RNSPostFavoriteRouteList",reply)
-        parseReply(AliasReply(reply: reply), source: source)
+          parseReply(AliasReply(reply: reply), source: source)
     }
     
     func parseReply(_ model: AliasReply?, source: AnyObject) {

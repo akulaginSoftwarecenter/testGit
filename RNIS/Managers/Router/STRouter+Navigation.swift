@@ -52,10 +52,13 @@ extension STRouter {
         }
     }
     */
-    /*
+    
+    static func showLogin() {
+        RNSLoginViewController.controller.pushAnimatedImageBoard()
+    }
+    
     static func showAlertRegistration() {
         let message = "Зарегистрируйтесь, чтобы открыть все возможности приложения"
-        STRouter.showAlertBtns(message, leftTitle: "Регистрация", rightTitle: "Позже", handlerOk: STRouter.showRegistration)
+        STRouter.showAlertBtns(message, leftTitle: "Регистрация", rightTitle: "Позже", handlerOk: STRouter.showLogin)
     }
-     */
 }

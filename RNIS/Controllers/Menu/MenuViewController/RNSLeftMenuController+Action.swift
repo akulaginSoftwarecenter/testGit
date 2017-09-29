@@ -14,7 +14,7 @@ extension RNSLeftMenuController {
         if isHaveToken {
             RNSMenuManager.showProfile()
         } else {
-            RNSLoginViewController.controller.pushAnimatedImageBoard()
+            STRouter.showLogin()
         }
     }
     

@@ -12,6 +12,8 @@ class TransportViewController: UIViewController{
 
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
+    var isNeedCheckToken = true
+    
     @IBOutlet weak var titleLable: RNSTopTitle!
     @IBOutlet weak var favoritesBusView: RNSFavoritesBusView!
     @IBOutlet weak var myRoutesView: RNSTransportTableView!
@@ -27,6 +29,14 @@ class TransportViewController: UIViewController{
         
         updateItemsIfNeed()
         generateStub()
+        checkToken()
+    }
+    
+    func checkToken() {
+        if isNeedCheckToken {
+            isNeedCheckToken = false
+            Utils.checkTokeShowAlert()
+        }
     }
      
     func generateStub() {
