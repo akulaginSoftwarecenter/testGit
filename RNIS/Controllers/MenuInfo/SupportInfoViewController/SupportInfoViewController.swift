@@ -45,13 +45,17 @@ class SupportInfoViewController: UIViewController {
     
     func send() {
         if type == .feedback {
-            RNSPostFeedback(contact, body: body) { [weak self] item in
+            RNSPostFeedback(contact, body: body, complete: { [weak self] item in
                 self?.showAlert()
-            }
+                }, failure: { [weak self] error in
+                    self?.prepareError(error)
+            })
         } else {
-            RNSPostComplaint(contact, body: body) { [weak self]  _ in
+            RNSPostComplaint(contact, body: body, complete: { [weak self] item in
                 self?.showAlert()
-            }
+                }, failure: { [weak self] error in
+                    self?.prepareError(error)
+            })
         }
     }
         

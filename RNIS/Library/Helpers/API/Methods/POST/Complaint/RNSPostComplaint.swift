@@ -15,6 +15,7 @@ class RNSPostComplaint: RNSRequest {
     }
     
     var complete: AliasComplete?
+    var failure: AliasStringBlock?
     var body: String?
     var contact: String?
     
@@ -23,17 +24,26 @@ class RNSPostComplaint: RNSRequest {
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()
     
-    @discardableResult convenience init(_ contact: String?, body: String?, complete: AliasComplete?) {
+    @discardableResult convenience init(_ contact: String?, body: String?, complete: AliasComplete?, failure: AliasStringBlock? = nil) {
         self.init()
         
         self.body = body
         self.contact = contact
         self.complete = complete
+        self.failure = failure
         
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             STRouter.removeLoader()
+            self?.checkError(error)
             self?.parseReply(AliasReply(reply: object))
+        }
+    }
+    
+    func checkError(_ error: NSError?) {
+        if error != nil {
+            failure?(kServerNotAviable)
+            return
         }
     }
     

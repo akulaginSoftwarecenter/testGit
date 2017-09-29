@@ -16,21 +16,31 @@ class RNSPostFeedback: RNSRequest {
     
     var complete: AliasComplete?
     var item: RNSFeedbackPayload?
+    var failure: AliasStringBlock?
      
     typealias AliasPayload = RNSFeedbackPayload
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()
     
-    @discardableResult convenience init(_ contact: String?, body: String?, complete: AliasComplete?) {
+    @discardableResult convenience init(_ contact: String?, body: String?, complete: AliasComplete?, failure: AliasStringBlock? = nil) {
         self.init()
         
         self.item = RNSFeedbackPayload(contact, body: body)
         self.complete = complete
+        self.failure = failure
         
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
+            self?.checkError(error)
             STRouter.removeLoader()
             self?.parseReply(AliasReply(reply: object))
+        }
+    }
+    
+    func checkError(_ error: NSError?) {
+        if error != nil {
+            failure?(kServerNotAviable)
+            return
         }
     }
     
