@@ -133,10 +133,15 @@ class RNSTextField: UITextField {
         guard let placeholderKey = placeholderKey else {
             return
         }
-        let attributes = [NSAttributedStringKey.foregroundColor: placeholderColorText,
-                          NSAttributedStringKey.font: placeholderFont]
-        
-        attributedPlaceholder = NSAttributedString(string:NSLoc(placeholderKey),
+        var attributes = [
+            NSAttributedStringKey.foregroundColor: placeholderColorText,
+            NSAttributedStringKey.font: placeholderFont
+        ]
+        let text = NSLoc(placeholderKey)
+        if text.characters.count > 24 {
+            attributes[.font] = placeholderFont.withSize(22)
+        }
+        attributedPlaceholder = NSAttributedString(string: text,
                                                    attributes:attributes)
         
     }
