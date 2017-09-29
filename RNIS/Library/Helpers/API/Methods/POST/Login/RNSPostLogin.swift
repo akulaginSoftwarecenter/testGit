@@ -31,6 +31,10 @@ class RNSPostLogin: RNSRequest {
         self.failure = failure
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
+            if error != nil {
+                failure?(kServerNotAviable)
+                return
+            }
             self?.parseReply(AliasModel(reply: object))
         }
     }

@@ -24,4 +24,5 @@ let kParoleVC = "RNSParoleViewController"
 let kUuid = "uuid"
 let kStrelka = "Стрелка"
 let kUpdateTime = "updateTime"
+let kServerNotAviable = "Сервер недоступен"
 

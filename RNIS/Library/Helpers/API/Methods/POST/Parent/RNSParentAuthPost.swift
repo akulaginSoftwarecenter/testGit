@@ -26,6 +26,10 @@ class RNSParentAuthPost: RNSTokenRequest {
         self.complete = complete
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
+            if error != nil {
+                failure?(kServerNotAviable)
+                return
+            }
             STRouter.removeLoader()
             self?.parseReply(AliasPostRegister(reply: object))
         }
