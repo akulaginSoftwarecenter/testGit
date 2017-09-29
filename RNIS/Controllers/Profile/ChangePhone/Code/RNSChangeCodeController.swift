@@ -21,6 +21,10 @@ class RNSChangeCodeController: RNSCodeContainerController {
         return STRouter.imageContainer(container)
     }
     
+    override func preparePhoneText() {
+        containerViewController?.phone = item?.new_phone
+    }
+    
     override var typeTitle: TypeTitle {
         return .change
     }

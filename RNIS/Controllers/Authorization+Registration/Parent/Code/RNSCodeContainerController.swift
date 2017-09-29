@@ -23,10 +23,13 @@ class RNSCodeContainerController: STContainerViewController {
         containerViewController?.handlerRepeatCode = { [weak self] in
             self?.repeatCodeAction()
         }
+        preparePhoneText()
+    }
+    
+    func preparePhoneText() {
         containerViewController?.phone = item?.phone
     }
-
-    
+   
     var codeText: String? {
         return containerViewController?.codeField.text
     }
