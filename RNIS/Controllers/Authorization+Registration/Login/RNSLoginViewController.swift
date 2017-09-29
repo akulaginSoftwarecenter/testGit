@@ -10,6 +10,8 @@ import UIKit
 
 class RNSLoginViewController: UIViewController {
     
+    @IBOutlet weak var loginButton: RNSBlackButton!
+    @IBOutlet weak var backButton: RNSBlackButton!
     @IBOutlet var loginView: RNSLoginView!
     @IBOutlet weak var loginField: RNSPhoneField!
     @IBOutlet weak var passwordField: STPasswordField!
@@ -23,11 +25,9 @@ class RNSLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loginView.handlerBlackAction = { [weak self] in
-            self?.loginPressed()
-        }
-        
+             
+        loginView.blackButton.isHidden = true
+        prepareButtons()
         prepareLoginIfNeed()
         addDoneButtonOnKeyboard()
     }

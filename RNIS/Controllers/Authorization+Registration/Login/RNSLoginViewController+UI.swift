@@ -10,6 +10,16 @@ import Foundation
 
 extension RNSLoginViewController {
     
+    func prepareButtons() {
+        loginButton.handlerAction = {[weak self] in
+            self?.loginPressed()
+        }
+        
+        backButton.handlerAction = {
+            STRouter.pop()
+        }
+    }
+    
     func prepareLoginIfNeed() {
         if let phone = item?.phone {
             prepareStart(phone, password: nil)
