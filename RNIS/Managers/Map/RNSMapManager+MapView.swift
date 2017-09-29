@@ -26,7 +26,6 @@ extension RNSMapManager {
     
     static func centerUserLocation() {
         mapCenter(RNSLocationManager.point)
-        mapView.setZoomLevel(13)
     }
     
     static func testRedPlace() {
