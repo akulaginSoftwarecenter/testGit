@@ -9,6 +9,8 @@
 import UIKit
 import QRCodeReader
 import AVFoundation
+import AudioToolbox.AudioServices
+
 
 class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDelegate {
 
@@ -32,6 +34,8 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
         
         reader.startScanning()
         reader.didFindCode = { result in
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+            AudioServicesPlayAlertSound(1106)
             let message = String (format:"%@ (of type %@)", result.value, result.metadataType)
             STRouter.showAlertOk(message) {
                 STRouter.pop()
