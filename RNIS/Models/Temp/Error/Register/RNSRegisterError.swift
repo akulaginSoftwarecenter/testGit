@@ -27,7 +27,7 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
             error += " " + phone
         }
         if let mobile_user_new_phone = mobile_user_new_phone?.first {
-            error += ", " + mobile_user_new_phone
+            error += " " + mobile_user_new_phone
         }
         return error
     }
