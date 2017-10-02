@@ -42,7 +42,7 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
     }
     
     func validateSpecialCharactor(_ text: String?) -> Bool {
-        let pred = NSPredicate(format: "SELF MATCHES %@", "[А-Яа-яA-Za-z0-9^]*")
+        let pred = NSPredicate(format: "SELF MATCHES %@", "[А-Я а-яA-Za-z0-9^]*")
         return pred.evaluate(with:text)
     }
 
