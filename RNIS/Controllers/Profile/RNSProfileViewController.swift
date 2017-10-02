@@ -34,6 +34,10 @@ class RNSProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        nameField.text = ""
+        phoneField.text = ""
+        emailField.text = ""
+        errorLabel.text = ""
         loadData()
     }
     
