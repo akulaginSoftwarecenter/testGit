@@ -24,6 +24,7 @@ typealias AliasStringArrayBlock = ([String]?) -> ()
 typealias AliasBoolBlock = (Bool) -> ()
 typealias AliasRegisterPayloadBlock = (RNSUserPayload?) -> ()
 typealias AliasPostRegister = RNSRequestReply<RNSUserPayload,RNSRegisterError>
+typealias AliasAddressComplete = ((RNSDutyAddressTemp?) ->())
 
 func NSLoc(_ key: String?) -> String {
     guard let key = key else {

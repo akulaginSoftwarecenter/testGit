@@ -15,12 +15,13 @@ extension RNSAddressViewController {
     }
     
     @IBAction func backAction(_ sender: Any) {
-        complete?(text)
+        updateItem()
+        complete?(item)
         if let text = text, !text.isEmpty  {
             RNSDataManager.createSearchItem(text)
         }
     }
-    
+   
     @IBAction func actionTop(_ sender: Any) {
         endEdit()
     }

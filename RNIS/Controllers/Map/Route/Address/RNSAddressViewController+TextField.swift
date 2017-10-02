@@ -11,7 +11,7 @@ import Foundation
 extension RNSAddressViewController: UITextFieldDelegate {
     
     func prepareTextField() {
-        textField.text = textInput
+        textField.text = item?.address
     }
     
     func prepareAddress(_ text: String?) {

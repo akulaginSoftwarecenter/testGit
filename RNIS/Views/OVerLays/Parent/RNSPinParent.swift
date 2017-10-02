@@ -12,6 +12,10 @@ class RNSPinParent: PGOverlay {
     
     lazy var overlayItem = PGOverlayItem()
     
+    var point: PGGeoPoint {
+        return overlayItem.geoPoint
+    }
+    
     func preparePoint(_ point: PGGeoPoint) {
         items().add(overlayItem)
         addOnMap()

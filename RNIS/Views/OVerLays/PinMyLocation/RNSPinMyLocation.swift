@@ -10,7 +10,7 @@ import UIKit
 
 class RNSPinMyLocation: RNSPinParent {
     
-    var point: PGGeoPoint {
+    override var point: PGGeoPoint {
         return RNSLocationManager.point
     }
     

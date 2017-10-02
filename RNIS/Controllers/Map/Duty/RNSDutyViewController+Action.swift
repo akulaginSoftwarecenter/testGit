@@ -11,23 +11,23 @@ import Foundation
 extension RNSDutyViewController {
     
     @IBAction func actionExchange(_ sender: Any) {
-        let inText = self.inText
-        let fromText = self.fromText
-        fromField.text = inText
-        inField.text = fromText
+        let item = fromItem
+        fromItem = inItem
+        inItem = item
+        updateFields()
     }
     
     @IBAction func actionFrom(_ sender: Any) {
-        showAddress(.fromAddress) {[weak self] (text) in
-            guard let `self` = self else { return }
-            self.fromField.text = text
+        showAddress(.fromAddress) {[weak self] (item) in
+            self?.fromItem = item
+            self?.updateFields()
         }
     }
     
     @IBAction func actionIn(_ sender: Any) {
-        showAddress(.inAddress) {[weak self] (text) in
-            guard let `self` = self else { return }
-            self.inField.text = text
+        showAddress(.inAddress) {[weak self] (item) in
+            self?.inItem = item
+            self?.updateFields()
         }
     }
     
@@ -44,8 +44,8 @@ extension RNSDutyViewController {
         prepareDate(nil)
     }
     
-    func showAddress(_ type: TypeAddress, complete: AliasStringBlock?) {
-        let text = type == .fromAddress ? fromText : inText
-        RNSAddressViewController.initController(text, type: type, complete: complete)?.pushAnimated()
+    func showAddress(_ type: TypeAddress, complete: AliasAddressComplete?) {
+        let item = type == .fromAddress ? fromItem : inItem
+        RNSAddressViewController.initController(item, type: type, complete: complete)?.pushAnimated()
     }
 }

@@ -10,6 +10,15 @@ import Foundation
 
 extension RNSDutyViewController {
     
+    var isHaveDate: Bool {
+        return currentDate != nil
+    }
+    
+    func updateFields() {
+        fromField.text = fromItem?.address
+        inField.text = inItem?.address
+    }
+    
     func prepareSearchButton() {
         searchButton.handlerAction = {
             RNSPageRouteManager.generateItems()
@@ -26,9 +35,5 @@ extension RNSDutyViewController {
         dateLabel.text = isHaveDate ? currentDate?.stringE_d_MMMM : "Выберите дату и время"
         rightDateConstraint.constant = isHaveDate ? 44 : 15
         crossButton.isHidden = !isHaveDate
-    }
-    
-    var isHaveDate: Bool {
-        return currentDate != nil
     }
 }

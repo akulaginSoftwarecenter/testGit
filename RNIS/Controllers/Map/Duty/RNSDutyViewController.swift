@@ -20,18 +20,15 @@ class RNSDutyViewController: UIViewController {
     
     var currentDate: Date?
     
-    var fromText: String? {
-        return fromField.text
-    }
+    var fromItem: RNSDutyAddressTemp?
     
-    var inText: String? {
-        return inField.text
-    }
+    var inItem: RNSDutyAddressTemp?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareSearchButton()
+        
     }
 
     override class var storyboardName: String {

@@ -15,9 +15,9 @@ enum TypeAddress: String {
 
 class RNSAddressViewController: UIViewController, KeyboardShowable {
     
-    static func initController(_ text: String?, type: TypeAddress?, complete: AliasStringBlock?) -> UIViewController?  {
+    static func initController(_ item: RNSDutyAddressTemp?, type: TypeAddress?, complete: AliasAddressComplete?) -> UIViewController?  {
         let vc = RNSAddressViewController.controller as? RNSAddressViewController
-        vc?.textInput = text
+        vc?.item = item
         vc?.type = type
         vc?.complete = complete
         return vc
@@ -34,8 +34,8 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     }
     
     var type: TypeAddress?
-    var textInput: String?
-    var complete: AliasStringBlock?
+    var item: RNSDutyAddressTemp?
+    var complete: AliasAddressComplete?
     var containerController: RNSMapParentController?
     
     var pin: RNSPinAddress? 
@@ -72,6 +72,16 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         containerController?.handlerOnOverlay = {[weak self] point,item in
             self?.onOverlay(point, item: item)
         }
+    }
+    
+    func updateItem() {
+        if item == nil {
+            item = RNSDutyAddressTemp()
+        }
+        item?.address = text
+        let point = pin?.point
+        item?.latitude = point?.latitude
+        item?.longitude = point?.longitude
     }
     
     func prepareType() {

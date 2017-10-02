@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class RNSDutyAddressTemp: RNISMappableBase {
-    var text: String?
+    var address: String?
     var latitude: Double?
     var longitude: Double?
+    
+    override func mapping(map: Map) {
+        address <- map["address"]
+        latitude <- map["latitude"]
+        longitude <- map["longitude"]
+    }
 }
