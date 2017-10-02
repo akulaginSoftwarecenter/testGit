@@ -50,8 +50,8 @@ class RNSBusStopManager: NSObject {
     static func prepareCurrentStop(_ value: Bool, item: RNSBusStop?) {
         let uuid = item?.uuid ?? ""
         currentStopUuid = value ? uuid : ""
-        let item = showedItems.first{ $0.uuid == uuid }
-        item?.handlerCurrent?()
+        let items = showedItems.filter{ $0.uuid == uuid }
+        items.forEach{$0.handlerCurrent?()}
     }
     static var currentStopUuid = ""
 }

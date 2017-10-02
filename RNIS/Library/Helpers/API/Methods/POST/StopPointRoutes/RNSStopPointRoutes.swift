@@ -14,6 +14,10 @@ class RNSStopPointRoutes: RNSRequest {
         return .post
     }
     
+    override var isShowLogReply: Bool {
+        return true
+    }
+    
     var complete: AliasComplete?
     var failure: AliasStringBlock?
     var item: RNSBusStop?

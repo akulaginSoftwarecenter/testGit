@@ -10,6 +10,10 @@ import UIKit
 
 class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
     
+    override var isShowLogReply: Bool {
+        return false
+    }
+    
     typealias AliasReply = RNSRequestReply<RNSFavoriteRouteListPayload,RNSRegisterError>
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
