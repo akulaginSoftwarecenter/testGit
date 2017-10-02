@@ -11,7 +11,7 @@ import Foundation
 extension RNSScrollShowContainer {
     
     var rangeNav: RNSRangeScroll {
-        return RNSRangeScroll(navOffset...overTopOffset, handlerOne: {[weak self] in
+        return RNSRangeScroll(halfOffset...overTopOffset, handlerOne: {[weak self] in
             self?.scrollToTop()
         })
     }

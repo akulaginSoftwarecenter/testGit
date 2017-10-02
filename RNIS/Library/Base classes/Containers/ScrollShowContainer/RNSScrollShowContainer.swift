@@ -47,7 +47,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     var handlerDismiss: EmptyBlock?
     
     lazy var ranges: [RNSRangeScroll] = {
-        return [self.rangeHalfTop, self.rangeHalfBottom]
+        return [self.rangeNav, self.rangeHalf, self.rangeThird, self.rangeBottom]
     }()
     
     lazy var rangesSwipe: [RNSRangeScroll] = {
