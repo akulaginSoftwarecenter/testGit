@@ -79,7 +79,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
             item = RNSDutyAddressTemp()
         }
         item?.address = text
-        let point = pin?.point
+        let point = pin?.overlayItem.geoPoint
         item?.latitude = point?.latitude
         item?.longitude = point?.longitude
     }
