@@ -54,4 +54,15 @@ class RNSFavoriteStopPoint: RNISMappableBase, Hashable {
         }
         return distance < 300
     }
+    
+    var dict: AliasDictionary {
+        guard var dict = point?.dictionary,
+            let uuid = stop_point_uuid,
+            let title = stop_point_title else {
+            return [:]
+        }
+        dict[kUuid] = uuid
+        dict[kName] = title
+        return dict
+    }
 }

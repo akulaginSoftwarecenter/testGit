@@ -67,11 +67,6 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        RNSMenuManager.showMap()
-        if let stop = RNSDataManager.busStops?.first {
-            RNSMapManager.mapCenter(PGGeoPoint(latitude: stop.latitude, longitude: stop.longitude))
-            RNSMapManager.mapView.setZoomLevel(16)
-            RNSMapManager.showInfoIfNeed(stop)
-        }
+        showStopPoint(item(indexPath))
     }
 }
