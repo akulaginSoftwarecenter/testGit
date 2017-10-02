@@ -16,7 +16,16 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
         }
     }
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
     var isNeedAddTap: Bool = false
+    
+    lazy var loaderView:LoaderView = {
+        let view = LoaderView()
+        view.isUserInteractionEnabled = false
+        view.labelText.text = "Идет запрос..."
+        return view
+    }()
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
@@ -24,7 +33,8 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    var items = [RNSTextItem]()
+    var items: [RNSTextItem]?
+    var request: RNSPostSearch?
     
     override func viewDidLoad() {
         super.viewDidLoad()

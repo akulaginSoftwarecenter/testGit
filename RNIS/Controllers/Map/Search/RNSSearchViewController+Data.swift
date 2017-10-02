@@ -17,24 +17,28 @@ extension RNSSearchViewController {
     func updateSearch() {
         RNSSearchManager.text = text
         RNSSearchManager.type = typeSegment
+        clearError()
         
         if text == "" {
-            items = [RNSTextItem]()
-            tableReload()
+            clearTable()
             return
         }
-        
-        switch typeSegment {
-        case .address:
-            genAddress()
-            break
-        case .stop:
-            genStop()
-            break
-        case .transport:
-            genTransport()
-            break
-        }
+        loaderView.showInView(self.view)
+        request?.cancel()
+        request = RNSPostSearch(text, type:typeSegment, complete: { [weak self] items in
+            self?.items = (items as? [RNSTextItem])
+            self?.tableReload()
+            self?.removeLoader()
+        }, failure: { [weak self] text in
+            self?.prepareError(text)
+            self?.clearTable()
+            self?.removeLoader()
+        })
+
+    }
+    
+    func removeLoader() {
+        loaderView.remove()
     }
     
     func genAddress() {
@@ -81,5 +85,13 @@ extension RNSSearchViewController {
             let bus = RNSDataManager.buss?.first
             RNSMapManager.showInfoIfNeed(bus)
         }
+    }
+    
+    func  prepareError(_ error: String?) {
+        errorLabel.text = error
+    }
+    
+    func clearError() {
+        errorLabel.text = nil
     }
 }

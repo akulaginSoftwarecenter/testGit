@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class RNSBusStopTemp: RNISMappableBase, RNSTextItem, Hashable  {
     
@@ -19,6 +20,8 @@ class RNSBusStopTemp: RNISMappableBase, RNSTextItem, Hashable  {
     
     var uuid: String?
     var name: String?
+    var latitude: Double?
+    var longitude: Double?
     
     var forecast: [RNSRouteBusTemp]?
     
@@ -43,5 +46,12 @@ class RNSBusStopTemp: RNISMappableBase, RNSTextItem, Hashable  {
     
     var height: CGFloat {
         return CGFloat(45 + (forecast?.count ?? 0) * 49)
+    }
+    
+    public override func mapping(map: Map) {
+        uuid <- map["uuid"]
+        name <- map["name"]
+        latitude <- map["latitude"]
+        longitude <- map["longitude"]
     }
 }

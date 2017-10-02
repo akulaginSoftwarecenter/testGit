@@ -11,7 +11,7 @@ import Foundation
 extension RNSSearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,12 +26,12 @@ extension RNSSearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func item(_ indexPath: IndexPath) -> RNSTextItem {
-        return items[indexPath.row]
+    func item(_ indexPath: IndexPath) -> RNSTextItem? {
+        return items?[indexPath.row]
     }
     
     func clearTable() {
-        items = []
+        items = nil
         tableReload()
     }
     

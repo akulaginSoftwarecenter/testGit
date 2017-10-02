@@ -12,6 +12,7 @@ import UIKit
 typealias EmptyBlock = () -> Void
 typealias AliasDictionary = [String: Any]
 typealias AnyBlock = (Any) -> ()
+typealias AnyItemsBlock = ([Any]) -> ()
 typealias AliasImageBlock = (UIImage?) -> ()
 typealias AliasImagePickerBlock = (UIImagePickerControllerSourceType) -> ()
 typealias AliasThrowsBlock = () throws -> Void

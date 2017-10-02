@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f8r-2V-VlC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f8r-2V-VlC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
         <array key="mainFont.otf">
             <string>Cffazmiakhaddpiofffvylaqekz</string>
         </array>
@@ -88,7 +92,7 @@
                                                     <rect key="frame" x="0.0" y="15" width="33" height="29"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oow-Ve-xdN">
-                                                    <rect key="frame" x="48" y="19.5" width="282" height="20"/>
+                                                    <rect key="frame" x="48" y="18.5" width="282" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -130,6 +134,12 @@
                                     <action selector="actionTop:" destination="f8r-2V-VlC" eventType="touchUpInside" id="UYZ-7U-IpH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56B-ju-LXJ">
+                                <rect key="frame" x="30" y="124" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -139,17 +149,27 @@
                             <constraint firstAttribute="trailing" secondItem="6n5-Y2-3TC" secondAttribute="trailing" constant="30" id="8ie-Nd-qkf"/>
                             <constraint firstAttribute="trailing" secondItem="8pT-Nm-gqz" secondAttribute="trailing" constant="30" id="ACy-x9-JtQ"/>
                             <constraint firstAttribute="trailing" secondItem="RbW-0W-CJ3" secondAttribute="trailing" id="B8K-XD-6Ew"/>
+                            <constraint firstItem="56B-ju-LXJ" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="30" id="DH9-hy-Wdv"/>
                             <constraint firstItem="8pT-Nm-gqz" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="30" id="E4L-S2-W6g"/>
                             <constraint firstItem="RbW-0W-CJ3" firstAttribute="top" secondItem="8pT-Nm-gqz" secondAttribute="bottom" id="IFZ-8a-Zoz"/>
                             <constraint firstItem="RbW-0W-CJ3" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="30" id="KjY-0h-gf7"/>
                             <constraint firstItem="8pT-Nm-gqz" firstAttribute="top" secondItem="6n5-Y2-3TC" secondAttribute="bottom" constant="10" id="Pg0-BT-VDg"/>
+                            <constraint firstItem="8pT-Nm-gqz" firstAttribute="top" secondItem="56B-ju-LXJ" secondAttribute="bottom" constant="5" id="avV-lC-xXU"/>
                             <constraint firstItem="kWN-om-iJe" firstAttribute="leading" secondItem="WFt-Mo-aWU" secondAttribute="leading" constant="70" id="cB5-fM-cCY"/>
                             <constraint firstAttribute="trailing" secondItem="kWN-om-iJe" secondAttribute="trailing" id="cS7-Vk-2Bc"/>
+                            <constraint firstAttribute="trailing" secondItem="56B-ju-LXJ" secondAttribute="trailing" constant="30" id="kvl-70-U93"/>
+                            <constraint firstItem="56B-ju-LXJ" firstAttribute="top" secondItem="6n5-Y2-3TC" secondAttribute="bottom" constant="5" id="qxn-AA-75e"/>
                             <constraint firstItem="6n5-Y2-3TC" firstAttribute="bottom" secondItem="WFt-Mo-aWU" secondAttribute="top" constant="119" id="uz4-az-cJA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Pg0-BT-VDg"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomConstraint" destination="3HC-JU-qHh" id="GCT-Kj-RuV"/>
+                        <outlet property="errorLabel" destination="56B-ju-LXJ" id="aly-EI-yKT"/>
                         <outlet property="segmentedControl" destination="8pT-Nm-gqz" id="xaS-L7-6ki"/>
                         <outlet property="tableView" destination="RbW-0W-CJ3" id="NLH-Xp-Z75"/>
                         <outlet property="textField" destination="6n5-Y2-3TC" id="C9g-hA-AeA"/>

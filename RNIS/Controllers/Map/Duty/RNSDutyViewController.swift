@@ -47,13 +47,7 @@ class RNSDutyViewController: UIViewController {
             self?.prepareError(text)
         })
     }
-    /*
-    func loadData() {
-        RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: {
-            
-        })
-    }
-     */
+
 
     override class var storyboardName: String {
         return "RNSDutyViewController"

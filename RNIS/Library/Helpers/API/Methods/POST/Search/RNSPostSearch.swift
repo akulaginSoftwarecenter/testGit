@@ -7,35 +7,36 @@
 //
 
 import UIKit
+import Alamofire
 
 class RNSPostSearch: RNSRequest {
-    /*
-    var text: String?
     
-    var complete: EmptyBlock?
+    var text: String?
+    var type: TypeSearch?
+    
+    var complete: AnyItemsBlock?
     var failure: AliasStringBlock?
     
-    typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
+    typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
     
-    @discardableResult convenience init(_ from: RNSDutyAddressTemp?, to: RNSDutyAddressTemp?, date: Date?, complete: EmptyBlock?, failure: AliasStringBlock? = nil) {
+    @discardableResult convenience init(_ text: String?, type: TypeSearch?, complete: AnyItemsBlock?, failure: AliasStringBlock? = nil) {
         self.init()
         
         
-        self.from = from
-        self.to = to
-        self.date = date
+        self.text = text
+        self.type = type
         self.complete = complete
         self.failure = failure
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
-            complete?()
             self?.parseReply(AliasReply(reply: object))
         }
     }
     
     func parseReply(_ model: AliasReply?) {
-        if  model?.success ?? false {
-            
+        if  model?.success ?? false,
+            let items = model?.payload?.items {
+            parseAtType(items)
             return
         }
         parseError(model)
@@ -49,16 +50,11 @@ class RNSPostSearch: RNSRequest {
     }
     
     override var payload: AliasDictionary {
-        guard let from = from,
-            let to = to else {
-                return [:]
+        guard let type = type else {
+            return [:]
         }
-        var dict:AliasDictionary = ["from": from.toJSON(),
-                                    "to": to.toJSON()]
-        if let time = date?.timeIntervalSince1970  {
-            dict["date"] = time
-        }
-        return dict
+        return ["query": text ?? "",
+                "type": type.guery]
     }
     
     override var method: Alamofire.HTTPMethod {
@@ -66,7 +62,7 @@ class RNSPostSearch: RNSRequest {
     }
     
     override var subject: String {
-        return "com.rnis.mobile.action.routing"
+        return "com.rnis.mobile.action.search"
     }
- */
+ 
 }

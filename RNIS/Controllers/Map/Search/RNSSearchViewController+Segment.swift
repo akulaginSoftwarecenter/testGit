@@ -10,6 +10,21 @@ import Foundation
 
 enum TypeSearch: Int {
     case transport = 0, stop, address
+    
+    var guery: String {
+        let result = ""
+        switch self {
+        case .transport:
+            return "stop_point"
+             break
+        case .stop:
+            break
+            break
+        case .address:
+              break
+        }
+        return result
+    }
 }
 
 extension RNSSearchViewController {
