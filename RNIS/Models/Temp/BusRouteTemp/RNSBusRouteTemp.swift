@@ -16,7 +16,7 @@ class RNSBusRouteTemp: RNISMappableBase {
     var in_favorites: Bool?
     var in_notifications: Bool?
     var next: Bool?
-    var time: String?
+    var time: Int?
     
     public override func mapping(map: Map) {
         uuid <- map["uuid"]

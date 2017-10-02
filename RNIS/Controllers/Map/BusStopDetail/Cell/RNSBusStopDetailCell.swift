@@ -36,7 +36,7 @@ class RNSBusStopDetailCell: RNSBaseTableCell {
     
     func prepareTime() {
         if let time = item?.time {
-            minuteLabel.text = time + " мин."
+            minuteLabel.text = "\(time) мин."
         }
     }
     
