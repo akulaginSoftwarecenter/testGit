@@ -13,8 +13,8 @@ class RNSPinBusStop: RNSPinItem {
     override func prepareHandlers() {
         super.prepareHandlers()
         
-        item?.handlerCurrent = { [weak self] value in
-            self?.prepareCurrent(value)
+        item?.handlerCurrent = { [weak self] in
+            self?.prepareCurrent()
         }
     }
     
@@ -22,7 +22,8 @@ class RNSPinBusStop: RNSPinItem {
         prepareCurrent()
     }
     
-    func prepareCurrent(_ current: Bool = false) {
+    func prepareCurrent() {
+        let current = item?.uuid == RNSBusStopManager.currentStopUuid
         let image = current ? RNSImageFactory.bus_stop_current : RNSImageFactory.bus_stop
         setBitmap(image, xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 15)
     }

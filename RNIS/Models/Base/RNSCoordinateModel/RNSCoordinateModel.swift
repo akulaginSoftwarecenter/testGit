@@ -19,7 +19,7 @@ class RNSCoordinateModel: Object {
         return kUuid
     }
     
-    var handlerCurrent: AliasBoolBlock?
+    var handlerCurrent: EmptyBlock?
     var handlerRemove: EmptyBlock?
     var handlerUpdateLocaton: EmptyBlock?
     
@@ -35,7 +35,7 @@ class RNSCoordinateModel: Object {
         return !((latitude == 0) && (longitude == 0))
     }
      
-    func prepareCurrent(_ value: Bool) {
-        handlerCurrent?(value)
+    func prepareCurrent() {
+        handlerCurrent?()
     }
 }

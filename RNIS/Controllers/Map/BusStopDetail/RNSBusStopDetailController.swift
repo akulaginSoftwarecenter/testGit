@@ -62,6 +62,6 @@ class RNSBusStopDetailController: UIViewController {
     }
     
     func prepareCurrent(_ value: Bool) {
-        item?.handlerCurrent?(value)
+        RNSBusStopManager.prepareCurrentStop(value, item: item)
     }
 }

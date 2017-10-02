@@ -46,4 +46,12 @@ class RNSBusStopManager: NSObject {
     static var lastCenterCoord: PGGeoPoint {
         return mapView.lastCenterCoord
     }
+    
+    static func prepareCurrentStop(_ value: Bool, item: RNSBusStop?) {
+        let uuid = item?.uuid ?? ""
+        currentStopUuid = value ? uuid : ""
+        let item = showedItems.first{ $0.uuid == uuid }
+        item?.handlerCurrent?()
+    }
+    static var currentStopUuid = ""
 }
