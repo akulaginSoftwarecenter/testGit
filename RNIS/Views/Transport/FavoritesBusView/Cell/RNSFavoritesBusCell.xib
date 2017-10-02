@@ -55,7 +55,7 @@
                             <constraint firstAttribute="height" constant="1" id="MPh-d9-U6N"/>
                         </constraints>
                     </view>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GqU-sL-JpE" customClass="RNSRegisterTableView" customModule="RNIS" customModuleProvider="target">
+                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GqU-sL-JpE" customClass="RNSRegisterTableView" customModule="RNIS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="46" width="429" height="186.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
