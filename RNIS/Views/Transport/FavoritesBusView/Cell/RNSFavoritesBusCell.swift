@@ -30,6 +30,8 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
         tableView.reloadData()
     }
     @IBAction func deleteBusStopAction(_ sender: Any) {
-        self.didTapDelete?(item)
+        RNSPostFavoriteRouteDelete(item.stop_point_uuid) {
+            RNSMenuManager.updateFavoriteBuss()
+        }
     }
 }

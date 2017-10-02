@@ -41,17 +41,10 @@ extension RNSBusStopDetailController {
         guard let item = item else {
             return
         }
-        showLoader()
-        if item.in_favorites ?? false {
-            RNSPostFavoriteRouteCreate(item) { [weak self] in
-                self?.removeLoader()
-                self?.loadItems()
-            }
-        } else {
-            RNSPostFavoriteRouteCreate(item) { [weak self] in
-                self?.removeLoader()
-                self?.loadItems()
-            }
+        RNSPostFavoriteRouteCreate(item) { [weak self] in
+            self?.removeLoader()
+            self?.loadItems()
         }
+        showLoader()
     }
 }
