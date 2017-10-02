@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yv4-9c-fRf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yv4-9c-fRf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
         <array key="mainFont.otf">
             <string>Cffazmiakhaddpiofffvylaqekz</string>
         </array>
@@ -138,8 +142,8 @@
                                             <action selector="dateAction:" destination="Yv4-9c-fRf" eventType="touchUpInside" id="Vkg-wa-LtM"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата и время: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5n-JW-M2Q">
-                                        <rect key="frame" x="28" y="19" width="100.5" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата и время: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5n-JW-M2Q">
+                                        <rect key="frame" x="28" y="17.5" width="100.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -154,8 +158,8 @@
                                             <action selector="crossAction:" destination="Yv4-9c-fRf" eventType="touchUpInside" id="8NU-qN-nJF"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Выберите дату и время  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-Yf-EiR">
-                                        <rect key="frame" x="128.5" y="18.5" width="231.5" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Выберите дату и время  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-Yf-EiR">
+                                        <rect key="frame" x="128.5" y="17" width="231.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -178,6 +182,12 @@
                                     <constraint firstItem="BXU-Yf-EiR" firstAttribute="centerY" secondItem="qh0-TW-0GE" secondAttribute="centerY" id="vqh-qm-98e"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2E-rg-DfC">
+                                <rect key="frame" x="30" y="282" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -185,10 +195,12 @@
                             <constraint firstAttribute="trailing" secondItem="0im-Au-FcZ" secondAttribute="trailing" id="361-OV-6lk"/>
                             <constraint firstItem="WRd-rn-MWl" firstAttribute="leading" secondItem="V7f-CQ-V2A" secondAttribute="trailing" id="4gb-fR-CIL"/>
                             <constraint firstAttribute="trailing" secondItem="WRd-rn-MWl" secondAttribute="trailing" constant="16" id="4uZ-hF-LJz"/>
+                            <constraint firstAttribute="trailing" secondItem="z2E-rg-DfC" secondAttribute="trailing" constant="30" id="7Ei-8F-yuP"/>
                             <constraint firstItem="INT-VM-7oX" firstAttribute="leading" secondItem="dBZ-Nb-W8G" secondAttribute="leading" constant="60" id="9iM-b6-nLS"/>
                             <constraint firstAttribute="trailing" secondItem="Z0Z-23-X4K" secondAttribute="trailing" constant="30" id="B7p-PN-0JO"/>
                             <constraint firstItem="V7f-CQ-V2A" firstAttribute="bottom" secondItem="0im-Au-FcZ" secondAttribute="bottom" id="Bnr-ro-AaK"/>
                             <constraint firstItem="6jm-L7-2Jn" firstAttribute="leading" secondItem="dBZ-Nb-W8G" secondAttribute="leading" constant="28" id="DQG-B8-vyJ"/>
+                            <constraint firstItem="z2E-rg-DfC" firstAttribute="leading" secondItem="dBZ-Nb-W8G" secondAttribute="leading" constant="30" id="DfD-op-Lbh"/>
                             <constraint firstItem="0im-Au-FcZ" firstAttribute="top" secondItem="dBZ-Nb-W8G" secondAttribute="top" constant="87" id="K78-po-acX"/>
                             <constraint firstItem="NKz-87-Qnf" firstAttribute="top" secondItem="8xv-Dl-nef" secondAttribute="bottom" id="OGw-tX-0MH"/>
                             <constraint firstItem="INT-VM-7oX" firstAttribute="top" secondItem="fJn-wS-xy9" secondAttribute="top" id="OpK-lg-dgM"/>
@@ -206,6 +218,7 @@
                             <constraint firstItem="YUq-o4-aVg" firstAttribute="top" secondItem="0im-Au-FcZ" secondAttribute="top" id="fqy-SE-zMa"/>
                             <constraint firstItem="INT-VM-7oX" firstAttribute="bottom" secondItem="fJn-wS-xy9" secondAttribute="bottom" id="gmh-Ph-UOx"/>
                             <constraint firstItem="6jm-L7-2Jn" firstAttribute="centerY" secondItem="0im-Au-FcZ" secondAttribute="centerY" id="htY-Uz-WNe"/>
+                            <constraint firstItem="z2E-rg-DfC" firstAttribute="top" secondItem="osd-rG-1gv" secondAttribute="bottom" constant="20" id="j4u-3Q-i1f"/>
                             <constraint firstItem="V7f-CQ-V2A" firstAttribute="top" secondItem="0im-Au-FcZ" secondAttribute="top" id="jhe-3q-WC9"/>
                             <constraint firstItem="8xv-Dl-nef" firstAttribute="centerX" secondItem="6jm-L7-2Jn" secondAttribute="centerX" id="n3d-it-CKh"/>
                             <constraint firstItem="YUq-o4-aVg" firstAttribute="leading" secondItem="dBZ-Nb-W8G" secondAttribute="leading" id="pJs-tu-Uw8"/>
@@ -221,6 +234,7 @@
                     <connections>
                         <outlet property="crossButton" destination="XXI-ST-daw" id="KlK-ub-iTg"/>
                         <outlet property="dateLabel" destination="BXU-Yf-EiR" id="4l5-Rt-0EW"/>
+                        <outlet property="errorLabel" destination="z2E-rg-DfC" id="enI-eg-StX"/>
                         <outlet property="fromField" destination="V7f-CQ-V2A" id="BQj-r8-ytK"/>
                         <outlet property="inField" destination="INT-VM-7oX" id="6j1-f4-lp5"/>
                         <outlet property="rightDateConstraint" destination="WU5-ne-ahg" id="bap-cq-cjn"/>

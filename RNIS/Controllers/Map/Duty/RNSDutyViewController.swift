@@ -18,18 +18,42 @@ class RNSDutyViewController: UIViewController {
     @IBOutlet weak var searchButton: RNSBlackButton!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var errorLabel: UILabel!
     var currentDate: Date?
     
     var fromItem: RNSDutyAddressTemp?
-    
     var inItem: RNSDutyAddressTemp?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareSearchButton()
-        
     }
+    
+    func loadData() {
+        if fromItem?.address?.isEmpty ?? true {
+            prepareError("Введите адрес отправления")
+            return
+        }
+        
+        if inItem?.address?.isEmpty ?? true {
+            prepareError("Введите адрес назначения")
+            return
+        }
+  
+        RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: {
+            
+        }, failure: { [weak self] text in
+            self?.prepareError(text)
+        })
+    }
+    /*
+    func loadData() {
+        RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: {
+            
+        })
+    }
+     */
 
     override class var storyboardName: String {
         return "RNSDutyViewController"

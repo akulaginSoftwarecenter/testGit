@@ -20,10 +20,15 @@ extension RNSDutyViewController {
     }
     
     func prepareSearchButton() {
-        searchButton.handlerAction = {
-            RNSPageRouteManager.generateItems()
-            RNSPageRouteController.controller.pushAnimated()
+        searchButton.handlerAction = { [weak self] in
+            self?.loadData()
+            //RNSPageRouteManager.generateItems()
+            //RNSPageRouteController.controller.pushAnimated()
         }
+    }
+    
+    func  prepareError(_ error: String?) {
+        errorLabel.text = error
     }
     
     func prepareDate(_ date: Date?) {
