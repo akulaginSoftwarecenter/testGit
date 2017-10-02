@@ -16,11 +16,7 @@ struct TableSection {
 class RNSFavoritesBusView: BaseViewWithXIBInit {
     
     lazy var loaderView: LoaderView = LoaderView()
-    var sections: [TableSection] {
-        return [TableSection(title: "Рядом с вами", items: self.items)]
-    }
-    
-    var items: [RNSFavoriteStopPoint]?
+    var sections = [TableSection]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,21 +24,12 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
         super.awakeFromNib()
         
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
-         prepareHandlers()
+        prepareHandlers()
     }
     
     func prepareHandlers() {
         RNSMenuManager.handlerUpdateFavoriteBuss = {[weak self] in
             self?.loadData()
-        }
-    }
-    
-    func loadData() {
-        loaderView.showInView(self)
-        RNSPostFavoriteRouteList {[weak self] (reply, error, _) in
-            self?.loaderView.remove()
-            self?.items = reply as? [RNSFavoriteStopPoint]
-            self?.tableView.reloadData()
         }
     }
 }

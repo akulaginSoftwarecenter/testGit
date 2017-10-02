@@ -29,6 +29,10 @@ extension PGGeoPoint {
         return self.location.distance(from: location)
     }
     
+    var distanceToCurrent: CLLocationDistance {
+        return distanceTo(RNSLocationManager.point)
+    }
+    
     func azimuth(_ point: PGGeoPoint?, atAzimuth: Double? = 0) -> Double? {
         return coordinate.azimuth(point?.coordinate, atAzimuth: atAzimuth)
     }
