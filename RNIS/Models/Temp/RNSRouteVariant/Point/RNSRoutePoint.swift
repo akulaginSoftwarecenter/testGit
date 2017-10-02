@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import ObjectMapper
 
 enum TypePoint: Int {
     case run = 0, bus
 }
 
-class RNSRoutePoint: Hashable {
-    var point: PGGeoPoint?
+class RNSRoutePoint: RNISMappableBase, Hashable {
+    var latitude: Double?
+    var longitude: Double?
+    
+    var point: PGGeoPoint? {
+        guard let latitude = latitude,
+            let longitude = longitude else {
+                return nil
+        }
+        
+        return PGGeoPoint(latitude: latitude, longitude: longitude)
+    }
     var type: TypePoint?
     var bus: RNSBusTemp?
     var busStop: RNSBusStop?
     
     var doneMove = false
     
+    public override func mapping(map: Map) {
+        latitude <- map["latitude"]
+        longitude <- map["longitude"]
+    }
+    /*
     init(_ lat: Double?, lon: Double?, type: TypePoint? = nil, bus: RNSBusTemp? = nil, busStop: RNSBusStop? = nil) {
         if let lat = lat, let lon = lon {
             self.point = PGGeoPoint(latitude: lat, longitude: lon)
@@ -28,6 +44,7 @@ class RNSRoutePoint: Hashable {
         self.type = type
         self.bus = bus
     }
+ */
     
     var hashValue: Int {
         guard let point = point else {

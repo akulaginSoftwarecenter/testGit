@@ -12,7 +12,7 @@ extension RNSRouteVariant {
     
     var buss: [RNSBusTemp] {
         var buss = [RNSBusTemp]()
-        for point in points {
+        for point in points ?? [] {
             if point.doneMove {
                 buss.last?.doneMove = true
             }

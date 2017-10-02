@@ -13,7 +13,10 @@ extension RNSRouteVariant {
     
     var rects: [RNSRectPoint] {
         var rects = [RNSRectPoint]()
-        for index in (0..<points.count-1) {
+        guard let points = points else {
+            return rects
+        }
+        for index in (0..<points.count - 1) {
             let point = points.valueAt(index)?.point
             let point2 = points.valueAt(index + 1)?.point
             let rect = RNSRectPoint(point, pointEnd: point2)

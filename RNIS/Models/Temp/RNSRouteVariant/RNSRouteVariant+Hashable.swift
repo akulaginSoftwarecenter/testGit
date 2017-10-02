@@ -12,7 +12,7 @@ extension RNSRouteVariant {
     
     var hashValue: Int {
         var hashValue = Int(0)
-        for point in points {
+        for point in points ?? [] {
             hashValue += point.hashValue
         }
         return hashValue

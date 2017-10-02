@@ -50,7 +50,7 @@ class RNSDotsBussView: BaseViewWithXIBInit {
     }
     
     func prepareColorFirst() {
-        if item?.points.first?.doneMove ?? false {
+        if item?.points?.first?.doneMove ?? false {
             firstCircle.prepareDone()
             dotsWhite.prepareDone()
         }

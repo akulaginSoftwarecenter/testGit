@@ -9,7 +9,7 @@
 import Foundation
 
 extension RNSRouteVariant {
-    
+    /*
     static var genOne: RNSRouteVariant {
         let item = RNSRouteVariant()
         item.title =  "Быстрый маршрут"
@@ -50,15 +50,17 @@ extension RNSRouteVariant {
         item.addBusPoint(59.935282, lon: 30.311911, bus: bus1, busStop: busStop6)
         return item
     }
-    
+    */
+    /*
     func addRunPoint(_ lat: Double?, lon: Double?, busStop: RNSBusStop? = nil) {
-        points.append(RNSRoutePoint(lat, lon: lon, type: .run, busStop: busStop))
+        points?.append(RNSRoutePoint(lat, lon: lon, type: .run, busStop: busStop))
     }
     
     func addBusPoint(_ lat: Double?, lon: Double?, bus: RNSBusTemp?, busStop: RNSBusStop? = nil) {
-        points.append(RNSRoutePoint(lat, lon: lon, type: .bus, bus: bus, busStop: busStop))
+        points?.append(RNSRoutePoint(lat, lon: lon, type: .bus, bus: bus, busStop: busStop))
     }
-    
+    */
+    /*
     static var busStop1: RNSBusStop? {
         return RNSDataManager.busStop1
     }
@@ -82,4 +84,5 @@ extension RNSRouteVariant {
     static var busStop6: RNSBusStop? {
         return RNSDataManager.busStop6
     }
+ */
 }

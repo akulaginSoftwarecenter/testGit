@@ -32,8 +32,8 @@ class RNSPageRouteManager: NSObject {
     static func generateItems() {
         removeAllRoute()
         var items = [RNSRouteVariant]()
-        items.append(RNSRouteVariant.genOne)
-        items.append(RNSRouteVariant.genTwo)
+        //items.append(RNSRouteVariant.genOne)
+        //items.append(RNSRouteVariant.genTwo)
         self.items = items
     }
     
@@ -54,7 +54,7 @@ class RNSPageRouteManager: NSObject {
     static func showMoveMapStub() {
         RNSPageRouteManager.removeNonActivRoute()
         let item = RNSPageRouteManager.currentItem
-        item?.points.first?.doneMove = true
+        item?.points?.first?.doneMove = true
         RNSPageRouteManager.prepareFirstNavel(523)
         let vc = RNSMoveMapViewController.initController(item)
         vc?.handlerDidDisappear = {

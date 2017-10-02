@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class RNSRouteVariant: RNISMappableBase, Hashable {
     
@@ -16,12 +17,16 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
     var currentZoom: Int?
     var durationMinute: Int?
     var endDate: Date?
-    var points = [RNSRoutePoint]()
+    var points: [RNSRoutePoint]?
     
     var title: String?
     
+    public override func mapping(map: Map) {
+        points <- map["points"]
+    }
+    
     var endPoint: RNSRoutePoint? {
-        return points.last
+        return points?.last
     }
     
     lazy var navels: [RNSDurationItem] = {
@@ -32,7 +37,7 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
                 navels.append(navel)
             }
         }
-        for point in self.points {
+        for point in self.points ?? [] {
             if items.last?.different(point) ?? false {
                 items.append(point)
                 addNavel(items)

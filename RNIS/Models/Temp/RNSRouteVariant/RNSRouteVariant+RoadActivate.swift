@@ -61,6 +61,9 @@ extension RNSRouteVariant {
             }
             self?.roadActivate?.append(polyline)
         }
+        guard let points = points else {
+            return
+        }
         
         for index in (0..<(points.count)) {
             let point = points[index]
