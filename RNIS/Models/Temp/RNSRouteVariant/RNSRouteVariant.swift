@@ -16,6 +16,7 @@ class RNSRouteVariant: RNISMappableBase {
     public override func mapping(map: Map) {
         points <- map["points"]
         prepareHashValue()
+        prepareCenterPoint()
     }
     
     var hashValue: Int = 0
@@ -27,6 +28,7 @@ class RNSRouteVariant: RNISMappableBase {
     var durationMinute: Int?
     var endDate: Date?
     var title: String?
+    var centerPoint: PGGeoPoint? 
     
     var endPoint: RNSRoutePoint? {
         return points?.last

@@ -23,6 +23,7 @@ class RNSMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        RNSMapManager.startLocation()
        // RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
     }

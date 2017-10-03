@@ -13,12 +13,4 @@ extension RNSRouteVariant: Hashable {
     static func ==(lhs: RNSRouteVariant, rhs: RNSRouteVariant) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
-    
-    func prepareHashValue() {
-        var hashValue = Int(0)
-        for point in points ?? [] {
-            hashValue += point.hashValue
-        }
-        self.hashValue = hashValue
-    }
 }

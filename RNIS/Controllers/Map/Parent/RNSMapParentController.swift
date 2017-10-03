@@ -40,7 +40,6 @@ class RNSMapParentController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RNSMapManager.startLocation()
         prepareTargetIcon()
         updateZoom()
     }

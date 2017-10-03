@@ -15,7 +15,9 @@ extension RNSPageRouteController {
     }
     
     func prepareMapView() {
-        mapView.setMapCenter(PGGeoPoint(latitude: 59.935051, longitude: 30.306572))
+        if let point = RNSPageRouteManager.currentItem?.centerPoint {
+            mapView.setMapCenter(point)
+        }
         mapView.setZoomLevel(17)
     }
     
