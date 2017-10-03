@@ -68,7 +68,7 @@ extension RNSRouteVariant {
         for index in (0..<(points.count)) {
             let point = points[index]
             items.append(point)
-            if point.type != type {
+            if let pointType = point.type, pointType != type {
                 addDraw(items)
                 items = [RNSRoutePoint]()
             }
