@@ -74,6 +74,11 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         }
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        backAction(sender)
+        STRouter.pop()
+    }
+    
     func updateItem() {
         if item == nil {
             item = RNSDutyAddressTemp()
