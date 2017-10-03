@@ -21,4 +21,8 @@ extension RNSRouteVariant {
         let count = (points?.count ?? 0) / 2
         self.centerPoint = points?.valueAt(count)?.point
     }
+    
+    func prepareEndDate() {
+        endDate = Date().appendMinute(time ?? 0)
+    }
 }

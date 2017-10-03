@@ -12,11 +12,14 @@ import ObjectMapper
 class RNSRouteVariant: RNISMappableBase {
     
     var points: [RNSRoutePoint]?
+    var time: Int?
     
     public override func mapping(map: Map) {
         points <- map["points"]
+        time <- map["time"]
         prepareHashValue()
         prepareCenterPoint()
+        prepareEndDate()
     }
     
     var hashValue: Int = 0
@@ -25,7 +28,6 @@ class RNSRouteVariant: RNISMappableBase {
     var roadActivate: [PGPolyline]?
     var roadOff: RNSRoadOff?
     var currentZoom: Int?
-    var durationMinute: Int?
     var endDate: Date?
     var title: String?
     var centerPoint: PGGeoPoint? 
@@ -53,12 +55,6 @@ class RNSRouteVariant: RNISMappableBase {
         addNavel(items)
         return navels
     }()
-     
-    func prepareDate() {
-        let durationMinute = Int.rand(1, limit: 40)
-        self.durationMinute = durationMinute
-        endDate = Date().appendMinute(durationMinute)
-    }
      
     func removeAllRoad() {
         removeRoadOff()

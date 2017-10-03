@@ -19,7 +19,7 @@ extension Date {
     }
    
     func appendMinute(_ value: Int?) -> Date? {
-       return dateByAddingUnit(.second, value: value ?? 0)
+       return dateByAddingUnit(.minute, value: value ?? 0)
     }
     
     var stringDDMMyyyy_HHmm: String {

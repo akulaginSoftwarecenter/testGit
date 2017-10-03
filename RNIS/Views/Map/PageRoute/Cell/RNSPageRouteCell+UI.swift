@@ -18,7 +18,7 @@ extension RNSPageRouteCell {
     }
     
     func prepareDuration() {
-        guard let duration = item?.durationMinute else {
+        guard let duration = item?.time else {
             return
         }
         labelDurations.text = "\(duration)"
