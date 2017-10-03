@@ -40,8 +40,16 @@ class RNSPageRouteManager: NSObject {
             STRouter.removeLoader()
             updateFavorite()
         }
-   }
+    }
     
+    static func updateName(_ item: RNSRouteVariant?) {
+        STRouter.showLoader()
+        item?.updateName {
+            STRouter.removeLoader()
+            updateFavorite()
+        }
+    }
+   
     static func showMoveMapStub() {
         RNSPageRouteManager.removeNonActivRoute()
         let item = RNSPageRouteManager.currentItem

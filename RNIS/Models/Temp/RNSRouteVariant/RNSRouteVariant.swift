@@ -21,7 +21,7 @@ class RNSRouteVariant: RNISMappableBase {
         points <- map["points"]
         points <- map["data.points"]
         uuid <- map[kUuid]
-        name <- map["name"]
+        name <- map[kName]
         dict = map.JSON
         prepareHashValue()
         prepareCenterPoint()

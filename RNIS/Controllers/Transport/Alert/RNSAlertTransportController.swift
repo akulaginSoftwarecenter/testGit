@@ -44,19 +44,16 @@ class RNSAlertTransportController: UIAlertController {
             textField.text = self?.item?.name
         }
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak self] (_) in
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(_) in
             let textField = alert.textFields![0]
-            self?.item?.name = textField.text
-            self?.updateFavorite()
+            self.item?.name = textField.text
+            RNSPageRouteManager.updateName(self.item)
         }))
         
         alert.addAction(UIAlertAction(title: "Отмена", style: .cancel))
         STRouter.present(alert)
     }
-    
-    func updateFavorite() {
-        RNSPageRouteManager.updateFavorite()
-    }
+
     
     deinit {
         print("RNSAlertTransportController deinit")

@@ -13,6 +13,7 @@ extension RNSRouteVariant {
         if isFavorite {
             removeItem(complete: complete)
         } else {
+            name = "Мой маршрут"
             RNSPostFavoritePathCreate(self) { [weak self] uuid in
                 self?.uuid = uuid
                 complete?()
@@ -24,6 +25,12 @@ extension RNSRouteVariant {
         RNSPostFavoritePathDelete(self) { [weak self] in
             self?.uuid = nil
             complete?()
+        }
+    }
+    
+    func updateName(complete: EmptyBlock?) {
+        RNSPostFavoritePathUpdate(self) { uuid in
+              complete?()
         }
     }
 }

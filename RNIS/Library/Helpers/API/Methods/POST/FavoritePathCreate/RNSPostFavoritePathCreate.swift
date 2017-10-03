@@ -46,11 +46,11 @@ class RNSPostFavoritePathCreate: RNSPostRequestMobileToken {
     }
     
     override var payload: AliasDictionary {
-        guard let dict = item?.dict else {
+        guard let dict = item?.dict,
+            let name = item?.name else {
                 return [:]
         }
-        return ["data":dict,
-                "name": "Мой маршрут"]
+        return ["data":dict, "name": name]
     }
     
     override var subject: String {

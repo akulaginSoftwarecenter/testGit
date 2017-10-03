@@ -499,6 +499,7 @@
 		83AA6A7A1F56863000B2139C /* RNSDotsWhiteVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A791F56863000B2139C /* RNSDotsWhiteVertical.swift */; };
 		83ADAAE71F838D2500C289C5 /* RNSPostFavoritePathList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADAAE61F838D2500C289C5 /* RNSPostFavoritePathList.swift */; };
 		83ADAAE91F8394E100C289C5 /* RNSRouteVariant+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADAAE81F8394E100C289C5 /* RNSRouteVariant+Query.swift */; };
+		83ADAAEC1F839C3100C289C5 /* RNSPostFavoritePathUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADAAEB1F839C3000C289C5 /* RNSPostFavoritePathUpdate.swift */; };
 		83AFEB4C1F6A2EBF00C2A251 /* RNSRouteBusTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFEB4B1F6A2EBF00C2A251 /* RNSRouteBusTemp.swift */; };
 		83AFEB4F1F6A32DB00C2A251 /* RNSFavoritesBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AFEB4E1F6A32DB00C2A251 /* RNSFavoritesBusView.swift */; };
 		83AFEB521F6A330000C2A251 /* RNSFavoritesBusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AFEB511F6A330000C2A251 /* RNSFavoritesBusView.xib */; };
@@ -1059,6 +1060,7 @@
 		83AA6A791F56863000B2139C /* RNSDotsWhiteVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSDotsWhiteVertical.swift; path = Views/DotsWhite/Vertical/RNSDotsWhiteVertical.swift; sourceTree = "<group>"; };
 		83ADAAE61F838D2500C289C5 /* RNSPostFavoritePathList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostFavoritePathList.swift; path = POST/FavoritePathList/RNSPostFavoritePathList.swift; sourceTree = "<group>"; };
 		83ADAAE81F8394E100C289C5 /* RNSRouteVariant+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+Query.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+Query.swift"; sourceTree = "<group>"; };
+		83ADAAEB1F839C3000C289C5 /* RNSPostFavoritePathUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostFavoritePathUpdate.swift; path = POST/RNSPostFavoritePathUpdate.swift; sourceTree = "<group>"; };
 		83AFEB4B1F6A2EBF00C2A251 /* RNSRouteBusTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRouteBusTemp.swift; path = Models/Temp/RouteBusTemp/RNSRouteBusTemp.swift; sourceTree = "<group>"; };
 		83AFEB4E1F6A32DB00C2A251 /* RNSFavoritesBusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSFavoritesBusView.swift; path = Views/Transport/RNSFavoritesBusView.swift; sourceTree = "<group>"; };
 		83AFEB511F6A330000C2A251 /* RNSFavoritesBusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSFavoritesBusView.xib; path = Views/Transport/FavoritesBusView/RNSFavoritesBusView.xib; sourceTree = "<group>"; };
@@ -1493,6 +1495,7 @@
 				835AFAF41F8223DB00E91572 /* Search */,
 				831B3ACB1F837EF800C54BB3 /* FavoritePathCreate */,
 				831B3AD11F83897400C54BB3 /* FavoritePathDelete */,
+				83ADAAEA1F839BC900C289C5 /* FavoritePathUpdate */,
 				83ADAAE51F838CE700C289C5 /* FavoritePathList */,
 			);
 			name = POST;
@@ -3893,6 +3896,14 @@
 			name = FavoritePathList;
 			sourceTree = "<group>";
 		};
+		83ADAAEA1F839BC900C289C5 /* FavoritePathUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				83ADAAEB1F839C3000C289C5 /* RNSPostFavoritePathUpdate.swift */,
+			);
+			name = FavoritePathUpdate;
+			sourceTree = "<group>";
+		};
 		83AFEB4A1F6A2E5B00C2A251 /* RouteBusTemp */ = {
 			isa = PBXGroup;
 			children = (
@@ -4718,6 +4729,7 @@
 				83AA6A741F566CDD00B2139C /* RNSPageRouteCell+UI.swift in Sources */,
 				836221B21F43F5C6005B49DA /* RNSAddressViewController+Action.swift in Sources */,
 				8351F15E1F81E4DB0014F0FD /* RNSPostActionRouting.swift in Sources */,
+				83ADAAEC1F839C3100C289C5 /* RNSPostFavoritePathUpdate.swift in Sources */,
 				83A53F931F4A9D9300938969 /* RNSRegisterCollectionView.swift in Sources */,
 				831A85B71F41497F0095F006 /* RNSBusStopTemp.swift in Sources */,
 				831381691F5E789700A85CBD /* RNSBusTableItem+Still.swift in Sources */,
