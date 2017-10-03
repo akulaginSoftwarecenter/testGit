@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение уведомит Вас о прибытии автобуса за выбранное время" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlb-o5-cvb">
-                                <rect key="frame" x="16" y="82" width="343" height="40"/>
+                                <rect key="frame" x="36" y="82" width="303" height="40"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +43,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27d-5v-1Lu">
-                                <rect key="frame" x="25" y="524" width="325" height="63"/>
+                                <rect key="frame" x="192.5" y="539" width="152.5" height="63"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="LzO-qi-OBv"/>
@@ -74,17 +75,44 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время указано в минутах" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta9-R3-7L9">
+                                <rect key="frame" x="100" y="354" width="176" height="20"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxd-ub-Gq0">
+                                <rect key="frame" x="30" y="539" width="152.5" height="63"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="T2J-2e-gEt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <state key="normal" title="Удалить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Hep-N7-oMu" firstAttribute="top" secondItem="Pxd-ub-Gq0" secondAttribute="bottom" constant="65" id="14F-Qb-7Zu"/>
+                            <constraint firstItem="27d-5v-1Lu" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="centerX" constant="5" id="8en-FS-fwR"/>
                             <constraint firstAttribute="trailing" secondItem="XEi-jO-9V1" secondAttribute="trailing" id="J9g-2U-OFr"/>
-                            <constraint firstItem="27d-5v-1Lu" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leading" constant="25" id="SeD-f9-q8R"/>
-                            <constraint firstItem="Hep-N7-oMu" firstAttribute="top" secondItem="27d-5v-1Lu" secondAttribute="bottom" constant="80" id="ZdX-WX-Z6U"/>
-                            <constraint firstItem="hlb-o5-cvb" firstAttribute="trailing" secondItem="HhJ-gz-QyO" secondAttribute="trailingMargin" id="ZkR-XL-4ds"/>
+                            <constraint firstItem="Pxd-ub-Gq0" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leading" constant="30" id="V8h-jm-Ubd"/>
+                            <constraint firstItem="Hep-N7-oMu" firstAttribute="top" secondItem="27d-5v-1Lu" secondAttribute="bottom" constant="65" id="ZdX-WX-Z6U"/>
+                            <constraint firstItem="hlb-o5-cvb" firstAttribute="trailing" secondItem="HhJ-gz-QyO" secondAttribute="trailingMargin" constant="-20" id="ZkR-XL-4ds"/>
                             <constraint firstItem="XEi-jO-9V1" firstAttribute="top" secondItem="hlb-o5-cvb" secondAttribute="bottom" constant="8" id="bne-FW-Etv"/>
                             <constraint firstItem="XEi-jO-9V1" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leading" id="c4i-7h-3Gk"/>
-                            <constraint firstAttribute="trailing" secondItem="27d-5v-1Lu" secondAttribute="trailing" constant="25" id="l0R-XI-IDT"/>
-                            <constraint firstItem="hlb-o5-cvb" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leadingMargin" id="qfZ-LZ-AiC"/>
+                            <constraint firstItem="ta9-R3-7L9" firstAttribute="top" secondItem="XEi-jO-9V1" secondAttribute="bottom" constant="8" id="ccx-Xy-v2h"/>
+                            <constraint firstItem="ta9-R3-7L9" firstAttribute="centerX" secondItem="HhJ-gz-QyO" secondAttribute="centerX" id="fjX-IU-UGX"/>
+                            <constraint firstAttribute="trailing" secondItem="27d-5v-1Lu" secondAttribute="trailing" constant="30" id="l0R-XI-IDT"/>
+                            <constraint firstItem="Pxd-ub-Gq0" firstAttribute="trailing" secondItem="HhJ-gz-QyO" secondAttribute="centerX" constant="-5" id="osm-bh-0qZ"/>
+                            <constraint firstItem="hlb-o5-cvb" firstAttribute="leading" secondItem="HhJ-gz-QyO" secondAttribute="leadingMargin" constant="20" id="qfZ-LZ-AiC"/>
                             <constraint firstItem="hlb-o5-cvb" firstAttribute="top" secondItem="HhJ-gz-QyO" secondAttribute="top" constant="82" id="yWs-2G-dgY"/>
                         </constraints>
                     </view>
@@ -95,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXl-Kx-f0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="770"/>
+            <point key="canvasLocation" x="1149.5999999999999" y="769.56521739130437"/>
         </scene>
     </scenes>
 </document>
