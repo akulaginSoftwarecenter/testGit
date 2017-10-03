@@ -19,8 +19,9 @@ extension TransportViewController {
     
     func updateItemsIfNeed() {
         if selectedSegmentIndexIsFirst {
-            print("updateItemsIfNeed")
             RNSMenuManager.updateFavoriteBuss()
+        } else {
+            RNSPageRouteManager.updateFavorite()
         }
     }
     

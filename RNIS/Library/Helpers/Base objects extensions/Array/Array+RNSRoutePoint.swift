@@ -14,7 +14,11 @@ extension Array where Element: RNSRoutePoint {
         let center = distance/2
         var distanceAll = CLLocationDistance(0)
         let time = first?.time
-        for i in 0..<(self.count - 1) {
+        let count = self.count - 1
+        guard 0 < count else {
+            return nil
+        }
+        for i in 0..<count {
             let item1 = valueAt(i)
             let item2 = valueAt(i + 1)
             let distance = item1?.distanceTo(item2) ?? 0
@@ -39,7 +43,11 @@ extension Array where Element: RNSRoutePoint {
     }
     
     func enumPoint(handler: ((RNSRoutePoint?,RNSRoutePoint?) -> ())?) {
-        for i in 0..<(self.count - 1) {
+        let count = self.count - 1
+        guard 0 < count else {
+            return
+        }
+        for i in 0..<count {
             handler?(valueAt(i),valueAt(i + 1))
         }
     }

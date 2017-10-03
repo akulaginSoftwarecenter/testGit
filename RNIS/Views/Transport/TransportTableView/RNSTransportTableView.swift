@@ -10,9 +10,7 @@ import UIKit
 
 class RNSTransportTableView: BaseViewWithXIBInit {
 
-    var items: [RNSRouteVariant]? {
-        return RNSPageRouteManager.items
-    }
+    var items: [RNSRouteVariant]?
     
     @IBOutlet var tableView: RNSRegisterTableView!
     
@@ -30,6 +28,9 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     }
     
     func updateUI() {
-        tableView.reloadData()
+        RNSPostFavoritePathList {[weak self] (reply, error, _) in
+            self?.items = reply as?[RNSRouteVariant]
+            self?.tableView.reloadData()
+        }
     }
 }

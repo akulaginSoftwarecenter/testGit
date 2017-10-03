@@ -25,7 +25,7 @@ class RNSAlertTransportController: UIAlertController {
         }
         
         addAction("Удалить",style: .destructive) {[weak self] in
-            RNSPageRouteManager.removeItem(self?.item)
+            //RNSPageRouteManager.removeItem(self?.item)
         }
         
         addAction("Отмена", style: .cancel)
@@ -41,12 +41,12 @@ class RNSAlertTransportController: UIAlertController {
         let alert = UIAlertController(title: "Введите название", message: nil, preferredStyle: .alert)
         
         alert.addTextField {[weak self] (textField) in
-            textField.text = self?.item?.title
+            textField.text = self?.item?.name
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             let textField = alert.textFields![0]
-            self.item?.title = textField.text
+            //self.item?.title = textField.text
             RNSPageRouteManager.updateFavorite()
         }))
         

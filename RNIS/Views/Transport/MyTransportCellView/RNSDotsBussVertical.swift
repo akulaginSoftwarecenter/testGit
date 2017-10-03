@@ -30,6 +30,6 @@ class RNSDotsBussVertical: BaseViewWithXIBInit {
     func updateUI() {
         tableView.reloadData()
         durationLabel.text = dotsVerticalModel?.duration
-        titleLabel.text = item?.title
+        titleLabel.text = item?.name
     }
 }

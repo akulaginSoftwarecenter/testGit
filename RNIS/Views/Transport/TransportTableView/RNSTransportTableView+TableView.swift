@@ -29,9 +29,11 @@ extension RNSTransportTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        /*
         RNSPageRouteManager.removeAllRoute()
         let item = self.item(indexPath)
         item?.prepareRoadActivate()
         RNSMoveMapViewController.initController(item)?.pushAnimated()
+         */
     }
 }

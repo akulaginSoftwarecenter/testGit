@@ -12,10 +12,16 @@ import ObjectMapper
 class RNSRouteVariant: RNISMappableBase {
     
     var points: [RNSRoutePoint]?
+    var pointsData: [RNSRoutePoint]?
     var dict: AliasDictionary?
+    var uuid: String?
+    var name: String?
     
     public override func mapping(map: Map) {
         points <- map["points"]
+        points <- map["data.points"]
+        uuid <- map[kUuid]
+        name <- map["name"]
         dict = map.JSON
         prepareHashValue()
         prepareCenterPoint()
@@ -30,12 +36,10 @@ class RNSRouteVariant: RNISMappableBase {
     var roadOff: RNSRoadOff?
     var currentZoom: Int?
     var endDate: Date?
-    var title: String?
     var centerPoint: PGGeoPoint?
     var titleWidthBuss: CGFloat?
     var navels: [RNSDurationItem]?
-    var uuid: String?
-    
+   
     var endPoint: RNSRoutePoint? {
         return points?.last
     }
