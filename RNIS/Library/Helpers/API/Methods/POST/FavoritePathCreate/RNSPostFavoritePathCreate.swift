@@ -50,7 +50,11 @@ class RNSPostFavoritePathCreate: RNSPostRequestMobileToken {
             let name = item?.name else {
                 return [:]
         }
-        return ["data":dict, "name": name]
+        var payload: AliasDictionary = ["data":dict, "name": name]
+        if let uuid = item?.uuid {
+            payload[kUuid] = uuid
+        }
+        return payload
     }
     
     override var subject: String {
