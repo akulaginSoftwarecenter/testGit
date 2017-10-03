@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RNSGetGeoCode: AlamofireAPI {
     
@@ -34,6 +35,16 @@ class RNSGetGeoCode: AlamofireAPI {
                 "lon": point.longitude,
                 "is_addr": 1,
                 "n": 1]
+    }
+    
+    override func prepareURLRequest(_ request: URLRequest) -> URLRequest{
+        var mutableRequest = super.prepareURLRequest(request)
+        do {
+            mutableRequest = try URLEncoding.queryString.encode(mutableRequest, with: parameters)
+        } catch {
+            // Handle error
+        }
+        return mutableRequest
     }
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){

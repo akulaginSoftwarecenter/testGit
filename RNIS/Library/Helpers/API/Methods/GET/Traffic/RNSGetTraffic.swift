@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import Alamofire
 
 class RNSGetTraffic: AlamofireAPI {
     
@@ -53,5 +54,15 @@ class RNSGetTraffic: AlamofireAPI {
     
     override func superError() {
         super.apiDidFailWithError(NSError(domain: "Не удалось получить полную информацию о трафике в данном регионе.", code: 0, userInfo: [:]))
+    }
+    
+    override func prepareURLRequest(_ request: URLRequest) -> URLRequest{
+        var mutableRequest = super.prepareURLRequest(request)
+        do {
+            mutableRequest = try URLEncoding.queryString.encode(mutableRequest, with: parameters)
+        } catch {
+            // Handle error
+        }
+        return mutableRequest
     }
 }
