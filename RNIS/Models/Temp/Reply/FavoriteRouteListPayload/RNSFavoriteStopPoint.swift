@@ -52,7 +52,7 @@ class RNSFavoriteStopPoint: RNISMappableBase, Hashable {
         guard let distance = point?.distanceToCurrent else {
             return false
         }
-        return distance < 300
+        return distance < 1000
     }
     
     var dict: AliasDictionary {
