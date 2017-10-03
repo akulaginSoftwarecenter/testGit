@@ -67,7 +67,7 @@ extension RNSRouteTable {
     
     func appendTotal() {
         let item = RNSRouteTableItem()
-        item.text1 = "Итого: 36 мин."
+        item.text1 = "Итого: \(main?.time ?? 0) мин."
         item.type = .total
         items.append(item)
     }

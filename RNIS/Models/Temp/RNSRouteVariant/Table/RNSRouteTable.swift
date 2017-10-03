@@ -12,10 +12,12 @@ class RNSRouteTable: NSObject {
     
     var items = [RNSRouteTableItem]()
     var points: [RNSRoutePoint]?
+    var main: RNSRouteVariant?
     
     convenience init(_ main: RNSRouteVariant?) {
         self.init()
         
+        self.main = main
         self.points = main?.points
         prepareItems()
     }
