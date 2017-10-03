@@ -64,12 +64,23 @@ class AlamofireAPI: API {
     override func sendRequest()
     {
         let alamofireRequest = Alamofire.request(urlRequest())
-
+        let request = alamofireRequest.request
+        
+        if let request = request, showLogApi {
+            print("==> \(request.httpMethod ?? "...") \(request.url?.absoluteString ?? "n/a")")
+            print("Headers: \(request.allHTTPHeaderFields ?? [:])")
+            print("Parameters: \(parameters)")
+        }
         alamofireRequest.response { (response) in
             guard (response.error == nil) else {
                 self.apiDidFailWithError(response.error! as NSError)
                 self.apiDidEnd()
                 return
+            }
+            if let httpResponse = response.response, let bodyData = response.data, let body = String(data: bodyData, encoding: .utf8), showLogApi {
+                print("<== \(httpResponse.statusCode) \(request?.url?.absoluteString ?? "n/a")")
+                print("Headers: \(httpResponse.allHeaderFields)")
+                print("Body: \(body)")
             }
             
             do {
