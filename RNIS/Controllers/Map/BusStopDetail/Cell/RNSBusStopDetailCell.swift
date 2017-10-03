@@ -17,7 +17,8 @@ class RNSBusStopDetailCell: RNSBaseTableCell {
     @IBOutlet weak var numCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var nextLabel: UILabel!
-    
+
+    var updateNotification: EmptyBlock?
     var updateFavorite: EmptyBlock?
     
     var item: RNSBusRouteTemp? {

@@ -13,6 +13,7 @@ class RNSPageRouteManager: NSObject {
     static var handlerUpdateCurrent: EmptyBlock?
     static var handlerUpdateCurrentTwo: EmptyBlock?
     static var handlerUpdateFavorite: EmptyBlock?
+    static var handlerUpdateNotification: EmptyBlock?
     
     static var items: [RNSRouteVariant]? {
         didSet {
@@ -38,6 +39,7 @@ class RNSPageRouteManager: NSObject {
         STRouter.showLoader()
         item?.removeItem {
             STRouter.removeLoader()
+            updateNotification()
             updateFavorite()
         }
     }
@@ -46,6 +48,7 @@ class RNSPageRouteManager: NSObject {
         STRouter.showLoader()
         item?.updateName {
             STRouter.removeLoader()
+            updateNotification()
             updateFavorite()
         }
     }
@@ -61,6 +64,10 @@ class RNSPageRouteManager: NSObject {
             prepareFirstNavel(nil)
         }
         vc?.pushAnimated()
+    }
+
+    static func updateNotification() {
+        handlerUpdateNotification?()
     }
     
     static func updateFavorite() {

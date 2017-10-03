@@ -22,6 +22,7 @@ extension TransportViewController {
             RNSMenuManager.updateFavoriteBuss()
         } else {
             RNSPageRouteManager.updateFavorite()
+            RNSPageRouteManager.updateNotification()
         }
     }
     

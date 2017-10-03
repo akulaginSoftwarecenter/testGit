@@ -23,6 +23,9 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSBusStopDetailCell
         let item = self.item(indexPath)
         cell.item = item
+        cell.updateNotification = { [weak self] in
+            self?.updateNotification(item)
+        }
         cell.updateFavorite = { [weak self] in
             self?.updateFavorite(item)
         }

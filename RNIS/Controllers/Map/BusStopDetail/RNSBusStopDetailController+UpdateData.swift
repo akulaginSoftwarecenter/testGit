@@ -47,4 +47,16 @@ extension RNSBusStopDetailController {
         }
         showLoader()
     }
+
+    func updateNotification(_ busRoute: RNSBusRouteTemp?) {
+        guard let item = item, let busRoute = busRoute else {
+            return
+        }
+        RNSNotificationCreate(bus: busRoute, stop: item, time: "20") { [weak self] in
+            self?.removeLoader()
+            self?.loadItems()
+        }
+        showLoader()
+        
+    }
 }

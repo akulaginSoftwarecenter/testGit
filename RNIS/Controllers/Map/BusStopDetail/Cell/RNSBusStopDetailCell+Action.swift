@@ -11,11 +11,7 @@ import Foundation
 extension RNSBusStopDetailCell {
     
     @IBAction func actionAlert(_ sender: Any) {
-        RNSNotificationCreate(item?.number, stopId: item?.uuid, time: "20") { [weak self] in
-            guard let `self` = self else { return }
-            self.prepareUI()
-        }
-        
+        updateNotification?()
     }
     
     @IBAction func actionFavorite(_ sender: Any) {

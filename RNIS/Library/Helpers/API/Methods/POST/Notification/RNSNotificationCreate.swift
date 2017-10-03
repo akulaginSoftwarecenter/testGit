@@ -11,18 +11,18 @@ import UIKit
 
 class RNSNotificationCreate: RNSPostRequestMobileToken {
 
-    var busId: String?
-    var stopId: String?
+    var bus: RNSBusRouteTemp?
+    var stop: RNSBusStop?
     var time: String?
     var complete: EmptyBlock?
 
     typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
 
-    @discardableResult convenience init(_ busId: String?, stopId: String?, time: String?, complete: EmptyBlock?) {
+    @discardableResult convenience init(bus: RNSBusRouteTemp, stop: RNSBusStop, time: String?, complete: EmptyBlock?) {
         self.init()
 
-        self.busId = busId
-        self.stopId = stopId
+        self.bus = bus
+        self.stop = stop
         self.time = time
         self.complete = complete
 
@@ -48,10 +48,10 @@ class RNSNotificationCreate: RNSPostRequestMobileToken {
     }
 
     override var payload: AliasDictionary {
-        guard let busId = busId, let stopId = stopId, let time = time else {
+        guard let busUuid = bus?.uuid, let stopUuid = stop?.uuid, let time = time else {
             return [:]
         }
-        return ["bus_id" : busId, "stop_id" : stopId, "notification_time" : time]
+        return ["route_uuid" : busUuid, "route_number" : bus?.number ?? "", "stop_point" : ["uuid" : stopUuid, "name" : stop?.name ?? ""], "notification_time" : time]
     }
     
     override var subject: String {

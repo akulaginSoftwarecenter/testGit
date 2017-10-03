@@ -20,10 +20,17 @@ class RNSTransportTableView: BaseViewWithXIBInit {
 
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
         prepareHandlers()
+        prepareNotificationHandlers()
     }
     
     func prepareHandlers() {
         RNSPageRouteManager.handlerUpdateFavorite = { [weak self] in
+            self?.updateUI()
+        }
+    }
+
+    func prepareNotificationHandlers() {
+        RNSPageRouteManager.handlerUpdateNotification = { [weak self] in
             self?.updateUI()
         }
     }
