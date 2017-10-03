@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UMU-w3-PrX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UMU-w3-PrX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,26 +26,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedBG" translatesAutoresizingMaskIntoConstraints="NO" id="OYi-gS-Hn9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-6W-d9x">
                                 <rect key="frame" x="111" y="311.5" width="152" height="44"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АВТОРИЗАЦИЯ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n20-6N-4AX">
-                                <rect key="frame" x="128.5" y="392.5" width="117" height="20"/>
+                                <rect key="frame" x="104" y="392.5" width="166.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FsJ-6W-d9x" firstAttribute="centerY" secondItem="rOy-59-kFP" secondAttribute="centerY" id="4NE-Td-ymp"/>
-                            <constraint firstItem="OYi-gS-Hn9" firstAttribute="leading" secondItem="rOy-59-kFP" secondAttribute="leading" id="FdO-1A-X8L"/>
-                            <constraint firstItem="WuV-G9-N0O" firstAttribute="top" secondItem="OYi-gS-Hn9" secondAttribute="bottom" id="UV2-Wl-YNT"/>
-                            <constraint firstAttribute="trailing" secondItem="OYi-gS-Hn9" secondAttribute="trailing" id="cWC-Gb-eSO"/>
-                            <constraint firstItem="OYi-gS-Hn9" firstAttribute="top" secondItem="sfP-pC-A0b" secondAttribute="bottom" id="fyJ-IR-R4h"/>
                             <constraint firstItem="FsJ-6W-d9x" firstAttribute="centerX" secondItem="rOy-59-kFP" secondAttribute="centerX" id="hBP-nm-QaN"/>
                             <constraint firstItem="n20-6N-4AX" firstAttribute="centerX" secondItem="FsJ-6W-d9x" secondAttribute="centerX" id="niR-07-2vB"/>
                             <constraint firstItem="n20-6N-4AX" firstAttribute="top" secondItem="FsJ-6W-d9x" secondAttribute="bottom" constant="37" id="wIm-x9-IZM"/>
@@ -63,7 +57,7 @@
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="682-TC-yN9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -78,6 +72,5 @@
     </scenes>
     <resources>
         <image name="Logo" width="152" height="44"/>
-        <image name="RedBG" width="375" height="667"/>
     </resources>
 </document>
