@@ -57,6 +57,8 @@
 		831A85BB1F414B6B0095F006 /* RNSSearchViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85BA1F414B6B0095F006 /* RNSSearchViewController+TableView.swift */; };
 		831A85BD1F414C730095F006 /* RNSSearchViewController+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85BC1F414C730095F006 /* RNSSearchViewController+Data.swift */; };
 		831B3ACD1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B3ACC1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift */; };
+		831B3AD01F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B3ACF1F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift */; };
+		831B3AD31F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B3AD21F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift */; };
 		831E425B1F4687070016C7D3 /* RNSOneBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */; };
 		831E425E1F4688B80016C7D3 /* RNSTwoBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425D1F4688B80016C7D3 /* RNSTwoBtnAlert.swift */; };
 		831E42601F4688E50016C7D3 /* RNSTwoBtnAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E425F1F4688E50016C7D3 /* RNSTwoBtnAlert.xib */; };
@@ -648,6 +650,8 @@
 		831A85BA1F414B6B0095F006 /* RNSSearchViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+TableView.swift"; path = "Controllers/Map/Search/RNSSearchViewController+TableView.swift"; sourceTree = "<group>"; };
 		831A85BC1F414C730095F006 /* RNSSearchViewController+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+Data.swift"; path = "Controllers/Map/Search/RNSSearchViewController+Data.swift"; sourceTree = "<group>"; };
 		831B3ACC1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostFavoritePathCreate.swift; path = POST/FavoritePathCreate/RNSPostFavoritePathCreate.swift; sourceTree = "<group>"; };
+		831B3ACF1F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSFavoritePathCreatePayload.swift; path = Models/Temp/Reply/FavoritePathCreate/RNSFavoritePathCreatePayload.swift; sourceTree = "<group>"; };
+		831B3AD21F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostFavoritePathDelete.swift; path = POST/FavoritePathDelete/RNSPostFavoritePathDelete.swift; sourceTree = "<group>"; };
 		831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSOneBtnAlert.swift; path = "Library/Base classes/AlertViewController/OneBtn/RNSOneBtnAlert.swift"; sourceTree = "<group>"; };
 		831E425D1F4688B80016C7D3 /* RNSTwoBtnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTwoBtnAlert.swift; path = "Library/Base classes/AlertViewController/TwoBtn/RNSTwoBtnAlert.swift"; sourceTree = "<group>"; };
 		831E425F1F4688E50016C7D3 /* RNSTwoBtnAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSTwoBtnAlert.xib; path = "Library/Base classes/AlertViewController/TwoBtn/RNSTwoBtnAlert.xib"; sourceTree = "<group>"; };
@@ -1443,6 +1447,22 @@
 			name = FavoritePathCreate;
 			sourceTree = "<group>";
 		};
+		831B3ACE1F8387A200C54BB3 /* FavoritePathCreate */ = {
+			isa = PBXGroup;
+			children = (
+				831B3ACF1F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift */,
+			);
+			name = FavoritePathCreate;
+			sourceTree = "<group>";
+		};
+		831B3AD11F83897400C54BB3 /* FavoritePathDelete */ = {
+			isa = PBXGroup;
+			children = (
+				831B3AD21F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift */,
+			);
+			name = FavoritePathDelete;
+			sourceTree = "<group>";
+		};
 		831D89901F20749F00082116 /* POST */ = {
 			isa = PBXGroup;
 			children = (
@@ -1468,6 +1488,7 @@
 				8351F15C1F81E4940014F0FD /* ActionRouting */,
 				835AFAF41F8223DB00E91572 /* Search */,
 				831B3ACB1F837EF800C54BB3 /* FavoritePathCreate */,
+				831B3AD11F83897400C54BB3 /* FavoritePathDelete */,
 			);
 			name = POST;
 			sourceTree = "<group>";
@@ -3068,6 +3089,7 @@
 				8319C5BA1F60ED80005A1768 /* User */,
 				831FB56A1F7D01C200A915FA /* FavoriteRouteList */,
 				8381315F1F83319400AA137F /* ActionRouting */,
+				831B3ACE1F8387A200C54BB3 /* FavoritePathCreate */,
 			);
 			name = Reply;
 			sourceTree = "<group>";
@@ -4582,6 +4604,7 @@
 				8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */,
 				836A9D6A1F62380100B5EB55 /* RNSMobilePagePayload.swift in Sources */,
 				83A53F981F4AA00E00938969 /* RNSPageRouteView+CollectionView.swift in Sources */,
+				831B3AD01F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift in Sources */,
 				8322792D1F6A3EE600CF83F2 /* RNSFavoritesBusView+TableView.swift in Sources */,
 				838EA03C1F53DC0E00E9BF20 /* RNSTriangle+Var.swift in Sources */,
 				83D3700B1F6FAB6D008F6A0F /* RNSBusRouteTemp.swift in Sources */,
@@ -4764,6 +4787,7 @@
 				83A53F8B1F4A998600938969 /* RNSPageRouteCell.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
 				83D62B731F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift in Sources */,
+				831B3AD31F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift in Sources */,
 				831A85B31F4149070095F006 /* RNSAddressTemp.swift in Sources */,
 				837B667F1F396AD20048C5BA /* RNSMapViewController+Present.swift in Sources */,
 				832B1DCE1F42B2110024505C /* RNSDutyViewController+Action.swift in Sources */,

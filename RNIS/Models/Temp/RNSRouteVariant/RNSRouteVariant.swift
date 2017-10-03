@@ -26,7 +26,6 @@ class RNSRouteVariant: RNISMappableBase {
     
     var hashValue: Int = 0
     var time: Int?
-    var isFavorite: Bool = false
     var roadActivate: [PGPolyline]?
     var roadOff: RNSRoadOff?
     var currentZoom: Int?
@@ -35,6 +34,7 @@ class RNSRouteVariant: RNISMappableBase {
     var centerPoint: PGGeoPoint?
     var titleWidthBuss: CGFloat?
     var navels: [RNSDurationItem]?
+    var uuid: String?
     
     var endPoint: RNSRoutePoint? {
         return points?.last
@@ -50,10 +50,16 @@ class RNSRouteVariant: RNISMappableBase {
     }()
    
     func changeFavorite(complete: EmptyBlock?) {
-        //isFavorite = !isFavorite
-        RNSPostFavoritePathCreate(self) {
-            
+        if isFavorite {
+            RNSPostFavoritePathDelete(self) { [weak self] in
+                self?.uuid = nil
+                complete?()
+            }
+        } else {
+            RNSPostFavoritePathCreate(self) { [weak self] uuid in
+                self?.uuid = uuid
+                complete?()
+            }
         }
-        Utils.delay(1, closure: complete)
     }
 }

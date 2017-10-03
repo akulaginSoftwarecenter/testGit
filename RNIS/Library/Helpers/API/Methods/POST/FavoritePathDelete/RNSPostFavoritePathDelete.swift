@@ -1,5 +1,5 @@
 //
-//  RNSPostFavoritePathCreate.swift
+//  RNSPostFavoritePathDelete.swift
 //  RNIS
 //
 //  Created by Артем Кулагин on 03.10.17.
@@ -8,30 +8,26 @@
 
 import UIKit
 
-class RNSPostFavoritePathCreate: RNSPostRequestMobileToken {
+class RNSPostFavoritePathDelete: RNSPostRequestMobileToken {
     var item: RNSRouteVariant?
-    var complete: AliasStringBlock?
+    var complete: EmptyBlock?
     
-    typealias AliasReply = RNSRequestReply<RNSFavoritePathCreatePayload,RNSRegisterError>
+    typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
     
-    @discardableResult convenience init(_ item: RNSRouteVariant?, complete: AliasStringBlock?) {
+    @discardableResult convenience init(_ item: RNSRouteVariant?, complete: EmptyBlock?) {
         self.init()
         
-        guard let item = item else {
-            return
-        }
         self.item = item
         self.complete = complete
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
+            complete?()
             self?.parseReply(AliasReply(reply: object))
         }
     }
     
     func parseReply(_ model: AliasReply?) {
-        if  model?.success ?? false,
-            let uuid = model?.payload?.uuid {
-            complete?(uuid)
+        if  model?.success ?? false {
             return
         }
         parseError(model)
@@ -41,19 +37,17 @@ class RNSPostFavoritePathCreate: RNSPostRequestMobileToken {
         guard let error = model?.errors?.first?.textError else {
             return
         }
-        complete?(nil)
         STRouter.showAlertOk(error)
     }
     
     override var payload: AliasDictionary {
-        guard let dict = item?.dict else {
-                return [:]
+        guard let uuid = item?.uuid else {
+            return [:]
         }
-        return ["data":dict,
-                "name": "Мой маршрут"]
+        return [kUuid: uuid]
     }
     
     override var subject: String {
-        return "com.rnis.mobile.action.favorite_path.create"
+        return "com.rnis.mobile.action.favorite_path.delete"
     }
 }

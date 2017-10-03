@@ -38,4 +38,8 @@ extension RNSRouteVariant {
     var heightDotsVerticalModel: CGFloat {
         return dotsVerticalModel.height
     }
+    
+    var isFavorite: Bool {
+        return uuid != nil
+    }
 }
