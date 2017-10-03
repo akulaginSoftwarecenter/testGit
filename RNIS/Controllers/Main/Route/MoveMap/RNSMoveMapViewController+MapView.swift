@@ -20,7 +20,7 @@ extension RNSMoveMapViewController {
     }
     
     func prepareMapView() {
-        mapView.setMapCenter(PGGeoPoint(latitude: 59.935051, longitude: 30.306572))
-        mapView.setZoomLevel(17)
+       // mapView.setMapCenter(PGGeoPoint(latitude: 59.935051, longitude: 30.306572))
+       // mapView.setZoomLevel(17)
     }
 }

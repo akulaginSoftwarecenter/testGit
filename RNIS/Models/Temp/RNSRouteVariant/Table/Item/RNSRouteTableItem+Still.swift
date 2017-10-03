@@ -25,7 +25,7 @@ extension RNSRouteTableItem {
     var countStill: Int {
         return itemsStill.count
     }
-    
+    /*
     func generateItemsStill() {
         itemsStill = [RNSRouteTableItem]()
         for index in 0...Int.rand(3, limit: 15) {
@@ -35,6 +35,7 @@ extension RNSRouteTableItem {
             itemsStill.append(item)
         }
     }
+    */
     
     func indexPatchs(_ indexPath: IndexPath) -> [IndexPath] {
         var indexPaths = [IndexPath]()
@@ -44,7 +45,7 @@ extension RNSRouteTableItem {
         }
         return indexPaths
     }
-    
+    /*
     static func genStill() -> RNSRouteTableItem {
         let item = RNSRouteTableItem()
         item.type = .still
@@ -54,4 +55,5 @@ extension RNSRouteTableItem {
         item.height = 60
         return item
     }
+     */
 }

@@ -18,8 +18,7 @@ extension RNSRouteTable {
         items = [RNSRouteTableItem]()
         let lastIndex = points.count - 1
         for i in 0..<lastIndex {
-            guard let point = points.valueAt(i),
-                point.stop_point != nil else {
+            guard let point = points.valueAt(i) else {
                     continue
             }
             
