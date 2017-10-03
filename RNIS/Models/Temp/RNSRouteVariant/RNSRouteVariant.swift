@@ -12,9 +12,11 @@ import ObjectMapper
 class RNSRouteVariant: RNISMappableBase {
     
     var points: [RNSRoutePoint]?
+    var dict: AliasDictionary?
     
     public override func mapping(map: Map) {
         points <- map["points"]
+        dict = map.JSON
         prepareHashValue()
         prepareCenterPoint()
         prepareEndDate()
@@ -48,7 +50,10 @@ class RNSRouteVariant: RNISMappableBase {
     }()
    
     func changeFavorite(complete: EmptyBlock?) {
-        isFavorite = !isFavorite
+        //isFavorite = !isFavorite
+        RNSPostFavoritePathCreate(self) {
+            
+        }
         Utils.delay(1, closure: complete)
     }
 }

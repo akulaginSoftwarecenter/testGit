@@ -56,6 +56,7 @@
 		831A85B91F414B560095F006 /* RNSSearchViewController+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85B81F414B560095F006 /* RNSSearchViewController+Segment.swift */; };
 		831A85BB1F414B6B0095F006 /* RNSSearchViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85BA1F414B6B0095F006 /* RNSSearchViewController+TableView.swift */; };
 		831A85BD1F414C730095F006 /* RNSSearchViewController+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A85BC1F414C730095F006 /* RNSSearchViewController+Data.swift */; };
+		831B3ACD1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B3ACC1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift */; };
 		831E425B1F4687070016C7D3 /* RNSOneBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */; };
 		831E425E1F4688B80016C7D3 /* RNSTwoBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425D1F4688B80016C7D3 /* RNSTwoBtnAlert.swift */; };
 		831E42601F4688E50016C7D3 /* RNSTwoBtnAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E425F1F4688E50016C7D3 /* RNSTwoBtnAlert.xib */; };
@@ -646,6 +647,7 @@
 		831A85B81F414B560095F006 /* RNSSearchViewController+Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+Segment.swift"; path = "Controllers/Map/Search/RNSSearchViewController+Segment.swift"; sourceTree = "<group>"; };
 		831A85BA1F414B6B0095F006 /* RNSSearchViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+TableView.swift"; path = "Controllers/Map/Search/RNSSearchViewController+TableView.swift"; sourceTree = "<group>"; };
 		831A85BC1F414C730095F006 /* RNSSearchViewController+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSSearchViewController+Data.swift"; path = "Controllers/Map/Search/RNSSearchViewController+Data.swift"; sourceTree = "<group>"; };
+		831B3ACC1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostFavoritePathCreate.swift; path = POST/FavoritePathCreate/RNSPostFavoritePathCreate.swift; sourceTree = "<group>"; };
 		831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSOneBtnAlert.swift; path = "Library/Base classes/AlertViewController/OneBtn/RNSOneBtnAlert.swift"; sourceTree = "<group>"; };
 		831E425D1F4688B80016C7D3 /* RNSTwoBtnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTwoBtnAlert.swift; path = "Library/Base classes/AlertViewController/TwoBtn/RNSTwoBtnAlert.swift"; sourceTree = "<group>"; };
 		831E425F1F4688E50016C7D3 /* RNSTwoBtnAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSTwoBtnAlert.xib; path = "Library/Base classes/AlertViewController/TwoBtn/RNSTwoBtnAlert.xib"; sourceTree = "<group>"; };
@@ -1433,6 +1435,14 @@
 			name = AddressTemp;
 			sourceTree = "<group>";
 		};
+		831B3ACB1F837EF800C54BB3 /* FavoritePathCreate */ = {
+			isa = PBXGroup;
+			children = (
+				831B3ACC1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift */,
+			);
+			name = FavoritePathCreate;
+			sourceTree = "<group>";
+		};
 		831D89901F20749F00082116 /* POST */ = {
 			isa = PBXGroup;
 			children = (
@@ -1457,6 +1467,7 @@
 				8342877C1F7E449900D2B967 /* FavoriteRouteDelete */,
 				8351F15C1F81E4940014F0FD /* ActionRouting */,
 				835AFAF41F8223DB00E91572 /* Search */,
+				831B3ACB1F837EF800C54BB3 /* FavoritePathCreate */,
 			);
 			name = POST;
 			sourceTree = "<group>";
@@ -4731,6 +4742,7 @@
 				83A5C6E81F57D279006C8D62 /* RNSNoteRoute+Var.swift in Sources */,
 				836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
 				836EEF0C1F3C0188007631D9 /* UITableView+Utils.swift in Sources */,
+				831B3ACD1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift in Sources */,
 				836277D71F381DFA009FB712 /* RNSBusStop.swift in Sources */,
 				8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */,
 				832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
