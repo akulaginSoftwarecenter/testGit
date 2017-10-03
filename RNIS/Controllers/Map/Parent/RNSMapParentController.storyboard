@@ -255,17 +255,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ye-Cm-Kgz">
-                                        <rect key="frame" x="70" y="0.0" width="305" height="85"/>
+                                        <rect key="frame" x="70" y="0.0" width="213" height="85"/>
                                         <connections>
                                             <action selector="actionTop:" destination="kPS-F3-8vu" eventType="touchUpInside" id="khm-F8-FIU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfi-SF-tRO">
+                                        <rect key="frame" x="333" y="35" width="27" height="22"/>
+                                        <state key="normal" image="saveRoute"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="kPS-F3-8vu" eventType="touchUpInside" id="RbU-Rz-7sv"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="3ye-Cm-Kgz" secondAttribute="bottom" id="EZA-5P-mFg"/>
-                                    <constraint firstAttribute="trailing" secondItem="3ye-Cm-Kgz" secondAttribute="trailing" id="Gh3-mg-LYO"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ye-Cm-Kgz" secondAttribute="trailing" constant="92" id="Gh3-mg-LYO"/>
+                                    <constraint firstItem="3ye-Cm-Kgz" firstAttribute="top" secondItem="jfi-SF-tRO" secondAttribute="bottom" constant="-57" id="JdH-TB-Ktm"/>
                                     <constraint firstItem="3ye-Cm-Kgz" firstAttribute="leading" secondItem="ogo-tc-UKv" secondAttribute="leading" constant="70" id="Zfs-HB-HSY"/>
+                                    <constraint firstItem="jfi-SF-tRO" firstAttribute="trailing" secondItem="3ye-Cm-Kgz" secondAttribute="trailing" constant="77" id="cN6-Is-qVZ"/>
                                     <constraint firstAttribute="height" constant="85" id="fFO-Pn-Z2o"/>
                                     <constraint firstItem="3ye-Cm-Kgz" firstAttribute="top" secondItem="ogo-tc-UKv" secondAttribute="top" id="pR7-8u-dwx"/>
                                 </constraints>
@@ -405,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhX-b0-xtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="-733"/>
+            <point key="canvasLocation" x="240.80000000000001" y="-733.5832083958021"/>
         </scene>
         <!--Move Map View Controller-->
         <scene sceneID="Y8g-NY-ZBg">
@@ -481,8 +490,9 @@
         <image name="mestopologenie" width="55" height="55"/>
         <image name="minus" width="55" height="55"/>
         <image name="plus" width="55" height="55"/>
+        <image name="saveRoute" width="27" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6hR-h6-KzT"/>
+        <segue reference="rc3-r7-Eq4"/>
     </inferredMetricsTieBreakers>
 </document>
