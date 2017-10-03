@@ -25,11 +25,11 @@ extension RNSFavoritesBusView {
         let long = items?.filter{ !(beside?.contains($0) ?? false) }
         
         if let beside =  beside, beside.count > 0 {
-            sections.append(TableSection(title: "Рядом с вами", items: beside))
+            sections.append(TableSection(title: "Менее 1 км", items: beside))
         }
         
         if let long = long, long.count > 0 {
-            sections.append(TableSection(title: "Далеко", items: long))
+            sections.append(TableSection(title: "Более 1 км", items: long))
         }
         tableView.reloadData()
     }
