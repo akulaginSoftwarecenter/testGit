@@ -50,7 +50,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Текст поискового запроса"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Поиск"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="bottomLineOffset">
                                         <real key="value" value="-8"/>
                                     </userDefinedRuntimeAttribute>
