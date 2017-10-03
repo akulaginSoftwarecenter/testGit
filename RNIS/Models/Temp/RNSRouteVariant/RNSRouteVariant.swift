@@ -52,18 +52,4 @@ class RNSRouteVariant: RNISMappableBase {
     lazy var dotsVerticalModel: RNSDotsVerticalModel = {
         return RNSDotsVerticalModel(self)
     }()
-   
-    func changeFavorite(complete: EmptyBlock?) {
-        if isFavorite {
-            RNSPostFavoritePathDelete(self) { [weak self] in
-                self?.uuid = nil
-                complete?()
-            }
-        } else {
-            RNSPostFavoritePathCreate(self) { [weak self] uuid in
-                self?.uuid = uuid
-                complete?()
-            }
-        }
-    }
 }

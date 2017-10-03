@@ -30,7 +30,7 @@ class RNSDotsWhiteHorizontal: BaseViewWithXIBInit {
     }
     
     func prepareDone() {
-        colorCircle = .color34
+        colorCircle = .A3423C
     }
     
     func prepareColor() {

@@ -13,6 +13,7 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     var items: [RNSRouteVariant]?
     
     @IBOutlet var tableView: RNSRegisterTableView!
+    lazy var loaderView: LoaderView = LoaderView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +29,10 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     }
     
     func updateUI() {
+        loaderView.showInView(self)
+        print("updateUI RNSTransportTableView")
         RNSPostFavoritePathList {[weak self] (reply, error, _) in
+            self?.loaderView.remove()
             self?.items = reply as?[RNSRouteVariant]
             self?.tableView.reloadData()
         }

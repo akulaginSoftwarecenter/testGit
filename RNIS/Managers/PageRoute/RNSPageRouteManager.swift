@@ -35,13 +35,12 @@ class RNSPageRouteManager: NSObject {
     }
     
     static func removeItem(_ item: RNSRouteVariant?) {
-        guard let item = item,
-            let index = items?.index(of: item) else {
-            return
+        STRouter.showLoader()
+        item?.removeItem {
+            STRouter.removeLoader()
+            updateFavorite()
         }
-        items?.remove(at: index)
-        updateFavorite()
-    }
+   }
     
     static func showMoveMapStub() {
         RNSPageRouteManager.removeNonActivRoute()
