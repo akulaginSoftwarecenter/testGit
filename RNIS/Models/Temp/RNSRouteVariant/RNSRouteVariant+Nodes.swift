@@ -28,11 +28,11 @@ extension RNSRouteVariant {
     }
     
     func prepareNavels() {
-        navels.forEach{ RNSPinDuration($0) }
+        navels?.forEach{ RNSPinDuration($0) }
     }
     
     func removeNavels() {
-        navels.forEach{ $0.handlerRemove?() }
+        navels?.forEach{ $0.handlerRemove?() }
     }
     
     

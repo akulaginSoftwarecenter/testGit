@@ -23,6 +23,41 @@ extension RNSRouteVariant {
     }
     
     func prepareEndDate() {
+        prepareTime()
         endDate = Date().appendMinute(time ?? 0)
+    }
+    
+    func prepareTime() {
+        var time = Int(0)
+        points?.forEach{ time += $0.time ?? 0 }
+        self.time = time
+    }
+    
+    func setupNavels() {
+        var navels = [RNSDurationItem]()
+        var items = [RNSRoutePoint]()
+        let addNavel: ([RNSRoutePoint]) ->() = {
+            if let navel = $0.navel {
+                navels.append(navel)
+            }
+        }
+        for point in self.points ?? [] {
+            if items.last?.different(point) ?? false {
+                items.append(point)
+                addNavel(items)
+                items = [RNSRoutePoint]()
+            }
+            items.append(point)
+        }
+        addNavel(items)
+        self.navels = navels
+    }
+    
+    func prepareTitleWidthBuss() {
+        var width = CGFloat(0)
+        for item in buss {
+            width += item.titleWidth
+        }
+        self.titleWidthBuss = width
     }
 }

@@ -15,11 +15,11 @@ class RNSDurationItem: NSObject {
     
     var handlerRemove: EmptyBlock?
     
-    convenience init(_ point: PGGeoPoint?, distance: CLLocationDistance? = nil) {
+    convenience init(_ point: PGGeoPoint?, time: Int?, distance: CLLocationDistance? = nil) {
         self.init()
         
         self.point = point
-        self.durationMinute = Int.rand(1, limit: 10)
+        self.durationMinute = time
         self.distance = distance
     }
 }

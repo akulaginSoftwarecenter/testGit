@@ -27,15 +27,15 @@ extension RNSRouteVariant {
         return buss
     }
     
-    var titleWidthBuss: CGFloat {
-        var width = CGFloat(0)
-        for item in buss {
-            width += item.titleWidth
-        }
-        return width
-    }
-    
     var isActive: Bool {
         return self == RNSPageRouteManager.currentItem
+    }
+     
+    var tableItem: RNSRouteTable {
+        return RNSRouteTable(self)
+    }
+    
+    var heightDotsVerticalModel: CGFloat {
+        return dotsVerticalModel.height
     }
 }
