@@ -57,7 +57,8 @@ extension RNSProfileViewController: UITextFieldDelegate {
     
     func updateItem(_ complete: EmptyBlock? = nil) {
         STRouter.showLoader()
-        RNSPostUpdate(item, complete: { item in
+        RNSPostUpdate(item, complete: { [weak self] item in
+           self?.item?.new_email = nil  // Don't re-send new email parameter on next update profile request
            STRouter.removeLoader()
            RNSMenuManager.leftMenuUpdate()
            complete?()

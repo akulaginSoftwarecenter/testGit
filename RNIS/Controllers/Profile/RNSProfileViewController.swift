@@ -53,7 +53,8 @@ class RNSProfileViewController: UIViewController {
         self.item = item
         nameField.text = item?.name
         phoneField.text = item?.formatPhone
-        emailField.text = item?.email
+        emailField.text = item?.new_email ?? item?.email  // Display new_email by default
+        self.item?.new_email = nil  // Remove new_email from update profile payload
         decodeImage()
     }
     
