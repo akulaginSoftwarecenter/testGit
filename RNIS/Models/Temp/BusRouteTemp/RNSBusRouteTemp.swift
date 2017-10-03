@@ -25,6 +25,7 @@ class RNSBusRouteTemp: RNISMappableBase {
         in_notifications <- map["in_notifications"]
         next <- map["next"]
         time <- map["time"]
+        prepareTitle()
     }
     
     var doneMove = false
