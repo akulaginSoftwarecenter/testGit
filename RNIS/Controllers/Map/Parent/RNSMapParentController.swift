@@ -29,6 +29,14 @@ class RNSMapParentController: UIViewController {
     
     @IBOutlet weak var lightButton: RNSLightButton!
     
+    lazy var loaderView:LoaderView = {
+        let view = LoaderView()
+        view.isUserInteractionEnabled = false
+        view.labelText.text = "Обновление остановок..."
+        view.defaultAlpha = 0.2
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,6 +65,28 @@ class RNSMapParentController: UIViewController {
     
     override class var storyboardName: String {
         return "RNSMapParentController"
+    }
+    
+    func busUpdate() {
+        showLoader()
+        RNSBusManager.updateServer { [weak self] in
+            self?.removeLoader()
+        }
+    }
+    
+    func busStopUpdate() {
+        showLoader()
+        RNSBusStopManager.updateServer { [weak self] in
+            self?.removeLoader()
+        }
+    }
+    
+    func showLoader() {
+        loaderView.showInView(self.view)
+    }
+    
+    func removeLoader() {
+        loaderView.remove()
     }
     
     deinit {

@@ -14,19 +14,20 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem, Hashable   {
     }
 
     var text: String?
+    
     var title: String {
         return "A" + "\(num ?? 0)"
     }
    
     var point: PGGeoPoint?
     var num: Int?
-    var handlerRemove: EmptyBlock?
-    var doneMove = false
-    
+    //var handlerRemove: EmptyBlock?
+    //var doneMove = false
+    /*
     var titleWidth: CGFloat {
         return title.width(.cffazm20) + 22
     }
-    
+    */
     static func ==(lhs: RNSBusTemp, rhs: RNSBusTemp) -> Bool {
         return lhs.title == rhs.title
     }

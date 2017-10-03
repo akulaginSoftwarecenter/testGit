@@ -31,6 +31,8 @@ class RNSDutyViewController: UIViewController {
     }
     
     func loadData() {
+        /*
+        prepareError(nil)
         if fromItem?.address?.isEmpty ?? true {
             prepareError("Введите адрес отправления")
             return
@@ -40,9 +42,10 @@ class RNSDutyViewController: UIViewController {
             prepareError("Введите адрес назначения")
             return
         }
-  
-        RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: {
-            
+  */
+        RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: { items in
+            RNSPageRouteManager.items = items
+            RNSPageRouteController.controller.pushAnimated()
         }, failure: { [weak self] text in
             self?.prepareError(text)
         })

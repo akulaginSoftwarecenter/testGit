@@ -8,17 +8,17 @@
 
 import Foundation
 
-extension RNSRouteVariant {
+extension RNSRouteVariant: Hashable {
     
-    var hashValue: Int {
+    static func ==(lhs: RNSRouteVariant, rhs: RNSRouteVariant) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+    
+    func prepareHashValue() {
         var hashValue = Int(0)
         for point in points ?? [] {
             hashValue += point.hashValue
         }
-        return hashValue
-    }
-    
-    static func ==(lhs: RNSRouteVariant, rhs: RNSRouteVariant) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        self.hashValue = hashValue
     }
 }

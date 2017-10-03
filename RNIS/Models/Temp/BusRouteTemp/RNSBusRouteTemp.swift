@@ -26,4 +26,9 @@ class RNSBusRouteTemp: RNISMappableBase {
         next <- map["next"]
         time <- map["time"]
     }
+    
+    var doneMove = false
+    var title: String?
+    var point: PGGeoPoint?
+    var handlerRemove: EmptyBlock?
 }

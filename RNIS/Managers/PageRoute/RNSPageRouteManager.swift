@@ -28,14 +28,6 @@ class RNSPageRouteManager: NSObject {
         }
         return items?.index(of: currentItem)
     }
-     
-    static func generateItems() {
-        removeAllRoute()
-        var items = [RNSRouteVariant]()
-        //items.append(RNSRouteVariant.genOne)
-        //items.append(RNSRouteVariant.genTwo)
-        self.items = items
-    }
     
     static func prepareFirstNavel(_ distance: CLLocationDistance?) {
         currentItem?.navels.first?.distance = distance

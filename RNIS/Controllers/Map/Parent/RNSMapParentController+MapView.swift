@@ -25,6 +25,8 @@ extension RNSMapParentController: PGMapViewDelegate {
         lightButton.updateStateLightButton()
         updateZoom()
         handlerOnMapEvent?()
+        busUpdate()
+        busStopUpdate()
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {

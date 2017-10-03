@@ -9,84 +9,34 @@
 import UIKit
 import ObjectMapper
 
-enum TypePoint: Int {
-    case run = 0, bus
+enum TypePoint: String {
+    case run, bus
 }
 
-class RNSRoutePoint: RNISMappableBase, Hashable {
+class RNSRoutePoint: RNISMappableBase {
     var latitude: Double?
     var longitude: Double?
-    
-    var point: PGGeoPoint? {
-        guard let latitude = latitude,
-            let longitude = longitude else {
-                return nil
-        }
-        
-        return PGGeoPoint(latitude: latitude, longitude: longitude)
-    }
-    var type: TypePoint?
-    var bus: RNSBusTemp?
-    var busStop: RNSBusStop?
-    
-    var doneMove = false
+    var time: Int?
+    var typePoint: String?
+    var stop_point: RNSBusStopTemp?
+    var route: RNSBusRouteTemp?
     
     public override func mapping(map: Map) {
         latitude <- map["latitude"]
         longitude <- map["longitude"]
-    }
-    /*
-    init(_ lat: Double?, lon: Double?, type: TypePoint? = nil, bus: RNSBusTemp? = nil, busStop: RNSBusStop? = nil) {
-        if let lat = lat, let lon = lon {
-            self.point = PGGeoPoint(latitude: lat, longitude: lon)
-        }
-        self.busStop = busStop
-        self.type = type
-        self.bus = bus
-    }
- */
-    
-    var hashValue: Int {
-        guard let point = point else {
-            return -1
-        }
-        return Int(point.latitude * 10000 + point.longitude * 1000) + (type?.rawValue ?? 0)
+        preparePoint()
+        time <- map["time"]
+        typePoint <- map["type"]
+        prepareType()
+        stop_point <- map["stop_point"]
+        route <- map["route"]
+        prepareRoute()
+        prepareHashValue()
     }
     
-    static func ==(lhs: RNSRoutePoint, rhs: RNSRoutePoint) -> Bool {
-        return lhs.hashValue == rhs.hashValue
-    }
-    
-    func different(_ point: RNSRoutePoint?) -> Bool {
-        guard let point = point,
-            let selfType = self.type,
-            let pointType = point.type else {
-            return false
-        }
-        return selfType != pointType || bus != point.bus
-    }
-    
-    func distanceTo(_ point: RNSRoutePoint?) -> CLLocationDistance? {
-        return self.point?.distanceTo(point?.point)
-    }
-    
-    var isRun: Bool {
-        guard let type = type else {
-            return false
-        }
-        return type == .run
-    }
-    
-    var isBus: Bool {
-        guard let type = type else {
-            return false
-        }
-        return type == .bus
-    }
-    
+    var point: PGGeoPoint?
+    var type: TypePoint?
+    var doneMove = false
     var removeVariantEnd: EmptyBlock?
-    
-    var verticalTableItem: RNSVerticalTableItem {
-        return RNSVerticalTableItem(self)
-    }
+    var hashValue: Int = 0
 }

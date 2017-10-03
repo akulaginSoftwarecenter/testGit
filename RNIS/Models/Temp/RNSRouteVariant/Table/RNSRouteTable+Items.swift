@@ -19,14 +19,14 @@ extension RNSRouteTable {
         let lastIndex = points.count - 1
         for i in 0..<lastIndex {
             guard let point = points.valueAt(i),
-                point.busStop != nil else {
+                point.stop_point != nil else {
                     continue
             }
             
             let stop = appendStop(point)
             if point.isBus {
                 stop.shortLine = true
-                appendBus(point.bus?.title)
+                appendBus(point.route?.title)
                 appendStill()
             }
         }

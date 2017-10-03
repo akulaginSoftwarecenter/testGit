@@ -14,13 +14,13 @@ class RNSPostActionRouting: RNSRequest {
     var from: RNSDutyAddressTemp?
     var to: RNSDutyAddressTemp?
     var date: Date?
-    
-    var complete: EmptyBlock?
+    typealias AliasComplete = (([RNSRouteVariant]?) ->())
+    var complete: AliasComplete?
     var failure: AliasStringBlock?
     
-    typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
+    typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload,RNSRegisterError>
     
-    @discardableResult convenience init(_ from: RNSDutyAddressTemp?, to: RNSDutyAddressTemp?, date: Date?, complete: EmptyBlock?, failure: AliasStringBlock? = nil) {
+    @discardableResult convenience init(_ from: RNSDutyAddressTemp?, to: RNSDutyAddressTemp?, date: Date?, complete: AliasComplete?, failure: AliasStringBlock? = nil) {
         self.init()
         
   
@@ -31,14 +31,16 @@ class RNSPostActionRouting: RNSRequest {
         self.failure = failure
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
-            complete?()
             self?.parseReply(AliasReply(reply: object))
         }
     }
     
     func parseReply(_ model: AliasReply?) {
-        if  model?.success ?? false {
-            
+        
+        if  model?.success ?? false,
+            let items = model?.payload?.items {
+            print("RNSPostActionRouting 2",items.count)
+            complete?(items)
             return
         }
         parseError(model)

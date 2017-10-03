@@ -12,7 +12,7 @@ class RNSDotsName: BaseViewWithXIBInit {
     
     @IBOutlet var label: UILabel!
     
-    convenience init(_ item: RNSBusTemp?) {
+    convenience init(_ item: RNSBusRouteTemp?) {
         self.init()
         
         guard let item = item else {

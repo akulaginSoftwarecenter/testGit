@@ -20,18 +20,10 @@ class RNSMapViewController: UIViewController {
      */
     var route: PGPolyline?
     
-    lazy var loaderView:LoaderView = {
-        let view = LoaderView()
-        view.isUserInteractionEnabled = false
-        view.labelText.text = "Обновление остановок..."
-        view.defaultAlpha = 0.2
-        return view
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        RNSMapManager.prepareStub()
+       // RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
     }
 
@@ -41,14 +33,6 @@ class RNSMapViewController: UIViewController {
         RNSPageRouteManager.items = nil
      
         prepareHandlers()
-    }
-    
-    func showLoader() {
-        loaderView.showInView(self.view)
-    }
-    
-    func removeLoader() {
-        loaderView.remove()
     }
     
     override class var storyboardName: String {

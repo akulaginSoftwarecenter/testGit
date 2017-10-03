@@ -22,8 +22,6 @@ extension RNSDutyViewController {
     func prepareSearchButton() {
         searchButton.handlerAction = { [weak self] in
             self?.loadData()
-            //RNSPageRouteManager.generateItems()
-            //RNSPageRouteController.controller.pushAnimated()
         }
     }
     

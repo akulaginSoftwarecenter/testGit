@@ -10,9 +10,9 @@ import UIKit
 
 class RNSPinVariantBus: RNSPinParent {
     
-    var bus: RNSBusTemp?
+    var bus: RNSBusRouteTemp?
     
-    @discardableResult convenience init(_ bus: RNSBusTemp?) {
+    @discardableResult convenience init(_ bus: RNSBusRouteTemp?) {
         self.init()
         
         self.bus = bus

@@ -9,7 +9,16 @@
 import UIKit
 import ObjectMapper
 
-class RNSRouteVariant: RNISMappableBase, Hashable {
+class RNSRouteVariant: RNISMappableBase {
+    
+    var points: [RNSRoutePoint]?
+    
+    public override func mapping(map: Map) {
+        points <- map["points"]
+        prepareHashValue()
+    }
+    
+    var hashValue: Int = 0
     
     var isFavorite: Bool = false
     var roadActivate: [PGPolyline]?
@@ -17,13 +26,7 @@ class RNSRouteVariant: RNISMappableBase, Hashable {
     var currentZoom: Int?
     var durationMinute: Int?
     var endDate: Date?
-    var points: [RNSRoutePoint]?
-    
     var title: String?
-    
-    public override func mapping(map: Map) {
-        points <- map["points"]
-    }
     
     var endPoint: RNSRoutePoint? {
         return points?.last

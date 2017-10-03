@@ -44,9 +44,9 @@ extension RNSDotsVerticalModel {
         }
         items.append(first.verticalTableItem)
         
-        var buss = [RNSBusTemp]()
+        var buss = [RNSBusRouteTemp]()
         for index in (1...(points.count - 1)) {
-            if let point = points.valueAt(index), let bus = point.bus, !buss.contains(bus) {
+            if let point = points.valueAt(index), let bus = point.route, !buss.contains(bus) {
                 buss.append(bus)
                 items.append(point.verticalTableItem)
             }

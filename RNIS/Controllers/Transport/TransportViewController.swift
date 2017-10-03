@@ -28,7 +28,7 @@ class TransportViewController: UIViewController{
         super.viewDidAppear(animated)
         
         updateItemsIfNeed()
-        generateStub()
+        //generateStub()
         checkToken()
     }
     
@@ -38,12 +38,12 @@ class TransportViewController: UIViewController{
             Utils.checkTokeShowAlert()
         }
     }
-     
+     /*
     func generateStub() {
-        RNSPageRouteManager.generateItems()
+        //RNSPageRouteManager.generateItems()
         myRoutesView.updateUI()
     }
-    
+    */
     override class var storyboardName: String {
         return "TransportViewController"
     }
