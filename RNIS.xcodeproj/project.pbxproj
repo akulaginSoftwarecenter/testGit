@@ -570,6 +570,7 @@
 		83F555371F5565BF00D1221C /* RNSRouteBusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555361F5565BF00D1221C /* RNSRouteBusCell.swift */; };
 		83F5553A1F55675800D1221C /* RNSRouteTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555391F55675800D1221C /* RNSRouteTotalCell.swift */; };
 		83F555411F556CEB00D1221C /* RNSRouteParentCel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555401F556CEB00D1221C /* RNSRouteParentCel.swift */; };
+		A76501E91F827D13001AEA25 /* RNSNotificationCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76501E81F827D13001AEA25 /* RNSNotificationCreate.swift */; };
 		A794FC191F7905BC0091BD20 /* CustomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794FC161F7905BC0091BD20 /* CustomTransitionDelegate.swift */; };
 		A794FC1A1F7905BC0091BD20 /* FadeDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794FC171F7905BC0091BD20 /* FadeDismissAnimationController.swift */; };
 		A794FC1B1F7905BC0091BD20 /* FadePresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794FC181F7905BC0091BD20 /* FadePresentAnimationController.swift */; };
@@ -1133,6 +1134,7 @@
 		83F555361F5565BF00D1221C /* RNSRouteBusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRouteBusCell.swift; path = Controllers/Main/RouteDetail/Cells/Bus/RNSRouteBusCell.swift; sourceTree = "<group>"; };
 		83F555391F55675800D1221C /* RNSRouteTotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRouteTotalCell.swift; path = Controllers/Main/RouteDetail/Cells/Total/RNSRouteTotalCell.swift; sourceTree = "<group>"; };
 		83F555401F556CEB00D1221C /* RNSRouteParentCel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSRouteParentCel.swift; path = Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift; sourceTree = "<group>"; };
+		A76501E81F827D13001AEA25 /* RNSNotificationCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSNotificationCreate.swift; sourceTree = "<group>"; };
 		A794FC161F7905BC0091BD20 /* CustomTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionDelegate.swift; sourceTree = "<group>"; };
 		A794FC171F7905BC0091BD20 /* FadeDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeDismissAnimationController.swift; sourceTree = "<group>"; };
 		A794FC181F7905BC0091BD20 /* FadePresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentAnimationController.swift; sourceTree = "<group>"; };
@@ -1481,6 +1483,7 @@
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				836A9D651F62370B00B5EB55 /* MobilePageGet */,
+				A76501E71F827CDE001AEA25 /* Notification */,
 				8319C5B11F60DFBE005A1768 /* Register */,
 				83CD58491F25870900A9FE1A /* Routing */,
 				836A9D7E1F627E2700B5EB55 /* StopPointList */,
@@ -4307,6 +4310,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A76501E71F827CDE001AEA25 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				A76501E81F827D13001AEA25 /* RNSNotificationCreate.swift */,
+			);
+			name = Notification;
+			path = POST/Notification;
+			sourceTree = "<group>";
+		};
 		A794FC151F7905BC0091BD20 /* TransitionsAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -4743,6 +4755,7 @@
 				836EEF1C1F3C1876007631D9 /* RNSDataManager+BusStop.swift in Sources */,
 				836221AE1F43EA81005B49DA /* RNSAddressViewController+MapView.swift in Sources */,
 				8362CE291F6A8E0600BE912D /* RNSBusStopManager.swift in Sources */,
+				A76501E91F827D13001AEA25 /* RNSNotificationCreate.swift in Sources */,
 				837F719B1F45415100DEAA36 /* Array+Utils.swift in Sources */,
 				836989381F318B54003E4D73 /* RNSNameField.swift in Sources */,
 				837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
