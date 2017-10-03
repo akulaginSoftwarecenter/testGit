@@ -13,6 +13,6 @@ class STImageContainer: RNSParentContainer {
     override func prepareView() {
         super.prepareView()
         
-        view.addBackGroundImage()
+        view.addBackGroundColor()
     }
 }
