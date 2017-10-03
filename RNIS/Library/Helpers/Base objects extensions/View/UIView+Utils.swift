@@ -43,11 +43,8 @@ extension UIView {
         }
     }
     
-    func addBackGroundImage() {
-        let backgroundView = UIImageView(frame: bounds)
-        backgroundView.image = #imageLiteral(resourceName: "RedBG")
-        backgroundView.contentMode = .scaleAspectFill
-        addSubview(backgroundView)
+    func addBackGroundColor() {
+        backgroundColor = .backColor
     }
     
     func prepareCircle() {

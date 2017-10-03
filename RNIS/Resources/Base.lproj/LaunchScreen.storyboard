@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,20 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedBG" translatesAutoresizingMaskIntoConstraints="NO" id="Luo-IX-O8y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoMoscow" translatesAutoresizingMaskIntoConstraints="NO" id="Z1B-gB-Jhz">
                                 <rect key="frame" x="70.5" y="307.5" width="233" height="52"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Luo-IX-O8y" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="1WY-dS-Xh9"/>
                             <constraint firstItem="Z1B-gB-Jhz" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="NjN-ok-Cvw"/>
-                            <constraint firstAttribute="trailing" secondItem="Luo-IX-O8y" secondAttribute="trailing" id="VBk-xD-2vd"/>
-                            <constraint firstItem="Luo-IX-O8y" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="XCs-q4-7gF"/>
-                            <constraint firstAttribute="bottom" secondItem="Luo-IX-O8y" secondAttribute="bottom" id="ZA0-MZ-Ju7"/>
                             <constraint firstItem="Z1B-gB-Jhz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="y8r-PL-quI"/>
                         </constraints>
                     </view>
@@ -45,6 +39,5 @@
     </scenes>
     <resources>
         <image name="LogoMoscow" width="233" height="52"/>
-        <image name="RedBG" width="375" height="667"/>
     </resources>
 </document>
