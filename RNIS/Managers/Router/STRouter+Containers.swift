@@ -15,7 +15,7 @@ extension STRouter {
     }
     
     static func imageContainer(_ viewController: UIViewController?) -> UIViewController? {
-        return STImageContainer(viewController)
+        return redContainer(viewController)
     }
     
     static func redContainer(_ viewController: UIViewController?) -> UIViewController? {
