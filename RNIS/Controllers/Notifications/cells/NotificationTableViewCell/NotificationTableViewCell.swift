@@ -9,22 +9,14 @@
 import UIKit
 
 class NotificationTableViewCell: RNSBaseTableCell {
-
-    
+   
     @IBOutlet weak var autoNumberLabel: UILabel!
     @IBOutlet weak var streetLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.autoNumberLabel.layer.cornerRadius = 5
-        self.autoNumberLabel.layer.masksToBounds = true
+  
+    func updateCell(model: RNSNotificationModel?) {
+        self.autoNumberLabel.text = "A" + (model?.route_number ?? "")
+        self.streetLabel.text = model?.stop_point?.name
+        self.timeLabel.text = "\(model?.notification_time ?? 0) мин."
     }
-
-    func updateCell(model: NotificationModel) {
-        self.autoNumberLabel.text = model.autoNumber
-        self.streetLabel.text = model.street
-        self.timeLabel.text = "\(model.time ?? 0) мин."
-    }
-    
 }

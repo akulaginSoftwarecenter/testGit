@@ -10,7 +10,7 @@ import UIKit
 
 class RNSPostFavoritePathList: RNSPostRequestMobileToken {
     
-    typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload,RNSRegisterError>
+    typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSRouteVariant>,RNSRegisterError>
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
         parseReply(AliasReply(reply: reply), source: source)

@@ -11,7 +11,7 @@ import Foundation
 extension NotificationsViewController: UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.testArray.count;
+        return items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -24,13 +24,13 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell", for: indexPath) as! NotificationTableViewCell;
-        let model = self.testArray[indexPath.row]
-        cell.updateCell(model: model)
+         cell.updateCell(model: items?[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        /*
         let model = self.testArray[indexPath.row]
         
         let controller = NotificationsSettingsViewController.initialController as! NotificationsSettingsViewController
@@ -41,5 +41,6 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
             self.tableView.reloadData()
         }
         controller.pushAnimatedRed()
+     */
     }
 }

@@ -18,7 +18,7 @@ class RNSPostActionRouting: RNSRequest {
     var complete: AliasComplete?
     var failure: AliasStringBlock?
     
-    typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload,RNSRegisterError>
+    typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSRouteVariant>,RNSRegisterError>
     
     @discardableResult convenience init(_ from: RNSDutyAddressTemp?, to: RNSDutyAddressTemp?, date: Date?, complete: AliasComplete?, failure: AliasStringBlock? = nil) {
         self.init()

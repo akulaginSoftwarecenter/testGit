@@ -362,6 +362,7 @@
 		838540C91F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */; };
 		838540CB1F71173900B30772 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838540CA1F71173900B30772 /* Social.framework */; };
 		8385AE651F848A82008556C6 /* RNSPostNotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385AE641F848A82008556C6 /* RNSPostNotificationList.swift */; };
+		8385AE681F848C81008556C6 /* RNSNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385AE671F848C81008556C6 /* RNSNotificationModel.swift */; };
 		8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */; };
 		8385DB431F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
@@ -937,6 +938,7 @@
 		838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Delegate.swift"; path = "Controllers/Profile/RNSProfileViewController+Delegate.swift"; sourceTree = "<group>"; };
 		838540CA1F71173900B30772 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8385AE641F848A82008556C6 /* RNSPostNotificationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostNotificationList.swift; path = POST/NotificationList/RNSPostNotificationList.swift; sourceTree = "<group>"; };
+		8385AE671F848C81008556C6 /* RNSNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSNotificationModel.swift; path = Models/Temp/NotificationModel/RNSNotificationModel.swift; sourceTree = "<group>"; };
 		8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Swipe.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Swipe.swift"; sourceTree = "<group>"; };
 		8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Action.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1403,6 +1405,7 @@
 				83A53F941F4A9E9100938969 /* RouteVariant */,
 				8326AA361F1F59C400F893C8 /* Traffic */,
 				8326AA331F1F57AA00F893C8 /* TraffickMark */,
+				8385AE661F848C59008556C6 /* NotificationModel */,
 			);
 			name = Temp;
 			sourceTree = "<group>";
@@ -3298,6 +3301,14 @@
 			name = NotificationList;
 			sourceTree = "<group>";
 		};
+		8385AE661F848C59008556C6 /* NotificationModel */ = {
+			isa = PBXGroup;
+			children = (
+				8385AE671F848C81008556C6 /* RNSNotificationModel.swift */,
+			);
+			name = NotificationModel;
+			sourceTree = "<group>";
+		};
 		8386B4431F343E8E008A5CC7 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -4753,6 +4764,7 @@
 				83AA6A741F566CDD00B2139C /* RNSPageRouteCell+UI.swift in Sources */,
 				836221B21F43F5C6005B49DA /* RNSAddressViewController+Action.swift in Sources */,
 				8351F15E1F81E4DB0014F0FD /* RNSPostActionRouting.swift in Sources */,
+				8385AE681F848C81008556C6 /* RNSNotificationModel.swift in Sources */,
 				83ADAAEC1F839C3100C289C5 /* RNSPostFavoritePathUpdate.swift in Sources */,
 				83A53F931F4A9D9300938969 /* RNSRegisterCollectionView.swift in Sources */,
 				831A85B71F41497F0095F006 /* RNSBusStopTemp.swift in Sources */,

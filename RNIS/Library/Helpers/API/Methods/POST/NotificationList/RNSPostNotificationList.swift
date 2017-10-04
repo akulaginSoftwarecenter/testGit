@@ -10,7 +10,7 @@ import UIKit
 
 class RNSPostNotificationList: RNSPostRequestMobileToken {
     
-    typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
+    typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSNotificationModel>,RNSRegisterError>
     
     override func apiDidReturnReply(_ reply: AnyObject, source: AnyObject){
         parseReply(AliasReply(reply: reply), source: source)
@@ -18,7 +18,7 @@ class RNSPostNotificationList: RNSPostRequestMobileToken {
     
     func parseReply(_ model: AliasReply?, source: AnyObject) {
         if  model?.success ?? false {
-            super.apiDidReturnReply(model?.payload as AnyObject, source: source)
+            super.apiDidReturnReply(model?.payload?.items as AnyObject, source: source)
             return
         }
         parseError(model, source: source)

@@ -9,9 +9,9 @@
 import UIKit
 import ObjectMapper
 
-class RNSActionRoutingPayload: RNISMappableBase {
+class RNSActionRoutingPayload<T: Mappable>: RNISMappableBase {
 
-    var items: [RNSRouteVariant]?
+    var items: [T]?
     public override func mapping(map: Map) {
         items <- map["items"]
     }

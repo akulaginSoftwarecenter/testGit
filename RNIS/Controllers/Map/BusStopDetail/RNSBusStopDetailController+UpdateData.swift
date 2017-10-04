@@ -57,6 +57,5 @@ extension RNSBusStopDetailController {
             self?.loadItems()
         }
         showLoader()
-        
     }
 }

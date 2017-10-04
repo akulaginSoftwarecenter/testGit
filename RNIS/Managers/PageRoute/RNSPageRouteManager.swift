@@ -39,7 +39,6 @@ class RNSPageRouteManager: NSObject {
         STRouter.showLoader()
         item?.removeItem {
             STRouter.removeLoader()
-            updateNotification()
             updateFavorite()
         }
     }
@@ -48,7 +47,6 @@ class RNSPageRouteManager: NSObject {
         STRouter.showLoader()
         item?.updateName {
             STRouter.removeLoader()
-            updateNotification()
             updateFavorite()
         }
     }
