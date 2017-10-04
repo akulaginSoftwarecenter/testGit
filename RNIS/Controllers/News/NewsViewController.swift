@@ -8,14 +8,48 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, UIWebViewDelegate  {
 
     @IBOutlet weak var webView: UIWebView!
+    let host = "https://dev-rnisportal.regeora.ru/"
+    
+    lazy var loaderView: LoaderView = {
+        let view = LoaderView()
+        view.isUserInteractionEnabled = false
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webView.loadRequest(URLRequest(url: URL(string: "https://dev-rnisportal.regeora.ru/")!))
+        loadStart()
+        prepareHandlers()
+    }
+    
+    func loadStart() {
+        loaderView.showInView(self.view)
+        webView.loadRequest(URLRequest(url: URL(string: host)!))
+    }
+    
+    func resetIfNeed() {
+        if host != webView.request?.url?.absoluteURL.absoluteString {
+            loadStart()
+        }
+    }
+    
+    func prepareHandlers() {
+        RNSMenuManager.handlerNewsUpdate = { [weak self] in
+            self?.resetIfNeed()
+        }
+    }
+    
+    public func webViewDidStartLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    public func webViewDidFinishLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        loaderView.remove()
     }
 
     override class var storyboardName: String {

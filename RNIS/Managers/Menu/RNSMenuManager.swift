@@ -12,6 +12,7 @@ class RNSMenuManager: NSObject {
     
     static var handlerLeftMenuUpdate: EmptyBlock?
     static var handlerStrelkaUpdate: EmptyBlock?
+    static var handlerNewsUpdate: EmptyBlock?
     static var handlerUpdateFavoriteBuss: EmptyBlock?
     
     static let shared = RNSMenuManager()
@@ -23,7 +24,7 @@ class RNSMenuManager: NSObject {
     lazy var menuItems = [MenuItem("Карта", mapVC, #imageLiteral(resourceName: "menuMapIcon")),
                      MenuItem("Избранное", TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
                      MenuItem("Оповещения", NotificationsViewController.initialRed, #imageLiteral(resourceName: "menuBellIcon")),
-                     MenuItem("Новости", NewsViewController.initialRed, #imageLiteral(resourceName: "menuNewspaperIcon")),
+                     MenuItem(kNews, NewsViewController.initialRed, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", SettingsViewController.initialRed, #imageLiteral(resourceName: "menuSettingsIcon")),
                      MenuItem( kStrelka, StrelkaViewController.initialRed, #imageLiteral(resourceName: "menuCreditcardIcon")),
                      MenuItem("Информация", MainInfoViewController.initialRed, #imageLiteral(resourceName: "menuInfoIcon"))]
