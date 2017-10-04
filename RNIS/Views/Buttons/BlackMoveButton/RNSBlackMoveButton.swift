@@ -13,7 +13,7 @@ class RNSBlackMoveButton: RNSBlackButton {
         super.awakeFromNib()
         
         handlerAction = {
-          //  RNSPageRouteManager.showMoveMapStub()
+           RNSPageRouteManager.showMoveMapStub()
         }
         
         title = "Поехали"

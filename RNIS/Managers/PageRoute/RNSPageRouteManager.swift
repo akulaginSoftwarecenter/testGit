@@ -59,7 +59,7 @@ class RNSPageRouteManager: NSObject {
         let vc = RNSMoveMapViewController.initController(item)
         vc?.handlerDidDisappear = {
             updateRoads()
-            prepareFirstNavel(nil)
+            //prepareFirstNavel(nil)
         }
         vc?.pushAnimated()
     }
