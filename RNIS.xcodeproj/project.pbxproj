@@ -450,6 +450,7 @@
 		83A308121F736EB50098FAD7 /* RNSPageRoutePopupController+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A308111F736EB50098FAD7 /* RNSPageRoutePopupController+Observe.swift */; };
 		83A327E91F849651003BA053 /* RNSPostNotificationDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A327E81F849651003BA053 /* RNSPostNotificationDelete.swift */; };
 		83A327EC1F849913003BA053 /* RNSPostNotificationUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A327EB1F849913003BA053 /* RNSPostNotificationUpdate.swift */; };
+		83A327EF1F84A23B003BA053 /* RNSPostBusGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A327EE1F84A23B003BA053 /* RNSPostBusGet.swift */; };
 		83A53F831F4A918200938969 /* RNSPageRouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A53F821F4A918200938969 /* RNSPageRouteController.swift */; };
 		83A53F861F4A96FA00938969 /* RNSPageRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A53F851F4A96FA00938969 /* RNSPageRouteView.swift */; };
 		83A53F881F4A975900938969 /* RNSPageRouteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A53F871F4A975900938969 /* RNSPageRouteView.xib */; };
@@ -1016,6 +1017,7 @@
 		83A308111F736EB50098FAD7 /* RNSPageRoutePopupController+Observe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSPageRoutePopupController+Observe.swift"; path = "Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController+Observe.swift"; sourceTree = "<group>"; };
 		83A327E81F849651003BA053 /* RNSPostNotificationDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostNotificationDelete.swift; path = POST/NotificationDelete/RNSPostNotificationDelete.swift; sourceTree = "<group>"; };
 		83A327EB1F849913003BA053 /* RNSPostNotificationUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostNotificationUpdate.swift; path = RNIS/Library/Helpers/API/Methods/POST/NotificationUpdate/RNSPostNotificationUpdate.swift; sourceTree = SOURCE_ROOT; };
+		83A327EE1F84A23B003BA053 /* RNSPostBusGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostBusGet.swift; path = POST/BusGet/RNSPostBusGet.swift; sourceTree = "<group>"; };
 		83A53F821F4A918200938969 /* RNSPageRouteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPageRouteController.swift; path = Controllers/Main/Route/PageRoute/RNSPageRouteController.swift; sourceTree = "<group>"; };
 		83A53F851F4A96FA00938969 /* RNSPageRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPageRouteView.swift; path = Views/Map/PageRoute/RNSPageRouteView.swift; sourceTree = "<group>"; };
 		83A53F871F4A975900938969 /* RNSPageRouteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNSPageRouteView.xib; path = Views/Map/PageRoute/RNSPageRouteView.xib; sourceTree = "<group>"; };
@@ -1497,6 +1499,7 @@
 				836A9D7E1F627E2700B5EB55 /* StopPointList */,
 				83D370061F6FA905008F6A0F /* StopPointRoutes */,
 				836B96091F79FE1D00531BC6 /* BusList */,
+				83A327ED1F84A187003BA053 /* BusGet */,
 				839875BB1F60FD6A00B88F0B /* Update */,
 				838540C21F70CE5400B30772 /* UserGet */,
 				833D6C191F7CC19C00C4A0F3 /* FavoriteRouteСreate */,
@@ -3652,6 +3655,14 @@
 			path = NotificationUpdate;
 			sourceTree = "<group>";
 		};
+		83A327ED1F84A187003BA053 /* BusGet */ = {
+			isa = PBXGroup;
+			children = (
+				83A327EE1F84A23B003BA053 /* RNSPostBusGet.swift */,
+			);
+			name = BusGet;
+			sourceTree = "<group>";
+		};
 		83A53F811F4A90FE00938969 /* PageRoute */ = {
 			isa = PBXGroup;
 			children = (
@@ -5021,6 +5032,7 @@
 				8319C5C21F60F6A7005A1768 /* RNSPostConfirmCheck.swift in Sources */,
 				83A53F961F4A9F0800938969 /* RNSRouteVariant.swift in Sources */,
 				838EA0451F53FF7700E9BF20 /* RNSNoteRoute+Frame.swift in Sources */,
+				83A327EF1F84A23B003BA053 /* RNSPostBusGet.swift in Sources */,
 				838EA02E1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift in Sources */,
 				837FEF7A1F7516E000C5B45F /* RNSPostPhoneConfirmCheck.swift in Sources */,
 				83A5C70B1F5812D5006C8D62 /* RNSDateSelectViewController.swift in Sources */,
