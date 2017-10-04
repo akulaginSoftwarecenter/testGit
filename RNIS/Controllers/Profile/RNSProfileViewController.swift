@@ -24,6 +24,13 @@ class RNSProfileViewController: UIViewController {
             
         prepareBlackButton()
         prepareProfilePhoto()
+        prepareHandlers()
+    }
+    
+    func prepareHandlers() {
+        RNSMenuManager.handlerClearProfile = {[weak self] in
+            self?.clearAll()
+        }
     }
     
     func prepareBlackButton() {
@@ -35,7 +42,6 @@ class RNSProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        clearAll()
         loadData()
     }
     

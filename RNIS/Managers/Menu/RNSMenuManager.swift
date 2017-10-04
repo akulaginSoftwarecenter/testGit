@@ -14,6 +14,7 @@ class RNSMenuManager: NSObject {
     static var handlerStrelkaUpdate: EmptyBlock?
     static var handlerNewsUpdate: EmptyBlock?
     static var handlerUpdateFavoriteBuss: EmptyBlock?
+    static var handlerClearProfile: EmptyBlock?
     
     static let shared = RNSMenuManager()
     

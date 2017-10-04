@@ -17,6 +17,7 @@ class RNISAuthManager {
             clearUserDefaults()
             RNSMenuManager.showMap()
             RNSMenuManager.leftMenuUpdate()
+            RNSMenuManager.handlerClearProfile?()
         }
     }
     
