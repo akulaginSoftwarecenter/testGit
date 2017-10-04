@@ -12,6 +12,14 @@ extension NotificationsSettingsViewController {
     
     @IBAction func actionSave(_ sender: Any) {
         STRouter.pop()
-        self.handlerNotification?(notificationPicker.selectedRow(inComponent: 0))
+        //self.handlerNotification?(notificationPicker.selectedRow(inComponent: 0))
+    }
+    
+    @IBAction func actionRemove(_ sender: Any) {
+        STRouter.showLoader()
+        RNSPostNotificationDelete(item) {
+            STRouter.removeLoader()
+            STRouter.pop()
+        }
     }
 }

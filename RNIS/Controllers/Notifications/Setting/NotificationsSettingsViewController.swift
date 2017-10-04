@@ -11,17 +11,31 @@ import UIKit
 class NotificationsSettingsViewController: UIViewController {
 
     var handlerNotification: ((Int) -> ())?
+    var item: RNSNotificationModel?
+    
+    let maxValue = 100
+    
     @IBOutlet weak var notificationPicker: UIPickerView!
     
-    override class var storyboardName: String {
-        return "NotificationsSettingsViewController"
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        preparePicker()
+    }
+    
+    func preparePicker() {
+        setIntialValue(item?.notification_time)
     }
 
-    func setIntialValue(_ value: Int) {
-        _ = view
-        guard value < notificationPicker.numberOfRows(inComponent: 0) else {
-            return
+    func setIntialValue(_ value: Int? ) {
+        guard let value = value,
+            value < notificationPicker.numberOfRows(inComponent: 0) else {
+                return
         }
         notificationPicker.selectRow(value, inComponent: 0, animated: true)
+    }
+   
+    override class var storyboardName: String {
+        return "NotificationsSettingsViewController"
     }
 }
