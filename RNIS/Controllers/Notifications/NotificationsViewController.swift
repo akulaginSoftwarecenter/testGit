@@ -42,6 +42,22 @@ class NotificationsViewController: UIViewController {
         tableView.tableFooterView = UIView();
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        loadItems()
+    }
+    
+    func loadItems() {
+        STRouter.showLoader()
+        print("updateUI RNSPostNotificationList")
+        RNSPostNotificationList {[weak self] (reply, error, _) in
+            STRouter.removeLoader()
+            //self?.items = reply as?[RNSRouteVariant]
+            self?.tableView.reloadData()
+        }
+    }
+    
     override class var storyboardName: String {
         return "NotificationsViewController"
     }

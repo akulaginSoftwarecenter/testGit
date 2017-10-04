@@ -361,6 +361,7 @@
 		838540C41F70CF9D00B30772 /* RNSPostUserGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */; };
 		838540C91F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */; };
 		838540CB1F71173900B30772 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838540CA1F71173900B30772 /* Social.framework */; };
+		8385AE651F848A82008556C6 /* RNSPostNotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385AE641F848A82008556C6 /* RNSPostNotificationList.swift */; };
 		8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */; };
 		8385DB431F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */; };
 		8386B4421F343D84008A5CC7 /* RNSProfileViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */; };
@@ -935,6 +936,7 @@
 		838540C31F70CF9D00B30772 /* RNSPostUserGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostUserGet.swift; path = POST/UserGet/RNSPostUserGet.swift; sourceTree = "<group>"; };
 		838540C81F70FA4A00B30772 /* RNSProfileViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Delegate.swift"; path = "Controllers/Profile/RNSProfileViewController+Delegate.swift"; sourceTree = "<group>"; };
 		838540CA1F71173900B30772 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8385AE641F848A82008556C6 /* RNSPostNotificationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostNotificationList.swift; path = POST/NotificationList/RNSPostNotificationList.swift; sourceTree = "<group>"; };
 		8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Swipe.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Swipe.swift"; sourceTree = "<group>"; };
 		8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Action.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Action.swift"; sourceTree = "<group>"; };
 		8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Action.swift"; path = "Controllers/Profile/RNSProfileViewController+Action.swift"; sourceTree = "<group>"; };
@@ -1483,7 +1485,6 @@
 				831D89911F2074AD00082116 /* Login */,
 				837857EF1F4E7C46009DEA26 /* Logout */,
 				836A9D651F62370B00B5EB55 /* MobilePageGet */,
-				A76501E71F827CDE001AEA25 /* Notification */,
 				8319C5B11F60DFBE005A1768 /* Register */,
 				83CD58491F25870900A9FE1A /* Routing */,
 				836A9D7E1F627E2700B5EB55 /* StopPointList */,
@@ -1500,6 +1501,8 @@
 				831B3AD11F83897400C54BB3 /* FavoritePathDelete */,
 				83ADAAEA1F839BC900C289C5 /* FavoritePathUpdate */,
 				83ADAAE51F838CE700C289C5 /* FavoritePathList */,
+				A76501E71F827CDE001AEA25 /* NotificationCreate */,
+				8385AE631F848A1E008556C6 /* NotificationList */,
 			);
 			name = POST;
 			sourceTree = "<group>";
@@ -3287,6 +3290,14 @@
 			name = UserGet;
 			sourceTree = "<group>";
 		};
+		8385AE631F848A1E008556C6 /* NotificationList */ = {
+			isa = PBXGroup;
+			children = (
+				8385AE641F848A82008556C6 /* RNSPostNotificationList.swift */,
+			);
+			name = NotificationList;
+			sourceTree = "<group>";
+		};
 		8386B4431F343E8E008A5CC7 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -4310,13 +4321,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A76501E71F827CDE001AEA25 /* Notification */ = {
+		A76501E71F827CDE001AEA25 /* NotificationCreate */ = {
 			isa = PBXGroup;
 			children = (
 				A76501E81F827D13001AEA25 /* RNSNotificationCreate.swift */,
 			);
-			name = Notification;
-			path = POST/Notification;
+			name = NotificationCreate;
+			path = POST/NotificationCreate;
 			sourceTree = "<group>";
 		};
 		A794FC151F7905BC0091BD20 /* TransitionsAnimation */ = {
@@ -4632,6 +4643,7 @@
 				83B2E0801F1E139800FA92A4 /* PostAPI.swift in Sources */,
 				837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */,
 				836D80E11F1DC89D00FEE390 /* Constant.swift in Sources */,
+				8385AE651F848A82008556C6 /* RNSPostNotificationList.swift in Sources */,
 				837036B21F428CB400FBD1E9 /* RNSMapManager+MapView.swift in Sources */,
 				83A667FB1F5D213500A1A7BC /* RNSTransportTableView+TableView.swift in Sources */,
 				839BCDEE1F32BAF200B5CA88 /* RNSProfilePhoto.swift in Sources */,
