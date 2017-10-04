@@ -15,17 +15,24 @@ class RNSMapParentController: UIViewController {
     var mapView: MapView {
         return RNSMapManager.mapView
     }
+    //
     @IBOutlet weak var labelZoom: UILabel!
     @IBOutlet weak var plusButtonZoom: UIButton!
     @IBOutlet weak var minusButtonZoom: UIButton!
-    
+    @IBOutlet var showingButtonsConstraints: [NSLayoutConstraint]!
+    @IBOutlet var hidingButtonsConstraints: [NSLayoutConstraint]!
+    @IBOutlet var showingButtonsConstraints2: [NSLayoutConstraint]!
+    @IBOutlet var hidingButtonsConstraints2: [NSLayoutConstraint]!
+    @IBOutlet weak var leftStackView: UIStackView!
+    @IBOutlet weak var rightStackView: UIStackView!
+    //
     var handlerOnMapEvent: EmptyBlock?
     var handlerOnMapTouchEvent: AliasPointBlock?
     var handlerOnMapLongTouchEvent: AliasPointBlock?
     var handlerOnOverlay: ((PGOverlay,PGOverlayItem) -> ())?
     
     var bottomTargetConstant: CGFloat?
-     @IBOutlet weak var bottomTarget: NSLayoutConstraint!
+    @IBOutlet weak var bottomTarget: NSLayoutConstraint!
     
     @IBOutlet weak var lightButton: RNSLightButton!
     
@@ -36,12 +43,18 @@ class RNSMapParentController: UIViewController {
         view.defaultAlpha = 0.2
         return view
     }()
+    private var animator: MapButtonsAnimator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         prepareTargetIcon()
         updateZoom()
+        //animator = MapButtonsAnimator(superview: view, duration: 0.7, usingSpringAnimation: true)
+        animator = MapButtonsAnimator(superview: view, duration: 0.3, usingSpringAnimation: false)
+        animator.extraAnimationsWithVisibilityStateHidden = { [weak self] in
+            self?.leftStackView.alpha = $0 ? 0 : 1
+            self?.rightStackView.alpha = $0 ? 0 : 1
+        }
     }
     
     func updateZoom() {
@@ -60,6 +73,18 @@ class RNSMapParentController: UIViewController {
         plusButtonZoom.isHidden = UserDefaults.hideZoomButtonInMap
         minusButtonZoom.isHidden = UserDefaults.hideZoomButtonInMap
         prepareMapView()
+        animator.setMapButtons(hidden: true)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //animator.setupOnce(showingButtonsConstraints, hidingButtonsConstraints, initialVisibilityStateHidden: true)
+        animator.setupOnce(showingButtonsConstraints2, hidingButtonsConstraints2, initialVisibilityStateHidden: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animator.setMapButtons(hidden: false, animated: true)
     }
     
     override class var storyboardName: String {
