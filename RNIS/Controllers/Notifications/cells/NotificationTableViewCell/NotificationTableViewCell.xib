@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="433" height="64"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Улица Ленина das " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLs-lN-bJD">
-                                <rect key="frame" x="93" y="22" width="238" height="20"/>
+                                <rect key="frame" x="85" y="22" width="246" height="20"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -51,10 +51,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSP-Bw-sgN">
-                                <rect key="frame" x="26" y="14" width="62" height="36"/>
+                                <rect key="frame" x="26" y="14" width="54" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A86" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-jz-cag">
-                                        <rect key="frame" x="15" y="7.5" width="32" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A86" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-jz-cag">
+                                        <rect key="frame" x="5" y="7.5" width="44" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="MD7-tW-vT0"/>
                                         </constraints>
@@ -65,7 +65,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.63921568630000003" green="0.25882352939999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="8fv-jz-cag" secondAttribute="width" constant="30" id="Dsd-1E-5V0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="And-hx-EeJ"/>
+                                    <constraint firstAttribute="width" secondItem="8fv-jz-cag" secondAttribute="width" constant="10" id="Dsd-1E-5V0"/>
                                     <constraint firstItem="8fv-jz-cag" firstAttribute="centerY" secondItem="oSP-Bw-sgN" secondAttribute="centerY" id="cl7-nW-X01"/>
                                     <constraint firstAttribute="height" constant="36" id="e2O-fi-dga"/>
                                     <constraint firstItem="8fv-jz-cag" firstAttribute="centerX" secondItem="oSP-Bw-sgN" secondAttribute="centerX" id="i2Z-j8-hRR"/>
