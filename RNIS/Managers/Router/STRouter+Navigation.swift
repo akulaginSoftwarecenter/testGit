@@ -52,9 +52,11 @@ extension STRouter {
         }
     }
     */
-    
     static func showLogin() {
-        RNSLoginViewController.controller.pushAnimatedImageBoard()
+        showLogin(animated: true)
+    }
+    static func showLogin(animated: Bool) {
+        RNSLoginViewController.controller.pushAnimatedImageBoard(animated: animated)
     }
     
     static func showAlertRegistration() {

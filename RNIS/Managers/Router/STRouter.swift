@@ -37,9 +37,8 @@ class STRouter: NSObject {
         rootViewController?.push(viewController, animated: animated, completion: completion)
     }
     
-    static func pushAnimated(_ viewController: UIViewController?,
-                                   completion: EmptyBlock? = nil) {
-        push(viewController, animated: true, completion: completion)
+    static func pushAnimated(_ viewController: UIViewController?, animated: Bool = true, completion: EmptyBlock? = nil) {
+        push(viewController, animated: animated, completion: completion)
     }
     
     static func pop(animated: Bool = true, completion: EmptyBlock? = nil) {
@@ -75,8 +74,8 @@ class STRouter: NSObject {
         pushAnimated(imageScrollContainer(viewController))
     }
     
-    static func pushAnimatedImageBoard(_ viewController: UIViewController?) {
-        pushAnimated(imageBoardContainer(viewController))
+    static func pushAnimatedImageBoard(_ viewController: UIViewController?, animated: Bool = true) {
+        pushAnimated(imageBoardContainer(viewController), animated: animated)
     }
     
     static func pushAnimatedRedScroll(_ viewController: UIViewController?) {
