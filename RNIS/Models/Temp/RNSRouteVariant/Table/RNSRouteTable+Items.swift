@@ -16,23 +16,35 @@ extension RNSRouteTable {
         }
         
         items = [RNSRouteTableItem]()
+        
+        processingPoint(points.first)
         let lastIndex = points.count - 1
-        for i in 0..<lastIndex {
-            guard let point = points.valueAt(i) else {
+        guard 1 <= lastIndex  else {
+            return
+        }
+        for i in 1..<lastIndex {
+            guard let point = points.valueAt(i),
+                point.stop_point != nil else {
                     continue
             }
-            
-            let stop = appendStop(point)
-            if point.isBus {
-                stop.shortLine = true
-                appendBus(point.route?.title)
-                appendStill()
-            }
+            processingPoint(point)
         }
         appendStop(points.valueAt(lastIndex))
         prepareEdge()
         appendTotal()
         prepareFirts()
+    }
+    
+    func processingPoint(_ point: RNSRoutePoint?) {
+        guard let point = point else {
+            return
+        }
+        let stop = appendStop(point)
+        if point.isBus {
+            stop.shortLine = true
+            appendBus(point.route?.title)
+            appendStill()
+        }
     }
     
     @discardableResult func appendStop(_ point: RNSRoutePoint?) -> RNSRouteTableItem {
