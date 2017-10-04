@@ -66,7 +66,7 @@ class AlamofireAPI: API {
         let alamofireRequest = Alamofire.request(urlRequest())
         let request = alamofireRequest.request
         
-        if let request = request, showLogApi {
+        if let request = request, showLogApi, showLogApiDetail {
             print("==> \(request.httpMethod ?? "...") \(request.url?.absoluteString ?? "n/a")")
             print("Headers: \(request.allHTTPHeaderFields ?? [:])")
             print("Parameters: \(parameters)")
@@ -77,7 +77,7 @@ class AlamofireAPI: API {
                 self.apiDidEnd()
                 return
             }
-            if let httpResponse = response.response, let bodyData = response.data, let body = String(data: bodyData, encoding: .utf8), showLogApi {
+            if let httpResponse = response.response, let bodyData = response.data, let body = String(data: bodyData, encoding: .utf8), showLogApi, showLogApiDetail {
                 print("<== \(httpResponse.statusCode) \(request?.url?.absoluteString ?? "n/a")")
                 print("Headers: \(httpResponse.allHeaderFields)")
                 print("Body: \(body)")
