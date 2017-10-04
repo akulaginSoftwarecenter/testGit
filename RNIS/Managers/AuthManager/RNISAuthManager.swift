@@ -16,6 +16,7 @@ class RNISAuthManager {
             STRouter.removeLoader()
             clearUserDefaults()
             RNSMenuManager.showMap()
+            STRouter.showLogin(animated: false)
             RNSMenuManager.leftMenuUpdate()
             RNSMenuManager.handlerClearProfile?()
         }
