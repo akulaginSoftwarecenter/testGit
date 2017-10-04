@@ -11,8 +11,17 @@ import Foundation
 extension NotificationsSettingsViewController {
     
     @IBAction func actionSave(_ sender: Any) {
-        STRouter.pop()
-        //self.handlerNotification?(notificationPicker.selectedRow(inComponent: 0))
+        let result = notificationPicker.selectedRow(inComponent: 0)
+        guard item?.notification_time != result  else {
+            STRouter.pop()
+            return
+        }
+        item?.notification_time = result
+        STRouter.showLoader()
+        RNSPostNotificationUpdate(item) {
+            STRouter.removeLoader()
+            STRouter.pop()
+        }
     }
     
     @IBAction func actionRemove(_ sender: Any) {
