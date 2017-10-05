@@ -57,7 +57,7 @@ class RNSPostBusList: RNSRequest {
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,
             let items = model?.payload?.items {
-            print("RNSPostBusList",items.count)
+            //print("RNSPostBusList",items.count)
             RNSDataManager.parseBusItemsAsync(items) { [weak self] (uuids) in
                 self?.complete?(uuids)
             }

@@ -18,7 +18,7 @@ extension RNSBusManager {
             removeOld(removeUuids)
             showPinsUuids(addUuids)
             showedUuids = showedItems.flatMap{$0.uuid}
-            print("showedBuss",showedUuids.count, RNSMapManager.getZoomLevel)
+           // print("showedBuss",showedUuids.count, RNSMapManager.getZoomLevel)
         }
     }
     

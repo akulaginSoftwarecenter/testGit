@@ -33,7 +33,6 @@ class RNSPostBusGet: RNSRequest {
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false {
             complete?(model?.payload)
-            print("RNSPostBusGet", model?.payload?.route_number)
             return
         }
         parseError(model)
@@ -57,5 +56,23 @@ class RNSPostBusGet: RNSRequest {
     
     override var subject: String {
         return "com.rnis.mobile.action.bus.get"
+    }
+    
+    var convertStops: AliasDictionary? {
+        if let path = Bundle.main.url(forResource: "document", withExtension: "json") {
+            print("convertStops path",path)
+            do {
+                let data = try Data(contentsOf: path, options: .alwaysMapped)
+                print("data convertStops",data)
+                do {
+                    return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                } catch {
+                    print(error.localizedDescription)
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
     }
 }
