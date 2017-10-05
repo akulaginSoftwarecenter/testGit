@@ -10,16 +10,14 @@ import UIKit
 
 class RNSConductorView: BaseViewWithXIBInit {
     
-    var item: RNSBusTemp?
+    var item: RNSBusTemp? {
+        didSet {
+            updateUI()
+        }
+    }
     
     @IBOutlet weak var driverLabel: UILabel!
     @IBOutlet weak var сonductorLabel: UILabel!
-    
-    convenience init(_ item: RNSBusTemp?) {
-        self.init(frame: CGRect.null)
-        self.item = item
-        updateUI()
-    }
     
     func updateUI() {
         driverLabel.text = "Водитель: " + (item?.driver ?? "")

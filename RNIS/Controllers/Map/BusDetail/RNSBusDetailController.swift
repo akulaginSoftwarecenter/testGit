@@ -12,7 +12,6 @@ class RNSBusDetailController: UIViewController {
     
     static func initController(_ item: RNSBus?) -> UIViewController? {
         let vc = RNSBusDetailController.initialController as? RNSBusDetailController
-        vc?.item = RNSBusTemp.gen
         vc?.itemBus = item
         
         let title = "Автобус №" + (item?.route_number ?? "")
@@ -35,7 +34,7 @@ class RNSBusDetailController: UIViewController {
         return  container
     }
     
-    lazy var bottomView: UIView = RNSConductorView(self.item)
+    let bottomView = RNSConductorView()
     
     var item: RNSBusTemp?
     var itemBus: RNSBus?
@@ -47,21 +46,22 @@ class RNSBusDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareItems()
         loadItem()
     }
     
     func loadItem() {
         STRouter.showLoader()
-        RNSPostBusGet(itemBus) {
+        RNSPostBusGet(itemBus) {[weak self] item in
             STRouter.removeLoader()
-            STRouter.pop()
+            self?.item = item
+            self?.prepareItem()
         }
     }
     
-    func prepareItems() {
+    func prepareItem() {
         viewTotal.item = item
         viewWay.item = item
+        bottomView.item = item
     }
     
     override class var storyboardName: String {

@@ -9,6 +9,7 @@
 import Foundation
 
 extension RNSBusTemp {
+    /*
     static func generate(_ point: PGGeoPoint) -> RNSBusTemp {
         let item = RNSBusTemp()
         item.point = point
@@ -105,4 +106,5 @@ extension RNSBusTemp {
                 "Красногвардейская",
                 "Алма-Атинская",]
     }
+ */
 }

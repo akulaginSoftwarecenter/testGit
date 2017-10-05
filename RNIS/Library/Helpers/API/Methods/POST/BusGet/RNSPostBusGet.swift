@@ -11,38 +11,41 @@ import Alamofire
 
 class RNSPostBusGet: RNSRequest {
     var item: RNSBus?
-    var complete: EmptyBlock?
+    var complete: AliasComplete?
     
     override var method: Alamofire.HTTPMethod {
         return .post
     }
+    typealias AliasComplete = (RNSBusTemp?) -> ()
+    typealias AliasReply = RNSRequestReply<RNSBusTemp,RNSRegisterError>
     
-    typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
-    
-    @discardableResult convenience init(_ item: RNSBus?, complete: EmptyBlock?) {
+    @discardableResult convenience init(_ item: RNSBus?, complete: AliasComplete?) {
         self.init()
         
         self.item = item
         self.complete = complete
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
-            complete?()
             self?.parseReply(AliasReply(reply: object))
         }
     }
     
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false {
+            complete?(model?.payload)
+            print("RNSPostBusGet", model?.payload?.route_number)
             return
         }
         parseError(model)
     }
     
     func parseError(_ model: AliasReply?) {
+        /*
         guard let error = model?.errors?.first?.textError else {
             return
         }
-        STRouter.showAlertOk(error)
+        */
+        complete?(nil)
     }
     
     override var payload: AliasDictionary {

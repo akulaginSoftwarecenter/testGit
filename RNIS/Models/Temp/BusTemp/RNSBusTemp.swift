@@ -7,41 +7,35 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class RNSBusTemp: RNISMappableBase, RNSTextItem, Hashable   {
-    var hashValue: Int {
-        return num ?? 0
-    }
+class RNSBusTemp: RNISMappableBase, RNSTextItem {
 
-    var text: String?
-    
-    var title: String {
-        return "A" + "\(num ?? 0)"
-    }
-   
-    var point: PGGeoPoint?
-    var num: Int?
-    //var handlerRemove: EmptyBlock?
-    //var doneMove = false
-    /*
-    var titleWidth: CGFloat {
-        return title.width(.cffazm20) + 22
-    }
-    */
-    static func ==(lhs: RNSBusTemp, rhs: RNSBusTemp) -> Bool {
-        return lhs.title == rhs.title
-    }
-    
-    var stop_points: [RNSBusStopTemp]?
-    var next_stop_point: RNSBusStopTemp?
-    
-    var driver: String?
-    var check_taker: String?
+    var uuid: String?
     var carrier_name: String?
+    var check_taker: String?
+    var driver: String?
+    var has_air_conditioning: Bool?
+    var has_cashless_payment: Bool?
+    var next_stop_point: RNSBusStopTemp?
+    var route_number: String?
+    var stop_points: [RNSBusStopTemp]?
     var unit_name: String?
     var unit_phone: String?
-    
-    var tableModel: RNSBusTableModel {
-        return RNSBusTableModel(self)
+   
+    public override func mapping(map: Map) {
+        uuid <- map["uuid"]
+        carrier_name <- map["carrier_name"]
+        check_taker <- map["check_taker"]
+        driver <- map["driver"]
+        has_air_conditioning <- map["has_air_conditioning"]
+        has_cashless_payment <- map["has_cashless_payment"]
+        next_stop_point <- map["next_stop_point"]
+        route_number <- map["route_number"]
+        stop_points <- map["stop_points"]
+        unit_name <- map["unit_name"]
+        unit_phone <- map["unit_phone"]
     }
+    
+    var text: String?
 }
