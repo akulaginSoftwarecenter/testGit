@@ -9,6 +9,6 @@
 import Foundation
 
 protocol RNSTextItem: class {
-    var text: String? { get set }
+    var name: String? { get set }
 
 }

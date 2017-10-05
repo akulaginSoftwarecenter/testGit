@@ -37,5 +37,12 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem {
         unit_phone <- map["unit_phone"]
     }
     
-    var text: String?
+    var name: String? {
+        get {
+            return route_number
+        }
+        set {
+            //route_number = newValue
+        }
+    }
 }

@@ -8,6 +8,6 @@
 
 import UIKit
 
-class RNSAddressTemp: RNISMappableBase, RNSTextItem {
-    var text: String?
+class RNSAddressTemp: RNSNameMapable, RNSTextItem {
+
 }

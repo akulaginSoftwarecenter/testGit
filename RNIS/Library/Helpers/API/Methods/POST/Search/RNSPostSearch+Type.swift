@@ -17,11 +17,13 @@ extension RNSPostSearch {
         var items = [Any]()
         switch type {
         case .transport:
-            items = dicts.flatMap{ RNSBusStopTemp(JSON: $0) }
+            
             break
         case .stop:
+            items = dicts.flatMap{ RNSBusStopTemp(JSON: $0) }
             break
         case .address:
+            items = dicts.flatMap{ RNSAddressTemp(JSON: $0) }
             break
         }
         complete?(items)

@@ -21,7 +21,7 @@ class RNSSearchCell: RNSBaseTableCell {
     }
     
     func prepareItem() {
-        labelText.text = item?.text
+        labelText.text = item?.name
     }
     
     func prepareBisibleBus() {
