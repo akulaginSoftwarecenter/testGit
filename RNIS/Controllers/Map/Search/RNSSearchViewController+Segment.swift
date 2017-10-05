@@ -12,18 +12,14 @@ enum TypeSearch: Int {
     case transport = 0, stop, address
     
     var guery: String {
-        let result = ""
         switch self {
         case .transport:
-            return "stop_point"
-             break
+            return "transport"
         case .stop:
-            break
-            break
+            return "stop_point"
         case .address:
-              break
+            return "address"
         }
-        return result
     }
 }
 

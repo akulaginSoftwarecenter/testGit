@@ -18,7 +18,9 @@ extension RNSSearchViewController {
         RNSSearchManager.text = text
         RNSSearchManager.type = typeSegment
         clearError()
-        
+        if typeSegment == .transport {
+            return
+        }
         if text == "" {
             clearTable()
             return
@@ -40,31 +42,7 @@ extension RNSSearchViewController {
     func removeLoader() {
         loaderView.remove()
     }
-    
-    func genAddress() {
-        gen { (index) -> (RNSTextItem) in
-            let item = RNSAddressTemp()
-            item.text = text + "genAddress" + "\(Int.rand(0, limit: 20))"
-            return item
-        }
-    }
-    
-    func genStop() {
-        gen { (index) -> (RNSTextItem) in
-            let item = RNSBusStopTemp()
-            item.text = text + "genStop" + "\(Int.rand(0, limit: 20))"
-            return item
-        }
-    }
-    
-    func genTransport() {
-        gen { (index) -> (RNSTextItem) in
-            let item = RNSBusTemp()
-            item.text = text + "genTransport" + "\(Int.rand(0, limit: 20))"
-            return item
-        }
-    }
-    
+
     func gen(element: ((Int) -> (RNSTextItem))) {
         var items = [RNSTextItem]()
         for i in (0...Int.rand(0, limit: 20)) {
@@ -76,6 +54,7 @@ extension RNSSearchViewController {
     
     func showItem(_ indexPath: IndexPath) {
         let item = self.item(indexPath)
+        
         if (item as? RNSAddressTemp) != nil {
             RNSMapManager.mapCenter(RNSLocationManager.point)
         } else if (item as? RNSBusStopTemp) != nil {
