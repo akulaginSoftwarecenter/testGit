@@ -57,9 +57,8 @@ extension RNSSearchViewController {
         
         if (item as? RNSAddressTemp) != nil {
             RNSMapManager.mapCenter(RNSLocationManager.point)
-        } else if (item as? RNSBusStopTemp) != nil {
-            let stop = RNSDataManager.busStops?.first
-            RNSMapManager.showInfoIfNeed(stop)
+        } else if let stop = item as? RNSBusStopTemp {
+            RNSMapManager.showStopPoint(stop.toJSON())
         } else if (item as? RNSBusTemp) != nil {
             let bus = RNSDataManager.buss?.first
             RNSMapManager.showInfoIfNeed(bus)
