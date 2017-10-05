@@ -9,11 +9,7 @@
 import Foundation
 
 extension RNSBusTemp {
-    
-    var title: String {
-        return "A" + "\(route_number ?? 0)"
-    }
-    
+
     var tableModel: RNSBusTableModel {
         return RNSBusTableModel(self)
     }

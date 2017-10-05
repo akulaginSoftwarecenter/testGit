@@ -15,6 +15,6 @@ extension RNSBusTemp: Hashable {
     }
     
     static func ==(lhs: RNSBusTemp, rhs: RNSBusTemp) -> Bool {
-        return lhs.title == rhs.title
+        return lhs.hashValue == rhs.hashValue
     }
 }
