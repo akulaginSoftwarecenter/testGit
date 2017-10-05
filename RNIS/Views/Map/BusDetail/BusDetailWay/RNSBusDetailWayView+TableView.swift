@@ -33,8 +33,7 @@ extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
             item.openStill = !item.openStill
             animateInsertStill(indexPath)
         } else {
-            let busStop = RNSDataManager.busStop1
-            RNSMapManager.showInfoIfNeed(busStop)
+            RNSMapManager.showStopPoint(item.dict)
         }
     }
     

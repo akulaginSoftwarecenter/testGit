@@ -21,14 +21,20 @@ class RNSBusTableItem {
     var typeEdge: TypeEdgeBusItem = .none
     
     var type: TypeBusTableItem = .def
-    var title: String? = ""
+    var title: String?
     
     var itemsStill = [RNSBusTableItem]()
     var openStill: Bool = false
+    var stop: RNSBusStopTemp?
+    
+    var dict: AliasDictionary? {
+        return stop?.toJSON()
+    }
     
     init(_ stop: RNSBusStopTemp? = nil, type: TypeBusTableItem = .def, typeEdge: TypeEdgeBusItem = .none) {
         self.type = type
         title = stop?.name
+        self.stop = stop
     }
     
     static func itemDef(_ stop: RNSBusStopTemp?) -> RNSBusTableItem {

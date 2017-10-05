@@ -39,4 +39,15 @@ extension RNSMapManager {
         }
         return step
     }
+    
+    static func showStopPoint(_ dict: AliasDictionary?) {
+        guard let dict = dict,
+            let item = RNSDataManager.parseBusStopItems([dict])?.first  else {
+                return
+        }
+        RNSMenuManager.showMap()
+        RNSMapManager.mapCenter(item.point)
+        RNSMapManager.mapView.setZoomLevel(16)
+        RNSMapManager.showInfoIfNeed(item)
+    }
 }

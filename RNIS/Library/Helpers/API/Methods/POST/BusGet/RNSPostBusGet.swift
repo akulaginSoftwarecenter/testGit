@@ -31,7 +31,7 @@ class RNSPostBusGet: RNSRequest {
             var payload = dict?["payload"] as? AliasDictionary
             payload?["stop_points"] = self?.convertStops
             dict?["payload"] = payload
-             */
+ */
             self?.parseReply(AliasReply(reply: object as AnyObject))
         }
     }

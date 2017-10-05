@@ -35,13 +35,6 @@ extension RNSFavoritesBusView {
     }
     
     func showStopPoint(_ item: RNSFavoriteStopPoint?) {
-        guard let dict = item?.dict,
-            let item = RNSDataManager.parseBusStopItems([dict])?.first  else {
-            return
-        }
-        RNSMenuManager.showMap()
-        RNSMapManager.mapCenter(item.point)
-        RNSMapManager.mapView.setZoomLevel(16)
-        RNSMapManager.showInfoIfNeed(item)
+        RNSMapManager.showStopPoint(item?.dict)
     }
 }
