@@ -345,6 +345,7 @@
 		837B667F1F396AD20048C5BA /* RNSMapViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */; };
 		837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */; };
 		837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66871F396DEF0048C5BA /* RNSTouchView.swift */; };
+		837B78811F85F41300E568FC /* 245543.json in Resources */ = {isa = PBXBuildFile; fileRef = 837B78801F85F3EF00E568FC /* 245543.json */; };
 		837C521F1F74FB3200696E70 /* RNSDotsVerticalModel+items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C521E1F74FB3100696E70 /* RNSDotsVerticalModel+items.swift */; };
 		837F71941F452E6200DEAA36 /* RNSGetGeoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71931F452E6200DEAA36 /* RNSGetGeoCode.swift */; };
 		837F71971F45365100DEAA36 /* RNSPinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F71961F45365100DEAA36 /* RNSPinAddress.swift */; };
@@ -927,6 +928,7 @@
 		837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSMapViewController+Present.swift"; path = "Controllers/Map/RNSMapViewController+Present.swift"; sourceTree = "<group>"; };
 		837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RNSScrollShowContainer+Offset.swift"; path = "Library/Base classes/Containers/ScrollShowContainer/RNSScrollShowContainer+Offset.swift"; sourceTree = "<group>"; };
 		837B66871F396DEF0048C5BA /* RNSTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSTouchView.swift; path = "Library/Base classes/Containers/ScrollShowContainer/ShowView/RNSTouchView.swift"; sourceTree = "<group>"; };
+		837B78801F85F3EF00E568FC /* 245543.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 245543.json; sourceTree = "<group>"; };
 		837C521E1F74FB3100696E70 /* RNSDotsVerticalModel+items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSDotsVerticalModel+items.swift"; path = "Models/HelpersModel/DotsVerticalItem/RNSDotsVerticalModel+items.swift"; sourceTree = "<group>"; };
 		837F71931F452E6200DEAA36 /* RNSGetGeoCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGetGeoCode.swift; path = GET/GeoCode/RNSGetGeoCode.swift; sourceTree = "<group>"; };
 		837F71961F45365100DEAA36 /* RNSPinAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPinAddress.swift; path = Views/OVerLays/PinAddress/RNSPinAddress.swift; sourceTree = "<group>"; };
@@ -2743,6 +2745,7 @@
 		836D80861F1DAE5400FEE390 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				837B78801F85F3EF00E568FC /* 245543.json */,
 				8326AA431F1F6A1C00F893C8 /* mainFont.otf */,
 				836D80BB1F1DB38D00FEE390 /* RNIS.xcdatamodeld */,
 				836D80B31F1DB37000FEE390 /* LaunchScreen.storyboard */,
@@ -4494,6 +4497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837B78811F85F41300E568FC /* 245543.json in Resources */,
 				8390DFD41F663FB2003C3505 /* ReportInfoViewController.storyboard in Resources */,
 				83E2D3941F34336100035877 /* RNSScrollKeyBoardContainer.storyboard in Resources */,
 				8390DFD61F6648C3003C3505 /* DocsInfoViewController.storyboard in Resources */,

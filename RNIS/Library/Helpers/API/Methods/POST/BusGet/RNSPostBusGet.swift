@@ -26,7 +26,13 @@ class RNSPostBusGet: RNSRequest {
         self.complete = complete
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
-            self?.parseReply(AliasReply(reply: object))
+            /*
+            var dict = object as? AliasDictionary
+            var payload = dict?["payload"] as? AliasDictionary
+            payload?["stop_points"] = self?.convertStops
+            dict?["payload"] = payload
+             */
+            self?.parseReply(AliasReply(reply: object as AnyObject))
         }
     }
     
@@ -57,15 +63,13 @@ class RNSPostBusGet: RNSRequest {
     override var subject: String {
         return "com.rnis.mobile.action.bus.get"
     }
-    
-    var convertStops: AliasDictionary? {
-        if let path = Bundle.main.url(forResource: "document", withExtension: "json") {
-            print("convertStops path",path)
-            do {
+   
+    var convertStops: Any? {
+        if let path = Bundle.main.url(forResource: "245543", withExtension: "json") {
+              do {
                 let data = try Data(contentsOf: path, options: .alwaysMapped)
-                print("data convertStops",data)
                 do {
-                    return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                    return try JSONSerialization.jsonObject(with: data, options: [])
                 } catch {
                     print(error.localizedDescription)
                 }
