@@ -21,12 +21,12 @@ extension RNSSearchViewController {
         if typeSegment == .transport {
             return
         }
+        request?.cancel()
         if text == "" {
             clearTable()
             return
         }
         loaderView.showInView(self.view)
-        request?.cancel()
         request = RNSPostSearch(text, type:typeSegment, complete: { [weak self] items in
             self?.items = (items as? [RNSTextItem])
             self?.tableReload()
