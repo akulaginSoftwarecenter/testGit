@@ -189,7 +189,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-cV-S8G">
-                                                    <rect key="frame" x="15" y="12.5" width="360" height="23.5"/>
+                                                    <rect key="frame" x="15" y="13" width="360" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -425,8 +425,8 @@
                                 <exclude reference="Bpr-h2-vzN"/>
                                 <exclude reference="dCB-Jb-aZH"/>
                                 <exclude reference="4R0-00-Lq3"/>
-                                <exclude reference="lNg-0J-Zk2"/>
                                 <exclude reference="01V-d0-1Vw"/>
+                                <exclude reference="lNg-0J-Zk2"/>
                             </mask>
                         </variation>
                     </view>
@@ -473,30 +473,22 @@
                                     <segue destination="Kph-gp-ckL" kind="embed" id="4VD-0u-xfD"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O73-fR-LCi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igw-Fj-h1Z">
+                                <rect key="frame" x="8" y="91" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="9s5-Vc-Bha"/>
+                                    <constraint firstAttribute="height" constant="55" id="i3L-ev-8as"/>
+                                </constraints>
+                                <state key="normal" image="menu"/>
+                                <connections>
+                                    <action selector="menuAction:" destination="331-8K-jLD" eventType="touchUpInside" id="7dC-yA-Snx"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O73-fR-LCi">
                                 <rect key="frame" x="8" y="91" width="55" height="485"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igw-Fj-h1Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
-                                        <state key="normal" image="menu"/>
-                                        <connections>
-                                            <action selector="menuAction:" destination="331-8K-jLD" eventType="touchUpInside" id="7dC-yA-Snx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-ts-tBS">
-                                        <rect key="frame" x="0.0" y="430" width="55" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="55" id="Iey-LX-B5f"/>
-                                            <constraint firstAttribute="height" priority="999" constant="55" id="VYi-3U-Jqz"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="ic_prev_route"/>
-                                        <connections>
-                                            <action selector="actionRoute:" destination="331-8K-jLD" eventType="touchUpInside" id="zqT-YX-Sey"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="dy1-ku-nHp"/>
+                                    <constraint firstAttribute="width" constant="55" id="mq8-5m-Hvq"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -504,6 +496,17 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-ts-tBS">
+                                <rect key="frame" x="8" y="521" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Iey-LX-B5f"/>
+                                    <constraint firstAttribute="height" priority="999" constant="55" id="VYi-3U-Jqz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="ic_prev_route"/>
+                                <connections>
+                                    <action selector="actionRoute:" destination="331-8K-jLD" eventType="touchUpInside" id="zqT-YX-Sey"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98r-zG-70h">
                                 <rect key="frame" x="312" y="91" width="55" height="55"/>
                                 <state key="normal" image="Poisk"/>
@@ -520,11 +523,15 @@
                             <constraint firstAttribute="trailing" secondItem="6Ve-MX-LaU" secondAttribute="trailing" id="97b-eN-huC"/>
                             <constraint firstItem="vEE-X5-GKA" firstAttribute="top" secondItem="6Ve-MX-LaU" secondAttribute="bottom" id="Bma-1J-XR8"/>
                             <constraint firstItem="6Ve-MX-LaU" firstAttribute="top" secondItem="R58-PX-FS2" secondAttribute="top" id="CRW-GZ-60X"/>
+                            <constraint firstItem="CFh-ts-tBS" firstAttribute="trailing" secondItem="O73-fR-LCi" secondAttribute="trailing" id="GMb-6F-c4H"/>
                             <constraint firstItem="vEE-X5-GKA" firstAttribute="top" secondItem="O73-fR-LCi" secondAttribute="bottom" constant="-55" id="TNg-EK-qd0"/>
                             <constraint firstItem="O73-fR-LCi" firstAttribute="top" secondItem="98r-zG-70h" secondAttribute="top" id="bbU-Jd-6i2"/>
+                            <constraint firstItem="Igw-Fj-h1Z" firstAttribute="trailing" secondItem="O73-fR-LCi" secondAttribute="trailing" id="jBJ-MZ-Vrz"/>
+                            <constraint firstItem="Igw-Fj-h1Z" firstAttribute="top" secondItem="O73-fR-LCi" secondAttribute="top" id="jk2-sz-hCi"/>
                             <constraint firstAttribute="trailing" secondItem="98r-zG-70h" secondAttribute="trailing" constant="8" id="tGP-uW-ZOf"/>
                             <constraint firstItem="O73-fR-LCi" firstAttribute="leading" secondItem="R58-PX-FS2" secondAttribute="leading" constant="-36" id="tpt-oF-ebx"/>
                             <constraint firstItem="vEE-X5-GKA" firstAttribute="top" secondItem="O73-fR-LCi" secondAttribute="bottom" constant="91" id="vNM-tV-JtF"/>
+                            <constraint firstItem="CFh-ts-tBS" firstAttribute="bottom" secondItem="O73-fR-LCi" secondAttribute="bottom" id="xWY-he-dLS"/>
                             <constraint firstItem="O73-fR-LCi" firstAttribute="leading" secondItem="R58-PX-FS2" secondAttribute="leading" constant="8" id="yMZ-vE-4e6"/>
                         </constraints>
                         <variation key="default">
@@ -536,6 +543,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="menuBtn" destination="Igw-Fj-h1Z" id="T10-0t-kLk"/>
+                        <outlet property="routeBtn" destination="CFh-ts-tBS" id="UWE-4u-cDw"/>
                         <outlet property="searchButton" destination="98r-zG-70h" id="1dY-8A-SfJ"/>
                         <outlet property="stackView" destination="O73-fR-LCi" id="YeF-Jw-YPh"/>
                         <outletCollection property="hidingButtonsConstraints" destination="dy1-ku-nHp" collectionClass="NSMutableArray" id="qNM-kv-6JE"/>
@@ -550,7 +559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qwt-Vi-HXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-599" y="-734"/>
+            <point key="canvasLocation" x="-599.20000000000005" y="-734.48275862068976"/>
         </scene>
     </scenes>
     <resources>

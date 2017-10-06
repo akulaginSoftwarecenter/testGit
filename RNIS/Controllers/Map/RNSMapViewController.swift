@@ -20,7 +20,9 @@ class RNSMapViewController: UIViewController {
     //
     var containerController: RNSMapParentController?
     var presentViewController: UIViewController?
-    
+
+    @IBOutlet weak var routeBtn: UIButton!
+    @IBOutlet weak var menuBtn: UIButton!
     /**
     route in RNSPostRouting com.rnis.geo.action.service.routing
      */
@@ -32,12 +34,21 @@ class RNSMapViewController: UIViewController {
         RNSMapManager.startLocation()
        // RNSMapManager.prepareStub()
         _ = RNSMapManager.shared.pinMyLocation
-        //animator = MapButtonsAnimator(superview: view, duration: 0.7, usingSpringAnimation: true)
+        prepareAnimator()
+    }
+    
+    func prepareAnimator() {
         animator = MapButtonsAnimator(superview: view, duration: 0.3, usingSpringAnimation: false)
         animator.extraAnimationsWithVisibilityStateHidden = { [weak self] in
-            self?.stackView.alpha = $0 ? 0 : 1
-            self?.searchButton.alpha = $0 ? 0 : 1
+            self?.prepareAlpha($0 ? 0 : 1)
         }
+    }
+    
+    func prepareAlpha(_ alpha: CGFloat) {
+        stackView.alpha = alpha
+        searchButton.alpha = alpha
+        routeBtn.alpha = alpha
+        menuBtn.alpha = alpha
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +61,6 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //animator.setupOnce(showingButtonsConstraints, hidingButtonsConstraints, initialVisibilityStateHidden: true)
         animator.setupOnce(showingButtonsConstraints2, hidingButtonsConstraints2, initialVisibilityStateHidden: true)
     }
     

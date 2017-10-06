@@ -47,9 +47,13 @@ class RNSMapParentController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         prepareTargetIcon()
         updateZoom()
-        //animator = MapButtonsAnimator(superview: view, duration: 0.7, usingSpringAnimation: true)
+        prepareAnimator()
+    }
+    
+    func prepareAnimator() {
         animator = MapButtonsAnimator(superview: view, duration: 0.3, usingSpringAnimation: false)
         animator.extraAnimationsWithVisibilityStateHidden = { [weak self] in
             self?.leftStackView.alpha = $0 ? 0 : 1
@@ -78,12 +82,13 @@ class RNSMapParentController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //animator.setupOnce(showingButtonsConstraints, hidingButtonsConstraints, initialVisibilityStateHidden: true)
+        
         animator.setupOnce(showingButtonsConstraints2, hidingButtonsConstraints2, initialVisibilityStateHidden: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         animator.setMapButtons(hidden: false, animated: true)
     }
     
