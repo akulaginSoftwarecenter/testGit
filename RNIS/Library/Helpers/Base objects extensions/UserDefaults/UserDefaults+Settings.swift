@@ -9,6 +9,16 @@
 import Foundation
 
 extension UserDefaults {
+    
+    static let kFirstZoom = "firstZoom"
+    
+    static var isDidFirstZoom: Bool {
+        return standard.bool(forKey: kFirstZoom)
+    }
+    
+    static func firstZoomComplete() {
+        return standard.set(true, forKey: kFirstZoom)
+    }
 
     static var hideZoomButtonInMap: Bool {
         get {

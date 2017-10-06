@@ -15,7 +15,7 @@ extension RNSLocationManager: CLLocationManagerDelegate {
         if isUse {
             manager.startUpdatingLocation()
             handlerStartLocation?()
-            RNSMapManager.mapView.setZoomLevel(14)
+            RNSMapManager.firstZoomIfNeed()
         }
     }
     

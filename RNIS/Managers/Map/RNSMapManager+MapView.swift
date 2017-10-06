@@ -30,6 +30,17 @@ extension RNSMapManager {
     
     static func testRedPlace() {
         mapCenter(redPlaceLocation.coordinate.point)
-        mapView.setZoomLevel(14)
+        setZoomLevel(14)
     }
+    
+    static func setZoomLevel(_ zoom: Int32) {
+        mapView.setZoomLevel(zoom)
+    }
+    
+    static func firstZoomIfNeed() {
+        if !UserDefaults.isDidFirstZoom {
+            UserDefaults.firstZoomComplete()
+            setZoomLevel(14)
+        }
+   }
 }

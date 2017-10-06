@@ -47,7 +47,7 @@ extension RNSMapManager {
         }
         RNSMenuManager.showMap()
         RNSMapManager.mapCenter(item.point)
-        RNSMapManager.mapView.setZoomLevel(16)
+        RNSMapManager.setZoomLevel(16)
         RNSMapManager.showInfoIfNeed(item)
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class RNSPostBusGet: RNSRequest {
+class RNSPostBusGet: RNSPostRequestMobileToken {
     var item: RNSBus?
     var complete: AliasComplete?
     
