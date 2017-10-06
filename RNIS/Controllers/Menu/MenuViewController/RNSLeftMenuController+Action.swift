@@ -15,6 +15,7 @@ extension RNSLeftMenuController {
             RNSMenuManager.showProfile()
         } else {
             STRouter.showLogin()
+            RNSMenuManager.hideLeftMenu(animated: true)
         }
     }
     

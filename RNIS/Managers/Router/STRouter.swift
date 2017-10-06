@@ -9,23 +9,20 @@
 import UIKit
 
 class STRouter: NSObject {
-    
     static let shared = STRouter()
     
-    static var rootViewController:BaseNavigationController? {
-        return UIApplication.shared.delegate!.window!!.rootViewController as! BaseNavigationController?
-    }
+    static var rootViewController = BaseNavigationController()
     
     static func prepareRoot(_ vc: UIViewController) {
         UIApplication.shared.delegate!.window!!.rootViewController = vc
     }
     
     static var rootView: UIView? {
-        return rootViewController?.view
+        return rootViewController.view
     }
     
     static var viewControllers: [UIViewController]? {
-        return rootViewController?.viewControllers
+        return rootViewController.viewControllers
     }
     
     static func push(_ viewController: UIViewController?,
@@ -34,7 +31,7 @@ class STRouter: NSObject {
         guard let viewController = viewController else {
             return
         }
-        rootViewController?.push(viewController, animated: animated, completion: completion)
+        rootViewController.push(viewController, animated: animated, completion: completion)
     }
     
     static func pushAnimated(_ viewController: UIViewController?, animated: Bool = true, completion: EmptyBlock? = nil) {
@@ -42,11 +39,11 @@ class STRouter: NSObject {
     }
     
     static func pop(animated: Bool = true, completion: EmptyBlock? = nil) {
-        rootViewController?.pop(animated: animated, completion: completion)
+        rootViewController.pop(animated: animated, completion: completion)
     }
     
     static func popToRoot(_ animated: Bool = true) {
-        rootViewController?.popToRootViewController(animated: animated)
+        rootViewController.popToRootViewController(animated: animated)
     }
     
     static func popNoAnimate(completion: EmptyBlock? = nil) {
@@ -67,7 +64,7 @@ class STRouter: NSObject {
     }
     
     static func clearNav() {
-        rootViewController?.viewControllers.removeAll()
+        rootViewController.viewControllers.removeAll()
     }
     
     static func pushAnimatedImageScroll(_ viewController: UIViewController?) {

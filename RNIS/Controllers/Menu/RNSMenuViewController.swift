@@ -13,23 +13,30 @@ class RNSMenuViewController: LGSideMenuController {
 
     override open var rootViewController: UIViewController? {
         didSet{
-            self.rootViewController?.view.frame = self.view.bounds
+            fatalError("Don't use this method, use baseNavigationController.setViewControllers(:animated:) instead")
         }
     }
+
+    var baseNavigationController: BaseNavigationController!
     
     override func awakeFromNib(){
         super.awakeFromNib()
         
         leftViewController = RNSRedContainer(RNSLeftMenuController.initialController)
         
-        prepareHandlers()
-        RNSMenuManager.showFirst()
-        
         let menuWidth = UIScreen.width - 123
         leftViewWidth = menuWidth
         leftViewPresentationStyle = .slideBelow
         leftViewAlwaysVisibleOptions = LGSideMenuAlwaysVisibleOptions()
         isLeftViewSwipeGestureEnabled = true
+
+        baseNavigationController = STRouter.rootViewController
+        super.rootViewController = baseNavigationController
+        baseNavigationController.view.frame = view.bounds
+        baseNavigationController.setNavigationBarHidden(true, animated: false)
+
+        prepareHandlers()
+        RNSMenuManager.showFirst()
     }
     
     override func leftViewWillLayoutSubviews(with size: CGSize) {
@@ -42,8 +49,8 @@ class RNSMenuViewController: LGSideMenuController {
         guard let vc = vc else {
             return
         }
-        if rootViewController != vc {
-            rootViewController = vc
+        if baseNavigationController.viewControllers.first != vc {
+            baseNavigationController.setViewControllers([vc], animated: true)
         }
         hideLeftView(animated: true)
     }
