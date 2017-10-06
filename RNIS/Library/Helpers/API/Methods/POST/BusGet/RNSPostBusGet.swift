@@ -65,18 +65,6 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
     }
    
     var convertStops: Any? {
-        if let path = Bundle.main.url(forResource: "245543", withExtension: "json") {
-              do {
-                let data = try Data(contentsOf: path, options: .alwaysMapped)
-                do {
-                    return try JSONSerialization.jsonObject(with: data, options: [])
-                } catch {
-                    print(error.localizedDescription)
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }
-        return nil
+        return Utils.dictToJson("245543")
     }
 }

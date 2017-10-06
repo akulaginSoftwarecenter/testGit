@@ -82,4 +82,20 @@ class Utils {
             STRouter.showAlertRegistration()
         }
     }
+    
+    static func dictToJson(_ name: String?) -> Any? {
+        if let path = Bundle.main.url(forResource: name, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: path, options: .alwaysMapped)
+                do {
+                    return try JSONSerialization.jsonObject(with: data, options: [])
+                } catch {
+                    print(error.localizedDescription)
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
 }

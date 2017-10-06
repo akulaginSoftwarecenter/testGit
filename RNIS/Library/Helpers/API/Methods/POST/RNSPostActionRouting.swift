@@ -31,7 +31,16 @@ class RNSPostActionRouting: RNSRequest {
         self.failure = failure
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
-            self?.parseReply(AliasReply(reply: object))
+            /*
+             var dict = object as? AliasDictionary
+             var payload = dict?["payload"] as? AliasDictionary
+             //var items = payload?["items"] as? [AliasDictionary]
+             //items?.append(Utils.dictToJson("route") as? AliasDictionary)
+            payload?["items"] = [Utils.dictToJson("route")]
+            print("route",Utils.dictToJson("route"))
+            dict?["payload"] = payload
+            */
+            self?.parseReply(AliasReply(reply: object as AnyObject))
         }
     }
     
