@@ -35,11 +35,11 @@ extension SupportInfoViewController {
     func checkValidFields() {
         prepareError(nil)
         guard let contact = contact, !contact.isEmpty else {
-            prepareError("Заполните Почту")
+            prepareError("Поле 'Почта' обязательно для заполнения.")
             return
         }
         guard let body = body, !body.isEmpty else {
-            prepareError("Заполните сообщение")
+            prepareError("Поле 'Текст обращения' обязательно для заполнения.")
             return
         }
         send()
