@@ -16,6 +16,14 @@ extension RNSMapParentController {
             self.setMapRegime(1)
         }
     }
+
+    @IBAction func menuAction(_ sender: Any) {
+        RNSMenuManager.showLeftMenu()
+    }
+
+    @IBAction func searchAction(_ sender: Any) {
+        RNSSearchViewController.initialPushAnimatedRed()
+    }
     
     @IBAction func plusAction(_ sender: Any) {
         mapView.zoomIn()
@@ -27,9 +35,5 @@ extension RNSMapParentController {
     
     @IBAction func userLocationAction(_ sender: Any) {
         RNSMapManager.startLocation()
-    }
-    
-    @IBAction func actionTest(_ sender: Any) {
-        RNSMapManager.testRedPlace()
     }
 }

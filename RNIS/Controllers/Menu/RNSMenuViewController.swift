@@ -51,6 +51,8 @@ class RNSMenuViewController: LGSideMenuController {
         }
         if baseNavigationController.viewControllers.first != vc {
             baseNavigationController.setViewControllers([vc], animated: true)
+        } else {
+            baseNavigationController.popToRootViewController(animated: true)
         }
         hideLeftView(animated: true)
     }

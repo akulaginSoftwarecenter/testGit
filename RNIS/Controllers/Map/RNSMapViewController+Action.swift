@@ -10,15 +10,7 @@ import Foundation
 
 extension RNSMapViewController {
     
-    @IBAction func menuAction(_ sender: Any) {
-        RNSMenuManager.showLeftMenu()
-    }
-    
     @IBAction func actionRoute(_ sender: Any) {
         RNSDutyViewController.initialPushAnimatedRed()
-    }
-    
-    @IBAction func searchAction(_ sender: Any) {
-        RNSSearchViewController.initialPushAnimatedRed()
     }
 }
