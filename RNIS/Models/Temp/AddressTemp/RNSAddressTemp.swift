@@ -21,7 +21,15 @@ class RNSAddressTemp: RNISMappableBase, RNSTextItem {
         uuid <- map["id"]
         name <- map["entity"]
         coord <- map["coord"]
-        latitude = Double(coord?.first ?? "")
-        longitude = Double(coord?.last ?? "")
+        longitude = Double(coord?.first ?? "")
+        latitude = Double(coord?.last ?? "")
+    }
+    
+    var point: PGGeoPoint? {
+        guard let latitude = latitude,
+            let longitude = longitude else {
+                return nil
+        }
+        return PGGeoPoint(latitude: latitude, longitude: longitude)
     }
 }
