@@ -39,10 +39,15 @@ class RNSMenuManager: NSObject {
     }()
     
     static var handlerShowLeftMenu: EmptyBlock?
+    static var handlerHideLeftMenu: ((Bool) -> Void)?
     static var handlerShowVC: ((UIViewController?) -> ())?
     
     static func showLeftMenu() {
         handlerShowLeftMenu?()
+    }
+
+    static func hideLeftMenu(animated: Bool) {
+        handlerHideLeftMenu?(animated)
     }
     
     static func showVC(_ vc: UIViewController?) {
