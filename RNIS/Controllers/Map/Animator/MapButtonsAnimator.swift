@@ -37,13 +37,13 @@ class MapButtonsAnimator {
         updateConstraints(withVisibilityStateHidden: hidden)
         if animated {
             if usingSpringAnimation {
-                UIView.animate(withDuration: duration, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                     self.view.layoutIfNeeded()
                     self.extraAnimationsWithVisibilityStateHidden?(hidden)
                 }, completion: nil)
             }
             else {
-                UIView.animate(withDuration: duration, delay: 0.5, animations: {
+                UIView.animate(withDuration: duration, animations: {
                     self.view.layoutIfNeeded()
                     self.extraAnimationsWithVisibilityStateHidden?(hidden)
                 })
