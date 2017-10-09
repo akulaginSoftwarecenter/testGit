@@ -7,7 +7,21 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class RNSAddressTemp: RNSNameMapable, RNSTextItem {
-
+class RNSAddressTemp: RNISMappableBase, RNSTextItem {
+    
+    var uuid: String?
+    var name: String?
+    var latitude: Double?
+    var longitude: Double?
+    var coord: [String]?
+    
+    public override func mapping(map: Map) {
+        uuid <- map["id"]
+        name <- map["entity"]
+        coord <- map["coord"]
+        latitude = Double(coord?.first ?? "")
+        longitude = Double(coord?.last ?? "")
+    }
 }

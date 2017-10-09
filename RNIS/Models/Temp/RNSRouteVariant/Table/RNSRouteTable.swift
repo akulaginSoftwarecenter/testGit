@@ -65,6 +65,6 @@ class RNSRouteTable: NSObject {
          */
     }
     
-    //var lastBus: RNSBusRouteTemp?
+    var lastBus: RNSBusRouteTemp?
     //var doneMoveLast: Bool?
 }

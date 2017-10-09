@@ -34,7 +34,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     @IBOutlet weak var tableView: UITableView!
     
     var items: [RNSTextItem]?
-    var request: RNSPostSearch?
+    var request: AlamofireAPI?
     
     override func viewDidLoad() {
         super.viewDidLoad()

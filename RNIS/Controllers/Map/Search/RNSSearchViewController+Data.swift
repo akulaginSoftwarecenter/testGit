@@ -26,17 +26,34 @@ extension RNSSearchViewController {
             clearTable()
             return
         }
+        
+        if typeSegment == .stop {
+            searchStops()
+        } else if typeSegment == .address {
+            searchAddress()
+        }
+    }
+    
+    func searchStops() {
         loaderView.showInView(self.view)
         request = RNSPostSearch(text, type:typeSegment, complete: { [weak self] items in
             self?.items = (items as? [RNSTextItem])
             self?.tableReload()
             self?.removeLoader()
-        }, failure: { [weak self] text in
-            self?.prepareError(text)
-            self?.clearTable()
-            self?.removeLoader()
+            }, failure: { [weak self] text in
+                self?.prepareError(text)
+                self?.clearTable()
+                self?.removeLoader()
         })
-
+    }
+    
+    func searchAddress() {
+        loaderView.showInView(self.view)
+        request = RNSGetSearchAddress(text) { [weak self] items in
+            self?.items = items
+            self?.tableReload()
+            self?.removeLoader()
+        }
     }
     
     func removeLoader() {
