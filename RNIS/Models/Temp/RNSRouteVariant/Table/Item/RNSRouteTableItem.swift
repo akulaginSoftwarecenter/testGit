@@ -25,7 +25,6 @@ class RNSRouteTableItem {
     var height = CGFloat(73)
     
     var type: TypeTableItem = .stop
-    
     var typeLine: TypePoint = .bus
     
     var shortLine = false

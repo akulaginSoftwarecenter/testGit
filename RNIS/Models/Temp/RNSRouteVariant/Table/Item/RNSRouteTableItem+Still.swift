@@ -14,7 +14,7 @@ extension RNSRouteTableItem {
         if openStill {
             return text2
         } else {
-            return text1
+            return "Еще \(countStill)"
         }
     }
     
@@ -47,7 +47,20 @@ extension RNSRouteTableItem {
     }
     
     func prepareStill() {
-        
+        let item = self.copy() as? RNSRouteTableItem
+        type = .still
+        itemsStill = [RNSRouteTableItem]()
+        appendStillItem(item)
+        text2 = "Свернуть"
+        text1 = "Еще \(countStill)"
+        height = 60
+    }
+    
+    func appendStillItem(_ item: RNSRouteTableItem?) {
+        guard let item = item else {
+            return
+        }
+        itemsStill.append(item)
     }
     /*
     static func genStill() -> RNSRouteTableItem {

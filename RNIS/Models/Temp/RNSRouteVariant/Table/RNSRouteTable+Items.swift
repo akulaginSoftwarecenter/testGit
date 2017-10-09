@@ -22,12 +22,16 @@ extension RNSRouteTable {
         guard 1 <= lastIndex  else {
             return
         }
+        var lastBus: RNSBusRouteTemp?
         for i in 1..<lastIndex {
             guard let point = points.valueAt(i),
                 point.stop_point != nil else {
                     continue
             }
-            processingPoint(point)
+            processingPoint(point, lastBus: lastBus)
+            if let route = point.route {
+                lastBus = route
+            }
         }
         appendStop(points.valueAt(lastIndex))
         prepareEdge()
@@ -35,42 +39,33 @@ extension RNSRouteTable {
         prepareFirts()
     }
     
-    func processingPoint(_ point: RNSRoutePoint?) {
+    func processingPoint(_ point: RNSRoutePoint?, lastBus: RNSBusRouteTemp? = nil) {
         guard let point = point else {
             return
         }
+        var isNewBus = false
+        if let bus = point.route, lastBus != bus  {
+            isNewBus = true
+        }
         
-        if point.isBus {
+        if isNewBus {
             let stop = self.appendStop(point)
             stop.shortLine = true
-            appendBus(point.route?.title)
-            appendStill()
+            let item = RNSRouteTableItem.genBus(point.route?.title)
+            items.append(item)
         } else {
             let stop = self.stop(point)
             if isLastStop {
                 lastItem?.prepareStill()
             }
             
-            //if
-            //items.append(stop)
+            if isLastStill {
+                lastItem?.appendStillItem(stop)
+            } else {
+                items.append(stop)
+            }
         }
         
-    }
-    
-    var isLastStop: Bool {
-        return lastItem?.isStop ?? false
-    }
-    
-    var isLastStill: Bool {
-        return lastItem?.isStop ?? false
-    }
-    
-    var isLastS: Bool {
-        return lastItem?.isStop ?? false
-    }
-    
-    var lastItem: RNSRouteTableItem? {
-        return items.last
     }
     
     func stop(_ point: RNSRoutePoint?) -> RNSRouteTableItem {
@@ -84,15 +79,6 @@ extension RNSRouteTable {
         let item = stop(point)
         items.append(item)
         return item
-    }
-    
-    func appendBus(_ title: String?) {
-        let item = RNSRouteTableItem.genBus(title)
-        items.append(item)
-    }
-    
-    var isLastItemRun: Bool {
-        return items.last?.isRun ?? false
     }
     
     func prepareEdge() {

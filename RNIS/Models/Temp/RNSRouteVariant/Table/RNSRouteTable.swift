@@ -21,4 +21,15 @@ class RNSRouteTable: NSObject {
         self.points = main?.points
         prepareItems()
     }
+    
+    var itemsStill: [RNSRouteTableItem] {
+        var itemsStill = [RNSRouteTableItem]()
+        for item in items {
+            itemsStill.append(item)
+            if item.isStill, item.openStill {
+                itemsStill.append(contentsOf: item.itemsStill)
+            }
+        }
+        return itemsStill
+    }
 }

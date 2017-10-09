@@ -37,6 +37,10 @@ extension RNSRoutePoint {
         return type == .bus
     }
     
+    var isHaveBus: Bool {
+        return route != nil
+    }
+    
     var verticalTableItem: RNSVerticalTableItem {
         return RNSVerticalTableItem(self)
     }
