@@ -21,18 +21,17 @@ extension Array where Element: RNSRouteTableItem {
             if item.doneMove {
                 nextItem?.previousDoneMove = true
             }
-            
             if item.isBusCell {
                 item.doneMove = item.previousDoneMove
             }
-            
             if item.isStillCell, previousItem?.doneMove ?? false {
                 item.doneMove = true
                 let itemsStill = item.itemsStill
                 itemsStill.first?.previousDoneMove = true
                 itemsStill.prepareMove()
+                
+                nextItem?.previousDoneMove = item.lastStillDoneMove
             }
-            print("item done 4",item.doneMove)
         }
     }
 }

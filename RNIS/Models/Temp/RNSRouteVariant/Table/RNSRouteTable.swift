@@ -37,8 +37,7 @@ class RNSRouteTable: NSObject {
     
     func randomDoneMove() {
         points?.forEach{ $0.doneMove = false }
-        let index = 3///Int.rand(0, limit: points?.count ?? 0)
-        print("randomDoneMove",index)
+        let index = 3//Int.rand(0, limit: points?.count ?? 0)
         for item in points?.prefix(index) ?? []  {
             item.doneMove = true
         }
