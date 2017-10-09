@@ -55,16 +55,4 @@ class RNSRouteTableItem {
         bus.height = 60
         return bus
     }
-    
-    var isBus: Bool {
-        return typeLine == .bus
-    }
-    
-    var isStop: Bool {
-        return type == .stop
-    }
-    
-    var isRun: Bool {
-        return typeLine == .run
-    }
 }
