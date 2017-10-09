@@ -11,7 +11,9 @@ import Foundation
 extension Array where Element: Any {
     
     func valueAt(_ index: Int?) -> Element? {
-        guard let index = index, index < count  else {
+        guard let index = index,
+            index < count,
+            index >= 0  else {
             return nil
         }
         return self[index]

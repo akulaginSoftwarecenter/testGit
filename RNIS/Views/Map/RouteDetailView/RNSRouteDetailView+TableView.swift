@@ -37,7 +37,7 @@ extension RNSRouteDetailView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = self.item(indexPath)
-        if item.isStill {
+        if item.isStillCell {
             item.openStill = !item.openStill
             animateInsertStill(indexPath)
         }

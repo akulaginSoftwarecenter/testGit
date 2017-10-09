@@ -36,9 +36,9 @@ class RNSRouteStopCell: RNSRouteParentCell {
         guard let item = item, item.showLine else {
             return
         }
-        let isBus = item.isBus
-        busLine.isHidden = !isBus
-        runLine.isHidden = isBus
+        let isBusLine = item.isBusLine
+        busLine.isHidden = !isBusLine
+        runLine.isHidden = isBusLine
         topBusLine.isHidden = !item.showTopBusLine
         busConstraint.constant = item.shortLine ? 0 : -7
     }
@@ -56,9 +56,6 @@ class RNSRouteStopCell: RNSRouteParentCell {
         runLine.colorCircle = color
         busLine.backgroundColor = color
         circleView.backgroundColor = doneMove ? doneColor : .FFB9AF
-        
-        text1Label.isHidden = doneMove
-        arrowLabel.isHidden = doneMove
              
         topBusLine.backgroundColor = (item?.previousDoneMove ?? false) ? doneColor : .white
     }

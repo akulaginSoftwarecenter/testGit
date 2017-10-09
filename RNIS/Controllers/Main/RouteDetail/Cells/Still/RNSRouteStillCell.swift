@@ -45,11 +45,7 @@ class RNSRouteStillCell: RNSRouteParentCell {
     var itemsStill: [RNSRouteTableItem]? {
         return item?.itemsStill
     }
-   
-    override var doneMove: Bool {
-        return (itemsStill?.first(where: { $0.doneMove })) != nil
-    }
-    
+
     var lastDoneMove: Bool {
         return itemsStill?.last?.doneMove ?? false
     }

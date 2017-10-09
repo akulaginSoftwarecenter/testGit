@@ -28,7 +28,7 @@ class RNSRouteTable: NSObject {
         var itemsStill = [RNSRouteTableItem]()
         for item in items {
             itemsStill.append(item)
-            if item.isStill, item.openStill {
+            if item.isStillCell, item.openStill {
                 itemsStill.append(contentsOf: item.itemsStill)
             }
         }
@@ -45,26 +45,8 @@ class RNSRouteTable: NSObject {
     }
     
     func prepareMove() {
-        
-        for i in 0..<items.count - 1 {
-            
-            guard let item = items.valueAt(i) else {
-               continue
-            }
-            if item.doneMove {
-                
-            }
-   
-        }
-        /*
-        for item in items {
-            if item.isBus {
-                
-            }
-        }
-         */
+        items.prepareMove()
     }
     
     var lastBus: RNSBusRouteTemp?
-    //var doneMoveLast: Bool?
 }

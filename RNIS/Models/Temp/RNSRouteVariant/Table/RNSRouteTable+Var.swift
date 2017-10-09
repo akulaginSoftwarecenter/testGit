@@ -11,11 +11,11 @@ import Foundation
 extension RNSRouteTable {
     
     var isLastStop: Bool {
-        return lastItem?.isStop ?? false
+        return lastItem?.isStopCell ?? false
     }
     
     var isLastStill: Bool {
-        return lastItem?.isStill ?? false
+        return lastItem?.isStillCell ?? false
     }
     
     var lastItem: RNSRouteTableItem? {

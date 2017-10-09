@@ -18,20 +18,24 @@ extension RNSRouteTableItem {
         }
     }
     
-    var isStill: Bool {
+    var isStillCell: Bool {
         return type == .still
+    }
+    
+    var isBusCell: Bool {
+        return type == .bus
+    }
+    
+    var isStopCell: Bool {
+        return type == .stop
     }
     
     var countStill: Int {
         return itemsStill.count
     }
     
-    var isBus: Bool {
+    var isBusLine: Bool {
         return typeLine == .bus
-    }
-    
-    var isStop: Bool {
-        return type == .stop
     }
     
     var isRun: Bool {
