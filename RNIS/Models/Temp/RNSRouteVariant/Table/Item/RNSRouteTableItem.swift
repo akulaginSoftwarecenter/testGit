@@ -61,6 +61,10 @@ class RNSRouteTableItem {
         return typeLine == .bus
     }
     
+    var isStop: Bool {
+        return type == .stop
+    }
+    
     var isRun: Bool {
         return typeLine == .run
     }

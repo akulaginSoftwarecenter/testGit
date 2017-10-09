@@ -45,6 +45,10 @@ extension RNSRouteTableItem {
         }
         return indexPaths
     }
+    
+    func prepareStill() {
+        
+    }
     /*
     static func genStill() -> RNSRouteTableItem {
         let item = RNSRouteTableItem()

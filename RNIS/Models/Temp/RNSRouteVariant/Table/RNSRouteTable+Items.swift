@@ -39,18 +39,49 @@ extension RNSRouteTable {
         guard let point = point else {
             return
         }
-        let stop = appendStop(point)
+        
         if point.isBus {
+            let stop = self.appendStop(point)
             stop.shortLine = true
             appendBus(point.route?.title)
             appendStill()
+        } else {
+            let stop = self.stop(point)
+            if isLastStop {
+                lastItem?.prepareStill()
+            }
+            
+            //if
+            //items.append(stop)
         }
+        
     }
     
-    @discardableResult func appendStop(_ point: RNSRoutePoint?) -> RNSRouteTableItem {
+    var isLastStop: Bool {
+        return lastItem?.isStop ?? false
+    }
+    
+    var isLastStill: Bool {
+        return lastItem?.isStop ?? false
+    }
+    
+    var isLastS: Bool {
+        return lastItem?.isStop ?? false
+    }
+    
+    var lastItem: RNSRouteTableItem? {
+        return items.last
+    }
+    
+    func stop(_ point: RNSRoutePoint?) -> RNSRouteTableItem {
         let item = RNSRouteTableItem.genStop(point)
         item.height = 60
         item.showTopBusLine = !isLastItemRun
+        return item
+    }
+    
+    @discardableResult func appendStop(_ point: RNSRoutePoint?) -> RNSRouteTableItem {
+        let item = stop(point)
         items.append(item)
         return item
     }
