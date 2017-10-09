@@ -72,6 +72,7 @@ class RNSChangePasswordController: UIViewController {
     func actionNext() {
         item?.password = passwordTwoField.text
         item?.old_password = passwordOld
+        item?.new_email = nil  // Don't re-send new email parameter on next update profile request
         
         RNSPostUpdate(item, complete: { [weak self] item in
             self?.pop()
