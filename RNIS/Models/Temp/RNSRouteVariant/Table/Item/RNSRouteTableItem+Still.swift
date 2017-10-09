@@ -26,6 +26,7 @@ extension RNSRouteTableItem {
         appendStillItem(item)
         text2 = "Свернуть"
         text1 = "Еще \(countStill)"
+        //previousDoneMove = item?.doneMove ?? false
         height = 60
     }
     

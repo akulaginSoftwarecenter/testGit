@@ -23,12 +23,12 @@ class RNSRouteStopCell: RNSRouteParentCell {
     @IBOutlet weak var circleView: RNSCircle!
     
     override func prepareUI() {
+        super.prepareUI()
         text1Label.text = item?.text1
         text2Label.text = item?.text2
         edgeCircle.isHidden = !(item?.edge ?? true)
         
         prepareTypeRoute()
-        prepareDone()
     }
     
     func prepareTypeRoute() {
@@ -49,19 +49,17 @@ class RNSRouteStopCell: RNSRouteParentCell {
         runLine.isHidden = true
     }
     
-    func prepareDone() {
-        guard showMove else {
-            return
-        }
-        
-        let doneMove = item?.doneMove ?? false
-        let color: UIColor = doneMove ? .A3423C : .white
+    override func prepareDone() {
+          
+        let color: UIColor = doneMove ? doneColor : .white
         
         runLine.colorCircle = color
         busLine.backgroundColor = color
-        circleView.backgroundColor = doneMove ? .A3423C : .FFB9AF
+        circleView.backgroundColor = doneMove ? doneColor : .FFB9AF
         
         text1Label.isHidden = doneMove
         arrowLabel.isHidden = doneMove
+             
+        topBusLine.backgroundColor = (item?.previousDoneMove ?? false) ? doneColor : .white
     }
 }

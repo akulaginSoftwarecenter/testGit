@@ -18,12 +18,25 @@ class RNSRouteParentCell: RNSBaseTableCell {
         }
     }
     
+    let doneColor = UIColor.A3423C
+    
     func prepareUI() {
         
+        if showMove {
+            prepareDone()
+        }
+    }
+    
+    func prepareDone() {
+    
     }
     
     func prepareItem(_ item: RNSRouteTableItem?, showMove: Bool = false) {
         self.showMove = showMove
         self.item = item
+    }
+    
+    var doneMove: Bool {
+        return item?.doneMove ?? false
     }
 }

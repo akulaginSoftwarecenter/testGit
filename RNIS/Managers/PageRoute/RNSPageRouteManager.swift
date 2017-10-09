@@ -54,7 +54,7 @@ class RNSPageRouteManager: NSObject {
     static func showMoveMapStub() {
         RNSPageRouteManager.removeNonActivRoute()
         let item = RNSPageRouteManager.currentItem
-        item?.points?.first?.doneMove = true
+       // item?.points?.first?.doneMove = true
         RNSPageRouteManager.prepareFirstNavel(523)
         let vc = RNSMoveMapViewController.initController(item)
         vc?.handlerDidDisappear = {

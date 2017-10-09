@@ -13,6 +13,7 @@ class RNSRouteTotalCell: RNSRouteParentCell {
     @IBOutlet weak var label: UILabel!
      
     override func prepareUI() {
+        super.prepareUI()
         label.text = item?.text1
     }
 }

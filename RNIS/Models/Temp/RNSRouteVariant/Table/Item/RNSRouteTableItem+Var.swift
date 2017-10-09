@@ -37,4 +37,8 @@ extension RNSRouteTableItem {
     var isRun: Bool {
         return typeLine == .run
     }
+    
+    var lastStillDoneMove: Bool {
+        return itemsStill.last?.doneMove ?? false
+    }
 }

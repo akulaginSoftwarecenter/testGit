@@ -19,7 +19,9 @@ class RNSRouteTable: NSObject {
         
         self.main = main
         self.points = main?.points
+        randomDoneMove()
         prepareItems()
+        prepareMove()
     }
     
     var itemsStill: [RNSRouteTableItem] {
@@ -33,5 +35,36 @@ class RNSRouteTable: NSObject {
         return itemsStill
     }
     
-    var lastBus: RNSBusRouteTemp?
+    func randomDoneMove() {
+        points?.forEach{ $0.doneMove = false }
+        let index = 3///Int.rand(0, limit: points?.count ?? 0)
+        print("randomDoneMove",index)
+        for item in points?.prefix(index) ?? []  {
+            item.doneMove = true
+        }
+    }
+    
+    func prepareMove() {
+        
+        for i in 0..<items.count - 1 {
+            
+            guard let item = items.valueAt(i) else {
+               continue
+            }
+            if item.doneMove {
+                
+            }
+   
+        }
+        /*
+        for item in items {
+            if item.isBus {
+                
+            }
+        }
+         */
+    }
+    
+    //var lastBus: RNSBusRouteTemp?
+    //var doneMoveLast: Bool?
 }

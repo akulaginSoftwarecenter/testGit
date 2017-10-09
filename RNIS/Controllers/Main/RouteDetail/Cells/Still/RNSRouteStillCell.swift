@@ -23,6 +23,8 @@ class RNSRouteStillCell: RNSRouteParentCell {
     }
     
     override func prepareUI() {
+        super.prepareUI()
+        
         line.roundTopCorners()
         topLine.roundBottomCorners()
         label.text = item?.stillText
@@ -31,9 +33,42 @@ class RNSRouteStillCell: RNSRouteParentCell {
     }
     
     func updateCircles() {
+        if showMove, doneMove {
+            return
+        }
         let color: UIColor = openStill ? .white : .FFB9AF
         for view in circles {
             view.backgroundColor = color
         }
+    }
+    
+    var itemsStill: [RNSRouteTableItem]? {
+        return item?.itemsStill
+    }
+   
+    override var doneMove: Bool {
+        return (itemsStill?.first(where: { $0.doneMove })) != nil
+    }
+    
+    var lastDoneMove: Bool {
+        return itemsStill?.last?.doneMove ?? false
+    }
+   
+    override func prepareDone() {
+        let color: UIColor = doneMove ? doneColor : .white
+        topLine.backgroundColor = color
+        for view in circles {
+            view.backgroundColor = color
+        }
+        
+        prepareLineDone()
+    }
+    
+    func prepareLineDone() {
+        var color = UIColor.white
+        if (openStill && doneMove) || (!openStill && lastDoneMove) {
+            color = doneColor
+        }
+        line.backgroundColor = color
     }
 }

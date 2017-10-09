@@ -14,7 +14,12 @@ class RNSRouteBusCell: RNSRouteParentCell {
     @IBOutlet weak var label: UILabel!
     
     override func prepareUI() {
+        super.prepareUI()
         label.text = item?.text1
         line.roundBottomCorners()
+    }
+    
+    override func prepareDone() {
+        line.backgroundColor = doneMove ? .A3423C : .white
     }
 }

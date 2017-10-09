@@ -14,6 +14,7 @@ extension RNSRouteTable {
         let item = RNSRouteTableItem.genStop(point)
         item.height = 60
         item.showTopBusLine = !isLastItemRun
+        item.doneMove = point?.doneMove ?? false
         return item
     }
     

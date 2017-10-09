@@ -14,6 +14,7 @@ extension RNSRouteTable {
         let stop = self.appendStop(point)
         stop.shortLine = true
         let item = RNSRouteTableItem.genBus(point?.route?.title)
+        //item.doneMove = point?.doneMove ?? false
         items.append(item)
     }
     

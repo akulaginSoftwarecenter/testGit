@@ -32,6 +32,7 @@ class RNSRouteTableItem {
     var showTopBusLine = true
     
     var doneMove = false
+    var previousDoneMove = false
     
     static func genStop(_ time: Int?, text2: String?, typeLine: TypePoint?) -> RNSRouteTableItem {
         let stop = RNSRouteTableItem()
