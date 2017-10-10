@@ -22,6 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-1c-tbX" customClass="RNSFavoritesBusView" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="16" y="110" width="343" height="557"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Yf-Kvs" customClass="RNSTransportTableView" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="16" y="110" width="343" height="557"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ALO-xf-KRM">
                                 <rect key="frame" x="16" y="82" width="343" height="29"/>
                                 <segments>
@@ -33,14 +41,6 @@
                                     <action selector="segmentControlAction:" destination="d4g-Rq-0fC" eventType="valueChanged" id="kBN-Ab-5bt"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-1c-tbX" customClass="RNSFavoritesBusView" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="110" width="343" height="557"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Yf-Kvs" customClass="RNSTransportTableView" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="110" width="343" height="557"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Мой транспорт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GM4-ce-MW5" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="122" y="28" width="71" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
