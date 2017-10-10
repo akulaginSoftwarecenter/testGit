@@ -42,11 +42,23 @@ class RNSMovePopupController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewVariant.showMove = true
         prepareItem()
-     }
+        prepareObservers()
+    }
+    
+    func prepareObservers() {
+        NotificationCenter.addObserverLocation(self, selector: #selector(updateItem))
+    }
     
     func prepareItem() {
+        viewVariant.showMove = true
+        updateItem()
+    }
+    
+    @objc func updateItem() {
+        if viewVariant == nil {
+            return
+        }
         viewVariant.item = item
     }
     
@@ -60,5 +72,9 @@ class RNSMovePopupController: UIViewController {
             STRouter.pop()
         }
         vc?.pushAnimatedRed()
+    }
+    
+    deinit {
+        NotificationCenter.removeObserver(self)
     }
 }

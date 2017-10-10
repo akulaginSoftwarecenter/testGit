@@ -27,8 +27,20 @@ class RNSMoveDetailController: UIViewController {
         super.viewDidLoad()
         
         detailView.showMove = true
-        detailView.item = item?.tableItem
+        updateItem()
         prepareFlagView()
+        prepareObservers()
+    }
+    
+    func prepareObservers() {
+        NotificationCenter.addObserverLocation(self, selector: #selector(updateItem))
+    }
+    
+    @objc func updateItem() {
+        if detailView == nil {
+            return
+        }
+        detailView.item = item?.tableItem
     }
     
     override class var storyboardName: String {
@@ -41,5 +53,6 @@ class RNSMoveDetailController: UIViewController {
     
     deinit {
         print("RNSMoveDetailController deinit")
+        NotificationCenter.removeObserver(self)
     }
 }

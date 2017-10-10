@@ -20,7 +20,12 @@ extension RNSLocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        RNSLocationManager.handlerMyLocation?()
+        RNSLocationManager.updateLocation()
+    }
+    
+    static func updateLocation() {
+        handlerMyLocation?()
         RNSMapManager.mapView.setMockLocation(RNSLocationManager.point)
+        NotificationCenter.postLocation()
     }
 }

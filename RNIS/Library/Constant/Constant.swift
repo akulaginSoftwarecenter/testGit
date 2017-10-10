@@ -26,6 +26,7 @@ let kUuid = "uuid"
 let kStrelka = "Стрелка"
 let kNews = "Новости"
 let kUpdateTime = "updateTime"
+let kUpdateLocation = "updateLocation"
 let kServerNotAviable = "Сервер недоступен"
 let kName = "name"
 

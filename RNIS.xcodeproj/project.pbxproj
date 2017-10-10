@@ -3225,9 +3225,9 @@
 		837ABF0F1F2EE2E000AB5E54 /* NSNotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				837ABF121F2EE2E000AB5E54 /* NotificationCenter+Utils.swift */,
 				837ABF101F2EE2E000AB5E54 /* Notification+KeyBoard.swift */,
 				837ABF111F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift */,
-				837ABF121F2EE2E000AB5E54 /* NotificationCenter+Utils.swift */,
 			);
 			name = NSNotificationCenter;
 			path = "Library/Helpers/Base objects extensions/NSNotificationCenter";
