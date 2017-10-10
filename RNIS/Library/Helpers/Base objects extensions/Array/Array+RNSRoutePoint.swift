@@ -51,4 +51,57 @@ extension Array where Element: RNSRoutePoint {
             handler?(valueAt(i),valueAt(i + 1))
         }
     }
+    
+    var nearPoint: RNSRoutePoint? {
+        guard var nearPoint = first,
+            var nearDistance = nearPoint.distanceToCurrent else {
+                return nil
+        }
+        
+        for point in self {
+            guard let toCurrent = point.distanceToCurrent  else {
+                continue
+            }
+            if  toCurrent < nearDistance {
+                nearPoint = point
+                nearDistance = toCurrent
+            }
+        }
+        return nearPoint
+    }
+    
+    var pairNearPoints: AliasPair? {
+        guard let point = nearPoint,
+            let item = point as? Element,
+            let ind = self.index(of: item) else {
+                return nil
+        }
+        
+        let prevousPoint = valueAt(ind - 1)
+        let nextPoint = valueAt(ind + 1)
+        let prevousDistance = prevousPoint?.distanceToCurrent
+        let nextDistance = nextPoint?.distanceToCurrent
+        
+        let prevousTuple: AliasPair = (prevousPoint, point)
+        let nextTuple: AliasPair = (point, nextPoint)
+        
+        if let prevousDistance = prevousDistance,
+            let nextDistance = nextDistance {
+            if prevousDistance > nextDistance {
+                return prevousTuple
+            } else {
+                return nextTuple
+            }
+        }
+        
+        if prevousDistance != nil {
+            return prevousTuple
+        }
+        
+        if nextDistance != nil {
+            return nextTuple
+        }
+        
+        return nil
+    }
 }

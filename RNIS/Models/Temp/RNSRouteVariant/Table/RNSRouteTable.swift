@@ -19,7 +19,8 @@ class RNSRouteTable: NSObject {
         
         self.main = main
         self.points = main?.points
-        randomDoneMove()
+        prepareDoneLocation()
+        //randomDoneMove()
         prepareItems()
         prepareMove()
     }

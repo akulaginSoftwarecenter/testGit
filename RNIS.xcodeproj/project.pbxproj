@@ -1909,6 +1909,13 @@
 			name = MapParent;
 			sourceTree = "<group>";
 		};
+		832BA83E1F8CAD09005509D1 /* AliasPair */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AliasPair;
+			sourceTree = "<group>";
+		};
 		832E4B691F2EC26C00A4AD77 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -2873,6 +2880,7 @@
 		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				832BA83E1F8CAD09005509D1 /* AliasPair */,
 				837ABF281F2EEDF800AB5E54 /* Array */,
 				8326AA3C1F1F643E00F893C8 /* Button */,
 				835D85381F4FDAE100B83EB2 /* CLLocationCoordinate2D */,
