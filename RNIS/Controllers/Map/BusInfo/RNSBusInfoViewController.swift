@@ -9,7 +9,10 @@
 import UIKit
 
 class RNSBusInfoViewController: UIViewController {
-    
+    fileprivate let smallScreenHeightThreshold: CGFloat = 600
+    fileprivate let smallScreenTopConstraint: CGFloat = 135
+
+
     static func initController(_ item: RNSBusTemp?) -> UIViewController? {
         let vc = RNSBusInfoViewController.initialController as? RNSBusInfoViewController
         vc?.item = item
@@ -17,7 +20,7 @@ class RNSBusInfoViewController: UIViewController {
     }
     
     var item: RNSBusTemp?
-    
+    @IBOutlet weak var topDistanceConstraint: NSLayoutConstraint!
     @IBOutlet weak var driverField: RNSNameFieldLeft!
     @IBOutlet weak var conductorField: RNSNameFieldLeft!
     @IBOutlet weak var depoField: RNSNameFieldLeft!
@@ -26,7 +29,9 @@ class RNSBusInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if UIScreen.height < smallScreenHeightThreshold {
+            topDistanceConstraint.constant = smallScreenTopConstraint
+        }
         prepareUI()
     }
     
