@@ -13,7 +13,6 @@ extension RNSRouteTable {
     func randomDoneMove() {
         clearMove()
         let index = Int.rand(0, limit: points?.count ?? 0)
-        print("randomDoneMove",index)
         prepareMoveAtIndex(index)
     }
     
@@ -25,9 +24,6 @@ extension RNSRouteTable {
         
         let first = nearPoints.first
         let last = nearPoints.last
-        print("prepareDoneLocation1",indexAtPoint(first))
-        print("prepareDoneLocation2",indexAtPoint(last))
-        print(" -------------------")
         if isLast(last),
             let between = self.distanceBetween(nearPoints),
             let distanceFirst = first?.distanceToCurrent,
@@ -38,7 +34,6 @@ extension RNSRouteTable {
     }
     
     func prepareMoveAtPoint(_ point: RNSRoutePoint?) {
-        print("prepareMoveAtPoint",point)
         let index = indexAtPoint(point)
         prepareMoveAtIndex(index)
     }

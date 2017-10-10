@@ -12,11 +12,25 @@ class RNSCircleHoleWhite: RNSCircleHole {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainCircle.backgroundColor = .FFB9AF
+        prepareDefaut()
         smallCircle.backgroundColor = .white
+    }
+    
+    var doneMove: Bool {
+        didSet {
+            if doneMove = true {
+                prepareDone()
+            } else {
+                prepareDefaut()
+            }
+        }
     }
     
     func prepareDone() {
         mainCircle.prepareDone()
+    }
+    
+    func prepareDefaut() {
+        mainCircle.backgroundColor = .FFB9AF
     }
 }
