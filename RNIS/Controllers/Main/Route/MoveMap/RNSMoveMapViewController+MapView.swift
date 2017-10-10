@@ -13,12 +13,23 @@ extension RNSMoveMapViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let containerController = segue.destination as? RNSMapParentController
         containerController?.bottomTargetConstant = 91
+        containerController?.handlerOnMapTouchEvent = {[weak self] point in
+            self?.onMapTouchEvent(point)
+        }
     }
     
     var mapView: MapView {
         return RNSMapManager.mapView
     }
     
+    func onMapTouchEvent(_ point: PGGeoPoint) {
+        print("onMapTouchEvent",point)
+        /*
+        stubLocation = point.location
+        RNSLocationManager.updateLocation()
+        */
+    }
+
     func prepareMapView() {
        // mapView.setMapCenter(PGGeoPoint(latitude: 59.935051, longitude: 30.306572))
        // mapView.setZoomLevel(17)
