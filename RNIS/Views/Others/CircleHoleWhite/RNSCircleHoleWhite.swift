@@ -16,9 +16,9 @@ class RNSCircleHoleWhite: RNSCircleHole {
         smallCircle.backgroundColor = .white
     }
     
-    var doneMove: Bool {
+    var doneMove: Bool = false {
         didSet {
-            if doneMove = true {
+            if doneMove == true {
                 prepareDone()
             } else {
                 prepareDefaut()

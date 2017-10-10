@@ -26,10 +26,10 @@ extension RNSDotsBussView {
     }
     
     func prepareColorEnd() {
-        lastCircle.done = doneMove
+        lastCircle.doneMove = doneMove
     }
     
     var doneMove: Bool {
-        return lastCircle.done = item?.points?.last?.doneMove ?? false
+        return item?.points?.last?.doneMove ?? false
     }
 }
