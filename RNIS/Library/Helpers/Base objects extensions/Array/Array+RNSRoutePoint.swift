@@ -57,9 +57,14 @@ extension Array where Element: RNSRoutePoint {
             var nearDistance = nearPoint.distanceToCurrent else {
                 return nil
         }
+        let lastIndex = count - 1
+        guard 1 <= lastIndex  else {
+            return nil
+        }
         
-        for point in self {
-            guard let toCurrent = point.distanceToCurrent  else {
+        for i in 1..<lastIndex {
+            guard let point = valueAt(i),
+                let toCurrent = point.distanceToCurrent else {
                 continue
             }
             if  toCurrent < nearDistance {
@@ -76,36 +81,26 @@ extension Array where Element: RNSRoutePoint {
             let ind = self.index(of: item) else {
                 return nil
         }
-        
-        
         let prevousPoint = valueAt(ind - 1)
+        if checkContainsInPoints(point, pointCheck: prevousPoint) {
+            return (prevousPoint, point)
+        }
+        
         let nextPoint = valueAt(ind + 1)
-        return (point,nextPoint)
-        /*
-        let prevousDistance = prevousPoint?.distanceToCurrent
-        let nextDistance = nextPoint?.distanceToCurrent
-        
-        let prevousTuple: AliasPair = (prevousPoint, point)
-        let nextTuple: AliasPair = (point, nextPoint)
-        
-        if let prevousDistance = prevousDistance,
-            let nextDistance = nextDistance {
-            if prevousDistance > nextDistance {
-                return prevousTuple
-            } else {
-                return nextTuple
-            }
-        }
-        
-        if prevousDistance != nil {
-            return prevousTuple
-        }
-        
-        if nextDistance != nil {
-            return nextTuple
+        if checkContainsInPoints(point, pointCheck: nextPoint) {
+            return (point, nextPoint)
         }
         
         return nil
-         */
+    }
+    
+    func checkContainsInPoints(_ point: RNSRoutePoint?, pointCheck: RNSRoutePoint?) -> Bool {
+        if let pointCheck = pointCheck,
+            let distanceToCurrent = pointCheck.distanceToCurrent,
+            let between = pointCheck.distanceTo(point),
+            distanceToCurrent < between {
+            return true
+        }
+        return false
     }
 }
