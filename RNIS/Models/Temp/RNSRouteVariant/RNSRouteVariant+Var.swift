@@ -13,15 +13,13 @@ extension RNSRouteVariant {
     var buss: [RNSBusRouteTemp] {
         var buss = [RNSBusRouteTemp]()
         for point in points ?? [] {
+            if let bus = point.route {
+                if !buss.contains(bus) {
+                    buss.append(bus)
+                }
+            }
             if point.doneMove {
                 buss.last?.doneMove = true
-            }
-            guard let bus = point.route else {
-                continue
-            }
-            if !buss.contains(bus) {
-                buss.append(bus)
-
             }
         }
         return buss
