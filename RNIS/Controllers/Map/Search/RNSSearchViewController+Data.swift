@@ -26,8 +26,9 @@ extension RNSSearchViewController {
             clearTable()
             return
         }
-        
-        if typeSegment == .stop {
+        if text.characters.count < 3 {
+            clearTable()
+        } else if typeSegment == .stop {
             searchStops()
         } else if typeSegment == .address {
             searchAddress()
