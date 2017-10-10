@@ -189,7 +189,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-cV-S8G">
-                                                    <rect key="frame" x="15" y="13" width="360" height="23.5"/>
+                                                    <rect key="frame" x="15" y="12.5" width="360" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -405,8 +405,8 @@
                             <constraint firstAttribute="trailing" secondItem="98r-zG-70h" secondAttribute="trailing" constant="8" id="BI6-zs-yix"/>
                             <constraint firstItem="Igw-Fj-h1Z" firstAttribute="top" secondItem="VDo-Tl-1In" secondAttribute="bottom" constant="71" id="Dm0-rF-tGN"/>
                             <constraint firstItem="Igw-Fj-h1Z" firstAttribute="leading" secondItem="OeM-qq-VS0" secondAttribute="leading" constant="8" id="HNx-1I-NB4"/>
-                            <constraint firstItem="Igw-Fj-h1Z" firstAttribute="trailing" secondItem="OeM-qq-VS0" secondAttribute="leading" id="KuG-PA-hUY"/>
-                            <constraint firstAttribute="trailing" secondItem="98r-zG-70h" secondAttribute="leading" id="Rag-lY-ROK"/>
+                            <constraint firstItem="Igw-Fj-h1Z" firstAttribute="trailing" secondItem="OeM-qq-VS0" secondAttribute="leading" constant="35" id="KuG-PA-hUY"/>
+                            <constraint firstAttribute="trailing" secondItem="98r-zG-70h" secondAttribute="leading" constant="35" id="Rag-lY-ROK"/>
                             <constraint firstItem="4om-RU-vkH" firstAttribute="leading" secondItem="OeM-qq-VS0" secondAttribute="leading" constant="8" id="RcG-gU-FMU"/>
                             <constraint firstItem="NEs-Xe-ZuX" firstAttribute="trailing" secondItem="98r-zG-70h" secondAttribute="trailing" id="Rnp-rx-Ef2"/>
                             <constraint firstItem="Dc3-Xr-qYE" firstAttribute="leading" secondItem="Igw-Fj-h1Z" secondAttribute="leading" id="WYQ-UI-mOo"/>

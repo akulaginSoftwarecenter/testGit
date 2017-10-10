@@ -57,6 +57,7 @@ class RNSCodeContainerController: STContainerViewController {
     
     func prepareError(_ error: String?) {
         containerViewController?.errorLabel.text = error
+        containerViewController?.codeField.text = ""
     }
     
     override class var storyboardName: String {

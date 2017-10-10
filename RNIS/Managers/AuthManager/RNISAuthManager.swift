@@ -15,8 +15,7 @@ class RNISAuthManager {
         RNSPostLogout { _, _, _ in
             STRouter.removeLoader()
             clearUserDefaults()
-            RNSMenuManager.showMap()
-            STRouter.showLogin(animated: false)
+            STRouter.showAfterLogout(animated: true)
             RNSMenuManager.leftMenuUpdate()
             RNSMenuManager.handlerClearProfile?()
         }
