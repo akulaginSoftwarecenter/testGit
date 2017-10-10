@@ -77,8 +77,11 @@ extension Array where Element: RNSRoutePoint {
                 return nil
         }
         
+        
         let prevousPoint = valueAt(ind - 1)
         let nextPoint = valueAt(ind + 1)
+        return (point,nextPoint)
+        /*
         let prevousDistance = prevousPoint?.distanceToCurrent
         let nextDistance = nextPoint?.distanceToCurrent
         
@@ -103,5 +106,6 @@ extension Array where Element: RNSRoutePoint {
         }
         
         return nil
+         */
     }
 }

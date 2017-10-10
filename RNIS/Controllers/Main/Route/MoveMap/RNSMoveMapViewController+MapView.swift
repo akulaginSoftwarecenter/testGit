@@ -24,10 +24,9 @@ extension RNSMoveMapViewController {
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
         print("onMapTouchEvent",point)
-        /*
+    
         stubLocation = point.location
         RNSLocationManager.updateLocation()
-        */
     }
 
     func prepareMapView() {

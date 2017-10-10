@@ -25,6 +25,9 @@ extension RNSRouteTable {
         
         let first = nearPoints.first
         let last = nearPoints.last
+        print("prepareDoneLocation1",indexAtPoint(first))
+        print("prepareDoneLocation2",indexAtPoint(last))
+        print(" -------------------")
         if isLast(last),
             let between = self.distanceBetween(nearPoints),
             let distanceFirst = first?.distanceToCurrent,
