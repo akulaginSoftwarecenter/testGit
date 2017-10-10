@@ -23,8 +23,10 @@ class RNSDotsBussView: BaseViewWithXIBInit {
         }
     }
     
+    var showMove = false
+    
     func reloadData() {
-        prepareColorFirst()
+        prepareMoveIfNeed()
         let widthArrow = self.widthArraw
         constraintSmallDots.constant = widthArrow
         stackView.removeArrangedSubviews()
@@ -32,8 +34,8 @@ class RNSDotsBussView: BaseViewWithXIBInit {
         for bus in item?.buss ?? [] {
             let name = RNSDotsName(bus)
             stackView.addArrangedSubview(name)
-            
-            let arrow = RNSArrowLeft()
+            let doneMove = showMove ? bus.doneMove : false
+            let arrow = RNSArrowLeft(doneMove)
             arrow.snp.makeConstraints({ (make) in
                 make.width.equalTo(widthArrow)
             })
@@ -47,12 +49,5 @@ class RNSDotsBussView: BaseViewWithXIBInit {
         let betweens = CGFloat(3 * ((countBuss + 1) * 2))
         let titleWidthBuss = item?.titleWidthBuss ?? 0
         return (UIScreen.width - edge - betweens - titleWidthBuss)/(countBuss + 1)
-    }
-    
-    func prepareColorFirst() {
-        if item?.points?.first?.doneMove ?? false {
-            firstCircle.prepareDone()
-            dotsWhite.prepareDone()
-        }
     }
 }

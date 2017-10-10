@@ -9,8 +9,9 @@
 import UIKit
 
 class RNSArrowLeft: UIImageView {
-    convenience init() {
-        self.init(image: #imageLiteral(resourceName: "ArrowLeft"))
+    convenience init(_ doneMove: Bool?) {
+        let image = (doneMove ?? false) ?#imageLiteral(resourceName: "ArrowLeftDone") : #imageLiteral(resourceName: "ArrowLeft")
+        self.init(image: image)
         contentMode = .right
         clipsToBounds = true
     }

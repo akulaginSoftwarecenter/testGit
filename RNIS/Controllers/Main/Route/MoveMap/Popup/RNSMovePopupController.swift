@@ -42,8 +42,9 @@ class RNSMovePopupController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewVariant.showMove = true
         prepareItem()
-    }
+     }
     
     func prepareItem() {
         viewVariant.item = item

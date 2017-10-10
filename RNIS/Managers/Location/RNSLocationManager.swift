@@ -19,9 +19,9 @@ class RNSLocationManager: NSObject {
     lazy var locationManager:CLLocationManager = {
         let locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
-        locationManager.activityType = .fitness
+        locationManager.activityType = .automotiveNavigation
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        locationManager.distanceFilter = 2
+        locationManager.distanceFilter = 5
         locationManager.headingFilter = 1
         return locationManager
     }()
