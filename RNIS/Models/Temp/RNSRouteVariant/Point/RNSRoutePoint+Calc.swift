@@ -44,4 +44,8 @@ extension RNSRoutePoint {
     var verticalTableItem: RNSVerticalTableItem {
         return RNSVerticalTableItem(self)
     }
+    
+    var distanceToCurrent: CLLocationDistance? {
+        return point?.distanceToCurrent
+    }
 }

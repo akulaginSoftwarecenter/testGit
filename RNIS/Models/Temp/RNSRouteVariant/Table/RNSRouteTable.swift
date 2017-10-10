@@ -35,22 +35,5 @@ class RNSRouteTable: NSObject {
         return itemsStill
     }
     
-    func randomDoneMove() {
-        clearMove()
-        let index = Int.rand(0, limit: points?.count ?? 0)
-        print("randomDoneMove",index)
-        for item in points?.prefix(index) ?? []  {
-            item.doneMove = true
-        }
-    }
-    
-    func clearMove() {
-        points?.forEach{ $0.doneMove = false; $0.route?.doneMove = false }
-    }
-    
-    func prepareMove() {
-        items.prepareMove()
-    }
-    
     var lastBus: RNSBusRouteTemp?
 }
