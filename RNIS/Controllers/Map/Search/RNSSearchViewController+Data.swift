@@ -22,13 +22,13 @@ extension RNSSearchViewController {
             return
         }
         request?.cancel()
-        if text == "" {
-            clearTable()
-            return
-        }
         if text.characters.count < 3 {
             clearTable()
-        } else if typeSegment == .stop {
+            removeLoader()
+            return
+        }
+        
+        if typeSegment == .stop {
             searchStops()
         } else if typeSegment == .address {
             searchAddress()
