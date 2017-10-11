@@ -29,13 +29,6 @@ class RNSMoveMapViewController: UIViewController {
         preparePopup()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        item?.removeAllRoad()
-        handlerDidDisappear?()
-    }
-    
     func preparePopup() {
         guard let containerVC = RNSMovePopupController.initController(item),
             let containerView = containerVC.view else {
@@ -50,6 +43,8 @@ class RNSMoveMapViewController: UIViewController {
         viewTop.backgroundColor = .backColor
     }
     deinit {
+        item?.removeAllRoad()
+        handlerDidDisappear?()
         stubLocation = nil
         RNSLocationManager.updateLocation()
     }
