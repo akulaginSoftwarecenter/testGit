@@ -43,11 +43,14 @@ class RNSDutyViewController: UIViewController {
             return
         }
   */
+        STRouter.showLoader()
         RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: { items in
             RNSPageRouteManager.items = items
             RNSPageRouteController.controller.pushAnimated()
+            STRouter.removeLoader()
         }, failure: { [weak self] text in
             self?.prepareError(text)
+            STRouter.removeLoader()
         })
     }
 
