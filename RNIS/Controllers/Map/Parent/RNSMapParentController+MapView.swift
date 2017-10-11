@@ -27,6 +27,13 @@ extension RNSMapParentController: PGMapViewDelegate {
         handlerOnMapEvent?()
         busUpdate()
         busStopUpdate()
+        /*
+        print("zoom",mapView.getZoomLevel())
+        let distance = mapView.lastMinCoord.distanceTo(mapView.lastCenterCoord)
+        print("distance",distance)
+        print("height",UIScreen.height)
+        print("width",UIScreen.width)
+        */
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
