@@ -32,6 +32,7 @@ class RNSMoveMapViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
+        item?.removeAllRoad()
         handlerDidDisappear?()
     }
     
