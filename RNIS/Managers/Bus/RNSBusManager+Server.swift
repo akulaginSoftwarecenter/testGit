@@ -18,7 +18,7 @@ extension RNSBusManager {
             return
         }
         //CounterTime.startTimer()
-        updateBD()
+        //updateBD()
         request?.cancel()
         request = RNSPostBusList(lastMinCoord, center: lastCenterCoord, complete: { (uuids) in
             //CounterTime.endTimer()
