@@ -33,14 +33,19 @@ class RNSRouteStopCell: RNSRouteParentCell {
     
     func prepareTypeRoute() {
         hiddenLine()
-        guard let item = item, item.showLine else {
+        prepareTopBusLine()
+        guard let item = item,
+            item.showLine else {
             return
         }
         let isBusLine = item.isBusLine
         busLine.isHidden = !isBusLine
         runLine.isHidden = isBusLine
-        topBusLine.isHidden = !item.showTopBusLine
         busConstraint.constant = item.shortLine ? 0 : -7
+    }
+    
+    func prepareTopBusLine() {
+        topBusLine.isHidden = !(item?.showTopBusLine ?? false)
     }
     
     func hiddenLine() {
