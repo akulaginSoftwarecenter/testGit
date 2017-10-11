@@ -16,6 +16,9 @@ extension RNSMoveMapViewController {
         containerController?.handlerOnMapLongTouchEvent = {[weak self] point in
             self?.onMapLongTouchEvent(point)
         }
+        containerController?.handlerOnMapEvent = {[weak self] in
+            self?.onMapEvent()
+        }
     }
     
     var mapView: MapView {
@@ -31,5 +34,9 @@ extension RNSMoveMapViewController {
         RNSPageRouteManager.removeAllRoute()
         item?.prepareRoadActivate()
         item?.zoomToRoute()
+    }
+    
+    func onMapEvent() {
+        item?.prepareRoadActivateAtZoom()
     }
 }
