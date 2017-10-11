@@ -13,8 +13,8 @@ extension RNSMoveMapViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let containerController = segue.destination as? RNSMapParentController
         containerController?.bottomTargetConstant = 91
-        containerController?.handlerOnMapTouchEvent = {[weak self] point in
-            self?.onMapTouchEvent(point)
+        containerController?.handlerOnMapLongTouchEvent = {[weak self] point in
+            self?.onMapLongTouchEvent(point)
         }
     }
     
@@ -22,7 +22,7 @@ extension RNSMoveMapViewController {
         return RNSMapManager.mapView
     }
     
-    func onMapTouchEvent(_ point: PGGeoPoint) {
+    func onMapLongTouchEvent(_ point: PGGeoPoint) {
         stubLocation = point.location
         RNSLocationManager.updateLocation()
     }

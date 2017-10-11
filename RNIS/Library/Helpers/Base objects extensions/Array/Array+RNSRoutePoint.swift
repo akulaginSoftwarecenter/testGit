@@ -81,7 +81,6 @@ extension Array where Element: RNSRoutePoint {
             let ind = self.index(of: item) else {
                 return nil
         }
-        print("ind",ind)
         let prevousPoint = valueAt(ind - 1)
         let nextPoint = valueAt(ind + 1)
         

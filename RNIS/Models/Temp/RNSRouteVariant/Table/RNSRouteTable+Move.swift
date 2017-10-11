@@ -23,9 +23,7 @@ extension RNSRouteTable {
         }
         
         let first = nearPoints.first
-        print("first",indexAtPoint(first))
         let last = nearPoints.last
-        print("last",indexAtPoint(last))
         if isLast(last),
             let between = self.distanceBetween(nearPoints),
             let distanceFirst = first?.distanceToCurrent,
@@ -41,7 +39,7 @@ extension RNSRouteTable {
     }
     
     func prepareMoveAtIndex(_ index: Int?) {
-        print("prepareMoveAtIndex",index)
+        //print("prepareMoveAtIndex",index)
         for item in points?.prefix((index ?? 0) + 1) ?? []  {
             item.doneMove = true
         }
