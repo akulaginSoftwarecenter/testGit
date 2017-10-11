@@ -15,12 +15,12 @@ extension RNSBuildRouteView {
     }
     
     @IBAction func actionFrom(_ sender: Any) {
-        RNSMapManager.pointFrom = point
+        RNSMapManager.pointFrom = RNSDutyAddressTemp(point)
         requestRoute()
      }
     
     @IBAction func actionHere(_ sender: Any) {
-        RNSMapManager.pointHere = point
+        RNSMapManager.pointHere = RNSDutyAddressTemp(point)
         requestRoute()
     }
 }

@@ -32,8 +32,8 @@ class RNSPostRouting: RNSTokenRequest {
         let pointHere = RNSMapManager.pointHere else {
             return items
         }
-        items.append(contentsOf: [pointFrom.dictionary,
-                                  pointHere.dictionary])
+        items.append(contentsOf: [pointFrom.toJSON(),
+                                  pointHere.toJSON()])
         return items
     }
     

@@ -41,4 +41,9 @@ extension UIViewController {
     func pushAnimated() {
         STRouter.pushAnimated(self)
     }
+    
+    func push(_ animated: Bool = false,
+              completion: EmptyBlock? = nil) {
+        STRouter.push(self, animated: animated, completion: completion)
+    }
 }

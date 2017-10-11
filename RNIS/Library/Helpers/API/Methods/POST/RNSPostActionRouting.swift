@@ -20,7 +20,7 @@ class RNSPostActionRouting: RNSRequest {
     
     typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSRouteVariant>,RNSRegisterError>
     
-    @discardableResult convenience init(_ from: RNSDutyAddressTemp?, to: RNSDutyAddressTemp?, date: Date?, complete: AliasComplete?, failure: AliasStringBlock? = nil) {
+    @discardableResult convenience init(_ from: RNSDutyAddressTemp?, to: RNSDutyAddressTemp?, date: Date? = nil, complete: AliasComplete?, failure: AliasStringBlock? = nil) {
         self.init()
         
   
@@ -48,7 +48,7 @@ class RNSPostActionRouting: RNSRequest {
         
         if  model?.success ?? false,
             let items = model?.payload?.items {
-            print("RNSPostActionRouting 2",items.count)
+            print("RNSPostActionRouting",items.count)
             complete?(items)
             return
         }

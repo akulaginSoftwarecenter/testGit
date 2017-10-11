@@ -26,8 +26,22 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     }
     
     func requestRoute() {
-        RNSPostRouting(complete: {[weak self] (_,_,_) in
+        STRouter.showLoader()
+        RNSPostActionRouting(RNSMapManager.pointFrom, to: RNSMapManager.pointHere, complete: {[weak self] items in
+            RNSPageRouteManager.items = items
+            self?.showPageRoute()
+            STRouter.removeLoader()
+            self?.removeAnimate()
+        }, failure: { [weak self] text in
+            STRouter.showAlertOk(text)
+            STRouter.removeLoader()
             self?.removeAnimate()
         })
     }
+    
+    func showPageRoute() {
+        let vc = RNSDutyViewController.initialController
+        STRouter.redContainer(vc)?.push()
+        RNSPageRouteController.controller.push()
+     }
 }

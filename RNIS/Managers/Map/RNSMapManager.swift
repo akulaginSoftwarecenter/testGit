@@ -25,8 +25,8 @@ class RNSMapManager: NSObject {
         return RNSPinMyLocation()
     }()
     
-    static var pointFrom: PGGeoPoint?
-    static var pointHere: PGGeoPoint?
+    static var pointFrom: RNSDutyAddressTemp?
+    static var pointHere: RNSDutyAddressTemp?
     
     static var handlerRemovePinBuild: EmptyBlock?
     static var handlerAddRoute: ((PGPolyline?) -> ())?
@@ -34,9 +34,9 @@ class RNSMapManager: NSObject {
     static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
     
     static func prepareRoutePoints() {
-        let point = RNSLocationManager.point
-        pointFrom = point
-        pointHere = point
+        let item = RNSDutyAddressTemp(RNSLocationManager.point)
+        pointFrom = item
+        pointHere = item
     }
     
     static func removeOldPinBuild() {
