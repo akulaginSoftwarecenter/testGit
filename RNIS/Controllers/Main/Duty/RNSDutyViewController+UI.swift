@@ -39,4 +39,12 @@ extension RNSDutyViewController {
         rightDateConstraint.constant = isHaveDate ? 44 : 15
         crossButton.isHidden = !isHaveDate
     }
+    
+    func showLoader() {
+        loaderView.showInView(self.view)
+    }
+    
+    func removeLoader() {
+        loaderView.remove()
+    }
 }

@@ -25,4 +25,19 @@ class RNSDutyAddressTemp: RNISMappableBase {
         self.latitude = point?.latitude
         self.longitude = point?.longitude
     }
+    
+    var point: PGGeoPoint? {
+        guard let latitude = latitude,
+            let longitude = longitude else {
+                return nil
+        }
+        return PGGeoPoint(latitude: latitude, longitude: longitude)
+    }
+    
+    func loadAddress(_ complete: EmptyBlock?) {
+        RNSGetGeoCode(point) {[weak self] (address) in
+            self?.address = address
+            complete?()
+        }
+    }
 }

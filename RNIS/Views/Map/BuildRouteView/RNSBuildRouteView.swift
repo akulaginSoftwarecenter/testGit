@@ -25,9 +25,16 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
         self.removeFromSuperview()
     }
     
+    var pointFrom: RNSDutyAddressTemp? {
+        return RNSMapManager.pointFrom
+    }
+    var pointHere: RNSDutyAddressTemp? {
+        return RNSMapManager.pointHere
+    }
+    
     func requestRoute() {
         STRouter.showLoader()
-        RNSPostActionRouting(RNSMapManager.pointFrom, to: RNSMapManager.pointHere, complete: {[weak self] items in
+        RNSPostActionRouting(pointFrom, to: pointHere, complete: {[weak self] items in
             RNSPageRouteManager.items = items
             self?.showPageRoute()
             STRouter.removeLoader()
@@ -40,8 +47,9 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     }
     
     func showPageRoute() {
-        let vc = RNSDutyViewController.initialController
+        let vc = RNSDutyViewController.initialController as? RNSDutyViewController
+        vc?.loadStartItems(pointFrom, inItem: pointHere)
         STRouter.redContainer(vc)?.push()
         RNSPageRouteController.controller.push()
-     }
+    }
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 class RNSDutyViewController: UIViewController {
+    
+    lazy var loaderView:LoaderView = LoaderView()
 
     @IBOutlet weak var crossButton: UIButton!
     @IBOutlet weak var viewLabelDate: UIView!
@@ -29,31 +31,6 @@ class RNSDutyViewController: UIViewController {
         
         prepareSearchButton()
     }
-    
-    func loadData() {
-        /*
-        prepareError(nil)
-        if fromItem?.address?.isEmpty ?? true {
-            prepareError("Введите адрес отправления")
-            return
-        }
-        
-        if inItem?.address?.isEmpty ?? true {
-            prepareError("Введите адрес назначения")
-            return
-        }
-  */
-        STRouter.showLoader()
-        RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: { items in
-            RNSPageRouteManager.items = items
-            RNSPageRouteController.controller.pushAnimated()
-            STRouter.removeLoader()
-        }, failure: { [weak self] text in
-            self?.prepareError(text)
-            STRouter.removeLoader()
-        })
-    }
-
 
     override class var storyboardName: String {
         return "RNSDutyViewController"
