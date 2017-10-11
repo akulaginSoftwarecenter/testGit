@@ -15,10 +15,7 @@ extension RNSPageRouteController {
     }
     
     func prepareMapView() {
-        if let point = RNSPageRouteManager.currentItem?.points?.first?.point {
-            mapView.setMapCenter(point)
-        }
-        mapView.setZoomLevel(17)
+        RNSPageRouteManager.currentItem?.zoomToRoute()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

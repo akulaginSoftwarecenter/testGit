@@ -23,14 +23,11 @@ extension RNSMoveMapViewController {
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
-        /*
         stubLocation = point.location
         RNSLocationManager.updateLocation()
-         */
     }
 
     func prepareMapView() {
-       // mapView.setMapCenter(PGGeoPoint(latitude: 59.935051, longitude: 30.306572))
-       // mapView.setZoomLevel(17)
+        item?.zoomToRoute()
     }
 }

@@ -26,6 +26,6 @@ extension RNSLocationManager: CLLocationManagerDelegate {
     static func updateLocation() {
         handlerMyLocation?()
         RNSMapManager.mapView.setMockLocation(RNSLocationManager.point)
-       // NotificationCenter.postLocation()
+        NotificationCenter.postLocation()
     }
 }

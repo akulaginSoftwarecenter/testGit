@@ -48,6 +48,10 @@ class RNSMoveMapViewController: UIViewController {
     func prepareColor() {
         viewTop.backgroundColor = .backColor
     }
+    deinit {
+        stubLocation = nil
+        RNSLocationManager.updateLocation()
+    }
     
     override class var storyboardName: String {
         return "RNSMapParentController"

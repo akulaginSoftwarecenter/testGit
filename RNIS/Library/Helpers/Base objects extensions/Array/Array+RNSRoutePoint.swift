@@ -57,7 +57,7 @@ extension Array where Element: RNSRoutePoint {
             var nearDistance = nearPoint.distanceToCurrent else {
                 return nil
         }
-        let lastIndex = count - 1
+        let lastIndex = count
         guard 1 <= lastIndex  else {
             return nil
         }
@@ -81,17 +81,15 @@ extension Array where Element: RNSRoutePoint {
             let ind = self.index(of: item) else {
                 return nil
         }
+        print("ind",ind)
         let prevousPoint = valueAt(ind - 1)
-        if checkContainsInPoints(point, pointCheck: prevousPoint) {
-            return (prevousPoint, point)
-        }
-        
         let nextPoint = valueAt(ind + 1)
+        
         if checkContainsInPoints(point, pointCheck: nextPoint) {
             return (point, nextPoint)
+        } else {
+            return (prevousPoint, point)
         }
-        
-        return nil
     }
     
     func checkContainsInPoints(_ point: RNSRoutePoint?, pointCheck: RNSRoutePoint?) -> Bool {
