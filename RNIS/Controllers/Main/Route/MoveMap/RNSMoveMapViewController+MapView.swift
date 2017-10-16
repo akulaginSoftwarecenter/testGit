@@ -33,7 +33,7 @@ extension RNSMoveMapViewController {
     func prepareMapView() {
         RNSPageRouteManager.removeAllRoute()
         item?.prepareRoadActivate()
-        item?.zoomToRoute()
+        item?.prepareDisplayMap()
     }
     
     func onMapEvent() {

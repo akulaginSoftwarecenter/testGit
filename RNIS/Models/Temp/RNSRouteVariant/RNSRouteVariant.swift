@@ -24,10 +24,10 @@ class RNSRouteVariant: RNISMappableBase {
         name <- map[kName]
         dict = map.JSON
         prepareHashValue()
-        prepareCenterPoint()
         prepareEndDate()
         setupNavels()
         prepareTitleWidthBuss()
+        prepareDisplayData()
     }
     
     var hashValue: Int = 0
@@ -36,9 +36,10 @@ class RNSRouteVariant: RNISMappableBase {
     var roadOff: RNSRoadOff?
     var currentZoom: Int?
     var endDate: Date?
-    var centerPoint: PGGeoPoint?
     var titleWidthBuss: CGFloat?
     var navels: [RNSDurationItem]?
+    var maxSize: Double?
+    var centerPoint: PGGeoPoint?
    
     var endPoint: RNSRoutePoint? {
         return points?.last

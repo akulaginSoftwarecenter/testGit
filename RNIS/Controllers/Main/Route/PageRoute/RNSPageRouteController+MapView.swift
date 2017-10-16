@@ -15,7 +15,7 @@ extension RNSPageRouteController {
     }
     
     func prepareMapView() {
-        RNSPageRouteManager.currentItem?.zoomToRoute()
+        RNSPageRouteManager.currentPrepareDisplay()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

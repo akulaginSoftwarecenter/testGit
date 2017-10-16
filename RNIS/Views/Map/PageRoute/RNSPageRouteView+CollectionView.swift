@@ -29,6 +29,7 @@ extension RNSPageRouteView: UICollectionViewDataSource, UICollectionViewDelegate
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updateMap()
+        RNSPageRouteManager.currentPrepareDisplay()
         updatePageControl(currentIndexPath?.row)
     }
     

@@ -11,7 +11,11 @@ import Foundation
 extension RNSPageRouteView {
     
     func updateMap() {
-        RNSPageRouteManager.updateMap(item(currentIndexPath))
+        RNSPageRouteManager.updateMap(currentItem)
+    }
+    
+    var currentItem: RNSRouteVariant? {
+        return item(currentIndexPath)
     }
     
     func updatePageControl(_ index: Int? ) {

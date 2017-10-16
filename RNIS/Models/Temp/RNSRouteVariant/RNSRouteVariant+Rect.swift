@@ -33,4 +33,66 @@ extension RNSRouteVariant {
         }
         return false
     }
+    
+    func prepareDisplayData() {
+        guard let points = points,
+            let first = points.first,
+            let lat = first.latitude,
+            let lon = first.longitude else {
+                return
+        }
+        var minLat = lat
+        var maxLat = lat
+        var minLon = lon
+        var maxLon = lon
+        
+        for item in points {
+            guard let lat = item.latitude,
+                let lon = item.longitude else {
+                    continue
+            }
+            
+            if lat < minLat {
+                minLat = lat
+            }
+            
+            if maxLat < lat {
+                maxLat = lat
+            }
+            
+            if lon < minLon {
+                minLon = lon
+            }
+            
+            if maxLon < lon {
+                maxLon = lon
+            }
+        }
+        
+        let min = PGGeoPoint(latitude: minLat, longitude: minLon)
+        let max = PGGeoPoint(latitude: maxLat, longitude: maxLon)
+        
+        maxSize = min.distanceTo(max)
+        
+        let centerLat = (maxLat + minLat)/2
+        let centerLon = (maxLon + minLon)/2
+        centerPoint = PGGeoPoint(latitude: centerLat, longitude: centerLon)
+    }
+     
+    func prepareZoomIfPossible() {
+        guard let size = maxSize,
+            let zoom = RNSMapManager.zoomAtDistance(CGFloat(size)) else {
+                return
+        }
+        RNSMapManager.setZoomLevel(zoom)
+    }
+    
+    func prepareCenterIfPossible() {
+        RNSMapManager.mapCenter(centerPoint)
+    }
+    
+    func prepareDisplayMap() {
+        prepareZoomIfPossible()
+        prepareCenterIfPossible()
+    }
 }

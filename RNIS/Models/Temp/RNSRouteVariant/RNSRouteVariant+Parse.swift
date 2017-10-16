@@ -17,11 +17,6 @@ extension RNSRouteVariant {
         self.hashValue = hashValue
     }
     
-    func prepareCenterPoint() {
-        let count = (points?.count ?? 0) / 2
-        self.centerPoint = points?.valueAt(count)?.point
-    }
-    
     func prepareEndDate() {
         prepareTime()
         endDate = Date().appendMinute(time ?? 0)

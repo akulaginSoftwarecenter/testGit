@@ -67,4 +67,8 @@ class RNSPageRouteManager: NSObject {
     static func updateFavorite() {
         handlerUpdateFavorite?()
     }
+    
+    static func currentPrepareDisplay() {
+        currentItem?.prepareDisplayMap()
+    }
 }

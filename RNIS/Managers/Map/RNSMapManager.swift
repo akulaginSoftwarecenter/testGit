@@ -42,8 +42,4 @@ class RNSMapManager: NSObject {
     static func removeOldPinBuild() {
         handlerRemovePinBuild?()
     }
-    
-    static var getZoomLevel: Int {
-        return Int(mapView.getZoomLevel())
-    }
-}
+ }
