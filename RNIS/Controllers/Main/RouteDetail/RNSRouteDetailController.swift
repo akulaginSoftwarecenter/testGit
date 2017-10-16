@@ -14,7 +14,7 @@ class RNSRouteDetailController: UIViewController {
     var item: RNSRouteVariant? {
         didSet {
             if detailView != nil {
-                prepareDetailView()
+                updateData()
             }
         }
     }
@@ -33,6 +33,10 @@ class RNSRouteDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateData()
+    }
+    
+    func updateData() {
         prepareDetailView()
         prepareFlagView()
     }
