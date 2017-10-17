@@ -31,6 +31,23 @@ extension RNSRouteVariant {
     }
     
     func showDistanceNavelIfNeed() {
-        navels?.forEach { $0.showDistance = true }
+        guard let pair = points?.pairNearPoints,
+            let navels = navels else {
+            return
+        }
+        var finded = false
+        
+        for navel in navels {
+            if navel.contains(pair) {
+                finded = true
+                navel.showDistance = true
+            } else {
+                navel.showDistance = false
+            }
+        }
+        
+        if !finded {
+            navels.first?.showDistance = true
+        }
     }
 }

@@ -18,9 +18,9 @@ extension RNSDurationItem {
         }
         handlerUpdate?()
     }
-    /*
+    
     func contains(_ pair: AliasPair?) -> Bool {
-        //if
+        return contains(pair?.first) && contains(pair?.last)
     }
     
     func contains(_ point: RNSRoutePoint?) -> Bool {
@@ -28,7 +28,8 @@ extension RNSDurationItem {
             let routePoints = routePoints else {
             return false
         }
-        return routePoints.contains(point)
+        return routePoints.contains(where: {
+            $0 == point
+        })
     }
-     */
 }
