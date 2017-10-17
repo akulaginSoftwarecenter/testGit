@@ -12,6 +12,7 @@ let redPlaceLocation = CLLocation(latitude: 55.754289, longitude: 37.619800) //�
 var stubLocation: CLLocation?// = redPlaceLocation// = CLLocation(latitude: 55.754289, longitude: 37.619800) //Красная площадь
 
 let mapHost = "http://95.213.205.92/"
+let mapHost2 = "http://95.213.205.91/"
 
 let serverAddress = ""
 let serverRnisapi = "https://dev-rnisapi.regeora.ru/ajax/request"

@@ -11,6 +11,10 @@ import Alamofire
 
 class RNSGetSearchAddress: RNSGetGeoCode {
     
+    override var path: String {
+        return mapHost2 + "search/"
+    }
+    
     var text: String?
     typealias AliasComplete = (([RNSAddressTemp]?) ->())
     var complete: AliasComplete?
@@ -26,22 +30,18 @@ class RNSGetSearchAddress: RNSGetGeoCode {
     }
     
     override var parameters: [String : Any] {
-        guard let text = text else {
+        let point = RNSLocationManager.point
+        let distance = Double(10000)
+        guard let text = text,
+            let location1 = point.coordinate(135, distance: distance),
+            let location2 = point.coordinate(315, distance: distance) else {
             return [:]
         }
-        let location = RNSLocationManager.location
-        let zoom = RNSMapManager.getZoomLevel
-        let latitude = Decimal(location.coordinate.latitude)
-        let lat1 = latitude + 0.01 * pow(2, 17 - zoom)
-        let lat2 = latitude - 0.01 * pow(2, 17 - zoom)
-        let longitude = Decimal(location.coordinate.longitude)
-        let lon1 = longitude + 0.01 * pow(2, 17 - zoom)
-        let lon2 = longitude - 0.01 * pow(2, 17 - zoom)
         return ["a": "suggest",
-                "lat1": lat1,
-                "lon1": lon1,
-                "lat2": lat2,
-                "lon2": lon2,
+                "lat1": location1.latitude,
+                "lon1": location1.longitude,
+                "lat2": location2.latitude,
+                "lon2": location2.longitude,
                 "t": "addr",
                 "n": 100,
                 "beauty": 1,
