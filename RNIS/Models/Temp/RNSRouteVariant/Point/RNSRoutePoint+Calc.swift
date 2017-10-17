@@ -11,12 +11,23 @@ import Foundation
 extension RNSRoutePoint {
     
     func different(_ point: RNSRoutePoint?) -> Bool {
-        guard let point = point,
-            let selfType = self.type,
-            let pointType = point.type else {
-                return false
+        guard let point = point else {
+             return false
         }
-        return selfType != pointType || route != point.route
+        
+        if  let selfRoute = route,
+            let pointRoute = point.route,
+            selfRoute != pointRoute {
+            return true
+        }
+        
+        if let pointType = point.type,
+            let selfType = self.type,
+            selfType != pointType {
+            return true
+        }
+        
+        return false
     }
     
     func distanceTo(_ point: RNSRoutePoint?) -> CLLocationDistance? {

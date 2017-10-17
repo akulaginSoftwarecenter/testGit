@@ -18,5 +18,18 @@ extension Array where Element: Any {
         }
         return self[index]
     }
+    typealias AliasHandler = (Element?) -> ()
+    func enumerateRange(_ range: CountableRange<Int>, handler: AliasHandler?) {
+        guard range.lowerBound <= range.upperBound  else {
+            return
+        }
+        range.forEach{
+            handler?(valueAt($0))
+        }
+    }
+    
+    func enumerateNonFirst(handler: AliasHandler?) {
+        enumerateRange(1..<count, handler: handler)
+    }
 }
 

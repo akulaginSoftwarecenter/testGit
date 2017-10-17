@@ -37,7 +37,7 @@ extension RNSRouteVariant {
             }
         }
         for point in self.points ?? [] {
-            if items.last?.different(point) ?? false {
+            if items.first?.different(point) ?? false {
                 items.append(point)
                 addNavel(items)
                 items = [RNSRoutePoint]()
@@ -45,6 +45,7 @@ extension RNSRouteVariant {
             items.append(point)
         }
         addNavel(items)
+        print("navels",navels.count)
         self.navels = navels
     }
     

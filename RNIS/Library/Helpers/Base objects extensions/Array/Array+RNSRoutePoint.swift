@@ -13,7 +13,6 @@ extension Array where Element: RNSRoutePoint {
     var navel: RNSDurationItem? {
         let center = distance/2
         var distanceAll = CLLocationDistance(0)
-        let time = first?.time
         let count = self.count - 1
         guard 0 < count else {
             return nil
@@ -27,11 +26,19 @@ extension Array where Element: RNSRoutePoint {
                 let point1 = item1?.point
                 let azimut = point1?.azimuth(item2?.point)
                 let point = point1?.coordinate(azimut, distance: edge)
-                return RNSDurationItem(point, time: time)
+                return RNSDurationItem(point, time: self.time)
             }
             distanceAll += distance
         }
-        return RNSDurationItem(first?.point, time: time)
+        return RNSDurationItem(first?.point, time: first?.time)
+    }
+    
+    var time: Int {
+        var time = 0
+        self.enumerateNonFirst {
+            time += ($0?.time ?? 0)
+        }
+        return time
     }
     
     var distance: CLLocationDistance {
