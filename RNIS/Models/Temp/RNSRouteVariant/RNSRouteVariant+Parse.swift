@@ -18,14 +18,8 @@ extension RNSRouteVariant {
     }
     
     func prepareEndDate() {
-        prepareTime()
+        time = points?.time
         endDate = Date().appendMinute(time ?? 0)
-    }
-    
-    func prepareTime() {
-        var time = Int(0)
-        points?.forEach{ time += $0.time ?? 0 }
-        self.time = time
     }
     
     func setupNavels() {

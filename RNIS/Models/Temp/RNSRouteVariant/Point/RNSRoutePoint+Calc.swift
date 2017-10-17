@@ -52,6 +52,10 @@ extension RNSRoutePoint {
         return route != nil
     }
     
+    var isHaveStop: Bool {
+        return stop_point != nil
+    }
+    
     var verticalTableItem: RNSVerticalTableItem {
         return RNSVerticalTableItem(self)
     }

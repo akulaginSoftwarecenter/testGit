@@ -36,7 +36,11 @@ extension Array where Element: RNSRoutePoint {
     var time: Int {
         var time = 0
         self.enumerateNonFirst {
-            time += ($0?.time ?? 0)
+            guard let item = $0,
+                item.isHaveStop else {
+                return
+            }
+            time += (item.time ?? 0)
         }
         return time
     }

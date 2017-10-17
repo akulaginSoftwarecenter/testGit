@@ -25,7 +25,7 @@ extension RNSRouteTable {
         
         for i in 1..<lastIndex {
             guard let point = points.valueAt(i),
-                point.stop_point != nil else {
+                point.isHaveStop else {
                     continue
             }
             processingPoint(point)
