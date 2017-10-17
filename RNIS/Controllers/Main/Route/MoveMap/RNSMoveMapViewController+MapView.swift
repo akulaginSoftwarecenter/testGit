@@ -26,14 +26,12 @@ extension RNSMoveMapViewController {
     }
     
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
-        stubLocation = point.location
-        RNSLocationManager.updateLocation()
+        prepareStubLocation(point.location)
     }
 
     func prepareMapView() {
         RNSPageRouteManager.removeAllRoute()
-        item?.prepareRoadActivate()
-        item?.prepareDisplayMap()
+        prepareItem()
     }
     
     func onMapEvent() {

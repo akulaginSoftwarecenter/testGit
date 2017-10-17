@@ -26,16 +26,7 @@ extension RNSRouteVariant {
         removeNodes()
         prepareNodes()
     }
-    
-    func prepareNavels() {
-        navels?.forEach{ RNSPinDuration($0) }
-    }
-    
-    func removeNavels() {
-        navels?.forEach{ $0.handlerRemove?() }
-    }
-    
-    
+     
     func prepareBusNote() {
         buss.forEach{ RNSPinVariantBus($0) }
     }

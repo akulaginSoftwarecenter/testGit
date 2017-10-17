@@ -27,6 +27,15 @@ class RNSMoveMapViewController: UIViewController {
         prepareMapView()
         prepareColor()
         preparePopup()
+        prepareObservers()
+    }
+    
+    @objc func updateItem() {
+        item?.updateDistanceNavels()
+    }
+    
+    func prepareObservers() {
+        NotificationCenter.addObserverLocation(self, selector: #selector(updateItem))
     }
     
     func preparePopup() {
@@ -42,11 +51,19 @@ class RNSMoveMapViewController: UIViewController {
     func prepareColor() {
         viewTop.backgroundColor = .backColor
     }
-    deinit {
-        item?.removeAllRoad()
-        handlerDidDisappear?()
-        stubLocation = nil
+    
+    func prepareStubLocation(_ location: CLLocation?) {
+        stubLocation = location
         RNSLocationManager.updateLocation()
+    }
+      
+    deinit {
+        closeItem()
+        
+        handlerDidDisappear?()
+        
+        prepareStubLocation(nil)
+        NotificationCenter.removeObserver(self)
     }
     
     override class var storyboardName: String {

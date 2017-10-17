@@ -40,6 +40,11 @@ class RNSRouteVariant: RNISMappableBase {
     var navels: [RNSDurationItem]?
     var maxSize: Double?
     var centerPoint: PGGeoPoint?
+    var showDistanceNavels = false {
+        didSet {
+            updateDistanceNavels()
+        }
+    }
    
     var endPoint: RNSRoutePoint? {
         return points?.last

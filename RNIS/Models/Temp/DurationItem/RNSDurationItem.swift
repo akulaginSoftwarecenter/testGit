@@ -17,12 +17,17 @@ class RNSDurationItem: NSObject {
     var handlerUpdate: EmptyBlock?
     var routePoints: [RNSRoutePoint?]?
     
-    convenience init(_ point: PGGeoPoint?, time: Int?, distance: CLLocationDistance? = nil, routePoints: [RNSRoutePoint?]?) {
+    convenience init(_ point: PGGeoPoint?, time: Int?, routePoints: [RNSRoutePoint?]?) {
         self.init()
         
         self.point = point
         self.durationMinute = time
-        self.distance = distance
         self.routePoints = routePoints
+    }
+    
+    var showDistance: Bool = false {
+        didSet {
+            updateDistance()
+        }
     }
 }
