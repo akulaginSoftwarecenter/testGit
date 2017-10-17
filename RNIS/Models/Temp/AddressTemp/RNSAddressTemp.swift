@@ -17,6 +17,7 @@ class RNSAddressTemp: RNISMappableBase, RNSTextItem {
     var longitude: Double?
     var coord: [String]?
     var type: Int?
+    var point: PGGeoPoint?
     
     public override func mapping(map: Map) {
         uuid <- map["id"]
@@ -25,17 +26,22 @@ class RNSAddressTemp: RNISMappableBase, RNSTextItem {
         type <- map["type"]
         longitude = Double(coord?.first ?? "")
         latitude = Double(coord?.last ?? "")
+        preparePoint()
     }
     
     var isHouse: Bool {
         return (type ?? -1) == 3
     }
     
-    var point: PGGeoPoint? {
+    func preparePoint() {
         guard let latitude = latitude,
             let longitude = longitude else {
-                return nil
+              return
         }
-        return PGGeoPoint(latitude: latitude, longitude: longitude)
+        point = PGGeoPoint(latitude: latitude, longitude: longitude)
+    }
+    
+    var distanceToCurrent: Double? {
+        return point?.distanceToCurrent
     }
 }

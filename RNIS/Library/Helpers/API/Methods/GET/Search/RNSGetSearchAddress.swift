@@ -54,7 +54,16 @@ class RNSGetSearchAddress: RNSGetGeoCode {
                 complete?(nil)
                 return
         }
-        let items = res.map{ RNSAddressTemp(JSON: $0) }
-        complete?(items as? [RNSAddressTemp])
+        DispatchQueue.global(qos: .background).async {
+            var items = res.map{ RNSAddressTemp(JSON: $0) }
+            items = items.sorted { (item1, item2) -> Bool in
+                let dist1 = item1?.distanceToCurrent ?? 10000000
+                let dist2 = item2?.distanceToCurrent ?? 10000000
+                return dist1 < dist2
+            }
+            Utils.mainQueue {
+                self.complete?(items as? [RNSAddressTemp])
+            }
+        }
     }
 }
