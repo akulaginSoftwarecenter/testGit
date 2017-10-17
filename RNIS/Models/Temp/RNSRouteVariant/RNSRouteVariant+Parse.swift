@@ -39,7 +39,6 @@ extension RNSRouteVariant {
             items.append(point)
         }
         addNavel(items)
-        print("navels",navels.count)
         self.navels = navels
     }
     
