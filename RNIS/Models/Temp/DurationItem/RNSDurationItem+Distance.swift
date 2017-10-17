@@ -18,4 +18,17 @@ extension RNSDurationItem {
         }
         handlerUpdate?()
     }
+    /*
+    func contains(_ pair: AliasPair?) -> Bool {
+        //if
+    }
+    
+    func contains(_ point: RNSRoutePoint?) -> Bool {
+        guard let point = point,
+            let routePoints = routePoints else {
+            return false
+        }
+        return routePoints.contains(point)
+    }
+     */
 }
