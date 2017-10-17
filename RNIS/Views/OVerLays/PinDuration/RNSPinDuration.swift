@@ -19,8 +19,7 @@ class RNSPinDuration: RNSPinParent {
             let point = item.point else {
                 return
         }
-        let view = RNSNoteRoute(durationMinute: item.durationMinute, distance: item.distance, type: .up)
-        setBitmap(view.asImage, xOffset: 0, yOffset: 1.0, isPlain: false, sizeInMeters: 50)
+        updateIcon()
         preparePoint(point)
         prepareHandlers()
     }
@@ -29,5 +28,14 @@ class RNSPinDuration: RNSPinParent {
         item?.handlerRemove = { [weak self] in
             self?.remove()
         }
+        
+        item?.handlerUpdate = { [weak self] in
+            self?.updateIcon()
+        }
+    }
+    
+    func updateIcon() {
+        let view = RNSNoteRoute(durationMinute: item?.durationMinute, distance: item?.distance, type: .up)
+        setBitmap(view.asImage, xOffset: 0, yOffset: 1.0, isPlain: false, sizeInMeters: 50)
     }
 }

@@ -26,11 +26,11 @@ extension Array where Element: RNSRoutePoint {
                 let point1 = item1?.point
                 let azimut = point1?.azimuth(item2?.point)
                 let point = point1?.coordinate(azimut, distance: edge)
-                return RNSDurationItem(point, time: self.time)
+                return RNSDurationItem(point, time: self.time, routePoints: self)
             }
             distanceAll += distance
         }
-        return RNSDurationItem(first?.point, time: first?.time)
+        return RNSDurationItem(first?.point, time: first?.time, routePoints: [first])
     }
     
     var time: Int {
