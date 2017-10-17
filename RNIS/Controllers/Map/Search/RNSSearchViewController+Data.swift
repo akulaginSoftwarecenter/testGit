@@ -72,15 +72,29 @@ extension RNSSearchViewController {
     
     func showItem(_ indexPath: IndexPath) {
         let item = self.item(indexPath)
-        
         if let address = item as? RNSAddressTemp {
-            RNSMapManager.mapCenter(address.point)
-            RNSMapManager.setZoomLevel(14)
+            prepareAddress(address)
         } else if let stop = item as? RNSBusStopTemp {
-            RNSMapManager.showStopPoint(stop.toJSON())
+            STRouter.pop {
+                RNSMapManager.showStopPoint(stop.toJSON())
+            }
         } else if (item as? RNSBusTemp) != nil {
-            let bus = RNSDataManager.buss?.first
-            RNSMapManager.showInfoIfNeed(bus)
+            STRouter.pop {
+                let bus = RNSDataManager.buss?.first
+                RNSMapManager.showInfoIfNeed(bus)
+            }
+        }
+    }
+    
+    func prepareAddress(_ item: RNSAddressTemp) {
+        if !item.isHouse {
+             textField.text = item.name
+            updateSearch()
+            return
+        }
+        STRouter.pop {
+            RNSMapManager.mapCenter(item.point)
+            RNSMapManager.setZoomLevel(14)
         }
     }
     

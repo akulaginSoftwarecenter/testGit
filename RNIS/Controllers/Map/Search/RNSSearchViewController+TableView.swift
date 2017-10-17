@@ -21,9 +21,7 @@ extension RNSSearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        STRouter.pop { [weak self] in
-            self?.showItem(indexPath)
-        }
+        showItem(indexPath)
     }
     
     func item(_ indexPath: IndexPath) -> RNSTextItem? {
