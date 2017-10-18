@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ NewsViewController
+ */
+
 class NewsViewController: UIViewController, UIWebViewDelegate  {
 
     @IBOutlet weak var webView: UIWebView!

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSProfileViewController
+ */
+
 class RNSProfileViewController: UIViewController {
     
     @IBOutlet weak var nameField: RNSNameField!

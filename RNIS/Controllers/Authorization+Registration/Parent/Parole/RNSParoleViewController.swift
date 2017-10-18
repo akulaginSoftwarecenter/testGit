@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSParoleViewController
+ */
+
 class RNSParoleViewController: RNSCoverViewController,ContainerProtocol {
     
     @IBOutlet weak var passwordOneField: STPasswordField!

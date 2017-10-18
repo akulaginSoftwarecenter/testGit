@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSRecoveryParoleController
+ */
+
 class RNSRecoveryParoleController: RNSParoleContainerController {
     
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {

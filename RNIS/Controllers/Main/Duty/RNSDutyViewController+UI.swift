@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSDutyViewController UI extention
+ */
+
 extension RNSDutyViewController {
     
     var isHaveDate: Bool {

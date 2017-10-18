@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSChangePasswordController
+ */
+
 class RNSChangePasswordController: UIViewController {
 
     @IBOutlet var coverView: RNSLoginView!

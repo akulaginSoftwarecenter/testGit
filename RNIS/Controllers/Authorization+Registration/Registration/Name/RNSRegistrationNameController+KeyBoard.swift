@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSRegistrationNameController Keyboard extention
+ */
+
 extension RNSRegistrationNameController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

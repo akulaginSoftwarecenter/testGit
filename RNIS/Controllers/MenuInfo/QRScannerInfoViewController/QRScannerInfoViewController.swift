@@ -11,6 +11,9 @@ import QRCodeReader
 import AVFoundation
 import AudioToolbox.AudioServices
 
+/**
+ QRScannerInfoViewController
+ */
 
 class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDelegate {
 

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ AboutAppInfoViewController
+ */
+
 class AboutAppInfoViewController: UIViewController {
 
     @IBOutlet weak var appVersionLabel: UILabel!

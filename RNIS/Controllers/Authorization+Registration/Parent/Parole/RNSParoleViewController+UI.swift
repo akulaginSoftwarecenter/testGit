@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSParoleViewController extention
+ */
+
 extension RNSParoleViewController {
     
     func prepareUI() {

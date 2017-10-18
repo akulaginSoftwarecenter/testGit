@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSAlertTransportController
+ */
+
 class RNSAlertTransportController: UIAlertController {
 
     var item: RNSRouteVariant?

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSMoveMapViewController MapView extention
+ */
+
 extension RNSMoveMapViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

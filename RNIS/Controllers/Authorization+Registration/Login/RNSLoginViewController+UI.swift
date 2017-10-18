@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSLoginViewController UI extention
+ */
+
 extension RNSLoginViewController {
     
     func prepareButtons() {

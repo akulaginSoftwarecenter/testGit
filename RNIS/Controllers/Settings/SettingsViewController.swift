@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ SettingsViewController
+ */
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var zoomButtonMap: UISwitch!

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSSearchViewController
+ */
+
 class RNSSearchViewController: UIViewController, KeyboardShowable {
     
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {

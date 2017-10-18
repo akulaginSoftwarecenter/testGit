@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSMoveMapViewController Item extention
+ */
+
 extension RNSMoveMapViewController {
     func prepareItem() {
         item?.prepareRoadActivate()

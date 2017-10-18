@@ -9,6 +9,10 @@
 import Foundation
 import RealmSwift
 
+/**
+ RNSAddressViewController TableView extention
+ */
+
 extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
     
     var items: [RNSSearchHistory]? {

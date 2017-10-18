@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSPageRouteController
+ */
+
 class RNSPageRouteController: UIViewController {
 
     var containerController: RNSMapParentController?

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSRouteDetailController
+ */
+
 class RNSRouteDetailController: UIViewController {
     
     @IBOutlet weak var flagView: RNSFlagButton!

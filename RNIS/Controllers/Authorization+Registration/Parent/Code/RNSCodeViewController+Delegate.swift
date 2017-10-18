@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSCodeViewController extention
+ */
+
 extension RNSCodeViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

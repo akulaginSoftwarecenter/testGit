@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ STContainerViewController
+ */
+
 enum TypeTitle: String {
     case registration = "Регистрация"
     case recovery = "Восстановление пароля"

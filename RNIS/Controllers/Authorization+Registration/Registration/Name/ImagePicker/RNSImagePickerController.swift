@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSImagePickerController
+ */
+
 class RNSImagePickerController: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var complete: AliasImageBlock?

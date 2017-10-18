@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSRouteDetailController Flag Extention
+ */
+
 extension RNSRouteDetailController {
     
     func prepareFlagView() {

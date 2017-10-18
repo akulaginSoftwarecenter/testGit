@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSCodeViewController
+ */
+
 class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     
     @IBOutlet weak var codeField: RNSTextField!

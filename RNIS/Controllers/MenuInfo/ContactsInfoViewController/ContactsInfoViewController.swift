@@ -17,6 +17,10 @@ enum RNSContactInfoType: String {
     }
 }
 
+/**
+ ContactsInfoViewController
+ */
+
 class ContactsInfoViewController: UIViewController {
     @IBOutlet weak var topTitle: RNSTopTitle!
 

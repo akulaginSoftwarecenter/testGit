@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ NotificationsSettingsViewController
+ */
+
 class NotificationsSettingsViewController: UIViewController {
 
     var handlerNotification: ((Int) -> ())?

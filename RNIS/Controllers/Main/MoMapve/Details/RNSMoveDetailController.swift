@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSMoveDetailController
+ */
+
 class RNSMoveDetailController: UIViewController {
     
     var handlerBack: EmptyBlock?

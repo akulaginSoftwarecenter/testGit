@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSBusStopDetailController
+ */
+
 class RNSBusStopDetailController: UIViewController {
     
     @IBOutlet weak var heightTableView: NSLayoutConstraint!

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSAddressViewController Action extention
+ */
+
 extension RNSAddressViewController {
     
     @IBAction func actionMyLocation(_ sender: Any) {

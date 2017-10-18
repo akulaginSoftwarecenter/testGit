@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSCodeContainerController extention
+ */
+
 extension RNSCodeContainerController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

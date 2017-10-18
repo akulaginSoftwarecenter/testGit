@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSDutyViewController
+ */
+
 class RNSDutyViewController: UIViewController {
     
     lazy var loaderView:LoaderView = LoaderView()

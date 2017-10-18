@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSParoleContainerController
+ */
+
 class RNSParoleContainerController: STContainerViewController {
 
     var item: RNSUserPayload?

@@ -9,6 +9,10 @@
 import UIKit
 import LGSideMenuController
 
+/**
+ RNSMenuViewController
+ */
+
 class RNSMenuViewController: LGSideMenuController {
 
     override open var rootViewController: UIViewController? {

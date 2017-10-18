@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSPhoneContrainerController
+ */
+
 class RNSPhoneContrainerController: STContainerViewController {
     
     var containerViewController: RNSPhoneViewController? {

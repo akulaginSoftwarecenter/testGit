@@ -13,6 +13,10 @@ enum RNSDocsType: String {
     case termOfUse = "agreement"
 }
 
+/**
+ DocsInfoViewController
+ */
+
 class DocsInfoViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSCoverViewController
+ */
+
 class RNSCoverViewController: UIViewController {
     
     @IBOutlet var coverView: RNSLoginView!

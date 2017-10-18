@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSBusInfoViewController
+ */
+
 class RNSBusInfoViewController: UIViewController {
     fileprivate let smallScreenHeightThreshold: CGFloat = 600
     fileprivate let smallScreenTopConstraint: CGFloat = 135

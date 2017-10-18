@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSMoveMapViewController
+ */
+
 class RNSMoveMapViewController: UIViewController {
 
     @IBOutlet weak var viewTop: UIView!

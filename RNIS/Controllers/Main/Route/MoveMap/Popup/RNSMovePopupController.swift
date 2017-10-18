@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSMovePopupController
+ */
+
 class RNSMovePopupController: UIViewController {
     
     static func initController(_ item: RNSRouteVariant?) -> UIViewController? {

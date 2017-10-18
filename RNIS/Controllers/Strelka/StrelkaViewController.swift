@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ StrelkaViewController
+ */
+
 class StrelkaViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!

@@ -9,6 +9,10 @@
 import UIKit
 import Social
 
+/**
+ RNSLeftMenuController
+ */
+
 class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var menuItems: [MenuItem] {

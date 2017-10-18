@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSBusDetailController
+ */
+
 class RNSBusDetailController: UIViewController {
     
     static func initController(_ item: RNSBus?) -> UIViewController? {

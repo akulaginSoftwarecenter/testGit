@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSAddressViewController MapView extention
+ */
+
 extension RNSAddressViewController {
     
     func onMapTouchEvent(_ point: PGGeoPoint) {

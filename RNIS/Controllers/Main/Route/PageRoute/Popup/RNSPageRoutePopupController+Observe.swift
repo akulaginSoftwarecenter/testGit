@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSPageRoutePopupController Observer extention
+ */
+
 extension RNSPageRoutePopupController {
     func prepareViews(_ rect: CGRect) {
         let y = rect.origin.y

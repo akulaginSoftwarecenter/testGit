@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSAddressCell
+ */
+
 class RNSAddressCell: RNSBaseTableCell {
     
     var item: String? {

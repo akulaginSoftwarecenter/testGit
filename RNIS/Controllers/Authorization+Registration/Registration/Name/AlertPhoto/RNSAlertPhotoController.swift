@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSAlertPhotoController
+ */
+
 class RNSAlertPhotoController: UIAlertController {
     
     var showRemove: Bool?

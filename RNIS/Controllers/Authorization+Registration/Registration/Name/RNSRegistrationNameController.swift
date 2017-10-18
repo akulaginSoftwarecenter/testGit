@@ -11,6 +11,10 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
+/**
+ RNSRegistrationNameController
+ */
+
 class RNSRegistrationNameController: UIViewController {
     
     @IBOutlet weak var nameField: RNSTextField!

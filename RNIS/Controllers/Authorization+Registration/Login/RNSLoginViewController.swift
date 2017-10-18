@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSLoginViewController
+ */
+
 class RNSLoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: RNSBlackButton!

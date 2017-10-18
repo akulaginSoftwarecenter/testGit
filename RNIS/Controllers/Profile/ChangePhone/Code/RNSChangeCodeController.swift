@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSChangeCodeController
+ */
+
 class RNSChangeCodeController: RNSCodeContainerController {
     
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {

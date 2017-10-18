@@ -13,6 +13,10 @@ enum TypeAddress: String {
     , inAddress = "Куда"
 }
 
+/**
+ RNSAddressViewController
+ */
+
 class RNSAddressViewController: UIViewController, KeyboardShowable {
     
     static func initController(_ item: RNSDutyAddressTemp?, type: TypeAddress?, complete: AliasAddressComplete?) -> UIViewController?  {

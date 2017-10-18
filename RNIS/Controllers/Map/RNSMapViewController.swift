@@ -9,6 +9,10 @@
 import UIKit
 import PureLayout
 
+/**
+ RNSMapViewController
+ */
+
 class RNSMapViewController: UIViewController {
     
     @IBOutlet var showingButtonsConstraints: [NSLayoutConstraint]!

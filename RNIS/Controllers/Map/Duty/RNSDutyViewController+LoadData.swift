@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSDutyViewController LoadData extention
+ */
+
 extension RNSDutyViewController {
     
     func loadData() {

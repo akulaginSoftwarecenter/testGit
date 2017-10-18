@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+/**
+ RNSLoginViewController Action extention
+ */
+
 extension RNSLoginViewController {
     
     @IBAction func registrationAction(_ sender: Any) {

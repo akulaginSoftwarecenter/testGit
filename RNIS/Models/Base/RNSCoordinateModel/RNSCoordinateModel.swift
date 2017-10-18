@@ -9,6 +9,10 @@
 import Foundation
 import RealmSwift
 
+/**
+ RNSCoordinateModel
+ */
+
 class RNSCoordinateModel: Object {
     
     @objc dynamic var uuid = ""

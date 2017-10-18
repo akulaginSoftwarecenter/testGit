@@ -13,6 +13,10 @@ enum RNSPetitionType: String {
     case complaint = "Пожаловаться"
 }
 
+/**
+ SupportInfoViewController
+ */
+
 class SupportInfoViewController: UIViewController {
 
     @IBOutlet weak var topTitle: RNSTopTitle!

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ ReportInfoViewController
+ */
+
 class ReportInfoViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!

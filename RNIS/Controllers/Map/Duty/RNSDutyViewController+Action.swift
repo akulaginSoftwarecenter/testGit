@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSDutyViewController Action extention
+ */
+
 extension RNSDutyViewController {
     
     @IBAction func actionExchange(_ sender: Any) {

@@ -9,6 +9,10 @@
 import UIKit
 import ObjectMapper
 
+/**
+ RNISMappableBase
+ */
+
 class RNISMappableBase: Mappable {
     
     init() {

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSMoveDetailController Flag extention
+ */
+
 extension RNSMoveDetailController {
     
     func prepareFlagView() {

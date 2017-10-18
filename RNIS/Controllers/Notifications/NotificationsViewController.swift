@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ NotificationsViewController
+ */
+
 class NotificationsViewController: UIViewController {
     
     var items: [RNSNotificationModel]?

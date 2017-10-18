@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSCodeContainerController
+ */
+
 class RNSCodeContainerController: STContainerViewController {
    
    var item: RNSUserPayload?

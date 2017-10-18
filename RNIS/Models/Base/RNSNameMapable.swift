@@ -9,6 +9,10 @@
 import UIKit
 import ObjectMapper
 
+/**
+ RNSNameMapable
+ */
+
 class RNSNameMapable: RNISMappableBase {
 
     var uuid: String?

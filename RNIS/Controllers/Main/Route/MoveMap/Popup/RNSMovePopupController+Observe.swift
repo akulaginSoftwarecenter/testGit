@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSMovePopupController Observe extention
+ */
+
 extension RNSMovePopupController {
     
     func prepareViews(_ rect: CGRect) {

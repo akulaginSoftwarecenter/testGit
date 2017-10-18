@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSRecoveryPhoneController
+ */
+
 class RNSRecoveryPhoneController: RNSPhoneContrainerController {
     
     override var typeTitle: TypeTitle {

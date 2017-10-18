@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ RNSPageRouteController MapView extention
+ */
+
 extension RNSPageRouteController {
     
     var mapView: MapView {

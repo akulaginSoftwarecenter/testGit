@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RNSPhoneViewController
+ */
+
 class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
 
     @IBOutlet weak var phoneField: RNSPhoneField!
