@@ -2,7 +2,7 @@
 //  TrafficData+CoreDataProperties.swift
 //  
 //
-//  Created by Артем Кулагин on 08.09.17.
+//  Created by Admin on 18.10.17.
 //
 //  This file was automatically generated and should not be edited.
 //
