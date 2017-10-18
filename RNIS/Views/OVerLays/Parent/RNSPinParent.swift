@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin Parent
+ */
+
 class RNSPinParent: PGOverlay {
     
     lazy var overlayItem = PGOverlayItem()

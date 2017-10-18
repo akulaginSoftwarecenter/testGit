@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Dots White
+ */
+
 class RNSDotsWhiteHorizontal: BaseViewWithXIBInit {
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!

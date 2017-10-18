@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Bus Detail Way Cell Var
+ */
+
 extension RNSBusDetailWayCell {
     var isStart: Bool {
         return typeEdge == .start

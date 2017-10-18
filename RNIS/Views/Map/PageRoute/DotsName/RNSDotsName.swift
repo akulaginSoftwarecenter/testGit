@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Dots Name
+ */
+
+
 class RNSDotsName: BaseViewWithXIBInit {
     
     @IBOutlet var label: UILabel!

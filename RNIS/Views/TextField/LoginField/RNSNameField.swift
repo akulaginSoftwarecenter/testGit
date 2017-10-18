@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Login Field
+ */
+
 class RNSNameField: RNSTextField, UITextFieldDelegate {
 
     convenience init(text: String?) {

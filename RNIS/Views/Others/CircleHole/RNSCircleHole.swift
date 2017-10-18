@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Circle Hole
+ */
+
 class RNSCircleHole: BaseViewWithXIBInit {
     
     @IBOutlet var mainCircle: RNSCircle!

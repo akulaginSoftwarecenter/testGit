@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Page Route Cell
+ */
+
+
 class RNSPageRouteCell: UICollectionViewCell {
     
     @IBOutlet weak var labelDurations: UILabel!

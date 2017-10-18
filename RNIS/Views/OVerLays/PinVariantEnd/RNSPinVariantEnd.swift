@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Pin Variant End
+ */
+
+
 class RNSPinVariantEnd: RNSPinParent {
     
     @discardableResult convenience init(_ item: RNSRoutePoint?) {

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Bus Detail Way Cell
+ */
+
 enum STTypeItemArray {
     case start, normal, end
 }

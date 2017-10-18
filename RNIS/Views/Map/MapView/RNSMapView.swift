@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Map View
+ */
+
 class RNSMapView: MapView {
     
     init() {

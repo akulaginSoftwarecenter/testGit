@@ -9,6 +9,10 @@
 import UIKit
 import SnapKit
 
+/**
+ Left Back Button
+ */
+
 class RNSLeftBackButton: UIButton {
     
     @IBInspectable var leftContentOffset: CGFloat = 0

@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Email Field
+ */
+
+
 class RNSEmailField: RNSTextField {
 
     override var isValid:Bool {

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Bus Detail Total View
+ */
+
 class RNSBusDetailTotalView: BaseViewWithXIBInit {
     
     var item: RNSBusTemp?{

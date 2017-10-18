@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Light Button
+ */
+
 class RNSLightButton: BaseViewWithXIBInit {
     
     var handlerAction: EmptyBlock?

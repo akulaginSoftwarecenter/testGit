@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Favorites Bus View + Table View
+ */
+
 extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
     
     public func numberOfSections(in tableView: UITableView) -> Int {

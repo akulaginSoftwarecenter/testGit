@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Build Route View
+ */
+
 class RNSBuildRouteView: BaseViewWithXIBInit {
     
     var point: PGGeoPoint?

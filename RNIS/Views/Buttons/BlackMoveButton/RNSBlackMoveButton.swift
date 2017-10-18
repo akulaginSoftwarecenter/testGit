@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Black Move Button
+ */
+
 class RNSBlackMoveButton: RNSBlackButton {
     override func awakeFromNib() {
         super.awakeFromNib()

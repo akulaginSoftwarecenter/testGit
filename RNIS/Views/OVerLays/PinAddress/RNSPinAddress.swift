@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin Address
+ */
+
 class RNSPinAddress: RNSPinParent {
     
     convenience init(_ point: PGGeoPoint) {

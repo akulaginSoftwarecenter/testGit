@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Road Run
+ */
+
 class RNSRoadRun: PGPolyline {
     
     var polylines = [PGPolyline]()

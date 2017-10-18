@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin Item
+ */
+
 class RNSPinItem: RNSPinParent {
     var item: RNSCoordinateModel?
     

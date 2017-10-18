@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin Bus
+ */
+
 class RNSPinBusStop: RNSPinItem {
     
     override func prepareHandlers() {

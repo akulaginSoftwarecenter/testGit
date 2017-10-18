@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Dot Run
+ */
+
 class RNSDotRun: PGPolyline {
     var point: PGGeoPoint?
     

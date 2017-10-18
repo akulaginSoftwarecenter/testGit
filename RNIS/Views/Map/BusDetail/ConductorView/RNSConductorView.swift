@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Conductor View
+ */
+
 class RNSConductorView: BaseViewWithXIBInit {
     
     var item: RNSBusTemp? {

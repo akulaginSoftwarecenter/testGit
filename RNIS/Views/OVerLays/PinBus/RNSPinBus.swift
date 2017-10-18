@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin Bus
+ */
+
 class RNSPinBus: RNSPinItem {
     
     override func prepareImage() {

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Top Title
+ */
+
 class RNSTopTitle: UILabel {
 
     override func awakeFromNib() {

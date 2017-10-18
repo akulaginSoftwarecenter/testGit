@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin My Location
+ */
+
 class RNSPinMyLocation: RNSPinParent {
     
     var point: PGGeoPoint {

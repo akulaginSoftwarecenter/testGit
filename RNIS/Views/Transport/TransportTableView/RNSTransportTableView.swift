@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Transport Table View
+ */
+
 class RNSTransportTableView: BaseViewWithXIBInit {
 
     var items: [RNSRouteVariant]?

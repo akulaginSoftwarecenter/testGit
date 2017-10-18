@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Dots White Vertical
+ */
+
 class RNSDotsWhiteVertical: RNSDotsWhiteHorizontal {
     
     

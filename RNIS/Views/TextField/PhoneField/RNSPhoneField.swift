@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Login Field
+ */
+
+
 class RNSPhoneField: RNSTextField, UITextFieldDelegate {
     
     let cross = "+"

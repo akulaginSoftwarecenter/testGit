@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Favorites Bus Cell
+ */
+
 class RNSFavoritesBusCell: RNSBaseTableCell {
 
     var didTapDelete: ((RNSFavoriteStopPoint) -> ())?

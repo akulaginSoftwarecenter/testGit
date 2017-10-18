@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin Variant Bus
+ */
+
 class RNSPinVariantBus: RNSPinParent {
     
     var bus: RNSBusRouteTemp?

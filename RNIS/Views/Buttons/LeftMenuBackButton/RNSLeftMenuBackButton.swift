@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Left Menu Back Button
+ */
+
 class RNSLeftMenuBackButton: RNSLeftBackButton {
      override func actionTouch() {
         RNSMenuManager.showLeftMenu()

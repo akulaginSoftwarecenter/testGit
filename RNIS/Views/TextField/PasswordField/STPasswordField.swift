@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Password Field
+ */
+
 class STPasswordField: RNSTextField {
 
     override var isValid:Bool {

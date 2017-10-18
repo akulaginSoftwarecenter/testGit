@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Circle Red
+ */
+
+
 class RNSCircle: UIView {
 
     override func layoutSubviews() {

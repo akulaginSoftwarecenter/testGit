@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Note Route
+ */
+
+
 class RNSNoteRoute: UIView {
     
     lazy var leftView: RNSTriangle = {

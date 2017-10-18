@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Forecast Cell
+ */
+
 class RNSForecastCell: RNSBaseTableCell {
     
     @IBOutlet weak var numberLabel: UILabel!

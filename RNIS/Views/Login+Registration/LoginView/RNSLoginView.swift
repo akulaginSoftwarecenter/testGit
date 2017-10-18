@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Login View
+ */
+
 class RNSLoginView: BaseViewWithXIBInit {
 
     @IBOutlet weak var blackButton: RNSBlackButton!
