@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Page Route View
+ */
+
+
 class RNSPageRouteView: BaseViewWithXIBInit {
     
     @IBOutlet weak var pageControl: UIPageControl!

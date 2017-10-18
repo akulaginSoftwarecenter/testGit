@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ BackGround View
+ */
+
 class RNSBackGroundView: UIView {
 
     override func awakeFromNib() {

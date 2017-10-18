@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Route Detail View
+ */
+
 class RNSRouteDetailView: BaseViewWithXIBInit {
     
     var item: RNSRouteTable? {

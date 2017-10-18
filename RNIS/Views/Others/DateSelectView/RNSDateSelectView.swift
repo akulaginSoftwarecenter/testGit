@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Date Select View
+ */
+
 class RNSDateSelectView: BaseViewWithXIBInit {
     
     var handlerDate: ((Date?) -> ())?

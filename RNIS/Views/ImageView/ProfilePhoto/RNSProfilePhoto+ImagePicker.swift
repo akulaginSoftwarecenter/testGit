@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ Profile Photo + Image Picker
+ */
+
+
 extension RNSProfilePhoto {
     
     func showImagePicker(_ type: UIImagePickerControllerSourceType) {

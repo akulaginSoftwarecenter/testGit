@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ Page Route View + Collection View
+ */
+
+
 extension RNSPageRouteView: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Flag Button
+ */
+
 class RNSFlagButton: BaseViewWithXIBInit {
     
     var handlerUpdate: EmptyBlock?

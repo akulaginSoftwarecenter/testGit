@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Profile Image View
+ */
+
 class RNSProfilePhoto: BaseViewWithXIBInit {
 
     @IBInspectable var colorImageView: UIColor?

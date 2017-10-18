@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Dots Buss Vertical + Table View
+ */
+
 extension RNSDotsBussVertical: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

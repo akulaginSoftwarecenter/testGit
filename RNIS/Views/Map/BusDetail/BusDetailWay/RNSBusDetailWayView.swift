@@ -9,6 +9,10 @@
 import UIKit
 import RealmSwift
 
+/**
+ Bus Detail Way View
+ */
+
 class RNSBusDetailWayView: BaseViewWithXIBInit {
     
     @IBOutlet weak var tableView: UITableView!

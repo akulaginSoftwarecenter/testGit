@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Dots Buss View + Show Done
+ */
+
 extension RNSDotsBussView {
     
     func prepareMoveIfNeed() {

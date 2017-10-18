@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Black Button
+ */
+
 class RNSBlackButton: BaseViewWithXIBInit {
     
     @IBOutlet var button: UIButton!

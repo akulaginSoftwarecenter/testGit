@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Note Route + Var
+ */
+
 extension RNSNoteRoute {
     var widthText: CGFloat {
         guard let font = titleLabel.font,

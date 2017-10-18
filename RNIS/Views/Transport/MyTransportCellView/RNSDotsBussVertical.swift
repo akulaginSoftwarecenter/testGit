@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ My Transport Cell View
+ */
+
 class RNSDotsBussVertical: BaseViewWithXIBInit {
 
     @IBOutlet weak var tableView: RNSRegisterTableView!

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Gray Back Button
+ */
+
 class RNSGrayBackButton: BaseViewWithXIBInit {
     
     @IBOutlet var button: UIButton!

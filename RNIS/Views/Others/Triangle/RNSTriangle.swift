@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Triangle
+ */
+
+
 enum TypeNote: Int {
     case left = 0,
          up = 1,

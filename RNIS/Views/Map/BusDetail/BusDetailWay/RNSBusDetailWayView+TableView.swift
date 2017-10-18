@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ Bus Detail Way View + Delegate
+ */
+
+
 extension RNSBusDetailWayView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

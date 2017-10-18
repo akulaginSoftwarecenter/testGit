@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Arrow Left
+ */
+
 class RNSArrowLeft: UIImageView {
     convenience init(_ doneMove: Bool?) {
         let image = (doneMove ?? false) ?#imageLiteral(resourceName: "ArrowLeftDone") : #imageLiteral(resourceName: "ArrowLeft")

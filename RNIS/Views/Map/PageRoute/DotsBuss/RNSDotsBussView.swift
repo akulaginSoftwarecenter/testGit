@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Dots Buss View
+ */
+
 class RNSDotsBussView: BaseViewWithXIBInit {
     
     @IBOutlet weak var constraintSmallDots: NSLayoutConstraint!

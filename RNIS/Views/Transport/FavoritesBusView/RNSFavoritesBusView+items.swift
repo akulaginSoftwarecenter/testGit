@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Favorites Bus View + items
+ */
+
 extension RNSFavoritesBusView {
     
     func loadData() {

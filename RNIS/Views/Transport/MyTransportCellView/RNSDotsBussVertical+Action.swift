@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Dots Buss Vertical + Action
+ */
+
 extension RNSDotsBussVertical {
     
     @IBAction func actionButton(_ sender: Any) {

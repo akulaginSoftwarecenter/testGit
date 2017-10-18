@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Favorites Bus View
+ */
+
 struct TableSection {
     let title: String?
     var items: [RNSFavoriteStopPoint]?

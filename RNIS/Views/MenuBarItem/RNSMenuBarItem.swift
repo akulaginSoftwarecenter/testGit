@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Menu Bar Item
+ */
+
 class RNSMenuBarItem: UIBarButtonItem {
     
     override func awakeFromNib() {

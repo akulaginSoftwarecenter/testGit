@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Circle Hole White
+ */
+
 class RNSCircleHoleWhite: RNSCircleHole {
 
     override func awakeFromNib() {

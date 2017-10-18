@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Pin Duration
+ */
+
 class RNSPinDuration: RNSPinParent {
     var item: RNSDurationItem?
     
