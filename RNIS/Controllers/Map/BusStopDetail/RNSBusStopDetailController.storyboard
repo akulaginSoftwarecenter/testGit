@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -102,7 +102,7 @@
                                                     <rect key="frame" x="267" y="20" width="63" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 мин" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz7-Na-OsC">
-                                                            <rect key="frame" x="5" y="2" width="53" height="23.5"/>
+                                                            <rect key="frame" x="5" y="2.5" width="53" height="23.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,6 +193,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="700"/>
                     <connections>
+                        <outlet property="errorReportButton" destination="DvQ-PA-6pv" id="P5U-Yn-1Qf"/>
                         <outlet property="heightTableView" destination="Znn-Xt-r9O" id="nWC-ht-iuz"/>
                         <outlet property="tableView" destination="uj1-H0-aEa" id="TuM-Jq-401"/>
                         <outlet property="timerlabel" destination="Z3D-vH-rjy" id="FM7-dx-VYH"/>

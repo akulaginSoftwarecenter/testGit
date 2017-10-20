@@ -43,6 +43,15 @@ class RNSParoleViewController: RNSCoverViewController,ContainerProtocol {
             return
         }
         
+        let parent = self.parent as! RNSRegistrationParoleController
+        let phone = parent.item!.phone!
+        if phone == passwordOneField.text {
+            errorLabel.text = "Пароль не может полностью повторять логин"
+            passwordOneField.setStateNotValid()
+            passwordTwoField.setStateNotValid()
+            return
+        }
+        
         clearError()
         handlerBlackAction?()
     }

@@ -35,14 +35,24 @@ class RNSBusStopDetailController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleStop: UILabel!
     @IBOutlet weak var timerlabel: UILabel!
+    @IBOutlet weak var errorReportButton: RNSBlackButton!
     
     var startBottomOffset: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareReportButton()
         prepareTitle()
         loadItems()
+    }
+    
+    private func prepareReportButton() {
+        errorReportButton.button.touchUpInside {
+            let vc = SupportInfoViewController.initialController as? SupportInfoViewController
+            vc?.type = .feedback
+            vc?.pushAnimatedRedScroll()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

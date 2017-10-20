@@ -30,6 +30,7 @@ class RNSBusInfoViewController: UIViewController {
     @IBOutlet weak var depoField: RNSNameFieldLeft!
     @IBOutlet weak var carrierField: RNSNameFieldLeft!
     @IBOutlet weak var phoneField: RNSNameFieldLeft!
+    @IBOutlet weak var complainButton: RNSBlackButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,11 @@ class RNSBusInfoViewController: UIViewController {
         depoField.text = item?.unit_name
         carrierField.text = item?.carrier_name
         phoneField.text = item?.unit_phone
+        complainButton.button.touchUpInside {
+            let vc = SupportInfoViewController.initialController as? SupportInfoViewController
+            vc?.type = .complaint
+            vc?.pushAnimatedRedScroll()
+        }
     }
     
     override class var storyboardName: String {

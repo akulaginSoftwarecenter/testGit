@@ -95,6 +95,8 @@ extension RNSSearchViewController {
         STRouter.pop {
             RNSMapManager.mapCenter(item.point)
             RNSMapManager.setZoomLevel(14)
+            RNSBuildRouteView(item.point)
+            RNSPinBuild(item.point!)
         }
     }
     
