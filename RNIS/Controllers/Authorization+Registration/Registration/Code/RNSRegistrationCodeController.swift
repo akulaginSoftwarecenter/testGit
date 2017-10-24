@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- RNSRegistrationCodeController
+ Контроллер ввода кода подтверждения во время регистрации
  */
-
 class RNSRegistrationCodeController: RNSCodeContainerController {
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: объект с данными пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRegistrationCodeController.controller as? RNSRegistrationCodeController
         

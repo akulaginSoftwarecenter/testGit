@@ -9,11 +9,12 @@
 import Foundation
 
 /**
- RNSCodeViewController extention
+ Расширение для обработки событий текстовых полей
  */
-
 extension RNSCodeViewController: UITextFieldDelegate {
     
+    /// Событие зажигается перед любым изменением текста поля пользователем.
+    /// Обработчик разрешает ввод не более 4 символов.
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
         let newLength = text.characters.count + string.characters.count - range.length

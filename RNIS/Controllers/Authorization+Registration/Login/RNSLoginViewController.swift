@@ -9,20 +9,27 @@
 import UIKit
 
 /**
- RNSLoginViewController
+ Контроллер авторизации
  */
-
 class RNSLoginViewController: UIViewController {
     
+    /// Кнопка входа
     @IBOutlet weak var loginButton: RNSBlackButton!
+    /// Кнопка возврата
     @IBOutlet weak var backButton: RNSBlackButton!
+    /// Представление для авторизации
     @IBOutlet var loginView: RNSLoginView!
+    /// Поле ввода логина
     @IBOutlet weak var loginField: RNSPhoneField!
+    /// Поле ввода пароля
     @IBOutlet weak var passwordField: STPasswordField!
+    /// Надпись с текстом ошибки
     @IBOutlet weak var errorLabel: UILabel!
     
+    /// Данные пользователя
     var item: RNSUserPayload?
     
+    /// Массив текстовых полей
     lazy var fields:[RNSTextField] = {
         return [self.loginField, self.passwordField]
     }()
@@ -36,6 +43,7 @@ class RNSLoginViewController: UIViewController {
         addDoneButtonOnKeyboard()
     }
     
+    /// Событие нажатия на кнопку входа
     func loginPressed() {
         
         if let error = fields.checkValidFields {

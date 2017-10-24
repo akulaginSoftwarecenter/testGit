@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- RNSRecoveryParoleController
+ Контроллер восстановления пароля
  */
-
 class RNSRecoveryParoleController: RNSParoleContainerController {
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: данные пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRecoveryParoleController.controller as? RNSRecoveryParoleController
         vc?.item = item
@@ -40,12 +42,16 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
         })
     }
     
+    /// Авторизация пользователя
     func login() {
         RNISAuthManager.login(item?.phone, password: item?.password) {[weak self] (errorText) in
             self?.prepareError(errorText)
         }
     }
     
+    /// Заполнение надписи для демонстрации ошибок во внутреннем контроллере
+    ///
+    /// - Parameter error: текст ошибки
     func prepareError(_ error: String?) {
         containerViewController?.errorLabel.text = error
     }

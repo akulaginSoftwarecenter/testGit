@@ -9,16 +9,20 @@
 import UIKit
 
 /**
- RNSCodeViewController
+ Контроллер для ввода кода подтверждения
  */
-
 class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     
+    /// Поле кода подтверждения
     @IBOutlet weak var codeField: RNSTextField!
+    /// Надпись с номером телефона
     @IBOutlet weak var phoneLabel: UILabel!
+    /// Кнопка повторной отправки кода подтверждения
     @IBOutlet weak var repeatButton: UIButton!
     
+    /// Обработчик повторной отправки кода
     var handlerRepeatCode: EmptyBlock?
+    /// Текст номера телефона
     var phone: String?
 
     override func viewDidLoad() {
@@ -27,6 +31,7 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
         codeField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(loginPressed))
     }
     
+    /// Подготовка текста номера телефона
     func preparePhone() {
         guard let phone = phone else {
             return
@@ -44,11 +49,13 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
         handlerBlackAction?()
     }
     
+    /// очистка надписей с ошибками
     func clearError() {
         codeField.setStateValid()
         errorLabel.text = nil
     }
 
+    /// Событие нажатия на кнопку повторной отправки кода
     @IBAction func repeatCodeAction(_ sender: Any) {
         handlerRepeatCode?()
     }

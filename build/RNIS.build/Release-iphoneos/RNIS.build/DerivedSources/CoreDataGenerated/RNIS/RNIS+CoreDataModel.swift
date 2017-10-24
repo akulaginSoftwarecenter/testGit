@@ -2,7 +2,7 @@
 //  RNIS+CoreDataModel.swift
 //  
 //
-//  Created by Admin on 18.10.17.
+//  Created by Admin on 24.10.17.
 //
 //  This file was automatically generated and should not be edited.
 //

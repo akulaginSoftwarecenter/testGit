@@ -9,13 +9,16 @@
 import UIKit
 
 /**
- RNSImagePickerController
+ Контроллер для просмотра и последующего выбора фотографий из галереи
  */
-
 class RNSImagePickerController: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    /// Обработчик, который вызывается после выбора фото из галереи
     var complete: AliasImageBlock?
     
+    /// Вспомогательный инициализатор для создания контроллера с помощью блока-обработчика выбора фото
+    ///
+    /// - Parameter complete: блок, которые будет вызван после выбора фото
     convenience init(complete: AliasImageBlock?) {
         self.init()
         
@@ -29,6 +32,7 @@ class RNSImagePickerController: UIImagePickerController, UIImagePickerController
         allowsEditing = true
     }
     
+    /// Событие выбора фотографии из галереи
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             complete?(image)
@@ -38,6 +42,7 @@ class RNSImagePickerController: UIImagePickerController, UIImagePickerController
         dismiss()
     }
     
+    /// Событие отмены выбора фотографии
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss()
     }

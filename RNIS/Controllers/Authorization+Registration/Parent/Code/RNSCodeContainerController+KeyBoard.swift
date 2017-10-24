@@ -9,9 +9,8 @@
 import Foundation
 
 /**
- RNSCodeContainerController extention
+ Расширение для работы с клавиатурой
  */
-
 extension RNSCodeContainerController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,10 +20,16 @@ extension RNSCodeContainerController {
         }
     }
     
+    /// Возвращает кнопку повторной отправки кода подтверждения внутреннего контроллера и nil, если ее там нет
     var repeatButton: UIButton? {
         return containerViewController?.repeatButton
     }
     
+    /// Событие появления клавиатуры в контроллере.
+    /// По-умолчанию запускается обработчик handlerUpdateScroll(:), если он есть.
+    /// Но выше описанное выполнится только в случае, если клавиатура закрывает кнопку повтора отправки кода подтверждения
+    ///
+    /// - Parameter heightKeyboard: Высота клавиатуры
     func prepareHeightBottom(_ heightKeyboard: CGFloat?) {
         guard let heightKeyboard = heightKeyboard, repeatButton != nil else {
             return

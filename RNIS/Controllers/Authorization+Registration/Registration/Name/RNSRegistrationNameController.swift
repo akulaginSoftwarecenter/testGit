@@ -12,18 +12,26 @@ import Alamofire
 import ObjectMapper
 
 /**
- RNSRegistrationNameController
+ Контроллер регистрации имени пользователя
  */
-
 class RNSRegistrationNameController: UIViewController {
     
+    /// Поле ввода имени
     @IBOutlet weak var nameField: RNSTextField!
+    /// Фоновое представление для регистрации и входа
     @IBOutlet var coverView: RNSLoginView!
+    /// Надпись с текстом ошибки
     @IBOutlet weak var errorLabel: UILabel!
+    /// Представление, содержащее фото пользователя с возможностью редактирования
     @IBOutlet weak var photo: RNSProfilePhoto!
+    /// Блок для обработки изменения позиции контента
     var handlerUpdateScroll: ((CGFloat) -> ())?
+    /// Данные пользователя
     var item: RNSUserPayload?
 
+    /// Создание контроллера
+    ///
+    /// - Parameter item: данные пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRegistrationNameController.initialController as? RNSRegistrationNameController
         
@@ -42,12 +50,14 @@ class RNSRegistrationNameController: UIViewController {
         nameField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(buttonPressed))
     }
     
+    /// Настройка фонового представления для регистрации и входа
     func prepareCoverView() {
         coverView.handlerBlackAction = { [weak self] in
             self?.buttonPressed()
         }
     }
     
+    /// Событие нажатия кнопки "Далее" на клавиатуре поля имени
     @objc func buttonPressed() {
         if !nameField.isValid {
             nameField.setStateNotValid()
@@ -58,6 +68,7 @@ class RNSRegistrationNameController: UIViewController {
         send()
     }
     
+    /// Регистрация имени и аватара пользователя на сервере с последующей авторизацией в случае успеха
     func send() {
         item?.name = nameField.text
         item?.avatar = photo.imageData
@@ -69,16 +80,21 @@ class RNSRegistrationNameController: UIViewController {
         })
     }
     
+    /// Авторизация пользователя
     func login() {
         RNISAuthManager.login(item?.phone, password: item?.password) {[weak self] (errorText) in
             self?.prepareError(errorText)
         }
     }
     
+    /// Заполнение надписи для демонстрации ошибок текстом ошибки
+    ///
+    /// - Parameter error: текст ошибки
     func prepareError(_ error: String?) {
         errorLabel.text = error
     }
     
+    /// Очистка надписи для демонстрации ошибок
     func clearError() {
         nameField.setStateValid()
         prepareError(nil)

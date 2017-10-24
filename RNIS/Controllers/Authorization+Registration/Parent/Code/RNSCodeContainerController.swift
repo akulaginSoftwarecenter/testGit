@@ -9,17 +9,19 @@
 import UIKit
 
 /**
- RNSCodeContainerController
+ Контроллер, который является контейнером для контроллера RNSCodeViewController
  */
-
 class RNSCodeContainerController: STContainerViewController {
    
+   /// Хранит данные пользователя
    var item: RNSUserPayload?
     
+   /// Внутренний контроллер
    var containerViewController: RNSCodeViewController? {
         return (enterViewController as? RNSCodeViewController)
    }
     
+   /// Обработчик изменений позиции контента скролинга
    var handlerUpdateScroll: ((CGFloat) -> ())?
     
    override func prepareEnterViewController(){
@@ -30,14 +32,17 @@ class RNSCodeContainerController: STContainerViewController {
         preparePhoneText()
     }
     
+    /// Подготовка текста номера телефона к использованию в контейнере
     func preparePhoneText() {
         containerViewController?.phone = item?.phone
     }
    
+    /// Текст кода подтверждения из внутреннего контроллера
     var codeText: String? {
         return containerViewController?.codeField.text
     }
     
+    /// Отправить код потдверждения на устройство повторно
     func repeatCodeAction() {
         item?.confirmSend()
     }
@@ -55,6 +60,9 @@ class RNSCodeContainerController: STContainerViewController {
         super.viewDidLoad()
     }
     
+    /// Событие успешного завершения проверки кода подтверждения
+    ///
+    /// - Parameter item: Содержит информацию о пользователе
     func actionComplete(_ item: RNSUserPayload?) {
         
     }

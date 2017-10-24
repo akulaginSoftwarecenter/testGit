@@ -9,10 +9,9 @@
 import UIKit
 
 /**
- RNSRecoveryPhoneController
+ Контроллер ввода номера телефона для восстановления пароля
  */
-
-class RNSRecoveryPhoneController: RNSPhoneContrainerController {
+class RNSRecoveryPhoneController: RNSPhoneContainerController {
     
     override var typeTitle: TypeTitle {
         return .recovery

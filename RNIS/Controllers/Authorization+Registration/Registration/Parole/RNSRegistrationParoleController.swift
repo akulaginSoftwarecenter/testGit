@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- RNSRegistrationParoleController
+ Контроллер создания пароля во время регистрации
  */
-
 class RNSRegistrationParoleController: RNSParoleContainerController {
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: объект с данными пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRegistrationParoleController.controller as? RNSRegistrationParoleController
         vc?.item = item

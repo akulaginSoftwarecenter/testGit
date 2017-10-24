@@ -9,10 +9,9 @@
 import UIKit
 
 /**
- RNSRegistrationPhoneController
+ Контроллер регистрации номера телефона
  */
-
-class RNSRegistrationPhoneController: RNSPhoneContrainerController {
+class RNSRegistrationPhoneController: RNSPhoneContainerController {
     
     override var typeTitle: TypeTitle {
         return .registration

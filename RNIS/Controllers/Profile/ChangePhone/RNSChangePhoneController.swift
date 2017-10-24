@@ -12,7 +12,7 @@ import UIKit
  RNSChangePhoneController
  */
 
-class RNSChangePhoneController: RNSPhoneContrainerController {
+class RNSChangePhoneController: RNSPhoneContainerController {
     
     override var typeTitle: TypeTitle {
         return .change

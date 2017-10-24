@@ -14,11 +14,13 @@ import Foundation
 
 extension RNSParoleViewController {
     
+    /// Подготовка представлений
     func prepareUI() {
         preparePlaceholderPassworOne()
         prepareTitleBlackButton()
     }
     
+    /// Подготовка заполнителя для поля пароля
     func preparePlaceholderPassworOne() {
         guard let placeholderPassworOne = placeholderPassworOne else {
             return
@@ -26,6 +28,7 @@ extension RNSParoleViewController {
         passwordOneField.placeholderKey = placeholderPassworOne
     }
     
+    /// Подготовка заголовка для кнопки перехода к следующему шагу
     func prepareTitleBlackButton() {
         guard let titleBlackButton = titleBlackButton else {
             return
@@ -33,6 +36,7 @@ extension RNSParoleViewController {
         coverView.titleBlackButton = titleBlackButton
     }
 
+    /// Добавление кнопки "Далее" на клавиатуру полей
     func addDoneButtonOnKeyboard()  {
         passwordOneField.addButtonOnKeyboard("Далее   ", target: passwordTwoField, action: #selector(UIResponder.becomeFirstResponder))
         passwordTwoField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(self.loginPressed))

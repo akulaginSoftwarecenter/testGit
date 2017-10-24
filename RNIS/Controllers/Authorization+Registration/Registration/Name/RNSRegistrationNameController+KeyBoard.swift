@@ -9,9 +9,8 @@
 import Foundation
 
 /**
- RNSRegistrationNameController Keyboard extention
+ Расширение для работы с клавиатурой. При появлении контроллера, подписывает его на событие появления клавиатуры, а при исчезновении - отписывает.
  */
-
 extension RNSRegistrationNameController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,10 +20,15 @@ extension RNSRegistrationNameController {
         }
     }
     
+    /// Возвращает кнопку перехода к следующему шагу из фонового представления для регистрации и входа
     var blackButton: UIView {
         return coverView.blackButton
     }
     
+    /// Предобработка события появления клавиатуры: в случае, если клавиатура закрывает какое-либо представление,
+    /// то вызывается блок обновления позиции контента скрола на высоту, которая необходима, чтобы клавиатура не закрывала представления.
+    ///
+    /// - Parameter heightKeyboard: высота клавиатуры
     func prepareHeightBottom(_ heightKeyboard: CGFloat?) {
         guard let heightKeyboard = heightKeyboard, errorLabel != nil else {
             return

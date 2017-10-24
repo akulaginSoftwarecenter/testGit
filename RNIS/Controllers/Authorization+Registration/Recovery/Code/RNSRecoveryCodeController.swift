@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- RNSRecoveryCodeController
+ Контроллер ввода кода подтверждения для восстановления пароля
  */
-
 class RNSRecoveryCodeController: RNSCodeContainerController {
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: данные пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSRecoveryCodeController.controller as? RNSRecoveryCodeController
         

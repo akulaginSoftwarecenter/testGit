@@ -9,11 +9,11 @@
 import Foundation
 
 /**
- RNSLoginViewController UITextFieldDelegate extention
+ Расширение для обработки событий текстовых полей
  */
-
 extension RNSLoginViewController: UITextFieldDelegate {
     
+    /// Событие нажатия на кнопку "Ввод" на клавиатуре
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == passwordField {
             doneButtonAction()

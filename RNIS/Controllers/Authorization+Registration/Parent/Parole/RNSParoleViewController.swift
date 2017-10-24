@@ -9,16 +9,20 @@
 import UIKit
 
 /**
- RNSParoleViewController
+ Контроллер создания пароля
  */
-
-class RNSParoleViewController: RNSCoverViewController,ContainerProtocol {
+class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
     
+    /// Поле ввода пароля
     @IBOutlet weak var passwordOneField: STPasswordField!
+    /// Поле подтверждения пароля
     @IBOutlet weak var passwordTwoField: STPasswordField!
+    /// Заполнитель поля пароля
     var placeholderPassworOne: String?
+    /// Заголовок кнопки перехода к следующему шагу
     var titleBlackButton: String?
     
+    /// Массив текстовых полей
     lazy var fields:[RNSTextField] = {
         return [self.passwordOneField, self.passwordTwoField]
     }()
@@ -43,7 +47,7 @@ class RNSParoleViewController: RNSCoverViewController,ContainerProtocol {
             return
         }
         
-        let parent = self.parent as! RNSRegistrationParoleController
+        let parent = self.parent as! RNSParoleContainerController
         let phone = parent.item!.phone!
         if phone == passwordOneField.text {
             errorLabel.text = "Пароль не может полностью повторять логин"
@@ -56,6 +60,7 @@ class RNSParoleViewController: RNSCoverViewController,ContainerProtocol {
         handlerBlackAction?()
     }
     
+    /// Очистка надписей для ошибок
     func clearError() {
         fields.clearError()
         errorLabel.text = nil
