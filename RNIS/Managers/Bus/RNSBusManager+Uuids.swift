@@ -7,12 +7,17 @@
 //
 
 import Foundation
-
+/**
+ Экземпляр конроллера управления ТС для управления идентификаторами ТС
+ */
 extension RNSBusManager {
+    
+    /// Функция обновления идентификаторов ТС
     static func updateUuids(_ uuids: [String]?) {
         updateUuids(addUuids: addUuids(uuids), removeUuids: removeUuids(uuids))
     }
     
+    /// Функция (расширенная) обновления идентификаторов ТС
     static func updateUuids(addUuids: [String]? = nil, removeUuids:[String]?) {
         Utils.mainQueue {
             removeOld(removeUuids)
@@ -22,14 +27,17 @@ extension RNSBusManager {
         }
     }
     
+    /// Функция удаления всех идентификаторов ТС
     static func removeAll() {
         updateUuids(removeUuids: showedUuids)
     }
     
+    /// Функция добавления идентификаторов ТС
     static func addUuids(_ uuids: [String]?) -> [String]? {
         return uuids?.filter{!showedUuids.contains($0)}
     }
     
+    /// Функция удаления  идентификаторов ТС
     static func removeUuids(_ uuids: [String]?) -> [String]? {
         guard let uuids = uuids else {
             return nil

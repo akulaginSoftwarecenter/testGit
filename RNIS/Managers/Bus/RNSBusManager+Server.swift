@@ -8,9 +8,12 @@
 
 import Foundation
 import Alamofire
-
+/**
+ Экземпляр конроллера управления ТС для взаимодествия с сервером
+ */
 extension RNSBusManager {
     
+    /// Функция обновления данных о ТС с сервера
     static func updateServer(complete: EmptyBlock?) {
         if isNeedStopLoad {
             removeAll()
@@ -27,6 +30,7 @@ extension RNSBusManager {
         })
     }
     
+    /// Функция исполнения обновления данных о ТС с сервера
     static func updateOperationServer(_ uuids: [String]?) {
         prepareOperation {
             updateUuids(uuids)
