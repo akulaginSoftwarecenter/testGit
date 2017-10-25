@@ -7,9 +7,12 @@
 //
 
 import Foundation
-
+/**
+ Менеджер управления обновления маршрутов
+ */
 extension RNSPageRouteManager {
     
+    /// Функция обновления маршрута
     static func updateAll(_ currentItem: RNSRouteVariant?) {
         if self.currentItem == currentItem {
             return
@@ -18,6 +21,7 @@ extension RNSPageRouteManager {
         handlerUpdateCurrent?()
     }
     
+    /// Функция обновления карты
     static func updateMap(_ currentItem: RNSRouteVariant?) {
         if self.currentItem == currentItem {
             return
@@ -28,6 +32,7 @@ extension RNSPageRouteManager {
         handlerUpdateCurrentTwo?()
     }
     
+    /// Функция обновления маршрутов
     static func updateRoads() {
         prepareRoadsOff()
         currentItem?.prepareRoadActivate()

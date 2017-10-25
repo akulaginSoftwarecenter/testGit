@@ -7,18 +7,23 @@
 //
 
 import Foundation
-
+/**
+ Контоллер управления слоев карты
+ */
 extension RNSMapManager {
     
+    /// Функция отображения информации на карте
     static func showInfoIfNeed(_ item: RNSCoordinateModel?) {
         mapCenter(item?.point)
         handlerShowInfo?(item)
     }
     
+    /// Создание массива слоев карты
     static var overlays: NSMutableArray? {
         return mapView.overlays()
     }
     
+    /// Фнукция создания дополнительно слоя карты
     static func addOverlay(_ obj: Any) {
         guard let overlays = overlays,
             !overlays.contains(self) else {
@@ -27,10 +32,12 @@ extension RNSMapManager {
         overlays.add(obj)
     }
     
+    /// Фнукция удаления слоя карты
     static func removeOverlay(_ obj: Any) {
         overlays?.remove(obj)
     }
     
+    /// Шаг приближения карты
     static var step: Double {
         let zoom = getZoomLevel
         var step = Double(1966080)
@@ -40,6 +47,7 @@ extension RNSMapManager {
         return step
     }
     
+    /// Фнукция показа остановки на карте
     static func showStopPoint(_ dict: AliasDictionary?) {
         guard let dict = dict,
             let item = RNSDataManager.parseBusStopItems([dict])?.first  else {

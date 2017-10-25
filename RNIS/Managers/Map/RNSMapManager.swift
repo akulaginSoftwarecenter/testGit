@@ -8,37 +8,48 @@
 
 import UIKit
 
+/**
+Контоллер управления картой
+ */
 class RNSMapManager: NSObject {
     
     static let shared = RNSMapManager()
     
+    /// Создание экземпляра карты
     static var mapView: MapView {
         return shared.mapView
     }
     
-    /**
-     base mapview PGView
-     */
+    /// Создание экземпляра карты RNIS
     var mapView: MapView = RNSMapView()
     
+    /// Создание экземпляра местоположения маркера
     lazy var pinMyLocation: RNSPinMyLocation = {
         return RNSPinMyLocation()
     }()
     
+    /// Создание экземпляра местоположения "откуда"
     static var pointFrom: RNSDutyAddressTemp?
+    /// Создание экземпляра местоположения "куда"
     static var pointHere: RNSDutyAddressTemp?
     
+    /// Функция удаления маркера
     static var handlerRemovePinBuild: EmptyBlock?
+    /// Функция добавления маршрута
     static var handlerAddRoute: ((PGPolyline?) -> ())?
+    /// Функция показы/скрытия контроллера
     static var handlerDismissOldPresentVC: EmptyBlock?
+    /// Функция показа информации
     static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
     
+    /// Функция подготовки точек маршрута
     static func prepareRoutePoints() {
         let item = RNSDutyAddressTemp(RNSLocationManager.point)
         pointFrom = item
         pointHere = item
     }
     
+    /// Функция удаления предыдущего маркера
     static func removeOldPinBuild() {
         handlerRemovePinBuild?()
     }

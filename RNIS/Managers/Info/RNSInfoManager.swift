@@ -8,13 +8,16 @@
 
 import UIKit
 import MessageUI
-
+/**
+ Контроллер отправки email стандартным почтовым сервисом
+ */
 class RNSInfoManager: NSObject, MFMailComposeViewControllerDelegate {
     
     static let shared = RNSInfoManager()
     
     var composeVC: MFMailComposeViewController?
     
+    /// Создание экземпляра почтового сообщения
     func send(_ item: RNSContactItem) {
         
          if !MFMailComposeViewController.canSendMail() {
@@ -31,6 +34,7 @@ class RNSInfoManager: NSObject, MFMailComposeViewControllerDelegate {
          self.composeVC = vc
     }
     
+    /// Функция отправки почты
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }

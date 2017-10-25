@@ -8,7 +8,9 @@
 
 import UIKit
 import RealmSwift
-
+/**
+ Контроллер БД
+ */
 class RNSDataManager: NSObject {
     static let shared = RNSDataManager()
     

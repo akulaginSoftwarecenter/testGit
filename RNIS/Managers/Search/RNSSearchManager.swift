@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+/**
+ Контроллер поиска
+ */
 class RNSSearchManager: NSObject {
-    
+   /// Создание текстовой переменной поиска
     static var text: String?
+    /// Создание переменной типа поиска
     static var type: TypeSearch?
 }

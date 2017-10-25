@@ -8,7 +8,9 @@
 
 import Foundation
 import RealmSwift
-
+/**
+ Контроллер поиска БД 
+ */
 extension RNSDataManager {
     
     static func searchItems(_ text: String?) -> [RNSSearchHistory]? {

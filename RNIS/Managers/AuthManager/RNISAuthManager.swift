@@ -8,8 +8,12 @@
 
 import UIKit
 
+/**
+ Контроллер авторизации
+ */
 class RNISAuthManager {
     
+    /// Функция выхода из приложения
     static func logout() {
         STRouter.showLoader()
         RNSPostLogout { _, _, _ in
@@ -21,12 +25,14 @@ class RNISAuthManager {
         }
     }
     
+    /// Функция очистки истории пользователя
     static func clearUserDefaults() {
         UserDefaults.removeToken()
         UserDefaults.removeLogin()
         UserDefaults.removePassword()
     }
     
+    /// Функция авторизации в приложении
     static func login(_ login: String?, password: String?, failure: AliasStringBlock?) {
         STRouter.showLoader()
         RNSPostLogin(login, password: password, complete: {

@@ -8,9 +8,12 @@
 
 import Foundation
 import CoreLocation
-
+/**
+ Менеджер делегата менеджара местоположения
+ */
 extension RNSLocationManager: CLLocationManagerDelegate {
  
+    /// Метод делегата менеджера местоположения изменение статуса
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if isUse {
             manager.startUpdatingLocation()
@@ -19,10 +22,12 @@ extension RNSLocationManager: CLLocationManagerDelegate {
         }
     }
     
+    /// Метод делегата менеджера местоположения изменение местоположения
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         RNSLocationManager.updateLocation()
     }
     
+    /// Метод обновления местоположения на карте
     static func updateLocation() {
         handlerMyLocation?()
         RNSMapManager.mapView.setMockLocation(RNSLocationManager.point)

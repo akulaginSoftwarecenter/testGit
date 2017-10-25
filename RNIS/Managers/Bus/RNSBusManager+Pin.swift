@@ -8,7 +8,11 @@
 
 import Foundation
 
+/**
+ Экземпляр конроллера управления ТС для отображения ТС на карте
+ */
 extension RNSBusManager {
+    /// Функция отображения идентификаторов маркеров
     static func showPinsUuids(_ uuids: [String]?) {
         guard let items = buss(uuids) else {
             return
@@ -16,6 +20,7 @@ extension RNSBusManager {
         showPinsItems(items)
     }
     
+    /// Функцил отображения экземпляров маркеров
     static func showPinsItems(_ items: [RNSBus]?) {
         guard let items = items else {
             return
@@ -27,6 +32,7 @@ extension RNSBusManager {
         }
     }
     
+    /// Фнукция отображения всех маркеров
     static func showPinAll() {
         guard let items = RNSDataManager.buss else {
             return
@@ -34,6 +40,7 @@ extension RNSBusManager {
         showPinsItems(Array(items))
     }
     
+    /// Функция удаления всех "старых" маркеров
     static func removeOldAll() {
         for item in showedItems {
             item.handlerRemove?()
@@ -42,6 +49,7 @@ extension RNSBusManager {
         self.showedUuids = [String]()
     }
     
+    /// Функция удаления всех "старых" идентификаторов
     static func removeOld(_ uuids: [String]?) {
         guard let uuids = uuids else {
             return

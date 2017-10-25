@@ -8,7 +8,9 @@
 
 import Foundation
 import RealmSwift
-
+/**
+ Контроллер БД ТС
+ */
 extension RNSDataManager {
     
     static var buss: Results<RNSBus>? {

@@ -7,15 +7,19 @@
 //
 
 import Foundation
-
+/**
+ Экземпляр конроллера управления остановками ТС для отображения теней остановок ТС на карте
+ */
 extension RNSBusStopManager {
     
+    /// Функция подготовки нанесения теней остановок ТС на карте
     static func prepareStubBusStop() {
         //removeOldAll()
         RNSDataManager.createStubBusStopIfNeed()
         //showPinAll()
     }
     
+    /// Функция подготовки ассинхронного нанесения теней остановок ТС на карте
     static func prepareStubAsunc() {
         removeOldAll()
         createStubItemsAsync { (items) in
@@ -23,6 +27,7 @@ extension RNSBusStopManager {
         }
     }
     
+    /// Функция ассинхронного нанесения теней остановок ТС на карте
     static func createStubItemsAsync(complete: AliasStringArrayBlock?) {
         RNSDataManager.removeAllBusStop()
         //CounterTime.startTimer()
@@ -35,10 +40,14 @@ extension RNSBusStopManager {
         }
     }
     
+    /// Функция создания словаря теней ТС на карте
     static func createStubDicts(complete: (([AliasDictionary]) -> ())?) {
+        
+        /// Словарь хранения теней на карте
         var dicts = [AliasDictionary]()
         
         //CounterTime.startTimer()
+        /// Координата центра нанесение ТС на карту
         let point = RNSLocationManager.point
         DispatchQueue.global(qos: .userInitiated).async {
             for index in 7...10000 {

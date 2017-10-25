@@ -7,13 +7,17 @@
 //
 
 import Foundation
-
+/**
+ Экземпляр конроллера управления остановками ТС для управления идентификаторами остановок ТС
+ */
 extension RNSBusStopManager {
     
+    /// Функция обновления идентификаторов остановок ТС
     static func updateUuids(_ uuids: [String]?) {
         updateUuids(addUuids: addUuids(uuids), removeUuids: removeUuids(uuids))
     }
     
+    /// Расширенная функция обновления идентификаторов остановок ТС
     static func updateUuids(addUuids: [String]? = nil, removeUuids:[String]?) {
         Utils.mainQueue {
             removeOld(removeUuids)
@@ -23,14 +27,17 @@ extension RNSBusStopManager {
         }
     }
     
+    /// Функция удаления всех идентификаторов остановок ТС
     static func removeAll() {
         updateUuids(removeUuids: showedUuids)
     }
-     
+    
+    /// Функция добавления идентификаторов остановок ТС
     static func addUuids(_ uuids: [String]?) -> [String]? {
         return uuids?.filter{!showedUuids.contains($0)}
     }
     
+    /// Функция удаления  идентификаторов остановок ТС
     static func removeUuids(_ uuids: [String]?) -> [String]? {
         guard let uuids = uuids else {
             return nil
