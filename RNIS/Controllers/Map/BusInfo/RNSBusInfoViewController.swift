@@ -9,27 +9,38 @@
 import UIKit
 
 /**
- RNSBusInfoViewController
+ Конроллер показывает основную информацию об автобусе
  */
-
 class RNSBusInfoViewController: UIViewController {
     fileprivate let smallScreenHeightThreshold: CGFloat = 600
     fileprivate let smallScreenTopConstraint: CGFloat = 135
 
 
+    /// Создание контроллера
+    ///
+    /// - Parameter item: серверная модель автобуса
     static func initController(_ item: RNSBusTemp?) -> UIViewController? {
         let vc = RNSBusInfoViewController.initialController as? RNSBusInfoViewController
         vc?.item = item
         return  vc
     }
     
+    /// Серверная модель автобуса
     var item: RNSBusTemp?
+    
+    /// Ограничение расстояния между первым текстовым полем и верхней стороной представления контроллера
     @IBOutlet weak var topDistanceConstraint: NSLayoutConstraint!
+    /// Поле с информацией о водителе
     @IBOutlet weak var driverField: RNSNameFieldLeft!
+    /// Поле с информацией о кондукторе
     @IBOutlet weak var conductorField: RNSNameFieldLeft!
+    /// Поле с информацией о депо
     @IBOutlet weak var depoField: RNSNameFieldLeft!
+    /// Поле с информацией о транспортной компании
     @IBOutlet weak var carrierField: RNSNameFieldLeft!
+    /// Поле с номером телефона компании
     @IBOutlet weak var phoneField: RNSNameFieldLeft!
+    /// Кнопка "пожаловаться"
     @IBOutlet weak var complainButton: RNSBlackButton!
     
     override func viewDidLoad() {
@@ -40,6 +51,7 @@ class RNSBusInfoViewController: UIViewController {
         prepareUI()
     }
     
+    /// Настройка представлений
     func prepareUI() {
         driverField.text = item?.driver
         conductorField.text = item?.check_taker

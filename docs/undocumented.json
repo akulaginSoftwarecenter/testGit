@@ -226,555 +226,135 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 17,
-      "symbol": "RNSDateSelectViewController.handlerDate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 19,
-      "symbol": "RNSDateSelectViewController.handlerDismiss",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 21,
-      "symbol": "RNSDateSelectViewController.datePicker",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 23,
-      "symbol": "RNSDateSelectViewController.oKButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 24,
-      "symbol": "RNSDateSelectViewController.cancelButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 26,
+      "line": 30,
       "symbol": "RNSDateSelectViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 32,
-      "symbol": "RNSDateSelectViewController.prepareUI()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 37,
-      "symbol": "RNSDateSelectViewController.prepareButton()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 48,
-      "symbol": "RNSDateSelectViewController.dismiss()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 53,
-      "symbol": "RNSDateSelectViewController.prepareDatePicker()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 58,
+      "line": 66,
       "symbol": "RNSDateSelectViewController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/DateSelect/RNSDateSelectViewController.swift",
-      "line": 62,
+      "line": 70,
       "symbol": "RNSDateSelectViewController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 17,
-      "symbol": "RNSDutyViewController.isHaveDate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 21,
-      "symbol": "RNSDutyViewController.updateFields()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 26,
-      "symbol": "RNSDutyViewController.prepareSearchButton()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 32,
-      "symbol": "RNSDutyViewController.prepareError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 36,
-      "symbol": "RNSDutyViewController.prepareDate(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 41,
-      "symbol": "RNSDutyViewController.updateDate()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 47,
-      "symbol": "RNSDutyViewController.showLoader()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Duty/RNSDutyViewController+UI.swift",
-      "line": 51,
-      "symbol": "RNSDutyViewController.removeLoader()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 17,
-      "symbol": "RNSMoveDetailController.handlerBack",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 19,
-      "symbol": "RNSMoveDetailController.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 20,
-      "symbol": "RNSMoveDetailController.flagView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 22,
-      "symbol": "RNSMoveDetailController.detailView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 24,
-      "symbol": "RNSMoveDetailController.initController(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 30,
+      "line": 37,
       "symbol": "RNSMoveDetailController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 39,
-      "symbol": "RNSMoveDetailController.prepareObservers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 43,
-      "symbol": "RNSMoveDetailController.updateItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 50,
+      "line": 59,
       "symbol": "RNSMoveDetailController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 54,
-      "symbol": "RNSMoveDetailController.actionBack(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/MoMapve/Details/RNSMoveDetailController.swift",
-      "line": 58,
+      "line": 68,
       "symbol": "RNSMoveDetailController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Details/RNSMoveDetailController+Flag.swift",
-      "line": 17,
-      "symbol": "RNSMoveDetailController.prepareFlagView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Details/RNSMoveDetailController+Flag.swift",
-      "line": 24,
-      "symbol": "RNSMoveDetailController.updateFlag()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Details/RNSMoveDetailController+Flag.swift",
-      "line": 30,
-      "symbol": "RNSMoveDetailController.updateFlagImage()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Container.swift",
-      "line": 17,
+      "line": 16,
       "symbol": "RNSMovePopupController.prepare(for:sender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Container.swift",
-      "line": 22,
-      "symbol": "RNSMovePopupController.prepareEnterViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Observe.swift",
-      "line": 17,
-      "symbol": "RNSMovePopupController.prepareViews(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Observe.swift",
-      "line": 23,
-      "symbol": "RNSMovePopupController.prepareAlpha(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController+Observe.swift",
-      "line": 29,
-      "symbol": "RNSMovePopupController.prepareEnabled(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 17,
-      "symbol": "RNSMovePopupController.initController(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 37,
-      "symbol": "RNSMovePopupController.containerController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 38,
-      "symbol": "RNSMovePopupController.handlerDetailBack",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 39,
-      "symbol": "RNSMovePopupController.startBottomOffset",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 40,
-      "symbol": "RNSMovePopupController.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 42,
-      "symbol": "RNSMovePopupController.viewVariant",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 43,
-      "symbol": "RNSMovePopupController.buttonDown",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 44,
-      "symbol": "RNSMovePopupController.containerView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 46,
+      "line": 55,
       "symbol": "RNSMovePopupController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 53,
-      "symbol": "RNSMovePopupController.prepareObservers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 57,
-      "symbol": "RNSMovePopupController.prepareItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 62,
-      "symbol": "RNSMovePopupController.updateItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 69,
+      "line": 81,
       "symbol": "RNSMovePopupController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 73,
-      "symbol": "RNSMovePopupController.actionDots(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/Popup/RNSMovePopupController.swift",
-      "line": 81,
+      "line": 94,
       "symbol": "RNSMovePopupController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController+Item.swift",
-      "line": 16,
+      "line": 15,
       "symbol": "RNSMoveMapViewController.prepareItem()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController+Item.swift",
-      "line": 22,
+      "line": 21,
       "symbol": "RNSMoveMapViewController.closeItem()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController+MapView.swift",
-      "line": 17,
+      "line": 16,
       "symbol": "RNSMoveMapViewController.prepare(for:sender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController+MapView.swift",
-      "line": 28,
-      "symbol": "RNSMoveMapViewController.mapView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController+MapView.swift",
-      "line": 32,
-      "symbol": "RNSMoveMapViewController.onMapLongTouchEvent(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController+MapView.swift",
-      "line": 36,
-      "symbol": "RNSMoveMapViewController.prepareMapView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController+MapView.swift",
-      "line": 41,
-      "symbol": "RNSMoveMapViewController.onMapEvent()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 17,
+      "line": 16,
       "symbol": "RNSMoveMapViewController.viewTop",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 19,
-      "symbol": "RNSMoveMapViewController.handlerDidDisappear",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 20,
-      "symbol": "RNSMoveMapViewController.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 22,
-      "symbol": "RNSMoveMapViewController.initController(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 28,
+      "line": 32,
       "symbol": "RNSMoveMapViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 37,
-      "symbol": "RNSMoveMapViewController.updateItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 41,
-      "symbol": "RNSMoveMapViewController.prepareObservers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 45,
-      "symbol": "RNSMoveMapViewController.preparePopup()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 55,
+      "line": 62,
       "symbol": "RNSMoveMapViewController.prepareColor()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 59,
+      "line": 66,
       "symbol": "RNSMoveMapViewController.prepareStubLocation(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 64,
+      "line": 71,
       "symbol": "RNSMoveMapViewController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/MoveMap/RNSMoveMapViewController.swift",
-      "line": 73,
+      "line": 80,
       "symbol": "RNSMoveMapViewController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Detail/RNSRouteDetailController+Flag.swift",
-      "line": 17,
-      "symbol": "RNSRouteDetailController.prepareFlagView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Detail/RNSRouteDetailController+Flag.swift",
-      "line": 24,
-      "symbol": "RNSRouteDetailController.updateFlag()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Detail/RNSRouteDetailController+Flag.swift",
-      "line": 30,
-      "symbol": "RNSRouteDetailController.updateFlagImage()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController+Observe.swift",
-      "line": 16,
-      "symbol": "RNSPageRoutePopupController.prepareViews(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController+Observe.swift",
-      "line": 22,
-      "symbol": "RNSPageRoutePopupController.prepareAlpha(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController+Observe.swift",
-      "line": 28,
-      "symbol": "RNSPageRoutePopupController.prepareEnabled(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -785,162 +365,43 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController+RouteDetail.swift",
-      "line": 22,
-      "symbol": "RNSPageRoutePopupController.prepareEnterViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController+RouteDetail.swift",
-      "line": 29,
-      "symbol": "RNSPageRoutePopupController.updateCurrentItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 18,
-      "symbol": "RNSPageRoutePopupController.containerController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 20,
-      "symbol": "RNSPageRoutePopupController.initController",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 36,
-      "symbol": "RNSPageRoutePopupController.containerView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 37,
-      "symbol": "RNSPageRoutePopupController.pageView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 39,
-      "symbol": "RNSPageRoutePopupController.handlerDetailBack",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 40,
-      "symbol": "RNSPageRoutePopupController.startBottomOffset",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 42,
+      "line": 47,
       "symbol": "RNSPageRoutePopupController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 48,
-      "symbol": "RNSPageRoutePopupController.prepareHanlders()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/Popup/RNSPageRoutePopupController.swift",
-      "line": 54,
+      "line": 60,
       "symbol": "RNSPageRoutePopupController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift",
-      "line": 17,
-      "symbol": "RNSPageRouteController.mapView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift",
-      "line": 21,
-      "symbol": "RNSPageRouteController.prepareMapView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift",
-      "line": 25,
+      "line": 26,
       "symbol": "RNSPageRouteController.prepare(for:sender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift",
-      "line": 31,
-      "symbol": "RNSPageRouteController.prepareEnterViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift",
-      "line": 41,
-      "symbol": "RNSPageRouteController.onMapTouchEvent(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController+MapView.swift",
-      "line": 45,
-      "symbol": "RNSPageRouteController.onMapEvent()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController.swift",
-      "line": 17,
-      "symbol": "RNSPageRouteController.containerController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController.swift",
-      "line": 19,
-      "symbol": "RNSPageRouteController.initController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController.swift",
-      "line": 23,
+      "line": 24,
       "symbol": "RNSPageRouteController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController.swift",
-      "line": 30,
-      "symbol": "RNSPageRouteController.preparePage()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController.swift",
-      "line": 40,
+      "line": 42,
       "symbol": "RNSPageRouteController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/Route/PageRoute/RNSPageRouteController.swift",
-      "line": 44,
+      "line": 46,
       "symbol": "RNSPageRouteController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -982,85 +443,29 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 17,
-      "symbol": "RNSRouteDetailController.flagView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 18,
-      "symbol": "RNSRouteDetailController.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 26,
-      "symbol": "RNSRouteDetailController.handlerBack",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 28,
-      "symbol": "RNSRouteDetailController.detailView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 30,
+      "line": 33,
       "symbol": "RNSRouteDetailController.blackButton",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 31,
-      "symbol": "RNSRouteDetailController.initController(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 37,
+      "line": 44,
       "symbol": "RNSRouteDetailController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 43,
-      "symbol": "RNSRouteDetailController.updateData()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 48,
-      "symbol": "RNSRouteDetailController.prepareDetailView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 52,
+      "line": 61,
       "symbol": "RNSRouteDetailController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 56,
+      "line": 65,
       "symbol": "RNSRouteDetailController.deinit",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/RNSRouteDetailController.swift",
-      "line": 60,
-      "symbol": "RNSRouteDetailController.actionBack(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1094,574 +499,140 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 17,
-      "symbol": "RNSBusDetailController.initController(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 41,
-      "symbol": "RNSBusDetailController.bottomView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 43,
-      "symbol": "RNSBusDetailController.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 44,
-      "symbol": "RNSBusDetailController.itemBus",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 45,
-      "symbol": "RNSBusDetailController.startBottomOffset",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 47,
-      "symbol": "RNSBusDetailController.viewTotal",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 48,
-      "symbol": "RNSBusDetailController.viewWay",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 50,
+      "line": 58,
       "symbol": "RNSBusDetailController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 56,
-      "symbol": "RNSBusDetailController.loadItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 65,
-      "symbol": "RNSBusDetailController.prepareItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 71,
+      "line": 81,
       "symbol": "RNSBusDetailController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusDetail/RNSBusDetailController.swift",
-      "line": 75,
+      "line": 85,
       "symbol": "RNSBusDetailController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 20,
-      "symbol": "RNSBusInfoViewController.initController(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 26,
-      "symbol": "RNSBusInfoViewController.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 27,
-      "symbol": "RNSBusInfoViewController.topDistanceConstraint",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 28,
-      "symbol": "RNSBusInfoViewController.driverField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 29,
-      "symbol": "RNSBusInfoViewController.conductorField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 30,
-      "symbol": "RNSBusInfoViewController.depoField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 31,
-      "symbol": "RNSBusInfoViewController.carrierField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 32,
-      "symbol": "RNSBusInfoViewController.phoneField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 33,
-      "symbol": "RNSBusInfoViewController.complainButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 35,
+      "line": 46,
       "symbol": "RNSBusInfoViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 43,
-      "symbol": "RNSBusInfoViewController.prepareUI()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusInfo/RNSBusInfoViewController.swift",
-      "line": 56,
+      "line": 68,
       "symbol": "RNSBusInfoViewController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/Cell/RNSBusStopDetailCell.swift",
-      "line": null,
-      "symbol": "RNSBusStopDetailCell",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/Cell/RNSBusStopDetailCell.swift",
-      "line": 11,
-      "symbol": "RNSBusStopDetailCell",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+Observe.swift",
-      "line": 13,
-      "symbol": "RNSBusStopDetailController.prepareViews(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+Observe.swift",
-      "line": 19,
-      "symbol": "RNSBusStopDetailController.prepareAlpha(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+Observe.swift",
-      "line": 26,
-      "symbol": "RNSBusStopDetailController.prepareTopTableView(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+TableView.swift",
-      "line": 13,
-      "symbol": "RNSBusStopDetailController.prepareTableView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+TableView.swift",
-      "line": 18,
+      "line": 20,
       "symbol": "RNSBusStopDetailController.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+TableView.swift",
-      "line": 22,
+      "line": 24,
       "symbol": "RNSBusStopDetailController.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+TableView.swift",
-      "line": 35,
-      "symbol": "RNSBusStopDetailController.item(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+TableView.swift",
-      "line": 39,
+      "line": 45,
       "symbol": "RNSBusStopDetailController.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+UpdateData.swift",
-      "line": 13,
-      "symbol": "RNSBusStopDetailController.loadItems()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+UpdateData.swift",
-      "line": 23,
-      "symbol": "RNSBusStopDetailController.prepareItems(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+UpdateData.swift",
-      "line": 28,
-      "symbol": "RNSBusStopDetailController.showLoader()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+UpdateData.swift",
-      "line": 32,
-      "symbol": "RNSBusStopDetailController.removeLoader()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+UpdateData.swift",
-      "line": 36,
-      "symbol": "RNSBusStopDetailController.prepareTitle()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+UpdateData.swift",
-      "line": 40,
-      "symbol": "RNSBusStopDetailController.updateFavorite(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController+UpdateData.swift",
-      "line": 51,
+      "line": 62,
       "symbol": "RNSBusStopDetailController.updateNotification(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 17,
-      "symbol": "RNSBusStopDetailController.heightTableView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 18,
-      "symbol": "RNSBusStopDetailController.tableView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 20,
-      "symbol": "RNSBusStopDetailController.initController(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 30,
-      "symbol": "RNSBusStopDetailController.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 31,
-      "symbol": "RNSBusStopDetailController.items",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 32,
-      "symbol": "RNSBusStopDetailController.loaderView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 34,
-      "symbol": "RNSBusStopDetailController.topConstraint",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 35,
-      "symbol": "RNSBusStopDetailController.titleLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 36,
+      "line": 45,
       "symbol": "RNSBusStopDetailController.titleStop",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 37,
+      "line": 46,
       "symbol": "RNSBusStopDetailController.timerlabel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 38,
-      "symbol": "RNSBusStopDetailController.errorReportButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 40,
-      "symbol": "RNSBusStopDetailController.startBottomOffset",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 42,
+      "line": 53,
       "symbol": "RNSBusStopDetailController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 58,
+      "line": 70,
       "symbol": "RNSBusStopDetailController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 64,
+      "line": 76,
       "symbol": "RNSBusStopDetailController.viewWillDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 70,
+      "line": 82,
       "symbol": "RNSBusStopDetailController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 74,
+      "line": 86,
       "symbol": "RNSBusStopDetailController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 78,
+      "line": 90,
       "symbol": "RNSBusStopDetailController.prepareCurrent(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+Action.swift",
-      "line": 17,
-      "symbol": "RNSDutyViewController.actionExchange(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+Action.swift",
-      "line": 24,
-      "symbol": "RNSDutyViewController.actionFrom(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+Action.swift",
-      "line": 31,
-      "symbol": "RNSDutyViewController.actionIn(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+Action.swift",
-      "line": 38,
-      "symbol": "RNSDutyViewController.dateAction(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+Action.swift",
-      "line": 47,
-      "symbol": "RNSDutyViewController.crossAction(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+Action.swift",
-      "line": 51,
-      "symbol": "RNSDutyViewController.showAddress(_:complete:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+LoadData.swift",
-      "line": 17,
-      "symbol": "RNSDutyViewController.loadData()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController+LoadData.swift",
-      "line": 41,
-      "symbol": "RNSDutyViewController.loadStartItems(_:inItem:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 17,
-      "symbol": "RNSDutyViewController.loaderView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 19,
-      "symbol": "RNSDutyViewController.crossButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 20,
-      "symbol": "RNSDutyViewController.viewLabelDate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 21,
-      "symbol": "RNSDutyViewController.rightDateConstraint",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 22,
-      "symbol": "RNSDutyViewController.fromField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 23,
-      "symbol": "RNSDutyViewController.inField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 24,
-      "symbol": "RNSDutyViewController.searchButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 25,
-      "symbol": "RNSDutyViewController.dateLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 27,
-      "symbol": "RNSDutyViewController.errorLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 28,
-      "symbol": "RNSDutyViewController.currentDate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 30,
-      "symbol": "RNSDutyViewController.fromItem",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 31,
-      "symbol": "RNSDutyViewController.inItem",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 33,
+      "line": 44,
       "symbol": "RNSDutyViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 39,
+      "line": 50,
       "symbol": "RNSDutyViewController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Duty/RNSDutyViewController.swift",
-      "line": 43,
+      "line": 54,
       "symbol": "RNSDutyViewController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2172,13 +1143,6 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/Cell/RNSAddressCell.swift",
-      "line": 17,
-      "symbol": "RNSAddressCell.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/Cell/RNSAddressCell.swift",
       "line": 23,
       "symbol": "RNSAddressCell.titleLabel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -2186,357 +1150,154 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+Action.swift",
-      "line": 17,
-      "symbol": "RNSAddressViewController.actionMyLocation(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+Action.swift",
-      "line": 21,
-      "symbol": "RNSAddressViewController.backAction(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+Action.swift",
-      "line": 29,
+      "line": 30,
       "symbol": "RNSAddressViewController.actionTop(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift",
-      "line": 17,
-      "symbol": "RNSAddressViewController.onMapTouchEvent(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift",
-      "line": 21,
-      "symbol": "RNSAddressViewController.onMapLongTouchEvent(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift",
-      "line": 25,
-      "symbol": "RNSAddressViewController.onOverlay(_:item:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift",
-      "line": 29,
-      "symbol": "RNSAddressViewController.geoCode(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift",
-      "line": 39,
-      "symbol": "RNSAddressViewController.geoCodeMylocation()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift",
-      "line": 43,
-      "symbol": "RNSAddressViewController.removePin()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+MapView.swift",
-      "line": 47,
-      "symbol": "RNSAddressViewController.addPin(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift",
-      "line": 18,
-      "symbol": "RNSAddressViewController.items",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift",
-      "line": 22,
-      "symbol": "RNSAddressViewController.prepareTableView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift",
-      "line": 27,
+      "line": 28,
       "symbol": "RNSAddressViewController.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "RNSAddressViewController.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift",
-      "line": 37,
-      "symbol": "RNSAddressViewController.item(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TableView.swift",
-      "line": 41,
+      "line": 46,
       "symbol": "RNSAddressViewController.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 17,
-      "symbol": "RNSAddressViewController.prepareTextField()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 21,
-      "symbol": "RNSAddressViewController.prepareAddress(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 25,
-      "symbol": "RNSAddressViewController.text",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 29,
-      "symbol": "RNSAddressViewController.startEdit()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 35,
-      "symbol": "RNSAddressViewController.endEdit()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 41,
+      "line": 47,
       "symbol": "RNSAddressViewController.textFieldDidBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 45,
+      "line": 51,
       "symbol": "RNSAddressViewController.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 50,
+      "line": 56,
       "symbol": "RNSAddressViewController.textFieldShouldClear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 55,
+      "line": 61,
       "symbol": "RNSAddressViewController.textFieldShouldReturn(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Route/Address/RNSAddressViewController+TextField.swift",
-      "line": 60,
+      "line": 66,
       "symbol": "RNSAddressViewController.textFieldEditingChanged(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 11,
-      "symbol": "TypeAddress",
-      "symbol_kind": "source.lang.swift.decl.enum",
+      "line": 16,
+      "symbol": "TypeAddress.fromAddress",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 22,
-      "symbol": "RNSAddressViewController.initController(_:type:complete:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "line": 16,
+      "symbol": "TypeAddress.inAddress",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 30,
+      "line": 38,
       "symbol": "RNSAddressViewController.viewBottomHeightLayoutConstraint",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 36,
+      "line": 44,
       "symbol": "RNSAddressViewController.isNeedAddTap",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 40,
+      "line": 48,
       "symbol": "RNSAddressViewController.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 41,
+      "line": 49,
       "symbol": "RNSAddressViewController.item",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 42,
+      "line": 50,
       "symbol": "RNSAddressViewController.complete",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 43,
-      "symbol": "RNSAddressViewController.containerController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 45,
-      "symbol": "RNSAddressViewController.pin",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 47,
-      "symbol": "RNSAddressViewController.buttonMyLocation",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 48,
-      "symbol": "RNSAddressViewController.textField",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 49,
-      "symbol": "RNSAddressViewController.titleLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 51,
-      "symbol": "RNSAddressViewController.bottomTableView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 52,
-      "symbol": "RNSAddressViewController.heightTableView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 53,
-      "symbol": "RNSAddressViewController.tableView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 55,
+      "line": 71,
       "symbol": "RNSAddressViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 62,
+      "line": 78,
       "symbol": "RNSAddressViewController.prepare(for:sender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 67,
-      "symbol": "RNSAddressViewController.prepareEnterViewController()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 81,
-      "symbol": "RNSAddressViewController.backButton(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 86,
-      "symbol": "RNSAddressViewController.updateItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 96,
-      "symbol": "RNSAddressViewController.prepareType()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 101,
+      "line": 121,
       "symbol": "RNSAddressViewController.storyboardName",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 105,
+      "line": 125,
       "symbol": "RNSAddressViewController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 109,
+      "line": 129,
       "symbol": "RNSAddressViewController.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Map/Search/Address/RNSAddressViewController.swift",
-      "line": 114,
+      "line": 134,
       "symbol": "RNSAddressViewController.viewWillDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

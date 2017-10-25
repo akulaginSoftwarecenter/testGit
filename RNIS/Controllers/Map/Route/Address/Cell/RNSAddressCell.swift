@@ -9,11 +9,11 @@
 import UIKit
 
 /**
- RNSAddressCell
+ Табличная ячейка для отображения текста адреса в списке
  */
-
 class RNSAddressCell: RNSBaseTableCell {
     
+    /// Текст адреса
     var item: String? {
         didSet{
             titleLabel?.text = item

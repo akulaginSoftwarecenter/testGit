@@ -9,14 +9,18 @@
 import UIKit
 
 /**
- RNSBusStopDetailController
+ Контроллер отображения списка автобусов, которые останавливаются на выбранной остановке
  */
-
 class RNSBusStopDetailController: UIViewController {
     
+    /// Ограничение высоты таблицы
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
+    /// Таблица автобусных остановок
     @IBOutlet weak var tableView: UITableView!
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: модель автобусной остановки
     static func initController(_ item: RNSBusStop?) -> UIViewController? {
         let vc = RNSBusStopDetailController.initialController as? RNSBusStopDetailController
         vc?.item = item
@@ -27,16 +31,23 @@ class RNSBusStopDetailController: UIViewController {
         return  container
     }
    
+    /// Модель автобусной остановки
     var item: RNSBusStop?
+    /// Массив моделей автобусных маршрутов
     var items: [RNSBusRouteTemp]?
+    /// Представление индикации загрузки
     lazy var loaderView:LoaderView = LoaderView()
     
+    /// Ограничение расстояния между таблицей и верхней стороной представления контроллера
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    /// Надпись, отображающая адрес название выбранной остановки
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleStop: UILabel!
     @IBOutlet weak var timerlabel: UILabel!
+    /// Кнопка "сообщить об ошибке"
     @IBOutlet weak var errorReportButton: RNSBlackButton!
     
+    /// Начальная высота контроллера
     var startBottomOffset: CGFloat?
     
     override func viewDidLoad() {
@@ -47,6 +58,7 @@ class RNSBusStopDetailController: UIViewController {
         loadItems()
     }
     
+    /// Настройка кнопки "сообщить об ошибке"
     private func prepareReportButton() {
         errorReportButton.button.touchUpInside {
             let vc = SupportInfoViewController.initialController as? SupportInfoViewController

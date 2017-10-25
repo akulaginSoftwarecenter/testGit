@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// Расширение обновления данных
 extension RNSBusStopDetailController {
     
+    /// Загрузка с сервера списка автобусных маршрутов
     func loadItems() {
         showLoader()
         RNSStopPointRoutes(item, complete: { [weak self] items in
@@ -20,23 +22,32 @@ extension RNSBusStopDetailController {
         })
     }
     
+    /// Обновление данных в таблице
+    ///
+    /// - Parameter items: список автобусных маршрутов
     func prepareItems(_ items: [RNSBusRouteTemp]?) {
         self.items = items
         prepareTableView()
     }
     
+    /// Показать представление индикации загрузки
     func showLoader() {
         loaderView.showInView(self.view)
     }
     
+    /// Убрать представление индикации загрузки
     func removeLoader() {
         loaderView.remove()
     }
     
+    /// Обновление надписи выбранной остановки
     func prepareTitle() {
         titleLabel.text = item?.name
     }
     
+    /// Добавление автобусного маршрута в избранное
+    ///
+    /// - Parameter item: модель автобусного маршрута
     func updateFavorite(_ item: RNSBusRouteTemp?) {
         guard let item = item else {
             return

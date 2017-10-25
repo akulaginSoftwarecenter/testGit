@@ -9,9 +9,8 @@
 import Foundation
 
 /**
- RNSMoveMapViewController MapView extention
+ Расширение для работы с картой
  */
-
 extension RNSMoveMapViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,19 +24,25 @@ extension RNSMoveMapViewController {
         }
     }
     
+    /// Получение карты
     var mapView: MapView {
         return RNSMapManager.mapView
     }
     
+    /// Событие длительного нажатия на карту
+    ///
+    /// - Parameter point: географические координаты места нажатия
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
         prepareStubLocation(point.location)
     }
 
+    /// Настройка карты
     func prepareMapView() {
         RNSPageRouteManager.removeAllRoute()
         prepareItem()
     }
     
+    /// Событие обновления карты
     func onMapEvent() {
         item?.prepareRoadActivateAtZoom()
     }

@@ -8,17 +8,25 @@
 
 import UIKit
 
+/// Перечисление типов адреса
+///
+/// - fromAddress: адрес "откуда"
+/// - inAddress: адрес "куда"
 enum TypeAddress: String {
-    case fromAddress = "Откуда"
-    , inAddress = "Куда"
+    case fromAddress = "Откуда", inAddress = "Куда"
 }
 
 /**
- RNSAddressViewController
+ Базовый контроллер для ввода и оображения адреса на карте
  */
-
 class RNSAddressViewController: UIViewController, KeyboardShowable {
     
+    /// Создание контроллера
+    ///
+    /// - Parameters:
+    ///   - item: объект, которые содержит данные об адресе и географическом местоположении
+    ///   - type: тип адреса
+    ///   - complete: блок, который выполнится непосредственно перед выходом из контроллера
     static func initController(_ item: RNSDutyAddressTemp?, type: TypeAddress?, complete: AliasAddressComplete?) -> UIViewController?  {
         let vc = RNSAddressViewController.controller as? RNSAddressViewController
         vc?.item = item
@@ -40,16 +48,24 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     var type: TypeAddress?
     var item: RNSDutyAddressTemp?
     var complete: AliasAddressComplete?
+    /// Внутренний контроллер
     var containerController: RNSMapParentController?
     
-    var pin: RNSPinAddress? 
+    /// Пин, который будет установлен на карте для демонстрации положения адреса на карте
+    var pin: RNSPinAddress?
     
+    /// Кнопка "показать меня на карте"
     @IBOutlet weak var buttonMyLocation: UIButton!
+    /// Поле ввода адреса
     @IBOutlet weak var textField: UITextField!
+    /// Заголовок контроллера
     @IBOutlet weak var titleLabel: RNSTopTitle!
     
+    /// Ограничение таблицы снизу
     @IBOutlet weak var bottomTableView: NSLayoutConstraint!
+    /// Ограничение высоты таблицы
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
+    /// Таблица вариантов адресов (автокомплит)
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -64,6 +80,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         prepareEnterViewController()
     }
     
+    /// Настройка внутреннего контроллера
     func prepareEnterViewController(){
         containerController?.handlerOnMapTouchEvent = {[weak self] point in
             self?.onMapTouchEvent(point)
@@ -78,11 +95,13 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         }
     }
     
+    /// Событие нажатия на кнопку возврата на предыдущий контроллер
     @IBAction func backButton(_ sender: Any) {
         backAction(sender)
         STRouter.pop()
     }
     
+    /// Настройка переменной, содержащей данные о расположении
     func updateItem() {
         if item == nil {
             item = RNSDutyAddressTemp()
@@ -93,6 +112,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         item?.longitude = point?.longitude
     }
     
+    /// Настройка заголовка контроллера
     func prepareType() {
         let type = self.type ?? .fromAddress
         titleLabel.text = type.rawValue

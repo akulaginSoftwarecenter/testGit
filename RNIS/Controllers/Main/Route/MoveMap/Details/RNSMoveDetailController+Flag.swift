@@ -9,11 +9,11 @@
 import Foundation
 
 /**
- RNSMoveDetailController Flag extention
+ Расширение для работы с кнопкой "добавить в избранное"
  */
-
 extension RNSMoveDetailController {
     
+    /// Настройка кнопки
     func prepareFlagView() {
         flagView.handlerUpdate = { [weak self] in
             self?.updateFlag()
@@ -21,12 +21,14 @@ extension RNSMoveDetailController {
         updateFlagImage()
     }
     
+    /// Обновление кнопки
     func updateFlag() {
         item?.changeFavorite { [weak self] in
             self?.updateFlagImage()
         }
     }
     
+    /// Обновление рисунка кнопки
     func updateFlagImage() {
         flagView.isFavorite = item?.isFavorite ?? false
     }

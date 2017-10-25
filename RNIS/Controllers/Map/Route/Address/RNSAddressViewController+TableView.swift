@@ -10,15 +10,16 @@ import Foundation
 import RealmSwift
 
 /**
- RNSAddressViewController TableView extention
+ Расширение для работы с таблицей вариантов адресов
  */
-
 extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
     
+    /// Массив объектов из истории адресов, который служит для заполнения таблицы
     var items: [RNSSearchHistory]? {
         return RNSDataManager.searchItems(text)
     }
     
+    /// Обновление содержимого таблицы и размеров
     func prepareTableView() {
         tableView.reloadData()
         heightTableView.constant = tableView.tableViewContentSize
@@ -34,6 +35,10 @@ extension RNSAddressViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    /// Получение текста адреса по индексу ячейки в таблице
+    ///
+    /// - Parameter indexPath: индекс ячейки в таблице
+    /// - Returns: текст адреса
     func item(_ indexPath: IndexPath) -> String? {
         return items?.valueAt(indexPath.row)?.title
     }

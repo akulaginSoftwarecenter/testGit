@@ -9,18 +9,22 @@
 import UIKit
 
 /**
- RNSDateSelectViewController
+ Контроллер выбора даты
  */
-
 class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
     
+    /// Блок, который вызывается при выборе даты
     var handlerDate: ((Date?) -> ())?
     
+    /// Блок, который вызывается при выходе из контроллера
     var handlerDismiss: EmptyBlock?
     
+    /// Представление для выбора даты
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    /// Кнопка подтверждения
     @IBOutlet weak var oKButton: RNSBlackButton!
+    /// Кнопка отмены
     @IBOutlet weak var cancelButton: RNSBlackButton!
     
     override func viewDidLoad() {
@@ -29,11 +33,13 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
         prepareUI()
     }
     
+    /// Настройка представлений
     func prepareUI() {
         prepareButton()
         prepareDatePicker()
     }
     
+    /// Настройка кнопок
     func prepareButton() {
         oKButton.handlerAction = {[weak self] in
             self?.handlerDate?(self?.datePicker.date)
@@ -45,11 +51,13 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
         }
     }
     
+    /// Функция запускает механизм выхода из контроллера
     func dismiss() {
         handlerDismiss?()
         dismiss(animated: true)
     }
     
+    /// Настройка представления для выбора даты
     func prepareDatePicker() {
         datePicker.minimumDate = Date()
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")

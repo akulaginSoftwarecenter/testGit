@@ -9,16 +9,20 @@
 import UIKit
 
 /**
- RNSMoveMapViewController
+ Контроллер следования по маршруту
  */
-
 class RNSMoveMapViewController: UIViewController {
 
     @IBOutlet weak var viewTop: UIView!
     
+    /// Блок, который вызывается при исчезновении контроллера
     var handlerDidDisappear: EmptyBlock?
+    /// Объект с информацией о маршруте
     var item: RNSRouteVariant?
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: объект с информацией о маршруте
     static func initController(_ item: RNSRouteVariant?) -> RNSMoveMapViewController? {
         let vc = RNSMoveMapViewController.controller as? RNSMoveMapViewController
         vc?.item = item
@@ -34,14 +38,17 @@ class RNSMoveMapViewController: UIViewController {
         prepareObservers()
     }
     
+    /// Обновление объекта с информацией о маршруте
     @objc func updateItem() {
         item?.updateDistanceNavels()
     }
     
+    /// Контроллер подписывается на получение уведомлений
     func prepareObservers() {
         NotificationCenter.addObserverLocation(self, selector: #selector(updateItem))
     }
     
+    /// Настройка внутреннего контроллера
     func preparePopup() {
         guard let containerVC = RNSMovePopupController.initController(item),
             let containerView = containerVC.view else {

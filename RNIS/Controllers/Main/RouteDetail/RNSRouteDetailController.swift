@@ -9,12 +9,13 @@
 import UIKit
 
 /**
- RNSRouteDetailController
+ Контроллер для отображения детальной информации о маршруте
  */
-
 class RNSRouteDetailController: UIViewController {
     
+    /// Представление для отображения кнопки "добавить в избранное"
     @IBOutlet weak var flagView: RNSFlagButton!
+    /// Объект, содержащий информацию о маршруте
     var item: RNSRouteVariant? {
         didSet {
             if detailView != nil {
@@ -23,11 +24,17 @@ class RNSRouteDetailController: UIViewController {
         }
     }
     
+    /// Блок, который вызывается перед выходом из контроллера
     var handlerBack: EmptyBlock?
     
+    /// Представление, которое отображает основную информацию о маршруте
     @IBOutlet weak var detailView: RNSRouteDetailView!
     
     @IBOutlet weak var blackButton: RNSBlackButton!
+    
+    /// Создание контроллера с помощью объекта маршрута
+    ///
+    /// - Parameter item: объект с информацией о маршруте
     static func initController(_ item: RNSRouteVariant?) -> RNSRouteDetailController?  {
         let vc = RNSRouteDetailController.initialController as? RNSRouteDetailController
         vc?.item = item
@@ -40,11 +47,13 @@ class RNSRouteDetailController: UIViewController {
         updateData()
     }
     
+    /// Обновление данных в представлениях
     func updateData() {
         prepareDetailView()
         prepareFlagView()
     }
     
+    /// Настройка представления с детальной информацией
     func prepareDetailView() {
         detailView.item = item?.tableItem
     }
@@ -57,6 +66,7 @@ class RNSRouteDetailController: UIViewController {
         print("RNSRouteDetailViewController deinit")
     }
     
+    /// Событие нажатия на кнопку возврата к предыдущему контроллеру
     @IBAction func actionBack(_ sender: Any) {
         handlerBack?()
     }

@@ -9,15 +9,16 @@
 import Foundation
 
 /**
- RNSAddressViewController Action extention
+ Расширение для обработки нажатий на некоторые кнопки
  */
-
 extension RNSAddressViewController {
     
+    /// Событие нажатия на кнопку "показать меня на карте"
     @IBAction func actionMyLocation(_ sender: Any) {
         geoCodeMylocation()
     }
     
+    /// Событие нажатия на кнопку возврата на преддущий контроллер
     @IBAction func backAction(_ sender: Any) {
         updateItem()
         complete?(item)

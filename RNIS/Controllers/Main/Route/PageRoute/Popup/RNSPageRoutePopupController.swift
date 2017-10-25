@@ -10,13 +10,14 @@ import UIKit
 
 
 /**
- RNSPageRoutePopupController
+ Контроллер представляет собой выдвигающуюся снизу панель с детальной информацией о маршруте и возможностью пролистывания
  */
-
 class RNSPageRoutePopupController: UIViewController {
     
+    /// Внутренний контроллер
     var containerController: RNSRouteDetailController?
     
+    /// Создание контроллера
     static var initController: UIViewController? {
         let vc = RNSPageRoutePopupController.controller as? RNSPageRoutePopupController
         let container = RNSScrollShowContainer.initController(vc)
@@ -33,10 +34,14 @@ class RNSPageRoutePopupController: UIViewController {
         vc?.startBottomOffset = container?.startBottomOffset
         return  container
     }
+    /// Контейнер для представления внутреннего контроллера
     @IBOutlet weak var containerView: UIView!
+    /// Представление, которое отображает информацию о возможных маршрутах с возможностью пролистывания
     @IBOutlet weak var pageView: RNSPageRouteView!
     
+    /// Блок, который выполнится после нажатия на кнопку возврата во внутреннем контроллере
     var handlerDetailBack: EmptyBlock?
+    /// Начальная высота нижней панели
     var startBottomOffset: CGFloat?
     
     override func viewDidLoad() {
@@ -45,6 +50,7 @@ class RNSPageRoutePopupController: UIViewController {
         prepareHanlders()
     }
     
+    /// Настройка обработчиков
     func prepareHanlders() {
         RNSPageRouteManager.handlerUpdateCurrentTwo = {[weak self] in
             self?.updateCurrentItem()

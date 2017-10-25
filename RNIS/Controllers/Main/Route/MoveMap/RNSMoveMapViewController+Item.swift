@@ -9,9 +9,8 @@
 import Foundation
 
 /**
- RNSMoveMapViewController Item extention
+Расширение для работы с объектом, содержащим информацию о маршруте
  */
-
 extension RNSMoveMapViewController {
     func prepareItem() {
         item?.prepareRoadActivate()

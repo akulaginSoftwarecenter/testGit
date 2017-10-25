@@ -9,9 +9,8 @@
 import Foundation
 
 /**
- RNSMovePopupController Container extention
+ Расширение для настройки внутреннего контроллера
  */
-
 extension RNSMovePopupController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -19,6 +18,7 @@ extension RNSMovePopupController {
         prepareEnterViewController()
     }
     
+    /// Настройка внутреннего контроллера
     func prepareEnterViewController() {
         containerController?.item = item
         containerController?.handlerBack = { [weak self] in

@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- RNSMovePopupController
+ Контроллер представляет собой выдвигающееся снизу представление с детальной информацией о следовании по маршруту
  */
-
 class RNSMovePopupController: UIViewController {
     
+    /// Создание контроллера с помощью объекта содержащего информацию о маршруте
+    ///
+    /// - Parameter item: объект с информацией о маршруте
     static func initController(_ item: RNSRouteVariant?) -> UIViewController? {
         let vc = RNSMovePopupController.controller as? RNSMovePopupController
         vc?.item = item
@@ -34,13 +36,20 @@ class RNSMovePopupController: UIViewController {
         return  container
     }
     
+    /// Внутренний контроллер
     var containerController: RNSMoveDetailController?
+    /// Блок, который вызывается при возврате из детального контроллера
     var handlerDetailBack: EmptyBlock?
+    /// Начальная высота нижней панели
     var startBottomOffset: CGFloat?
+    /// Объект с информацией о маршруте
     var item: RNSRouteVariant?
     
+    /// Представление для отображения схемы движения
     @IBOutlet weak var viewVariant: RNSDotsBussView!
+    /// Кнопка на схеме движения, которая открывает контроллер с детальной информацией
     @IBOutlet weak var buttonDown: UIButton!
+    /// Контейнер для представления внутреннего контроллера
     @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
@@ -50,15 +59,18 @@ class RNSMovePopupController: UIViewController {
         prepareObservers()
     }
     
+    /// Контроллер подписывается на получение событий
     func prepareObservers() {
         NotificationCenter.addObserverLocation(self, selector: #selector(updateItem))
     }
     
+    /// Настройка представления схемы маршрута
     func prepareItem() {
         viewVariant.showMove = true
         updateItem()
     }
     
+    /// Обновление представления схемы маршрута
     @objc func updateItem() {
         if viewVariant == nil {
             return
@@ -70,6 +82,7 @@ class RNSMovePopupController: UIViewController {
         return "RNSMoveDetailController"
     }
     
+    /// Событие нажатия на представление схемы маршрута
     @IBAction func actionDots(_ sender: Any) {
         let vc = RNSMoveDetailController.initController(item)
         vc?.handlerBack = {

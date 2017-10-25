@@ -2,7 +2,7 @@
 //  TokenPayload+CoreDataClass.swift
 //  
 //
-//  Created by Admin on 24.10.17.
+//  Created by Admin on 25.10.17.
 //
 //  This file was automatically generated and should not be edited.
 //

@@ -9,13 +9,14 @@
 import UIKit
 
 /**
- RNSPageRouteController
+ Контроллер для отображения возможных маршрутов на карте с возможностью пролистывания
  */
-
 class RNSPageRouteController: UIViewController {
 
+    /// Внутренний контроллер
     var containerController: RNSMapParentController?
     
+    /// Создание контроллера
     static func initController() -> UIViewController?  {
         return RNSPageRouteController.controller
     }
@@ -27,6 +28,7 @@ class RNSPageRouteController: UIViewController {
         preparePage()
     }
     
+    /// Настройка представления, которое отображает пролистывающийся список маршрутов
     func preparePage() {
         guard let containerVC = RNSPageRoutePopupController.initController,
             let containerView = containerVC.view else {

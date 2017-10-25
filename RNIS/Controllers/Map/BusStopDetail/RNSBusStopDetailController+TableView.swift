@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// Расширение для работы с таблицей
 extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource {
     
+    /// Настройка таблицы
     func prepareTableView() {
         tableView.reloadData()
         heightTableView.constant = tableView.tableViewContentSize
@@ -32,6 +34,10 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
+    /// Получение автобусного маршрута для ячейки с указанным индексом
+    ///
+    /// - Parameter indexPath: индекс ячейки в таблице
+    /// - Returns: модель автобусного маршрута
     func item(_ indexPath: IndexPath) -> RNSBusRouteTemp? {
         return items?[indexPath.row]
     }

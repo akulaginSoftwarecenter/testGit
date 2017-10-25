@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- RNSPageRoutePopupController
+ Расширение для работы с внутренним контроллером
  */
 
 extension RNSPageRoutePopupController {
@@ -19,6 +19,7 @@ extension RNSPageRoutePopupController {
         prepareEnterViewController()
     }
     
+    /// Настройка внутреннего контроллера
     func prepareEnterViewController() {
         updateCurrentItem()
         containerController?.handlerBack = { [weak self] in
@@ -26,6 +27,7 @@ extension RNSPageRoutePopupController {
         }
     }
     
+    /// Обновление текущего маршрута во внутреннем контроллере
     func updateCurrentItem() {
         containerController?.item = RNSPageRouteManager.currentItem
     }

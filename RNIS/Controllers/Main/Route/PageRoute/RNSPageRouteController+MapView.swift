@@ -9,15 +9,16 @@
 import Foundation
 
 /**
- RNSPageRouteController MapView extention
+ Расширение для работы с картой
  */
-
 extension RNSPageRouteController {
     
+    /// Получение карты
     var mapView: MapView {
         return RNSMapManager.mapView
     }
     
+    /// Настройка карты
     func prepareMapView() {
         RNSPageRouteManager.currentPrepareDisplay()
     }
@@ -28,6 +29,7 @@ extension RNSPageRouteController {
         prepareEnterViewController()
     }
     
+    /// Настройка обработчиков событий карты во внутреннем контроллере
     func prepareEnterViewController(){
         containerController?.handlerOnMapEvent = {[weak self] in
             self?.onMapEvent()
@@ -38,10 +40,14 @@ extension RNSPageRouteController {
         }
     }
     
+    /// Обработка нажатия на карту
+    ///
+    /// - Parameter point: географические координаты места нажатия
     func onMapTouchEvent(_ point: PGGeoPoint) {
         RNSPageRouteManager.checkContaints(point)
     }
     
+    /// Обработка обновления карты
     func onMapEvent() {
         RNSPageRouteManager.activeRoadReload()
     }

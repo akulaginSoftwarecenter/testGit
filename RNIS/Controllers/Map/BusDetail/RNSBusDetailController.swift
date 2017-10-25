@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- RNSBusDetailController
+ Контроллер показывает детальную информацию об автобусе
  */
-
 class RNSBusDetailController: UIViewController {
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: модель автобуса
     static func initController(_ item: RNSBus?) -> UIViewController? {
         let vc = RNSBusDetailController.initialController as? RNSBusDetailController
         vc?.itemBus = item
@@ -38,13 +40,19 @@ class RNSBusDetailController: UIViewController {
         return  container
     }
     
+    /// Представление с информацией о кондукторе
     let bottomView = RNSConductorView()
     
+    /// Серверная модель автобуса
     var item: RNSBusTemp?
+    /// Модель автобуса
     var itemBus: RNSBus?
+    /// Начальное значение высоты контроллера
     var startBottomOffset: CGFloat?
 
+    /// Представление, отображающее детальную информацию об автобусе
     @IBOutlet weak var viewTotal: RNSBusDetailTotalView!
+    /// Представление, отображающее схему маршрута автобуса
     @IBOutlet weak var viewWay: RNSBusDetailWayView!
     
     override func viewDidLoad() {
@@ -53,6 +61,7 @@ class RNSBusDetailController: UIViewController {
         loadItem()
     }
     
+    /// Загрузка модели автобуса
     func loadItem() {
         STRouter.showLoader()
         RNSPostBusGet(itemBus) {[weak self] item in
@@ -62,6 +71,7 @@ class RNSBusDetailController: UIViewController {
         }
     }
     
+    /// Настройка представлений
     func prepareItem() {
         viewTotal.item = item
         viewWay.item = item

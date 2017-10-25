@@ -9,29 +9,35 @@
 import Foundation
 
 /**
- RNSAddressViewController UITextFieldDelegate extention
+ Расширение для работы с текстовыми полями
  */
-
 extension RNSAddressViewController: UITextFieldDelegate {
     
+    /// Заполнение текстового поля сохраненным адресом
     func prepareTextField() {
         textField.text = item?.address
     }
     
+    /// Настройка текста поля
+    ///
+    /// - Parameter text: текст адреса
     func prepareAddress(_ text: String?) {
         textField.text = text
     }
     
+    /// Получение текущего текста из текстового поля
     var text: String? {
        return textField.text
     }
     
+    /// Событие начала редактирования поля адреса
     func startEdit() {
         tableView.isHidden = false
         prepareTableView()
         buttonMyLocation.isHidden = true
     }
     
+    /// Событие завершения редактирования поля адреса
     func endEdit() {
         tableView.isHidden = true
         textField.endEditing(true)
