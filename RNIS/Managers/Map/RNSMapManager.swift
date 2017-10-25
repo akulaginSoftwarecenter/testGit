@@ -8,19 +8,22 @@
 
 import UIKit
 
+/**
+Контоллер управления картой
+ */
 class RNSMapManager: NSObject {
     
     static let shared = RNSMapManager()
     
+    /// Создание экземпляра карты
     static var mapView: MapView {
         return shared.mapView
     }
     
-    /**
-     base mapview PGView
-     */
+    /// Создание экземпляра карты RNIS
     var mapView: MapView = RNSMapView()
     
+    /// Создание экземпляра местополоежния маркера
     lazy var pinMyLocation: RNSPinMyLocation = {
         return RNSPinMyLocation()
     }()
