@@ -7,15 +7,20 @@
 //
 
 import UIKit
-
+/**
+ Контроллер таймера
+ */
 class RNSTimeManager: NSObject {
+    /// Создание экземпляра таймера
     var timer: Timer!
+    /// Создание расстояния
     let distance = 17
     @discardableResult override init() {
         super.init()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
+    /// Функция обновления таймера
     @objc func updateTime() {
         NotificationCenter.postTime()
     }

@@ -7,12 +7,16 @@
 //
 
 import Foundation
-
+/**
+ Контоллер управления уровнем приближения карты
+ */
 extension RNSMapManager {
+    /// Получение уровня приближения карты
     static var getZoomLevel: Int {
         return Int(mapView.getZoomLevel())
     }
     
+    /// Функция задание уровня приближения карты
     static func zoomAtDistance(_ distance: CGFloat?) -> Int32? {
         guard let distance = distance else {
             return nil

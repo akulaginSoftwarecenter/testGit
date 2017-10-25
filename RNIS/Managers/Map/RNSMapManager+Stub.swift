@@ -7,14 +7,18 @@
 //
 
 import Foundation
-
+/**
+ Контоллер управления тенями карты
+ */
 extension RNSMapManager {
     
+    /// Подготовка экземпляра теней карты
     static func prepareStub() {
         RNSBusStopManager.prepareStubBusStop()
         //prepareStubBus()
     }
     
+    /// Подготовка экземпляра теней ТС
     static func prepareStubBus() {
         RNSDataManager.createStubBusIfNeed()
         guard let item = RNSDataManager.buss?.first else {
