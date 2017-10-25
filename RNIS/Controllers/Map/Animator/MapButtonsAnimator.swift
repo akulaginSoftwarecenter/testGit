@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Менеджер анимации кнопок на карте
 class MapButtonsAnimator {
     
     private var didSetup = false
@@ -16,6 +17,7 @@ class MapButtonsAnimator {
     private var hidingButtonsConstraints: [NSLayoutConstraint]!
     private var duration: TimeInterval
     private var usingSpringAnimation: Bool
+    
     var extraAnimationsWithVisibilityStateHidden: ((Bool)->())?
     
     init(superview: UIView, duration: TimeInterval, usingSpringAnimation: Bool) {
