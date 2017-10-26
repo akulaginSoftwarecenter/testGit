@@ -9,11 +9,11 @@
 import Foundation
 
 /**
- Dots Buss Vertical + Action
+ Класс создание действия в таблице движения ТС
  */
-
 extension RNSDotsBussVertical {
     
+    /// Иницилизация уведомления при при движении по маршруту
     @IBAction func actionButton(_ sender: Any) {
         STRouter.present(RNSAlertTransportController.initController(item))
     }
