@@ -9,16 +9,20 @@
 import UIKit
 
 /**
- Transport Table View
+Таблица для отображения транспорта
  */
 
 class RNSTransportTableView: BaseViewWithXIBInit {
 
+    /// Массив элементов выбора варианта маршрута
     var items: [RNSRouteVariant]?
     
+    /// Создание экземпляра таблицы
     @IBOutlet var tableView: RNSRegisterTableView!
+    /// Создание экземпляра вида загрузки
     lazy var loaderView: LoaderView = LoaderView()
     
+    /// Инициализация таблицы
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -27,18 +31,21 @@ class RNSTransportTableView: BaseViewWithXIBInit {
         prepareNotificationHandlers()
     }
     
+    /// Функция подготовки блоков обновления избранного
     func prepareHandlers() {
         RNSPageRouteManager.handlerUpdateFavorite = { [weak self] in
             self?.updateUI()
         }
     }
 
+    /// Функция подготовки блоков уведомлений
     func prepareNotificationHandlers() {
         RNSPageRouteManager.handlerUpdateNotification = { [weak self] in
             self?.updateUI()
         }
     }
     
+    /// Функция обновления вида элементов экрана
     func updateUI() {
         loaderView.showInView(self)
         print("updateUI RNSTransportTableView")

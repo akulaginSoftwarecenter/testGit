@@ -8,22 +8,33 @@
 
 import UIKit
 
+/**
+ Класс создание точек движения по маршруту
+ */
 class RNSDotsVerticalCell: RNSBaseTableCell {
+    
+    /// Создание "слабого" экземпляря вида
     @IBOutlet weak var cirlce: UIView!
 
+    /// Создание "слабого" экземпляря линии движения по маршруту
     @IBOutlet weak var runLine: RNSDotsWhiteVertical!
+    /// Создание "слабого" экземпляря линии движения ТС
     @IBOutlet weak var busLine: UIView!
-
+    /// Создание "слабого" экземпляря заголовка названия
     @IBOutlet weak var labelTitle: UILabel!
+    /// Создание "слабого" экземпляря поля названия ТС
     @IBOutlet weak var labelBus: UILabel!
+    /// Создание "слабого" экземпляря вида названия ТС
     @IBOutlet weak var viewBus: UIView!
     
+    /// Функция требования обновления вида ячейки
     var item: RNSVerticalTableItem? {
         didSet {
             updateUI()
         }
     }
     
+    /// Фнукция обновления вида ячейки таблицы
     func updateUI() {
         hiddenAll()
         guard let item = item else {
@@ -46,6 +57,7 @@ class RNSDotsVerticalCell: RNSBaseTableCell {
         }
     }
     
+    /// Фнукция скрытия вида ячейки таблицы
     func hiddenAll() {
         cirlce.isHidden = true
         runLine.isHidden = true
