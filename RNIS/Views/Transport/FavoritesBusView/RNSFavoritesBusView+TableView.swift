@@ -9,19 +9,22 @@
 import Foundation
 
 /**
- Favorites Bus View + Table View
+ Класс создание таблицы вида для избранных маршрутов
  */
-
 extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
     
+    
+    /// Указание номера секций таблицы
     public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
+    /// Указание количества строк таблицы по секциям
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].items?.count ?? 0
     }
     
+    /// Создание ячейки таблицы
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSFavoritesBusCell
         cell.item = item(indexPath)
@@ -44,18 +47,22 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    /// Задание высоты каждой ячейки таблицы
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
          return item(indexPath)?.height ?? 0
     }
     
+    /// Задние высоты оглавления секции таблицы
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 32
     }
     
+    /// Функция возврата номера избранной ячейки
     func item(_ indexPath: IndexPath) -> RNSFavoriteStopPoint? {
         return sections[indexPath.section].items?[indexPath.row]
     }
     
+    /// Функция задания изображения для ячейки таблицы
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         let label = UILabel()
@@ -70,6 +77,7 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
         return view
     }
 
+    /// Действие при выборе ячейки таблицы
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showStopPoint(item(indexPath))
     }

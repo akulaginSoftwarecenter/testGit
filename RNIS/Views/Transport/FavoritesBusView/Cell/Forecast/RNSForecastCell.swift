@@ -9,14 +9,18 @@
 import UIKit
 
 /**
- Forecast Cell
+ Ячейки для таблицы уведомлений о приходе последнего ТС
  */
 
 class RNSForecastCell: RNSBaseTableCell {
     
+    /// Поле для номера маршрута
     @IBOutlet weak var numberLabel: UILabel!
+    /// Поле для периода уседомления
     @IBOutlet weak var periodLabel: UILabel!
+    /// Поле для отображения времени
     @IBOutlet weak var timeLabel: UILabel!
+    /// Экземпляр модели для отображения времени
     @IBOutlet weak var timeView: UIView!
     
     var item: RNSForecastBus? {
@@ -25,6 +29,7 @@ class RNSForecastCell: RNSBaseTableCell {
         }
     }
     
+    /// Функция обновления вида
     func updateUI() {
         numberLabel.text = item?.route_number
         
@@ -38,6 +43,7 @@ class RNSForecastCell: RNSBaseTableCell {
         }
     }
     
+    /// Функция скрывания всех элементов вида
     func hiddenAll() {
         periodLabel.isHidden = true
         timeView.isHidden = true
