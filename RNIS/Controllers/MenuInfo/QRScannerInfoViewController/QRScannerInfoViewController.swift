@@ -12,11 +12,11 @@ import AVFoundation
 import AudioToolbox.AudioServices
 
 /**
- QRScannerInfoViewController
+ Контроллер для сканирования QR-кода
  */
-
 class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDelegate {
 
+    /// Представление для сканирования
     lazy var scannerView: QRCodeReaderView = {
         let view = QRCodeReaderView()
         self.view.insertSubview(view, at: 0)
@@ -28,6 +28,7 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
     }()
     
     
+    /// Распознаватель кода
     lazy var reader: QRCodeReader = QRCodeReader()
     
     override func viewDidLoad() {
@@ -46,6 +47,9 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
         }
     }
     
+    /// Проверка разрешенийи готовности распознавателя
+    ///
+    /// - Returns: статус готовности
     private func checkScanPermissions() -> Bool {
         do {
             return try QRCodeReader.supportsMetadataObjectTypes()

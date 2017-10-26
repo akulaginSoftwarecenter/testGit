@@ -9,10 +9,8 @@
 import Foundation
 
 /**
- Route Detail View + Table View
+ Расширение для работы с таблицей
  */
-
-
 extension RNSRouteDetailView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

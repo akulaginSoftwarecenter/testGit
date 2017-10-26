@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Page Route View
+ Представление показывает детальную информацию для нескольких варинатов маршрута с вожностью пролистывания
  */
-
-
 class RNSPageRouteView: BaseViewWithXIBInit {
     
     @IBOutlet weak var pageControl: UIPageControl!

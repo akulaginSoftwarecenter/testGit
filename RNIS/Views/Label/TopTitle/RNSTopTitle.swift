@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Top Title
+ Собственная надпись, предназначена для отображения заголовков
  */
-
 class RNSTopTitle: UILabel {
 
     override func awakeFromNib() {

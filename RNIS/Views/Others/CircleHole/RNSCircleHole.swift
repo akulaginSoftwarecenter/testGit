@@ -9,12 +9,13 @@
 import UIKit
 
 /**
- Circle Hole
+ Представление круга внутри круга
  */
-
 class RNSCircleHole: BaseViewWithXIBInit {
     
+    /// Внешний круг
     @IBOutlet var mainCircle: RNSCircle!
+    /// Внутренний круг
     @IBOutlet weak var smallCircle: RNSCircle!
     
     override func awakeFromNib() {

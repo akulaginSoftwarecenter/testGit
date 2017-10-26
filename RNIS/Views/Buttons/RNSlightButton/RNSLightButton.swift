@@ -9,15 +9,18 @@
 import UIKit
 
 /**
- Light Button
+ Кнопка вкл/откл трафика
  */
-
 class RNSLightButton: BaseViewWithXIBInit {
     
+    /// Блок нажатия
     var handlerAction: EmptyBlock?
+    /// Индикатор загрузки
     lazy var loaderView:LoaderView = LoaderView()
     
+    /// кнопка
     @IBOutlet weak var button: UIButton!
+    /// Надпись заголовка
     @IBOutlet weak var label: UILabel!
     
     override func awakeFromNib() {
@@ -27,6 +30,12 @@ class RNSLightButton: BaseViewWithXIBInit {
         button.touchUpInside(handler: changeTraffic)
     }
     
+    /// Загрузка данных о трафике. Загружает данные о трафике области на карте, которую описывает прямоугольник, задаваемый двумя точками.
+    ///
+    /// - Parameters:
+    ///   - minCoord: крайняя верхняя левая точка прямоугольника на карте
+    ///   - maxCoord: крайняя нижняя правая точка прямоугольника на карте
+    ///   - zoom: уровень зума
     func loadTraffic(minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int32?) {
         //loaderView.showInView(self)
         RNSGetTraffic(minCoord: minCoord, maxCoord: maxCoord, zoom: zoom) {[weak self] (reply, error, handleError) in
@@ -35,11 +44,17 @@ class RNSLightButton: BaseViewWithXIBInit {
         }
     }
     
+    /// Настройка представлений в зависимости от степени загрузки трафика
+    ///
+    /// - Parameter average: значение загрузки трафика
     func prepareAverageTraffic(_ average: Int?) {
         prepareImage(average)
         prepareLabel(average)
     }
     
+    /// Настройка надписей
+    ///
+    /// - Parameter average: значение згарузки трафика
     func prepareLabel(_ average: Int?) {
         guard let average = average else {
             return
@@ -52,6 +67,9 @@ class RNSLightButton: BaseViewWithXIBInit {
         }
     }
     
+    /// Настройка фонового рисунка
+    ///
+    /// - Parameter average: значение загруженности трафика
     func prepareImage(_ average: Int?) {
         guard let average = average else {
             return

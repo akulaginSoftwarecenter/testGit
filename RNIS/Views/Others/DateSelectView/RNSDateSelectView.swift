@@ -9,16 +9,19 @@
 import UIKit
 
 /**
- Date Select View
+ Представление для выбора даты
  */
-
 class RNSDateSelectView: BaseViewWithXIBInit {
     
+    /// Обработчик изменения даты
     var handlerDate: ((Date?) -> ())?
     
+    /// Пикер
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    /// Кнопка согласия
     @IBOutlet weak var oKButton: RNSBlackButton!
+    /// Кнопка отмены
     @IBOutlet weak var cancelButton: RNSBlackButton!
     
     override func awakeFromNib() {

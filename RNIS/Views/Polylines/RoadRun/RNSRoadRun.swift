@@ -9,15 +9,19 @@
 import UIKit
 
 /**
- Road Run
+ Линия маршрута из точек
  */
-
 class RNSRoadRun: PGPolyline {
     
+    /// массив полилиний
     var polylines = [PGPolyline]()
     
+    /// массив точек
     var points: [PGGeoPoint]?
     
+    /// Создание полилинии
+    ///
+    /// - Parameter points: массив маршрутных точек
     convenience init(_ points: [RNSRoutePoint]?) {
         self.init()
         
@@ -29,6 +33,7 @@ class RNSRoadRun: PGPolyline {
         polylines.forEach{$0.clear()}
     }
     
+    /// Прорисовка точек полилинии
     func prepareDots() {
         guard let points = points,
             points.count > 1 else {
@@ -39,6 +44,11 @@ class RNSRoadRun: PGPolyline {
         }
     }
     
+    /// Прорисовка двух точек
+    ///
+    /// - Parameters:
+    ///   - index1: индекс первой точки
+    ///   - index2: индекс второй точки
     func drawDots(_ index1: Int?, index2: Int?) {
         let point1 = points?.valueAt(index1)
         let point2 = points?.valueAt(index2)
@@ -55,6 +65,9 @@ class RNSRoadRun: PGPolyline {
         drawDot(point2)
     }
     
+    /// Прорисовка точки
+    ///
+    /// - Parameter point: географические координаты точки
     func drawDot(_ point: PGGeoPoint?) {
         polylines.append(RNSDotRun(point))
     }

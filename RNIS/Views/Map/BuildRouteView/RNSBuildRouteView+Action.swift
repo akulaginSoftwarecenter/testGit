@@ -9,9 +9,8 @@
 import Foundation
 
 /**
- Build Route View + Action
+ Расширение для обработки некоторых событий
  */
-
 extension RNSBuildRouteView {
     
     @IBAction func removeAction(_ sender: Any) {

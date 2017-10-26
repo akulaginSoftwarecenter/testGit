@@ -8,14 +8,13 @@
 
 import UIKit
 
-/**
- Bus Detail Way Cell
- */
-
 enum STTypeItemArray {
     case start, normal, end
 }
 
+/**
+ Табличная ячейка, которая отображает часть пути схемы маршрута автобуса
+ */
 class RNSBusDetailWayCell: RNSBaseTableCell {
     
     @IBOutlet weak var topLine: UIView!

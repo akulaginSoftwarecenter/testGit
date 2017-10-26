@@ -9,24 +9,31 @@
 import UIKit
 
 /**
- Bus Detail Total View
+ Представление для отображения детально информации об автобусе
  */
-
 class RNSBusDetailTotalView: BaseViewWithXIBInit {
     
+    /// Модель автобуса
     var item: RNSBusTemp?{
         didSet{
             updateUI()
         }
     }
     
+    /// Представление рисунка показывающего наличие кондиционера
     @IBOutlet weak var conditioningImage: UIImageView!
+    /// Представление рисунка показывающего возможность оплаты картой
     @IBOutlet weak var paymentImage: UIImageView!
+    /// Надпись заголовка
     @IBOutlet weak var titleLabel: UILabel!
+    /// Надпись описания начальной точки маршрута
     @IBOutlet weak var startLabel: UILabel!
+    /// Надпись описания текущей точки маршрута
     @IBOutlet weak var currentLabel: UILabel!
+    /// Надпись описания конечной точки маршрута
     @IBOutlet weak var endLabel: UILabel!
     
+    /// Обновление представлений
     func updateUI() {
         titleLabel.text =  item?.route_number
         let stops = item?.stop_points

@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Circle Red
+ Круг
  */
-
-
 class RNSCircle: UIView {
 
     override func layoutSubviews() {
@@ -20,10 +18,12 @@ class RNSCircle: UIView {
         prepareCircle()
     }
     
+    /// Настройка цвета для состояния "выполнено"
     func prepareDone() {
         backgroundColor = .A3423C
     }
     
+    /// Настройка цвета для состояния "не выполнено"
     func prepareUnDone() {
         backgroundColor = .white
     }

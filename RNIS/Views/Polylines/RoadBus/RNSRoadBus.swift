@@ -9,12 +9,16 @@
 import UIKit
 
 /**
- Road Bus
+ Линия маршрута автобуса
  */
-
 class RNSRoadBus: PGPolyline {
+    
+    /// Массив точек
     var points: [PGGeoPoint]?
     
+    /// Создание полилинии
+    ///
+    /// - Parameter points: массив маршрутных точек
     convenience init(_ points: [RNSRoutePoint]?) {
         self.init()
         
@@ -22,6 +26,7 @@ class RNSRoadBus: PGPolyline {
         prepareLine()
     }
     
+    /// настройка линии
     func prepareLine() {
         setBorderWidth(50)
         setLineWidth(5)
@@ -30,6 +35,7 @@ class RNSRoadBus: PGPolyline {
         preparePoints()
     }
     
+    /// Прорисовка точек
     func preparePoints() {
         guard let points = points else {
             return

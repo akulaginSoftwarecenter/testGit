@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Black Move Button
+ Кнопка "поехали"
  */
-
 class RNSBlackMoveButton: RNSBlackButton {
     override func awakeFromNib() {
         super.awakeFromNib()

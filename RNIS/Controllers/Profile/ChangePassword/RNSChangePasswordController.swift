@@ -9,21 +9,28 @@
 import UIKit
 
 /**
- RNSChangePasswordController
+ Контроллер для изменения пароля
  */
-
 class RNSChangePasswordController: UIViewController {
 
+    /// Фоновое представление для регистрации и входа
     @IBOutlet var coverView: RNSLoginView!
+    /// Поле для ввода старого пароля
     @IBOutlet weak var passwordOldField: STPasswordField!
+    /// Поле для ввода нового пароля
     @IBOutlet weak var passwordOneField: STPasswordField!
+    /// Поля для ввода нового пароля повторно
     @IBOutlet weak var passwordTwoField: STPasswordField!
+    /// Надпись для отображения ошибок
     @IBOutlet weak var errorLabel: UILabel!
     
+    /// Массив полей для ввода
     @IBOutlet var fields: [STPasswordField]!
     
+    /// Данные профиля пользователя
     var item: RNSUserPayload?
     
+    /// Загрузка профиля пользователя
     func loadData() {
         STRouter.showLoader()
         RNSPostUserGet {[weak self] (reply, error, _) in
@@ -40,22 +47,26 @@ class RNSChangePasswordController: UIViewController {
         addDoneButtonOnKeyboard()
     }
     
+    /// Настройка фонового представления
     func prepareCoverView() {
         coverView.handlerBlackAction = { [weak self] in
             self?.savePressed()
         }
     }
 
+    /// Добавить кнопку "готово" на клавиатуру
     func addDoneButtonOnKeyboard()  {
         passwordOldField.addButtonOnKeyboard("Далее   ", target: passwordOneField, action: #selector(UIResponder.becomeFirstResponder))
         passwordOneField.addButtonOnKeyboard("Далее   ", target: passwordTwoField, action: #selector(UIResponder.becomeFirstResponder))
         passwordTwoField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(savePressed))
     }
     
+    /// Текст старого пароля
     var passwordOld: String? {
         return passwordOldField.text
     }
     
+    /// Событие нажатия на кнопку "сохранить"
     @objc func savePressed() {
         if let error = fields.checkValidFields {
             prepareError(error)
@@ -73,6 +84,7 @@ class RNSChangePasswordController: UIViewController {
         actionNext()
     }
     
+    /// Отправка нового пароля на сервер
     func actionNext() {
         item?.password = passwordTwoField.text
         item?.old_password = passwordOld
@@ -89,12 +101,14 @@ class RNSChangePasswordController: UIViewController {
         errorLabel.text = error
     }
     
+    /// Выход из контроллера
     func pop() {
         STRouter.pop { 
             STRouter.showAlertOk("Ваш пароль успешно изменён")
         }
     }
     
+    /// Очистка полей с ошибками
     func clearError() {
         fields.clearError()
         prepareError(nil)

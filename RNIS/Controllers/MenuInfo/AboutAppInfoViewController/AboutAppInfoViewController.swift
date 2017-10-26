@@ -9,11 +9,11 @@
 import UIKit
 
 /**
- AboutAppInfoViewController
+ Контроллер для отображения информации о приложении
  */
-
 class AboutAppInfoViewController: UIViewController {
 
+    /// Надпись с версией приложения
     @IBOutlet weak var appVersionLabel: UILabel!
 
     override func viewDidLoad() {

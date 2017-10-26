@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Pin Address
+ Пин адреса на карте
  */
-
 class RNSPinAddress: RNSPinParent {
     
     convenience init(_ point: PGGeoPoint) {

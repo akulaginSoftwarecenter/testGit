@@ -9,37 +9,50 @@
 import UIKit
 
 /**
- RNSMapParentController
+ Контроллер для демонстрации карты
  */
-
 class RNSMapParentController: UIViewController {
-    /**
-     base mapview PGView
-     */
+
+    /// Получение экземпляра карты
     var mapView: MapView {
         return RNSMapManager.mapView
     }
     //
+    /// Надпись с отображением текущего зума
     @IBOutlet weak var labelZoom: UILabel!
+    /// Кнопка увеличения зума
     @IBOutlet weak var plusButtonZoom: UIButton!
+    /// Кнопка уменьшения зума
     @IBOutlet weak var minusButtonZoom: UIButton!
+    /// Массив ограничителей для демонстрации кнопок на карте
     @IBOutlet var showingButtonsConstraints: [NSLayoutConstraint]!
+    /// Массив ограничителей для того, чтобы спрятать кнопки на карте
     @IBOutlet var hidingButtonsConstraints: [NSLayoutConstraint]!
+    /// Контейнер для левого ряда кнопок
     @IBOutlet weak var leftStackView: UIStackView!
+    /// Контейнер для правого ряда кнопок
     @IBOutlet weak var rightStackView: UIStackView!
+    /// Кнопка меню
     @IBOutlet weak var menuButton: UIButton!
+    /// Кнопка поиска
     @IBOutlet weak var searchButton: UIButton!
     //
+    /// Блок, который вызывается событием обновления карты
     var handlerOnMapEvent: EmptyBlock?
+    /// Блок, который вызывается событием нажатия на карту
     var handlerOnMapTouchEvent: AliasPointBlock?
+    /// Блок, который вызывается событием длительного нажатия на карту
     var handlerOnMapLongTouchEvent: AliasPointBlock?
+    /// Блок, который вызывается событием добавления оверлея на карту
     var handlerOnOverlay: ((PGOverlay,PGOverlayItem) -> ())?
     
     var bottomTargetConstant: CGFloat?
     @IBOutlet weak var bottomTarget: NSLayoutConstraint!
     
+    /// Кнопка включения/отключения демонстрации трафика на карте
     @IBOutlet weak var lightButton: RNSLightButton!
     
+    /// Представление индикации загрузки
     lazy var loaderView:LoaderView = {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
@@ -57,6 +70,7 @@ class RNSMapParentController: UIViewController {
         prepareAnimator()
     }
     
+    /// Настройка аниматора
     func prepareAnimator() {
         animator = MapButtonsAnimator(superview: view, duration: 0.3, usingSpringAnimation: false)
         animator.extraAnimationsWithVisibilityStateHidden = { [weak self] in
@@ -67,6 +81,7 @@ class RNSMapParentController: UIViewController {
         }
     }
     
+    /// Обновление надписи с зумом
     func updateZoom() {
         labelZoom.text = "zoom = \(mapView.getZoomLevel())"
     }
@@ -103,6 +118,7 @@ class RNSMapParentController: UIViewController {
         return "RNSMapParentController"
     }
     
+    /// Обновление положения автобусов на карте
     func busUpdate() {
         showLoader()
         RNSBusManager.updateServer { [weak self] in
@@ -110,6 +126,7 @@ class RNSMapParentController: UIViewController {
         }
     }
     
+    /// Обновление автобусных остановок на карте
     func busStopUpdate() {
         showLoader()
         RNSBusStopManager.updateServer { [weak self] in
@@ -117,10 +134,12 @@ class RNSMapParentController: UIViewController {
         }
     }
     
+    /// Показать индикацию загрузки
     func showLoader() {
         loaderView.showInView(self.view)
     }
     
+    /// Убрать индикацию загрузки
     func removeLoader() {
         loaderView.remove()
     }

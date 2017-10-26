@@ -9,10 +9,8 @@
 import Foundation
 
 /**
- Build Route View + Animation
+ Расширение для работы с анимацией
  */
-
-
 extension RNSBuildRouteView {
     
     func animateShow() {

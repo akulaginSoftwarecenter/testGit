@@ -9,21 +9,23 @@
 import UIKit
 
 /**
- Profile Image View
+ Представление для отображения и редактирования аватара пользователя
  */
-
 class RNSProfilePhoto: BaseViewWithXIBInit {
 
     @IBInspectable var colorImageView: UIColor?
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
     
+    /// Показывает изменялось ли представление
     var isChange = false
      
+    /// Показывает имеется ли фото
     var isHavePhoto: Bool {
         return imageView.image != nil
     }
     
+    /// Блок обновления фото
     var handlerUpdateImage: EmptyBlock?
     
     override func awakeFromNib() {
@@ -32,6 +34,7 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
         prepareColorImageView()
     }
     
+    /// Настройка представления
     func prepareColorImageView() {
         guard let color = colorImageView else {
             return
@@ -39,6 +42,7 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
         backImage.backgroundColor = color
     }
     
+    /// Событие нажатия на представление
     @IBAction func actionButton(_ sender: Any) {
        let vc = RNSAlertPhotoController.controller(isHavePhoto, complete: showImagePicker, handlerRemove:removePhoto)
        vc.popoverPresentationController?.sourceView = self
@@ -46,10 +50,12 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
        STRouter.present(vc)
     }
 
+    /// Удаление фото
     func removePhoto() {
         prepareImage(nil)
     }
     
+    /// Кодирование фото в формат base64
     var imageData: String {
         guard let image = imageView.image else {
             return ""

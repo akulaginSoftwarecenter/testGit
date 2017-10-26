@@ -9,12 +9,16 @@
 import UIKit
 
 /**
- Pin Item
+ Расширенное представление пина на карте
  */
-
 class RNSPinItem: RNSPinParent {
+    
+    /// модель географического положения пина
     var item: RNSCoordinateModel?
     
+    /// Создание пина
+    ///
+    /// - Parameter item: географические координаты пина
     @discardableResult required init(_ item: RNSCoordinateModel) {
         super.init()
    

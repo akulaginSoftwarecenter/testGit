@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Табличная ячейка для отображения информации о контактах
 class ContactsInfoTableViewCell: RNSBaseTableCell {
 
     @IBOutlet weak var title: UILabel!

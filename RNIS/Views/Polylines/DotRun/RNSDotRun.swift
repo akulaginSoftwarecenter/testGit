@@ -9,12 +9,14 @@
 import UIKit
 
 /**
- Dot Run
+ Горизонтальная линия из точек двух точек
  */
-
 class RNSDotRun: PGPolyline {
     var point: PGGeoPoint?
     
+    /// Создание представления
+    ///
+    /// - Parameter point: точка начала линии
     convenience init(_ point: PGGeoPoint?) {
         self.init()
         
@@ -22,6 +24,7 @@ class RNSDotRun: PGPolyline {
         prepareLine()
     }
     
+    /// Настройка параметров отображения линии
     func prepareLine() {
         setLineWidth(4)
         setOutlineColor(.color13)
@@ -29,6 +32,7 @@ class RNSDotRun: PGPolyline {
         preparePoint()
     }
     
+    /// Нанесение точек на карту
     func preparePoint() {
         guard let point = point else {
             return

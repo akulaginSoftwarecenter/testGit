@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Menu Bar Item
+ Кнопка меню
  */
-
 class RNSMenuBarItem: UIBarButtonItem {
     
     override func awakeFromNib() {
@@ -20,6 +19,7 @@ class RNSMenuBarItem: UIBarButtonItem {
         action = #selector(actionTap)
     }
     
+    /// Событие нажатия
     @objc func actionTap() {
         RNSMenuManager.showLeftMenu()
     }

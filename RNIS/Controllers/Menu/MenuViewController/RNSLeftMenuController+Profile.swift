@@ -10,10 +10,12 @@ import Foundation
 
 extension RNSLeftMenuController {
     
+    /// Возвращает булевое значение, указывающее сохранен ли токен сессии
     var isHaveToken: Bool {
         return Utils.isHaveToken
     }
     
+    /// Настройка профиля
     func prepareProfile() {
         clearProfile()
         if isHaveToken {
@@ -24,6 +26,7 @@ extension RNSLeftMenuController {
         }
     }
     
+    /// Загрузка данных профиля
     func loadData() {
         loaderView.showInView(backLoaderView)
         RNSPostUserGet {[weak self] (reply, error, _) in
@@ -32,6 +35,9 @@ extension RNSLeftMenuController {
         }
     }
     
+    /// Обновление представлений
+    ///
+    /// - Parameter item: данные профиля пользователя
     func updateUI(_ item: RNSUserPayload?) {
         prepareName(item?.name)
         preparePhone(item?.formatPhone)
@@ -40,6 +46,7 @@ extension RNSLeftMenuController {
         }
     }
     
+    /// Очистка представлений
     func clearProfile() {
         prepareName(nil)
         preparePhone(nil)

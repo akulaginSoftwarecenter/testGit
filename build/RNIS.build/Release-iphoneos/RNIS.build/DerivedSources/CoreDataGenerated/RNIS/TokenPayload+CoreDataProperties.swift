@@ -2,7 +2,7 @@
 //  TokenPayload+CoreDataProperties.swift
 //  
 //
-//  Created by Admin on 25.10.17.
+//  Created by Admin on 26.10.17.
 //
 //  This file was automatically generated and should not be edited.
 //

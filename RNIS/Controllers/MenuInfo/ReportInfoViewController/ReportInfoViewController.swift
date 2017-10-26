@@ -9,15 +9,18 @@
 import UIKit
 
 /**
- ReportInfoViewController
+ Контроллер отправки сообщений об ошибках
  */
 
 class ReportInfoViewController: UIViewController {
 
+    /// Представление для ввода текста сообщения
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
+    /// Надпись с текстом ошибки
     @IBOutlet weak var errorLabel: UILabel!
 
+    /// Событие нажатия кнопки "отправить"
     @IBAction func actionButton(_ sender: Any) {
         /*
         prepareError(nil)
@@ -32,6 +35,7 @@ class ReportInfoViewController: UIViewController {
          */
     }
     
+    /// Показать сообщение об успешной отправке
     func showAlert() {
         STRouter.showAlertOk("Ваше сообщение отправлено!") { [weak self] in
             self?.navigationController?.popViewController(animated: true)

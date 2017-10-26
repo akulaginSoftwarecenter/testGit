@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Pin Variant End
+ Пин конца одного из варинатов маршрута
  */
-
-
 class RNSPinVariantEnd: RNSPinParent {
     
     @discardableResult convenience init(_ item: RNSRoutePoint?) {

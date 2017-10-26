@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Pin Parent
+ Базовое представление пина на карте
  */
-
 class RNSPinParent: PGOverlay {
     
     lazy var overlayItem = PGOverlayItem()

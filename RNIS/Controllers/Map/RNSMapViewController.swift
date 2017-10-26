@@ -10,24 +10,27 @@ import UIKit
 import PureLayout
 
 /**
- RNSMapViewController
+ Расширенный контроллер для демонстрации карты
  */
 
 class RNSMapViewController: UIViewController {
     
+    /// Массив ограничителей для демонстрации кнопок на карте
     @IBOutlet var showingButtonsConstraints: [NSLayoutConstraint]!
+    /// Массив ограничителей для того, чтобы спрятать кнопки на карте
     @IBOutlet var hidingButtonsConstraints: [NSLayoutConstraint]!
-//    @IBOutlet weak var stackView: UIStackView!
-//    @IBOutlet weak var searchButton: UIButton!
     //
+    /// Внутренний контроллер
     var containerController: RNSMapParentController?
     var presentViewController: UIViewController?
 
+    /// Кнопка демонстрации маршрута
     @IBOutlet weak var routeBtn: UIButton!
 //    @IBOutlet weak var menuBtn: UIButton!
     /**
     route in RNSPostRouting com.rnis.geo.action.service.routing
      */
+    /// Модель отображения маршрута
     var route: PGPolyline?
     private var animator: MapButtonsAnimator!
     
@@ -39,6 +42,7 @@ class RNSMapViewController: UIViewController {
         prepareAnimator()
     }
     
+    /// Настройка аниматора кнопок
     func prepareAnimator() {
         animator = MapButtonsAnimator(superview: view, duration: 0.3, usingSpringAnimation: false)
         animator.extraAnimationsWithVisibilityStateHidden = { [weak self] in
@@ -46,11 +50,11 @@ class RNSMapViewController: UIViewController {
         }
     }
     
+    /// Настройка прозрачности кнопок
+    ///
+    /// - Parameter alpha: степень прозрачности
     func prepareAlpha(_ alpha: CGFloat) {
-//        stackView.alpha = alpha
-//        searchButton.alpha = alpha
         routeBtn.alpha = alpha
-//        menuBtn.alpha = alpha
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Pin Build
+ Пин объекта на карте
  */
-
 class RNSPinBuild: RNSPinParent {
     
     @discardableResult convenience init(_ point: PGGeoPoint) {

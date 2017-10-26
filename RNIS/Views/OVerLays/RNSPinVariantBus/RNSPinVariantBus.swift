@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Pin Variant Bus
+ Пин маршрута автобуса
  */
-
 class RNSPinVariantBus: RNSPinParent {
     
     var bus: RNSBusRouteTemp?

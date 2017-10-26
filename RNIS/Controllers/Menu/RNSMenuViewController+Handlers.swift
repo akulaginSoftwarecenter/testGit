@@ -10,6 +10,7 @@ import Foundation
 
 extension RNSMenuViewController {
 
+    /// Настройка обработчиков событий меню
     func prepareHandlers()  {
         RNSMenuManager.handlerHideLeftMenu = { [weak self] animated in
             self?.hideLeftView(animated: animated)

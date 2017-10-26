@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Расширение для работы с таблицей
 extension RNSSearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

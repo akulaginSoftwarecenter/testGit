@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Pin Duration
+ Пин продолжительности следования
  */
-
 class RNSPinDuration: RNSPinParent {
     var item: RNSDurationItem?
     

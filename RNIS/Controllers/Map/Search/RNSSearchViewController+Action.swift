@@ -10,11 +10,13 @@ import Foundation
 
 extension RNSSearchViewController: UITextFieldDelegate {
     
+    /// Событие переключения вкладки
     @IBAction func actionSegmented(_ sender: UISegmentedControl) {
         clearTable() 
         updateSearch()
     }
     
+    /// Событие изменения поискового запроса
     @IBAction func editionChange(_ sender: Any) {
         updateSearch()
     }
@@ -28,6 +30,7 @@ extension RNSSearchViewController: UITextFieldDelegate {
         return true
     }
     
+    /// Спрятать клавиатуру
     func hideKeyboard() {
         view.hideKeyboard()
     }

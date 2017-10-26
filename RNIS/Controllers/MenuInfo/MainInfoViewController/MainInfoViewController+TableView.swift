@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Расширение для обработки событий таблицы
 extension MainInfoViewController: UITableViewDelegate, UITableViewDataSource  {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -18,16 +18,17 @@ enum RNSContactInfoType: String {
 }
 
 /**
- ContactsInfoViewController
+ Контроллер отображения контактов
  */
-
 class ContactsInfoViewController: UIViewController {
     @IBOutlet weak var topTitle: RNSTopTitle!
 
     @IBOutlet weak var tableView: UITableView!
     
+    /// Тип контактов
     var type: RNSContactInfoType = .contact
     
+    /// Массив моделей
     var items: [RNSContactItem]?
     
     override func viewDidLoad() {
@@ -38,6 +39,7 @@ class ContactsInfoViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
     
+    /// Загрузка контактов
     func loadItems() {
         RNSPostContactList(type, complete: { [weak self] item in
             self?.items = item?.items

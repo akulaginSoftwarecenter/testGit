@@ -10,6 +10,7 @@ import Foundation
 
 extension RNSMapViewController {
     
+    /// Настройка блоков обработки некоторых событий
     func prepareHandlers() {
         prepareHandlerMapView()
         
@@ -26,6 +27,7 @@ extension RNSMapViewController {
         }
     }
     
+    /// Настройка блоков обработки событий карты
     func prepareHandlerMapView(){
         containerController?.handlerOnMapEvent = {[weak self] in
             self?.onMapEvent()

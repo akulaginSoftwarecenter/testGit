@@ -10,20 +10,26 @@ import UIKit
 import Social
 
 /**
- RNSLeftMenuController
+ Контроллер меню
  */
-
 class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    /// Массив моделей пунктов меню
     var menuItems: [MenuItem] {
         return RNSMenuManager.menuItems
     }
     @IBOutlet weak var backLoaderView: UIView!
+    /// Надпись с именем пользователя
     @IBOutlet weak var nameLabel: UILabel!
+    /// Надпись с телефоном пользователя
     @IBOutlet weak var phoneLabel: UILabel!
+    /// Представления с фото профиля
     @IBOutlet weak var profileImageView: UIImageView!
+    /// Кнопка перехода к редактированию профиля
     @IBOutlet weak var editButton: UIButton!
+    /// Таблица с пунктами меню
     @IBOutlet weak var tableView: UITableView!
+    /// Индикатор загрузки
     lazy var loaderView:LoaderView = LoaderView()
     
     override func viewDidLoad() {
@@ -33,6 +39,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         prepareHandlers()
     }
     
+    /// Настройка представлений
     func prepareUI() {
         profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
         profileImageView.layer.masksToBounds = true
@@ -41,6 +48,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
         prepareProfile()
     }
     
+    /// Настройка обработчика обновления меню
     func prepareHandlers() {
         RNSMenuManager.handlerLeftMenuUpdate = { [weak self] in
             self?.prepareProfile()

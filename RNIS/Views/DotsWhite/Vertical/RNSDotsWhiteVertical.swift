@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- Dots White Vertical
+ Представление отображает вертикальную последовательность точек
  */
 
 class RNSDotsWhiteVertical: RNSDotsWhiteHorizontal {

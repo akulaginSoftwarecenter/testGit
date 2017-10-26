@@ -10,9 +10,8 @@ import UIKit
 import LGSideMenuController
 
 /**
- RNSMenuViewController
+ Контроллер, который служит контейнером для меню
  */
-
 class RNSMenuViewController: LGSideMenuController {
 
     override open var rootViewController: UIViewController? {
@@ -21,6 +20,7 @@ class RNSMenuViewController: LGSideMenuController {
         }
     }
 
+    /// Контроллер навигации
     var baseNavigationController: BaseNavigationController!
     
     override func awakeFromNib(){
@@ -49,6 +49,9 @@ class RNSMenuViewController: LGSideMenuController {
         leftViewController?.view.frame = CGRect(origin: CGPoint.zero, size: size)
     }
     
+    /// Показать контроллер
+    ///
+    /// - Parameter vc: контроллер
     func showVC(_ vc: UIViewController?) {
         guard let vc = vc else {
             return

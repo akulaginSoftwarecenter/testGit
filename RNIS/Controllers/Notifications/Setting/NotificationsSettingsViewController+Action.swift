@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// Расширение для обработки нажатий кнопок
 extension NotificationsSettingsViewController {
     
+    /// Нажатие на кнопку "сохранить"
     @IBAction func actionSave(_ sender: Any) {
         let result = notificationPicker.selectedRow(inComponent: 0)
         guard item?.notification_time != result  else {
@@ -24,6 +26,7 @@ extension NotificationsSettingsViewController {
         }
     }
     
+    /// Нажатие на кнопку "удалить"
     @IBAction func actionRemove(_ sender: Any) {
         STRouter.showLoader()
         RNSPostNotificationDelete(item) {

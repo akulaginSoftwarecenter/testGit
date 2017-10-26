@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- RNSChangeCodeController
+ Контроллер ввода кода подтверждения при изменении пароля
  */
-
 class RNSChangeCodeController: RNSCodeContainerController {
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: модель профиля пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
         let vc = RNSChangeCodeController.controller as? RNSChangeCodeController
         
@@ -46,6 +48,7 @@ class RNSChangeCodeController: RNSCodeContainerController {
         })
     }
     
+    /// Выход из контроллера с последующей демонстрацией сообщения об успешном изменении телефона
     func popAlert() {
         RNSMenuManager.leftMenuUpdate()
         STRouter.pop(animated: false) {

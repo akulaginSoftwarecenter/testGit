@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- StrelkaViewController
+ Контроллер стрелки
  */
-
 class StrelkaViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
@@ -30,17 +29,20 @@ class StrelkaViewController: UIViewController {
         prepareHandlers()
     }
     
+    /// Загрузка страницы стрелки
     func loadStart() {
         loaderView.showInView(self.view)
         webView.loadRequest(URLRequest(url: URL(string: host)!))
     }
     
+    /// Сброс страницы
     func resetIfNeed() {
         if host != webView.request?.url?.absoluteURL.absoluteString {
             loadStart()
         }
     }
     
+    /// Настройка обработчика обновления страницы
     func prepareHandlers() {
         RNSMenuManager.handlerStrelkaUpdate = { [weak self] in
             self?.resetIfNeed()

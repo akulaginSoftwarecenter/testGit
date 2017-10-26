@@ -9,18 +9,24 @@
 import UIKit
 
 /**
- RNSProfileViewController
+ Контроллер редактирования профиля пользователя
  */
-
 class RNSProfileViewController: UIViewController {
     
+    /// Поле редактирования имени
     @IBOutlet weak var nameField: RNSNameField!
+    /// Поле редактирования почты
     @IBOutlet weak var emailField: RNSEmailField!
+    /// Поле телефона
     @IBOutlet weak var phoneField: RNSPhoneField!
+    /// Кнопка выхода из аккаунта
     @IBOutlet weak var blackButton: RNSBlackButton!
+    /// Надпись с текстом ошибки
     @IBOutlet weak var errorLabel: UILabel!
+    /// Представление для демонстрации автара пользователя с возможностью редактирования
     @IBOutlet weak var profilePhoto: RNSProfilePhoto!
     
+    /// Модель профиля пользователя
     var item: RNSUserPayload?
     
     override func viewDidLoad() {
@@ -31,12 +37,14 @@ class RNSProfileViewController: UIViewController {
         prepareHandlers()
     }
     
+    /// Настройка обработчика очищения профиля
     func prepareHandlers() {
         RNSMenuManager.handlerClearProfile = {[weak self] in
             self?.clearAll()
         }
     }
     
+    /// Настройка кнопки выхода
     func prepareBlackButton() {
         blackButton.handlerAction = { [weak self] in
             self?.showAlert()
@@ -49,6 +57,7 @@ class RNSProfileViewController: UIViewController {
         loadData()
     }
     
+    /// Очистка представлений
     func clearAll() {
         profilePhoto.imageView.image = nil
         nameField.text = ""
@@ -57,6 +66,7 @@ class RNSProfileViewController: UIViewController {
         errorLabel.text = ""
     }
     
+    /// Загрузка данных профиля пользователя
     func loadData() {
         STRouter.showLoader()
         RNSPostUserGet {[weak self] (reply, error, _) in
@@ -65,6 +75,9 @@ class RNSProfileViewController: UIViewController {
         }
     }
     
+    /// Обновление представлений
+    ///
+    /// - Parameter item: модель профиля
     func updateUI(_ item: RNSUserPayload?) {
         self.item = item
         nameField.text = item?.name

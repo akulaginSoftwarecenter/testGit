@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- RNSChangePhoneController
+ Контроллер изменения номера телефона
  */
-
 class RNSChangePhoneController: RNSPhoneContainerController {
     
     override var typeTitle: TypeTitle {
@@ -26,6 +25,7 @@ class RNSChangePhoneController: RNSPhoneContainerController {
         return "Назад"
     }
     
+    /// Данные профиля пользователя
     var item: RNSUserPayload?
     
     override func viewDidLoad() {
@@ -34,6 +34,7 @@ class RNSChangePhoneController: RNSPhoneContainerController {
         loadData()
     }
     
+    /// Загрузка профиля пользователя
     func loadData() {
         STRouter.showLoader()
         RNSPostUserGet {[weak self] (reply, error, _) in
@@ -42,6 +43,7 @@ class RNSChangePhoneController: RNSPhoneContainerController {
         }
     }
     
+    /// Отправка нового телефона на сервер
     override func actionNext() {
         item?.new_phone = "+7" + (phoneText ?? "")
         item?.new_email = nil  // Don't re-send new email parameter on next update profile request

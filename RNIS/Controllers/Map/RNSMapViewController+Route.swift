@@ -10,6 +10,9 @@ import Foundation
 
 extension RNSMapViewController {
     
+    /// Добавить маршрут на карту
+    ///
+    /// - Parameter route: маршрут
     func addRoute(_ route: PGPolyline?) {
         self.route?.remove()
         self.route = route

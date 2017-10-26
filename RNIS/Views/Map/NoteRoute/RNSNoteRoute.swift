@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Note Route
+ Представление отображает небольшое окошко с информацией о маршруте
  */
-
-
 class RNSNoteRoute: UIView {
     
     lazy var leftView: RNSTriangle = {

@@ -9,17 +9,17 @@
 import Foundation
 
 /**
- Date Select View + UI
+ Расширение для работы с представлениями
  */
-
-
 extension RNSDateSelectView {
     
+    /// Настройка представлений
     func prepareUI() {
         prepareButton()
         prepareDatePicker()
     }
     
+    /// Настройка кнопок
     func prepareButton() {
         oKButton.handlerAction = {[weak self] in
             self?.hidden()
@@ -35,6 +35,7 @@ extension RNSDateSelectView {
         isHidden = true
     }
     
+    /// Настройка пикера
     func prepareDatePicker() {
         datePicker.minimumDate = Date()
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")

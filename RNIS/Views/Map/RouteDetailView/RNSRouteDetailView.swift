@@ -9,11 +9,11 @@
 import UIKit
 
 /**
- Route Detail View
+ Представление отображает схему маршрута
  */
-
 class RNSRouteDetailView: BaseViewWithXIBInit {
     
+    /// Содель схемы маршрута
     var item: RNSRouteTable? {
         didSet{
             tableView.reloadData()
@@ -24,6 +24,7 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
     
     var showMove = false
     
+    /// массив моделей
     var items: [RNSRouteTableItem] {
         return item?.itemsStill ?? []
     }
@@ -34,10 +35,17 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
         tableView.contentInset = UIEdgeInsetsMake(47, 0, 0, 0)
     }
     
+    /// Получение модели для ячейки
+    ///
+    /// - Parameter indexPath: индекс ячейки
+    /// - Returns: модель ячейки таблицы
     func item(_ indexPath: IndexPath) -> RNSRouteTableItem {
         return items[indexPath.row]
     }
     
+    /// Анимарование вставки пунктов в таблицу
+    ///
+    /// - Parameter indexPath: индекс вставки
     func animateInsertStill(_ indexPath: IndexPath) {
         let item = self.item(indexPath)
         let indexPaths = item.indexPatchs(indexPath)

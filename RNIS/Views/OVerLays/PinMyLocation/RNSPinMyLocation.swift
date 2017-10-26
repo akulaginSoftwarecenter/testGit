@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Pin My Location
+ Пин пользователя
  */
-
 class RNSPinMyLocation: RNSPinParent {
     
     var point: PGGeoPoint {
