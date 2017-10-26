@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Email Field
+ Текстовое поле для ввода почты
  */
-
-
 class RNSEmailField: RNSTextField {
 
     override var isValid:Bool {
@@ -23,6 +21,9 @@ class RNSEmailField: RNSTextField {
         return isValid ? nil : "Введите корректный email"
     }
     
+    /// Создание поля
+    ///
+    /// - Parameter email: текст электронного адреса почты
     convenience init(email: String?) {
         self.init()
         text = email

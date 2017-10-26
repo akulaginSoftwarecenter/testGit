@@ -10,10 +10,12 @@ import Foundation
 
 extension RNSProfileViewController {
     
+    /// Событие нажатия на кнопку смены номера телефона
     @IBAction func actionPhone(_ sender: Any) {
         RNSChangePhoneController.controller.pushAnimatedImageScroll()
     }
     
+    /// Событие нажатия на кнопку смены пароля
     @IBAction func actionPassword(_ sender: Any) {
         RNSChangePasswordController.initialController.pushAnimatedImageScroll()
     }

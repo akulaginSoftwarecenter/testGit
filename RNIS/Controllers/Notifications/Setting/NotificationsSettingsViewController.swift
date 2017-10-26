@@ -9,12 +9,13 @@
 import UIKit
 
 /**
- NotificationsSettingsViewController
+ Контроллер настроек уведомлений
  */
-
 class NotificationsSettingsViewController: UIViewController {
 
+    /// Обработчик изменений пикера
     var handlerNotification: ((Int) -> ())?
+    /// Модель уведомления
     var item: RNSNotificationModel?
     
     let maxValue = 100
@@ -27,10 +28,14 @@ class NotificationsSettingsViewController: UIViewController {
         preparePicker()
     }
     
+    /// Настройка пикера
     func preparePicker() {
         setIntialValue(item?.notification_time)
     }
 
+    /// Настройка начального значения пикера
+    ///
+    /// - Parameter value: начальное значение
     func setIntialValue(_ value: Int? ) {
         guard let value = value,
             value < notificationPicker.numberOfRows(inComponent: 0) else {

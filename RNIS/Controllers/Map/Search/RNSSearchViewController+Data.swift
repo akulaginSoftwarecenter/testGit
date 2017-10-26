@@ -10,10 +10,12 @@ import Foundation
 
 extension RNSSearchViewController {
     
+    /// Получение текста поискового запроса
     var text: String {
         return textField.text ?? ""
     }
     
+    /// Обработчик события обновления поискового запроса
     func updateSearch() {
         RNSSearchManager.text = text
         RNSSearchManager.type = typeSegment
@@ -35,6 +37,7 @@ extension RNSSearchViewController {
         }
     }
     
+    /// Запрос на поиск остановок
     func searchStops() {
         loaderView.showInView(self.view)
         request = RNSPostSearch(text, type:typeSegment, complete: { [weak self] items in
@@ -48,6 +51,7 @@ extension RNSSearchViewController {
         })
     }
     
+    /// Запрос на поиск адресов
     func searchAddress() {
         loaderView.showInView(self.view)
         request = RNSGetSearchAddress(text) { [weak self] items in
@@ -57,6 +61,7 @@ extension RNSSearchViewController {
         }
     }
     
+    /// Убрать индикатор загрузки
     func removeLoader() {
         loaderView.remove()
     }
@@ -70,6 +75,9 @@ extension RNSSearchViewController {
         tableReload()
     }
     
+    /// Показать детальную информацию о выбранном объекте из списка
+    ///
+    /// - Parameter indexPath: индекс выбранного объекта
     func showItem(_ indexPath: IndexPath) {
         let item = self.item(indexPath)
         if let address = item as? RNSAddressTemp {
@@ -86,6 +94,9 @@ extension RNSSearchViewController {
         }
     }
     
+    /// Возврат на контроллер с картой с последующей демонстрацией адреса и маршрута
+    ///
+    /// - Parameter item: модель адреса
     func prepareAddress(_ item: RNSAddressTemp) {
         if !item.isHouse {
              textField.text = item.name

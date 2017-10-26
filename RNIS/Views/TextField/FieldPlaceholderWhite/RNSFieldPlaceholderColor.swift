@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Field Placeholder White
+ Текстовое поле с заполнителем того же цвета что и текст
  */
-
 class RNSFieldPlaceholderColor: UITextField {
     
     override func awakeFromNib() {

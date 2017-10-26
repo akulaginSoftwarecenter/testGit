@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Circle Hole White
+ Представление круга внутри круга с белым внутренним кругом
  */
-
 class RNSCircleHoleWhite: RNSCircleHole {
 
     override func awakeFromNib() {
@@ -34,6 +33,7 @@ class RNSCircleHoleWhite: RNSCircleHole {
         mainCircle.prepareDone()
     }
     
+    /// Настройка внешнего круга
     func prepareDefaut() {
         mainCircle.backgroundColor = .FFB9AF
     }

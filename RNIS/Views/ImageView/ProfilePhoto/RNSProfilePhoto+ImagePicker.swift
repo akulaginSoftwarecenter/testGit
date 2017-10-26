@@ -9,12 +9,11 @@
 import Foundation
 
 /**
- Profile Photo + Image Picker
+ Расширение для работы с пикером
  */
-
-
 extension RNSProfilePhoto {
     
+    /// Показать пикер
     func showImagePicker(_ type: UIImagePickerControllerSourceType) {
         if UIImagePickerController.isSourceTypeAvailable(type) {
             let vc = RNSImagePickerController(complete: prepareImage)
@@ -25,6 +24,9 @@ extension RNSProfilePhoto {
         }
     }
     
+    /// Настройка фото
+    ///
+    /// - Parameter image: фото
     func prepareImage(_ image: UIImage?) {
         imageView.image = image
         isChange = true

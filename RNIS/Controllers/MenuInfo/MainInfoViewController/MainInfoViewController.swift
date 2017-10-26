@@ -9,15 +9,15 @@
 import UIKit
 
 /**
- MainInfoViewController
+ Контроллер для демонстрации информационных разделов
  */
-
 class MainInfoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     let main_to_contacts = "main_to_contacts"
     
+    /// Список заголовков разделов
     let menuTitles = ["Полезные контакты",
                       "Забытые вещи",
                       "Сканер QR",
@@ -33,18 +33,27 @@ class MainInfoViewController: UIViewController {
         tableView.contentInset = UIEdgeInsetsMake(16, 0, 0, 0);
     }
 
+    /// Показать контроллер выбранного раздела
+    ///
+    /// - Parameter type: тип раздела
     func showDocsInfo(_ type: RNSDocsType) {
         let vc = DocsInfoViewController.initialController as? DocsInfoViewController
         vc?.type = type
         vc?.pushAnimatedRed()
     }
     
+    /// Показать контроллер информации о контактах
+    ///
+    /// - Parameter type: тип контакта
     func showContact(_ type: RNSContactInfoType) {
         let vc = ContactsInfoViewController.initialController as? ContactsInfoViewController
         vc?.type = type
         vc?.pushAnimatedRed()
     }
     
+    /// Показать контроллер обращения к разработчикам
+    ///
+    /// - Parameter type: тип обращения
     func showPetition(_ type: RNSPetitionType = .feedback) {
         let vc = SupportInfoViewController.initialController as? SupportInfoViewController
         vc?.type = type

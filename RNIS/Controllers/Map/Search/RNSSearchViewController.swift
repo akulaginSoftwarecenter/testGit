@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- RNSSearchViewController
+ Контроллер поиска на карте
  */
-
 class RNSSearchViewController: UIViewController, KeyboardShowable {
     
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
@@ -24,6 +23,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     
     var isNeedAddTap: Bool = false
     
+    /// Представление идикации загрузки
     lazy var loaderView:LoaderView = {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
@@ -33,11 +33,16 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    /// Поле ввода поискового запроса
     @IBOutlet weak var textField: RNSTextField!
+    /// Представление для переключения вкладок
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    /// Таблица результатов поиска
     @IBOutlet weak var tableView: UITableView!
     
+    /// Массив моделей ячеек таблицы результатов поска
     var items: [RNSTextItem]?
+    /// Поисковый запрос на сервер
     var request: AlamofireAPI?
     
     override func viewDidLoad() {
@@ -48,6 +53,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
         tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
     }
     
+    /// Обновление представлений используя последний поисковый запрос если он имеется
     func checkSaved() {
         prepareSegment(RNSSearchManager.type ?? .transport)
         guard let text = RNSSearchManager.text, !text.isEmpty else {

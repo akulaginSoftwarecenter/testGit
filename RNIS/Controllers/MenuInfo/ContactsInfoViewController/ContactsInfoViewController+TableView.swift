@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Расширение обработки событий таблицы
 extension ContactsInfoViewController: UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Pin Bus
+ Пин автобусной остановки
  */
-
 class RNSPinBusStop: RNSPinItem {
     
     override func prepareHandlers() {

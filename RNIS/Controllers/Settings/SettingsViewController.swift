@@ -9,11 +9,11 @@
 import UIKit
 
 /**
- SettingsViewController
+ Контроллер настроек
  */
-
 class SettingsViewController: UIViewController {
 
+    /// Представление, которое включает или отключает наличие на карте кнопок зума
     @IBOutlet weak var zoomButtonMap: UISwitch!
 
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController {
         zoomButtonMap.isOn = !UserDefaults.hideZoomButtonInMap
     }
 
+    /// Событие включения/отключения зума
     @IBAction func switchIsChanged(_ sender: Any) {
         UserDefaults.hideZoomButtonInMap = !zoomButtonMap.isOn
     }

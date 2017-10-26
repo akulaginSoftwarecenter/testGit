@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+/// Базовая табличная ячейка для отображения информации о объектах на карте
 class RNSRouteParentCell: RNSBaseTableCell {
 
     var showMove = false

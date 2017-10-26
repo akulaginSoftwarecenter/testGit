@@ -9,11 +9,13 @@
 import UIKit
 
 /**
- Login Field
+ Текстовое поле для ввода логина
  */
-
 class RNSNameField: RNSTextField, UITextFieldDelegate {
 
+    /// Создание поля
+    ///
+    /// - Parameter text: текст
     convenience init(text: String?) {
         self.init()
         
@@ -26,6 +28,7 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
         prepareDelegate()
     }
     
+    /// Настройка делегата поля
     func prepareDelegate() {
         delegate = self
     }
@@ -36,6 +39,10 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
         prepareDelegate()
     }
     
+    /// Проверка текста на валидность
+    ///
+    /// - Parameter string: текст
+    /// - Returns: булевое значение валидности
     func validText(_ string: String) -> Bool {
         let set = CharacterSet(charactersIn: "/;:\"\'{}[]<>^?, .")
         return !string.trimmingCharacters(in: set).isEmpty
@@ -45,6 +52,10 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
         return validateSpecialCharactor(string)
     }
     
+    /// Проверка текста на содержание специальных символов
+    ///
+    /// - Parameter text: текст
+    /// - Returns: <#return value description#>
     func validateSpecialCharactor(_ text: String?) -> Bool {
         let pred = NSPredicate(format: "SELF MATCHES %@", "[А-Я а-яA-Za-z0-9^]*")
         return pred.evaluate(with:text)

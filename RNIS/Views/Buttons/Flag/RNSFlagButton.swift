@@ -9,18 +9,22 @@
 import UIKit
 
 /**
- Flag Button
+ Кнопка добавления в избранное
  */
-
 class RNSFlagButton: BaseViewWithXIBInit {
     
+    /// Обработчик обновления
     var handlerUpdate: EmptyBlock?
     
+    /// Индикатор загрузки
     lazy var loaderView = LoaderView()
     
+    /// Кнопка
     @IBOutlet weak var button: UIButton!
+    /// Представление фонового рисунка
     @IBOutlet weak var imageView: UIImageView!
     
+    /// Состояние добавления в избранное
     var isFavorite: Bool = false {
         didSet {
             imageView.image = isFavorite ? #imageLiteral(resourceName: "flagFill") : #imageLiteral(resourceName: "flagClear")
@@ -28,6 +32,7 @@ class RNSFlagButton: BaseViewWithXIBInit {
         }
     }
     
+    /// Событие нажатия
     @IBAction func actionButton(_ sender: Any) {
         handlerUpdate?()
         showLoader()
@@ -38,14 +43,17 @@ class RNSFlagButton: BaseViewWithXIBInit {
         prepareConstraint()
     }
     
+    /// Показать индикатор загрузки
     func showLoader() {
         loaderView.showInView(imageView)
     }
     
+    /// Убрать индикатор загрузки
     func removeLoader() {
         loaderView.remove()
     }
     
+    /// Настройка ограничений
     func prepareConstraint() {
         guard let view = superview else {
             return

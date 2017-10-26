@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// Расширение для обработки нажатия некоторых кнопок
 extension RNSLeftMenuController {
     
+    /// Нажатие кнопки редактирование профиля
     @IBAction func actionProfile(_ sender: Any) {
         if isHaveToken {
             RNSMenuManager.showProfile()
@@ -27,6 +29,9 @@ extension RNSLeftMenuController {
         RNSBusManager.prepareStubAsunc()
     }
      
+    /// Нажатие кнопки "опубликовать в соцсетях"
+    ///
+    /// - Parameter sender: <#sender description#>
     @IBAction func actionShare(_ sender: Any) {
         let text = "Добро пожаловать в РНИС!"
         let vc = UIActivityViewController(activityItems: [text], applicationActivities: [])

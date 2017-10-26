@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Расширение для обработки событий таблицы
 extension RNSLeftMenuController {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Login View
+ Фоновое представление для регистрации и входа
  */
-
 class RNSLoginView: BaseViewWithXIBInit {
 
     @IBOutlet weak var blackButton: RNSBlackButton!

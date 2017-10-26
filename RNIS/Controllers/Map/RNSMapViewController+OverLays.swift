@@ -10,6 +10,9 @@ import Foundation
 
 extension RNSMapViewController {
 
+    /// Показать контроллер с детальной информацией об автобусе либо остановке
+    ///
+    /// - Parameter item: модель автобуса либо остановки
     func showInfoIfNeed(_ item: RNSCoordinateModel?) {
         var vc: UIViewController?
         if let item = item as? RNSBus {

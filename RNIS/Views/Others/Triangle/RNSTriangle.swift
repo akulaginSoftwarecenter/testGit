@@ -8,10 +8,6 @@
 
 import UIKit
 
-/**
- Triangle
- */
-
 
 enum TypeNote: Int {
     case left = 0,
@@ -20,10 +16,16 @@ enum TypeNote: Int {
          down = 3
 }
 
+/**
+ Треугольник
+ */
 class RNSTriangle: UIView {
     
     @IBInspectable var typeNote: Int = 0
     
+    /// Создание треугольника
+    ///
+    /// - Parameter type: тип треугольника
     convenience init(_ type: TypeNote) {
         self.init(frame: CGRect.zero)
         typeNote = type.rawValue
@@ -43,6 +45,9 @@ class RNSTriangle: UIView {
         self.layer.mask = mask
     }
     
+    /// Рисование треугольника
+    ///
+    /// - Parameter path: путь
     func drawTriangle(_ path: CGMutablePath) {
         let type = TypeNote(rawValue: typeNote) ?? .left
         switch type {

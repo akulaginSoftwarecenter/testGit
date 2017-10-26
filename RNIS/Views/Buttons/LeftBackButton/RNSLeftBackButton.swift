@@ -10,9 +10,8 @@ import UIKit
 import SnapKit
 
 /**
- Left Back Button
+ Кнопка возврата на предыдущий контроллер
  */
-
 class RNSLeftBackButton: UIButton {
     
     @IBInspectable var leftContentOffset: CGFloat = 0
@@ -28,6 +27,7 @@ class RNSLeftBackButton: UIButton {
         prepareDefaultAction()
     }
     
+    /// Настройка обработчика по-умолчанию
     func prepareDefaultAction() {
         guard actionDefault else {
             return
@@ -37,10 +37,12 @@ class RNSLeftBackButton: UIButton {
         }
     }
     
+    /// Обработчик нажатия
     func actionTouch() {
         STRouter.pop()
     }
     
+    /// Настройка ограничителей
     func prepareConstraint() {
         guard let view = superview else {
             return

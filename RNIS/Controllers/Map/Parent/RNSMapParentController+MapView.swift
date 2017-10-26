@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// Расширение для работы с картой
 extension RNSMapParentController: PGMapViewDelegate {
     
+    /// Настройка карты
     func prepareMapView() {
         view.insertSubview(mapView, at: 0)
         mapView.frame = CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height)
@@ -17,10 +19,14 @@ extension RNSMapParentController: PGMapViewDelegate {
         mapView.delegate = self
     }
     
+    /// Настройка режима карты
+    ///
+    /// - Parameter value: значение режима карты
     func setMapRegime(_ value: Int32) {
         mapView.setMapRegime(value)
     }
     
+    /// Событие обновления карты
     func onMapEvent() {
         lightButton.updateStateLightButton()
         updateZoom()
@@ -36,14 +42,25 @@ extension RNSMapParentController: PGMapViewDelegate {
         */
     }
     
+    /// Событие нажатия на карту
+    ///
+    /// - Parameter point: географические координаты места нажатия
     func onMapTouchEvent(_ point: PGGeoPoint) {
         handlerOnMapTouchEvent?(point)
     }
     
+    /// Событие длительного нажатия на карту
+    ///
+    /// - Parameter point: географические координаты места нажатия
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
         handlerOnMapLongTouchEvent?(point)
     }
     
+    /// Событие добавления оверлея на карту
+    ///
+    /// - Parameters:
+    ///   - overlay: оверлей
+    ///   - item: объект, содержащий информацию о географическом положении оверлея
     func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
         handlerOnOverlay?(overlay, item)
     }

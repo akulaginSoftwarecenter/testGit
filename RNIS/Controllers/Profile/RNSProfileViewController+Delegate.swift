@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+/// Расширение для работы с текстовыми полями
 extension RNSProfileViewController: UITextFieldDelegate {
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -20,6 +22,9 @@ extension RNSProfileViewController: UITextFieldDelegate {
         checkChange(textField)
     }
     
+    /// Обновление информации на сервере после редактирования соответствующего поля
+    ///
+    /// - Parameter textField: текстовое поля
     func checkChange(_ textField: UITextField) {
         if  textField == nameField {
             changeName()
@@ -28,6 +33,7 @@ extension RNSProfileViewController: UITextFieldDelegate {
         }
     }
     
+    /// Обновление имени в модели и на сервере
     func changeName() {
         let text = nameField.text
         if text == item?.name {
@@ -37,6 +43,7 @@ extension RNSProfileViewController: UITextFieldDelegate {
         updateItem()
     }
     
+    /// Обновление почты в модели и на сервере
     func changeEmail() {
         prepareError(nil)
         if let error = [emailField].checkValidFields {
@@ -55,6 +62,9 @@ extension RNSProfileViewController: UITextFieldDelegate {
         })
     }
     
+    /// Отправка на сервер изменений в модели профиля
+    ///
+    /// - Parameter complete: блок завершения операции отправки
     func updateItem(_ complete: EmptyBlock? = nil) {
         STRouter.showLoader()
         RNSPostUpdate(item, complete: { [weak self] item in
@@ -68,6 +78,9 @@ extension RNSProfileViewController: UITextFieldDelegate {
         })
     }
     
+    /// Показать алерт с указанным текстом
+    ///
+    /// - Parameter message: текст
     func showAlertOk(_ message: String?) {
         STRouter.showAlertOk(message)
     }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Расширение для обработки событий представления для демонстрации веб-страницы
 extension StrelkaViewController: UIWebViewDelegate {
     public func webViewDidStartLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true

@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Page Route Cell
+ Ячейка коллекции которая показывает информацию об одном из варинато маршрута
  */
-
-
 class RNSPageRouteCell: UICollectionViewCell {
     
     @IBOutlet weak var labelDurations: UILabel!

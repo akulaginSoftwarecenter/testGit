@@ -10,9 +10,8 @@ import UIKit
 import SnapKit
 
 /**
- Rightchevron Button
+ Кнопка-стрелка вправо
  */
-
 class RNSRightChevronButton: UIButton {
 
     override func awakeFromNib() {

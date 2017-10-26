@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Расширение для обработки событий пикера
 extension NotificationsSettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Dots Name
+ Представление-подпись маршрута
  */
-
-
 class RNSDotsName: BaseViewWithXIBInit {
     
     @IBOutlet var label: UILabel!

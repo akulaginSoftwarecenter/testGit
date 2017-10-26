@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- NewsViewController
+ Контроллер новостей
  */
-
 class NewsViewController: UIViewController, UIWebViewDelegate  {
 
     @IBOutlet weak var webView: UIWebView!
@@ -30,17 +29,20 @@ class NewsViewController: UIViewController, UIWebViewDelegate  {
         prepareHandlers()
     }
     
+    /// Загрузка новостной страницы
     func loadStart() {
         loaderView.showInView(self.view)
         webView.loadRequest(URLRequest(url: URL(string: host)!))
     }
     
+    /// Сброс новостной страницы
     func resetIfNeed() {
         if host != webView.request?.url?.absoluteURL.absoluteString {
             loadStart()
         }
     }
     
+    /// Настройка обработчика обновления страницы
     func prepareHandlers() {
         RNSMenuManager.handlerNewsUpdate = { [weak self] in
             self?.resetIfNeed()

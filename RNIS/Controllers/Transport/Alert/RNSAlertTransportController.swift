@@ -9,13 +9,16 @@
 import UIKit
 
 /**
- RNSAlertTransportController
+ Контроллер для демонстрации алертов внутри контроллера мой транспорт
  */
-
 class RNSAlertTransportController: UIAlertController {
 
+    /// Модель варианта маршрута
     var item: RNSRouteVariant?
     
+    /// Создание контроллера
+    ///
+    /// - Parameter item: модель варианта маршрута
     static func initController(_ item: RNSRouteVariant?) -> RNSAlertTransportController {
         let vc = RNSAlertTransportController(title: nil, message: nil, preferredStyle: .actionSheet)
         vc.prepareUI()
@@ -23,6 +26,7 @@ class RNSAlertTransportController: UIAlertController {
         return vc
     }
     
+    /// Настройка действий
     func prepareUI() {
         addAction("Переименовать") { [weak self] in
             self?.showMessageAlert()
@@ -41,6 +45,7 @@ class RNSAlertTransportController: UIAlertController {
         })
     }
     
+    /// Показать алерт
     func showMessageAlert() {
         let alert = UIAlertController(title: "Введите название", message: nil, preferredStyle: .alert)
         

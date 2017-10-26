@@ -14,25 +14,30 @@ enum RNSPetitionType: String {
 }
 
 /**
- SupportInfoViewController
+ Контроллер связи с разработчиками
  */
-
 class SupportInfoViewController: UIViewController {
 
     @IBOutlet weak var topTitle: RNSTopTitle!
+    /// Поле для отображения и редактирования почты пользователя
     @IBOutlet weak var contactField: UITextField!
+    /// Представление для ввода текста обращения
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
+    /// Кнопка отправки
     @IBOutlet weak var blackButton: RNSBlackButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    /// Тип обращения
     var type: RNSPetitionType = .feedback
     
+    /// Получение почты
     var contact: String? {
         return contactField.text
     }
     
+    /// Получение обращения
     var body: String? {
         return textView.text
     }

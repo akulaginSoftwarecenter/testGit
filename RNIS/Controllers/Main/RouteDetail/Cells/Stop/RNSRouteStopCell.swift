@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Табличная ячейка автобусной остановки
 class RNSRouteStopCell: RNSRouteParentCell {
 
     @IBOutlet weak var arrowLabel: RNSTriangle!

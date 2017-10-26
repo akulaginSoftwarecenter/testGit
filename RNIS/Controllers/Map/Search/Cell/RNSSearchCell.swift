@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Табличная ячейка для отображения результатов поиска на карте
 class RNSSearchCell: RNSBaseTableCell {
     @IBOutlet weak var imageBus: UIImageView!
     @IBOutlet weak var constraintLabel: NSLayoutConstraint!

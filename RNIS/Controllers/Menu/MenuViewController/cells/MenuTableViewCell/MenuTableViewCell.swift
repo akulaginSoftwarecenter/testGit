@@ -8,11 +8,17 @@
 
 import UIKit
 
+/// Табличная ячейка для меню
 class MenuTableViewCell: RNSBaseTableCell {
     
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
 
+    /// Обновление ячейки
+    ///
+    /// - Parameters:
+    ///   - title: Надпись
+    ///   - image: Иконка
     func updateCell(title: String!, image: UIImage!) {
         self.cellTitle.text = title
         self.cellImageView.image = image

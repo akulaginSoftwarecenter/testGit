@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- Dots White
+ Представление отображает горизонтальную последовательность точек
  */
 
 class RNSDotsWhiteHorizontal: BaseViewWithXIBInit {

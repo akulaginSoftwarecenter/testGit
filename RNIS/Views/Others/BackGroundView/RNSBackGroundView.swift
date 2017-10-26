@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- BackGround View
+ Фоновое представление общего назначения
  */
-
 class RNSBackGroundView: UIView {
 
     override func awakeFromNib() {

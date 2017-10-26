@@ -14,12 +14,13 @@ enum RNSDocsType: String {
 }
 
 /**
- DocsInfoViewController
+ Контроллер для отображения выбранного информационного раздела
  */
-
 class DocsInfoViewController: UIViewController {
 
+    /// Надпись заголовка контроллера
     @IBOutlet weak var titleLabel: UILabel!
+    /// Представление для отображения текста раздела
     @IBOutlet weak var textView: UITextView!
     var type: RNSDocsType = .userGuide
     
@@ -29,6 +30,7 @@ class DocsInfoViewController: UIViewController {
         loadText()
     }
     
+    /// Загрузка текста раздела
     func loadText() {
         titleLabel.text = type == .userGuide ? "Руководство пользователя" : "Пользовательское соглашение"
         
@@ -46,6 +48,7 @@ class DocsInfoViewController: UIViewController {
     override class var storyboardName: String {
         return "DocsInfoViewController"
     }
+    /// Событие нажатия на кнопку возврата
     @IBAction func actionBack(_ sender: Any) {
         STRouter.pop()
     }

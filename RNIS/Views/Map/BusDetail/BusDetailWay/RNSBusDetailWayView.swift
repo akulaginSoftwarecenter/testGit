@@ -10,9 +10,8 @@ import UIKit
 import RealmSwift
 
 /**
- Bus Detail Way View
+ Представление отображает схему маршрута автобуса
  */
-
 class RNSBusDetailWayView: BaseViewWithXIBInit {
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,18 +25,23 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
         }
     }
     
+    /// Модель автобуса
     var item: RNSBusTemp?{
         didSet {
             tableModel = item?.tableModel
         }
     }
 
+    /// Обновление представления
     func reloadData() {
         items = tableModel?.itemsStill
         tableView.reloadData()
         heightTableView.constant = tableView.tableViewContentSize
     }
     
+    /// Анимированное раскрывание пункта, содержащего подпункты
+    ///
+    /// - Parameter indexPath: индекс элемента в таблице
     func animateInsertStill(_ indexPath: IndexPath) {
         guard let item = self.item(indexPath) else {
             return

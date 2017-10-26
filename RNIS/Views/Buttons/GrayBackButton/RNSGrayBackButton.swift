@@ -9,13 +9,14 @@
 import UIKit
 
 /**
- Gray Back Button
+ Серая кнопка общего назначения
  */
-
 class RNSGrayBackButton: BaseViewWithXIBInit {
     
+    /// Кнопка
     @IBOutlet var button: UIButton!
         
+    /// Заголовок
     @IBInspectable var title: String? {
         didSet {
             prepareTitle()
@@ -28,6 +29,7 @@ class RNSGrayBackButton: BaseViewWithXIBInit {
         prepareTitle()
     }
     
+    /// Настройка заголовка
     func prepareTitle() {
         guard let title = title else {
             return
@@ -35,6 +37,7 @@ class RNSGrayBackButton: BaseViewWithXIBInit {
         button.setTitle(title, for: UIControlState())
     }
     
+    /// Событие нажатия
     @IBAction func action(_ sender: Any) {
         STRouter.pop()
     }

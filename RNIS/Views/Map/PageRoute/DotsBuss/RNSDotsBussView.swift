@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Dots Buss View
+ Представление показывает схему движения автобуса
  */
-
 class RNSDotsBussView: BaseViewWithXIBInit {
     
     @IBOutlet weak var constraintSmallDots: NSLayoutConstraint!

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Табличная ячейка для отображения информационного раздела
 class MainInfoTableViewCell: RNSBaseTableCell {
 
     @IBOutlet weak var title: UILabel!

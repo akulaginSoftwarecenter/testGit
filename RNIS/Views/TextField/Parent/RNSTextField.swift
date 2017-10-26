@@ -9,24 +9,27 @@
 import UIKit
 import SnapKit
 
-/**
- Text Field
- */
 
 enum STTextFieldState {
     case normal, black
 }
 
+/**
+ Собственное текстовое поле общего назначения
+ */
 class RNSTextField: UITextField {
     
+    /// Текст ошибки
     var errorText:String? {
         return nil
     }
     
+    /// Состояние валидности
     var isValid:Bool {
         return !(text?.isEmpty ?? true)
     }
     
+    /// Ключ заполнителя
     @IBInspectable var placeholderKey: String? {
         didSet {
             self.preparePlaceholder()
@@ -47,29 +50,36 @@ class RNSTextField: UITextField {
         }
     }
     
+    /// Текст заголовка
     @IBInspectable var topText: String? {
         didSet {
             topLabel.text = topText
         }
     }
+    
+    /// размер шрифта заполнителя
     @IBInspectable var placeholderFontSize: CGFloat = 24 {
         didSet {
             self.preparePlaceholder()
         }
     }
     
+    /// Шрифт заполнителя
     var placeholderFont: UIFont {
         return .cffazm(placeholderFontSize)
     }
     
+    /// Цвет заполнителя
     var placeholderColorText: UIColor {
         return .whiteAlpha50
     }
     
+    /// Состояние поля
     var stateVar: STTextFieldState = .normal
     
     var bottomConstraint: Constraint?
     
+    /// Надпись заголовка
     lazy var topLabel: UILabel = {
         let view = UILabel()
         view.font = .cffazm16
@@ -101,6 +111,11 @@ class RNSTextField: UITextField {
         
     }
     
+    /// Создание поля
+    ///
+    /// - Parameters:
+    ///   - aPlaceholderKey: ключ заполнителя
+    ///   - state: состояние поля
     convenience init(placeholderKey aPlaceholderKey: String, state: STTextFieldState = .normal) {
         self.init()
         self.placeholderKey = aPlaceholderKey
@@ -113,10 +128,16 @@ class RNSTextField: UITextField {
         prepareUI()
     }
     
+    /// Обновление представлений
     func prepareUI() {
         prepareUI( placeholderKey, state: stateVar)
     }
     
+    /// Обновление представлений
+    ///
+    /// - Parameters:
+    ///   - aPlaceholderKey: ключ заполнителя
+    ///   - state: состояние поля
     func prepareUI(_ aPlaceholderKey: String?, state: STTextFieldState = .normal) {
 
         preparePlaceholder()
@@ -133,6 +154,7 @@ class RNSTextField: UITextField {
         textAlignment = .center
     }
     
+    /// Настройка зполнителя
     func preparePlaceholder() {
         guard let placeholderKey = placeholderKey else {
             return
@@ -150,18 +172,26 @@ class RNSTextField: UITextField {
         
     }
     
+    /// Сделать поле валидным
     func setStateValid() {
         setState(true)
     }
     
+    /// Сделать поле не валидным
     func setStateNotValid() {
         setState(false)
     }
     
+    /// Настроить валидность поля
+    ///
+    /// - Parameter valid: состояние валидности
     func setState(_ valid: Bool) {
         setState(valid ? .normal : .black)
     }
     
+    /// Настроить состояние поля
+    ///
+    /// - Parameter state: состояние поля
     func setState(_ state: STTextFieldState) {
         var color: UIColor
         switch state {

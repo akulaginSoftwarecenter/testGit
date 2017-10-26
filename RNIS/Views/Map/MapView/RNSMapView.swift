@@ -9,11 +9,11 @@
 import UIKit
 
 /**
- Map View
+ Карта
  */
-
 class RNSMapView: MapView {
     
+    /// Инициализация карты
     init() {
         super.init(frame: CGRect.zero)
         startApplication()
