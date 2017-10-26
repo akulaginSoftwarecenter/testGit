@@ -11,10 +11,9 @@ import Foundation
 /**
  Класс создание вида для избранных маршрутов с элементами
  */
-
 extension RNSFavoritesBusView {
     
-    /// Фнукция загрузки элементов таблицы
+    /// Функция загрузки элементов таблицы
     func loadData() {
         loaderView.showInView(self)
         RNSPostFavoriteRouteList {[weak self] (reply, error, _) in

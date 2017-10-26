@@ -8,10 +8,6 @@
 
 import Foundation
 
-/** 
-    MissedKeys for parcable models
-    Prints all missed properties while parcing reply from API
-*/
 class APIModelMissedKeys: APIModel {
 
     override func parcingDidStart() {

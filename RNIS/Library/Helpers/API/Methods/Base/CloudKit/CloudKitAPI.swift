@@ -8,14 +8,10 @@
 
 import CloudKit
 
-/**
- Cloud Kit API
- */
+
 class CloudKitAPI: API {
     let container = CKContainer.default()
-    /**
-     public Cloud Database
-     */
+    
     var publicCloudDatabase: CKDatabase {
         return container.publicCloudDatabase
     }
