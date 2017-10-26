@@ -9,10 +9,8 @@
 import UIKit
 
 /**
- Login Field
+ Текстовое поля для ввода номера телефона
  */
-
-
 class RNSPhoneField: RNSTextField, UITextFieldDelegate {
     
     let cross = "+"
@@ -21,10 +19,14 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         return format(text).complete
     }
 
+    /// Последние 10 символов номера
     var last10:String {
         return number.last10
     }
     
+    /// Обработка текста номера телефона
+    ///
+    /// - Parameter phone: номер телефона
     func preparePhone(_ phone: String?) {
         guard let phone = phone else {
             return
@@ -33,16 +35,21 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         textFieldDidChange()
     }
     
+    /// блок изменения текста
     var handlerDidChange: EmptyBlock?
     
     override var errorText:String? {
         return isValid ? nil : "Введите корректный номер телефона"
     }
     
+    /// Номер телефона
     var number:String {
         return InputFieldsValidator.strip(text)
     }
     
+    /// Создание поля
+    ///
+    /// - Parameter phone: номер телефона
     convenience init(phone: String?) {
         self.init()
         
@@ -92,6 +99,7 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         return true
     }
     
+    /// Выполнение действий в ответ на изменение поля
     func textFieldDidChange() {
         let form = format(text)
         if form.haveFormat {
@@ -107,6 +115,10 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         handlerDidChange?()
     }
     
+    /// Валидация текста
+    ///
+    /// - Parameter string: текст
+    /// - Returns: валидный/не валидный
     func validPhoneSymbol(_ string: String) -> Bool {
         var set = CharacterSet(charactersIn: "1234567890")
         if text?.characters.count == 0 {

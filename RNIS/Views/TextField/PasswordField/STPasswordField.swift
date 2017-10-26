@@ -9,9 +9,8 @@
 import UIKit
 
 /**
- Password Field
+ Текстовое поле для ввода пароля
  */
-
 class STPasswordField: RNSTextField {
 
     override var isValid:Bool {
@@ -22,8 +21,12 @@ class STPasswordField: RNSTextField {
         return isValid ? nil : errorTextNoValid
     }
     
+    /// Текст ошибки
     @IBInspectable var errorTextNoValid: String = "Пароль должен состоять не менее чем из 3 символов"
     
+    /// Создание поля
+    ///
+    /// - Parameter placeholderKey: ключ заполнителя
     convenience init(placeholderKey: String) {
         self.init()
         

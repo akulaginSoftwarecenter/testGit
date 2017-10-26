@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Текстовое поле для ввода имени с выравниванием текста в левую сторону
 class RNSNameFieldLeft: RNSNameField {
 
     override func awakeFromNib() {

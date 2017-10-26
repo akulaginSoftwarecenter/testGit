@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- Текстовое поле для ввода логина
+ Текстовое поле для ввода имени
  */
 class RNSNameField: RNSTextField, UITextFieldDelegate {
 
@@ -55,7 +55,7 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
     /// Проверка текста на содержание специальных символов
     ///
     /// - Parameter text: текст
-    /// - Returns: <#return value description#>
+    /// - Returns: булевое значение - содержит/не содержит
     func validateSpecialCharactor(_ text: String?) -> Bool {
         let pred = NSPredicate(format: "SELF MATCHES %@", "[А-Я а-яA-Za-z0-9^]*")
         return pred.evaluate(with:text)
