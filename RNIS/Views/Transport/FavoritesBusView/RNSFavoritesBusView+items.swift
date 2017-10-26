@@ -9,11 +9,12 @@
 import Foundation
 
 /**
- Favorites Bus View + items
+ Класс создание вида для избранных маршрутов с элементами
  */
 
 extension RNSFavoritesBusView {
     
+    /// Фнукция загрузки элементов таблицы
     func loadData() {
         loaderView.showInView(self)
         RNSPostFavoriteRouteList {[weak self] (reply, error, _) in
@@ -22,6 +23,7 @@ extension RNSFavoritesBusView {
         }
     }
     
+    /// Функция подготовки секций таблицы
     func prepareSections(_ items: [RNSFavoriteStopPoint]?) {
         sections = [TableSection]()
         let beside = items?.filter{ $0.isBeside }
@@ -38,6 +40,7 @@ extension RNSFavoritesBusView {
         tableView.reloadData()
     }
     
+    /// Функция отображения остановок ТС
     func showStopPoint(_ item: RNSFavoriteStopPoint?) {
         RNSMapManager.showStopPoint(item?.dict)
     }
