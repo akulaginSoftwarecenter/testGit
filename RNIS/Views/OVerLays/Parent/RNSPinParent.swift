@@ -13,8 +13,12 @@ import UIKit
  */
 class RNSPinParent: PGOverlay {
     
+    /// Модель, которая конфигурирует оверлей (по сути содержит только географические координаты)
     lazy var overlayItem = PGOverlayItem()
 
+    /// Создание и добавление модели в оверлей
+    ///
+    /// - Parameter point: географические координаты положения оверлея на карте
     func preparePoint(_ point: PGGeoPoint) {
         items().add(overlayItem)
         addOnMap()
@@ -22,10 +26,12 @@ class RNSPinParent: PGOverlay {
         populate()
     }
     
+    /// Добавить оверлей на карту
     func addOnMap() {
         RNSMapManager.addOverlay(self)
     }
     
+    /// Убрать оверлей с карты
     func remove() {
         RNSMapManager.removeOverlay(self)
     }

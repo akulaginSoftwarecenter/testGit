@@ -9,19 +9,23 @@
 import UIKit
 
 
-/// Базовая табличная ячейка для отображения информации о объектах на карте
+/// Базовая табличная ячейка для создания схемы маршрута
 class RNSRouteParentCell: RNSBaseTableCell {
 
+    /// Показать прогресс движения
     var showMove = false
     
+    /// Модель схемы маршрута
     var item: RNSRouteTableItem? {
         didSet {
             prepareUI()
         }
     }
     
+    /// Цвет пройденной части маршрута
     let doneColor = UIColor.A3423C
     
+    /// Обновление представлений
     func prepareUI() {
         
         if showMove {
@@ -33,6 +37,11 @@ class RNSRouteParentCell: RNSBaseTableCell {
     
     }
     
+    /// Настройка модели маршрута
+    ///
+    /// - Parameters:
+    ///   - item: модель
+    ///   - showMove: показать прогресс движения
     func prepareItem(_ item: RNSRouteTableItem?, showMove: Bool = false) {
         self.showMove = showMove
         self.item = item

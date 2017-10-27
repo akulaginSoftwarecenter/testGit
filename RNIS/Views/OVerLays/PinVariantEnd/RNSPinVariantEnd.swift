@@ -13,6 +13,9 @@ import UIKit
  */
 class RNSPinVariantEnd: RNSPinParent {
     
+    /// Создание пина
+    ///
+    /// - Parameter item: точка маршрута
     @discardableResult convenience init(_ item: RNSRoutePoint?) {
         self.init()
         

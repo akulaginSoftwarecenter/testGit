@@ -25,6 +25,7 @@ class RNSPinBusStop: RNSPinItem {
         prepareCurrent()
     }
     
+    /// Настройка иконки пина
     func prepareCurrent() {
         let current = item?.uuid == RNSBusStopManager.currentStopUuid
         let image = current ? RNSImageFactory.bus_stop_current : RNSImageFactory.bus_stop

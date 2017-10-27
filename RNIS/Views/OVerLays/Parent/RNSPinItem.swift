@@ -28,10 +28,12 @@ class RNSPinItem: RNSPinParent {
         prepareHandlers()
     }
     
+    /// Настройка иконки оверлея
     func prepareImage() {
         
     }
     
+    /// Настройка модели оверлея
     func preparePoint() {
         guard let point = item?.point else {
             return
@@ -39,6 +41,7 @@ class RNSPinItem: RNSPinParent {
         preparePoint(point)
     }
     
+    /// Настройка блока удаления оверлея
     func prepareHandlers() {
         item?.handlerRemove = { [weak self] in
             self?.remove()

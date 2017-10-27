@@ -422,13 +422,6 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Bus/RNSRouteBusCell.swift",
-      "line": 17,
-      "symbol": "RNSRouteBusCell.prepareUI()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Bus/RNSRouteBusCell.swift",
       "line": 23,
       "symbol": "RNSRouteBusCell.prepareDone()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -436,49 +429,14 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift",
-      "line": 15,
-      "symbol": "RNSRouteParentCell.showMove",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift",
-      "line": 17,
-      "symbol": "RNSRouteParentCell.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift",
-      "line": 23,
-      "symbol": "RNSRouteParentCell.doneColor",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift",
-      "line": 25,
-      "symbol": "RNSRouteParentCell.prepareUI()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift",
-      "line": 32,
+      "line": 36,
       "symbol": "RNSRouteParentCell.prepareDone()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift",
-      "line": 36,
-      "symbol": "RNSRouteParentCell.prepareItem(_:showMove:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Parent/RNSRouteParentCel.swift",
-      "line": 41,
+      "line": 50,
       "symbol": "RNSRouteParentCell.doneMove",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -555,13 +513,6 @@
     },
     {
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Stop/RNSRouteStopCell.swift",
-      "line": 26,
-      "symbol": "RNSRouteStopCell.prepareUI()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Stop/RNSRouteStopCell.swift",
       "line": 35,
       "symbol": "RNSRouteStopCell.prepareTypeRoute()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -585,13 +536,6 @@
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Stop/RNSRouteStopCell.swift",
       "line": 58,
       "symbol": "RNSRouteStopCell.prepareDone()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Controllers/Main/RouteDetail/Cells/Total/RNSRouteTotalCell.swift",
-      "line": 17,
-      "symbol": "RNSRouteTotalCell.prepareUI()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6766,209 +6710,6 @@
       "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/MenuBarItem/RNSMenuBarItem.swift",
       "line": 16,
       "symbol": "RNSMenuBarItem.awakeFromNib()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/Parent/RNSPinItem.swift",
-      "line": 31,
-      "symbol": "RNSPinItem.prepareImage()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/Parent/RNSPinItem.swift",
-      "line": 35,
-      "symbol": "RNSPinItem.preparePoint()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/Parent/RNSPinItem.swift",
-      "line": 42,
-      "symbol": "RNSPinItem.prepareHandlers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/Parent/RNSPinParent.swift",
-      "line": 16,
-      "symbol": "RNSPinParent.overlayItem",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/Parent/RNSPinParent.swift",
-      "line": 18,
-      "symbol": "RNSPinParent.preparePoint(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/Parent/RNSPinParent.swift",
-      "line": 25,
-      "symbol": "RNSPinParent.addOnMap()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/Parent/RNSPinParent.swift",
-      "line": 29,
-      "symbol": "RNSPinParent.remove()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinAddress/RNSPinAddress.swift",
-      "line": 16,
-      "symbol": "RNSPinAddress.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBuild/RNSPinBuild.swift",
-      "line": 16,
-      "symbol": "RNSPinBuild.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBuild/RNSPinBuild.swift",
-      "line": 24,
-      "symbol": "RNSPinBuild.prepareHandlers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBus/RNSPinBus.swift",
-      "line": 16,
-      "symbol": "RNSPinBus.prepareImage()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBus/RNSPinBus.swift",
-      "line": 30,
-      "symbol": "RNSPinBus.prepareIcon(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBus/RNSPinBus.swift",
-      "line": 34,
-      "symbol": "RNSPinBus.prepareHandlers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBus/RNSPinBus.swift",
-      "line": 41,
-      "symbol": "RNSPinBus.updateLocation()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBus/RNSPinBusStop.swift",
-      "line": 16,
-      "symbol": "RNSPinBusStop.prepareHandlers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBus/RNSPinBusStop.swift",
-      "line": 24,
-      "symbol": "RNSPinBusStop.prepareImage()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinBus/RNSPinBusStop.swift",
-      "line": 28,
-      "symbol": "RNSPinBusStop.prepareCurrent()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinDuration/RNSPinDuration.swift",
-      "line": 15,
-      "symbol": "RNSPinDuration.item",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinDuration/RNSPinDuration.swift",
-      "line": 17,
-      "symbol": "RNSPinDuration.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinDuration/RNSPinDuration.swift",
-      "line": 30,
-      "symbol": "RNSPinDuration.prepareHandlers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinDuration/RNSPinDuration.swift",
-      "line": 40,
-      "symbol": "RNSPinDuration.updateIcon()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinMyLocation/RNSPinMyLocation.swift",
-      "line": 16,
-      "symbol": "RNSPinMyLocation.point",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinMyLocation/RNSPinMyLocation.swift",
-      "line": 20,
-      "symbol": "RNSPinMyLocation.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinMyLocation/RNSPinMyLocation.swift",
-      "line": 28,
-      "symbol": "RNSPinMyLocation.prepareHandlers()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinMyLocation/RNSPinMyLocation.swift",
-      "line": 34,
-      "symbol": "RNSPinMyLocation.updateLocation()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/PinVariantEnd/RNSPinVariantEnd.swift",
-      "line": 16,
-      "symbol": "RNSPinVariantEnd.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/RNSPinVariantBus/RNSPinVariantBus.swift",
-      "line": 16,
-      "symbol": "RNSPinVariantBus.bus",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/RNSPinVariantBus/RNSPinVariantBus.swift",
-      "line": 18,
-      "symbol": "RNSPinVariantBus.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/admin/Desktop/rnis_github/RNIS/Views/OVerLays/RNSPinVariantBus/RNSPinVariantBus.swift",
-      "line": 32,
-      "symbol": "RNSPinVariantBus.prepareHandlers()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

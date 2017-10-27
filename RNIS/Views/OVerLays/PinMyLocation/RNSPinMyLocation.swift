@@ -13,10 +13,12 @@ import UIKit
  */
 class RNSPinMyLocation: RNSPinParent {
     
+    /// Географические координаты пина
     var point: PGGeoPoint {
         return RNSLocationManager.point
     }
     
+    /// Создание пина
     override init() {
         super.init()
 
@@ -25,12 +27,14 @@ class RNSPinMyLocation: RNSPinParent {
         prepareHandlers()
     }
     
+    /// Привязка внешнего обработчика события "показать меня на карте" к обновлению положения пина
     func prepareHandlers() {
         RNSLocationManager.handlerMyLocation = { [weak self] in
             self?.updateLocation()
         }
     }
     
+    /// Обновление положения пина
     func updateLocation() {
         overlayItem.geoPoint = point
         populate()

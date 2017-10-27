@@ -27,6 +27,9 @@ class RNSPinBus: RNSPinItem {
         }
     }
     
+    /// Установка иконки в оверлей
+    ///
+    /// - Parameter image: иконка
     func prepareIcon(_ image: UIImage) {
         setBitmap(image, xOffset: 0.05, yOffset: -1.0, isPlain: false, sizeInMeters: 15)
     }
@@ -38,6 +41,7 @@ class RNSPinBus: RNSPinItem {
         }
     }
     
+    /// Обновление положения пина на карте
     func updateLocation() {
         guard let point = item?.point else {
             return

@@ -13,8 +13,12 @@ import UIKit
  */
 class RNSPinVariantBus: RNSPinParent {
     
+    /// Модель маршрута автобуса
     var bus: RNSBusRouteTemp?
     
+    /// Создание пина
+    ///
+    /// - Parameter bus: модель маршрута автобуса
     @discardableResult convenience init(_ bus: RNSBusRouteTemp?) {
         self.init()
         
@@ -29,6 +33,7 @@ class RNSPinVariantBus: RNSPinParent {
         prepareHandlers()
     }
     
+    /// Привязка удаления маршрута к удалению пина
     func prepareHandlers() {
         bus?.handlerRemove = { [weak self] in
              self?.remove()

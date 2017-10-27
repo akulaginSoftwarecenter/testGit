@@ -13,6 +13,9 @@ import UIKit
  */
 class RNSPinBuild: RNSPinParent {
     
+    /// Создание пина
+    ///
+    /// - Parameter point: географические координаты
     @discardableResult convenience init(_ point: PGGeoPoint) {
         self.init()
         
@@ -21,6 +24,7 @@ class RNSPinBuild: RNSPinParent {
         prepareHandlers()
     }
     
+    /// Настройка обработчиков событий пина
     func prepareHandlers() {
         RNSMapManager.removeOldPinBuild()
         RNSMapManager.handlerRemovePinBuild = { [weak self] in

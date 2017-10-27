@@ -12,8 +12,13 @@ import UIKit
  Пин продолжительности следования
  */
 class RNSPinDuration: RNSPinParent {
+    
+    /// Модель продолжительности следования
     var item: RNSDurationItem?
     
+    /// Создание пина
+    ///
+    /// - Parameter item: модель продолжительности следования
     @discardableResult convenience init(_ item: RNSDurationItem?) {
         self.init()
         
@@ -27,6 +32,7 @@ class RNSPinDuration: RNSPinParent {
         prepareHandlers()
     }
     
+    /// Настройка обработчиков событий пина
     func prepareHandlers() {
         item?.handlerRemove = { [weak self] in
             self?.remove()
@@ -37,6 +43,7 @@ class RNSPinDuration: RNSPinParent {
         }
     }
     
+    /// Обновление иконки
     func updateIcon() {
         let view = RNSNoteRoute(durationMinute: item?.durationMinute, distance: item?.distance, type: .up)
         setBitmap(view.asImage, xOffset: 0, yOffset: 1.0, isPlain: false, sizeInMeters: 50)

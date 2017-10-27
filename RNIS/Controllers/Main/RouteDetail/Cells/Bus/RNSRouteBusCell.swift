@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Табличная ячейка элемента маршрута автобуса
+/// Базовая табличная ячейка элемента маршрута автобуса
 class RNSRouteBusCell: RNSRouteParentCell {
 
     @IBOutlet weak var line: UIView!

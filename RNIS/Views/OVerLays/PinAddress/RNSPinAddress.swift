@@ -13,6 +13,9 @@ import UIKit
  */
 class RNSPinAddress: RNSPinParent {
     
+    /// Создание пина
+    ///
+    /// - Parameter point: географические координаты
     convenience init(_ point: PGGeoPoint) {
         self.init()
         
