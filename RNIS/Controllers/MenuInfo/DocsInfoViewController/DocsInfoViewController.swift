@@ -19,9 +19,10 @@ enum RNSDocsType: String {
 class DocsInfoViewController: UIViewController {
 
     /// Надпись заголовка контроллера
+    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var titleLabel: UILabel!
     /// Представление для отображения текста раздела
-    @IBOutlet weak var textView: UITextView!
+    //@IBOutlet weak var textView: UITextView!
     var type: RNSDocsType = .userGuide
     
     override func viewDidLoad() {
@@ -42,7 +43,11 @@ class DocsInfoViewController: UIViewController {
     }
     
     func prepareText(_ text: String?) {
-        textView.text = text
+        guard let text = text else {
+            return
+        }
+        let page = String(format: "%@%@%@", "<div style=\"color:#ffffff\">", text, "</div>")
+        webView.loadHTMLString(page, baseURL: nil)
     }
     
     override class var storyboardName: String {
