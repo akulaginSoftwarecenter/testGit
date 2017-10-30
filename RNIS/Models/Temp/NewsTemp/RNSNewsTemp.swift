@@ -19,6 +19,7 @@ class RNSNewsTemp: RNISMappableBase {
     var timestamp: String?
     var is_active: Bool?
     var is_pinned: Bool?
+    var anounce: String?
     
     override func mapping(map: Map) {
         uuid <- map["uuid"]
@@ -28,5 +29,6 @@ class RNSNewsTemp: RNISMappableBase {
         timestamp <- map["timestamp"]
         is_active <- map["is_active"]
         is_pinned <- map["is_pinned"]
+        anounce <- map["anounce"]
     }
 }

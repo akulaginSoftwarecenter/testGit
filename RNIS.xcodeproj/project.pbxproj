@@ -72,6 +72,9 @@
 		831E7A791FA709480030B9D0 /* RNSPostNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E7A781FA709480030B9D0 /* RNSPostNews.swift */; };
 		831E7A7C1FA70BAF0030B9D0 /* RNSNewsTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E7A7B1FA70BAF0030B9D0 /* RNSNewsTemp.swift */; };
 		831E7A7E1FA70F090030B9D0 /* NewsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E7A7D1FA70F090030B9D0 /* NewsViewController+TableView.swift */; };
+		831E7A811FA714470030B9D0 /* RNSNewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E7A801FA714470030B9D0 /* RNSNewsDetailController.swift */; };
+		831E7A831FA714570030B9D0 /* RNSNewsDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831E7A821FA714570030B9D0 /* RNSNewsDetailController.storyboard */; };
+		831E7A871FA71EB20030B9D0 /* RNSNewsDetailController+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E7A861FA71EB20030B9D0 /* RNSNewsDetailController+WebView.swift */; };
 		831FB5691F7CFAAC00A915FA /* RNSPostFavoriteRouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FB5681F7CFAAC00A915FA /* RNSPostFavoriteRouteList.swift */; };
 		831FB56C1F7D026B00A915FA /* RNSFavoriteRouteListPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FB56B1F7D026B00A915FA /* RNSFavoriteRouteListPayload.swift */; };
 		831FB56F1F7D02FC00A915FA /* RNSFavoriteStopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FB56E1F7D02FC00A915FA /* RNSFavoriteStopPoint.swift */; };
@@ -699,6 +702,9 @@
 		831E7A781FA709480030B9D0 /* RNSPostNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostNews.swift; path = POST/News/RNSPostNews.swift; sourceTree = "<group>"; };
 		831E7A7B1FA70BAF0030B9D0 /* RNSNewsTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSNewsTemp.swift; path = Models/Temp/NewsTemp/RNSNewsTemp.swift; sourceTree = "<group>"; };
 		831E7A7D1FA70F090030B9D0 /* NewsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+TableView.swift"; sourceTree = "<group>"; };
+		831E7A801FA714470030B9D0 /* RNSNewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSNewsDetailController.swift; sourceTree = "<group>"; };
+		831E7A821FA714570030B9D0 /* RNSNewsDetailController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RNSNewsDetailController.storyboard; sourceTree = "<group>"; };
+		831E7A861FA71EB20030B9D0 /* RNSNewsDetailController+WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSNewsDetailController+WebView.swift"; sourceTree = "<group>"; };
 		831FB5681F7CFAAC00A915FA /* RNSPostFavoriteRouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSPostFavoriteRouteList.swift; path = POST/FavoriteRouteList/RNSPostFavoriteRouteList.swift; sourceTree = "<group>"; };
 		831FB56B1F7D026B00A915FA /* RNSFavoriteRouteListPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSFavoriteRouteListPayload.swift; path = Models/Temp/Reply/FavoriteRouteListPayload/RNSFavoriteRouteListPayload.swift; sourceTree = "<group>"; };
 		831FB56E1F7D02FC00A915FA /* RNSFavoriteStopPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSFavoriteStopPoint.swift; path = Models/Temp/Reply/FavoriteRouteListPayload/RNSFavoriteStopPoint.swift; sourceTree = "<group>"; };
@@ -1649,6 +1655,16 @@
 			name = News;
 			sourceTree = "<group>";
 		};
+		831E7A7F1FA714190030B9D0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				831E7A801FA714470030B9D0 /* RNSNewsDetailController.swift */,
+				831E7A861FA71EB20030B9D0 /* RNSNewsDetailController+WebView.swift */,
+				831E7A821FA714570030B9D0 /* RNSNewsDetailController.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		831FB5671F7CFA5900A915FA /* FavoriteRouteList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1763,6 +1779,7 @@
 		83204B511F59225A0033ACA1 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				831E7A7F1FA714190030B9D0 /* Detail */,
 				832BEEFB1FA6F53900C9A0A7 /* Cell */,
 				83204B521F59225A0033ACA1 /* NewsViewController.swift */,
 				831E7A7D1FA70F090030B9D0 /* NewsViewController+TableView.swift */,
@@ -4655,6 +4672,7 @@
 				83A53F881F4A975900938969 /* RNSPageRouteView.xib in Resources */,
 				8356BE581F3D679F00560623 /* RNSBusDetailWayCell.xib in Resources */,
 				83A5C6F51F57F504006C8D62 /* RNSRouteStopCell.xib in Resources */,
+				831E7A831FA714570030B9D0 /* RNSNewsDetailController.storyboard in Resources */,
 				83AFEB521F6A330000C2A251 /* RNSFavoritesBusView.xib in Resources */,
 				83D492151F722E3400A32C4B /* NotificationsSettingsViewController.storyboard in Resources */,
 				83D7138A1F5D0EB1005206C5 /* RNSDotsBussVertical.xib in Resources */,
@@ -5051,6 +5069,7 @@
 				83D492131F72226400A32C4B /* StrelkaViewController+Delegate.swift in Sources */,
 				835D85371F4FC82F00B83EB2 /* RNSDotRun.swift in Sources */,
 				83F555341F5562B300D1221C /* RNSRouteStillCell.swift in Sources */,
+				831E7A811FA714470030B9D0 /* RNSNewsDetailController.swift in Sources */,
 				832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,
 				830802B01F7A5BD6008B496C /* RNSRegistrationNameController+KeyBoard.swift in Sources */,
 				8362CE2B1F6A8EDF00BE912D /* RNSBusStopManager+BD.swift in Sources */,
@@ -5119,6 +5138,7 @@
 				836277C71F3804B8009FB712 /* RNSChangePhoneController.swift in Sources */,
 				83204B5E1F5924800033ACA1 /* StrelkaViewController.swift in Sources */,
 				836078411F739DAA003F1F3A /* RNSMoveDetailController+Flag.swift in Sources */,
+				831E7A871FA71EB20030B9D0 /* RNSNewsDetailController+WebView.swift in Sources */,
 				83A53F831F4A918200938969 /* RNSPageRouteController.swift in Sources */,
 				838EA02A1F53B06100E9BF20 /* RNSRouteVariant+Var.swift in Sources */,
 				83204B411F591CB70033ACA1 /* TransportViewController.swift in Sources */,

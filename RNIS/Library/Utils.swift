@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 typealias EmptyBlock = () -> Void
 typealias AliasDictionary = [String: Any]
@@ -27,6 +28,7 @@ typealias AliasRegisterPayloadBlock = (RNSUserPayload?) -> ()
 typealias AliasPostRegister = RNSRequestReply<RNSUserPayload,RNSRegisterError>
 typealias AliasAddressComplete = ((RNSDutyAddressTemp?) ->())
 typealias AliasPair = (first: RNSRoutePoint?, last: RNSRoutePoint?)
+typealias AliasBlockImage = (UIImage) -> ()
 
 func NSLoc(_ key: String?) -> String {
     guard let key = key else {
@@ -98,5 +100,17 @@ class Utils {
             }
         }
         return nil
+    }
+    
+    static func loadImage(url: String?, compelete: AliasBlockImage? ) {
+        guard let url = url else {
+            return
+        }
+        Alamofire.request(url).response { response in
+            if let data = response.data,
+                let image = UIImage(data: data) {
+                compelete?(image)
+            }
+        }
     }
 }

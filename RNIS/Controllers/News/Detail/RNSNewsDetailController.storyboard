@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ZS-ws-zKX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--News Detail Controller-->
+        <scene sceneID="DeG-V9-uPT">
+            <objects>
+                <viewController id="2ZS-ws-zKX" customClass="RNSNewsDetailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i7v-Q7-C1c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="tiw-Dw-SAZ">
+                                <rect key="frame" x="0.0" y="84" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Ou4-Ta-e13"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Новость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gbm-1f-BwN" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="160" y="54" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xio-Wf-ugi" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="91" y="49" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-NG-Jir">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="9b7-V6-vKJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="2ZS-ws-zKX" id="G2e-6d-4sG"/>
+                                </connections>
+                            </webView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="xtP-Wy-cfY">
+                                <rect key="frame" x="0.0" y="-51" width="375" height="135"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rff-OG-Lxa">
+                                <rect key="frame" x="26" y="55" width="323" height="19"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q7d-er-O0l" firstAttribute="trailing" secondItem="tiw-Dw-SAZ" secondAttribute="trailing" id="7rx-ph-LiF"/>
+                            <constraint firstItem="tiw-Dw-SAZ" firstAttribute="top" secondItem="i7v-Q7-C1c" secondAttribute="top" constant="84" id="8gO-la-QnB"/>
+                            <constraint firstItem="Rff-OG-Lxa" firstAttribute="bottom" secondItem="tiw-Dw-SAZ" secondAttribute="bottom" constant="-10" id="HgL-JG-pyz"/>
+                            <constraint firstItem="Q7d-er-O0l" firstAttribute="trailing" secondItem="G5U-NG-Jir" secondAttribute="trailing" id="Ms8-ri-XaO"/>
+                            <constraint firstAttribute="bottom" secondItem="G5U-NG-Jir" secondAttribute="bottom" id="SnD-WI-Dtk"/>
+                            <constraint firstItem="G5U-NG-Jir" firstAttribute="leading" secondItem="Q7d-er-O0l" secondAttribute="leading" id="UjC-lk-2G8"/>
+                            <constraint firstItem="Rff-OG-Lxa" firstAttribute="trailing" secondItem="tiw-Dw-SAZ" secondAttribute="trailing" constant="-26" id="feS-ul-naY"/>
+                            <constraint firstItem="xtP-Wy-cfY" firstAttribute="trailing" secondItem="tiw-Dw-SAZ" secondAttribute="trailing" id="m3F-dL-8l3"/>
+                            <constraint firstItem="xtP-Wy-cfY" firstAttribute="leading" secondItem="tiw-Dw-SAZ" secondAttribute="leading" id="nzR-PE-UEb"/>
+                            <constraint firstItem="G5U-NG-Jir" firstAttribute="top" secondItem="tiw-Dw-SAZ" secondAttribute="bottom" id="pX5-iv-dXb"/>
+                            <constraint firstItem="xtP-Wy-cfY" firstAttribute="bottom" secondItem="tiw-Dw-SAZ" secondAttribute="bottom" id="pl6-rk-w4o"/>
+                            <constraint firstItem="tiw-Dw-SAZ" firstAttribute="leading" secondItem="Q7d-er-O0l" secondAttribute="leading" id="qPj-fD-axa"/>
+                            <constraint firstItem="Rff-OG-Lxa" firstAttribute="leading" secondItem="tiw-Dw-SAZ" secondAttribute="leading" constant="26" id="s2i-ZU-1UI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q7d-er-O0l"/>
+                    </view>
+                    <connections>
+                        <outlet property="anonceLabel" destination="Rff-OG-Lxa" id="ayc-4e-lF2"/>
+                        <outlet property="heightImageView" destination="Ou4-Ta-e13" id="Hv4-n2-9ZI"/>
+                        <outlet property="heightWebView" destination="9b7-V6-vKJ" id="JIx-yR-33o"/>
+                        <outlet property="imageView" destination="tiw-Dw-SAZ" id="BiN-aB-usu"/>
+                        <outlet property="rectangleView" destination="xtP-Wy-cfY" id="I3v-Do-pfj"/>
+                        <outlet property="webView" destination="G5U-NG-Jir" id="eGj-Np-hT7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3D-1p-Zik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle 2" width="375" height="135"/>
+    </resources>
+</document>

@@ -29,9 +29,11 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? RNSNewsCell,
-            let item = cell.item else {
-            return
+        guard let item = item(indexPath) else {
+           return
         }
+        
+        let vc = RNSNewsDetailController.initController(item)
+        vc?.pushAnimated()
     }
 }
