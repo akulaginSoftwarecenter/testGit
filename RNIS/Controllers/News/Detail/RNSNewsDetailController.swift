@@ -23,7 +23,7 @@ class RNSNewsDetailController: UIViewController {
     static func initController(_ item: RNSNewsTemp?) -> UIViewController? {
         let vc = RNSNewsDetailController.initialController as? RNSNewsDetailController
         vc?.item = item
-        return STRouter.imageScrollContainer(vc)
+        return STRouter.imageContainer(vc)
     }
 
     override func viewDidLoad() {
