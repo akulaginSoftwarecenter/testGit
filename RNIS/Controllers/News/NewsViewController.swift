@@ -11,10 +11,10 @@ import UIKit
 /**
  Контроллер новостей
  */
-class NewsViewController: UIViewController, UIWebViewDelegate  {
-
-    @IBOutlet weak var webView: UIWebView!
-    let host = "https://dev-rnisportal.regeora.ru/"
+class NewsViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    var items: [RNSNewsTemp]?
     
     lazy var loaderView: LoaderView = {
         let view = LoaderView()
@@ -25,36 +25,19 @@ class NewsViewController: UIViewController, UIWebViewDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadStart()
-        prepareHandlers()
+        loadItems()
     }
     
-    /// Загрузка новостной страницы
-    func loadStart() {
-        loaderView.showInView(self.view)
-        webView.loadRequest(URLRequest(url: URL(string: host)!))
-    }
-    
-    /// Сброс новостной страницы
-    func resetIfNeed() {
-        if host != webView.request?.url?.absoluteURL.absoluteString {
-            loadStart()
+    func loadItems() {
+        loaderView.showInView(view)
+        RNSPostNews { [weak self] items in
+           self?.prepareItems(items)
         }
     }
     
-    /// Настройка обработчика обновления страницы
-    func prepareHandlers() {
-        RNSMenuManager.handlerNewsUpdate = { [weak self] in
-            self?.resetIfNeed()
-        }
-    }
-    
-    public func webViewDidStartLoad(_ webView: UIWebView) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    public func webViewDidFinishLoad(_ webView: UIWebView) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    func prepareItems(_ items: [RNSNewsTemp]?) {
+        self.items = items
+        tableView.reloadData()
         loaderView.remove()
     }
 

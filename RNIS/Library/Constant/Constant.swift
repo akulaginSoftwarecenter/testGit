@@ -30,4 +30,5 @@ let kUpdateTime = "updateTime"
 let kUpdateLocation = "updateLocation"
 let kServerNotAviable = "Сервер недоступен"
 let kName = "name"
+let kMeta = "meta"
 
