@@ -17,12 +17,13 @@ class RNSTimeManager: NSObject {
     let distance = 17
     @discardableResult override init() {
         super.init()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
     /// Функция обновления таймера
     @objc func updateTime() {
         NotificationCenter.postTime()
+        RNSBusManager.updateServer()  //Временное обновленее до введении сокетов
     }
     
     deinit {
