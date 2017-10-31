@@ -66,7 +66,18 @@ extension RNSMapParentController: PGMapViewDelegate {
     }
     
     func onPoiMarker(_ info: String!) {
-        print("onPoiMarker",info)
+        
+    }
+    
+    func onLocationChanged(_ newLocationData: [AnyHashable : Any]!) {
+        guard let lat = (newLocationData["lat"] as AnyObject).doubleValue ,
+            let lon = (newLocationData["lon"] as AnyObject).doubleValue   else {
+            return
+        }
+        var point = PGGeoPoint()
+        point.latitude = lat/100000
+        point.longitude = lon/100000
+        RNSMapManager.pinMyLocation.updateLocation(point)
     }
     
     func onGeoblogMarker(_ eventid: Int32) {

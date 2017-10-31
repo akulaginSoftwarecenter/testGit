@@ -24,6 +24,10 @@ class RNSMapManager: NSObject {
     var mapView: MapView = RNSMapView()
     
     /// Создание экземпляра местоположения маркера
+    static var pinMyLocation: RNSPinMyLocation {
+        return shared.pinMyLocation
+    }
+    
     lazy var pinMyLocation: RNSPinMyLocation = {
         return RNSPinMyLocation()
     }()

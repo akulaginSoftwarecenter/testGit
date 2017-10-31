@@ -60,6 +60,7 @@ class RNSMapParentController: UIViewController {
         view.defaultAlpha = 0.2
         return view
     }()
+    
     private var animator: MapButtonsAnimator!
     
     override func viewDidLoad() {
@@ -68,6 +69,7 @@ class RNSMapParentController: UIViewController {
         prepareTargetIcon()
         updateZoom()
         prepareAnimator()
+        _ = RNSMapManager.pinMyLocation
     }
     
     /// Настройка аниматора

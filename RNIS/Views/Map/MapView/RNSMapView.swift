@@ -22,7 +22,7 @@ class RNSMapView: MapView {
         setMapRegime(1)
         setMyLocationEnabled(false)
         enableCompass()
-        //myLocationOverlay().setBitmap(#imageLiteral(resourceName: "ic_userDirection"), xOffset: 0, yOffset: 0)
+        myLocationOverlay().setBitmap(#imageLiteral(resourceName: "ic_userDirection"), xOffset: 0, yOffset: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {

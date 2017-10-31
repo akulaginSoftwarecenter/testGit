@@ -30,7 +30,7 @@ extension RNSLocationManager: CLLocationManagerDelegate {
     /// Метод обновления местоположения на карте
     static func updateLocation() {
         handlerMyLocation?()
-        RNSMapManager.mapView.setMockLocation(RNSLocationManager.point)
+        //RNSMapManager.mapView.setMockLocation(RNSLocationManager.point)
         NotificationCenter.postLocation()
     }
 }

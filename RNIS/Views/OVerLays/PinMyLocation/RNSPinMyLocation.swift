@@ -12,30 +12,19 @@ import UIKit
  Пин пользователя
  */
 class RNSPinMyLocation: RNSPinParent {
-    
-    /// Географические координаты пина
-    var point: PGGeoPoint {
-        return RNSLocationManager.point
-    }
-    
+
     /// Создание пина
     override init() {
         super.init()
 
         setBitmap(#imageLiteral(resourceName: "ic_userLocation"), xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 50)
-        preparePoint(point)
-        prepareHandlers()
+        preparePoint(RNSLocationManager.point)
     }
     
-    /// Привязка внешнего обработчика события "показать меня на карте" к обновлению положения пина
-    func prepareHandlers() {
-        RNSLocationManager.handlerMyLocation = { [weak self] in
-            self?.updateLocation()
+    func updateLocation(_ point: PGGeoPoint?) {
+        guard let point = point else {
+            return
         }
-    }
-    
-    /// Обновление положения пина
-    func updateLocation() {
         overlayItem.geoPoint = point
         populate()
     }
