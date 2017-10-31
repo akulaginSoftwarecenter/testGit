@@ -32,8 +32,10 @@ class STContainerViewController: UIViewController {
     var enterViewController: ContainerProtocol?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         enterViewController = segue.destination as? ContainerProtocol
         prepareEnterViewController()
+        segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
     }
     
     /// Подготовление внутреннего контроллера к присоединению

@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,6 +67,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSZ-6f-o0L">
                                 <rect key="frame" x="0.0" y="294" width="375" height="245"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="100" id="kze-UQ-l1U"/>
+                                </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-ko-thU" customClass="RNSTextField" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="386.5" width="315" height="30"/>
@@ -120,6 +123,7 @@
                             <constraint firstAttribute="trailing" secondItem="aC6-ko-thU" secondAttribute="trailing" constant="30" id="kdW-Jq-Cy2"/>
                             <constraint firstItem="X04-Uo-eTT" firstAttribute="top" secondItem="Yts-gU-Hrs" secondAttribute="top" constant="190" id="kip-1Z-RaG"/>
                             <constraint firstAttribute="trailing" secondItem="2O4-XA-ta0" secondAttribute="trailing" constant="30" id="niT-J7-9DH"/>
+                            <constraint firstItem="BZR-v5-eCf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yXV-N5-WXX" secondAttribute="bottom" constant="83" id="p5K-sy-OBM"/>
                             <constraint firstItem="BZR-v5-eCf" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" id="sSf-bB-P3k"/>
                             <constraint firstItem="X04-Uo-eTT" firstAttribute="leading" secondItem="Yts-gU-Hrs" secondAttribute="leading" constant="30" id="t5O-8y-CKp"/>
                             <constraint firstAttribute="trailing" secondItem="yXV-N5-WXX" secondAttribute="trailing" constant="30" id="wOm-kW-Tye"/>
@@ -175,6 +179,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Emj-2b-i13"/>
+        <segue reference="wzz-oi-geh"/>
     </inferredMetricsTieBreakers>
 </document>
