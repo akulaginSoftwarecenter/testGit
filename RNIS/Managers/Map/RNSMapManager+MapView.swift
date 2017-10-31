@@ -45,6 +45,10 @@ extension RNSMapManager {
         mapView.setZoomLevel(zoom)
     }
     
+    static func setMaxZoom() {
+        setZoomLevel(17)
+    }
+    
     /// Фнукция установки начального зума на карте
     static func firstZoomIfNeed() {
         if !UserDefaults.isDidFirstZoom {
