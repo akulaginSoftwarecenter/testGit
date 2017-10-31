@@ -45,6 +45,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     var handlerRect: AliasRectBlock?
     var handlerDismiss: EmptyBlock?
+    var handlerShowStartComplete: EmptyBlock?
     
     lazy var ranges: [RNSRangeScroll] = {
         return [self.rangeNav, self.rangeHalf, self.rangeThird, self.rangeBottom]
@@ -63,7 +64,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        scrollToStart()
+        scrollToStartCompletion()
     }
     
     override class var storyboardName: String {

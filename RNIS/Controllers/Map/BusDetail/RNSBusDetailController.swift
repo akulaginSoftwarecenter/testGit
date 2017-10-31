@@ -25,7 +25,10 @@ class RNSBusDetailController: UIViewController {
         container?.handlerRect = vc?.prepareViews(_:)
         container?.heightCoverButtonTop = 130
         container?.handlerDismiss = RNSMapManager.handlerDismissOldPresentVC
- 
+        container?.handlerShowStartComplete = {
+            vc?.prepareWay()
+        }
+       
         vc?.startBottomOffset = container?.startBottomOffset
         let contentInsetBottom = CGFloat(80)
         container?.contentInsetBottom = contentInsetBottom
@@ -39,6 +42,8 @@ class RNSBusDetailController: UIViewController {
         }
         return  container
     }
+    
+    lazy var loaderView = LoaderView()
     
     /// Представление с информацией о кондукторе
     let bottomView = RNSConductorView()
@@ -63,9 +68,9 @@ class RNSBusDetailController: UIViewController {
     
     /// Загрузка модели автобуса
     func loadItem() {
-        STRouter.showLoader()
+        loaderView.showInView(view)
         RNSPostBusGet(itemBus) {[weak self] item in
-            STRouter.removeLoader()
+            self?.loaderView.remove()
             self?.item = item
             self?.prepareItem()
         }
@@ -74,8 +79,11 @@ class RNSBusDetailController: UIViewController {
     /// Настройка представлений
     func prepareItem() {
         viewTotal.item = item
-        viewWay.item = item
         bottomView.item = item
+    }
+    
+    func prepareWay() {
+        viewWay.itemBus = itemBus
     }
     
     override class var storyboardName: String {

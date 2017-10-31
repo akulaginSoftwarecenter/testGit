@@ -16,6 +16,7 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
+    lazy var loaderView = LoaderView()
     
     var items: [RNSBusTableItem]?
     
@@ -25,18 +26,36 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
         }
     }
     
+    var itemBus: RNSBus? {
+        didSet {
+            loaderView.showInView(self)
+            RNSPostBusGet(itemBus) {[weak self] item in
+                self?.loaderView.remove()
+                self?.item = item
+            }
+        }
+    }
+    
     /// Модель автобуса
     var item: RNSBusTemp?{
         didSet {
-            tableModel = item?.tableModel
+            Utils.queueUserInitiated {
+                CounterTime.startTimer()
+                self.tableModel = self.item?.tableModel
+                CounterTime.endTimer()
+            }
         }
     }
 
     /// Обновление представления
     func reloadData() {
-        items = tableModel?.itemsStill
-        tableView.reloadData()
-        heightTableView.constant = tableView.tableViewContentSize
+        Utils.queueUserInitiated {
+            self.items = self.tableModel?.itemsStill
+            Utils.mainQueue {
+                self.tableView.reloadData()
+                self.heightTableView.constant = self.tableView.tableViewContentSize
+            }
+        }
     }
     
     /// Анимированное раскрывание пункта, содержащего подпункты

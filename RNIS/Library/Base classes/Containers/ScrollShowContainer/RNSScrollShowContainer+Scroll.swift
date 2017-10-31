@@ -14,9 +14,21 @@ extension RNSScrollShowContainer {
         scrollTo(topOffset, animated: animated)
     }
     
-    func scrollToStart() {
+    func scrollToStartCompletion() {
+      
+        imageSlide.alpha = 0
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.scrollToStart(false)
+        }) { (value) in
+            self.imageSlide.alpha = 1
+            self.handlerShowStartComplete?()
+            print("scrollToStart complete")
+        }
+    }
+    
+    func scrollToStart(_ animated: Bool = true) {
         startOverTopDeselerateFalse()
-        scrollTo(startBottomOffset)
+        scrollTo(startBottomOffset, animated: animated)
     }
     
     func scrollToBottom() {

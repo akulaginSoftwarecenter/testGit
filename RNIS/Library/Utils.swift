@@ -68,6 +68,12 @@ class Utils {
         DispatchQueue.main.async(execute: handler)
     }
     
+    static func queueUserInitiated(handler: EmptyBlock?) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            handler?()
+        }
+    }
+    
     static var mobileToken: AliasDictionary {
         var dict = AliasDictionary()
         if let token = UserDefaults.token {

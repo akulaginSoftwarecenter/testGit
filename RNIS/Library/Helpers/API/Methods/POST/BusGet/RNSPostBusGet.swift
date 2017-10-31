@@ -25,14 +25,13 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
         self.item = item
         self.complete = complete
         
-        sendRequestWithCompletion {[weak self] (object, error, inot) in
-            /*
-            var dict = object as? AliasDictionary
-            var payload = dict?["payload"] as? AliasDictionary
-            payload?["stop_points"] = self?.convertStops
-            dict?["payload"] = payload
- */
-            self?.parseReply(AliasReply(reply: object as AnyObject))
+        sendRequestWithCompletion { (object, error, inot) in
+            Utils.queueUserInitiated {
+                let model = AliasReply(reply: object as AnyObject)
+                Utils.mainQueue {
+                    self.parseReply(model)
+                }
+            }
         }
     }
     
@@ -45,11 +44,6 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
     }
     
     func parseError(_ model: AliasReply?) {
-        /*
-        guard let error = model?.errors?.first?.textError else {
-            return
-        }
-        */
         complete?(nil)
     }
     
@@ -62,9 +56,5 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
     
     override var subject: String {
         return "com.rnis.mobile.action.bus.get"
-    }
-   
-    var convertStops: Any? {
-        return Utils.dictToJson("245543")
     }
 }
