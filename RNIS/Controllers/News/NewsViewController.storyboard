@@ -60,10 +60,10 @@
                                                         <constraint firstAttribute="height" constant="10" id="g9l-zj-rvw"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="ArrowRightNews" translatesAutoresizingMaskIntoConstraints="NO" id="NNn-Tb-VIL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" image="ArrowRightNews" translatesAutoresizingMaskIntoConstraints="NO" id="NNn-Tb-VIL">
                                                     <rect key="frame" x="344" y="28" width="13" height="22"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yeU-xu-CKU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yeU-xu-CKU">
                                                     <rect key="frame" x="39" y="8" width="297" height="61.5"/>
                                                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,6 +78,7 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="yeU-xu-CKU" secondAttribute="trailing" constant="39" id="3fJ-av-Poa"/>
                                                 <constraint firstItem="yeU-xu-CKU" firstAttribute="leading" secondItem="TT5-lg-1nl" secondAttribute="trailing" constant="15" id="8tS-il-kaZ"/>
                                                 <constraint firstItem="YbH-rU-KCL" firstAttribute="leading" secondItem="aM7-9F-W2w" secondAttribute="leading" id="9VH-Ti-dth"/>
                                                 <constraint firstAttribute="bottom" secondItem="YbH-rU-KCL" secondAttribute="bottom" id="Jt0-Lb-un7"/>
@@ -90,6 +91,11 @@
                                                 <constraint firstItem="TT5-lg-1nl" firstAttribute="centerY" secondItem="aM7-9F-W2w" secondAttribute="centerY" id="v6g-1h-4JA"/>
                                                 <constraint firstAttribute="bottom" secondItem="yeU-xu-CKU" secondAttribute="bottom" constant="8" id="zbM-dx-1dQ"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="R5H-c9-Bgx"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
