@@ -98,11 +98,14 @@ extension RNSSearchViewController {
     ///
     /// - Parameter item: модель адреса
     func prepareAddress(_ item: RNSAddressTemp) {
-        if !item.isHouse {
-             textField.text = item.name
+        let name = item.name
+        if !item.isHouse,
+            text != name {
+            textField.text = name
             updateSearch()
             return
         }
+        
         STRouter.pop {
             RNSMapManager.mapCenter(item.point)
             RNSMapManager.setMaxZoom()
