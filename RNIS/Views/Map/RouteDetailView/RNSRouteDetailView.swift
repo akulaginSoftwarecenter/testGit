@@ -25,14 +25,8 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
     
     var showMove = false
     var items = [RNSRouteTableItem]()
-    /*
+    
     /// массив моделей
-    var items: [RNSRouteTableItem] {
-        let items = item?.itemsStill
-        items?.prepareShowArrow()
-        return items ?? []
-    }
-    */
     func prepareItems() {
         guard let items = item?.itemsStill else {
             return
