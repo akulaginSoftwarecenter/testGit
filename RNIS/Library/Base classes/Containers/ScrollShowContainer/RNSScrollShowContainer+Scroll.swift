@@ -22,7 +22,6 @@ extension RNSScrollShowContainer {
         }) { (value) in
             self.imageSlide.alpha = 1
             self.handlerShowStartComplete?()
-            print("scrollToStart complete")
         }
     }
     

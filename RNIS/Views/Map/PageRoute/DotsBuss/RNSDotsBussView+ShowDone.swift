@@ -34,6 +34,6 @@ extension RNSDotsBussView {
     }
     
     var doneMove: Bool {
-        return item?.points?.last?.doneMove ?? false
+        return item?.endDoneMove ?? false
     }
 }

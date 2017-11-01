@@ -52,30 +52,13 @@ class RNSMovePopupController: UIViewController {
     /// Контейнер для представления внутреннего контроллера
     @IBOutlet weak var containerView: UIView!
     
+    var alert: RNSAlertViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         prepareItem()
         prepareObservers()
-    }
-    
-    /// Контроллер подписывается на получение событий
-    func prepareObservers() {
-        NotificationCenter.addObserverLocation(self, selector: #selector(updateItem))
-    }
-    
-    /// Настройка представления схемы маршрута
-    func prepareItem() {
-        viewVariant.showMove = true
-        updateItem()
-    }
-    
-    /// Обновление представления схемы маршрута
-    @objc func updateItem() {
-        if viewVariant == nil {
-            return
-        }
-        viewVariant.item = item
     }
     
     override class var storyboardName: String {

@@ -40,4 +40,8 @@ extension RNSRouteVariant {
     var isFavorite: Bool {
         return uuid != nil
     }
+    
+    var endDoneMove: Bool {
+        return points?.last?.doneMove ?? false
+    }
 }

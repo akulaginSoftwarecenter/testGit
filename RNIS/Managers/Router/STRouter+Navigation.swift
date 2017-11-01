@@ -29,12 +29,13 @@ extension STRouter {
         showAlertOk("Код выслан повторно")
     }
     
-    static func showAlertOk(_ message: String?, handler: EmptyBlock? = nil) {
+    @discardableResult static func showAlertOk(_ message: String?, handler: EmptyBlock? = nil) -> RNSAlertViewController? {
         let vc = RNSAlertViewController.controller(message)
         vc?.handlerViewDidLoad = {
             vc?.addBtn(handler: handler)
         }
         present(vc, animated: true)
+        return vc
     }
     
     static func showAlertBtns(_ message: String?, leftTitle: String? = "OK", rightTitle: String? = "ОТМЕНА", handlerOk: EmptyBlock? = nil) {
