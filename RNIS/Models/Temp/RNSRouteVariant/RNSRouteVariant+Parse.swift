@@ -41,12 +41,4 @@ extension RNSRouteVariant {
         addNavel(items)
         self.navels = navels
     }
-    
-    func prepareTitleWidthBuss() {
-        var width = CGFloat(0)
-        for item in buss {
-            width += item.titleWidth
-        }
-        self.titleWidthBuss = width
-    }
 }

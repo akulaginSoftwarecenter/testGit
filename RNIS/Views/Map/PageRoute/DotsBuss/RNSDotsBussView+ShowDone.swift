@@ -14,7 +14,7 @@ import Foundation
 
 extension RNSDotsBussView {
     
-    func prepareMoveIfNeed() {
+    func prepareMoveFirstEndIfNeed() {
         guard showMove else {
             return
         }

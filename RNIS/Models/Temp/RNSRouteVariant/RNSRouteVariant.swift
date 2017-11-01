@@ -26,7 +26,6 @@ class RNSRouteVariant: RNISMappableBase {
         prepareHashValue()
         prepareEndDate()
         setupNavels()
-        prepareTitleWidthBuss()
         prepareDisplayData()
     }
     
@@ -36,7 +35,6 @@ class RNSRouteVariant: RNISMappableBase {
     var roadOff: RNSRoadOff?
     var currentZoom: Int?
     var endDate: Date?
-    var titleWidthBuss: CGFloat?
     var navels: [RNSDurationItem]?
     var maxSize: Double?
     var centerPoint: PGGeoPoint?

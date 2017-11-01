@@ -14,6 +14,8 @@ import UIKit
 class RNSDotsBussView: BaseViewWithXIBInit {
     
     @IBOutlet weak var constraintSmallDots: NSLayoutConstraint!
+
+    @IBOutlet weak var firstCircleWidth: NSLayoutConstraint!
     @IBOutlet weak var stackView: UIStackView!
     
     @IBOutlet weak var firstCircle: RNSCircleHoleWhite!
@@ -26,31 +28,32 @@ class RNSDotsBussView: BaseViewWithXIBInit {
         }
     }
     
+    var buss = [RNSBusRouteTemp]()
+    var bussShowMove = [RNSBusRouteTemp]()
+    
     var showMove = false
     
+    var widthArraw: CGFloat = 0
+    
     func reloadData() {
-        prepareMoveIfNeed()
-        let widthArrow = self.widthArraw
-        constraintSmallDots.constant = widthArrow
-        stackView.removeArrangedSubviews()
+        prepareValues()
+        prepareMoveFirstEndIfNeed()
+        prepareFirstSegment()
         
-        for bus in item?.buss ?? [] {
+        drawBuss()
+    }
+    
+    func drawBuss() {
+        stackView.removeArrangedSubviews()
+        for bus in bussShowMove {
             let name = RNSDotsName(bus)
             stackView.addArrangedSubview(name)
             let doneMove = showMove ? bus.doneMove : false
             let arrow = RNSArrowLeft(doneMove)
             arrow.snp.makeConstraints({ (make) in
-                make.width.equalTo(widthArrow)
+                make.width.equalTo(widthArraw)
             })
             stackView.addArrangedSubview(arrow)
         }
-    }
-    
-    var widthArraw: CGFloat {
-        let edge = CGFloat(66)
-        let countBuss = CGFloat(item?.buss.count ?? 0)
-        let betweens = CGFloat(3 * ((countBuss + 1) * 2))
-        let titleWidthBuss = item?.titleWidthBuss ?? 0
-        return (UIScreen.width - edge - betweens - titleWidthBuss)/(countBuss + 1)
     }
 }
