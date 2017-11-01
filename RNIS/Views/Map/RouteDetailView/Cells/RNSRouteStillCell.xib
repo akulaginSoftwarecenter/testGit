@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,6 +23,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="317" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-Un-q2U">
+                        <rect key="frame" x="55" y="12.5" width="7" height="12"/>
+                    </imageView>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lit-lF-OIK">
                         <rect key="frame" x="76" y="0.0" width="18" height="18"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,6 +131,8 @@
                     <constraint firstItem="u2K-nm-8Nb" firstAttribute="top" secondItem="jsS-ZW-rRx" secondAttribute="top" id="8oQ-x9-MMc"/>
                     <constraint firstItem="IJT-ty-mIx" firstAttribute="centerX" secondItem="lit-lF-OIK" secondAttribute="centerX" id="FJN-T6-Jdi"/>
                     <constraint firstItem="iWz-wC-sLf" firstAttribute="centerX" secondItem="WHU-fq-SDF" secondAttribute="centerX" id="GOJ-gA-p1U"/>
+                    <constraint firstItem="2O1-Un-q2U" firstAttribute="trailing" secondItem="WHU-fq-SDF" secondAttribute="leading" constant="-22" id="HMe-ev-9V3"/>
+                    <constraint firstItem="2O1-Un-q2U" firstAttribute="centerY" secondItem="WHU-fq-SDF" secondAttribute="centerY" id="IEg-op-Lfd"/>
                     <constraint firstItem="WHU-fq-SDF" firstAttribute="centerY" secondItem="kLp-AR-ORr" secondAttribute="centerY" id="IFe-4j-yWI"/>
                     <constraint firstItem="bPL-N4-520" firstAttribute="centerX" secondItem="iWz-wC-sLf" secondAttribute="centerX" id="Iqa-Db-Dox"/>
                     <constraint firstItem="lit-lF-OIK" firstAttribute="leading" secondItem="jsS-ZW-rRx" secondAttribute="leading" constant="76" id="Mm8-s8-t7y"/>
@@ -141,6 +147,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="arrowRight" destination="2O1-Un-q2U" id="Q91-47-hxo"/>
                 <outlet property="imageArrow" destination="a65-Kc-Ykg" id="xu4-t8-b3r"/>
                 <outlet property="label" destination="Z7f-WF-g6O" id="oHh-aC-Ku3"/>
                 <outlet property="line" destination="4kz-Tw-8dD" id="fXP-NR-8ga"/>
@@ -153,6 +160,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ArrowRight" width="7" height="12"/>
         <image name="ArrowUp" width="12" height="7"/>
     </resources>
 </document>

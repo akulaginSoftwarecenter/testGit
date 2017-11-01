@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,7 +83,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teB-kT-mQn">
-                        <rect key="frame" x="102" y="5.5" width="215" height="20"/>
+                        <rect key="frame" x="102" y="4.5" width="215" height="23.5"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -94,6 +95,9 @@
                             <constraint firstAttribute="width" constant="3" id="jJV-U8-mpq"/>
                         </constraints>
                     </view>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="8tf-It-zIx">
+                        <rect key="frame" x="54" y="9.5" width="7" height="12"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
@@ -102,6 +106,7 @@
                     <constraint firstItem="Tjm-Uw-JuG" firstAttribute="leading" secondItem="ejZ-rU-nZm" secondAttribute="trailing" id="3Dw-Kv-FbA"/>
                     <constraint firstItem="q2Q-oo-FIJ" firstAttribute="leading" secondItem="Tjm-Uw-JuG" secondAttribute="trailing" constant="8" id="7at-j8-6ig"/>
                     <constraint firstItem="teB-kT-mQn" firstAttribute="centerY" secondItem="q2Q-oo-FIJ" secondAttribute="centerY" id="7g7-uy-mzZ"/>
+                    <constraint firstItem="q2Q-oo-FIJ" firstAttribute="leading" secondItem="8tf-It-zIx" secondAttribute="trailing" constant="15" id="9Ug-tf-zwP"/>
                     <constraint firstItem="ejZ-rU-nZm" firstAttribute="leading" secondItem="jlD-b6-La6" secondAttribute="leading" id="9rW-55-Hwg"/>
                     <constraint firstItem="M0T-xs-WRK" firstAttribute="centerX" secondItem="q2Q-oo-FIJ" secondAttribute="centerX" id="AvC-Wh-jhO"/>
                     <constraint firstAttribute="bottom" secondItem="C0a-Os-Txw" secondAttribute="bottom" id="B12-dL-sI2"/>
@@ -111,6 +116,7 @@
                     <constraint firstItem="A4B-43-FXq" firstAttribute="top" secondItem="q2Q-oo-FIJ" secondAttribute="bottom" constant="-6" id="LAB-wf-jvb"/>
                     <constraint firstItem="M0T-xs-WRK" firstAttribute="bottom" secondItem="q2Q-oo-FIJ" secondAttribute="centerY" id="Uhh-1v-rd2"/>
                     <constraint firstItem="Tjm-Uw-JuG" firstAttribute="centerY" secondItem="ejZ-rU-nZm" secondAttribute="centerY" id="Uhl-gV-Fnn"/>
+                    <constraint firstItem="8tf-It-zIx" firstAttribute="centerY" secondItem="q2Q-oo-FIJ" secondAttribute="centerY" id="X97-JV-Zg6"/>
                     <constraint firstItem="ejZ-rU-nZm" firstAttribute="top" secondItem="jlD-b6-La6" secondAttribute="top" id="ZDx-VH-eyH"/>
                     <constraint firstItem="C0a-Os-Txw" firstAttribute="centerX" secondItem="fSL-5g-bEM" secondAttribute="centerX" id="gmE-7Z-Sxu"/>
                     <constraint firstItem="q2Q-oo-FIJ" firstAttribute="centerY" secondItem="ejZ-rU-nZm" secondAttribute="centerY" id="jSZ-mG-YQb"/>
@@ -120,6 +126,7 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="arrowLabel" destination="Tjm-Uw-JuG" id="Ih4-Zk-LZb"/>
+                <outlet property="arrowRight" destination="8tf-It-zIx" id="ESe-1M-7d8"/>
                 <outlet property="busConstraint" destination="nMn-pS-VBe" id="mQc-HE-DL8"/>
                 <outlet property="busLine" destination="A4B-43-FXq" id="4LA-r9-tYH"/>
                 <outlet property="circleView" destination="q2Q-oo-FIJ" id="hRf-bp-Vja"/>
@@ -129,6 +136,10 @@
                 <outlet property="text2Label" destination="teB-kT-mQn" id="LzW-Ns-vSO"/>
                 <outlet property="topBusLine" destination="M0T-xs-WRK" id="zQF-y7-OuB"/>
             </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ArrowRight" width="7" height="12"/>
+    </resources>
 </document>

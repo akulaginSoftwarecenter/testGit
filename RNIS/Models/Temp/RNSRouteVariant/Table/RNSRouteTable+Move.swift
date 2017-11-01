@@ -53,7 +53,6 @@ extension RNSRouteTable {
         items.prepareMove()
     }
     
-    
     func pointIndex(_ index: Int?) -> RNSRoutePoint? {
         return points?.valueAt(index)
     }

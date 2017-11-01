@@ -42,6 +42,7 @@ extension RNSRouteDetailView: UITableViewDelegate, UITableViewDataSource {
         let item = self.item(indexPath)
         if item.isStillCell {
             item.openStill = !item.openStill
+            prepareItems()
             animateInsertStill(indexPath)
         }
     }

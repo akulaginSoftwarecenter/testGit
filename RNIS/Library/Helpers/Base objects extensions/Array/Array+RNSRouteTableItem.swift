@@ -34,4 +34,16 @@ extension Array where Element: RNSRouteTableItem {
             }
         }
     }
+    
+    func prepareShowArrow() {
+        var doneFinded = false
+        for item in self.reversed() {
+            if item.doneMove, !doneFinded {
+                doneFinded = true
+                item.showArrow = true
+            } else {
+                item.showArrow = false
+            }
+        }
+    }
 }

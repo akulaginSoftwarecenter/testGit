@@ -22,6 +22,7 @@ class RNSRouteStopCell: RNSRouteParentCell {
     @IBOutlet weak var topBusLine: UIView!
     
     @IBOutlet weak var circleView: RNSCircle!
+    @IBOutlet weak var arrowRight: UIImageView!
     
     override func prepareUI() {
         super.prepareUI()
@@ -65,5 +66,6 @@ class RNSRouteStopCell: RNSRouteParentCell {
         
         text1Label.isHidden = doneMove
         arrowLabel.isHidden = doneMove
+        arrowRight.isHidden = !(item?.showArrow ?? false)
     }
 }

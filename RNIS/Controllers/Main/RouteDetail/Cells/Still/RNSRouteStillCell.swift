@@ -17,6 +17,7 @@ class RNSRouteStillCell: RNSRouteParentCell {
     @IBOutlet weak var topLine: UIView!
     
     @IBOutlet var circles: [RNSCircle]!
+    @IBOutlet weak var arrowRight: UIImageView!
     
     var openStill: Bool {
         return item?.openStill ?? false
@@ -58,6 +59,8 @@ class RNSRouteStillCell: RNSRouteParentCell {
         }
         
         prepareLineDone()
+        
+        arrowRight.isHidden = !(item?.showArrow ?? false)
     }
     
     func prepareLineDone() {

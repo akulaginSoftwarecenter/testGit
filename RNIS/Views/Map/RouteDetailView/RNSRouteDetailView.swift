@@ -16,6 +16,7 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
     /// Содель схемы маршрута
     var item: RNSRouteTable? {
         didSet{
+            prepareItems()
             tableView.reloadData()
         }
     }
@@ -23,10 +24,21 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
     @IBOutlet var tableView: RNSRegisterTableView!
     
     var showMove = false
-    
+    var items = [RNSRouteTableItem]()
+    /*
     /// массив моделей
     var items: [RNSRouteTableItem] {
-        return item?.itemsStill ?? []
+        let items = item?.itemsStill
+        items?.prepareShowArrow()
+        return items ?? []
+    }
+    */
+    func prepareItems() {
+        guard let items = item?.itemsStill else {
+            return
+        }
+        items.prepareShowArrow()
+        self.items = items
     }
     
     override func awakeFromNib() {
