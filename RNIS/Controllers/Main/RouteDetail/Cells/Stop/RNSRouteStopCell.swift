@@ -56,13 +56,14 @@ class RNSRouteStopCell: RNSRouteParentCell {
     }
     
     override func prepareDone() {
-          
         let color: UIColor = doneMove ? doneColor : .white
         
         runLine.colorCircle = color
         busLine.backgroundColor = color
         circleView.backgroundColor = doneMove ? doneColor : .FFB9AF
-             
         topBusLine.backgroundColor = (item?.previousDoneMove ?? false) ? doneColor : .white
+        
+        text1Label.isHidden = doneMove
+        arrowLabel.isHidden = doneMove
     }
 }
