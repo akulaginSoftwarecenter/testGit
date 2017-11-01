@@ -19,17 +19,14 @@ extension RNSRouteTable {
         
         processingPoint(points.first)
         let lastIndex = points.count - 1
-        guard 1 <= lastIndex  else {
-            return
-        }
-        
-        for i in 1..<lastIndex {
-            guard let point = points.valueAt(i),
+        points.enumerateRange(1..<lastIndex) { (point) in
+            guard let point = point,
                 point.isHaveStop else {
-                    continue
+                return
             }
-            processingPoint(point)
+            self.processingPoint(point)
         }
+
         appendStop(points.valueAt(lastIndex))
         prepareEdge()
         appendTotal()
