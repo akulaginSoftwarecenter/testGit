@@ -27,6 +27,12 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
         popViewController(animated: animated)
     }
     
+    func popToRoot(animated: Bool = false, completion:EmptyBlock? = nil) {
+        self.completion = completion
+        self.delegate = self
+        popToRootViewController(animated: animated)
+    }
+    
     public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         self.delegate = nil
         self.completion?()

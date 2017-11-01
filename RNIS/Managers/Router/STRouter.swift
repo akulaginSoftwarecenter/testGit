@@ -42,8 +42,8 @@ class STRouter: NSObject {
         rootViewController.pop(animated: animated, completion: completion)
     }
     
-    static func popToRoot(_ animated: Bool = true) {
-        rootViewController.popToRootViewController(animated: animated)
+    static func popToRoot(_ animated: Bool = true, completion:EmptyBlock? = nil) {
+        rootViewController.popToRoot(animated: animated, completion: completion)
     }
     
     static func popNoAnimate(completion: EmptyBlock? = nil) {
