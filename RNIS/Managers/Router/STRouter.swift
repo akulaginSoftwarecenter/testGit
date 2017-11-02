@@ -51,10 +51,10 @@ class STRouter: NSObject {
     }
     
     static func present(_ viewControllerToPresent:UIViewController?, animated: Bool = true, completion: EmptyBlock? = nil) {
-        guard var vc:UIViewController = rootViewController,
-            let viewControllerToPresent = viewControllerToPresent  else {
+        guard let viewControllerToPresent = viewControllerToPresent  else {
             return
         }
+        var vc:UIViewController = rootViewController
        
         while let presented = vc.presentedViewController {
             vc = presented
