@@ -10,8 +10,8 @@ import Foundation
 
 extension RNSRouteTable {
     
-    func appendBus(_ point: RNSRoutePoint?) {
-        let stop = self.appendStop(point)
+    func appendBus(_ point: RNSRoutePoint?, time: Int) {
+        let stop = self.appendStop(point, time: time)
         stop.shortLine = true
         let item = RNSRouteTableItem.genBus(point?.route?.title)
         items.append(item)

@@ -19,29 +19,34 @@ extension RNSRouteTable {
         
         processingPoint(points.first)
         let lastIndex = points.count - 1
+        var time = 0
         points.enumerateRange(1..<lastIndex) { (point) in
-            guard let point = point,
-                point.isHaveStop else {
+            guard let point = point else {
                 return
             }
-            self.processingPoint(point)
+            time += point.time ?? 0
+            guard point.isHaveStop else {
+                return
+            }
+            self.processingPoint(point, time: time)
+            time = 0
         }
 
-        appendStop(points.valueAt(lastIndex))
+        appendStop(points.valueAt(lastIndex), time: time)
         prepareEdge()
         appendTotal()
         prepareFirts()
     }
     
-    func processingPoint(_ point: RNSRoutePoint?) {
+    func processingPoint(_ point: RNSRoutePoint?, time: Int = 0) {
         guard let point = point else {
             return
         }
         
         if isNewBus(point) {
-            appendBus(point)
+            appendBus(point, time: time)
         } else {
-            let stop = self.stop(point)
+            let stop = self.stop(point, time: time)
             prepareStillIfNeed()
             
             if isLastStill {
