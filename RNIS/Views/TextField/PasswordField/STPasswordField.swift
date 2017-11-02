@@ -14,7 +14,7 @@ import UIKit
 class STPasswordField: RNSTextField {
 
     override var isValid:Bool {
-        return (text?.characters.count ?? 0) >= 3
+        return (text?.count ?? 0) >= 3
     }
     
     override var errorText:String? {

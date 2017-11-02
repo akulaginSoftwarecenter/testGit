@@ -27,11 +27,11 @@ extension InputFieldsValidator
         
         let strippedPhone = strip(_phone)
         
-        return strippedPhone.characters.count == 11
+        return strippedPhone.count == 11
     }
 
     func needCustomizePhoneField(_ customize: Bool, text: String?) -> String? {
-        let count = text!.characters.count
+        let count = text?.count ?? 0
         var txt = text
         if count == 0 && customize {
             txt = "7"

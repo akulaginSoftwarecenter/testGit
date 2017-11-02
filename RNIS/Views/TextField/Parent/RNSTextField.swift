@@ -164,7 +164,7 @@ class RNSTextField: UITextField {
             NSAttributedStringKey.font: placeholderFont
         ]
         let text = NSLoc(placeholderKey)
-        if text.characters.count > 24 {
+        if text.count > 24 {
             attributes[.font] = placeholderFont.withSize(22)
         }
         attributedPlaceholder = NSAttributedString(string: text,

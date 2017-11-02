@@ -17,7 +17,7 @@ extension RNSCodeViewController: UITextFieldDelegate {
     /// Обработчик разрешает ввод не более 4 символов.
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
-        let newLength = text.characters.count + string.characters.count - range.length
+        let newLength = text.count + string.count - range.length
         return newLength <= 4 // Bool
     }
 }

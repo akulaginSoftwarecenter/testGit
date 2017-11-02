@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dgP-tL-On7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dgP-tL-On7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Информация-->
+        <!--Main Info View Controller-->
         <scene sceneID="tVY-k4-ZHH">
             <objects>
                 <viewController id="dgP-tL-On7" customClass="MainInfoViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dTb-cf-fip">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="dTb-cf-fip">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dTb-cf-fip" id="yDS-6a-jLd">
@@ -72,9 +72,6 @@
                             <constraint firstAttribute="trailing" secondItem="Yvc-Ei-jOr" secondAttribute="trailing" id="xCM-hd-xEo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Информация" id="LfR-8j-Cth">
-                        <barButtonItem key="leftBarButtonItem" image="ArrowLefrNav" style="plain" id="Yjh-ZT-wHg" customClass="RNSMenuBarItem" customModule="RNIS" customModuleProvider="target"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Yvc-Ei-jOr" id="OlS-gS-du2"/>
                     </connections>
@@ -84,7 +81,4 @@
             <point key="canvasLocation" x="-119.2" y="124.58770614692655"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ArrowLefrNav" width="14" height="22"/>
-    </resources>
 </document>

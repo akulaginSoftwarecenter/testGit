@@ -121,7 +121,7 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
     /// - Returns: валидный/не валидный
     func validPhoneSymbol(_ string: String) -> Bool {
         var set = CharacterSet(charactersIn: "1234567890")
-        if text?.characters.count == 0 {
+        if text?.count == 0 {
             set.insert(charactersIn: cross)
         }
         return string.trimmingCharacters(in: set).isEmpty

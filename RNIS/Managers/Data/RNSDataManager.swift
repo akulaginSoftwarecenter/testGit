@@ -30,8 +30,7 @@ class RNSDataManager: NSObject {
     }
     
     static func objects<T>(_ type: T.Type) -> Results<T>? {
-        guard let type = type as? Object.Type,
-            let result = realm?.objects(type) as? Results<T> else {
+        guard let result = realm?.objects(type as! Object.Type) as? Results<T> else {
             return nil
         }
         return result

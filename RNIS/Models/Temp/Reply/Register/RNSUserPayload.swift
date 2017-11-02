@@ -92,7 +92,7 @@ class RNSUserPayload: RNISMappableBase {
         }
         DispatchQueue.global(qos: .userInitiated).async {
             var image: UIImage?
-            if let imageData = NSData(base64Encoded: avatar, options: .ignoreUnknownCharacters) as? Data {
+            if let imageData = NSData(base64Encoded: avatar, options: .ignoreUnknownCharacters) as Data? {
                 image = UIImage(data: imageData)
             }
             Utils.mainQueue {

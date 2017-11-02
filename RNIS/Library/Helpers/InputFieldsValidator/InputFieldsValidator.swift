@@ -24,12 +24,11 @@ class InputFieldsValidator: NSObject {
             var inputIntex = 0
             var formatIndex = 0
             var temp: String? = ""
-            let characters = format.characters
-            let charactersCount = characters.count
-            while inputIntex < input.characters.count && temp != nil && formatIndex < charactersCount {
-                let c = format[characters.index(format.startIndex, offsetBy: formatIndex)]
+            let charactersCount = format.count
+            while inputIntex < input.count && temp != nil && formatIndex < charactersCount {
+                let c = format[format.index(format.startIndex, offsetBy: formatIndex)]
                 let required = canBeInputByPhonePad(c)
-                let next = input[input.characters.index(input.startIndex, offsetBy: inputIntex)]
+                let next = input[input.index(input.startIndex, offsetBy: inputIntex)]
                 switch c {
                 case "#":
                     if next < "0" || next > "9" {
@@ -56,8 +55,8 @@ class InputFieldsValidator: NSObject {
                 
                 formatIndex += 1
             }
-            if (inputIntex == input.characters.count) {
-                let complete = charactersCount == (temp?.characters.count ?? 0)
+            if (inputIntex == input.count) {
+                let complete = charactersCount == (temp?.count ?? 0)
                 return (temp,true,complete)
             }
         }
@@ -70,8 +69,8 @@ class InputFieldsValidator: NSObject {
             return res
         }
         
-        for index in 0..<phoneNumber.characters.count {
-            let next = phoneNumber[phoneNumber.characters.index(phoneNumber.startIndex, offsetBy: index)]
+        for index in 0..<phoneNumber.count {
+            let next = phoneNumber[phoneNumber.index(phoneNumber.startIndex, offsetBy: index)]
             if canBeInputByPhonePad(next) {
                 res.append(next)
             }

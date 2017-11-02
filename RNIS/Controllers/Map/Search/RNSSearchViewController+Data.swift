@@ -24,7 +24,7 @@ extension RNSSearchViewController {
             return
         }
         request?.cancel()
-        if text.characters.count < 3 {
+        if text.count < 3 {
             clearTable()
             removeLoader()
             return
