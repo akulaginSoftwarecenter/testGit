@@ -30,7 +30,11 @@ class RNSDataManager: NSObject {
     }
     
     static func objects<T>(_ type: T.Type) -> Results<T>? {
-        return realm?.objects(type)
+        guard let type = type as? Object.Type,
+            let result = realm?.objects(type) as? Results<T> else {
+            return nil
+        }
+        return result
     }
     
     static func write(_ block: EmptyBlock?, complete: EmptyBlock? = nil) {
