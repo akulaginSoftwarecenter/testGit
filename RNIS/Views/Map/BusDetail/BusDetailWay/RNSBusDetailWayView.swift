@@ -16,7 +16,6 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
-    lazy var loaderView = LoaderView()
     
     var items: [RNSBusTableItem]?
     
@@ -25,17 +24,7 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
             reloadData()
         }
     }
-    
-    var itemBus: RNSBus? {
-        didSet {
-            loaderView.showInView(self)
-            RNSPostBusGet(itemBus) {[weak self] item in
-                self?.loaderView.remove()
-                self?.item = item
-            }
-        }
-    }
-    
+
     /// Модель автобуса
     var item: RNSBusTemp?{
         didSet {

@@ -43,8 +43,6 @@ class RNSBusDetailController: UIViewController {
         return  container
     }
     
-    lazy var loaderView = LoaderView()
-    
     /// Представление с информацией о кондукторе
     let bottomView = RNSConductorView()
     
@@ -60,6 +58,10 @@ class RNSBusDetailController: UIViewController {
     /// Представление, отображающее схему маршрута автобуса
     @IBOutlet weak var viewWay: RNSBusDetailWayView!
     
+    @IBOutlet weak var wayLoader: RNSBackGroundView!
+    
+    var canLoadViewWay = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,11 +70,19 @@ class RNSBusDetailController: UIViewController {
     
     /// Загрузка модели автобуса
     func loadItem() {
-        loaderView.showInView(view)
+        wayLoader.isHidden = false
         RNSPostBusGet(itemBus) {[weak self] item in
-            self?.loaderView.remove()
+            self?.loaderHide()
             self?.item = item
             self?.prepareItem()
+        }
+    }
+    
+    func loaderHide() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.wayLoader.alpha = 0
+        }) { (value) in
+            self.wayLoader.isHidden = true
         }
     }
     
@@ -80,10 +90,18 @@ class RNSBusDetailController: UIViewController {
     func prepareItem() {
         viewTotal.item = item
         bottomView.item = item
+        prepareWayIfCan()
+    }
+    
+    func prepareWayIfCan() {
+        if canLoadViewWay {
+            prepareWay()
+        }
     }
     
     func prepareWay() {
-        viewWay.itemBus = itemBus
+        canLoadViewWay = true
+        viewWay.item = item
     }
     
     override class var storyboardName: String {
