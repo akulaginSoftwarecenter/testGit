@@ -26,4 +26,8 @@ extension UIScreen
     static func bounds() -> CGRect{
         return self.main.bounds
     }
+    
+    static var size: CGSize {
+        return self.bounds().size
+    }
 }

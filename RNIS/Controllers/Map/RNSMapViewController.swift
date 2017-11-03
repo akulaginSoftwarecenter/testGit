@@ -36,8 +36,16 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         RNSMapManager.startLocation()
         prepareAnimator()
+        loadWelcomeIfNeed()
+    }
+    
+    func loadWelcomeIfNeed() {
+        print("loadWelcomeIfNeed")
+        let containerVC = RNSWelcomeViewContoller.initialController
+        STRouter.present(containerVC, animated: false)
     }
     
     /// Настройка аниматора кнопок
