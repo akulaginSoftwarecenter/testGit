@@ -33,6 +33,10 @@ class RNSWelcomeCell: UICollectionViewCell {
         imageMoc.image = item.main
     }
     
+    func prepareAnimation() {
+        imageMoc.alpha = 0
+    }
+    
     func startAnimate() {
         guard topConstraint.constant != endConstraint else {
             return
@@ -40,6 +44,7 @@ class RNSWelcomeCell: UICollectionViewCell {
         topConstaintStart()
         animateConstrains {
             self.topConstraint.constant = self.endConstraint
+            self.imageMoc.alpha = 1
         }
     }
     

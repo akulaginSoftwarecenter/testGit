@@ -127,6 +127,9 @@
                                         <exclude reference="6yT-qp-PGa"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="dismissAction:" destination="gkh-Qh-jrD" eventType="touchUpInside" id="fNT-Dd-0Wl"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="eKr-sX-dWu">
                                 <rect key="frame" x="29" y="393" width="71" height="37"/>

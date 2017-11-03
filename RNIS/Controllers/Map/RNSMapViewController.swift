@@ -23,6 +23,11 @@ class RNSMapViewController: UIViewController {
     /// Внутренний контроллер
     var containerController: RNSMapParentController?
     var presentViewController: UIViewController?
+    let kShouldShowWelcome = "kShouldShowWelcome"
+    var shouldShowWelcome: Bool {
+        return UserDefaults.standard.object(forKey: kShouldShowWelcome) == nil
+    }
+    var welcomeSimulationView: UIView?
 
     /// Кнопка демонстрации маршрута
     @IBOutlet weak var routeBtn: UIButton!
@@ -39,13 +44,33 @@ class RNSMapViewController: UIViewController {
         
         RNSMapManager.startLocation()
         prepareAnimator()
-        loadWelcomeIfNeed()
+        simulateWelcomePresentationIfNeed()
     }
     
     func loadWelcomeIfNeed() {
-        print("loadWelcomeIfNeed")
-        let containerVC = RNSWelcomeViewContoller.initialController
-        STRouter.present(containerVC, animated: false)
+        if shouldShowWelcome {
+            let containerVC = RNSWelcomeViewContoller.initialController
+            STRouter.present(containerVC, animated: false) {
+                if let welcomeView = self.welcomeSimulationView {
+                    welcomeView.removeFromSuperview()
+                }
+            }
+            setShouldShowWelcome(false)
+        }
+    }
+    
+    func setShouldShowWelcome(_ shouldShow: Bool) {
+        let defaults = UserDefaults.standard
+        defaults.set(shouldShow, forKey: kShouldShowWelcome)
+        defaults.synchronize()
+    }
+    
+    func simulateWelcomePresentationIfNeed() {
+        if shouldShowWelcome {
+            let containerVC = RNSWelcomeViewContoller.initialController
+            welcomeSimulationView = containerVC.view
+            view.addSubview(welcomeSimulationView!)
+        }
     }
     
     /// Настройка аниматора кнопок
@@ -79,6 +104,7 @@ class RNSMapViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animator.setMapButtons(hidden: false, animated: true)
+        loadWelcomeIfNeed()
     }
     
     override class var storyboardName: String {

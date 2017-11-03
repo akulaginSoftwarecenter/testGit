@@ -73,4 +73,8 @@ class RNSWelcomeViewContoller: UIViewController {
     override class var storyboardName: String {
         return "RNSWelcomeViewContoller"
     }
+    
+    @IBAction func dismissAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

@@ -38,6 +38,10 @@ extension RNSWelcomeViewContoller: UICollectionViewDataSource, UICollectionViewD
         }
         cell.startAnimate()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        (cell as! RNSWelcomeCell).prepareAnimation()
+    }
 
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell =  cell as? RNSWelcomeCell else {
