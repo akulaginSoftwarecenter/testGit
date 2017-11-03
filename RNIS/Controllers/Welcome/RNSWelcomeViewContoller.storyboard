@@ -47,27 +47,51 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="376" height="663"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welc0" translatesAutoresizingMaskIntoConstraints="NO" id="dru-R4-zrH">
+                                                    <rect key="frame" x="180" y="75" width="16" height="16"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectangleWelcome" translatesAutoresizingMaskIntoConstraints="NO" id="9UA-K5-yma">
+                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="663"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="dru-R4-zrH" firstAttribute="top" secondItem="SgN-Ka-hAr" secondAttribute="bottom" constant="54" id="5CL-vf-KQt"/>
                                             <constraint firstItem="dJz-x4-UUE" firstAttribute="leading" secondItem="dAK-8J-RDW" secondAttribute="leading" id="6YN-8y-94r"/>
+                                            <constraint firstItem="9UA-K5-yma" firstAttribute="leading" secondItem="dAK-8J-RDW" secondAttribute="leading" id="6lV-WD-c5D"/>
+                                            <constraint firstAttribute="trailing" secondItem="9UA-K5-yma" secondAttribute="trailing" id="7Ly-z0-pIz"/>
                                             <constraint firstAttribute="trailing" secondItem="SgN-Ka-hAr" secondAttribute="trailing" constant="13" id="7WK-iN-XQz"/>
                                             <constraint firstAttribute="bottom" secondItem="SgN-Ka-hAr" secondAttribute="bottom" id="8N7-DZ-bw7"/>
+                                            <constraint firstItem="9UA-K5-yma" firstAttribute="top" secondItem="dAK-8J-RDW" secondAttribute="top" id="DRE-Qf-NNI"/>
                                             <constraint firstItem="SgN-Ka-hAr" firstAttribute="leading" secondItem="dAK-8J-RDW" secondAttribute="leading" constant="13" id="MD1-ar-EST"/>
                                             <constraint firstAttribute="bottom" secondItem="dJz-x4-UUE" secondAttribute="bottom" id="Q2B-57-Usv"/>
                                             <constraint firstAttribute="trailing" secondItem="dJz-x4-UUE" secondAttribute="trailing" id="RvH-3N-T7F"/>
+                                            <constraint firstItem="dru-R4-zrH" firstAttribute="top" secondItem="dAK-8J-RDW" secondAttribute="top" constant="75" id="TBc-m9-bfe"/>
                                             <constraint firstItem="dJz-x4-UUE" firstAttribute="top" secondItem="dAK-8J-RDW" secondAttribute="top" id="VcZ-66-F6c"/>
+                                            <constraint firstItem="dru-R4-zrH" firstAttribute="centerX" secondItem="dAK-8J-RDW" secondAttribute="centerX" id="bq0-SL-CQB"/>
+                                            <constraint firstAttribute="trailing" secondItem="dru-R4-zrH" secondAttribute="trailing" id="jcn-uM-gIo"/>
+                                            <constraint firstItem="dru-R4-zrH" firstAttribute="leading" secondItem="dAK-8J-RDW" secondAttribute="leading" id="kBJ-dh-XpH"/>
                                             <constraint firstItem="SgN-Ka-hAr" firstAttribute="top" secondItem="dAK-8J-RDW" secondAttribute="top" constant="33" id="pOO-Xf-O3e"/>
+                                            <constraint firstItem="dru-R4-zrH" firstAttribute="centerX" secondItem="dAK-8J-RDW" secondAttribute="centerX" id="xTg-Qh-rkD"/>
+                                            <constraint firstAttribute="bottom" secondItem="9UA-K5-yma" secondAttribute="bottom" id="zR2-LM-uYE"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="8N7-DZ-bw7"/>
+                                                <exclude reference="5CL-vf-KQt"/>
+                                                <exclude reference="jcn-uM-gIo"/>
+                                                <exclude reference="kBJ-dh-XpH"/>
+                                                <exclude reference="xTg-Qh-rkD"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <outlet property="imageBack" destination="SgN-Ka-hAr" id="Ukk-GQ-z8N"/>
+                                            <outlet property="imageMoc" destination="dru-R4-zrH" id="UlR-B8-VT8"/>
                                             <outlet property="imageStart" destination="dJz-x4-UUE" id="2Az-pk-m3e"/>
+                                            <outlet property="topConstraint" destination="TBc-m9-bfe" id="ZRn-gf-cVu"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -76,10 +100,6 @@
                                     <outlet property="delegate" destination="gkh-Qh-jrD" id="fjA-eF-JtV"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectangleWelcome" translatesAutoresizingMaskIntoConstraints="NO" id="9UA-K5-yma">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Будьте в курсе где сейчас ваш автобус и сколько его ждать" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9l-eB-jqD">
                                 <rect key="frame" x="29" y="430" width="317" height="84"/>
                                 <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
@@ -138,18 +158,14 @@
                             <constraint firstItem="H9l-eB-jqD" firstAttribute="trailing" secondItem="Bgw-kX-Zax" secondAttribute="trailing" constant="-29" id="HbS-Lh-kvV"/>
                             <constraint firstItem="fch-jX-H4E" firstAttribute="leading" secondItem="Bgw-kX-Zax" secondAttribute="leading" constant="29" id="KbV-PG-SA6"/>
                             <constraint firstAttribute="bottom" secondItem="RBW-NW-d21" secondAttribute="bottom" id="Kba-pI-WDb"/>
-                            <constraint firstAttribute="bottom" secondItem="9UA-K5-yma" secondAttribute="bottom" id="R0B-5o-dNX"/>
                             <constraint firstItem="fch-jX-H4E" firstAttribute="width" secondItem="gAN-zb-joX" secondAttribute="width" constant="57" id="UTX-B8-mUq"/>
                             <constraint firstItem="RBW-NW-d21" firstAttribute="leading" secondItem="q3Q-eW-tLh" secondAttribute="leading" id="a3b-Kl-Dwe"/>
                             <constraint firstItem="fch-jX-H4E" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wPW-qe-qDM" secondAttribute="bottom" constant="13" id="d8T-rX-AzH"/>
-                            <constraint firstItem="Bgw-kX-Zax" firstAttribute="trailing" secondItem="9UA-K5-yma" secondAttribute="trailing" id="dbD-yB-IK9"/>
                             <constraint firstItem="gAN-zb-joX" firstAttribute="centerX" secondItem="fch-jX-H4E" secondAttribute="centerX" id="gZF-Ei-ZRK"/>
-                            <constraint firstItem="9UA-K5-yma" firstAttribute="leading" secondItem="Bgw-kX-Zax" secondAttribute="leading" id="hck-Gf-ctC"/>
                             <constraint firstItem="wPW-qe-qDM" firstAttribute="trailing" secondItem="Bgw-kX-Zax" secondAttribute="trailing" constant="-29" id="isl-ia-bex"/>
                             <constraint firstAttribute="trailing" secondItem="RBW-NW-d21" secondAttribute="trailing" id="j4Z-0N-nQP"/>
                             <constraint firstItem="gAN-zb-joX" firstAttribute="centerY" secondItem="fch-jX-H4E" secondAttribute="centerY" id="juz-gA-JmG"/>
                             <constraint firstItem="Bgw-kX-Zax" firstAttribute="bottom" secondItem="fch-jX-H4E" secondAttribute="bottom" constant="24" id="xTm-Pp-7fj"/>
-                            <constraint firstItem="9UA-K5-yma" firstAttribute="top" secondItem="q3Q-eW-tLh" secondAttribute="top" id="z19-Bp-DEV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bgw-kX-Zax"/>
                     </view>
@@ -170,5 +186,6 @@
     <resources>
         <image name="0" width="16" height="16"/>
         <image name="RectangleWelcome" width="375" height="667"/>
+        <image name="welc0" width="16" height="16"/>
     </resources>
 </document>

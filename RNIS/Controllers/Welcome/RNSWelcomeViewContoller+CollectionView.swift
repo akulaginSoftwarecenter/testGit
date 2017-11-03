@@ -28,5 +28,21 @@ extension RNSWelcomeViewContoller: UICollectionViewDataSource, UICollectionViewD
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updatePage()
+        animateCell()
+    }
+    
+    func animateCell() {
+        guard let indexPath = currentIndexPath,
+            let cell = collectionView.cellForItem(at: indexPath) as? RNSWelcomeCell else {
+                return
+        }
+        cell.startAnimate()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell =  cell as? RNSWelcomeCell else {
+            return
+        }
+        cell.endAnimate()
     }
 }
