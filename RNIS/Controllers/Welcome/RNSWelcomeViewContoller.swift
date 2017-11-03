@@ -14,7 +14,7 @@ struct WelcomeItem {
         self.startImage = startImage
         self.main = main
         self.desc = desc
-        self.main = main
+        self.title = title
     }
     
     var back: UIImage?
@@ -31,6 +31,11 @@ class RNSWelcomeViewContoller: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var labelDesc: UILabel!
     @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var titleButton: UILabel!
+    
+    var currentIndexPath: IndexPath? {
+        return collectionView.indexPathForItem(at: collectionView.contentOffset)
+    }
     
     lazy var items: [WelcomeItem] = {
         return [WelcomeItem(nil,title: "Будьте в курсе где сейчас ваш автобус и сколько его ждать", startImage: #imageLiteral(resourceName: "welc0Back")),
@@ -44,14 +49,25 @@ class RNSWelcomeViewContoller: UIViewController {
         super.viewDidLoad()
         
         prepareSizeCell()
-        
-        collectionView.reloadData() 
+        collectionView.reloadData()
+        updatePage()
     }
     
     func prepareSizeCell() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.itemSize = UIScreen.size
         }
+    }
+    
+    func updatePage() {
+        guard let index = currentIndexPath?.row,
+            let item = item(currentIndexPath) else {
+            return
+        }
+        pageControl.currentPage = index
+        labelTitle.text = item.title
+        labelDesc.text = item.desc
+        titleButton.text = index == 4 ? "Перейти к приложению" : "Пропустить"
     }
     
     override class var storyboardName: String {

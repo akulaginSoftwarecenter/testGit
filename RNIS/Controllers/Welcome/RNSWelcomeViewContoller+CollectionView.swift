@@ -15,12 +15,18 @@ extension RNSWelcomeViewContoller: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as RNSWelcomeCell
-        cell.item = items[indexPath.row]
+        cell.item = item(indexPath)
         return cell
     }
     
+    func item(_ indexPath: IndexPath?) -> WelcomeItem? {
+        guard let indexPath = indexPath else {
+            return nil
+        }
+        return items[indexPath.row]
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-   
-        //updatePageControl(currentIndexPath?.row)
+        updatePage()
     }
 }
