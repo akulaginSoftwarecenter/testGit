@@ -31,7 +31,8 @@ class RNSEmailField: RNSTextField {
     
     required init() {
         super.init()
-        keyboardType = .emailAddress
+ 
+        prepareKeyBoard()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,5 +41,15 @@ class RNSEmailField: RNSTextField {
     
     override func prepareUI() {
         prepareUI("Электронная почта")
+    }
+    
+    func prepareKeyBoard() {
+        keyboardType = .emailAddress
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        prepareKeyBoard()
     }
 }

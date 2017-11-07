@@ -11,7 +11,7 @@ import UIKit
 
 extension String{
     var last10:String {
-        return String(characters.suffix(10))
+        return String(suffix(10))
     }
     
     func width(_ font: UIFont) -> CGFloat {
