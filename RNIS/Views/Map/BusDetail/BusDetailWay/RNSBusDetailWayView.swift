@@ -29,9 +29,7 @@ class RNSBusDetailWayView: BaseViewWithXIBInit {
     var item: RNSBusTemp?{
         didSet {
             Utils.queueUserInitiated {
-                CounterTime.startTimer()
                 self.tableModel = self.item?.tableModel
-                CounterTime.endTimer()
             }
         }
     }

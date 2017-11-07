@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
+class RNSScrollShowContainer: UIViewController {
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
@@ -42,6 +42,7 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     var hideImageSlide = false
     var hideCoverBotton = false
     var allowHideBottom = true
+    var completeFirstAnimation = false
     
     var handlerRect: AliasRectBlock?
     var handlerDismiss: EmptyBlock?
@@ -57,14 +58,14 @@ class RNSScrollShowContainer: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         prepareUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        scrollToStartCompletion()
+        scrollToStart()
     }
     
     override class var storyboardName: String {

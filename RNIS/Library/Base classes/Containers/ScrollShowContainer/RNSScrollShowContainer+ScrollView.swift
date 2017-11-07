@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension RNSScrollShowContainer {
+extension RNSScrollShowContainer: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updatePositionTop()
@@ -40,6 +40,13 @@ extension RNSScrollShowContainer {
     
     func prepareScrollView() {
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: contentInsetBottom, right: 0)
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        if !completeFirstAnimation {
+            completeFirstAnimation = true
+            handlerShowStartComplete?()
+        }
     }
     
     var offsetY: CGFloat {
