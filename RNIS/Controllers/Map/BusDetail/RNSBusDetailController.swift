@@ -58,7 +58,7 @@ class RNSBusDetailController: UIViewController {
     /// Представление, отображающее схему маршрута автобуса
     @IBOutlet weak var viewWay: RNSBusDetailWayView!
     
-    @IBOutlet weak var wayLoader: RNSBackGroundView!
+    lazy var loaderView = RNSLoaderWay()
     
     var canLoadViewWay = false
     
@@ -70,20 +70,14 @@ class RNSBusDetailController: UIViewController {
     
     /// Загрузка модели автобуса
     func loadItem() {
-        wayLoader.isHidden = false
-        RNSPostBusGet(itemBus) {[weak self] item in
-            self?.loaderHide()
+        loaderView.showInView(view)
+        RNSPostBusGet(itemBus, complete: {[weak self] item in
+            self?.loaderView.remove()
             self?.item = item
             self?.prepareItem()
-        }
-    }
-    
-    func loaderHide() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.wayLoader.alpha = 0
-        }) { (value) in
-            self.wayLoader.isHidden = true
-        }
+            }, failure: { [weak self] in
+               self?.loaderView.prepareFailure()
+        })
     }
     
     /// Настройка представлений

@@ -12,6 +12,7 @@ import Alamofire
 class RNSPostBusGet: RNSPostRequestMobileToken {
     var item: RNSBus?
     var complete: AliasComplete?
+    var failure: EmptyBlock?
     
     override var method: Alamofire.HTTPMethod {
         return .post
@@ -19,11 +20,12 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
     typealias AliasComplete = (RNSBusTemp?) -> ()
     typealias AliasReply = RNSRequestReply<RNSBusTemp,RNSRegisterError>
     
-    @discardableResult convenience init(_ item: RNSBus?, complete: AliasComplete?) {
+    @discardableResult convenience init(_ item: RNSBus?, complete: AliasComplete?, failure: EmptyBlock? = nil) {
         self.init()
         
         self.item = item
         self.complete = complete
+        self.failure = failure
         
         sendRequestWithCompletion { (object, error, inot) in
             Utils.queueUserInitiated {
@@ -44,7 +46,7 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
     }
     
     func parseError(_ model: AliasReply?) {
-        complete?(nil)
+        failure?()
     }
     
     override var payload: AliasDictionary {
@@ -54,6 +56,11 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
         return [kUuid: uuid]
     }
     
+    override func apiDidFailWithError(_ error: NSError) {
+        super.apiDidFailWithError(error)
+        failure?()
+    }
+      
     override var subject: String {
         return "com.rnis.mobile.action.bus.get"
     }

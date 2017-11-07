@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="mainFont.otf">
-            <string>Cffazmiakhaddpiofffvylaqekz</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Bus Detail Controller-->
         <scene sceneID="Z6h-PO-5l9">
@@ -34,39 +29,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-7x-OkS" customClass="RNSBackGroundView" customModule="RNIS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка данных..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-g7-Wyc">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="175" id="Bor-ma-kgI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="GQh-g7-Wyc" secondAttribute="trailing" id="AVK-J4-NaU"/>
-                                    <constraint firstItem="GQh-g7-Wyc" firstAttribute="top" secondItem="FOc-7x-OkS" secondAttribute="top" id="mma-KG-P7a"/>
-                                    <constraint firstItem="GQh-g7-Wyc" firstAttribute="leading" secondItem="FOc-7x-OkS" secondAttribute="leading" id="nkD-cV-ydM"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W4V-gY-xMs" firstAttribute="top" secondItem="YV2-eC-71g" secondAttribute="bottom" id="3gC-ec-yuB"/>
                             <constraint firstItem="YV2-eC-71g" firstAttribute="top" secondItem="O7P-Kd-VrC" secondAttribute="top" id="52o-64-U3H"/>
-                            <constraint firstItem="W4V-gY-xMs" firstAttribute="top" secondItem="FOc-7x-OkS" secondAttribute="bottom" id="9cN-YS-65L"/>
                             <constraint firstItem="W4V-gY-xMs" firstAttribute="top" secondItem="gzf-qu-mtx" secondAttribute="bottom" id="A5x-Ii-He1"/>
-                            <constraint firstAttribute="trailing" secondItem="FOc-7x-OkS" secondAttribute="trailing" id="CFg-9V-oyu"/>
                             <constraint firstItem="gzf-qu-mtx" firstAttribute="top" secondItem="O7P-Kd-VrC" secondAttribute="top" id="Jwm-f3-PJ8"/>
                             <constraint firstItem="YV2-eC-71g" firstAttribute="leading" secondItem="O7P-Kd-VrC" secondAttribute="leading" id="Re0-I4-FqI"/>
-                            <constraint firstItem="FOc-7x-OkS" firstAttribute="top" secondItem="O7P-Kd-VrC" secondAttribute="top" id="TDX-ah-59D"/>
                             <constraint firstItem="gzf-qu-mtx" firstAttribute="leading" secondItem="O7P-Kd-VrC" secondAttribute="leading" id="bH1-kT-xoe"/>
-                            <constraint firstItem="FOc-7x-OkS" firstAttribute="leading" secondItem="O7P-Kd-VrC" secondAttribute="leading" id="bRg-sr-ZRD"/>
                             <constraint firstAttribute="trailing" secondItem="gzf-qu-mtx" secondAttribute="trailing" id="bnf-WO-jbU"/>
                             <constraint firstAttribute="trailing" secondItem="YV2-eC-71g" secondAttribute="trailing" id="bqC-IR-pG0"/>
                         </constraints>
@@ -74,7 +45,6 @@
                     <connections>
                         <outlet property="viewTotal" destination="gzf-qu-mtx" id="X91-2W-jop"/>
                         <outlet property="viewWay" destination="YV2-eC-71g" id="m6K-ks-hcR"/>
-                        <outlet property="wayLoader" destination="FOc-7x-OkS" id="XLx-EA-24U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1P-Bw-pX4" userLabel="First Responder" sceneMemberID="firstResponder"/>

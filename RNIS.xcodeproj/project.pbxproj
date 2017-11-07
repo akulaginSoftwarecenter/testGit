@@ -558,6 +558,8 @@
 		83B2E09F1F1E152E00FA92A4 /* NSError+ErrorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */; };
 		83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */; };
 		83B8DE4E1F834344002E0238 /* RNSRouteVariant+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8DE4D1F834344002E0238 /* RNSRouteVariant+Parse.swift */; };
+		83C00B3C1FB169CC00B09183 /* RNSLoaderWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C00B3B1FB169CC00B09183 /* RNSLoaderWay.swift */; };
+		83C00B3E1FB169E600B09183 /* RNSLoaderWay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C00B3D1FB169E600B09183 /* RNSLoaderWay.xib */; };
 		83C15D671F78A002005FD3F4 /* RNSProfileViewController+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C15D661F78A001005FD3F4 /* RNSProfileViewController+Image.swift */; };
 		83CD584B1F25878900A9FE1A /* RNSPostRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD584A1F25878900A9FE1A /* RNSPostRouting.swift */; };
 		83CD584D1F25879B00A9FE1A /* RNSPostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD584C1F25879B00A9FE1A /* RNSPostLogin.swift */; };
@@ -1159,6 +1161,8 @@
 		83B2E09E1F1E152E00FA92A4 /* NSError+ErrorItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSError+ErrorItem.swift"; path = "Library/Helpers/Base objects extensions/NSError/NSError+ErrorItem.swift"; sourceTree = "<group>"; };
 		83B2E0A31F1E167700FA92A4 /* RNSGetTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSGetTraffic.swift; path = GET/Traffic/RNSGetTraffic.swift; sourceTree = "<group>"; };
 		83B8DE4D1F834344002E0238 /* RNSRouteVariant+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSRouteVariant+Parse.swift"; path = "Models/Temp/RNSRouteVariant/RNSRouteVariant+Parse.swift"; sourceTree = "<group>"; };
+		83C00B3B1FB169CC00B09183 /* RNSLoaderWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNSLoaderWay.swift; path = Views/Others/LoaderWay/RNSLoaderWay.swift; sourceTree = "<group>"; };
+		83C00B3D1FB169E600B09183 /* RNSLoaderWay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RNSLoaderWay.xib; path = Views/Others/LoaderWay/RNSLoaderWay.xib; sourceTree = "<group>"; };
 		83C15D661F78A001005FD3F4 /* RNSProfileViewController+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RNSProfileViewController+Image.swift"; path = "Controllers/Profile/RNSProfileViewController+Image.swift"; sourceTree = "<group>"; };
 		83CD584A1F25878900A9FE1A /* RNSPostRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostRouting.swift; path = POST/Routing/RNSPostRouting.swift; sourceTree = "<group>"; };
 		83CD584C1F25879B00A9FE1A /* RNSPostLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RNSPostLogin.swift; path = POST/Login/RNSPostLogin.swift; sourceTree = "<group>"; };
@@ -1411,6 +1415,7 @@
 		8310D4531F3C72AC000CCD0A /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				83C00B3A1FB169AA00B09183 /* LoaderWay */,
 				83A5C7021F580BA4006C8D62 /* DateSelectView */,
 				83D155931F4BD0E000150144 /* ArrowLeft */,
 				8356BE511F3D580400560623 /* BackGroundView */,
@@ -3220,6 +3225,7 @@
 		8375DE9C1F204FA700FCA26E /* LoaderView */ = {
 			isa = PBXGroup;
 			children = (
+				83C00B3F1FB16B2200B09183 /* Parent */,
 				8375DE9D1F204FA700FCA26E /* LoaderView.swift */,
 				8375DE9E1F204FA700FCA26E /* LoaderView.xib */,
 			);
@@ -4255,6 +4261,22 @@
 			name = Traffic;
 			sourceTree = "<group>";
 		};
+		83C00B3A1FB169AA00B09183 /* LoaderWay */ = {
+			isa = PBXGroup;
+			children = (
+				83C00B3B1FB169CC00B09183 /* RNSLoaderWay.swift */,
+				83C00B3D1FB169E600B09183 /* RNSLoaderWay.xib */,
+			);
+			name = LoaderWay;
+			sourceTree = "<group>";
+		};
+		83C00B3F1FB16B2200B09183 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
 		83CD58491F25870900A9FE1A /* Routing */ = {
 			isa = PBXGroup;
 			children = (
@@ -4726,6 +4748,7 @@
 				831E42601F4688E50016C7D3 /* RNSTwoBtnAlert.xib in Resources */,
 				83AFEB5D1F6A365900C2A251 /* RNSForecastCell.xib in Resources */,
 				836989341F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */,
+				83C00B3E1FB169E600B09183 /* RNSLoaderWay.xib in Resources */,
 				83D155891F4BC85500150144 /* RNSDotsBussView.xib in Resources */,
 				837036BB1F42A2C000FBD1E9 /* RNSDutyViewController.storyboard in Resources */,
 				836D80B11F1DB35400FEE390 /* Assets.xcassets in Resources */,
@@ -4887,6 +4910,7 @@
 				838CE93E1F3DB60C00C10FBA /* RNSSearchViewController.swift in Sources */,
 				83D95E481F86431300A0B9A8 /* RNSBusStopTemp+Hashable.swift in Sources */,
 				836D80AE1F1DB33900FEE390 /* AppDelegate.swift in Sources */,
+				83C00B3C1FB169CC00B09183 /* RNSLoaderWay.swift in Sources */,
 				835D854B1F5022D100B83EB2 /* RNSRectPoint+Contains.swift in Sources */,
 				835D85401F4FE63200B83EB2 /* CounterTime.swift in Sources */,
 				836989291F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */,
