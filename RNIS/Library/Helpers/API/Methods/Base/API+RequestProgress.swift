@@ -34,6 +34,10 @@ extension API {
     @objc var isShowLogReply: Bool {
         return showLogApi
     }
+    
+    @objc var isShowLogRequest: Bool {
+        return showLogApi
+    }
 
     /**
      Return Reply

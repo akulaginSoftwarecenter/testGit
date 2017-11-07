@@ -42,7 +42,7 @@ class RNSRequest: AlamofireAPI {
         ]
         mutableRequest.allHTTPHeaderFields = headers
         mutableRequest.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
-        if showLogApi {
+        if showLogApi,isShowLogRequest {
             print("subject",subject)
         }
         return mutableRequest

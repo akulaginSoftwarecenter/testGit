@@ -45,7 +45,7 @@ class AlamofireAPI: API {
         urlRequest.httpMethod = method.rawValue
         urlRequest = prepareURLRequest(urlRequest)
         
-        if showLogApi {
+        if showLogApi,isShowLogRequest {
             print("parameters",parameters)
             print("encodedURLRequest ",urlRequest)
         }

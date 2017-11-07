@@ -54,6 +54,10 @@ class RNSPostBusList: RNSRequest {
         return false
     }
     
+    override var isShowLogRequest: Bool {
+        return false
+    }
+    
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,
             let items = model?.payload?.items {
