@@ -10,13 +10,14 @@ import UIKit
 
 class RNSDotsVerticalModel: NSObject {
     var items = [RNSVerticalTableItem]()
-    var duration = "20 мин."
+    var duration = String()
     var points: [RNSRoutePoint]?
     
     convenience init(_ main: RNSRouteVariant?) {
         self.init()
         
         self.points = main?.points
+        self.duration = "\(main?.time ?? 0) мин."
         prepareItems()
     }
     

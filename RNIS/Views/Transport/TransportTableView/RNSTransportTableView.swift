@@ -48,7 +48,6 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     /// Функция обновления вида элементов экрана
     func updateUI() {
         loaderView.showInView(self)
-        print("updateUI RNSTransportTableView")
         RNSPostFavoritePathList {[weak self] (reply, error, _) in
             self?.loaderView.remove()
             self?.items = reply as?[RNSRouteVariant]
