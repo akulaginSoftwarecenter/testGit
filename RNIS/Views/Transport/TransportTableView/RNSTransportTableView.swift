@@ -20,7 +20,7 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     /// Создание экземпляра таблицы
     @IBOutlet var tableView: RNSRegisterTableView!
     /// Создание экземпляра вида загрузки
-    lazy var loaderView: LoaderView = LoaderView()
+    lazy var loaderView = LoaderView()
     
     /// Инициализация таблицы
     override func awakeFromNib() {

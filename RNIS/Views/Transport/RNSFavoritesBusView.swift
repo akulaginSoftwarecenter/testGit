@@ -19,7 +19,7 @@ struct TableSection {
 class RNSFavoritesBusView: BaseViewWithXIBInit {
     
     /// Экземпляр класса вида загрузки
-    lazy var loaderView: LoaderView = LoaderView()
+    lazy var loaderView = LoaderView()
     /// Создание секций таблицы
     var sections = [TableSection]()
     

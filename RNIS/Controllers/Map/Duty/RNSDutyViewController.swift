@@ -14,7 +14,7 @@ import UIKit
 class RNSDutyViewController: UIViewController {
     
     /// Представление, которое служит индикатором загрузки
-    lazy var loaderView:LoaderView = LoaderView()
+    lazy var loaderView = LoaderView()
 
     /// Кнопка сброса даты и времени
     @IBOutlet weak var crossButton: UIButton!

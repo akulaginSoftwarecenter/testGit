@@ -30,7 +30,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     /// Таблица с пунктами меню
     @IBOutlet weak var tableView: UITableView!
     /// Индикатор загрузки
-    lazy var loaderView:LoaderView = LoaderView()
+    lazy var loaderView = LoaderView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

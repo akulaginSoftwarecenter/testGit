@@ -16,7 +16,7 @@ class RNSLightButton: BaseViewWithXIBInit {
     /// Блок нажатия
     var handlerAction: EmptyBlock?
     /// Индикатор загрузки
-    lazy var loaderView:LoaderView = LoaderView()
+    lazy var loaderView = LoaderView()
     
     /// кнопка
     @IBOutlet weak var button: UIButton!
