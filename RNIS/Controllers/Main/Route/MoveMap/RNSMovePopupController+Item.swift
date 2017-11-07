@@ -39,7 +39,7 @@ extension RNSMovePopupController {
         }
         
         alert = STRouter.showAlertOk("Маршрут завершен") {
-            STRouter.pop()
+            STRouter.popToRoot()
         }
     }
 }
