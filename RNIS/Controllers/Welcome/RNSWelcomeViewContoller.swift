@@ -40,7 +40,7 @@ class RNSWelcomeViewContoller: UIViewController {
     lazy var items: [WelcomeItem] = {
         return [WelcomeItem(nil,title: "Будьте в курсе где сейчас ваш автобус и сколько его ждать", startImage: #imageLiteral(resourceName: "welc0Back")),
                 WelcomeItem(#imageLiteral(resourceName: "welc1Back"),title: "Поиск маршрутов", desc: "Стройте маршруты на общественном транспорте до нужного адреса в Подмосковье", main: #imageLiteral(resourceName: "welc1")),
-                WelcomeItem(#imageLiteral(resourceName: "welc2Back"),title: "Контроль", desc: "Участвуйте в улучшении работы общественного транспорта Подмосковья.", main: #imageLiteral(resourceName: "welc2")),
+                WelcomeItem(#imageLiteral(resourceName: "welc2Back"),title: "Контроль", desc: "Участвуйте в улучшении работы общественного транспорта Подмосковья", main: #imageLiteral(resourceName: "welc2")),
                 WelcomeItem(#imageLiteral(resourceName: "welc3Back"),title: "Расписание", desc: "Смотрите расписание на остановке и по конкретному автобусу", main: #imageLiteral(resourceName: "welc3")),
                 WelcomeItem(#imageLiteral(resourceName: "welc4Back"),title: "Избранное", desc: "Сохраняйте любимые маршруты и остановки с расписаниями, что бы они всегда были под рукой", main: #imageLiteral(resourceName: "welc4"))]
     }()
