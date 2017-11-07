@@ -15,6 +15,7 @@ extension RNSProfileViewController {
         STRouter.showLoader()
         RNSPostUserGet {[weak self] (reply, error, _) in
             self?.updateUI(reply as? RNSUserPayload)
+            self?.checkShowBtn()
             STRouter.removeLoader()
         }
     }

@@ -12,12 +12,16 @@ extension RNSProfileViewController {
     
     /// Событие нажатия на кнопку смены номера телефона
     @IBAction func actionPhone(_ sender: Any) {
-        RNSChangePhoneController.controller.pushAnimatedImageScroll()
+        checkExit {
+            RNSChangePhoneController.controller.pushAnimatedImageScroll()
+        }
     }
     
     /// Событие нажатия на кнопку смены пароля
     @IBAction func actionPassword(_ sender: Any) {
-        RNSChangePasswordController.initialController.pushAnimatedImageScroll()
+        checkExit {
+            RNSChangePasswordController.initialController.pushAnimatedImageScroll()
+        }
     }
     
     @IBAction func nameChange(_ sender: Any) {
@@ -34,6 +38,12 @@ extension RNSProfileViewController {
     
     @IBAction func actionEmaill(_ sender: Any) {
         changeEmailIfNeed()
+    }
+    
+    @IBAction func actionExit(_ sender: Any) {
+        checkExit {
+            RNSMenuManager.showLeftMenu()
+        }
     }
       
     /// Настройка кнопки выхода
