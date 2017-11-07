@@ -17,8 +17,8 @@ extension RNSBusStopDetailController {
         RNSStopPointRoutes(item, complete: { [weak self] items in
             self?.prepareItems(items)
             self?.removeLoader()
-            }, failure: { error in
-                // self?.prepareError(error)
+            }, failure: { [weak self] error in
+                self?.loaderView.prepareFailure()
         })
     }
     

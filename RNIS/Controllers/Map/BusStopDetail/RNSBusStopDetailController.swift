@@ -36,7 +36,6 @@ class RNSBusStopDetailController: UIViewController {
     /// Массив моделей автобусных маршрутов
     var items: [RNSBusRouteTemp]?
     /// Представление индикации загрузки
-    lazy var loaderView:LoaderView = LoaderView()
     
     /// Ограничение расстояния между таблицей и верхней стороной представления контроллера
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
@@ -46,6 +45,8 @@ class RNSBusStopDetailController: UIViewController {
     @IBOutlet weak var timerlabel: UILabel!
     /// Кнопка "сообщить об ошибке"
     @IBOutlet weak var errorReportButton: RNSBlackButton!
+    
+    lazy var loaderView = RNSLoaderWay()
     
     /// Начальная высота контроллера
     var startBottomOffset: CGFloat?

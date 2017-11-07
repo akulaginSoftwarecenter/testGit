@@ -60,6 +60,11 @@ class RNSStopPointRoutes: RNSRequest {
         return ["uuid": uuid]
     }
     
+    override func apiDidFailWithError(_ error: NSError) {
+        super.apiDidFailWithError(error)
+        failure?(nil)
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.stop_point.routes"
     }
