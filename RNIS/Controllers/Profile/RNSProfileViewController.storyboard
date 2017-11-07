@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tda-Cz-cXr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tda-Cz-cXr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,6 +67,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Имя пользователя"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nameChange:" destination="Tda-Cz-cXr" eventType="editingChanged" id="jIy-tp-XRA"/>
                                     <outlet property="delegate" destination="Tda-Cz-cXr" id="3Ec-Ay-klE"/>
                                 </connections>
                             </textField>
@@ -81,6 +82,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите E-mail"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="emailChange:" destination="Tda-Cz-cXr" eventType="editingChanged" id="m9F-tj-fMx"/>
                                     <outlet property="delegate" destination="Tda-Cz-cXr" id="4IQ-AW-K3c"/>
                                 </connections>
                             </textField>
@@ -139,23 +141,51 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-fC-iQL">
+                                <rect key="frame" x="320" y="343" width="25" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Hds-pw-X5p"/>
+                                    <constraint firstAttribute="height" constant="50" id="X8c-Tp-ovd"/>
+                                </constraints>
+                                <state key="normal" image="galka"/>
+                                <connections>
+                                    <action selector="actionEmaill:" destination="Tda-Cz-cXr" eventType="touchUpInside" id="TQD-8m-AjR"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJc-s3-GWG">
+                                <rect key="frame" x="320" y="260" width="25" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="6s5-8I-Vmt"/>
+                                    <constraint firstAttribute="height" constant="50" id="m03-fr-qiY"/>
+                                </constraints>
+                                <state key="normal" image="galka"/>
+                                <connections>
+                                    <action selector="actionName:" destination="Tda-Cz-cXr" eventType="touchUpInside" id="9tX-hr-VBn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BLA-Go-8UB" secondAttribute="trailing" constant="30" id="2uH-jR-1Ps"/>
                             <constraint firstItem="AvH-Pi-c86" firstAttribute="top" secondItem="qxU-QA-nnz" secondAttribute="bottom" constant="10" id="4Ch-FW-icZ"/>
+                            <constraint firstItem="RRN-fC-iQL" firstAttribute="bottom" secondItem="xHl-sp-FVm" secondAttribute="bottom" id="4kE-2G-fR2"/>
                             <constraint firstAttribute="trailing" secondItem="xHl-sp-FVm" secondAttribute="trailing" constant="30" id="6iA-xA-hih"/>
+                            <constraint firstItem="RRN-fC-iQL" firstAttribute="trailing" secondItem="xHl-sp-FVm" secondAttribute="trailing" id="83y-j4-cgm"/>
                             <constraint firstItem="xHl-sp-FVm" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="8gF-2S-tok"/>
                             <constraint firstItem="gW3-PU-jT5" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="Dev-SM-DJx"/>
                             <constraint firstItem="xHl-sp-FVm" firstAttribute="bottom" secondItem="gW3-PU-jT5" secondAttribute="bottom" constant="83" id="ENq-a5-X5L"/>
                             <constraint firstAttribute="trailing" secondItem="gW3-PU-jT5" secondAttribute="trailing" constant="30" id="Fjv-6H-ihR"/>
                             <constraint firstItem="He8-hz-3g9" firstAttribute="top" secondItem="MPX-75-nWd" secondAttribute="top" constant="84" id="JTi-TP-j17"/>
                             <constraint firstItem="89S-Yo-PlB" firstAttribute="bottom" secondItem="xHl-sp-FVm" secondAttribute="bottom" constant="83" id="KpT-DH-l6S"/>
+                            <constraint firstItem="CJc-s3-GWG" firstAttribute="trailing" secondItem="gW3-PU-jT5" secondAttribute="trailing" id="Mxo-Ss-YPQ"/>
                             <constraint firstAttribute="trailing" secondItem="AvH-Pi-c86" secondAttribute="trailing" constant="30" id="Nz9-dF-Vrt"/>
                             <constraint firstItem="pT7-5p-UAB" firstAttribute="top" secondItem="BLA-Go-8UB" secondAttribute="bottom" constant="24" id="QnR-of-7Io"/>
                             <constraint firstItem="qxU-QA-nnz" firstAttribute="top" secondItem="eQc-H9-pkS" secondAttribute="bottom" id="W5I-Cg-l3d"/>
                             <constraint firstItem="He8-hz-3g9" firstAttribute="centerX" secondItem="MPX-75-nWd" secondAttribute="centerX" id="a8D-y6-PcC"/>
                             <constraint firstItem="rpT-QZ-9JN" firstAttribute="top" secondItem="xHl-sp-FVm" secondAttribute="bottom" constant="6" id="cBK-rg-ISd"/>
+                            <constraint firstItem="CJc-s3-GWG" firstAttribute="bottom" secondItem="gW3-PU-jT5" secondAttribute="bottom" id="cUE-j8-aQi"/>
                             <constraint firstItem="rpT-QZ-9JN" firstAttribute="leading" secondItem="MPX-75-nWd" secondAttribute="leading" constant="30" id="dCK-eB-ShU"/>
                             <constraint firstItem="gW3-PU-jT5" firstAttribute="bottom" secondItem="He8-hz-3g9" secondAttribute="bottom" constant="76" id="eHs-9K-Ki5"/>
                             <constraint firstItem="BLA-Go-8UB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qxU-QA-nnz" secondAttribute="bottom" priority="750" constant="33" id="gTY-Z4-GcW"/>
@@ -178,6 +208,8 @@
                         <outlet property="blackButton" destination="BLA-Go-8UB" id="wJ5-eh-piY"/>
                         <outlet property="emailField" destination="xHl-sp-FVm" id="0Rc-ok-HVV"/>
                         <outlet property="errorLabel" destination="AvH-Pi-c86" id="3wy-jL-xDp"/>
+                        <outlet property="galkaEmail" destination="RRN-fC-iQL" id="SKN-Dy-wfW"/>
+                        <outlet property="galkaName" destination="CJc-s3-GWG" id="avp-cj-g21"/>
                         <outlet property="nameField" destination="gW3-PU-jT5" id="iur-Qh-jvy"/>
                         <outlet property="phoneField" destination="89S-Yo-PlB" id="ohd-zG-6Zh"/>
                         <outlet property="profilePhoto" destination="He8-hz-3g9" id="7c1-DR-JR8"/>
@@ -188,4 +220,7 @@
             <point key="canvasLocation" x="280.80000000000001" y="-128.18590704647679"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="galka" width="24" height="19"/>
+    </resources>
 </document>

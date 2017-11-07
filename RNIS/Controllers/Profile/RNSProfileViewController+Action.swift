@@ -19,4 +19,27 @@ extension RNSProfileViewController {
     @IBAction func actionPassword(_ sender: Any) {
         RNSChangePasswordController.initialController.pushAnimatedImageScroll()
     }
+    
+    @IBAction func nameChange(_ sender: Any) {
+        checkShowBtnName()
+    }
+    
+    @IBAction func emailChange(_ sender: Any) {
+        checkShowBtnEmail()
+    }
+    
+    @IBAction func actionName(_ sender: Any) {
+        changeNameIfNeed()
+    }
+    
+    @IBAction func actionEmaill(_ sender: Any) {
+        changeEmailIfNeed()
+    }
+      
+    /// Настройка кнопки выхода
+    func prepareBlackButton() {
+        blackButton.handlerAction = { [weak self] in
+            self?.showAlert()
+        }
+    }
 }

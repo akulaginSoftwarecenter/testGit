@@ -26,8 +26,19 @@ class RNSProfileViewController: UIViewController {
     /// Представление для демонстрации автара пользователя с возможностью редактирования
     @IBOutlet weak var profilePhoto: RNSProfilePhoto!
     
+    @IBOutlet weak var galkaName: UIButton!
+    @IBOutlet weak var galkaEmail: UIButton!
+    
     /// Модель профиля пользователя
     var item: RNSUserPayload?
+    
+    var nameText: String? {
+        return nameField.text
+    }
+    
+    var emailText: String? {
+        return emailField.text
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,47 +55,10 @@ class RNSProfileViewController: UIViewController {
         }
     }
     
-    /// Настройка кнопки выхода
-    func prepareBlackButton() {
-        blackButton.handlerAction = { [weak self] in
-            self?.showAlert()
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         loadData()
-    }
-    
-    /// Очистка представлений
-    func clearAll() {
-        profilePhoto.imageView.image = nil
-        nameField.text = ""
-        phoneField.text = ""
-        emailField.text = ""
-        errorLabel.text = ""
-    }
-    
-    /// Загрузка данных профиля пользователя
-    func loadData() {
-        STRouter.showLoader()
-        RNSPostUserGet {[weak self] (reply, error, _) in
-            self?.updateUI(reply as? RNSUserPayload)
-            STRouter.removeLoader()
-        }
-    }
-    
-    /// Обновление представлений
-    ///
-    /// - Parameter item: модель профиля
-    func updateUI(_ item: RNSUserPayload?) {
-        self.item = item
-        nameField.text = item?.name
-        phoneField.text = item?.formatPhone
-        emailField.text = item?.email
-        self.item?.new_email = nil  // Remove new_email from update profile payload
-        decodeImage()
     }
     
     override class var storyboardName: String {
