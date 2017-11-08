@@ -50,15 +50,17 @@ extension API
         lastReply = nil
         lastError = error
         var shouldUseDefaultErrorHandler = true;
+        /*
         if error.unauthorized {
               self.reAuthorizeUser()
         } else {
+         */
             completion?(nil, error, &shouldUseDefaultErrorHandler)
             if (shouldUseDefaultErrorHandler) {
             //MessageCenter.showError(error)
             }
             apiDidEnd()
-        }
+        //}
     }
     
     /**
