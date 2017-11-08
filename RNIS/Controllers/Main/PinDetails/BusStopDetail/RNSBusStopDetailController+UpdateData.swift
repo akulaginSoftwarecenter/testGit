@@ -12,11 +12,11 @@ import Foundation
 extension RNSBusStopDetailController {
     
     /// Загрузка с сервера списка автобусных маршрутов
-    func loadItems() {
-        showLoader()
+    func loadItems(_ loaderTwo: Bool = false) {
+        showLoader(loaderTwo)
         RNSStopPointRoutes(item, complete: { [weak self] items in
             self?.prepareItems(items)
-            self?.removeLoader()
+            self?.removeLoader(loaderTwo)
             }, failure: { [weak self] error in
                 self?.loaderView.prepareFailure()
         })
@@ -31,13 +31,22 @@ extension RNSBusStopDetailController {
     }
     
     /// Показать представление индикации загрузки
-    func showLoader() {
-        loaderView.showInView(self.view)
+    func showLoader(_ loaderTwo: Bool = false) {
+        if loaderTwo {
+            loaderViewTwo.showInView(self.view)
+        } else {
+            loaderView.showInView(self.view)
+        }
     }
     
     /// Убрать представление индикации загрузки
-    func removeLoader() {
-        loaderView.remove()
+    func removeLoader(_ loaderTwo: Bool = false) {
+        if loaderTwo {
+            loaderViewTwo.remove()
+        } else {
+            loaderView.remove()
+        }
+        
     }
     
     /// Обновление надписи выбранной остановки
@@ -53,10 +62,10 @@ extension RNSBusStopDetailController {
             return
         }
         RNSPostFavoriteRouteCreate(item) { [weak self] in
-            self?.removeLoader()
-            self?.loadItems()
+            self?.removeLoader(true)
+            self?.loadItems(true)
         }
-        showLoader()
+        showLoader(true)
     }
 
     func updateNotification(_ busRoute: RNSBusRouteTemp?) {
@@ -64,9 +73,9 @@ extension RNSBusStopDetailController {
             return
         }
         RNSNotificationCreate(bus: busRoute, stop: item, time: "20") { [weak self] in
-            self?.removeLoader()
-            self?.loadItems()
+            self?.removeLoader(true)
+            self?.loadItems(true)
         }
-        showLoader()
+        showLoader(true)
     }
 }

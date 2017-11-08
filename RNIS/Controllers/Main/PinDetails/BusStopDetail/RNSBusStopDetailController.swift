@@ -47,6 +47,7 @@ class RNSBusStopDetailController: UIViewController {
     @IBOutlet weak var errorReportButton: RNSBlackButton!
     
     lazy var loaderView = RNSLoaderWay()
+    lazy var loaderViewTwo = LoaderView()
     
     /// Начальная высота контроллера
     var startBottomOffset: CGFloat?
