@@ -20,6 +20,12 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
         }
     }
     
+    var itemBus: RNSBus? {
+        didSet{
+            titleLabel.text =  itemBus?.route_number ?? ""
+        }
+    }
+    
     /// Представление рисунка показывающего наличие кондиционера
     @IBOutlet weak var conditioningImage: UIImageView!
     /// Представление рисунка показывающего возможность оплаты картой
@@ -35,7 +41,6 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
     
     /// Обновление представлений
     func updateUI() {
-        titleLabel.text =  item?.route_number
         let stops = item?.stop_points
         startLabel.text = stops?.first?.name
         currentLabel.text = item?.next_stop_point?.name

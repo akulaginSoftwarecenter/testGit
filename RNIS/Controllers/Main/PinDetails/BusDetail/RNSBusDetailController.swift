@@ -83,6 +83,7 @@ class RNSBusDetailController: UIViewController {
     /// Настройка представлений
     func prepareItem() {
         viewTotal.item = item
+        viewTotal.itemBus = itemBus
         bottomView.item = item
         prepareWayIfCan()
     }
