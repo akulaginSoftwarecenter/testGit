@@ -19,13 +19,14 @@ extension RNSSearchViewController {
     func updateSearch() {
         RNSSearchManager.text = text
         RNSSearchManager.type = typeSegment
-        clearError()
+        
         if typeSegment == .transport {
             return
         }
         request?.cancel()
         if text.count < 3 {
             clearTable()
+            clearError()
             removeLoader()
             return
         }
@@ -41,24 +42,27 @@ extension RNSSearchViewController {
     func searchStops() {
         loaderView.showInView(self.view)
         request = RNSPostSearch(text, type:typeSegment, complete: { [weak self] items in
-            self?.items = (items as? [RNSTextItem])
-            self?.tableReload()
-            self?.removeLoader()
+            self?.prepareItems(items as? [RNSTextItem])
             }, failure: { [weak self] text in
-                self?.prepareError(text)
-                self?.clearTable()
-                self?.removeLoader()
+                self?.prepareClearError(text)
         })
     }
     
     /// Запрос на поиск адресов
     func searchAddress() {
         loaderView.showInView(self.view)
-        request = RNSGetSearchAddress(text) { [weak self] items in
-            self?.items = items
-            self?.tableReload()
-            self?.removeLoader()
-        }
+        request = RNSGetSearchAddress(text, complete: { [weak self] items in
+            self?.prepareItems(items)
+            }, failure: { [weak self] text in
+                self?.prepareClearError(text)
+        })
+    }
+    
+    func prepareItems(_ items: [RNSTextItem]?) {
+        self.items = items
+        tableReload()
+        removeLoader()
+        clearError()
     }
     
     /// Убрать индикатор загрузки
@@ -112,6 +116,12 @@ extension RNSSearchViewController {
             RNSBuildRouteView(item.point)
             RNSPinBuild(item.point!)
         }
+    }
+    
+    func prepareClearError(_ error: String?) {
+        prepareError(error)
+        clearTable()
+        removeLoader()
     }
     
     func  prepareError(_ error: String?) {

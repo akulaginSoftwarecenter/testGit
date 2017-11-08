@@ -18,12 +18,14 @@ class RNSGetSearchAddress: RNSGetGeoCode {
     var text: String?
     typealias AliasComplete = (([RNSAddressTemp]?) ->())
     var complete: AliasComplete?
+    var failure: AliasStringBlock?
     
-    @discardableResult convenience init(_ text: String?, complete: AliasComplete?) {
+    @discardableResult convenience init(_ text: String?, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         
         self.text = text
         self.complete = complete
+        self.failure = failure
         sendRequestWithCompletion { (object, error, inot) in
             
         }
@@ -67,8 +69,7 @@ class RNSGetSearchAddress: RNSGetGeoCode {
         }
     }
     
-    override func apiDidFailWithError(_ error: NSError) {
-        super.apiDidFailWithError(error)
-        complete?(nil)
+    override func showErrorNetwork() {
+        failure?(errorNetwork)
     }
 }
