@@ -71,6 +71,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите Имя"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Имя пользователя"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nameChange:" destination="Tda-Cz-cXr" eventType="editingChanged" id="jIy-tp-XRA"/>
@@ -86,6 +89,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Электронная почта"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="leftTextAlignment" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите E-mail"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="emailChange:" destination="Tda-Cz-cXr" eventType="editingChanged" id="m9F-tj-fMx"/>

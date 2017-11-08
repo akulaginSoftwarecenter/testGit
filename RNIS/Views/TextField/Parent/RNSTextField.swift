@@ -64,6 +64,8 @@ class RNSTextField: UITextField {
         }
     }
     
+    @IBInspectable var leftInset: CGFloat = 0
+    
     /// Шрифт заполнителя
     var placeholderFont: UIFont {
         return .cffazm(placeholderFontSize)
