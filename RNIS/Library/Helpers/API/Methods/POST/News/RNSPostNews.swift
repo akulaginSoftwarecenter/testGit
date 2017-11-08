@@ -54,6 +54,11 @@ class RNSPostNews: RNSRequest {
         complete?(nil)
     }
     
+    override func apiDidFailWithError(_ error: NSError) {
+        super.apiDidFailWithError(error)
+        complete?(nil)
+    }
+    
     override var subject: String {
         return "com.rnis.portal.action.news"
     }
