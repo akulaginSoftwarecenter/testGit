@@ -11,7 +11,7 @@ import UIKit
 class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
     
     override var isShowLogReply: Bool {
-        return false
+        return true
     }
     
     typealias AliasReply = RNSRequestReply<RNSFavoriteRouteListPayload,RNSRegisterError>

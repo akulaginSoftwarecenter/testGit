@@ -24,6 +24,18 @@ extension RNSFavoritesBusCell: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    internal func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            RNSPostFavoriteRouteDelete(item(indexPath)?.route_number) {
+                RNSMenuManager.updateFavoriteBuss()
+            }
+        }
+    }
+    
     /// Выбор индекса элемента таблицы
     func item(_ indexPath: IndexPath) -> RNSForecastBus? {
         return items?[indexPath.row]

@@ -39,10 +39,4 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
         topTitle.text = item?.stop_point_title ?? ""
         tableView.reloadData()
     }
-    /// Действие по удалению остановки ТС
-    @IBAction func deleteBusStopAction(_ sender: Any) {
-        RNSPostFavoriteRouteDelete(item.stop_point_uuid) {
-            RNSMenuManager.updateFavoriteBuss()
-        }
-    }
 }

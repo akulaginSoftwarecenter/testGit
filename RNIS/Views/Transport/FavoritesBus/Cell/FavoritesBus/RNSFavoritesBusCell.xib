@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,21 +33,11 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-rO-eTA">
-                        <rect key="frame" x="15" y="12" width="376" height="33"/>
+                        <rect key="frame" x="15" y="12" width="33" height="33"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuJ-t5-tUu">
-                        <rect key="frame" x="391" y="12" width="38" height="33"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="38" id="b29-CG-a4V"/>
-                        </constraints>
-                        <state key="normal" image="cross"/>
-                        <connections>
-                            <action selector="deleteBusStopAction:" destination="cw8-Ul-QE0" eventType="touchUpInside" id="KE9-UQ-Tb1"/>
-                        </connections>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vm2-0t-gLo">
                         <rect key="frame" x="0.0" y="45" width="429" height="1"/>
                         <color key="backgroundColor" red="0.7725490196" green="0.33725490200000002" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,7 +45,7 @@
                             <constraint firstAttribute="height" constant="1" id="MPh-d9-U6N"/>
                         </constraints>
                     </view>
-                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GqU-sL-JpE" customClass="RNSRegisterTableView" customModule="RNIS" customModuleProvider="target">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GqU-sL-JpE" customClass="RNSRegisterTableView" customModule="RNIS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="46" width="429" height="186.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
@@ -71,18 +61,13 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="GqU-sL-JpE" secondAttribute="trailing" id="67b-Gc-mkQ"/>
                     <constraint firstItem="fEB-p1-xWx" firstAttribute="top" secondItem="1Rh-xr-OYZ" secondAttribute="top" constant="12" id="80Y-7s-aUU"/>
-                    <constraint firstItem="vm2-0t-gLo" firstAttribute="top" secondItem="PuJ-t5-tUu" secondAttribute="bottom" id="EyY-PG-Q0i"/>
                     <constraint firstItem="bRR-rO-eTA" firstAttribute="top" secondItem="1Rh-xr-OYZ" secondAttribute="top" constant="12" id="FxG-QV-Ke5"/>
                     <constraint firstAttribute="bottom" secondItem="fEB-p1-xWx" secondAttribute="bottom" id="G6R-TQ-t1E"/>
                     <constraint firstItem="GqU-sL-JpE" firstAttribute="leading" secondItem="1Rh-xr-OYZ" secondAttribute="leading" id="KPR-kg-jnV"/>
-                    <constraint firstItem="PuJ-t5-tUu" firstAttribute="leading" secondItem="bRR-rO-eTA" secondAttribute="trailing" id="NzL-ge-BaL"/>
                     <constraint firstItem="vm2-0t-gLo" firstAttribute="top" secondItem="bRR-rO-eTA" secondAttribute="bottom" id="O2a-7X-Tdy"/>
                     <constraint firstItem="vm2-0t-gLo" firstAttribute="top" secondItem="1Rh-xr-OYZ" secondAttribute="top" constant="45" id="Qkd-14-rms"/>
                     <constraint firstAttribute="bottom" secondItem="GqU-sL-JpE" secondAttribute="bottom" id="Wu4-YG-t5P"/>
                     <constraint firstAttribute="trailing" secondItem="vm2-0t-gLo" secondAttribute="trailing" id="YxI-C3-MlN"/>
-                    <constraint firstAttribute="trailing" secondItem="PuJ-t5-tUu" secondAttribute="trailing" id="ZBe-MO-Xm9"/>
-                    <constraint firstItem="vm2-0t-gLo" firstAttribute="top" secondItem="PuJ-t5-tUu" secondAttribute="bottom" id="ZUX-tB-jFX"/>
-                    <constraint firstItem="PuJ-t5-tUu" firstAttribute="top" secondItem="1Rh-xr-OYZ" secondAttribute="top" constant="12" id="c3p-bG-fRH"/>
                     <constraint firstItem="GqU-sL-JpE" firstAttribute="top" secondItem="vm2-0t-gLo" secondAttribute="bottom" id="ewA-8B-R3W"/>
                     <constraint firstAttribute="trailing" secondItem="fEB-p1-xWx" secondAttribute="trailing" id="hVj-QS-Vdt"/>
                     <constraint firstItem="bRR-rO-eTA" firstAttribute="leading" secondItem="1Rh-xr-OYZ" secondAttribute="leading" constant="15" id="oac-Nf-QCx"/>
@@ -104,7 +89,4 @@
             <point key="canvasLocation" x="-29.5" y="96.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="cross" width="12" height="12"/>
-    </resources>
 </document>
