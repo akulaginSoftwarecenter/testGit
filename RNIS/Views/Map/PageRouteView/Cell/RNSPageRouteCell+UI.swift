@@ -36,18 +36,24 @@ extension RNSPageRouteCell {
     }
     
     func prepareCount() {
-        guard let count = item?.buss.count else {
+        guard var count = item?.buss.count else {
             return
         }
-        var padeg: String
-        if count == 1 {
-            padeg = "пересадка"
-        } else if (1...4).contains(count) {
-            padeg = "пересадки"
-        } else {
-            padeg = "пересадок"
-        }
+        count -= 1
         
-        labelCount.text = "\(count) " + padeg
+        var padeg: String
+   
+        if count < 0 {
+            padeg = ""
+        } else if count == 0 {
+            padeg = "без пересадок"
+        } else if count == 1 {
+            padeg = "\(count) пересадка"
+        } else if (1...4).contains(count) {
+            padeg = "\(count) пересадки"
+        } else {
+            padeg = "\(count) пересадок"
+        }
+        labelCount.text = padeg
     }
 }
