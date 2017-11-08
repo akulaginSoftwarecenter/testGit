@@ -102,9 +102,13 @@ class AlamofireAPI: API {
         }
         super.apiDidFailWithError(error)
         if error.code == -1009 {
-           STRouter.showAlertOk(errorNetwork)
+            showErrorNetwork()
         }
         STRouter.removeLoader()
+    }
+    
+    func showErrorNetwork() {
+        STRouter.showAlertOk(errorNetwork)
     }
 }
 

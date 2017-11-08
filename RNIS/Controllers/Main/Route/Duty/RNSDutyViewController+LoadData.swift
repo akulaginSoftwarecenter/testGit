@@ -20,6 +20,7 @@ extension RNSDutyViewController {
             RNSPageRouteManager.items = items
             RNSPageRouteController.controller.pushAnimated()
             self?.removeLoader()
+            self?.prepareError(nil)
             }, failure: { [weak self] text in
                 self?.prepareError(text)
                 self?.removeLoader()

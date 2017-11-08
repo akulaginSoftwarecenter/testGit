@@ -46,7 +46,6 @@ class RNSPostActionRouting: RNSRequest {
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,
             let items = model?.payload?.items {
-            print("RNSPostActionRouting",items.count)
             complete?(items)
             return
         }
@@ -73,10 +72,8 @@ class RNSPostActionRouting: RNSRequest {
         return dict
     }
     
-    
-    override func apiDidFailWithError(_ error: NSError) {
-        super.apiDidFailWithError(error)
-        failure?(nil)
+    override func showErrorNetwork() {
+        failure?(errorNetwork)
     }
     
     override var method: Alamofire.HTTPMethod {
