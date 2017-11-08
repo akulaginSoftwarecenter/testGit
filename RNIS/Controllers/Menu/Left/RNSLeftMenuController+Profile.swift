@@ -21,9 +21,10 @@ extension RNSLeftMenuController {
         if isHaveToken {
             loadData()
         } else {
-            prepareName("Регистрация")
-            preparePhone("Бесплатно")
+            prepareName("Авторизация")
+            preparePhone(nil)
         }
+        editButton.isHidden = !isHaveToken
     }
     
     /// Загрузка данных профиля
