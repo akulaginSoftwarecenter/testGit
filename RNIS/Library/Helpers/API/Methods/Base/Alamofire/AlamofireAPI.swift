@@ -95,6 +95,17 @@ class AlamofireAPI: API {
         }
         self.alamofireRequest = alamofireRequest
     }
+    
+    override func apiDidFailWithError(_ error: NSError) {
+        if showLogApi {
+            print("apiDidFailWithError",error)
+        }
+        super.apiDidFailWithError(error)
+        if error.code == -1009 {
+           STRouter.showAlertOk(errorNetwork)
+        }
+        STRouter.removeLoader()
+    }
 }
 
 // RequestProgress

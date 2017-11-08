@@ -66,4 +66,9 @@ class RNSGetSearchAddress: RNSGetGeoCode {
             }
         }
     }
+    
+    override func apiDidFailWithError(_ error: NSError) {
+        super.apiDidFailWithError(error)
+        complete?(nil)
+    }
 }

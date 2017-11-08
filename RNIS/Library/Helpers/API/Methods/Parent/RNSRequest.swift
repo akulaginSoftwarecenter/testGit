@@ -47,14 +47,6 @@ class RNSRequest: AlamofireAPI {
         }
         return mutableRequest
     }
-   
-    override func apiDidFailWithError(_ error: NSError) {
-        if showLogApi {
-            print("apiDidFailWithError",error)
-        }
-        super.apiDidFailWithError(error)
-        removeLoader()
-    }
     
     func removeLoader() {
         STRouter.removeLoader()

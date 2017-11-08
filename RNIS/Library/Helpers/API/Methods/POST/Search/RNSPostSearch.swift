@@ -61,6 +61,11 @@ class RNSPostSearch: RNSRequest {
         return .post
     }
     
+    override func apiDidFailWithError(_ error: NSError) {
+        super.apiDidFailWithError(error)
+        failure?(nil)
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.search"
     }

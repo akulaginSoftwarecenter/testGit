@@ -73,6 +73,12 @@ class RNSPostActionRouting: RNSRequest {
         return dict
     }
     
+    
+    override func apiDidFailWithError(_ error: NSError) {
+        super.apiDidFailWithError(error)
+        failure?(nil)
+    }
+    
     override var method: Alamofire.HTTPMethod {
         return .post
     }

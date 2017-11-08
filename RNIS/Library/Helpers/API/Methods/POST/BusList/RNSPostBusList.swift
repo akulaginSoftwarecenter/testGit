@@ -78,6 +78,10 @@ class RNSPostBusList: RNSRequest {
         STRouter.showAlertOk(error)
     }
     
+    override func apiDidFailWithError(_ error: NSError) {
+        
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.bus.list"
     }

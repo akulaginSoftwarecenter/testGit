@@ -57,7 +57,6 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
     }
     
     override func apiDidFailWithError(_ error: NSError) {
-        super.apiDidFailWithError(error)
         failure?()
     }
       
