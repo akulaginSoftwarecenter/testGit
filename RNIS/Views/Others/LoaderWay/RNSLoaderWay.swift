@@ -10,8 +10,24 @@ import UIKit
 
 class RNSLoaderWay: RNSParentLoaderView {
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     func prepareFailure() {
-        labelText.text = "Не удалось загрузить данные"
+        prepareText("Не удалось загрузить данные")
+    }
+    
+    func prepareCenterLabel() {
+        bottomConstraint.isActive = true
+    }
+    
+    func showCenterError(_ view: UIView?, frame: CGRect, text: String? = nil) {
+        showInView(view, frame: frame)
+        prepareCenterLabel()
+        prepareText(text)
+    }
+    
+    func prepareText(_ text: String?) {
+        labelText.text = text
     }
     
     override func animationShow() {

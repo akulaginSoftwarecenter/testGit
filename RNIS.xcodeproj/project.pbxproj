@@ -1819,9 +1819,9 @@
 			children = (
 				832BEEFB1FA6F53900C9A0A7 /* Cell */,
 				831E7A7F1FA714190030B9D0 /* Detail */,
+				83204B521F59225A0033ACA1 /* NewsViewController.swift */,
 				831E7A7D1FA70F090030B9D0 /* NewsViewController+TableView.swift */,
 				83204B541F5922660033ACA1 /* NewsViewController.storyboard */,
-				83204B521F59225A0033ACA1 /* NewsViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -3072,11 +3072,11 @@
 			isa = PBXGroup;
 			children = (
 				836E91AC1F58F987007CCF5A /* cells */,
+				836E91B01F58F987007CCF5A /* RNSLeftMenuController.swift */,
 				83204B2B1F5917270033ACA1 /* RNSLeftMenuController+Action.swift */,
 				838B3B2A1F7B5B88003096F1 /* RNSLeftMenuController+Profile.swift */,
 				836E91BF1F590481007CCF5A /* RNSLeftMenuController+TableView.swift */,
 				836E91B41F58F99C007CCF5A /* RNSLeftMenuController.storyboard */,
-				836E91B01F58F987007CCF5A /* RNSLeftMenuController.swift */,
 			);
 			path = Left;
 			sourceTree = "<group>";
@@ -4101,9 +4101,9 @@
 			isa = PBXGroup;
 			children = (
 				83AFEB531F6A333A00C2A251 /* Cell */,
-				8322792C1F6A3EE600CF83F2 /* RNSFavoritesBusView+TableView.swift */,
-				8351F15F1F81F2C90014F0FD /* RNSFavoritesBusView+items.swift */,
 				83AFEB4E1F6A32DB00C2A251 /* RNSFavoritesBusView.swift */,
+				8351F15F1F81F2C90014F0FD /* RNSFavoritesBusView+items.swift */,
+				8322792C1F6A3EE600CF83F2 /* RNSFavoritesBusView+TableView.swift */,
 				83AFEB511F6A330000C2A251 /* RNSFavoritesBusView.xib */,
 			);
 			path = FavoritesBus;

@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RNSLoaderWay" customModule="RNIS" customModuleProvider="target">
             <connections>
+                <outlet property="bottomConstraint" destination="CA3-M3-Oj5" id="n3G-lP-xcN"/>
                 <outlet property="labelText" destination="Kqb-dM-PqK" id="WrL-m3-06O"/>
             </connections>
         </placeholder>
@@ -25,10 +26,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка данных..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqb-dM-PqK">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка данных..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqb-dM-PqK">
+                    <rect key="frame" x="15" y="0.0" width="345" height="175"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="175" id="X7e-mY-d5K"/>
+                        <constraint firstAttribute="height" priority="750" constant="175" id="X7e-mY-d5K"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,11 +38,17 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Kqb-dM-PqK" secondAttribute="trailing" id="aic-sg-SAU"/>
+                <constraint firstItem="syn-og-DwN" firstAttribute="bottom" secondItem="Kqb-dM-PqK" secondAttribute="bottom" id="CA3-M3-Oj5"/>
+                <constraint firstAttribute="trailing" secondItem="Kqb-dM-PqK" secondAttribute="trailing" constant="15" id="aic-sg-SAU"/>
                 <constraint firstItem="Kqb-dM-PqK" firstAttribute="top" secondItem="2dH-96-iFw" secondAttribute="top" id="hcZ-nP-uPa"/>
-                <constraint firstItem="Kqb-dM-PqK" firstAttribute="leading" secondItem="2dH-96-iFw" secondAttribute="leading" id="o3s-gW-hvE"/>
+                <constraint firstItem="Kqb-dM-PqK" firstAttribute="leading" secondItem="2dH-96-iFw" secondAttribute="leading" constant="15" id="o3s-gW-hvE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="syn-og-DwN"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="CA3-M3-Oj5"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

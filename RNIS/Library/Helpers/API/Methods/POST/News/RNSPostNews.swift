@@ -19,11 +19,12 @@ class RNSPostNews: RNSRequest {
     typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSNewsTemp>,RNSRegisterError>
     
     var complete: CompleteAlias?
-    
-    @discardableResult convenience init(complete: CompleteAlias?) {
+    var failure: AliasStringBlock?
+    @discardableResult convenience init(complete: CompleteAlias?, failure: AliasStringBlock?) {
         self.init()
         
         self.complete = complete
+        self.failure = failure
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             self?.parseReply(AliasReply(reply: object))
@@ -50,13 +51,11 @@ class RNSPostNews: RNSRequest {
             return
         }
         let error = "Ошибка загрузки новостей. " + item.textError
-        STRouter.showAlertOk(error)
-        complete?(nil)
+        self.failure?(error)
     }
     
-    override func apiDidFailWithError(_ error: NSError) {
-        super.apiDidFailWithError(error)
-        complete?(nil)
+    override func showErrorNetwork() {
+        failure?(errorNetwork)
     }
     
     override var subject: String {
