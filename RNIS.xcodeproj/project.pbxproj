@@ -44,6 +44,7 @@
 		8318548D1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */; };
 		8318548F1F95D392004D0B23 /* RNSDurationItem+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */; };
 		831863A51F74D13D00579000 /* RNSBusStopManager+Uuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831863A41F74D13D00579000 /* RNSBusStopManager+Uuids.swift */; };
+		8319412C1FB439C4003EC18D /* RNSPinDuration+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319412B1FB439C4003EC18D /* RNSPinDuration+Icon.swift */; };
 		8319C5B31F60E026005A1768 /* RNSPostRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B21F60E026005A1768 /* RNSPostRegister.swift */; };
 		8319C5B61F60E4BD005A1768 /* RNSRegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */; };
 		8319C5B91F60E96B005A1768 /* RNSTextErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */; };
@@ -691,6 +692,7 @@
 		8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSRouteVariant+Navels.swift"; sourceTree = "<group>"; };
 		8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSDurationItem+Distance.swift"; sourceTree = "<group>"; };
 		831863A41F74D13D00579000 /* RNSBusStopManager+Uuids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSBusStopManager+Uuids.swift"; sourceTree = "<group>"; };
+		8319412B1FB439C4003EC18D /* RNSPinDuration+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSPinDuration+Icon.swift"; sourceTree = "<group>"; };
 		8319C5B21F60E026005A1768 /* RNSPostRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostRegister.swift; sourceTree = "<group>"; };
 		8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRegisterError.swift; sourceTree = "<group>"; };
 		8319C5B81F60E96B005A1768 /* RNSTextErrorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSTextErrorProtocol.swift; sourceTree = "<group>"; };
@@ -1317,6 +1319,7 @@
 			isa = PBXGroup;
 			children = (
 				830E68AD1F5514DE008EFA02 /* RNSPinDuration.swift */,
+				8319412B1FB439C4003EC18D /* RNSPinDuration+Icon.swift */,
 			);
 			path = PinDuration;
 			sourceTree = "<group>";
@@ -4935,6 +4938,7 @@
 				832E4B8F1F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
 				83204B531F59225A0033ACA1 /* NewsViewController.swift in Sources */,
 				836D80D81F1DC6CA00FEE390 /* RNSLocationManager.swift in Sources */,
+				8319412C1FB439C4003EC18D /* RNSPinDuration+Icon.swift in Sources */,
 				83AA6A7A1F56863000B2139C /* RNSDotsWhiteVertical.swift in Sources */,
 				837C521F1F74FB3200696E70 /* RNSDotsVerticalModel+items.swift in Sources */,
 				83F555371F5565BF00D1221C /* RNSRouteBusCell.swift in Sources */,

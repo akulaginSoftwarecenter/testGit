@@ -22,12 +22,13 @@ extension RNSRouteVariant {
         if showDistanceNavels {
             showDistanceNavelIfNeed()
         } else {
-            hideDistanceNavel()
+            removeDistanceNavel()
         }
     }
     
-    func hideDistanceNavel() {
+    func removeDistanceNavel() {
         navels?.forEach { $0.updateCurrent = false }
+        navels?.forEach { $0.updateHide(false) }
     }
     
     func showDistanceNavelIfNeed() {
@@ -36,18 +37,31 @@ extension RNSRouteVariant {
             return
         }
         var finded = false
-        
+        var currentItem: RNSDurationItem?
         for navel in navels {
             if navel.contains(pair) {
                 finded = true
-                navel.updateCurrent = true
+                currentItem = navel
             } else {
                 navel.updateCurrent = false
             }
         }
         
         if !finded {
-            navels.first?.updateCurrent = true
+            currentItem = navels.first
         }
+        
+        currentItem?.updateCurrent = true
+        updateHideNavelsIfNeed(currentItem)
+    }
+    
+    func updateHideNavelsIfNeed(_ currentItem: RNSDurationItem?) {
+        var finded = false
+        navels?.forEach({
+            if $0 == currentItem {
+                finded = true
+            }
+            $0.updateHide(!finded)
+        })
     }
 }

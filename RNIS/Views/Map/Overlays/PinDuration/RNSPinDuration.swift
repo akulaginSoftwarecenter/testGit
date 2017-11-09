@@ -41,11 +41,9 @@ class RNSPinDuration: RNSPinParent {
         item?.handlerUpdate = { [weak self] in
             self?.updateIcon()
         }
-    }
-    
-    /// Обновление иконки
-    func updateIcon() {
-        let view = RNSNoteRoute(durationMinute: item?.durationMinute, distance: item?.distance, type: .up)
-        setBitmap(view.asImage, xOffset: 0, yOffset: 1.0, isPlain: false, sizeInMeters: 50)
+        
+        item?.handlerUpdateHide = { [weak self] in
+            self?.updateIcon()
+        }
     }
 }

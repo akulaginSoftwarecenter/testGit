@@ -17,16 +17,8 @@ class RNSDurationItem: NSObject {
     
     var handlerRemove: EmptyBlock?
     var handlerUpdate: EmptyBlock?
+    var handlerUpdateHide: EmptyBlock?
     var routePoints: [RNSRoutePoint]?
-    
-    convenience init(_ point: PGGeoPoint?, time: Int?, routePoints: [RNSRoutePoint]?) {
-        self.init()
-        
-        self.point = point
-        self.prepareTime(time)
-        self.routePoints = routePoints
-        self.distanceAll = routePoints?.distance
-    }
     
     var updateCurrent: Bool = false {
         didSet {
@@ -51,7 +43,28 @@ class RNSDurationItem: NSObject {
         }
     }
     
+    var isHide: Bool = false {
+        didSet {
+            handlerUpdateHide?()
+        }
+    }
+    
+    convenience init(_ point: PGGeoPoint?, time: Int?, routePoints: [RNSRoutePoint]?) {
+        self.init()
+        
+        self.point = point
+        self.prepareTime(time)
+        self.routePoints = routePoints
+        self.distanceAll = routePoints?.distance
+    }
+    
     func updatePin() {
         handlerUpdate?()
+    }
+    
+    func updateHide(_ hide: Bool) {
+        if isHide != hide {
+            isHide = hide
+        }
     }
 }
