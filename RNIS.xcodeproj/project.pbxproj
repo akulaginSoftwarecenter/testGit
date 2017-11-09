@@ -510,6 +510,7 @@
 		83A5C70D1F5812FC006C8D62 /* RNSDateSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A5C70C1F5812FC006C8D62 /* RNSDateSelectViewController.storyboard */; };
 		83A5C70F1F581636006C8D62 /* RNSDutyViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5C70E1F581636006C8D62 /* RNSDutyViewController+UI.swift */; };
 		83A6522E1FB3F38D001839C2 /* NSError+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6522D1FB3F38D001839C2 /* NSError+Utils.swift */; };
+		83A652311FB4011F001839C2 /* Error+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A652301FB4011F001839C2 /* Error+Utils.swift */; };
 		83A667EA1F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667E91F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift */; };
 		83A667ED1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667EC1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift */; };
 		83A667EF1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667EE1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift */; };
@@ -1118,6 +1119,7 @@
 		83A5C70C1F5812FC006C8D62 /* RNSDateSelectViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RNSDateSelectViewController.storyboard; sourceTree = "<group>"; };
 		83A5C70E1F581636006C8D62 /* RNSDutyViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSDutyViewController+UI.swift"; sourceTree = "<group>"; };
 		83A6522D1FB3F38D001839C2 /* NSError+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Utils.swift"; sourceTree = "<group>"; };
+		83A652301FB4011F001839C2 /* Error+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Utils.swift"; sourceTree = "<group>"; };
 		83A667E91F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSVerticalTableItem.swift; sourceTree = "<group>"; };
 		83A667EC1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSDotsVerticalModel.swift; sourceTree = "<group>"; };
 		83A667EE1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSDotsBussVertical+TableView.swift"; sourceTree = "<group>"; };
@@ -1840,9 +1842,9 @@
 		83204B5C1F5924800033ACA1 /* Strelka */ = {
 			isa = PBXGroup;
 			children = (
+				83204B5D1F5924800033ACA1 /* StrelkaViewController.swift */,
 				83D492121F72226400A32C4B /* StrelkaViewController+Delegate.swift */,
 				83204B5F1F5924A30033ACA1 /* StrelkaViewController.storyboard */,
-				83204B5D1F5924800033ACA1 /* StrelkaViewController.swift */,
 			);
 			path = Strelka;
 			sourceTree = "<group>";
@@ -2983,6 +2985,7 @@
 				830F41CE1F4BF795008E7C0F /* DateFormatter */,
 				8326AA2F1F1F51A700F893C8 /* Dictionary */,
 				835D853B1F4FDB3A00B83EB2 /* Double */,
+				83A6522F1FB4010C001839C2 /* Error */,
 				83A6522C1FB3F369001839C2 /* NSError */,
 				837ABF0F1F2EE2E000AB5E54 /* NSNotificationCenter */,
 				83CD584F1F258B9300A9FE1A /* PGGeoPoint */,
@@ -3927,6 +3930,14 @@
 				83A6522D1FB3F38D001839C2 /* NSError+Utils.swift */,
 			);
 			path = NSError;
+			sourceTree = "<group>";
+		};
+		83A6522F1FB4010C001839C2 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				83A652301FB4011F001839C2 /* Error+Utils.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		83A667E81F5D1A0200A1A7BC /* DotsVerticalModel */ = {
@@ -5141,6 +5152,7 @@
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
 				8337D4321FA9840F00623038 /* RNSDotsBussView+FirstSegment.swift in Sources */,
 				8329DF581F340F1200D542FF /* RNSParentContainer.swift in Sources */,
+				83A652311FB4011F001839C2 /* Error+Utils.swift in Sources */,
 				831863A51F74D13D00579000 /* RNSBusStopManager+Uuids.swift in Sources */,
 				8393AB6A1F8B216B004D754B /* RNSRouteTableItem+Var.swift in Sources */,
 				83ED5E2A1F270383007D9F1C /* RNSMapManager+OverLays.swift in Sources */,

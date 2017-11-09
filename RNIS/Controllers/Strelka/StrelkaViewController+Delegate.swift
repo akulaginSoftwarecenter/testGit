@@ -14,7 +14,19 @@ extension StrelkaViewController: UIWebViewDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
+    internal func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        removeLoader()
+        if error.isLostInet {
+            STRouter.showAlertErrorNetwork()
+            return
+        }
+    }
+    
     public func webViewDidFinishLoad(_ webView: UIWebView) {
+        removeLoader()
+    }
+    
+    func removeLoader() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         loaderView.remove()
     }

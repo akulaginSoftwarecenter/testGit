@@ -108,7 +108,7 @@ class AlamofireAPI: API {
     }
     
     func showErrorNetwork() {
-        STRouter.showAlertOk(errorNetwork)
+        STRouter.showAlertErrorNetwork()
     }
 }
 
