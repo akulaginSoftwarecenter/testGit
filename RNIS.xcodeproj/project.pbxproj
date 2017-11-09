@@ -513,6 +513,7 @@
 		83A652311FB4011F001839C2 /* Error+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A652301FB4011F001839C2 /* Error+Utils.swift */; };
 		83A652331FB41032001839C2 /* RNSMapParentController+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A652321FB41032001839C2 /* RNSMapParentController+Loader.swift */; };
 		83A652351FB4106C001839C2 /* RNSMapParentController+LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A652341FB4106C001839C2 /* RNSMapParentController+LoadData.swift */; };
+		83A652371FB4168E001839C2 /* RNSDurationItem+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A652361FB4168E001839C2 /* RNSDurationItem+Time.swift */; };
 		83A667EA1F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667E91F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift */; };
 		83A667ED1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667EC1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift */; };
 		83A667EF1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667EE1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift */; };
@@ -1124,6 +1125,7 @@
 		83A652301FB4011F001839C2 /* Error+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Utils.swift"; sourceTree = "<group>"; };
 		83A652321FB41032001839C2 /* RNSMapParentController+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSMapParentController+Loader.swift"; sourceTree = "<group>"; };
 		83A652341FB4106C001839C2 /* RNSMapParentController+LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSMapParentController+LoadData.swift"; sourceTree = "<group>"; };
+		83A652361FB4168E001839C2 /* RNSDurationItem+Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSDurationItem+Time.swift"; sourceTree = "<group>"; };
 		83A667E91F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSVerticalTableItem.swift; sourceTree = "<group>"; };
 		83A667EC1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSDotsVerticalModel.swift; sourceTree = "<group>"; };
 		83A667EE1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSDotsBussVertical+TableView.swift"; sourceTree = "<group>"; };
@@ -1304,8 +1306,9 @@
 		830E68A91F551390008EFA02 /* DurationItem */ = {
 			isa = PBXGroup;
 			children = (
-				8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */,
 				830E68AA1F5513BB008EFA02 /* RNSDurationItem.swift */,
+				83A652361FB4168E001839C2 /* RNSDurationItem+Time.swift */,
+				8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */,
 			);
 			path = DurationItem;
 			sourceTree = "<group>";
@@ -1979,8 +1982,8 @@
 			children = (
 				836221A81F43DE8B005B49DA /* Address */,
 				837036B71F42A21400FBD1E9 /* Duty */,
-				83674FDA1F56CA7E00F0A2C0 /* MoveMap */,
 				83A53F811F4A90FE00938969 /* PageRoute */,
+				83674FDA1F56CA7E00F0A2C0 /* MoveMap */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -3876,6 +3879,7 @@
 			children = (
 				835A31201F4D215F00F83BE2 /* Point */,
 				830E68B91F553768008EFA02 /* Table */,
+				83A53F951F4A9F0800938969 /* RNSRouteVariant.swift */,
 				838EA02B1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift */,
 				8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */,
 				83A5C6E91F57DBE9006C8D62 /* RNSRouteVariant+Nodes.swift */,
@@ -3885,7 +3889,6 @@
 				83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */,
 				8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */,
 				838EA0291F53B06100E9BF20 /* RNSRouteVariant+Var.swift */,
-				83A53F951F4A9F0800938969 /* RNSRouteVariant.swift */,
 			);
 			path = RouteVariant;
 			sourceTree = "<group>";
@@ -4939,6 +4942,7 @@
 				8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */,
 				83A6522E1FB3F38D001839C2 /* NSError+Utils.swift in Sources */,
 				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
+				83A652371FB4168E001839C2 /* RNSDurationItem+Time.swift in Sources */,
 				8319C5BC1F60EDAE005A1768 /* RNSUserPayload.swift in Sources */,
 				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,
 				832E4B991F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,

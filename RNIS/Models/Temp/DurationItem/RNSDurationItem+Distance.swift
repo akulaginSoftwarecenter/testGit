@@ -12,7 +12,7 @@ extension RNSDurationItem {
     
     func updateDistance() {
         if showDistance {
-            distance = routePoints?.last??.point?.distanceToCurrent
+            distance = routePoints?.last?.point?.distanceToCurrent
         } else {
             distance = nil
         }

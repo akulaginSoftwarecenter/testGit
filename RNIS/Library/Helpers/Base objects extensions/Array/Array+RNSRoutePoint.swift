@@ -30,7 +30,10 @@ extension Array where Element: RNSRoutePoint {
             }
             distanceAll += distance
         }
-        return RNSDurationItem(first?.point, time: first?.time, routePoints: [first])
+        guard let first = first else {
+            return nil
+        }
+        return RNSDurationItem(first.point, time: first.time, routePoints: [first])
     }
     
     var time: Int {
