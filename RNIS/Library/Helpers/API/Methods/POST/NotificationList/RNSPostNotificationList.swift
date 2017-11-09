@@ -31,6 +31,10 @@ class RNSPostNotificationList: RNSPostRequestMobileToken {
         super.apiDidFailWithError(item.error)
     }
     
+    override func showErrorNetwork() {
+        
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.notification.list"
     }

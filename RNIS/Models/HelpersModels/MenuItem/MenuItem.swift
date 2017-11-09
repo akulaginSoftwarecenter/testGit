@@ -36,5 +36,9 @@ struct MenuItem {
             RNSPageRouteManager.handlerUpdateFavorite?()
             RNSMenuManager.handlerUpdateFavoriteBuss?()
         }
+        
+        if title == notificationTitle {
+            RNSMenuManager.handlerUpdateNotification?()
+        }
     }
 }

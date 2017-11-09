@@ -1783,9 +1783,9 @@
 			children = (
 				83204B4E1F5921170033ACA1 /* Setting */,
 				83204B441F591FBD0033ACA1 /* cells */,
+				83204B481F591FBD0033ACA1 /* NotificationsViewController.swift */,
 				8310F1391F7BA7C500D5C565 /* NotificationsViewController+TableView.swift */,
 				83204B4C1F591FCA0033ACA1 /* NotificationsViewController.storyboard */,
-				83204B481F591FBD0033ACA1 /* NotificationsViewController.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -2341,11 +2341,11 @@
 		835718B01F21C84400DE5E25 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				835718B11F21C86400DE5E25 /* RNSMapManager.swift */,
 				837036B11F428CB400FBD1E9 /* RNSMapManager+MapView.swift */,
 				83ED5E291F270383007D9F1C /* RNSMapManager+OverLays.swift */,
 				837036AF1F428B2F00FBD1E9 /* RNSMapManager+Stub.swift */,
 				83E6F8121F944C7000686414 /* RNSMapManager+Zoom.swift */,
-				835718B11F21C86400DE5E25 /* RNSMapManager.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
