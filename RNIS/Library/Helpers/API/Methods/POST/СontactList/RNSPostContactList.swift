@@ -17,6 +17,7 @@ class RNSPostContactList: RNSRequest {
     }
     
     var complete: AliasComplete?
+    var failure: AliasStringBlock?
     var type: RNSContactInfoType = .contact
     
     
@@ -24,11 +25,12 @@ class RNSPostContactList: RNSRequest {
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()
     
-    @discardableResult convenience init(_ type: RNSContactInfoType, complete: AliasComplete?) {
+    @discardableResult convenience init(_ type: RNSContactInfoType, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         
         self.type = type
         self.complete = complete
+        self.failure = failure
         
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
@@ -58,6 +60,10 @@ class RNSPostContactList: RNSRequest {
         let withType = ["withType": type.rawValue]
         dict["meta"] = ["filters": withType]
         return  dict
+    }
+    
+    override func showErrorNetwork() {
+        failure?(errorNetwork)
     }
     
     override var subject: String {

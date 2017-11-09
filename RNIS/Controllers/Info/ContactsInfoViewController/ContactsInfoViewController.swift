@@ -24,6 +24,7 @@ class ContactsInfoViewController: UIViewController {
     @IBOutlet weak var topTitle: RNSTopTitle!
 
     @IBOutlet weak var tableView: UITableView!
+    lazy var loaderWay = RNSLoaderWay()
     
     /// Тип контактов
     var type: RNSContactInfoType = .contact
@@ -42,9 +43,25 @@ class ContactsInfoViewController: UIViewController {
     /// Загрузка контактов
     func loadItems() {
         RNSPostContactList(type, complete: { [weak self] item in
-            self?.items = item?.items
-            self?.tableView.reloadData()
+            self?.prepareItems(item?.items)
+            self?.clearError()
+            }, failure: { [weak self] text in
+                self?.prepareError(text)
         })
+    }
+    
+    func prepareError(_ text: String?) {
+        loaderWay.showCenterError(self.view, frame: tableView.frame, text: text)
+        prepareItems(nil)
+    }
+    
+    func clearError() {
+        loaderWay.remove()
+    }
+    
+    func prepareItems(_ items: [RNSContactItem]?) {
+        self.items = items
+        tableView.reloadData()
     }
     
     override class var storyboardName: String {

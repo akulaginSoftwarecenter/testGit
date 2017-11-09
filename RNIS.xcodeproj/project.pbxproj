@@ -2791,7 +2791,7 @@
 		836D80801F1DAE1B00FEE390 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83AA6A361F5667CA00B2139C /* Info */,
+				834691F21FAC594F0098D4C6 /* Welcome */,
 				835718761F21A1F300DE5E25 /* Launch */,
 				832E4B6C1F2EC37F00A4AD77 /* Login+Registration */,
 				836D80BF1F1DB3A700FEE390 /* Main */,
@@ -2802,7 +2802,7 @@
 				83204B561F5923900033ACA1 /* Settings */,
 				83204B5C1F5924800033ACA1 /* Strelka */,
 				83204B301F591CB70033ACA1 /* Transport */,
-				834691F21FAC594F0098D4C6 /* Welcome */,
+				83AA6A361F5667CA00B2139C /* Info */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3993,9 +3993,9 @@
 			isa = PBXGroup;
 			children = (
 				83AA6A3A1F5668C000B2139C /* cells */,
+				83AA6A3E1F5668C000B2139C /* ContactsInfoViewController.swift */,
 				8375FF5D1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift */,
 				83940B851F6B773D005654DE /* ContactsInfoViewController.storyboard */,
-				83AA6A3E1F5668C000B2139C /* ContactsInfoViewController.swift */,
 			);
 			path = ContactsInfoViewController;
 			sourceTree = "<group>";
