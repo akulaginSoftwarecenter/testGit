@@ -31,6 +31,10 @@ class RNSPostFavoritePathList: RNSPostRequestMobileToken {
         super.apiDidFailWithError(item.error)
     }
     
+    override func showErrorNetwork() {
+        
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.favorite_path.list"
     }

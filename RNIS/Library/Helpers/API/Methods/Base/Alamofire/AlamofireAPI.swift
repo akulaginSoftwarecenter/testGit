@@ -101,7 +101,7 @@ class AlamofireAPI: API {
             print("apiDidFailWithError",error)
         }
         super.apiDidFailWithError(error)
-        if error.code == -1009 {
+        if error.isLostInet {
             showErrorNetwork()
         }
         STRouter.removeLoader()

@@ -21,8 +21,8 @@ struct MenuItem {
     }
     
     func show() {
-        RNSMenuManager.showVC(vc)
         updateIfNeed()
+        RNSMenuManager.showVC(vc)
     }
     
     func updateIfNeed() {
@@ -31,6 +31,10 @@ struct MenuItem {
         }
         if title == kNews {
             RNSMenuManager.handlerNewsUpdate?()
+        }
+        if title == favoriteTitle {
+            RNSPageRouteManager.handlerUpdateFavorite?()
+            RNSMenuManager.handlerUpdateFavoriteBuss?()
         }
     }
 }

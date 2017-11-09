@@ -33,7 +33,7 @@ class RNSMenuManager: NSObject {
     
     /// Создание пунктов меню
     lazy var menuItems = [MenuItem("Карта", mapVC, #imageLiteral(resourceName: "menuMapIcon")),
-                     MenuItem("Избранное", TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
+                     MenuItem(favoriteTitle, TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
                      MenuItem("Оповещения", NotificationsViewController.initialRed, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem(kNews, NewsViewController.initialRed, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", SettingsViewController.initialRed, #imageLiteral(resourceName: "menuSettingsIcon")),

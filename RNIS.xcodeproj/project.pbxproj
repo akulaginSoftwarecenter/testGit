@@ -509,6 +509,7 @@
 		83A5C70B1F5812D5006C8D62 /* RNSDateSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5C70A1F5812D5006C8D62 /* RNSDateSelectViewController.swift */; };
 		83A5C70D1F5812FC006C8D62 /* RNSDateSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A5C70C1F5812FC006C8D62 /* RNSDateSelectViewController.storyboard */; };
 		83A5C70F1F581636006C8D62 /* RNSDutyViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5C70E1F581636006C8D62 /* RNSDutyViewController+UI.swift */; };
+		83A6522E1FB3F38D001839C2 /* NSError+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6522D1FB3F38D001839C2 /* NSError+Utils.swift */; };
 		83A667EA1F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667E91F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift */; };
 		83A667ED1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667EC1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift */; };
 		83A667EF1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A667EE1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift */; };
@@ -1116,6 +1117,7 @@
 		83A5C70A1F5812D5006C8D62 /* RNSDateSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSDateSelectViewController.swift; sourceTree = "<group>"; };
 		83A5C70C1F5812FC006C8D62 /* RNSDateSelectViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RNSDateSelectViewController.storyboard; sourceTree = "<group>"; };
 		83A5C70E1F581636006C8D62 /* RNSDutyViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSDutyViewController+UI.swift"; sourceTree = "<group>"; };
+		83A6522D1FB3F38D001839C2 /* NSError+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Utils.swift"; sourceTree = "<group>"; };
 		83A667E91F5D1A6E00A1A7BC /* RNSVerticalTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSVerticalTableItem.swift; sourceTree = "<group>"; };
 		83A667EC1F5D1B0D00A1A7BC /* RNSDotsVerticalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSDotsVerticalModel.swift; sourceTree = "<group>"; };
 		83A667EE1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSDotsBussVertical+TableView.swift"; sourceTree = "<group>"; };
@@ -1767,9 +1769,9 @@
 			isa = PBXGroup;
 			children = (
 				836E69381F5E441A003D9D46 /* Alert */,
+				83204B3B1F591CB70033ACA1 /* TransportViewController.swift */,
 				83D7137F1F5D03DC005206C5 /* TransportViewController+Segment.swift */,
 				83204B3A1F591CB70033ACA1 /* TransportViewController.storyboard */,
-				83204B3B1F591CB70033ACA1 /* TransportViewController.swift */,
 			);
 			path = Transport;
 			sourceTree = "<group>";
@@ -2981,6 +2983,7 @@
 				830F41CE1F4BF795008E7C0F /* DateFormatter */,
 				8326AA2F1F1F51A700F893C8 /* Dictionary */,
 				835D853B1F4FDB3A00B83EB2 /* Double */,
+				83A6522C1FB3F369001839C2 /* NSError */,
 				837ABF0F1F2EE2E000AB5E54 /* NSNotificationCenter */,
 				83CD584F1F258B9300A9FE1A /* PGGeoPoint */,
 				83ED5E2D1F27078A007D9F1C /* PGPolyline */,
@@ -3918,6 +3921,14 @@
 			path = DateSelect;
 			sourceTree = "<group>";
 		};
+		83A6522C1FB3F369001839C2 /* NSError */ = {
+			isa = PBXGroup;
+			children = (
+				83A6522D1FB3F38D001839C2 /* NSError+Utils.swift */,
+			);
+			path = NSError;
+			sourceTree = "<group>";
+		};
 		83A667E81F5D1A0200A1A7BC /* DotsVerticalModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -3940,8 +3951,8 @@
 			isa = PBXGroup;
 			children = (
 				83A667F51F5D200F00A1A7BC /* Cell */,
-				83A667FA1F5D213500A1A7BC /* RNSTransportTableView+TableView.swift */,
 				83A667F11F5D1F8B00A1A7BC /* RNSTransportTableView.swift */,
+				83A667FA1F5D213500A1A7BC /* RNSTransportTableView+TableView.swift */,
 				83A667F31F5D1FAB00A1A7BC /* RNSTransportTableView.xib */,
 			);
 			path = TransportTableView;
@@ -4909,6 +4920,7 @@
 				83F555371F5565BF00D1221C /* RNSRouteBusCell.swift in Sources */,
 				8329DF5A1F34117200D542FF /* UIViewController+Navigation.swift in Sources */,
 				8375DEA71F205FFD00FCA26E /* RNSMapViewController+MapView.swift in Sources */,
+				83A6522E1FB3F38D001839C2 /* NSError+Utils.swift in Sources */,
 				83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */,
 				8319C5BC1F60EDAE005A1768 /* RNSUserPayload.swift in Sources */,
 				8375DE991F204C4000FCA26E /* RNSLightButton.swift in Sources */,

@@ -33,4 +33,5 @@ let kServerNotAviable = "Сервер недоступен"
 let kName = "name"
 let kMeta = "meta"
 let errorNetwork = "Ошибка соединения повторите попытку"
+let favoriteTitle = "Избранное"
 

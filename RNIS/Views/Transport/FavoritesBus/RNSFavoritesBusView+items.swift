@@ -18,8 +18,22 @@ extension RNSFavoritesBusView {
         loaderView.showInView(self)
         RNSPostFavoriteRouteList {[weak self] (reply, error, _) in
             self?.loaderView.remove()
+            if error?.isLostInet ?? false {
+                self?.prepareLostInet()
+                return
+            }
+            self?.clearError()
             self?.prepareSections(reply as? [RNSFavoriteStopPoint])
         }
+    }
+    
+    func prepareLostInet() {
+        loaderWay.showCenterLostInet(self)
+        prepareSections(nil)
+    }
+    
+    func clearError() {
+        loaderWay.remove()
     }
     
     /// Функция подготовки секций таблицы

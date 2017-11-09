@@ -20,6 +20,7 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
     
     /// Экземпляр класса вида загрузки
     lazy var loaderView = LoaderView()
+    lazy var loaderWay = RNSLoaderWay()
     /// Создание секций таблицы
     var sections = [TableSection]()
     

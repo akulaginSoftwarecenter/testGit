@@ -39,6 +39,10 @@ class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
         return super.headers.merged(with: Utils.mobileToken)
     }
     
+    override func showErrorNetwork() {
+        
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.favorite_route.list"
     }

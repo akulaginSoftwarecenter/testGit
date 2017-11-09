@@ -21,6 +21,7 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     @IBOutlet var tableView: RNSRegisterTableView!
     /// Создание экземпляра вида загрузки
     lazy var loaderView = LoaderView()
+    lazy var loaderWay = RNSLoaderWay()
     
     /// Инициализация таблицы
     override func awakeFromNib() {
@@ -50,8 +51,26 @@ class RNSTransportTableView: BaseViewWithXIBInit {
         loaderView.showInView(self)
         RNSPostFavoritePathList {[weak self] (reply, error, _) in
             self?.loaderView.remove()
-            self?.items = reply as?[RNSRouteVariant]
-            self?.tableView.reloadData()
+            if error?.isLostInet ?? false {
+                self?.prepareLostInet()
+                return
+            }
+            self?.clearError()
+            self?.prepareItems(reply as? [RNSRouteVariant])
         }
+    }
+    
+    func prepareItems(_ items: [RNSRouteVariant]?) {
+        self.items = items
+        tableView.reloadData()
+    }
+    
+    func prepareLostInet() {
+        loaderWay.showCenterLostInet(self)
+        prepareItems(nil)
+    }
+    
+    func clearError() {
+        loaderWay.remove()
     }
 }
