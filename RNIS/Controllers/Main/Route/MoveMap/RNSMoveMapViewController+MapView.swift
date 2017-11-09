@@ -42,7 +42,7 @@ extension RNSMoveMapViewController {
     }
     
     func onMapTouchEvent(_ point: PGGeoPoint) {
-        //print("onMapTouchEvent",point)
+        print("onMapTouchEvent",point)
     }
 
     /// Настройка карты
