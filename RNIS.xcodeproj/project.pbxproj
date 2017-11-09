@@ -4012,8 +4012,8 @@
 		83AA6A3F1F5668C000B2139C /* DocsInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */,
 				83AA6A401F5668C000B2139C /* DocsInfoViewController.swift */,
+				8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */,
 			);
 			path = DocsInfoViewController;
 			sourceTree = "<group>";

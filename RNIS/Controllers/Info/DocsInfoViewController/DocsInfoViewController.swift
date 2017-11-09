@@ -21,6 +21,7 @@ class DocsInfoViewController: UIViewController {
     /// Надпись заголовка контроллера
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var titleLabel: UILabel!
+    lazy var loaderWay = RNSLoaderWay()
     /// Представление для отображения текста раздела
     //@IBOutlet weak var textView: UITextView!
     var type: RNSDocsType = .userGuide
@@ -37,8 +38,10 @@ class DocsInfoViewController: UIViewController {
         
         RNSPostMobilePageGet(type, complete: { [weak self] (item) in
             self?.prepareText(item?.text)
-        }) { [weak self] (error) in
-            self?.prepareText(error)
+            self?.clearError()
+        }) { [weak self] error in
+            self?.prepareError(error)
+            self?.prepareText(nil)
         }
     }
     
@@ -48,6 +51,14 @@ class DocsInfoViewController: UIViewController {
         }
         let page = String(format: "%@%@%@", "<div style=\"color:#ffffff\">", text, "</div>")
         webView.loadHTMLString(page, baseURL: nil)
+    }
+    
+    func prepareError(_ text: String?) {
+        loaderWay.showCenterError(self.view, frame: webView.frame, text: text)
+    }
+    
+    func clearError() {
+        loaderWay.remove()
     }
     
     override class var storyboardName: String {

@@ -55,6 +55,10 @@ class RNSPostMobilePageGet: RNSRequest {
         return ["key": type.rawValue]
     }
     
+    override func showErrorNetwork() {
+        failure?(errorNetwork)
+    }
+    
     override var subject: String {
         return "com.rnis.mobile.action.mobile_page.get"
     }
