@@ -20,13 +20,15 @@ class RNSPostBusList: RNSRequest {
     var min: PGGeoPoint?
     var center: PGGeoPoint?
     var complete: AliasComplete?
+    var failure: AliasStringBlock?
     
-    convenience init(_ min: PGGeoPoint, center: PGGeoPoint, complete: AliasComplete?) {
+    convenience init(_ min: PGGeoPoint, center: PGGeoPoint, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         
         self.min = min
         self.center = center
         self.complete = complete
+        self.failure = failure
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             self?.parseReply(AliasReply(reply: object))
@@ -78,8 +80,8 @@ class RNSPostBusList: RNSRequest {
         STRouter.showAlertOk(error)
     }
     
-    override func apiDidFailWithError(_ error: NSError) {
-        
+    override func showErrorNetwork() {
+        failure?(errorNetwork)
     }
     
     override var subject: String {

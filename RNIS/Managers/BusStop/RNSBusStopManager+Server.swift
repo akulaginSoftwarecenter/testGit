@@ -14,7 +14,7 @@ import Alamofire
 extension RNSBusStopManager {
     
     /// Функция обновления данных о ТС с сервера
-    static func updateServer(complete: EmptyBlock?) {
+    static func updateServer(_ complete: EmptyBlock?, failure: AliasStringBlock?) {
         if isNeedStopLoad {
             removeAll()
             complete?()
@@ -27,7 +27,7 @@ extension RNSBusStopManager {
             //CounterTime.endTimer()
             updateOperationServer(uuids)
             complete?()
-        })
+        }, failure: failure)
     }
     
     /// Функция исполнения обновления данных о ТС с сервера

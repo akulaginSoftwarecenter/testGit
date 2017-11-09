@@ -56,4 +56,9 @@ class RNSParentLoaderView: BaseViewWithXIBInit {
                 self?.removeFromSuperview()
         })
     }
+    
+    
+    func prepareText(_ text: String?) {
+        labelText.text = text
+    }
 }

@@ -56,7 +56,6 @@ class RNSMapParentController: UIViewController {
     lazy var loaderView:LoaderView = {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
-        view.labelText.text = "Обновление остановок..."
         view.defaultAlpha = 0.2
         return view
     }()
@@ -120,33 +119,7 @@ class RNSMapParentController: UIViewController {
         return "RNSMapParentController"
     }
     
-    /// Обновление положения автобусов на карте
-    func busUpdate() {
-        showLoader()
-        RNSBusManager.updateServer { [weak self] in
-            self?.removeLoader()
-        }
-    }
-    
-    /// Обновление автобусных остановок на карте
-    func busStopUpdate() {
-        showLoader()
-        RNSBusStopManager.updateServer { [weak self] in
-            self?.removeLoader()
-        }
-    }
-    
-    /// Показать индикацию загрузки
-    func showLoader() {
-        loaderView.showInView(self.view)
-    }
-    
-    /// Убрать индикацию загрузки
-    func removeLoader() {
-        loaderView.remove()
-    }
-    
     deinit {
-        print("RNSMapParentController deinit")
+       // print("RNSMapParentController deinit")
     }
 }

@@ -34,10 +34,6 @@ class RNSLoaderWay: RNSParentLoaderView {
         showCenterError(view, frame: frame, text: errorNetwork)
     }
     
-    func prepareText(_ text: String?) {
-        labelText.text = text
-    }
-    
     override func animationShow() {
         defaultAlpha = 1
         super.animationShow()
