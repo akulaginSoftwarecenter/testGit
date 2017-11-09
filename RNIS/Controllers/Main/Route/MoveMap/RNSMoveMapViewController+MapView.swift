@@ -19,6 +19,11 @@ extension RNSMoveMapViewController {
         containerController?.handlerOnMapLongTouchEvent = {[weak self] point in
             self?.onMapLongTouchEvent(point)
         }
+        
+        containerController?.handlerOnMapTouchEvent = {[weak self] point in
+            self?.onMapTouchEvent(point)
+        }
+        
         containerController?.handlerOnMapEvent = {[weak self] in
             self?.onMapEvent()
         }
@@ -34,6 +39,10 @@ extension RNSMoveMapViewController {
     /// - Parameter point: географические координаты места нажатия
     func onMapLongTouchEvent(_ point: PGGeoPoint) {
         prepareStubLocation(point.location)
+    }
+    
+    func onMapTouchEvent(_ point: PGGeoPoint) {
+        //print("onMapTouchEvent",point)
     }
 
     /// Настройка карты

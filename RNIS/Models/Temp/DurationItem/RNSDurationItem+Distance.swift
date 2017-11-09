@@ -12,11 +12,11 @@ extension RNSDurationItem {
     
     func updateDistance() {
         if showDistance {
-            distance = routePoints?.last?.point?.distanceToCurrent
+            distance = currentDistance ?? distanceAll
         } else {
             distance = nil
         }
-        handlerUpdate?()
+        updatePin()
     }
     
     func contains(_ pair: AliasPair?) -> Bool {
@@ -31,5 +31,26 @@ extension RNSDurationItem {
         return routePoints.contains(where: {
             $0 == point
         })
+    }
+    
+    var currentDistance: CLLocationDistance? {
+        guard var routePoints = routePoints,
+            let pair = routePoints.pairNearPoints,
+            let last = pair.last,
+            let distanceToCurrent = last.distanceToCurrent,
+            let index = routePoints.index(of: last) else {
+            return nil
+        }
+        
+        routePoints.removeFirst(index)
+        return routePoints.distance + distanceToCurrent
+    }
+    
+    var rateDistance: Double {
+        guard let currentDistance = currentDistance,
+            let distanceAll = distanceAll else {
+            return 1
+        }
+        return currentDistance/distanceAll
     }
 }

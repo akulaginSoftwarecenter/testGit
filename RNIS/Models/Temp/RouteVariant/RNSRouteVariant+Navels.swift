@@ -27,7 +27,7 @@ extension RNSRouteVariant {
     }
     
     func hideDistanceNavel() {
-        navels?.forEach { $0.showDistance = false }
+        navels?.forEach { $0.updateCurrent = false }
     }
     
     func showDistanceNavelIfNeed() {
@@ -40,14 +40,14 @@ extension RNSRouteVariant {
         for navel in navels {
             if navel.contains(pair) {
                 finded = true
-                navel.showDistance = true
+                navel.updateCurrent = true
             } else {
-                navel.showDistance = false
+                navel.updateCurrent = false
             }
         }
         
         if !finded {
-            navels.first?.showDistance = true
+            navels.first?.updateCurrent = true
         }
     }
 }

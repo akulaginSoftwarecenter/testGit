@@ -10,7 +10,34 @@ import Foundation
 
 extension RNSDurationItem {
     
-    func updateTime() {
-        
+    var timeRate: Int? {
+        guard let durationDefault = durationDefault else {
+            return nil
+        }
+        return Int(Double(durationDefault) * rateDistance)
+    }
+    
+    func prepareTime(_ time: Int?) {
+        self.durationDefault = time
+        updateTimeDefault()
+    }
+    
+    func updateTimeCurrent() {
+       var timeRate = self.timeRate
+        if (timeRate ?? 0) > (durationDefault ?? 0){
+            timeRate = durationDefault
+        }
+        updateTime(timeRate)
+    }
+    
+    func updateTimeDefault() {
+        updateTime(durationDefault)
+    }
+    
+    func updateTime(_ time: Int?) {
+        if durationMinute != time {
+            durationMinute = time
+            updatePin()
+        }
     }
 }

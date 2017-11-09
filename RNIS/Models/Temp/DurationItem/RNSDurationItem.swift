@@ -11,6 +11,7 @@ import UIKit
 class RNSDurationItem: NSObject {
     var point: PGGeoPoint?
     var durationMinute: Int?
+    var durationDefault: Int?
     var distance: CLLocationDistance?
     var distanceAll: CLLocationDistance?
     
@@ -22,14 +23,35 @@ class RNSDurationItem: NSObject {
         self.init()
         
         self.point = point
-        self.durationMinute = time
+        self.prepareTime(time)
         self.routePoints = routePoints
         self.distanceAll = routePoints?.distance
+    }
+    
+    var updateCurrent: Bool = false {
+        didSet {
+            showDistance = updateCurrent
+            updateCurrentTime = updateCurrent
+        }
     }
     
     var showDistance: Bool = false {
         didSet {
             updateDistance()
         }
+    }
+    
+    var updateCurrentTime: Bool = false {
+        didSet {
+            if updateCurrentTime {
+                updateTimeCurrent()
+            } else {
+                updateTimeDefault()
+            }
+        }
+    }
+    
+    func updatePin() {
+        handlerUpdate?()
     }
 }
