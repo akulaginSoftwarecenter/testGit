@@ -34,18 +34,13 @@ class RNSRouteTableItem {
     var doneMove = false
     var showArrow = false
     var previousDoneMove = false
-    
-    static func genStop(_ time: Int?, text2: String?, typeLine: TypePoint?) -> RNSRouteTableItem {
-        let stop = RNSRouteTableItem()
-        stop.text1 = "\(time ?? 0)" + " мин"
-        stop.text2 = text2
-        stop.type = .stop
-        stop.typeLine = typeLine ?? .bus
-        return stop
-    }
-    
+
     static func genStop(_ point: RNSRoutePoint?, time: Int) -> RNSRouteTableItem {
-        let stop = RNSRouteTableItem.genStop(time, text2: point?.stop_point?.name, typeLine: point?.type ?? .bus)
+        let stop = RNSRouteTableItem()
+        stop.text1 = "\(time)" + " мин"
+        stop.text2 = point?.stop_point?.name
+        stop.type = .stop
+        stop.typeLine = point?.type ?? .bus
         stop.doneMove = point?.doneMove ?? false
         return stop
     }
