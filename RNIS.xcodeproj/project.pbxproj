@@ -4324,10 +4324,10 @@
 		83D155851F4BC7E800150144 /* DotsBuss */ = {
 			isa = PBXGroup;
 			children = (
+				83D155861F4BC83A00150144 /* RNSDotsBussView.swift */,
 				8337D4311FA9840F00623038 /* RNSDotsBussView+FirstSegment.swift */,
 				835E81871F8C7F9300F64222 /* RNSDotsBussView+ShowDone.swift */,
 				8337D4351FA9900900623038 /* RNSDotsBussView+Values.swift */,
-				83D155861F4BC83A00150144 /* RNSDotsBussView.swift */,
 				83D155881F4BC85500150144 /* RNSDotsBussView.xib */,
 			);
 			path = DotsBuss;
