@@ -11,7 +11,7 @@ import Foundation
 extension RNSBusRouteTemp {
     
     func prepareTitle() {
-        self.title = "A" + "\(number ?? "")"
+        self.title = "\(number ?? "")"
     }
     
     var titleWidth: CGFloat {
