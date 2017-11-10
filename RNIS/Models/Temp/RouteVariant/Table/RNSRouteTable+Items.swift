@@ -31,11 +31,16 @@ extension RNSRouteTable {
             self.processingPoint(point, time: time)
             time = 0
         }
-
-        appendStop(points.valueAt(lastIndex), time: time)
+        prepareLast(time)
         prepareEdge()
         appendTotal()
         prepareFirts()
+    }
+    
+    func prepareLast(_ time: Int) {
+        let last = points?.last
+        let time = time + (last?.time ?? 0)
+        appendStop(last, time: time)
     }
     
     func processingPoint(_ point: RNSRoutePoint?, time: Int = 0) {
