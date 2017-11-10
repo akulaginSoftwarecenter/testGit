@@ -42,6 +42,9 @@ extension RNSRouteVariant {
     }
     
     var endDoneMove: Bool {
-        return points?.last?.doneMove ?? false
+        guard let item = points?.last else {
+            return false
+        }
+        return item.doneMove && item.nearCurrentUser
     }
 }

@@ -2363,10 +2363,10 @@
 		835A31201F4D215F00F83BE2 /* Point */ = {
 			isa = PBXGroup;
 			children = (
+				835A31211F4D21D100F83BE2 /* RNSRoutePoint.swift */,
 				838131571F832B9A00AA137F /* RNSRoutePoint+Calc.swift */,
 				838131551F832B4900AA137F /* RNSRoutePoint+Hashable.swift */,
 				8381315D1F832FEB00AA137F /* RNSRoutePoint+Parse.swift */,
-				835A31211F4D21D100F83BE2 /* RNSRoutePoint.swift */,
 			);
 			path = Point;
 			sourceTree = "<group>";

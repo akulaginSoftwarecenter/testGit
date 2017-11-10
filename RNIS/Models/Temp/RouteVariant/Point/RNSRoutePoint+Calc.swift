@@ -63,4 +63,11 @@ extension RNSRoutePoint {
     var distanceToCurrent: CLLocationDistance? {
         return point?.distanceToCurrent
     }
+    
+    var nearCurrentUser: Bool {
+        guard let distance = point?.distanceToCurrent else {
+            return false
+        }
+        return distance < 1000
+    }
 }
