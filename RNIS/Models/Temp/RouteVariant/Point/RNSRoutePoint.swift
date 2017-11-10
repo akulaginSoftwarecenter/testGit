@@ -20,6 +20,7 @@ class RNSRoutePoint: RNISMappableBase {
     var typePoint: String?
     var stop_point: RNSBusStopTemp?
     var route: RNSBusRouteTemp?
+    var name: String?
     
     public override func mapping(map: Map) {
         latitude <- map["latitude"]
@@ -30,6 +31,7 @@ class RNSRoutePoint: RNISMappableBase {
         prepareType()
         stop_point <- map["stop_point"]
         route <- map["route"]
+        name <- map["name"]
         prepareRoute()
         prepareHashValue()
     }

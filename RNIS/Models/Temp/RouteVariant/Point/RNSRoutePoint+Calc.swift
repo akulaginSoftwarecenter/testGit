@@ -70,4 +70,13 @@ extension RNSRoutePoint {
         }
         return distance < 1000
     }
+    
+    var title: String? {
+        if let name = stop_point?.name {
+            return name
+        } else if let name = name  {
+            return name
+        }
+        return nil
+    }
 }

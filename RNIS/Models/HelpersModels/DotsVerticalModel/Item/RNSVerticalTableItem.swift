@@ -25,7 +25,7 @@ class RNSVerticalTableItem: NSObject {
     convenience init(_ main: RNSRoutePoint?) {
         self.init()
         self.type = main?.type ?? .bus
-        self.title = main?.stop_point?.name ?? ""
+        self.title = main?.title ?? ""
         self.titleBus = main?.route?.title ?? ""
     }
 }

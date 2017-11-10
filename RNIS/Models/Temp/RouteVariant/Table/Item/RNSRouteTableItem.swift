@@ -42,11 +42,19 @@ class RNSRouteTableItem {
     static func genStop(_ point: RNSRoutePoint?, time: Int) -> RNSRouteTableItem {
         let item = RNSRouteTableItem()
         item.time = time
-        item.text2 = point?.stop_point?.name
+        item.text2 = point?.title
         item.type = .stop
         item.typeLine = point?.type ?? .bus
         item.doneMove = point?.doneMove ?? false
         return item
+    }
+    
+    func prepareText2(_ point: RNSRoutePoint?) {
+        if let name = point?.stop_point?.name {
+            text2 = name
+        } else if let name = point?.name  {
+            text2 = name
+        }
     }
     
     static func genBus(_ title: String?) -> RNSRouteTableItem {
