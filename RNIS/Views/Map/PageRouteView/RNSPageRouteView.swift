@@ -49,7 +49,7 @@ class RNSPageRouteView: BaseViewWithXIBInit {
     
     func prepareSizeCell() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: UIScreen.width, height: 179)
+            layout.itemSize = CGSize(width: UIScreen.width, height: 176)
         }
     }
 }

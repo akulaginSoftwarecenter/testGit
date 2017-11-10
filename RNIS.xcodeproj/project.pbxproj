@@ -3840,9 +3840,9 @@
 				83A53F891F4A986500938969 /* Cell */,
 				83D155851F4BC7E800150144 /* DotsBuss */,
 				83D1558D1F4BCF5400150144 /* DotsName */,
+				83A53F851F4A96FA00938969 /* RNSPageRouteView.swift */,
 				83A53F971F4AA00E00938969 /* RNSPageRouteView+CollectionView.swift */,
 				838EA0311F53CE4400E9BF20 /* RNSPageRouteView+UI.swift */,
-				83A53F851F4A96FA00938969 /* RNSPageRouteView.swift */,
 				83A53F871F4A975900938969 /* RNSPageRouteView.xib */,
 			);
 			path = PageRouteView;
@@ -3851,8 +3851,8 @@
 		83A53F891F4A986500938969 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				83AA6A731F566CDD00B2139C /* RNSPageRouteCell+UI.swift */,
 				83A53F8A1F4A998600938969 /* RNSPageRouteCell.swift */,
+				83AA6A731F566CDD00B2139C /* RNSPageRouteCell+UI.swift */,
 				83A53F8C1F4A999F00938969 /* RNSPageRouteCell.xib */,
 			);
 			path = Cell;
