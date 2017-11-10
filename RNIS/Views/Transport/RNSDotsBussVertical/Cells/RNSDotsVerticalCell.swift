@@ -40,6 +40,9 @@ class RNSDotsVerticalCell: RNSBaseTableCell {
         guard let item = item else {
             return
         }
+        
+        labelTitle.text = item.title
+        
         if item.isEnd {
             cirlce.isHidden = false
             return
@@ -47,7 +50,6 @@ class RNSDotsVerticalCell: RNSBaseTableCell {
         
         cirlce.isHidden = item.isBus
         runLine.isHidden = !item.isRun
-        labelTitle.text = item.title
         labelBus.text = item.titleBus
         
         if item.isBus {
