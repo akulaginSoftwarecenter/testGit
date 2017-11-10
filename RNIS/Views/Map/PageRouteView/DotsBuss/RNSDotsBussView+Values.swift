@@ -35,7 +35,7 @@ extension RNSDotsBussView {
     func prepareWidthArraw() {
         let edge = CGFloat(66)
         var countBuss = CGFloat(bussShowMove.count)
-        if !isHideFirstSegment {
+        if !isHideFirstSegment || !showMove  {
             countBuss += 1
         }
         let betweens = CGFloat(3 * countBuss * 2)
