@@ -26,11 +26,22 @@ class RNSRouteStopCell: RNSRouteParentCell {
     
     override func prepareUI() {
         super.prepareUI()
-        text1Label.text = item?.text1
+        updateText1()
         text2Label.text = item?.text2
         edgeCircle.isHidden = !(item?.edge ?? true)
         
         prepareTypeRoute()
+        prepareHandlers()
+    }
+    
+    func updateText1() {
+        text1Label.text = item?.text1
+    }
+    
+    func prepareHandlers() {
+        item?.handlerUpdateText1 = { [weak self] in
+            self?.updateText1()
+        }
     }
     
     func prepareTypeRoute() {

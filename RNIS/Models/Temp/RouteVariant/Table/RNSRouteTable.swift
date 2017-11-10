@@ -26,14 +26,29 @@ class RNSRouteTable: NSObject {
     }
     
     var itemsStill: [RNSRouteTableItem] {
-        var itemsStill = [RNSRouteTableItem]()
-        for item in items {
-            itemsStill.append(item)
-            if item.isStillCell, item.openStill {
-                itemsStill.append(contentsOf: item.itemsStill)
+        var array = [RNSRouteTableItem]()
+        items.forEach {
+            array.append($0)
+            if $0.isStillCell, $0.openStill {
+                array.append(contentsOf: $0.itemsStill)
             }
         }
-        return itemsStill
+        
+        array.enumerateNonFirst {
+            $0?.prepareTimeStopCell()
+        }
+        
+        for i in (0..<array.count) {
+            if let item = array.valueAt(i),
+                item.isStillCell,
+                !item.openStill,
+                let nextItem = array.valueAt(i + 1) {
+                let time = (nextItem.time ?? 0) + item.itemsStill.time
+                nextItem.prepareTimeText1(time)
+            }
+        }
+        
+        return array
     }
     
     var lastBus: RNSBusRouteTemp?

@@ -13,6 +13,7 @@ extension RNSRouteTableItem: NSCopying {
     func copy(with zone: NSZone? = nil) -> Any {
         let copy = RNSRouteTableItem()
         copy.edge = edge
+        copy.time = time
         copy.openStill = openStill
         copy.itemsStill = itemsStill
         copy.text1 = text1

@@ -1346,13 +1346,13 @@
 			isa = PBXGroup;
 			children = (
 				830E68BA1F5537DD008EFA02 /* Item */,
+				830D15791F5552CD00DF683E /* RNSRouteTable.swift */,
 				8393AB6D1F8B24C3004D754B /* RNSRouteTable+Bus.swift */,
 				83AA6A301F565D0A00B2139C /* RNSRouteTable+Items.swift */,
 				835E81891F8C91C100F64222 /* RNSRouteTable+Move.swift */,
 				8393AB6F1F8B24F9004D754B /* RNSRouteTable+Prepare.swift */,
 				8393AB6B1F8B2488004D754B /* RNSRouteTable+Stop.swift */,
 				8393AB671F8B2003004D754B /* RNSRouteTable+Var.swift */,
-				830D15791F5552CD00DF683E /* RNSRouteTable.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -1360,10 +1360,10 @@
 		830E68BA1F5537DD008EFA02 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				830E68BB1F55386C008EFA02 /* RNSRouteTableItem.swift */,
 				8393AB651F8B159F004D754B /* RNSRouteTableItem+Copying.swift */,
 				83AA6A341F565DA900B2139C /* RNSRouteTableItem+Still.swift */,
 				8393AB691F8B216B004D754B /* RNSRouteTableItem+Var.swift */,
-				830E68BB1F55386C008EFA02 /* RNSRouteTableItem.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";

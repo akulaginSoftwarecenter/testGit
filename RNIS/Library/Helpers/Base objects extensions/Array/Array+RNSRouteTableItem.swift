@@ -46,4 +46,12 @@ extension Array where Element: RNSRouteTableItem {
             }
         }
     }
+    
+    var time: Int {
+        var time = 0
+        self.forEach{
+            time += ($0.time ?? 0)
+        }
+        return time
+    }
 }
