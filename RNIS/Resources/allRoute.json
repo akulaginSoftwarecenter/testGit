@@ -5,8 +5,7 @@
         {
           "latitude": 55.753495,
           "longitude": 37.611562,
-          "type": "run",
-          "time": 3
+          "type": "run"
         },
         {
           "latitude": 55.751118644413,
@@ -58,6 +57,7 @@
         {
           "latitude": 55.748753325424,
           "longitude": 37.582667469978,
+          "time": 3,
           "stop_point": {
             "uuid": "643ea2fe-8656-11e7-a15a-52def53ae081",
             "name": "Метро Смоленская",
@@ -230,16 +230,14 @@
             "longitude": 37.485164395683
           }
         }
-      ],
-      "time": 18
+      ]
     },
     {
       "points": [
         {
           "latitude": 55.753495,
           "longitude": 37.611562,
-          "type": "run",
-          "time": 1
+          "type": "run"
         },
         {
           "latitude": 55.752924,
@@ -259,17 +257,14 @@
         },
         {
           "latitude": 55.754579,
-          "longitude": 37.61218
+          "longitude": 37.61218,
+          "time": 3
         },
         {
           "latitude": 55.755181,
           "longitude": 37.610419,
           "type": "bus",
-          "time": 0,
-          "route": {
-            "uuid": "d5c57680-7249-11e7-8ce5-c515217166c7",
-            "number": "40"
-          },
+          "time": 3,
           "stop_point": {
             "uuid": "6416bd20-8656-11e7-a550-7bf1287f57e5",
             "name": "Моховая улица",
@@ -277,8 +272,7 @@
             "longitude": 37.610419
           }
         }
-      ],
-      "time": 42
+      ]
     },
     {
       "points": [
@@ -286,8 +280,7 @@
           "latitude": 55.753495,
           "longitude": 37.611562,
           "name": "Моховая улица",
-          "type": "run",
-          "time": 3
+          "type": "run"
         },
         {
           "latitude": 55.754541,
