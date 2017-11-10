@@ -19,11 +19,13 @@ extension RNSBuildRouteView {
     
     @IBAction func actionFrom(_ sender: Any) {
         RNSMapManager.pointFrom = RNSDutyAddressTemp(point)
-        requestRoute()
+        showPageRoute()
+        //requestRoute()
      }
     
     @IBAction func actionHere(_ sender: Any) {
         RNSMapManager.pointHere = RNSDutyAddressTemp(point)
-        requestRoute()
+        showPageRoute()
+        //requestRoute()
     }
 }

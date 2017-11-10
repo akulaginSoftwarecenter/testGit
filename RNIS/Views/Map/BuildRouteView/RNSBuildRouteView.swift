@@ -53,5 +53,6 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
         let vc = RNSDutyViewController.initialController as? RNSDutyViewController
         vc?.loadStartItems(pointFrom, inItem: pointHere)
         vc?.pushAnimatedRed()
+        removeAnimate()
     }
 }
