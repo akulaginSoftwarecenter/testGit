@@ -17,8 +17,8 @@ extension RNSRouteVariant {
     }
     
     func prepareNodes() {
-        prepareBusNote()
         prepareNavels()
+        prepareBusNote()
         prepareEndPoint()
     }
     
