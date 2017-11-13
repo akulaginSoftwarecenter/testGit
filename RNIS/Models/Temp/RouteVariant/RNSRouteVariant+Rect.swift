@@ -88,11 +88,19 @@ extension RNSRouteVariant {
     }
     
     func prepareCenterIfPossible() {
-        RNSMapManager.mapCenter(centerPoint)
+        mapCenter(centerPoint)
+    }
+    
+    func prepareDisplayMapFirst() {
+        mapCenter(points?.first?.point)
     }
     
     func prepareDisplayMap() {
         prepareZoomIfPossible()
         prepareCenterIfPossible()
+    }
+    
+    func mapCenter(_ point: PGGeoPoint?){
+        RNSMapManager.mapCenter(point)
     }
 }

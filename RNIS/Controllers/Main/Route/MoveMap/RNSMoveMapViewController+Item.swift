@@ -14,7 +14,7 @@ import Foundation
 extension RNSMoveMapViewController {
     func prepareItem() {
         item?.prepareRoadActivate()
-        item?.prepareDisplayMap()
+        item?.prepareDisplayMapFirst()
         item?.showDistanceNavels = true
     }
     
