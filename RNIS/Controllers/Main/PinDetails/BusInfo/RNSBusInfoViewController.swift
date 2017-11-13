@@ -43,11 +43,17 @@ class RNSBusInfoViewController: UIViewController {
     /// Кнопка "пожаловаться"
     @IBOutlet weak var complainButton: RNSBlackButton!
     
+    @IBOutlet weak var titleAdd: UILabel!
+    @IBOutlet weak var descriptionAdd: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         if UIScreen.height < smallScreenHeightThreshold {
             topDistanceConstraint.constant = smallScreenTopConstraint
         }
+        */
         prepareUI()
     }
     
@@ -63,6 +69,23 @@ class RNSBusInfoViewController: UIViewController {
             vc?.type = .complaint
             vc?.pushAnimatedRedScroll()
         }
+        prepareAdditionally()
+    }
+    
+    func prepareAdditionally() {
+        var isHideAdditionally = true
+        var text = String()
+        if item?.has_air_conditioning ?? false {
+            isHideAdditionally = false
+            text = "- Присутствует кондиционер \n"
+        }
+        if item?.has_cashless_payment ?? false {
+            isHideAdditionally = false
+            text += "- Возможно оплата безналичным расчетом"
+        }
+        titleAdd.isHidden = isHideAdditionally
+        descriptionAdd.isHidden = isHideAdditionally
+        descriptionAdd.text = text
     }
     
     override class var storyboardName: String {

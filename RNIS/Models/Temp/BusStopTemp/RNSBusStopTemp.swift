@@ -19,7 +19,10 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
     public override func mapping(map: Map) {
         super.mapping(map: map)
         
-        let point = PGGeoPoint(latitude: latitude ?? 0, longitude: longitude ?? 0)
-        self.name = (name ?? "") + " (" + point.distanceToCurrent.toString + ")"
+        self.point = PGGeoPoint(latitude: latitude ?? 0, longitude: longitude ?? 0)
+        self.nameDistance = (name ?? "") + " (" + (self.point?.distanceToCurrent.toString ?? "") + ")"
     }
+    
+    var point: PGGeoPoint?
+    var nameDistance: String?
 }

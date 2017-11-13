@@ -22,7 +22,12 @@ class RNSSearchCell: RNSBaseTableCell {
     }
     
     func prepareItem() {
-        labelText.text = item?.name
+        var text = item?.name
+        if let item = item as? RNSBusStopTemp,
+            let nameDistance = item.nameDistance {
+            text = nameDistance
+        }
+        labelText.text = text
     }
     
     func prepareBisibleBus() {

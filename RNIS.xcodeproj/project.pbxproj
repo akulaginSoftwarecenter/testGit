@@ -3589,8 +3589,8 @@
 		838CE9331F3DA9A000C10FBA /* BusInfo */ = {
 			isa = PBXGroup;
 			children = (
-				838CE9361F3DAA2000C10FBA /* RNSBusInfoViewController.storyboard */,
 				838CE9341F3DA9FE00C10FBA /* RNSBusInfoViewController.swift */,
+				838CE9361F3DAA2000C10FBA /* RNSBusInfoViewController.storyboard */,
 			);
 			path = BusInfo;
 			sourceTree = "<group>";
