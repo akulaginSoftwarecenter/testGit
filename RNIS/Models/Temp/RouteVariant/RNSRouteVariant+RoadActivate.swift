@@ -15,6 +15,10 @@ extension RNSRouteVariant {
         roadActivate?.forEach{$0.clear()}
     }
     
+    func removeRoadRun() {
+        roadActivate?.forEach{($0 as? RNSRoadRun )?.clear()}
+    }
+    
     var getZoomLevel: Int {
         return RNSMapManager.getZoomLevel
     }
@@ -25,7 +29,8 @@ extension RNSRouteVariant {
             return 
         }
         currentZoom = getZoomLevel
-        prepareRoadActivate()
+        removeRoadRun()
+        prepareRunActivate()
     }
     
     func prepareRoadActivate() {
@@ -53,7 +58,6 @@ extension RNSRouteVariant {
             return
         }
         
-        var items = [RNSRoutePoint]()
         let addDraw: (([RNSRoutePoint]) -> ()) = {[weak self] items in
             guard items.count > 1,
                 let polyline = handlerPolyline?(items) else {
@@ -61,18 +65,25 @@ extension RNSRouteVariant {
             }
             self?.roadActivate?.append(polyline)
         }
+        
         guard let points = points else {
             return
         }
-        
+        var lastType = TypePoint.run
+        var items = [RNSRoutePoint]()
         for index in (0..<(points.count)) {
             let point = points[index]
+            if let pointType = point.type {
+                lastType = pointType
+            }
             items.append(point)
-            if let pointType = point.type, pointType != type {
+            if lastType != type {
                 addDraw(items)
                 items = [RNSRoutePoint]()
             }
         }
-        addDraw(items)
+        if lastType == type {
+            addDraw(items)
+        }
     }
 }

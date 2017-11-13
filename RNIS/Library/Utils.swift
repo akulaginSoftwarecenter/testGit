@@ -69,11 +69,19 @@ class Utils {
     }
     
     static func queueUserInitiated(handler: EmptyBlock?) {
-        DispatchQueue.global(qos: .userInitiated).async {
+        queueGlobal(.userInitiated, handler: handler)
+    }
+    
+    static func queueUserBackground(handler: EmptyBlock?) {
+        queueGlobal(.background, handler: handler)
+    }
+    
+    static func queueGlobal(_ qos: DispatchQoS.QoSClass = DispatchQoS.QoSClass.default, handler: EmptyBlock?) {
+        DispatchQueue.global(qos: qos).async {
             handler?()
         }
     }
-    
+
     static var mobileToken: AliasDictionary {
         var dict = AliasDictionary()
         if let token = UserDefaults.token {

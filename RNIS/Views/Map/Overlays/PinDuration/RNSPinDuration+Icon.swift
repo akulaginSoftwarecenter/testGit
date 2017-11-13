@@ -20,7 +20,12 @@ extension RNSPinDuration {
     
     /// Обновление иконки
     func updateIcon() {
-        setImage(isHide ? nil : imageIcon)
+        Utils.queueUserBackground {
+            let imageIcon = self.imageIcon
+            Utils.mainQueue {
+                self.setImage(self.isHide ? nil : imageIcon)
+            }
+        }
     }
     
     func setImage(_ image: UIImage?) {
