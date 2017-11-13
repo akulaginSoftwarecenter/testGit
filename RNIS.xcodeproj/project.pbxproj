@@ -1387,9 +1387,9 @@
 		8310D43E1F3C69BF000CCD0A /* BusDetail */ = {
 			isa = PBXGroup;
 			children = (
+				8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */,
 				8356BE5E1F3D8B4700560623 /* RNSBusDetailController+Observe.swift */,
 				8310D4411F3C6B41000CCD0A /* RNSBusDetailController.storyboard */,
-				8310D43F1F3C6AE3000CCD0A /* RNSBusDetailController.swift */,
 			);
 			path = BusDetail;
 			sourceTree = "<group>";
