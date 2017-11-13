@@ -3882,13 +3882,13 @@
 				83A53F951F4A9F0800938969 /* RNSRouteVariant.swift */,
 				838EA0291F53B06100E9BF20 /* RNSRouteVariant+Var.swift */,
 				838EA02B1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift */,
-				8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */,
-				83A5C6E91F57DBE9006C8D62 /* RNSRouteVariant+Nodes.swift */,
 				83B8DE4D1F834344002E0238 /* RNSRouteVariant+Parse.swift */,
 				83ADAAE81F8394E100C289C5 /* RNSRouteVariant+Query.swift */,
 				835D85411F50071800B83EB2 /* RNSRouteVariant+Rect.swift */,
 				83D62B721F4D4FBF00246DFA /* RNSRouteVariant+RoadActivate.swift */,
 				8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */,
+				83A5C6E91F57DBE9006C8D62 /* RNSRouteVariant+Nodes.swift */,
+				8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */,
 			);
 			path = RouteVariant;
 			sourceTree = "<group>";
