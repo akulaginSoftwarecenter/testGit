@@ -2548,11 +2548,11 @@
 			isa = PBXGroup;
 			children = (
 				836EEEFB1F3BF7C5007631D9 /* Cell */,
+				836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */,
 				831FDD8F1F59683C004D69FB /* RNSBusStopDetailController+Observe.swift */,
 				836EEF081F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift */,
 				833D6C1E1F7CC5A400C4A0F3 /* RNSBusStopDetailController+UpdateData.swift */,
 				836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */,
-				836277E11F382E85009FB712 /* RNSBusStopDetailController.swift */,
 			);
 			path = BusStopDetail;
 			sourceTree = "<group>";
@@ -4089,11 +4089,11 @@
 		83AA6A591F5668C000B2139C /* SupportInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				83AA6A5A1F5668C000B2139C /* SupportInfoViewController.swift */,
 				831184AA1F7E136700B999DA /* SupportInfoViewController+LoadData.swift */,
 				831184AC1F7E138700B999DA /* SupportInfoViewController+Send.swift */,
 				8390DFD11F663DFE003C3505 /* SupportInfoViewController+UI.swift */,
 				8390DFCD1F663481003C3505 /* SupportInfoViewController.storyboard */,
-				83AA6A5A1F5668C000B2139C /* SupportInfoViewController.swift */,
 			);
 			path = SupportInfoViewController;
 			sourceTree = "<group>";

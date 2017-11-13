@@ -11,13 +11,31 @@ import Foundation
 extension SupportInfoViewController {
     
     public func textViewDidChange(_ textView: UITextView) {
+        updateHeightTextView()
+    }
+    
+    func updateHeightTextView() {
         UIView.animateConstrains(self.view) {
             let size = self.textView.sizeThatFits(CGSize(width: self.textView.bounds.width, height: CGFloat.greatestFiniteMagnitude))
             self.textViewHeightConstraint.constant = size.height
         }
     }
+    
+    func prepareUI() {
+        topTitle.text = type.rawValue
+        
+        blackButton.handlerAction = { [weak self] in
+            self?.checkValidFields()
+        }
+        prepareMessage()
+    }
      
     func prepareError(_ error: String?) {
         errorLabel.text = error
+    }
+    
+    func prepareMessage() {
+        textView.text = message
+        updateHeightTextView()
     }
 }

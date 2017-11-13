@@ -65,6 +65,9 @@ class RNSBusStopDetailController: UIViewController {
         errorReportButton.button.touchUpInside {
             let vc = SupportInfoViewController.initialController as? SupportInfoViewController
             vc?.type = .feedback
+            if let item = self.item {
+                vc?.message = "Остановка \(item.name), id \(item.uuid). Сообщение: \n"
+            }
             vc?.pushAnimatedRedScroll()
         }
     }

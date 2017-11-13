@@ -42,14 +42,12 @@ class SupportInfoViewController: UIViewController {
         return textView.text
     }
     
+    var message: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topTitle.text = type.rawValue
-        
-        blackButton.handlerAction = { [weak self] in
-            self?.checkValidFields()
-        }
+        prepareUI()
         loadData()
     }
     
