@@ -38,14 +38,15 @@ class RNSRouteTableItem {
     var time: Int?
     
     var handlerUpdateText1: EmptyBlock?
+    var point: RNSRoutePoint?
     
     static func genStop(_ point: RNSRoutePoint?, time: Int) -> RNSRouteTableItem {
         let item = RNSRouteTableItem()
+        item.point = point
         item.time = time
         item.text2 = point?.title
         item.type = .stop
         item.typeLine = point?.type ?? .bus
-        item.doneMove = point?.doneMove ?? false
         return item
     }
     
@@ -74,5 +75,10 @@ class RNSRouteTableItem {
     func prepareTimeText1(_ time: Int?) {
         text1 = "\(time ?? 0)" + " мин"
         handlerUpdateText1?()
+    }
+    
+    func defaultDoneMove() {
+        doneMove = point?.doneMove ?? false
+        previousDoneMove = false
     }
 }

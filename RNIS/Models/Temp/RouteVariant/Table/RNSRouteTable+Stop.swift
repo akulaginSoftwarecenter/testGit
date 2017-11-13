@@ -14,8 +14,7 @@ extension RNSRouteTable {
         let item = RNSRouteTableItem.genStop(point, time: time)
         item.height = 60
         item.showTopBusLine = !isLastItemRun
-        item.doneMove = point?.doneMove ?? false
-          return item
+        return item
     }
     
     @discardableResult func appendStop(_ point: RNSRoutePoint?, time: Int) -> RNSRouteTableItem {

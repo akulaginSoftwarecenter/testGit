@@ -1333,9 +1333,9 @@
 		830E68B41F552B8E008EFA02 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				830E68B51F552FB3008EFA02 /* RNSRouteDetailController.swift */,
 				833609821F738CE700B42333 /* RNSRouteDetailController+Flag.swift */,
 				830E68B71F552FC6008EFA02 /* RNSRouteDetailController.storyboard */,
-				830E68B51F552FB3008EFA02 /* RNSRouteDetailController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -3896,9 +3896,9 @@
 		83A5C6EB1F57F333006C8D62 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				83A5C6EC1F57F396006C8D62 /* RNSMoveDetailController.swift */,
 				836078401F739DAA003F1F3A /* RNSMoveDetailController+Flag.swift */,
 				83A5C7001F57FA1C006C8D62 /* RNSMoveDetailController.storyboard */,
-				83A5C6EC1F57F396006C8D62 /* RNSMoveDetailController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -3907,8 +3907,8 @@
 			isa = PBXGroup;
 			children = (
 				83E4314E1F555FC50009BABB /* Cells */,
-				83A5C6FC1F57F66D006C8D62 /* RNSRouteDetailView+TableView.swift */,
 				83A5C6EF1F57F488006C8D62 /* RNSRouteDetailView.swift */,
+				83A5C6FC1F57F66D006C8D62 /* RNSRouteDetailView+TableView.swift */,
 				83A5C6F11F57F4A8006C8D62 /* RNSRouteDetailView.xib */,
 			);
 			path = RouteDetailView;

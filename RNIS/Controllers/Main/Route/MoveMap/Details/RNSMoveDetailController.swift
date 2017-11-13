@@ -38,7 +38,7 @@ class RNSMoveDetailController: UIViewController {
         super.viewDidLoad()
         
         detailView.showMove = true
-        updateItem()
+        prepareItem()
         prepareFlagView()
         prepareObservers()
     }
@@ -49,11 +49,15 @@ class RNSMoveDetailController: UIViewController {
     }
     
     /// Обновление представления с детальной информацией о маршруте
-    @objc func updateItem() {
+    func prepareItem() {
         if detailView == nil {
             return
         }
         detailView.item = item?.tableItem
+    }
+    
+    @objc func updateItem() {
+        detailView.prepareMove()
     }
     
     override class var storyboardName: String {

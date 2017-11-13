@@ -24,7 +24,8 @@ extension RNSRouteTableItem: NSCopying {
         copy.shortLine = shortLine
         copy.showLine = showLine
         copy.showTopBusLine = showTopBusLine
+        copy.point = point
         copy.doneMove = doneMove
-       return copy
+        return copy
    }
 }

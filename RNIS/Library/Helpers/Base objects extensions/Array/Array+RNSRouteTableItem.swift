@@ -10,11 +10,14 @@ import Foundation
 
 extension Array where Element: RNSRouteTableItem {
     func prepareMove() {
+        
+        defaultDoneMove()
         for i in 0..<count - 1 {
             
             guard let item = valueAt(i) else {
                 continue
             }
+            
             let nextItem = valueAt(i + 1)
             let previousItem = valueAt(i - 1)
             
@@ -29,9 +32,15 @@ extension Array where Element: RNSRouteTableItem {
                 let itemsStill = item.itemsStill
                 itemsStill.first?.previousDoneMove = true
                 itemsStill.prepareMove()
-                
                 nextItem?.previousDoneMove = item.lastStillDoneMove
             }
+        }
+    }
+    
+    func defaultDoneMove() {
+        forEach {
+            $0.defaultDoneMove()
+            $0.itemsStill.defaultDoneMove()
         }
     }
     

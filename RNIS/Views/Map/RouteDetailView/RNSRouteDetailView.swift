@@ -16,8 +16,7 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
     /// Содель схемы маршрута
     var item: RNSRouteTable? {
         didSet{
-            prepareItems()
-            tableView.reloadData()
+            tableReload()
         }
     }
     
@@ -33,6 +32,16 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
         }
         items.prepareShowArrow()
         self.items = items
+    }
+    
+    func prepareMove() {
+        item?.prepareLocationChange()
+        tableReload()
+    }
+    
+    func tableReload() {
+        prepareItems()
+        tableView.reloadData()
     }
     
     override func awakeFromNib() {

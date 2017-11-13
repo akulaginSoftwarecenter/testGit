@@ -49,7 +49,8 @@ extension RNSRouteTable {
         points?.forEach{ $0.doneMove = false; $0.route?.doneMove = false }
     }
     
-    func prepareMove() {
+    func prepareLocationChange() {
+        prepareDoneLocation()
         items.prepareMove()
     }
     
