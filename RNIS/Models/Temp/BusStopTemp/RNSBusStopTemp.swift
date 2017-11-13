@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
    
@@ -14,5 +15,11 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
     
     var height: CGFloat {
         return CGFloat(45 + (forecast?.count ?? 0) * 49)
+    }
+    public override func mapping(map: Map) {
+        super.mapping(map: map)
+        
+        let point = PGGeoPoint(latitude: latitude ?? 0, longitude: longitude ?? 0)
+        self.name = (name ?? "") + " (" + point.distanceToCurrent.toString + ")"
     }
 }
