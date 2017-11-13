@@ -34,7 +34,7 @@ class RNSImagePickerController: UIImagePickerController, UIImagePickerController
     
     /// Событие выбора фотографии из галереи
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             complete?(image)
         } else{
             print("Something went wrong")
