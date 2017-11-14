@@ -12,7 +12,7 @@ import Alamofire
 class RNSPostUserGet: RNSPostRequestMobileToken {
     
     override var isShowLogReply: Bool {
-        return true
+        return false
     }
 
     typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
