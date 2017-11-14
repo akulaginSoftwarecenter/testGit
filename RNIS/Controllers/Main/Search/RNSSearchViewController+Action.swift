@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension RNSSearchViewController: UITextFieldDelegate {
+extension RNSSearchViewController {
     
     /// Событие переключения вкладки
     @IBAction func actionSegmented(_ sender: UISegmentedControl) {
@@ -23,11 +23,6 @@ extension RNSSearchViewController: UITextFieldDelegate {
       
     @IBAction func actionTop(_ sender: Any) {
          hideKeyboard()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        hideKeyboard()
-        return true
     }
     
     /// Спрятать клавиатуру
