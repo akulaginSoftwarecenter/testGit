@@ -40,12 +40,12 @@ class RNSPinVariantBus: RNSPinParent {
     }
     
     func prepareIcon() {
-        Utils.queueUserBackground {
+        //Utils.queueUserBackground {
             let view = RNSNoteRoute(busTitle: self.bus?.title, type: .down)
             let image = view.asImage
-            Utils.mainQueue {
+          //  Utils.mainQueue {
                   self.setBitmap(image, xOffset: 0, yOffset: -1.0, isPlain: false, sizeInMeters: 50)
-            }
-        }
+          //  }
+       // }
     }
 }
