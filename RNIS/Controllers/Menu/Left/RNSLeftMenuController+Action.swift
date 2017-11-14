@@ -33,7 +33,7 @@ extension RNSLeftMenuController {
     ///
     /// - Parameter sender: <#sender description#>
     @IBAction func actionShare(_ sender: Any) {
-        let text = "Добро пожаловать в РНИС!"
+        let text = "Рекомендую приложение «Остановки МО» для построения маршрута на транспорте.\nДоступно в Google Play и App Store."
         let vc = UIActivityViewController(activityItems: [text], applicationActivities: [])
         if vc.responds(to: #selector(getter: UIActivityViewController.popoverPresentationController)) {
             vc.popoverPresentationController?.sourceView = self.view
