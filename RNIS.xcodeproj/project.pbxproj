@@ -616,6 +616,7 @@
 		83ED5E2F1F2707A0007D9F1C /* PGPolyline+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E2E1F2707A0007D9F1C /* PGPolyline+Utils.swift */; };
 		83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E301F2709D4007D9F1C /* RNSMapViewController+OverLays.swift */; };
 		83ED5E3A1F270A25007D9F1C /* RNISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E391F270A25007D9F1C /* RNISTests.swift */; };
+		83EFADD21FBA8C5700F98F12 /* UIWebView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFADD11FBA8C5700F98F12 /* UIWebView+Utils.swift */; };
 		83F555341F5562B300D1221C /* RNSRouteStillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555331F5562B300D1221C /* RNSRouteStillCell.swift */; };
 		83F555371F5565BF00D1221C /* RNSRouteBusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555361F5565BF00D1221C /* RNSRouteBusCell.swift */; };
 		83F5553A1F55675800D1221C /* RNSRouteTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555391F55675800D1221C /* RNSRouteTotalCell.swift */; };
@@ -1231,6 +1232,7 @@
 		83ED5E371F270A25007D9F1C /* RNISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ED5E391F270A25007D9F1C /* RNISTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNISTests.swift; sourceTree = "<group>"; };
 		83ED5E3B1F270A25007D9F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83EFADD11FBA8C5700F98F12 /* UIWebView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWebView+Utils.swift"; sourceTree = "<group>"; };
 		83F555331F5562B300D1221C /* RNSRouteStillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRouteStillCell.swift; sourceTree = "<group>"; };
 		83F555361F5565BF00D1221C /* RNSRouteBusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRouteBusCell.swift; sourceTree = "<group>"; };
 		83F555391F55675800D1221C /* RNSRouteTotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRouteTotalCell.swift; sourceTree = "<group>"; };
@@ -1712,9 +1714,9 @@
 		831E7A7F1FA714190030B9D0 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				831E7A801FA714470030B9D0 /* RNSNewsDetailController.swift */,
 				831E7A861FA71EB20030B9D0 /* RNSNewsDetailController+WebView.swift */,
 				831E7A821FA714570030B9D0 /* RNSNewsDetailController.storyboard */,
-				831E7A801FA714470030B9D0 /* RNSNewsDetailController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -3015,6 +3017,7 @@
 				837ABF191F2EE38600AB5E54 /* UITapGestureRecognizer */,
 				832E4B9D1F2ED5D200A4AD77 /* UITextField */,
 				8357187B1F21A30F00DE5E25 /* UIViewController */,
+				83EFADD01FBA8C3000F98F12 /* UIWebView */,
 				8357188A1F21A9CA00DE5E25 /* UserDefaults */,
 				836D80F11F1DD5F600FEE390 /* View */,
 			);
@@ -4511,6 +4514,14 @@
 			path = RNISTests;
 			sourceTree = "<group>";
 		};
+		83EFADD01FBA8C3000F98F12 /* UIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				83EFADD11FBA8C5700F98F12 /* UIWebView+Utils.swift */,
+			);
+			path = UIWebView;
+			sourceTree = "<group>";
+		};
 		83F555311F55625700D1221C /* Stop */ = {
 			isa = PBXGroup;
 			children = (
@@ -5174,6 +5185,7 @@
 				83B2E0921F1E139800FA92A4 /* CloudKitParser.swift in Sources */,
 				8337D4321FA9840F00623038 /* RNSDotsBussView+FirstSegment.swift in Sources */,
 				8329DF581F340F1200D542FF /* RNSParentContainer.swift in Sources */,
+				83EFADD21FBA8C5700F98F12 /* UIWebView+Utils.swift in Sources */,
 				83A652311FB4011F001839C2 /* Error+Utils.swift in Sources */,
 				831863A51F74D13D00579000 /* RNSBusStopManager+Uuids.swift in Sources */,
 				8393AB6A1F8B216B004D754B /* RNSRouteTableItem+Var.swift in Sources */,
