@@ -38,7 +38,7 @@ class RNSStopRegionManager: NSObject {
         print("MaxX",MKMapRectGetMaxX(rect))
         print("MaxY",MKMapRectGetMaxY(rect))
         regions = regions.filter({
-            return !$0.contains(rect)
+            return !rect.contains($0)
         })
         regions.append(rect)
         print("add2",regions.count)
