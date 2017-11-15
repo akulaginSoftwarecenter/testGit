@@ -53,12 +53,12 @@ class RNSBusStopManager: NSObject {
     
     /// Переменная для хранения послдених координат
     static var lastMinCoord: PGGeoPoint {
-        return mapView.lastMinCoord
+        return RNSMapManager.lastMinCoord
     }
     
     /// Переменная для хранения последнего центра карты
     static var lastCenterCoord: PGGeoPoint {
-        return mapView.lastCenterCoord
+        return RNSMapManager.lastCenterCoord
     }
     
     /// Экземпляр текущей выбранной остановки

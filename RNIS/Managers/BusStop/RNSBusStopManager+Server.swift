@@ -22,9 +22,19 @@ extension RNSBusStopManager {
             return
         }
         updateBD()
-        request = RNSPostStopPointList(lastMinCoord, center: lastCenterCoord, complete: { (uuids) in
-            updateOperationServer(uuids)
-            complete?()
+        let min = lastMinCoord
+        let center = lastCenterCoord
+        RNSStopRegionManager.checkCurrentRect(сontinue: {
+            self.sendServer(min, center: center, complete: complete, failure: failure)
+        }, failure: complete)
+    }
+    
+    static func sendServer(_ min: PGGeoPoint, center: PGGeoPoint, complete: EmptyBlock?, failure: AliasStringBlock?) {
+        self.request = RNSPostStopPointList(min, center: center, complete: { (uuids) in
+            RNSStopRegionManager.add(min, center: center, complete: {
+                self.updateOperationServer(uuids)
+                complete?()
+            })
         }, failure: failure)
     }
     

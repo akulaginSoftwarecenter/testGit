@@ -10,35 +10,53 @@ import UIKit
 import MapKit
 
 class RNSStopRegionManager: NSObject {
-    var regions = [MKMapRect]()
+    static var regions = [MKMapRect]()
     
-    func сontinueIfNotContain(_ rect: MKMapRect?, сontinue: EmptyBlock?) {
-        guard let rect = rect else {
+    static func checkCurrentRect(сontinue: EmptyBlock?, failure: EmptyBlock?) {
+        guard let rect = currentMapRect else {
             return
         }
-        //Utils.queueUserInitiated {
-            for item in self.regions {
-                if item.contains(rect) {
-          //          Utils.mainQueue {
-                        сontinue?()
-            //        }
-                }
+        print("checkCurrentRect",regions.count)
+        for item in self.regions {
+            if item.contains(rect) {
+                print("current finded")
+                failure?()
+                return
             }
-       // }
+        }
+        сontinue?()
     }
     
-    func add(_ rect: MKMapRect?, complete: EmptyBlock?) {
-        guard let rect = rect else {
+    static func add(_ min: PGGeoPoint?, center: PGGeoPoint?, complete: EmptyBlock?) {
+        guard let rect = mapRect(min, center: center) else {
+            complete?()
             return
         }
+        
+        print("add1",regions.count)
+        print("rect",rect)
+        print("MaxX",MKMapRectGetMaxX(rect))
+        print("MaxY",MKMapRectGetMaxY(rect))
         regions = regions.filter({
             return !$0.contains(rect)
         })
         regions.append(rect)
+        print("add2",regions.count)
+        complete?()
     }
-    /*
-    func mapRect(_ min: PGGeoPoint, center: PGGeoPoint) -> MKMapRect {
-        
+    
+    static var currentMapRect: MKMapRect? {
+        return mapRect(RNSMapManager.lastMinCoord, center: RNSMapManager.lastCenterCoord)
     }
-    */
+    
+    static func mapRect(_ min: PGGeoPoint?, center: PGGeoPoint?) -> MKMapRect? {
+        guard let distance = min?.distanceTo(center),
+            let topLeft = center?.coordinate(315, distance: distance),
+            let downRight = center?.coordinate(135, distance: distance) else {
+            return nil
+        }
+        print("topLeft",topLeft)
+        print("topLeft",topLeft)
+        return MKMapRect(coordinates: [topLeft,downRight])
+    }
 }

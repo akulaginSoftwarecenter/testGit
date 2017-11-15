@@ -59,4 +59,12 @@ extension RNSMapManager {
     static func prepareMinZoomVisibleStop() {
         setZoomLevel(minZoomVisibleStop)
     }
+    
+    static var lastMinCoord: PGGeoPoint {
+        return mapView.lastMinCoord
+    }
+    
+    static var lastCenterCoord: PGGeoPoint {
+        return mapView.lastCenterCoord
+    }
 }

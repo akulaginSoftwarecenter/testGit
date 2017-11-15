@@ -64,6 +64,13 @@ public extension MKMapRect {
     public func scaledBy(vertically vertical: Double) -> MKMapRect {
         return scaledBy(horizontally: 1, vertically: vertical)
     }
+    
+}
+
+extension MKMapRect {
+    init(coordinates: [PGGeoPoint]) {
+        self = coordinates.map({ MKMapPointForCoordinate($0.coordinate) }).map({ MKMapRect(origin: $0, size: MKMapSize(width: 0, height: 0)) }).reduce(MKMapRectNull, MKMapRectUnion)
+    }
 }
 
 extension MKMapRect: Equatable {
