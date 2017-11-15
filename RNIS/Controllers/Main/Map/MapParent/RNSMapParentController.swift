@@ -17,9 +17,6 @@ class RNSMapParentController: UIViewController {
     var mapView: MapView {
         return RNSMapManager.mapView
     }
-    //
-    /// Надпись с отображением текущего зума
-    @IBOutlet weak var labelZoom: UILabel!
     /// Кнопка увеличения зума
     @IBOutlet weak var plusButtonZoom: UIButton!
     /// Кнопка уменьшения зума
@@ -84,7 +81,7 @@ class RNSMapParentController: UIViewController {
     
     /// Обновление надписи с зумом
     func updateZoom() {
-        labelZoom.text = "zoom = \(mapView.getZoomLevel())"
+        RNSBusStopManager.updateZoom()
     }
     
     func prepareTargetIcon() {

@@ -35,4 +35,5 @@ let kMeta = "meta"
 let errorNetwork = "Ошибка соединения повторите попытку"
 let favoriteTitle = "Избранное"
 let notificationTitle = "Оповещения"
+let minZoomVisibleStop = Int32(14)
 

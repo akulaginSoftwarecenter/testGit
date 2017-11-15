@@ -12,7 +12,6 @@ import Foundation
  */
 extension RNSMapManager {
     
-    
     /// Функция установки центра карты
     static func mapCenter(_ point: PGGeoPoint?) {
         guard let point = point else {
@@ -37,7 +36,7 @@ extension RNSMapManager {
     /// Функция установки выбранного местоположения
     static func testRedPlace() {
         mapCenter(redPlaceLocation.coordinate.point)
-        setZoomLevel(14)
+        prepareMinZoomVisibleStop()
     }
     
     /// Функция установки уровня приближения карты
@@ -53,7 +52,11 @@ extension RNSMapManager {
     static func firstZoomIfNeed() {
         if !UserDefaults.isDidFirstZoom {
             UserDefaults.firstZoomComplete()
-            setZoomLevel(14)
+            prepareMinZoomVisibleStop()
         }
-   }
+    }
+    
+    static func prepareMinZoomVisibleStop() {
+        setZoomLevel(minZoomVisibleStop)
+    }
 }

@@ -15,16 +15,14 @@ extension RNSBusStopManager {
     
     /// Функция обновления данных о ТС с сервера
     static func updateServer(_ complete: EmptyBlock?, failure: AliasStringBlock?) {
+        request?.cancel()
         if isNeedStopLoad {
             removeAll()
             complete?()
             return
         }
-        //CounterTime.startTimer()
         updateBD()
-        request?.cancel()
         request = RNSPostStopPointList(lastMinCoord, center: lastCenterCoord, complete: { (uuids) in
-            //CounterTime.endTimer()
             updateOperationServer(uuids)
             complete?()
         }, failure: failure)

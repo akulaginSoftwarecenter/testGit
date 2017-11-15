@@ -23,12 +23,12 @@ class RNSCoordinateModel: Object {
         return kUuid
     }
     
-    var handlerCurrent: EmptyBlock?
+    var handlerUpdateIcon: EmptyBlock?
     var handlerRemove: EmptyBlock?
     var handlerUpdateLocaton: EmptyBlock?
     
     override static func ignoredProperties() -> [String] {
-        return ["handlerRemove", "point", "isHaveCoordinate", "handlerCurrent", "handlerUpdateLocaton"]
+        return ["handlerRemove", "point", "isHaveCoordinate", "handlerUpdateIcon", "handlerUpdateLocaton"]
     }
     
     var point: PGGeoPoint {
@@ -39,7 +39,7 @@ class RNSCoordinateModel: Object {
         return !((latitude == 0) && (longitude == 0))
     }
      
-    func prepareCurrent() {
-        handlerCurrent?()
+    func updateIcon() {
+        handlerUpdateIcon?()
     }
 }

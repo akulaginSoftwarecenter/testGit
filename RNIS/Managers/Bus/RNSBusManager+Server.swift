@@ -15,16 +15,14 @@ extension RNSBusManager {
     
     /// Функция обновления данных о ТС с сервера
     static func updateServer(_ complete: EmptyBlock? = nil, failure: AliasStringBlock? = nil) {
+        request?.cancel()
         if isNeedStopLoad {
             removeAll()
             complete?()
             return
         }
-        //CounterTime.startTimer()
         //updateBD()
-        request?.cancel()
         request = RNSPostBusList(lastMinCoord, center: lastCenterCoord, complete: { (uuids) in
-            //CounterTime.endTimer()
             updateOperationServer(uuids)
             complete?()
         }, failure: failure)

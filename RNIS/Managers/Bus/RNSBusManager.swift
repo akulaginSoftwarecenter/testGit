@@ -47,7 +47,7 @@ class RNSBusManager: NSObject {
     
     /// Переменная необходимости прекращения загрузки
     static var isNeedStopLoad: Bool {
-        return RNSMapManager.getZoomLevel <= 13
+        return RNSMapManager.getZoomLevel < minZoomVisibleStop
     }
     
     /// Переменная для хранения послдених координат

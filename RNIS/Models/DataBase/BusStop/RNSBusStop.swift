@@ -12,4 +12,8 @@ import RealmSwift
 class RNSBusStop: RNSCoordinateModel {
     
     @objc dynamic var name: String = ""
+    
+    var isCurrent: Bool {
+        return uuid == RNSBusStopManager.currentStopUuid
+    }
 }

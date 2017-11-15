@@ -24,7 +24,7 @@ extension RNSRouteVariant {
     }
     
     func prepareRoadActivateAtZoom() {
-       if  let currentZoom = currentZoom,
+        if  let currentZoom = currentZoom,
             getZoomLevel == currentZoom {
             return 
         }

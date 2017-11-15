@@ -176,6 +176,7 @@
 		834691F41FAC59770098D4C6 /* RNSWelcomeViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834691F31FAC59770098D4C6 /* RNSWelcomeViewContoller.swift */; };
 		834691F61FAC59860098D4C6 /* RNSWelcomeViewContoller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834691F51FAC59860098D4C6 /* RNSWelcomeViewContoller.storyboard */; };
 		834691F81FAC5AC10098D4C6 /* RNSWelcomeViewContoller+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834691F71FAC5AC10098D4C6 /* RNSWelcomeViewContoller+CollectionView.swift */; };
+		8349F4A01FBBF0AC009FF0FC /* Array+BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8349F49F1FBBF0AC009FF0FC /* Array+BusStop.swift */; };
 		8351F15E1F81E4DB0014F0FD /* RNSPostActionRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8351F15D1F81E4DB0014F0FD /* RNSPostActionRouting.swift */; };
 		8351F1601F81F2C90014F0FD /* RNSFavoritesBusView+items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8351F15F1F81F2C90014F0FD /* RNSFavoritesBusView+items.swift */; };
 		8356BE4F1F3D451F00560623 /* RNSCircleHole.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8356BE4E1F3D451F00560623 /* RNSCircleHole.xib */; };
@@ -814,6 +815,7 @@
 		834691F31FAC59770098D4C6 /* RNSWelcomeViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSWelcomeViewContoller.swift; sourceTree = "<group>"; };
 		834691F51FAC59860098D4C6 /* RNSWelcomeViewContoller.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RNSWelcomeViewContoller.storyboard; sourceTree = "<group>"; };
 		834691F71FAC5AC10098D4C6 /* RNSWelcomeViewContoller+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSWelcomeViewContoller+CollectionView.swift"; sourceTree = "<group>"; };
+		8349F49F1FBBF0AC009FF0FC /* Array+BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+BusStop.swift"; sourceTree = "<group>"; };
 		8351F15D1F81E4DB0014F0FD /* RNSPostActionRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPostActionRouting.swift; sourceTree = "<group>"; };
 		8351F15F1F81F2C90014F0FD /* RNSFavoritesBusView+items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSFavoritesBusView+items.swift"; sourceTree = "<group>"; };
 		8356BE4E1F3D451F00560623 /* RNSCircleHole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RNSCircleHole.xib; sourceTree = "<group>"; };
@@ -2504,8 +2506,8 @@
 		836277D21F381D4E009FB712 /* BusStop */ = {
 			isa = PBXGroup;
 			children = (
-				831FDD8D1F5960C6004D69FB /* RNSBusStop+Generate.swift */,
 				836277D61F381DFA009FB712 /* RNSBusStop.swift */,
+				831FDD8D1F5960C6004D69FB /* RNSBusStop+Generate.swift */,
 			);
 			path = BusStop;
 			sourceTree = "<group>";
@@ -2564,12 +2566,12 @@
 		8362CE271F6A8DD200BE912D /* BusStop */ = {
 			isa = PBXGroup;
 			children = (
+				8362CE281F6A8E0600BE912D /* RNSBusStopManager.swift */,
 				8362CE2A1F6A8EDF00BE912D /* RNSBusStopManager+BD.swift */,
 				8362CE2C1F6A8F0900BE912D /* RNSBusStopManager+Pin.swift */,
 				839400161F74B82900A809DD /* RNSBusStopManager+Server.swift */,
 				8362CE2E1F6A8F8B00BE912D /* RNSBusStopManager+Stub.swift */,
 				831863A41F74D13D00579000 /* RNSBusStopManager+Uuids.swift */,
-				8362CE281F6A8E0600BE912D /* RNSBusStopManager.swift */,
 			);
 			path = BusStop;
 			sourceTree = "<group>";
@@ -3374,6 +3376,7 @@
 				8337D4331FA98B8100623038 /* Array+RNSBusRouteTemp.swift */,
 				830E68AF1F551CBD008EFA02 /* Array+RNSRoutePoint.swift */,
 				839F7C851F8B7624006B4F7F /* Array+RNSRouteTableItem.swift */,
+				8349F49F1FBBF0AC009FF0FC /* Array+BusStop.swift */,
 				837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */,
 				837F719A1F45415100DEAA36 /* Array+Utils.swift */,
 			);
@@ -3694,12 +3697,12 @@
 			isa = PBXGroup;
 			children = (
 				835AA2231F7A1944006E1CDE /* Move */,
+				83940B8A1F6B8AF3005654DE /* RNSBusManager.swift */,
 				83940B8C1F6B8D99005654DE /* RNSBusManager+BD.swift */,
 				83940B8E1F6B8DAD005654DE /* RNSBusManager+Pin.swift */,
 				836B960E1F7A008100531BC6 /* RNSBusManager+Server.swift */,
 				83940B901F6B8DE9005654DE /* RNSBusManager+Stub.swift */,
 				836B960C1F7A003400531BC6 /* RNSBusManager+Uuids.swift */,
-				83940B8A1F6B8AF3005654DE /* RNSBusManager.swift */,
 			);
 			path = Bus;
 			sourceTree = "<group>";
@@ -5069,6 +5072,7 @@
 				8310D4551F3C72D6000CCD0A /* RNSCircleHole.swift in Sources */,
 				83E2D3921F34332B00035877 /* RNSScrollKeyBoardContainer.swift in Sources */,
 				83029BCA1F4BEBC900B0FEE3 /* RNSDotsWhiteHorizontal.swift in Sources */,
+				8349F4A01FBBF0AC009FF0FC /* Array+BusStop.swift in Sources */,
 				83AA6A5B1F5668C000B2139C /* AboutAppInfoViewController.swift in Sources */,
 				83204B491F591FBD0033ACA1 /* NotificationTableViewCell.swift in Sources */,
 				83B2E00A1F1DEE2500FA92A4 /* RNSMapViewController+Action.swift in Sources */,

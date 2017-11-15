@@ -47,7 +47,7 @@ class RNSBusStopManager: NSObject {
     
     /// Переменная необходимости прекращения загрузки
     static var isNeedStopLoad: Bool {
-        return RNSMapManager.getZoomLevel <= 13
+        return RNSMapManager.getZoomLevel < minZoomVisibleStop
     }
     
     /// Переменная для хранения послдених координат
@@ -65,7 +65,26 @@ class RNSBusStopManager: NSObject {
         let uuid = item?.uuid ?? ""
         currentStopUuid = value ? uuid : ""
         let items = showedItems.filter{ $0.uuid == uuid }
-        items.forEach{$0.handlerCurrent?()}
+        items.updateIcons()
     }
     static var currentStopUuid = ""
+    static var currentIsZoomSmallStop: Bool?
+    
+    
+    static func updateZoom() {
+        if let isZoom = currentIsZoomSmallStop,
+            isZoomSmallStop == isZoom {
+            return
+        }
+        currentIsZoomSmallStop = isZoomSmallStop
+        showedItems.updateIcons()
+    }
+    
+    static var getZoomLevel: Int {
+        return RNSMapManager.getZoomLevel
+    }
+    
+    static var isZoomSmallStop: Bool {
+        return getZoomLevel <= minZoomVisibleStop
+    }
 }

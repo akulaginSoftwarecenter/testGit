@@ -16,19 +16,29 @@ class RNSPinBusStop: RNSPinItem {
     override func prepareHandlers() {
         super.prepareHandlers()
         
-        item?.handlerCurrent = { [weak self] in
-            self?.prepareCurrent()
+        item?.handlerUpdateIcon = { [weak self] in
+            self?.updateIcon()
         }
     }
     
     override func prepareImage() {
-        prepareCurrent()
+        updateIcon()
     }
     
+    var defaultIcon: UIImage {
+        return RNSBusStopManager.isZoomSmallStop ? RNSImageFactory.bus_stopSmall : RNSImageFactory.bus_stop
+    }
+    
+    var imageSetuped: UIImage?
+    
     /// Настройка иконки пина
-    func prepareCurrent() {
-        let current = item?.uuid == RNSBusStopManager.currentStopUuid
-        let image = current ? RNSImageFactory.bus_stop_current : RNSImageFactory.bus_stop
+    func updateIcon() {
+        let current = (item as? RNSBusStop)?.isCurrent ?? false
+        let image = current ? RNSImageFactory.bus_stop_current : defaultIcon
+        guard imageSetuped != image else {
+            return
+        }
+        imageSetuped = image
         setBitmap(image, xOffset: 0, yOffset: 0, isPlain: false, sizeInMeters: 15)
     }
 }

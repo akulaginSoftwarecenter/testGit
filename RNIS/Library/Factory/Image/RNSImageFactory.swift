@@ -20,7 +20,8 @@ class RNSImageFactory: NSObject {
     let inImage = #imageLiteral(resourceName: "BusIcon")
     static let bus_stop_current = #imageLiteral(resourceName: "Bus_stop_current")
     static let bus_stop = #imageLiteral(resourceName: "Bus_stop")
-    
+    static let bus_stopSmall = #imageLiteral(resourceName: "Bus_stopSmall")
+     
     lazy var textFontAttributes: [NSAttributedStringKey: Any] = {
         let style = NSMutableParagraphStyle()
         style.alignment = NSTextAlignment.center

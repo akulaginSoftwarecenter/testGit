@@ -26,6 +26,7 @@ extension RNSBusManager {
             return
         }
         showedItems.append(contentsOf: items)
+        
         for item in items {
             item.handlerRemove?()
             _ = RNSPinBus(item)
