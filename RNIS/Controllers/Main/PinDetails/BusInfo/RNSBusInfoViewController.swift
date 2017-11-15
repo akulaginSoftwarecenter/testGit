@@ -81,7 +81,7 @@ class RNSBusInfoViewController: UIViewController {
         }
         if item?.has_cashless_payment ?? false {
             isHideAdditionally = false
-            text += "- Возможно оплата безналичным расчетом"
+            text += "- Возможна оплата безналичным расчетом"
         }
         titleAdd.isHidden = isHideAdditionally
         descriptionAdd.isHidden = isHideAdditionally
