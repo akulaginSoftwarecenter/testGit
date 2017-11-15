@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 /**
  Конроллер управления остановками ТС
  */
