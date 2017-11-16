@@ -12,19 +12,20 @@ extension RNSMapParentController {
     
     /// Обновление положения автобусов на карте
     func busUpdate() {
-        showLoader("Обновление автобусов...")
-        RNSBusManager.updateServer ({ [weak self] in
-            self?.removeLoader()
-            }, failure: { [weak self] error in
-                self?.showLoaderLostInet()
-        })
+        RNSBusManager.showLoader = true
+        updateLoader()
+        RNSBusManager.updateServer { [weak self] error in
+           self?.showLoaderLostInet()
+        }
     }
     
     /// Обновление автобусных остановок на карте
     func busStopUpdate() {
-        showLoader("Обновление остановок...")
+        RNSBusStopManager.showLoader = true
+        updateLoader()
         RNSBusStopManager.updateServer ({ [weak self] in
-            self?.removeLoader()
+            RNSBusStopManager.showLoader = false
+            self?.updateLoader()
             }, failure: { [weak self] error in
                 self?.showLoaderLostInet()
         })

@@ -68,6 +68,7 @@ class RNSMapParentController: UIViewController {
         _ = RNSMapManager.pinMyLocation
     }
     
+    
     /// Настройка аниматора
     func prepareAnimator() {
         animator = MapButtonsAnimator(superview: view, duration: 0.3, usingSpringAnimation: false)
@@ -110,6 +111,13 @@ class RNSMapParentController: UIViewController {
         super.viewDidAppear(animated)
 
         animator.setMapButtons(hidden: false, animated: true)
+        prepareHandlers()
+    }
+    
+    func prepareHandlers() {
+        RNSMapManager.handlerUpdateLoader = { [weak self] in
+            self?.updateLoader()
+        }
     }
     
     override class var storyboardName: String {

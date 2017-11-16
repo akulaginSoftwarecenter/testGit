@@ -16,10 +16,8 @@ class RNSStopRegionManager: NSObject {
         guard let rect = currentMapRect else {
             return
         }
-        print("checkCurrentRect",regions.count)
         for item in self.regions {
             if item.contains(rect) {
-                print("current finded")
                 failure?()
                 return
             }
@@ -32,16 +30,10 @@ class RNSStopRegionManager: NSObject {
             complete?()
             return
         }
-        
-        print("add1",regions.count)
-        print("rect",rect)
-        print("MaxX",MKMapRectGetMaxX(rect))
-        print("MaxY",MKMapRectGetMaxY(rect))
         regions = regions.filter({
             return !rect.contains($0)
         })
         regions.append(rect)
-        print("add2",regions.count)
         complete?()
     }
     
@@ -55,8 +47,6 @@ class RNSStopRegionManager: NSObject {
             let downRight = center?.coordinate(135, distance: distance) else {
             return nil
         }
-        print("topLeft",topLeft)
-        print("topLeft",topLeft)
         return MKMapRect(coordinates: [topLeft,downRight])
     }
 }

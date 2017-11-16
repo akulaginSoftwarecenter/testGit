@@ -28,4 +28,16 @@ extension RNSMapParentController {
     func removeLoader() {
         loaderView.remove()
     }
+    
+    func updateLoader() {
+        if RNSBusStopManager.showLoader {
+            showLoader("Обновление остановок...")
+            return
+        }
+        if RNSBusManager.showLoader {
+            showLoader("Обновление автобусов...")
+            return
+        }
+        removeLoader()
+    }
 }

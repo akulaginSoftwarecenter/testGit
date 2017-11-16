@@ -88,4 +88,6 @@ class RNSBusStopManager: NSObject {
     static var isZoomSmallStop: Bool {
         return getZoomLevel <= minZoomVisibleStop
     }
+    
+    static var showLoader = false
 }

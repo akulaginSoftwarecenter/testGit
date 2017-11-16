@@ -59,4 +59,6 @@ class RNSBusManager: NSObject {
     static var lastCenterCoord: PGGeoPoint {
         return mapView.lastCenterCoord
     }
+    
+    static var showLoader = false
 }

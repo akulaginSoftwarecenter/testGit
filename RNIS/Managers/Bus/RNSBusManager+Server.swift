@@ -14,17 +14,21 @@ import Alamofire
 extension RNSBusManager {
     
     /// Функция обновления данных о ТС с сервера
-    static func updateServer(_ complete: EmptyBlock? = nil, failure: AliasStringBlock? = nil) {
+    static func updateServer(_ failure: AliasStringBlock? = nil) {
         request?.cancel()
+        let hideLoader = {
+            RNSBusManager.showLoader = false
+            RNSMapManager.updateLoader()
+        }
         if isNeedStopLoad {
             removeAll()
-            complete?()
+            hideLoader()
             return
         }
         //updateBD()
         request = RNSPostBusList(lastMinCoord, center: lastCenterCoord, complete: { (uuids) in
             updateOperationServer(uuids)
-            complete?()
+            hideLoader()
         }, failure: failure)
     }
     

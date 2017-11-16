@@ -57,4 +57,10 @@ class RNSMapManager: NSObject {
     static func removeOldPinBuild() {
         handlerRemovePinBuild?()
     }
+    
+    static var handlerUpdateLoader: EmptyBlock?
+    
+    static func updateLoader() {
+        handlerUpdateLoader?()
+    }
  }
