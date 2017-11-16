@@ -63,11 +63,11 @@ class RNSBusStopDetailController: UIViewController {
     /// Настройка кнопки "сообщить об ошибке"
     private func prepareReportButton() {
         errorReportButton.button.touchUpInside {
-            let vc = SupportInfoViewController.initialController as? SupportInfoViewController
+            let vc = SupportItemViewController.controller as? SupportItemViewController
             vc?.type = .feedback
-            if let item = self.item {
-                vc?.message = "Остановка \(item.name), id \(item.uuid). Сообщение: \n"
-            }
+            vc?.titleName = "Остановка"
+            vc?.nameText = self.item?.name
+            vc?.uuid = self.item?.uuid
             vc?.pushAnimatedRedScroll()
         }
     }

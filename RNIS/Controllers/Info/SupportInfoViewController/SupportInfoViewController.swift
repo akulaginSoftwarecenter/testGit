@@ -36,6 +36,9 @@ class SupportInfoViewController: UIViewController {
     
     /// Тип обращения
     var type: RNSPetitionType = .feedback
+    var isShowNameSupport = false
+    var titleName: String?
+    var nameText: String?
     
     /// Получение почты
     var contact: String? {
@@ -58,10 +61,14 @@ class SupportInfoViewController: UIViewController {
     }
     
     func showNameSupportView() {
+        guard isShowNameSupport else {
+            return
+        }
         messageTopConstraint.priority = .defaultLow
         nameTopConstraint.priority = .defaultHigh
         nameSupportView.isHidden = false
-        nameSupportView.topText = "Остановка"
+        nameSupportView.topText = titleName
+        nameSupportView.text = nameText
     }
 
     override class var storyboardName: String {

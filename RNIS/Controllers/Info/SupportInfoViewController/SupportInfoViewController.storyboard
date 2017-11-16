@@ -18,6 +18,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Support Item View Controller-->
+        <scene sceneID="Xyd-3e-BVI">
+            <objects>
+                <viewController storyboardIdentifier="SupportItemViewController" id="xIs-rr-xxJ" customClass="SupportItemViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="yh2-SC-R8k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="USY-Cs-15p" kind="embed" id="2wy-r9-zzO"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLE-1b-UBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3649" y="-627"/>
+        </scene>
         <!--Связь с разработчиками-->
         <scene sceneID="Bgn-MV-6Al">
             <objects>

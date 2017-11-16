@@ -65,8 +65,11 @@ class RNSBusInfoViewController: UIViewController {
         carrierField.text = item?.carrier_name
         phoneField.text = item?.unit_phone
         complainButton.button.touchUpInside {
-            let vc = SupportInfoViewController.initialController as? SupportInfoViewController
+            let vc = SupportItemViewController.controller as? SupportItemViewController
             vc?.type = .complaint
+            vc?.titleName = "Транспорт"
+            vc?.nameText = self.item?.route_number
+            vc?.uuid = self.item?.uuid
             vc?.pushAnimatedRedScroll()
         }
         prepareAdditionally()
