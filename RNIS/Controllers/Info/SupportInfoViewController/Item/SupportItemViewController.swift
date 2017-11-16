@@ -28,10 +28,15 @@ class SupportItemViewController: UIViewController {
         enterViewController?.isShowNameSupport = true
         enterViewController?.titleName = titleName
         enterViewController?.nameText = nameText
+        enterViewController?.handlerBody = { [weak self] (message) in
+            return self?.body(message)
+        }
     }
     
-    
-      
+    func body(_ message: String?) -> String? {
+        return "\(titleName ?? "") \(nameText ?? ""), id \(uuid ?? ""). Сообщение: \(message ?? "")"
+    }
+     
     override class var storyboardName: String {
         return "SupportInfoViewController"
     }

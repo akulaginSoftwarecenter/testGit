@@ -39,6 +39,7 @@ class SupportInfoViewController: UIViewController {
     var isShowNameSupport = false
     var titleName: String?
     var nameText: String?
+    var handlerBody: ((String?) -> (String?))?
     
     /// Получение почты
     var contact: String? {
@@ -47,7 +48,11 @@ class SupportInfoViewController: UIViewController {
     
     /// Получение обращения
     var body: String? {
-        return messageView.text
+        let text = messageView.text
+        if let handler = handlerBody {
+            return handler(text)
+        }
+        return text
     }
     
     var message: String?
