@@ -4172,8 +4172,8 @@
 		83AFEB581F6A360400C2A251 /* FavoritesBus */ = {
 			isa = PBXGroup;
 			children = (
-				83AFEB5E1F6A3A9B00C2A251 /* RNSFavoritesBusCell+TableView.swift */,
 				83AFEB541F6A337100C2A251 /* RNSFavoritesBusCell.swift */,
+				83AFEB5E1F6A3A9B00C2A251 /* RNSFavoritesBusCell+TableView.swift */,
 				8322792E1F6A509900CF83F2 /* RNSFavoritesBusCell.xib */,
 			);
 			path = FavoritesBus;

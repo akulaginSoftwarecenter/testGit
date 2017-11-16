@@ -36,6 +36,10 @@ extension RNSFavoritesBusCell: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Удалить"
+    }
+    
     /// Выбор индекса элемента таблицы
     func item(_ indexPath: IndexPath) -> RNSForecastBus? {
         return items?[indexPath.row]
