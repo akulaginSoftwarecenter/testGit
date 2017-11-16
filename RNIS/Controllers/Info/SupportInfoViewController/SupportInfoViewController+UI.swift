@@ -9,7 +9,7 @@
 import Foundation
 
 extension SupportInfoViewController {
-    
+    /*
     public func textViewDidChange(_ textView: UITextView) {
         updateHeightTextView()
     }
@@ -20,7 +20,7 @@ extension SupportInfoViewController {
             self.textViewHeightConstraint.constant = size.height
         }
     }
-    
+    */
     func prepareUI() {
         topTitle.text = type.rawValue
         
@@ -35,7 +35,6 @@ extension SupportInfoViewController {
     }
     
     func prepareMessage() {
-        textView.text = message
-        updateHeightTextView()
+        messageView.text = message
     }
 }

@@ -22,9 +22,10 @@ class SupportInfoViewController: UIViewController {
     /// Поле для отображения и редактирования почты пользователя
     @IBOutlet weak var contactField: UITextField!
     /// Представление для ввода текста обращения
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
+    //@IBOutlet weak var textView: UITextView!
+    //@IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var messageView: RNSSupportTextView!
     /// Кнопка отправки
     @IBOutlet weak var blackButton: RNSBlackButton!
     @IBOutlet weak var errorLabel: UILabel!
@@ -39,7 +40,7 @@ class SupportInfoViewController: UIViewController {
     
     /// Получение обращения
     var body: String? {
-        return textView.text
+        return messageView.text
     }
     
     var message: String?
