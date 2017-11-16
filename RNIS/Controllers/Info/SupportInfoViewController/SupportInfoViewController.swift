@@ -18,6 +18,10 @@ enum RNSPetitionType: String {
  */
 class SupportInfoViewController: UIViewController {
 
+    @IBOutlet weak var nameSupportView: RNSSupportTextView!
+    
+    @IBOutlet var nameTopConstraint: NSLayoutConstraint!
+    @IBOutlet var messageTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var topTitle: RNSTopTitle!
     /// Поле для отображения и редактирования почты пользователя
     @IBOutlet weak var contactField: UITextField!
@@ -50,8 +54,16 @@ class SupportInfoViewController: UIViewController {
         
         prepareUI()
         loadData()
+        showNameSupportView()
     }
     
+    func showNameSupportView() {
+        messageTopConstraint.priority = .defaultLow
+        nameTopConstraint.priority = .defaultHigh
+        nameSupportView.isHidden = false
+        nameSupportView.topText = "Остановка"
+    }
+
     override class var storyboardName: String {
         return "SupportInfoViewController"
     }

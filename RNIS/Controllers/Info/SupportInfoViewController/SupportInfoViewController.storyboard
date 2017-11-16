@@ -91,12 +91,20 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Введите текст обращения:"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-K8-NnR" customClass="RNSSupportTextView" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="25" y="95" width="325" height="51"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="51" id="NXf-Sc-4Wz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="D7n-NC-DkR" secondAttribute="trailing" constant="9" id="0Sy-Up-QTz"/>
                             <constraint firstItem="obB-LQ-4t8" firstAttribute="top" secondItem="bfy-l2-jZe" secondAttribute="bottom" constant="20" id="4Jy-lg-Blz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bfy-l2-jZe" secondAttribute="trailing" constant="9" id="5Qm-oF-BXq"/>
+                            <constraint firstItem="bfy-l2-jZe" firstAttribute="top" secondItem="Zhh-K8-NnR" secondAttribute="bottom" constant="44" id="5s3-sS-y4H"/>
                             <constraint firstAttribute="trailing" secondItem="zqu-hs-N8y" secondAttribute="trailing" constant="30" id="6KF-Kc-x9d"/>
                             <constraint firstItem="zqu-hs-N8y" firstAttribute="top" relation="greaterThanOrEqual" secondItem="obB-LQ-4t8" secondAttribute="bottom" constant="20" id="Cbx-WO-LMR"/>
                             <constraint firstItem="obB-LQ-4t8" firstAttribute="leading" secondItem="K3b-9x-f71" secondAttribute="leadingMargin" constant="9" id="Rbd-yA-ss1"/>
@@ -105,10 +113,13 @@
                             <constraint firstItem="8ik-tA-wrR" firstAttribute="leading" secondItem="K3b-9x-f71" secondAttribute="leadingMargin" constant="9" id="Vng-Nk-1XF"/>
                             <constraint firstItem="D7n-NC-DkR" firstAttribute="leading" secondItem="K3b-9x-f71" secondAttribute="leadingMargin" constant="9" id="ZWl-g6-nL4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="obB-LQ-4t8" secondAttribute="trailing" constant="9" id="dGH-gP-tuN"/>
+                            <constraint firstItem="Zhh-K8-NnR" firstAttribute="leading" secondItem="K3b-9x-f71" secondAttribute="leadingMargin" constant="9" id="fOS-2x-s37"/>
                             <constraint firstItem="bfy-l2-jZe" firstAttribute="leading" secondItem="K3b-9x-f71" secondAttribute="leadingMargin" constant="9" id="g1Q-9M-vTi"/>
                             <constraint firstItem="8ik-tA-wrR" firstAttribute="top" secondItem="D7n-NC-DkR" secondAttribute="bottom" constant="5" id="gfQ-GS-pY3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8ik-tA-wrR" secondAttribute="trailing" constant="9" id="j38-ot-3T9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhh-K8-NnR" secondAttribute="trailing" constant="9" id="oJv-n9-B4b"/>
                             <constraint firstItem="zqu-hs-N8y" firstAttribute="leading" secondItem="K3b-9x-f71" secondAttribute="leading" constant="30" id="v0O-Bh-fvM"/>
+                            <constraint firstItem="Zhh-K8-NnR" firstAttribute="top" secondItem="8ik-tA-wrR" secondAttribute="bottom" priority="250" constant="44" id="yg6-V6-5nN"/>
                             <constraint firstItem="bfy-l2-jZe" firstAttribute="top" secondItem="8ik-tA-wrR" secondAttribute="bottom" constant="44" id="yqm-cG-ehQ"/>
                         </constraints>
                     </view>
@@ -117,7 +128,10 @@
                         <outlet property="blackButton" destination="zqu-hs-N8y" id="Zmo-dU-krb"/>
                         <outlet property="contactField" destination="D7n-NC-DkR" id="rrn-M1-Mmj"/>
                         <outlet property="errorLabel" destination="obB-LQ-4t8" id="9Gd-s5-JFr"/>
+                        <outlet property="messageTopConstraint" destination="yqm-cG-ehQ" id="4yu-SP-iTT"/>
                         <outlet property="messageView" destination="bfy-l2-jZe" id="SOt-g4-qAT"/>
+                        <outlet property="nameSupportView" destination="Zhh-K8-NnR" id="Fbb-9r-4Fd"/>
+                        <outlet property="nameTopConstraint" destination="yg6-V6-5nN" id="yRR-jd-VGf"/>
                         <outlet property="topTitle" destination="Ovk-Bd-1xS" id="eNS-wD-whG"/>
                     </connections>
                 </viewController>
