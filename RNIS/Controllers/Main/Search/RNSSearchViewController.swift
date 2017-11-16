@@ -51,6 +51,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
         prepareSegmented()
         checkSaved()
         tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        prepareClearColor()
     }
     
     /// Обновление представлений используя последний поисковый запрос если он имеется

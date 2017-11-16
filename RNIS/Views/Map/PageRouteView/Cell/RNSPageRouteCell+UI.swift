@@ -43,10 +43,8 @@ extension RNSPageRouteCell {
         
         var padeg: String
    
-        if count < 0 {
-            padeg = ""
-        } else if count == 0 {
-            padeg = "без пересадок"
+        if count <= 0 {
+            padeg = "Без пересадок"
         } else if count == 1 {
             padeg = "\(count) пересадка"
         } else if (1...4).contains(count) {

@@ -19,4 +19,12 @@ extension RNSSearchViewController: UITextFieldDelegate {
         updateSearch()
         return true
     }
+    
+    func prepareClearColor() {
+        guard let btn = textField.value(forKey: "clearButton") as? UIButton else {
+            return
+        }
+        btn.setImage(btn.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+        btn.tintColor = .color169
+    }
 }

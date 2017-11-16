@@ -28,22 +28,6 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSFavoritesBusCell
         cell.item = item(indexPath)
-        /*
-        cell.didTapDelete = { [weak self] item in
-            guard let section = self?.sections.index(where: { $0.items?.contains(item) ?? false }),
-                let row = self?.sections[section].items.index(of: item) else {
-                    return
-            }
-            let indexPath = IndexPath(row: row, section: section)
-            if self?.sections[section].items.count == 1 {
-                self?.sections.remove(at: section)
-                self?.tableView.deleteSections([section], with: .fade)
-            } else {
-                self?.sections[section].items.remove(at: row)
-                self?.tableView.deleteRows(at: [indexPath], with: .fade)
-            }
-        }
- */
         return cell
     }
     
