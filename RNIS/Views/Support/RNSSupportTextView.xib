@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" constant="1" id="nkN-33-QjK"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите текст обращения:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-RR-7jm">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-RR-7jm">
                     <rect key="frame" x="0.0" y="0.0" width="385" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="NjH-X6-6YL"/>

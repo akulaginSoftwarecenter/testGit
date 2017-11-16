@@ -87,6 +87,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="51" id="dbE-6U-tib"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Введите текст обращения:"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

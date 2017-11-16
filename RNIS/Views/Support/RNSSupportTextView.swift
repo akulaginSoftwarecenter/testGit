@@ -14,6 +14,12 @@ class RNSSupportTextView: BaseViewWithXIBInit {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
+    @IBInspectable var topText: String? {
+        didSet {
+            titleLabel.text = topText
+        }
+    }
+    
     var text: String? {
         set {
             textView.text = newValue
