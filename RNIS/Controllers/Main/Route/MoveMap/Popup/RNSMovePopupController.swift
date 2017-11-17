@@ -52,7 +52,6 @@ class RNSMovePopupController: UIViewController {
     /// Контейнер для представления внутреннего контроллера
     @IBOutlet weak var containerView: UIView!
     
-    var alert: RNSAlertViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()

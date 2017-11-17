@@ -19,20 +19,30 @@ extension STAlertRouter {
     }
     
     @discardableResult static func showOk(_ message: String?, handler: EmptyBlock? = nil) -> RNSAlertViewController? {
-        let vc = RNSAlertViewController.controller(message)
+        let vc = alert(message)
+        
         vc?.handlerViewDidLoad = {
             vc?.addBtn(handler: handler)
         }
+        
         present(vc, animated: true)
         return vc
     }
     
     static func showBtns(_ message: String?, leftTitle: String? = "OK", rightTitle: String? = "ОТМЕНА", handlerOk: EmptyBlock? = nil) {
-        let vc = RNSAlertViewController.controller(message)
+        let vc = alert(message)
         vc?.handlerViewDidLoad = {
             vc?.addBtns(leftTitle, rightTitle, handlerOk: handlerOk)
         }
         present(vc, animated: true)
+    }
+    
+    static func alert(_ message: String?) -> RNSAlertViewController? {
+        guard !isAlertExist(message) else {
+            return nil
+        }
+        addAlert(message)
+        return RNSAlertViewController.controller(message)
     }
     
     static func showRegistration() {

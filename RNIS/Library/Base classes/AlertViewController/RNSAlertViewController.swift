@@ -72,12 +72,24 @@ class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeAlert()
+    }
+    
     func dismiss(completion: EmptyBlock? = nil) {
+        removeAlert()
         dismiss(animated: true, completion: completion)
     }
     
     deinit {
         print("RNSAlertViewController deinit")
+        removeAlert()
+    }
+    
+    func removeAlert() {
+        print("removeAlert",message ?? "")
+        STAlertRouter.removeAlert(message)
     }
    
     override class var storyboardName: String {

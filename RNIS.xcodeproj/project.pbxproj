@@ -3733,8 +3733,8 @@
 			children = (
 				831E42591F4686DC0016C7D3 /* OneBtn */,
 				831E425C1F46887F0016C7D3 /* TwoBtn */,
-				8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */,
 				8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */,
+				8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */,
 			);
 			path = AlertViewController;
 			sourceTree = "<group>";
@@ -3865,10 +3865,10 @@
 		83A308131F7370BE0098FAD7 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
+				833609771F73758000B42333 /* RNSMovePopupController.swift */,
 				8336097B1F737A8E00B42333 /* RNSMovePopupController+Container.swift */,
 				8337D42F1FA96E9F00623038 /* RNSMovePopupController+Item.swift */,
 				833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */,
-				833609771F73758000B42333 /* RNSMovePopupController.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";

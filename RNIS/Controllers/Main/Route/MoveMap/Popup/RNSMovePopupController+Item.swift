@@ -34,11 +34,11 @@ extension RNSMovePopupController {
     }
     
     func checkEndDoneMove() {
-        guard item?.endDoneMove ?? false, alert == nil else {
+        guard item?.endDoneMove ?? false else {
             return
         }
         
-        alert = STAlertRouter.showOk("Маршрут завершен") {
+        STAlertRouter.showOk("Маршрут завершен") {
             STRouter.popToRoot()
         }
     }
