@@ -18,6 +18,8 @@ class RNSPageRouteManager: NSObject {
     static var handlerUpdateCurrentTwo: EmptyBlock?
     /// Блок обновления избранной точки
     static var handlerUpdateFavorite: EmptyBlock?
+    
+    static var handlerShowLoaderFavoriteTransport: EmptyBlock?
     /// Блок обновления уведомлений
     static var handlerUpdateNotification: EmptyBlock?
     
@@ -45,20 +47,18 @@ class RNSPageRouteManager: NSObject {
         currentItem?.updateNodes()
     }
     
-    /// Удаление точки маршрута
+    /// Удаление маршрута
     static func removeItem(_ item: RNSRouteVariant?) {
-        STRouter.showLoader()
+        showLoaderFavoriteTransport()
         item?.removeItem {
-            STRouter.removeLoader()
             updateFavorite()
         }
     }
     
     /// Обновление имени маршрута
     static func updateName(_ item: RNSRouteVariant?) {
-        STRouter.showLoader()
+        showLoaderFavoriteTransport()
         item?.updateName {
-            STRouter.removeLoader()
             updateFavorite()
         }
     }
@@ -86,5 +86,9 @@ class RNSPageRouteManager: NSObject {
     /// Отображение текущего элемента на карте
     static func currentPrepareDisplay() {
         currentItem?.prepareDisplayMap()
+    }
+    
+    static func showLoaderFavoriteTransport() {
+        handlerShowLoaderFavoriteTransport?()
     }
 }

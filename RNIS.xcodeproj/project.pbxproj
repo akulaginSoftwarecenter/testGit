@@ -3678,9 +3678,9 @@
 		838EA0261F53AE1F00E9BF20 /* PageRoute */ = {
 			isa = PBXGroup;
 			children = (
+				838EA0271F53AE3E00E9BF20 /* RNSPageRouteManager.swift */,
 				838EA02D1F53BB2000E9BF20 /* RNSPageRouteManager+Route.swift */,
 				838EA02F1F53C64D00E9BF20 /* RNSPageRouteManager+Update.swift */,
-				838EA0271F53AE3E00E9BF20 /* RNSPageRouteManager.swift */,
 			);
 			path = PageRoute;
 			sourceTree = "<group>";
@@ -4492,9 +4492,9 @@
 			isa = PBXGroup;
 			children = (
 				83877AA81F5D118A007888DE /* Cells */,
+				83D713871F5D0E79005206C5 /* RNSDotsBussVertical.swift */,
 				836E69361F5E433D003D9D46 /* RNSDotsBussVertical+Action.swift */,
 				83A667EE1F5D1CE000A1A7BC /* RNSDotsBussVertical+TableView.swift */,
-				83D713871F5D0E79005206C5 /* RNSDotsBussVertical.swift */,
 				83D713891F5D0EB1005206C5 /* RNSDotsBussVertical.xib */,
 			);
 			path = RNSDotsBussVertical;

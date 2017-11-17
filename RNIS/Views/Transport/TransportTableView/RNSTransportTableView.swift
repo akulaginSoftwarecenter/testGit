@@ -37,6 +37,10 @@ class RNSTransportTableView: BaseViewWithXIBInit {
         RNSPageRouteManager.handlerUpdateFavorite = { [weak self] in
             self?.updateUI()
         }
+        
+        RNSPageRouteManager.handlerShowLoaderFavoriteTransport = { [weak self] in
+            self?.showLoader()
+        }
     }
 
     /// Функция подготовки блоков уведомлений
@@ -46,9 +50,13 @@ class RNSTransportTableView: BaseViewWithXIBInit {
         }
     }
     
+    func showLoader() {
+        loaderView.showInView(self)
+    }
+    
     /// Функция обновления вида элементов экрана
     func updateUI() {
-        loaderView.showInView(self)
+        showLoader()
         RNSPostFavoritePathList {[weak self] (reply, error, _) in
             self?.loaderView.remove()
             if error?.isLostInet ?? false {
