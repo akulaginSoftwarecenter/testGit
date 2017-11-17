@@ -41,7 +41,7 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
             AudioServicesPlayAlertSound(1106)
             let message = String (format:"%@ (of type %@)", result.value, result.metadataType)
-            STAlertRouter.showAlertOk(message) {
+            STAlertRouter.showOk(message) {
                 STRouter.pop()
             }
         }

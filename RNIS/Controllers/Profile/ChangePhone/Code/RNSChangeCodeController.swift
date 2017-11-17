@@ -53,7 +53,7 @@ class RNSChangeCodeController: RNSCodeContainerController {
         RNSMenuManager.leftMenuUpdate()
         STRouter.pop(animated: false) {
             STRouter.pop(animated: false) {
-                STAlertRouter.showAlertOk("Номер телефона успешно изменён")
+                STAlertRouter.showOk("Номер телефона успешно изменён")
             }
         }
     }

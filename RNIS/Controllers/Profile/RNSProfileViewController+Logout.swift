@@ -12,7 +12,7 @@ extension RNSProfileViewController {
     
     /// Показать алерт о выходе из аккаунта
     func showAlert() {
-        STAlertRouter.showAlertBtns("Выйти из аккаунта?") {
+        STAlertRouter.showBtns("Выйти из аккаунта?") {
             RNISAuthManager.logout()
         }
     }

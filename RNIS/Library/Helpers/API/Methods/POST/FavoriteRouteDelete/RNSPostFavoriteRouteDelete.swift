@@ -39,7 +39,7 @@ class RNSPostFavoriteRouteDelete: RNSPostRequestMobileToken {
         guard let error = model?.errors?.first?.textError else {
             return
         }
-        STAlertRouter.showAlertOk(error)
+        STAlertRouter.showOk(error)
     }
     
     override var payload: AliasDictionary {

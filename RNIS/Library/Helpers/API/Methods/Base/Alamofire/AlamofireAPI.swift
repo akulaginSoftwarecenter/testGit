@@ -108,7 +108,7 @@ class AlamofireAPI: API {
     }
     
     func showErrorNetwork() {
-        STAlertRouter.showAlertErrorNetwork()
+        STAlertRouter.showErrorNetwork()
     }
 }
 

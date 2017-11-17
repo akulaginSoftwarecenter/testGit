@@ -104,7 +104,7 @@ class RNSChangePasswordController: UIViewController {
     /// Выход из контроллера
     func pop() {
         STRouter.pop { 
-            STAlertRouter.showAlertOk("Ваш пароль успешно изменён")
+            STAlertRouter.showOk("Ваш пароль успешно изменён")
         }
     }
     
