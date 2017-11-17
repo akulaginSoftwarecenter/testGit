@@ -21,7 +21,7 @@ extension STAlertRouter {
     @discardableResult static func showOk(_ message: String?, handler: EmptyBlock? = nil) -> RNSAlertViewController? {
         let vc = alert(message)
         
-        vc?.handlerViewDidLoad = {
+        vc?.handlerViewDidLoad = { [weak vc] in
             vc?.addBtn(handler: handler)
         }
         
@@ -31,7 +31,7 @@ extension STAlertRouter {
     
     static func showBtns(_ message: String?, leftTitle: String? = "OK", rightTitle: String? = "ОТМЕНА", handlerOk: EmptyBlock? = nil) {
         let vc = alert(message)
-        vc?.handlerViewDidLoad = {
+        vc?.handlerViewDidLoad = { [weak vc] in
             vc?.addBtns(leftTitle, rightTitle, handlerOk: handlerOk)
         }
         present(vc, animated: true)

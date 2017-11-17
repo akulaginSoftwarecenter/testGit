@@ -83,12 +83,10 @@ class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
     }
     
     deinit {
-        print("RNSAlertViewController deinit")
         removeAlert()
     }
     
     func removeAlert() {
-        print("removeAlert",message ?? "")
         STAlertRouter.removeAlert(message)
     }
    
