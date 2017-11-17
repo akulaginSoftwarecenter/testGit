@@ -35,7 +35,7 @@ extension RNSProfileViewController {
     ///
     /// - Parameter message: текст
     func showAlertOk(_ message: String?) {
-        STRouter.showAlertOk(message)
+        STAlertRouter.showAlertOk(message)
     }
     
     func prepareError(_ error: String?) {

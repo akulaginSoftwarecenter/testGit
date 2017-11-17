@@ -56,17 +56,17 @@ class RNSUserPayload: RNISMappableBase {
     
     func confirmSend() {
         RNSPostConfirmSend(self, complete: { item in
-            STRouter.showAlertRepeatCode()
+            STAlertRouter.showAlertRepeatCode()
         }, failure: {
-            STRouter.showAlertOk($0)
+            STAlertRouter.showAlertOk($0)
         })
     }
     
     func phoneConfirmSend() {
         RNSPostPhoneConfirmSend(self, complete: { item in
-            STRouter.showAlertRepeatCode()
+            STAlertRouter.showAlertRepeatCode()
         }, failure: {
-            STRouter.showAlertOk($0)
+            STAlertRouter.showAlertOk($0)
         })
     }
     

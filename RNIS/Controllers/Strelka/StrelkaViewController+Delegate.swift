@@ -17,7 +17,7 @@ extension StrelkaViewController: UIWebViewDelegate {
     internal func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         removeLoader()
         if error.isLostInet {
-            STRouter.showAlertErrorNetwork()
+            STAlertRouter.showAlertErrorNetwork()
             return
         }
     }

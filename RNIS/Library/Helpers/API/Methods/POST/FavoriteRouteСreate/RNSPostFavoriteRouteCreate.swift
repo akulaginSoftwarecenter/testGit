@@ -42,7 +42,7 @@ class RNSPostFavoriteRouteCreate: RNSPostRequestMobileToken {
         guard let error = model?.errors?.first?.textError else {
             return
         }
-        STRouter.showAlertOk(error)
+        STAlertRouter.showAlertOk(error)
     }
     
     override var payload: AliasDictionary {

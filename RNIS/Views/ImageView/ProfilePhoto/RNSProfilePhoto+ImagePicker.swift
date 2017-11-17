@@ -20,7 +20,7 @@ extension RNSProfilePhoto {
             vc.sourceType = type
             STRouter.present(vc)
         } else {
-            STRouter.showAlertOk("ACCESS DENIED")
+            STAlertRouter.showAlertOk("ACCESS DENIED")
         }
     }
     

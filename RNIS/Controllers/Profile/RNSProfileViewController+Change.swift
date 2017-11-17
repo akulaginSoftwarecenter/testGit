@@ -36,7 +36,7 @@ extension RNSProfileViewController {
     
     func checkExit(handler: EmptyBlock?) {
         if !isNameNoChange || !isEmailNoChange {
-            STRouter.showAlertBtns("Выйти, не сохранив изменения?") {[weak self] in
+            STAlertRouter.showAlertBtns("Выйти, не сохранив изменения?") {[weak self] in
                 self?.loadData()
                 handler?()
             }

@@ -96,7 +96,7 @@ class Utils {
     
     static func checkTokeShowAlert() {
         if !isHaveToken {
-            STRouter.showAlertRegistration()
+            STAlertRouter.showAlertRegistration()
         }
     }
     

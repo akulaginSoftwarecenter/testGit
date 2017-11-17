@@ -21,7 +21,7 @@ class RNSInfoManager: NSObject, MFMailComposeViewControllerDelegate {
     func send(_ item: RNSContactItem) {
         
          if !MFMailComposeViewController.canSendMail() {
-         STRouter.showAlertOk("Mail services are not available")
+         STAlertRouter.showAlertOk("Mail services are not available")
          return
          }
          let vc = MFMailComposeViewController()

@@ -68,7 +68,7 @@ class RNSPostStopPointList: RNSRequest {
             return
         }
         let error = "Ошибка загрузки остановок. " + item.textError
-        STRouter.showAlertOk(error)
+        STAlertRouter.showAlertOk(error)
     }
     
     override func showErrorNetwork() {

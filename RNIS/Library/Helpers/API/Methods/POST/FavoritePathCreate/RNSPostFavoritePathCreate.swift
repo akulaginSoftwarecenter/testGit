@@ -42,7 +42,7 @@ class RNSPostFavoritePathCreate: RNSPostRequestMobileToken {
             return
         }
         complete?(nil)
-        STRouter.showAlertOk(error)
+        STAlertRouter.showAlertOk(error)
     }
     
     override var payload: AliasDictionary {

@@ -43,7 +43,7 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
             STRouter.removeLoader()
             self?.removeAnimate()
         }, failure: { [weak self] text in
-            STRouter.showAlertOk(text)
+            STAlertRouter.showAlertOk(text)
             STRouter.removeLoader()
             self?.removeAnimate()
         })

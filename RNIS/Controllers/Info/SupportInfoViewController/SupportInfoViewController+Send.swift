@@ -27,7 +27,7 @@ extension SupportInfoViewController {
     }
     
     func showAlert() {
-        STRouter.showAlertOk("Ваше сообщение отправлено!") { [weak self] in
+        STAlertRouter.showAlertOk("Ваше сообщение отправлено!") { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
     }
