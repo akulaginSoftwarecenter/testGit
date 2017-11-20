@@ -17,7 +17,7 @@ class RNSImageFactory: NSObject {
         return shared.cache
     }
    
-    let inImage = #imageLiteral(resourceName: "BusIcon")
+    static let bus_icon = #imageLiteral(resourceName: "BusIcon")
     static let bus_stop_current = #imageLiteral(resourceName: "Bus_stop_current")
     static let bus_stop = #imageLiteral(resourceName: "Bus_stop")
     static let bus_stopSmall = #imageLiteral(resourceName: "Bus_stopSmall")
@@ -33,7 +33,7 @@ class RNSImageFactory: NSObject {
     }()
     
     static func imageBusAt(_ text: String) -> UIImage {
-        let inImage = shared.inImage
+        let inImage = bus_icon
         
         let key = text as NSString
         if let icon = cache.object(forKey: key) {

@@ -14,7 +14,7 @@ import UIKit
 class RNSPinBus: RNSPinItem {
     
     override func prepareImage() {
-        prepareIcon(#imageLiteral(resourceName: "BusIcon"))
+        prepareIcon(RNSImageFactory.bus_icon)
         
         guard  let text = (self.item as? RNSBus)?.route_number else {
             return
@@ -31,7 +31,7 @@ class RNSPinBus: RNSPinItem {
     ///
     /// - Parameter image: иконка
     func prepareIcon(_ image: UIImage) {
-        setBitmap(image, xOffset: 0.05, yOffset: -1.0, isPlain: false, sizeInMeters: 15)
+        setBitmap(image, xOffset: 0.00, yOffset: 0.0, isPlain: false, sizeInMeters: 15)
     }
     
     override func prepareHandlers() {
