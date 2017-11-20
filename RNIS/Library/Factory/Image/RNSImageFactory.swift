@@ -59,12 +59,41 @@ class RNSImageFactory: NSObject {
         let sizeImage = inImage.size
         let widthImage = sizeImage.width
         let heightImage = sizeImage.height
-        let size = CGSize(width: widthImage + widthText + 5, height: heightImage)
+        let fullWidth = widthImage + widthText + 5
+        let size = CGSize(width: fullWidth, height: heightImage)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        /*
+        let halfImage = widthImage/2
+        let widthView = fullWidth - halfImage
+        let view = UIView()
+        view.backgroundColor = .red
+        view.draw(CGRect(x: halfImage, y: 2, width: widthView, height: 20))
+         */
+        if let context = UIGraphicsGetCurrentContext() {
+            let halfImage = widthImage/2
+            //let widthView = fullWidth - halfImage
+            let originY:CGFloat = 2
+            //let corner:CGFloat = 5
+            let heightView: CGFloat = 20
+            let maxY: CGFloat = originY + heightView
+            let leftUpPoint = CGPoint(x: halfImage, y: originY)
+            // Setup complete, do drawing here
+            context.setFillColor(UIColor.whiteAlpha70.cgColor)
+            //CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor)
+            //CGContextSetLineWidth(context, 2.0)
+            context.beginPath()
         
+            context.move(to: leftUpPoint)
+            context.addLine(to: CGPoint(x: fullWidth, y: originY))
+            context.addLine(to: CGPoint(x: fullWidth, y: maxY))
+            context.addLine(to: CGPoint(x: halfImage, y: maxY))
+            context.addLine(to: leftUpPoint)
+            context.strokePath()
+        }
+    
         inImage.draw(in: CGRect(x: 0, y: 0, width: widthImage, height: heightImage))
-                
-        let rect = CGRect(x: widthImage + 2, y: 8, width: widthText, height: 12)
+        
+        let rect = CGRect(x: widthImage + 2, y: 7, width: widthText, height: 12)
         let attr: AliasDict = selected ? shared.textAttrSelected : shared.textAttr
         text.draw(in: rect, withAttributes: attr)
         

@@ -48,6 +48,10 @@ extension UIColor {
         return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
     }
     
+    static var whiteAlpha70: UIColor {
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.7)
+    }
+    
     static var color01B3FD:UIColor {
         return #colorLiteral(red: 0.003921568627, green: 0.7019607843, blue: 0.9921568627, alpha: 1)
     }
