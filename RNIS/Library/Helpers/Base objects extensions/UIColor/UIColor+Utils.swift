@@ -79,6 +79,10 @@ extension UIColor {
     static var FFB9AF:UIColor {
         return #colorLiteral(red: 1, green: 0.7254901961, blue: 0.6862745098, alpha: 1)
     }
+    
+    static var color424242: UIColor {
+        return #colorLiteral(red: 0.2588235294, green: 0.2588235294, blue: 0.2588235294, alpha: 1)
+    }
    
     convenience init(_ red255: UInt, _ green255: UInt, _ blue255: UInt) {
         self.init(red255,green255,blue255,1)

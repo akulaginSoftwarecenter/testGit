@@ -9,6 +9,9 @@
 import UIKit
 
 class RNSImageFactory: NSObject {
+    
+    typealias AliasDict = [NSAttributedStringKey: Any]
+    
     static let shared = RNSImageFactory()
     
     let cache = NSCache<NSString,UIImage>()
@@ -22,30 +25,49 @@ class RNSImageFactory: NSObject {
     static let bus_stop = #imageLiteral(resourceName: "Bus_stop")
     static let bus_stopSmall = #imageLiteral(resourceName: "Bus_stopSmall")
      
-    lazy var textFontAttributes: [NSAttributedStringKey: Any] = {
-        let style = NSMutableParagraphStyle()
-        style.alignment = NSTextAlignment.center
-        return [
-            NSAttributedStringKey.font: UIFont.cffazm18,
-            NSAttributedStringKey.foregroundColor: UIColor.white,
-            NSAttributedStringKey.paragraphStyle: style,
-        ]
+    lazy var textAttr: AliasDict = {
+        return self.textFontAttributes(false)
     }()
     
-    static func imageBusAt(_ text: String) -> UIImage {
+    lazy var textAttrSelected: AliasDict = {
+        return self.textFontAttributes(true)
+    }()
+    
+    func textFontAttributes(_ selected: Bool) -> AliasDict  {
+        let style = NSMutableParagraphStyle()
+        style.alignment = NSTextAlignment.center
+        let color: UIColor = selected ? .white : .color424242
+        return [
+            NSAttributedStringKey.font: RNSImageFactory.font,
+            NSAttributedStringKey.foregroundColor: color,
+            NSAttributedStringKey.paragraphStyle: style,
+        ]
+    }
+    
+    static let font: UIFont = .cffazm12
+    
+    static func imageBusAt(_ text: String, selected: Bool) -> UIImage {
         let inImage = bus_icon
         
         let key = text as NSString
         if let icon = cache.object(forKey: key) {
             return icon
         }
+        
         let scale = UIScreen.main.scale
-        let size = inImage.size
+        let widthText = text.width(font)
+        let sizeImage = inImage.size
+        let widthImage = sizeImage.width
+        let heightImage = sizeImage.height
+        let size = CGSize(width: widthImage + widthText + 5, height: heightImage)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        let width = size.width
-        inImage.draw(in: CGRect(x: 0, y: 0, width: width, height: size.height))
-        let rect = CGRect(x: 0, y: 15, width: width, height: 18)
-        text.draw(in: rect, withAttributes: shared.textFontAttributes)
+        
+        inImage.draw(in: CGRect(x: 0, y: 0, width: widthImage, height: heightImage))
+                
+        let rect = CGRect(x: widthImage + 2, y: 8, width: widthText, height: 12)
+        let attr: AliasDict = selected ? shared.textAttrSelected : shared.textAttr
+        text.draw(in: rect, withAttributes: attr)
+        
         let newImage = UIGraphicsGetImageFromCurrentImageContext() ?? inImage
         UIGraphicsEndImageContext()
         
