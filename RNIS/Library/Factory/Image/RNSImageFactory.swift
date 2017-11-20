@@ -62,33 +62,45 @@ class RNSImageFactory: NSObject {
         let fullWidth = widthImage + widthText + 5
         let size = CGSize(width: fullWidth, height: heightImage)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        /*
-        let halfImage = widthImage/2
-        let widthView = fullWidth - halfImage
-        let view = UIView()
-        view.backgroundColor = .red
-        view.draw(CGRect(x: halfImage, y: 2, width: widthView, height: 20))
-         */
+  
         if let context = UIGraphicsGetCurrentContext() {
             let halfImage = widthImage/2
-            //let widthView = fullWidth - halfImage
             let originY:CGFloat = 2
-            //let corner:CGFloat = 5
+            let corner:CGFloat = 5
             let heightView: CGFloat = 20
             let maxY: CGFloat = originY + heightView
             let leftUpPoint = CGPoint(x: halfImage, y: originY)
-            // Setup complete, do drawing here
-            context.setFillColor(UIColor.whiteAlpha70.cgColor)
-            //CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor)
-            //CGContextSetLineWidth(context, 2.0)
+            let xRightOneCorner = fullWidth - corner
+            let yUpRightOneCorner = originY + corner
+            let upRightOneCorner = CGPoint(x: xRightOneCorner, y: originY)
+            let upRightTwoCorner = CGPoint(x: fullWidth, y: yUpRightOneCorner)
+            let circleWidth = corner * 2
+            
+            let yDownRightOneCorner = maxY - corner
+            
             context.beginPath()
-        
             context.move(to: leftUpPoint)
-            context.addLine(to: CGPoint(x: fullWidth, y: originY))
-            context.addLine(to: CGPoint(x: fullWidth, y: maxY))
+            
+            context.addLine(to: upRightOneCorner)
+            context.addLine(to: upRightTwoCorner)
+            
+            context.addLine(to: CGPoint(x: fullWidth, y: yDownRightOneCorner))
+            context.addLine(to: CGPoint(x: xRightOneCorner, y: maxY))
+            
             context.addLine(to: CGPoint(x: halfImage, y: maxY))
             context.addLine(to: leftUpPoint)
-            context.strokePath()
+            context.setFillColor(UIColor.whiteAlpha70.cgColor)
+            context.fillPath()
+ 
+            context.beginPath()
+            context.addEllipse(in: CGRect(x: fullWidth - circleWidth, y: originY, width: circleWidth, height: circleWidth))
+            context.setFillColor(UIColor.whiteAlpha70.cgColor)
+            context.fillPath()
+            
+            context.beginPath()
+            context.addEllipse(in: CGRect(x: fullWidth - circleWidth, y: maxY - circleWidth, width: circleWidth, height: circleWidth))
+            context.setFillColor(UIColor.whiteAlpha70.cgColor)
+            context.fillPath()
         }
     
         inImage.draw(in: CGRect(x: 0, y: 0, width: widthImage, height: heightImage))
