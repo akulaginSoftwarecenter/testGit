@@ -43,7 +43,7 @@ extension RNSBusManager {
         /// Координата центра нанесение ТС на карту
         let point = redPlaceLocation.coordinate.point
         DispatchQueue.global(qos: .userInitiated).async {
-            for index in 7...3000 {
+            for index in 7...10000 {
                 let lat = point.latitude - 0.2 + (Double(Int.rand(0, limit: 4000))/10000)
                 let lon = point.longitude - 0.25 + (Double(Int.rand(0, limit: 5000))/10000)
                 
