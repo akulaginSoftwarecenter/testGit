@@ -45,20 +45,8 @@ class RNSImageFactory: NSObject {
     static let circleWidth = corner * 2
     static let betweenText: CGFloat = 5
     static let edgeText: CGFloat = 2
+    static let yDownUp = maxY - corner
+    static let maxY = originY + heightView
+    static let originYСorner = originY + corner
     
-    lazy var maxY: CGFloat = {
-        return originY + RNSImageFactory.heightView
-    }()
-    
-    lazy var yUpRightOneCorner: CGFloat = {
-        return originY + RNSImageFactory.corner
-    }()
-    
-    lazy var leftUpPoint: CGPoint = {
-        return CGPoint(x: RNSImageFactory.halfImage, y: originY)
-    }()
-    
-    lazy var yDownRightOneCorner: CGFloat = {
-        return maxY - RNSImageFactory.corner
-    }()
 }

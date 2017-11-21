@@ -9,27 +9,7 @@
 import Foundation
 
 extension RNSImageFactory {
-    
-    static var maxY: CGFloat  {
-        return shared.maxY
-    }
-    
-    static var yUpRightOneCorner: CGFloat  {
-        return shared.yUpRightOneCorner
-    }
-    
-    static var leftUpPoint: CGPoint  {
-        return shared.leftUpPoint
-    }
-    
-    var originY: CGFloat {
-        return RNSImageFactory.originY
-    }
-    
-    static var yDownRightOneCorner: CGFloat {
-        return shared.yDownRightOneCorner
-    }
-    
+
     func textFontAttributes(_ selected: Bool) -> AliasDict  {
         let style = NSMutableParagraphStyle()
         style.alignment = NSTextAlignment.center

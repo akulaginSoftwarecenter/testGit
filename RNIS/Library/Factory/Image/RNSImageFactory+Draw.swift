@@ -45,27 +45,38 @@ extension RNSImageFactory {
         let cgColor = colorView.cgColor
         let xEllipse = isRight ? (fullWidth - circleWidth) : 0
         
-        drawTriangle(context, fullWidth: fullWidth, cgColor: cgColor)
+        drawTriangle(context, fullWidth: fullWidth, cgColor: cgColor, isRight: isRight)
         drawUpEllipse(context, x: xEllipse, cgColor: cgColor)
         drawDownEllipse(context, x: xEllipse, cgColor: cgColor)
     }
     
-    static func drawTriangle(_ context: CGContext, fullWidth: CGFloat, cgColor: CGColor) {
-        let xRightOneCorner = fullWidth - corner
-        let upRightOneCorner = CGPoint(x: xRightOneCorner, y: originY)
-        let upRightTwoCorner = CGPoint(x: fullWidth, y: yUpRightOneCorner)
+    static func drawTriangle(_ context: CGContext, fullWidth: CGFloat, cgColor: CGColor, isRight: Bool) {
+        let delta = isRight ? halfImage : CGFloat(0)
         
+        let xRightRight = fullWidth - halfImage + delta
+        let xRightLeft = xRightRight - corner
+        let xLeftRight = corner + delta
+      
         context.beginPath()
-        context.move(to: leftUpPoint)
+        context.move(to: CGPoint(x: xLeftRight, y: originY))
+
+        context.addLine(to: CGPoint(x: xRightLeft, y: originY))
         
-        context.addLine(to: upRightOneCorner)
-        context.addLine(to: upRightTwoCorner)
+        if isRight {
+            
+            context.addLine(to: CGPoint(x: xRightRight, y: originYСorner))
+            context.addLine(to: CGPoint(x: xRightRight, y: yDownUp))
+        }
         
-        context.addLine(to: CGPoint(x: fullWidth, y: yDownRightOneCorner))
-        context.addLine(to: CGPoint(x: xRightOneCorner, y: maxY))
+        context.addLine(to: CGPoint(x: xRightLeft, y: maxY))
+        context.addLine(to: CGPoint(x: xLeftRight, y: maxY))
         
-        context.addLine(to: CGPoint(x: halfImage, y: maxY))
-        context.addLine(to: leftUpPoint)
+        if !isRight {
+            let xLeftLeft: CGFloat = delta
+            context.addLine(to: CGPoint(x: xLeftLeft, y: yDownUp))
+            context.addLine(to: CGPoint(x: xLeftLeft, y: originYСorner))
+        }
+ 
         context.setFillColor(cgColor)
         context.fillPath()
     }
