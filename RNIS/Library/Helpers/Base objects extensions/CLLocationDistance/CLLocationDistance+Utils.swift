@@ -17,7 +17,7 @@ extension CLLocationDistance {
             string = distance > 15000 ? String(format: "%.0f", distance) : String(format: "%.1f", distance)
             string = string + " " + "км"
         }else{
-            string = String(format: "%.0f %@", "м")
+            string = String(format: "%.0f %@",distance, "м")
         }
         return string
     }
