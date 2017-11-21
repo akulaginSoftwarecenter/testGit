@@ -18,14 +18,18 @@ extension RNSPinBus {
         let isCurrent = item.isCurrent
         let width = self.widthWing
         let isRight = item.isRight
-        Utils.queueBackground {
+        
+        let operation = BlockOperation { [weak self] in
             let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, width: width, isRight: isRight)
             Utils.mainQueue {
                 var xOffset = width/(Float(RNSImageFactory.widthImage) + width)
                 xOffset = isRight ? xOffset : -xOffset
-                self.setImage(image, xOffset: xOffset)
+                self?.setImage(image, xOffset: xOffset)
             }
         }
+        operation.queuePriority = .veryLow
+        RNSBusManager.queueMarkers.addOperation(operation)
+        self.operation = operation
     }
     
     func setImage(_ image: UIImage, xOffset: Float = 0.0) {

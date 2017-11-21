@@ -15,6 +15,7 @@ class RNSPinBus: RNSPinItem {
     
     var widthWing: Float = 0
     var itemBus: RNSBus?
+    var operation: BlockOperation?
     
     override func prepareItem() {
         itemBus = item as? RNSBus
@@ -51,5 +52,9 @@ class RNSPinBus: RNSPinItem {
     override func prepareImage() {
         prepareIcon(RNSImageFactory.bus_icon)
         updateImage()
+    }
+    
+    deinit {
+        operation?.cancel()
     }
 }

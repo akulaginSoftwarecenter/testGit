@@ -20,9 +20,20 @@ class RNSBusManager: NSObject {
     static var showedUuids = [String]()
     
     /// Создание статической очереди для нанесения ТС на карту
+    static var queueMarkers: OperationQueue {
+        return shared.queueMarkers
+    }
+    
     static var queue: OperationQueue {
         return shared.queue
     }
+    
+    lazy var queueMarkers: OperationQueue = {
+        let queue = OperationQueue()
+        queue.maxConcurrentOperationCount = 1
+        queue.qualityOfService = .background
+        return queue
+    }()
     
     /// Создание "слабой" очереди для нанесения ТС на карту
     lazy var queue: OperationQueue = {

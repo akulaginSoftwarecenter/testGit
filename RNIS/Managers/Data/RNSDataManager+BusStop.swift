@@ -52,7 +52,7 @@ extension RNSDataManager {
     }
     
     static func parseBusStopItemsAsync(_ dicts: [AliasDictionary], complete: AliasStringArrayBlock?) {
-        Utils.queueUtility {
+        Utils.queueBackground {
             let items = parseItems(dicts) as [RNSBusStop]
             let uuids: [String] = items.flatMap{$0.uuid}
             Utils.mainQueue {
