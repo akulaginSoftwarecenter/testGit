@@ -79,6 +79,23 @@ extension RNSImageFactory {
  
         context.setFillColor(cgColor)
         context.fillPath()
+ 
+ /*
+        
+        let rightDown = CGPoint(x: xRightRight, y: maxY)
+        let rightUp = CGPoint(x: xRightRight, y: originY)
+        let leftUp = CGPoint(x: 0, y: originY)
+        let leftDown = CGPoint(x: 0, y: maxY)
+        
+        context.beginPath()
+        context.move(to: rightDown)
+        context.addArc(tangent1End: leftDown , tangent2End:  leftUp, radius: corner)
+        context.addArc(tangent1End: leftUp, tangent2End: rightUp, radius: corner)
+        context.addArc(tangent1End: rightUp , tangent2End: rightDown, radius: corner)
+        context.addArc(tangent1End: rightDown , tangent2End: leftDown, radius: corner)
+        context.setFillColor(cgColor)
+        context.fillPath()
+ */
     }
     
     static func drawUpEllipse(_ context: CGContext, x: CGFloat, cgColor: CGColor) {
