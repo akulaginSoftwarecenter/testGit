@@ -13,19 +13,19 @@ import UIKit
  */
 class RNSPinBus: RNSPinItem {
     
-    var widthTitle: CGFloat?
+    var widthWing: Float = 0
     var itemBus: RNSBus?
     
     override func prepareItem() {
         itemBus = item as? RNSBus
-        widthTitle = itemBus?.widthTitle ?? 0
+        widthWing = Float(itemBus?.widthWing ?? 0)
     }
     
     /// Установка иконки в оверлей
     ///
     /// - Parameter image: иконка
-    func prepareIcon(_ image: UIImage) {
-        setBitmap(image, xOffset: 0.00, yOffset: 0.0, isPlain: false, sizeInMeters: 15)
+    func prepareIcon(_ image: UIImage, xOffset: Float = 0.0) {
+        setBitmap(image, xOffset: xOffset, yOffset: 0.0, isPlain: false, sizeInMeters: 15)
     }
     
     override func prepareHandlers() {
@@ -52,5 +52,4 @@ class RNSPinBus: RNSPinItem {
         prepareIcon(RNSImageFactory.bus_icon)
         updateImage()
     }
-
 }

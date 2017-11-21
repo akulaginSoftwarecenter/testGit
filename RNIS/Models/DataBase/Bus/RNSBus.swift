@@ -44,7 +44,7 @@ class RNSBus: RNSCoordinateModel {
         phone = "+ 7 (912) 213-32-32"
     }
     
-    lazy var widthTitle: CGFloat = {
-        return route_number.width(RNSImageFactory.font)
+    lazy var widthWing: CGFloat = {
+        return route_number.width(RNSImageFactory.font) + 5
     }()
 }

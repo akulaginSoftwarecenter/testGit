@@ -46,19 +46,20 @@ class RNSImageFactory: NSObject {
     
     static let font: UIFont = .cffazm12
     
-    static func imageBusAt(_ text: String, selected: Bool, widthText: CGFloat) -> UIImage {
+    static func imageBusAt(_ text: String, selected: Bool, width: Float) -> UIImage {
         let inImage = bus_icon
         
         let key = "\(text) + \(selected.hashValue)" as NSString
         if let icon = cache.object(forKey: key) {
             return icon
         }
-        
+        let widthWing = CGFloat(width)
+        let widthText = widthWing - 5
         let scale = UIScreen.main.scale
         let sizeImage = inImage.size
         let widthImage = sizeImage.width
         let heightImage = sizeImage.height
-        let fullWidth = widthImage + widthText + 5
+        let fullWidth = widthImage + widthWing
         let size = CGSize(width: fullWidth, height: heightImage)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         if let context = UIGraphicsGetCurrentContext() {

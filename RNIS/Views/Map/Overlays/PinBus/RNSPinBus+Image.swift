@@ -11,25 +11,26 @@ import Foundation
 extension RNSPinBus {
     
     func updateImage() {
-        guard let item = itemBus,
-            let widthTitle = widthTitle else {
+        guard let item = itemBus else {
             return
         }
         let text = item.route_number
         let isCurrent = item.isCurrent
+        let width = self.widthWing
         DispatchQueue.global(qos: .background).async {
-            let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, widthText: widthTitle)
+            let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, width: width)
             Utils.mainQueue {
-                self.setImage(image)
+                let xOffset = width/(32.5 + width)
+                self.setImage(image, xOffset: xOffset)
             }
         }
     }
     
-    func setImage(_ image: UIImage) {
+    func setImage(_ image: UIImage, xOffset: Float = 0.0) {
         guard imageSetuped != image else {
              return
         }
         imageSetuped = image
-        prepareIcon(image)
+        prepareIcon(image, xOffset: xOffset)
     }
 }
