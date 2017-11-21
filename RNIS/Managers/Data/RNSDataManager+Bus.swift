@@ -51,7 +51,7 @@ extension RNSDataManager {
     }
     
     static func parseBusItemsAsync(_ dicts: [AliasDictionary], complete: AliasStringArrayBlock?) {
-        DispatchQueue.global(qos: .userInitiated).async {
+        Utils.queueUtility {
             let items = parseItems(dicts) as [RNSBus]
             let uuids: [String] = items.flatMap{$0.uuid}
             Utils.mainQueue {

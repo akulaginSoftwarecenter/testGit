@@ -25,8 +25,10 @@ extension RNSBusManager {
         RNSDataManager.removeAllBuss()
         //CounterTime.startTimer()
         createStubDicts { (dicts) in
+            print("createStubDicts complete")
             //CounterTime.endTimer()
             RNSDataManager.parseBusItemsAsync(dicts, complete: { (items) in
+                print("parseBusItemsAsync complete")
                 //CounterTime.endTimer()
                 complete?(items)
             })
@@ -46,8 +48,8 @@ extension RNSBusManager {
             for index in 7...10000 {
                 let lat = point.latitude - 0.2 + (Double(Int.rand(0, limit: 4000))/10000)
                 let lon = point.longitude - 0.25 + (Double(Int.rand(0, limit: 5000))/10000)
-                
-                dicts.append(["route_number":"\(index)",
+                let number  = Int.rand(1, limit: 1000)
+                dicts.append(["route_number":"\(number)",
                               "uuid": "\(index)",
                     "latitude": lat,
                     "longitude" : lon])

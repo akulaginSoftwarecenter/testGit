@@ -76,6 +76,10 @@ class Utils {
         queueGlobal(.background, handler: handler)
     }
     
+    static func queueUtility(handler: EmptyBlock?) {
+        queueGlobal(.utility, handler: handler)
+    }
+    
     static func queueGlobal(_ qos: DispatchQoS.QoSClass = DispatchQoS.QoSClass.default, handler: EmptyBlock?) {
         DispatchQueue.global(qos: qos).async {
             handler?()
