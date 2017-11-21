@@ -24,7 +24,7 @@ extension RNSBusManager {
             showPinsUuids(addUuids)
             showedUuids = showedItems.flatMap{$0.uuid}
             RNSMoveBusManager.updateUuids(showedUuids) // Временное обновление локации автобусов до введения сокетов
-           // print("showedBuss",showedUuids.count, RNSMapManager.getZoomLevel)
+            //print("showedBuss",showedUuids.count, RNSMapManager.getZoomLevel)
         }
     }
     

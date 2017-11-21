@@ -251,6 +251,9 @@
 		8362CE2F1F6A8F8B00BE912D /* RNSBusStopManager+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362CE2E1F6A8F8B00BE912D /* RNSBusStopManager+Stub.swift */; };
 		83631D601FC3CD4800C5F052 /* RNSPinBus+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83631D5F1FC3CD4800C5F052 /* RNSPinBus+Image.swift */; };
 		83631D631FC3CEEA00C5F052 /* RNSParentDetailPinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83631D621FC3CEEA00C5F052 /* RNSParentDetailPinController.swift */; };
+		83631D661FC3F08800C5F052 /* CGContext+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83631D651FC3F08800C5F052 /* CGContext+Utils.swift */; };
+		83631D681FC3F3C900C5F052 /* RNSImageFactory+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83631D671FC3F3C900C5F052 /* RNSImageFactory+Var.swift */; };
+		83631D6A1FC3F3D700C5F052 /* RNSImageFactory+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83631D691FC3F3D700C5F052 /* RNSImageFactory+Draw.swift */; };
 		8363434F1FB29FAA0091AF63 /* RNSTextField+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8363434E1FB29FAA0091AF63 /* RNSTextField+UI.swift */; };
 		83674FDC1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83674FDB1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift */; };
 		83674FDE1F56CCA000F0A2C0 /* RNSMoveMapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83674FDD1F56CCA000F0A2C0 /* RNSMoveMapViewController+MapView.swift */; };
@@ -900,6 +903,9 @@
 		8362CE2E1F6A8F8B00BE912D /* RNSBusStopManager+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSBusStopManager+Stub.swift"; sourceTree = "<group>"; };
 		83631D5F1FC3CD4800C5F052 /* RNSPinBus+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSPinBus+Image.swift"; sourceTree = "<group>"; };
 		83631D621FC3CEEA00C5F052 /* RNSParentDetailPinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSParentDetailPinController.swift; sourceTree = "<group>"; };
+		83631D651FC3F08800C5F052 /* CGContext+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGContext+Utils.swift"; sourceTree = "<group>"; };
+		83631D671FC3F3C900C5F052 /* RNSImageFactory+Var.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSImageFactory+Var.swift"; sourceTree = "<group>"; };
+		83631D691FC3F3D700C5F052 /* RNSImageFactory+Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSImageFactory+Draw.swift"; sourceTree = "<group>"; };
 		8363434E1FB29FAA0091AF63 /* RNSTextField+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSTextField+UI.swift"; sourceTree = "<group>"; };
 		83674FDB1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSMoveMapViewController.swift; sourceTree = "<group>"; };
 		83674FDD1F56CCA000F0A2C0 /* RNSMoveMapViewController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSMoveMapViewController+MapView.swift"; sourceTree = "<group>"; };
@@ -2641,6 +2647,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		83631D641FC3F07A00C5F052 /* CGContext */ = {
+			isa = PBXGroup;
+			children = (
+				83631D651FC3F08800C5F052 /* CGContext+Utils.swift */,
+			);
+			path = CGContext;
+			sourceTree = "<group>";
+		};
 		83674FDA1F56CA7E00F0A2C0 /* MoveMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -3060,6 +3074,7 @@
 		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				83631D641FC3F07A00C5F052 /* CGContext */,
 				837ABF281F2EEDF800AB5E54 /* Array */,
 				8326AA3C1F1F643E00F893C8 /* Button */,
 				83FA41081FC2D37D0009045E /* CGFloat */,
@@ -3253,6 +3268,8 @@
 			isa = PBXGroup;
 			children = (
 				836EEF211F3C1FDE007631D9 /* RNSImageFactory.swift */,
+				83631D691FC3F3D700C5F052 /* RNSImageFactory+Draw.swift */,
+				83631D671FC3F3C900C5F052 /* RNSImageFactory+Var.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -5129,6 +5146,7 @@
 				83E183961F440253005912C5 /* RNSAddressCell.swift in Sources */,
 				8336097C1F737A8E00B42333 /* RNSMovePopupController+Container.swift in Sources */,
 				838AB8C71F26FBCD009E9C40 /* UIColor+Utils.swift in Sources */,
+				83631D681FC3F3C900C5F052 /* RNSImageFactory+Var.swift in Sources */,
 				83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */,
 				835718831F21A54600DE5E25 /* RNISAuthManager.swift in Sources */,
 				83AA6A721F566C8F00B2139C /* Random.swift in Sources */,
@@ -5220,6 +5238,7 @@
 				83A5C6E81F57D279006C8D62 /* RNSNoteRoute+Var.swift in Sources */,
 				83A327E91F849651003BA053 /* RNSPostNotificationDelete.swift in Sources */,
 				8349F4A31FBC078B009FF0FC /* RNSStopRegionManager.swift in Sources */,
+				83631D661FC3F08800C5F052 /* CGContext+Utils.swift in Sources */,
 				83A327EC1F849913003BA053 /* RNSPostNotificationUpdate.swift in Sources */,
 				836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
 				836EEF0C1F3C0188007631D9 /* UITableView+Utils.swift in Sources */,
@@ -5365,6 +5384,7 @@
 				83F5553A1F55675800D1221C /* RNSRouteTotalCell.swift in Sources */,
 				83A667F71F5D202C00A1A7BC /* RNSTransportTableViewCell.swift in Sources */,
 				837ABF0A1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */,
+				83631D6A1FC3F3D700C5F052 /* RNSImageFactory+Draw.swift in Sources */,
 				833D6C1F1F7CC5A400C4A0F3 /* RNSBusStopDetailController+UpdateData.swift in Sources */,
 				83AA6A5F1F5668C000B2139C /* DocsInfoViewController.swift in Sources */,
 				8390DFD81F664C91003C3505 /* MainInfoViewController+TableView.swift in Sources */,
