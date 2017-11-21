@@ -43,6 +43,8 @@ class RNSImageFactory: NSObject {
     static let corner:CGFloat = 5
     static let heightView: CGFloat = 20
     static let circleWidth = corner * 2
+    static let betweenText: CGFloat = 5
+    static let edgeText: CGFloat = 2
     
     lazy var maxY: CGFloat = {
         return originY + RNSImageFactory.heightView

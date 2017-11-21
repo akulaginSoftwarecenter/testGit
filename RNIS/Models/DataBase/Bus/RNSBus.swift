@@ -9,6 +9,14 @@
 import UIKit
 import RealmSwift
 
+enum TypeWing {
+    case left,right
+    
+    var isRight: Bool {
+        return self == .right
+    }
+}
+
 class RNSBus: RNSCoordinateModel {
     
     @objc dynamic var minute: Int = 0
@@ -22,6 +30,8 @@ class RNSBus: RNSCoordinateModel {
     @objc dynamic var depo: String? = nil
     @objc dynamic var carrier: String? = nil
     @objc dynamic var phone: String? = nil
+    
+    var typeWing = TypeWing.right
     
     func generate() {
         
@@ -45,6 +55,6 @@ class RNSBus: RNSCoordinateModel {
     }
     
     lazy var widthWing: CGFloat = {
-        return route_number.width(RNSImageFactory.font) + 5
+        return route_number.width(RNSImageFactory.font) + RNSImageFactory.betweenText + RNSImageFactory.edgeText
     }()
 }
