@@ -26,7 +26,10 @@ extension RNSImageFactory {
         return RNSImageFactory.originY
     }
     
-   
+    static var yDownRightOneCorner: CGFloat {
+        return shared.yDownRightOneCorner
+    }
+    
     func textFontAttributes(_ selected: Bool) -> AliasDict  {
         let style = NSMutableParagraphStyle()
         style.alignment = NSTextAlignment.center

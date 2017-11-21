@@ -56,70 +56,7 @@ class RNSImageFactory: NSObject {
         return CGPoint(x: RNSImageFactory.halfImage, y: originY)
     }()
     
-    static func imageBusAt(_ text: String, selected: Bool, width: Float) -> UIImage {
-        let inImage = bus_icon
-        
-        let key = "\(text) + \(selected.hashValue)" as NSString
-        if let icon = cache.object(forKey: key) {
-            return icon
-        }
-        let widthWing = CGFloat(width)
-        let widthText = widthWing - 5
-        let fullWidth = widthImage + widthWing
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: fullWidth, height: heightImage), false, scale)
-        
-        drawWing(fullWidth, selected: selected)
-        drawImage()
-
-        drawText(text, selected: selected, widthText: widthText)
-       
-        let newImage = UIGraphicsGetImageFromCurrentImageContext() ?? inImage
-        UIGraphicsEndImageContext()
-        
-        cache.setObject(newImage, forKey: key)
-        return newImage
-    }
-    
-    static func drawImage() {
-        bus_icon.draw(in: CGRect(x: 0, y: 0, width: widthImage, height: heightImage))
-    }
-    
-    static func drawWing(_ fullWidth: CGFloat, selected: Bool) {
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return
-        }
-        
-        let xRightOneCorner = fullWidth - corner
-     
-        let colorView: UIColor = selected ? .color27AE60 : .whiteAlpha70
-        let cgColor = colorView.cgColor
-        
-        
-        let upRightOneCorner = CGPoint(x: xRightOneCorner, y: originY)
-        let upRightTwoCorner = CGPoint(x: fullWidth, y: yUpRightOneCorner)
-        let yDownRightOneCorner = maxY - corner
-        
-        context.beginPath()
-        context.move(to: leftUpPoint)
-        
-        context.addLine(to: upRightOneCorner)
-        context.addLine(to: upRightTwoCorner)
-        
-        context.addLine(to: CGPoint(x: fullWidth, y: yDownRightOneCorner))
-        context.addLine(to: CGPoint(x: xRightOneCorner, y: maxY))
-        
-        context.addLine(to: CGPoint(x: halfImage, y: maxY))
-        context.addLine(to: leftUpPoint)
-        context.setFillColor(cgColor)
-        context.fillPath()
-        
-        context.drawEllipse(CGRect(x: fullWidth - circleWidth, y: originY, width: circleWidth, height: circleWidth), color: cgColor)
-        context.drawEllipse(CGRect(x: fullWidth - circleWidth, y: maxY - circleWidth, width: circleWidth, height: circleWidth), color: cgColor)
-    }
-    
-    static func drawText(_ text: String, selected: Bool, widthText: CGFloat) {
-        let rect = CGRect(x: widthImage + 2, y: 7, width: widthText, height: 12)
-        let attr: AliasDict = selected ? shared.textAttrSelected : shared.textAttr
-        text.draw(in: rect, withAttributes: attr)
-    }
+    lazy var yDownRightOneCorner: CGFloat = {
+        return maxY - RNSImageFactory.corner
+    }()
 }

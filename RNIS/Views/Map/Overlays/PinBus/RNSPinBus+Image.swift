@@ -20,7 +20,7 @@ extension RNSPinBus {
         DispatchQueue.global(qos: .background).async {
             let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, width: width)
             Utils.mainQueue {
-                let xOffset = width/(32.5 + width)
+                let xOffset = width/(Float(RNSImageFactory.widthImage) + width)
                 self.setImage(image, xOffset: xOffset)
             }
         }

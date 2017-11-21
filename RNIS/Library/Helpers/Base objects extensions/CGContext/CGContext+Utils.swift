@@ -16,6 +16,4 @@ extension CGContext {
         setFillColor(color)
         fillPath()
     }
-    
-   
 }
