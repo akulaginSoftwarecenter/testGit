@@ -13,6 +13,14 @@ import UIKit
  */
 class RNSPinBus: RNSPinItem {
     
+    var widthTitle: CGFloat?
+    var itemBus: RNSBus?
+    
+    override func prepareItem() {
+        itemBus = item as? RNSBus
+        widthTitle = itemBus?.widthTitle ?? 0
+    }
+    
     /// Установка иконки в оверлей
     ///
     /// - Parameter image: иконка
@@ -44,4 +52,5 @@ class RNSPinBus: RNSPinItem {
         prepareIcon(RNSImageFactory.bus_icon)
         updateImage()
     }
+
 }

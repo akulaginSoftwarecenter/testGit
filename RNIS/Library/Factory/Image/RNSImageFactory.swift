@@ -46,7 +46,7 @@ class RNSImageFactory: NSObject {
     
     static let font: UIFont = .cffazm12
     
-    static func imageBusAt(_ text: String, selected: Bool) -> UIImage {
+    static func imageBusAt(_ text: String, selected: Bool, widthText: CGFloat) -> UIImage {
         let inImage = bus_icon
         
         let key = "\(text) + \(selected.hashValue)" as NSString
@@ -55,7 +55,6 @@ class RNSImageFactory: NSObject {
         }
         
         let scale = UIScreen.main.scale
-        let widthText = text.width(font)
         let sizeImage = inImage.size
         let widthImage = sizeImage.width
         let heightImage = sizeImage.height

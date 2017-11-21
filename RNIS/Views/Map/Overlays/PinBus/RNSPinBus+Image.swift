@@ -9,14 +9,16 @@
 import Foundation
 
 extension RNSPinBus {
-      
+    
     func updateImage() {
-        guard  let text = (self.item as? RNSBus)?.route_number else {
+        guard let item = itemBus,
+            let widthTitle = widthTitle else {
             return
         }
-        let current = item?.isCurrent ?? false
+        let text = item.route_number
+        let isCurrent = item.isCurrent
         DispatchQueue.global(qos: .background).async {
-            let image = RNSImageFactory.imageBusAt(text, selected: current)
+            let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, widthText: widthTitle)
             Utils.mainQueue {
                 self.setImage(image)
             }

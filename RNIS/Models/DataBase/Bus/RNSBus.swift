@@ -43,4 +43,8 @@ class RNSBus: RNSCoordinateModel {
         depo = "№1151 | E13222 777"
         phone = "+ 7 (912) 213-32-32"
     }
+    
+    lazy var widthTitle: CGFloat = {
+        return route_number.width(RNSImageFactory.font)
+    }()
 }

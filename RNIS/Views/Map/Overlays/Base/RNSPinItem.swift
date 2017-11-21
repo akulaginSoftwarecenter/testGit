@@ -24,9 +24,14 @@ class RNSPinItem: RNSPinParent {
         super.init()
    
         self.item = item
+        prepareItem()
         preparePoint()
         prepareImage()
         prepareHandlers()
+    }
+    
+    func prepareItem() {
+        
     }
     
     /// Настройка иконки оверлея
