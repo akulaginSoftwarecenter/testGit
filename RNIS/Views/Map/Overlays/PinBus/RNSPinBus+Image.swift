@@ -17,10 +17,12 @@ extension RNSPinBus {
         let text = item.route_number
         let isCurrent = item.isCurrent
         let width = self.widthWing
-        DispatchQueue.global(qos: .background).async {
-            let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, width: width)
+        let isRight = item.isRight
+        Utils.queueUserBackground {
+            let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, width: width, isRight: isRight)
             Utils.mainQueue {
-                let xOffset = width/(Float(RNSImageFactory.widthImage) + width)
+                var xOffset = width/(Float(RNSImageFactory.widthImage) + width)
+                xOffset = isRight ? xOffset : -xOffset
                 self.setImage(image, xOffset: xOffset)
             }
         }

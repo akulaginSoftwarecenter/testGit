@@ -31,7 +31,11 @@ class RNSBus: RNSCoordinateModel {
     @objc dynamic var carrier: String? = nil
     @objc dynamic var phone: String? = nil
     
-    var typeWing = TypeWing.right
+    var typeWing = TypeWing.left
+    
+    var isRight: Bool {
+        return typeWing.isRight
+    }
     
     func generate() {
         
