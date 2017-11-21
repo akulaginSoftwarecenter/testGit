@@ -62,7 +62,6 @@ class RNSImageFactory: NSObject {
         let fullWidth = widthImage + widthText + 5
         let size = CGSize(width: fullWidth, height: heightImage)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-  
         if let context = UIGraphicsGetCurrentContext() {
             let halfImage = widthImage/2
             let originY:CGFloat = 2
@@ -75,6 +74,8 @@ class RNSImageFactory: NSObject {
             let upRightOneCorner = CGPoint(x: xRightOneCorner, y: originY)
             let upRightTwoCorner = CGPoint(x: fullWidth, y: yUpRightOneCorner)
             let circleWidth = corner * 2
+            let colorView: UIColor = selected ? .color27AE60 : .whiteAlpha70
+            let cgColor = colorView.cgColor
             
             let yDownRightOneCorner = maxY - corner
             
@@ -89,17 +90,17 @@ class RNSImageFactory: NSObject {
             
             context.addLine(to: CGPoint(x: halfImage, y: maxY))
             context.addLine(to: leftUpPoint)
-            context.setFillColor(UIColor.whiteAlpha70.cgColor)
+            context.setFillColor(cgColor)
             context.fillPath()
  
             context.beginPath()
             context.addEllipse(in: CGRect(x: fullWidth - circleWidth, y: originY, width: circleWidth, height: circleWidth))
-            context.setFillColor(UIColor.whiteAlpha70.cgColor)
+            context.setFillColor(cgColor)
             context.fillPath()
             
             context.beginPath()
             context.addEllipse(in: CGRect(x: fullWidth - circleWidth, y: maxY - circleWidth, width: circleWidth, height: circleWidth))
-            context.setFillColor(UIColor.whiteAlpha70.cgColor)
+            context.setFillColor(cgColor)
             context.fillPath()
         }
     

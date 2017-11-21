@@ -20,7 +20,7 @@ class RNSPinBus: RNSPinItem {
             return
         }
         DispatchQueue.global(qos: .background).async {
-            let image = RNSImageFactory.imageBusAt(text, selected: false)
+            let image = RNSImageFactory.imageBusAt(text, selected: true)
             Utils.mainQueue {
                  self.prepareIcon(image)
             }

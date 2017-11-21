@@ -17,7 +17,7 @@ class RNSTimeManager: NSObject {
     let distance = 17
     @discardableResult override init() {
         super.init()
-        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
     /// Функция обновления таймера

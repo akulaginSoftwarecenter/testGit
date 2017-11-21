@@ -87,6 +87,15 @@ extension UIColor {
     static var color424242: UIColor {
         return #colorLiteral(red: 0.2588235294, green: 0.2588235294, blue: 0.2588235294, alpha: 1)
     }
+    
+    static var color229A55: UIColor {
+        return #colorLiteral(red: 0.1333333333, green: 0.6039215686, blue: 0.3333333333, alpha: 1)
+    }
+    
+    static var color27AE60: UIColor {
+        return #colorLiteral(red: 0.1529411765, green: 0.6823529412, blue: 0.3764705882, alpha: 1)
+    }
+    
    
     convenience init(_ red255: UInt, _ green255: UInt, _ blue255: UInt) {
         self.init(red255,green255,blue255,1)
