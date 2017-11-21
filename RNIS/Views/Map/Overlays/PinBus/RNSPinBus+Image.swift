@@ -18,7 +18,7 @@ extension RNSPinBus {
         let isCurrent = item.isCurrent
         let width = self.widthWing
         let isRight = item.isRight
-        Utils.queueUserBackground {
+        Utils.queueBackground {
             let image = RNSImageFactory.imageBusAt(text, selected: isCurrent, width: width, isRight: isRight)
             Utils.mainQueue {
                 var xOffset = width/(Float(RNSImageFactory.widthImage) + width)

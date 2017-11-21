@@ -72,7 +72,7 @@ class Utils {
         queueGlobal(.userInitiated, handler: handler)
     }
     
-    static func queueUserBackground(handler: EmptyBlock?) {
+    static func queueBackground(handler: EmptyBlock?) {
         queueGlobal(.background, handler: handler)
     }
     
