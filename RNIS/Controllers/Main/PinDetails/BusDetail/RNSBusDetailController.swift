@@ -11,7 +11,7 @@ import UIKit
 /**
  Контроллер показывает детальную информацию об автобусе
  */
-class RNSBusDetailController: UIViewController {
+class RNSBusDetailController: RNSParentDetailPinController {
     
     /// Создание контроллера
     ///
@@ -105,5 +105,9 @@ class RNSBusDetailController: UIViewController {
     
     deinit {
         print("RNSBusDetailController deinit")
+    }
+    
+    override func prepareCurrent(_ value: Bool) {
+        RNSBusManager.prepareCurrentItem(value, item: itemBus)
     }
 }

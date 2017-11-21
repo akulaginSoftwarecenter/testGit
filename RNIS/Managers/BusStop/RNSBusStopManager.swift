@@ -62,16 +62,15 @@ class RNSBusStopManager: NSObject {
     }
     
     /// Экземпляр текущей выбранной остановки
-    static func prepareCurrentStop(_ value: Bool, item: RNSBusStop?) {
+    static func prepareCurrentItem(_ value: Bool, item: RNSBusStop?) {
         let uuid = item?.uuid ?? ""
-        currentStopUuid = value ? uuid : ""
+        RNSMapManager.currentItemUuid = value ? uuid : ""
         let items = showedItems.filter{ $0.uuid == uuid }
         items.updateIcons()
     }
-    static var currentStopUuid = ""
+
     static var currentIsZoomSmallStop: Bool?
-    
-    
+      
     static func updateZoom() {
         if let isZoom = currentIsZoomSmallStop,
             isZoomSmallStop == isZoom {

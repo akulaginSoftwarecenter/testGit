@@ -49,7 +49,7 @@ class RNSImageFactory: NSObject {
     static func imageBusAt(_ text: String, selected: Bool) -> UIImage {
         let inImage = bus_icon
         
-        let key = text as NSString
+        let key = "\(text) + \(selected.hashValue)" as NSString
         if let icon = cache.object(forKey: key) {
             return icon
         }

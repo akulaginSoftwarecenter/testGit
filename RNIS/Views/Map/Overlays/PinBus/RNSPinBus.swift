@@ -13,20 +13,6 @@ import UIKit
  */
 class RNSPinBus: RNSPinItem {
     
-    override func prepareImage() {
-        prepareIcon(RNSImageFactory.bus_icon)
-        
-        guard  let text = (self.item as? RNSBus)?.route_number else {
-            return
-        }
-        DispatchQueue.global(qos: .background).async {
-            let image = RNSImageFactory.imageBusAt(text, selected: true)
-            Utils.mainQueue {
-                 self.prepareIcon(image)
-            }
-        }
-    }
-    
     /// Установка иконки в оверлей
     ///
     /// - Parameter image: иконка
@@ -39,6 +25,10 @@ class RNSPinBus: RNSPinItem {
         item?.handlerUpdateLocaton = { [weak self] in
             self?.updateLocation()
         }
+        
+        item?.handlerUpdateIcon = { [weak self] in
+            self?.updateImage()
+        }
     }
     
     /// Обновление положения пина на карте
@@ -46,9 +36,12 @@ class RNSPinBus: RNSPinItem {
         guard let point = item?.point else {
             return
         }
-      //  print("uuid",item?.uuid as Any)
-       // print("point",point as Any)
         overlayItem.geoPoint = point
         populate()
+    }
+    
+    override func prepareImage() {
+        prepareIcon(RNSImageFactory.bus_icon)
+        updateImage()
     }
 }

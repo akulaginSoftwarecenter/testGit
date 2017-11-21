@@ -11,7 +11,7 @@ import UIKit
 /**
  Контроллер отображения списка автобусов, которые останавливаются на выбранной остановке
  */
-class RNSBusStopDetailController: UIViewController {
+class RNSBusStopDetailController: RNSParentDetailPinController {
     
     /// Ограничение высоты таблицы
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
@@ -71,19 +71,7 @@ class RNSBusStopDetailController: UIViewController {
             vc?.pushAnimatedRedScroll()
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        prepareCurrent(true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        prepareCurrent(false)
-    }
-    
+   
     override class var storyboardName: String {
         return "RNSBusStopDetailController"
     }
@@ -92,7 +80,7 @@ class RNSBusStopDetailController: UIViewController {
         print("RNSBusStopDetailController deinit")
     }
     
-    func prepareCurrent(_ value: Bool) {
-        RNSBusStopManager.prepareCurrentStop(value, item: item)
+    override func prepareCurrent(_ value: Bool) {
+        RNSBusStopManager.prepareCurrentItem(value, item: item)
     }
 }

@@ -46,6 +46,8 @@ class RNSMapManager: NSObject {
     /// Функция показа информации
     static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
     
+    static var currentItemUuid = ""
+    
     /// Функция подготовки точек маршрута
     static func prepareRoutePoints() {
         let item = RNSDutyAddressTemp(RNSLocationManager.point)

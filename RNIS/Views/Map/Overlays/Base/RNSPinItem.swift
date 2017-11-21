@@ -15,6 +15,7 @@ class RNSPinItem: RNSPinParent {
     
     /// модель географического положения пина
     var item: RNSCoordinateModel?
+    var imageSetuped: UIImage?
     
     /// Создание пина
     ///

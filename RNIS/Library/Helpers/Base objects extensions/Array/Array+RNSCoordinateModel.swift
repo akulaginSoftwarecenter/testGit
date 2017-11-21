@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element: RNSBusStop {
+extension Array where Element: RNSCoordinateModel {
     
     func updateIcons() {
         forEach{$0.updateIcon()}

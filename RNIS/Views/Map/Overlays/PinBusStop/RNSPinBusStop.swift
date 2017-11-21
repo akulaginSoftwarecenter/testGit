@@ -28,12 +28,10 @@ class RNSPinBusStop: RNSPinItem {
     var defaultIcon: UIImage {
         return RNSBusStopManager.isZoomSmallStop ? RNSImageFactory.bus_stopSmall : RNSImageFactory.bus_stop
     }
-    
-    var imageSetuped: UIImage?
-    
+   
     /// Настройка иконки пина
     func updateIcon() {
-        let current = (item as? RNSBusStop)?.isCurrent ?? false
+        let current = item?.isCurrent ?? false
         let image = current ? RNSImageFactory.bus_stop_current : defaultIcon
         guard imageSetuped != image else {
             return

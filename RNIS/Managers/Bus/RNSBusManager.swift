@@ -60,5 +60,12 @@ class RNSBusManager: NSObject {
         return mapView.lastCenterCoord
     }
     
+    static func prepareCurrentItem(_ value: Bool, item: RNSBus?) {
+        let uuid = item?.uuid ?? ""
+        RNSMapManager.currentItemUuid = value ? uuid : ""
+        let items = showedItems.filter{ $0.uuid == uuid }
+        items.updateIcons()
+    }
+    
     static var showLoader = false
 }

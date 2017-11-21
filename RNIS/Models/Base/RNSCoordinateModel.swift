@@ -42,4 +42,8 @@ class RNSCoordinateModel: Object {
     func updateIcon() {
         handlerUpdateIcon?()
     }
+    
+    var isCurrent: Bool {
+        return uuid == RNSMapManager.currentItemUuid
+    }
 }
