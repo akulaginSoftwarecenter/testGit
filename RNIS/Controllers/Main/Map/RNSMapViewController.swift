@@ -68,7 +68,7 @@ class RNSMapViewController: UIViewController {
     func simulateWelcomePresentationIfNeed() {
         if shouldShowWelcome {
             let containerVC = RNSWelcomeViewContoller.initialController
-            welcomeSimulationView = containerVC.view
+            welcomeSimulationView = containerVC?.view
             view.addSubview(welcomeSimulationView!)
         }
     }

@@ -11,7 +11,7 @@ import UIKit
 extension STRouter {
 
     static func showMenu() {
-        RNSMenuViewController.initialController.pushAnimated()
+        RNSMenuViewController.initialController?.pushAnimated()
     }
 
 
@@ -27,6 +27,6 @@ extension STRouter {
     }
 
     static func showLogin(animated: Bool) {
-        RNSLoginViewController.controller.pushAnimatedImageBoard(animated: animated)
+        RNSLoginViewController.controller?.pushAnimatedImageBoard(animated: animated)
     }
 }

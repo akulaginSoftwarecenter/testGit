@@ -18,7 +18,7 @@ extension RNSDutyViewController {
         showLoader()
         RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: { [weak self] items in
             RNSPageRouteManager.items = items
-            RNSPageRouteController.controller.pushAnimated()
+            RNSPageRouteController.controller?.pushAnimated()
             self?.removeLoader()
             self?.prepareError(nil)
             }, failure: { [weak self] text in

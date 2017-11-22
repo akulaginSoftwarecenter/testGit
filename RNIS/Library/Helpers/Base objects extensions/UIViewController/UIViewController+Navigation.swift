@@ -27,11 +27,11 @@ extension UIViewController {
     }
    
     static func initialPushAnimatedRed() {
-        return initialController.pushAnimatedRed()
+        initialController?.pushAnimatedRed()
     }
     
     static func initialPushAnimatedRedScroll() {
-        return initialController.pushAnimatedRedScroll()
+        initialController?.pushAnimatedRedScroll()
     }
     
     func pushAnimatedRed() {

@@ -13,14 +13,14 @@ extension RNSProfileViewController {
     /// Событие нажатия на кнопку смены номера телефона
     @IBAction func actionPhone(_ sender: Any) {
         checkExit {
-            RNSChangePhoneController.controller.pushAnimatedImageScroll()
+            RNSChangePhoneController.controller?.pushAnimatedImageScroll()
         }
     }
     
     /// Событие нажатия на кнопку смены пароля
     @IBAction func actionPassword(_ sender: Any) {
         checkExit {
-            RNSChangePasswordController.initialController.pushAnimatedImageScroll()
+            RNSChangePasswordController.initialController?.pushAnimatedImageScroll()
         }
     }
     

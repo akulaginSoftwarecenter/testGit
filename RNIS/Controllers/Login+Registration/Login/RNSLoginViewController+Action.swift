@@ -27,7 +27,7 @@ extension RNSLoginViewController {
     /// Событие перехода в другой контроллер
     ///
     /// - Parameter viewController: контроллер, в который будет совершен переход
-    func push(_ viewController: UIViewController) {
+    func push(_ viewController: UIViewController?) {
         STRouter.pushAnimatedImageBoard(viewController)
     }
 }
