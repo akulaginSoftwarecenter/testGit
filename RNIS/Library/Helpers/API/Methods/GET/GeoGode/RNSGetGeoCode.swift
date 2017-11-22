@@ -23,7 +23,7 @@ class RNSGetGeoCode: AlamofireAPI {
     }
     
     override var path: String {
-        return mapHost + "search/"
+        return mapHost3 + "search/"
     }
     
     override var parameters: [String : Any] {

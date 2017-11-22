@@ -12,7 +12,7 @@ import Alamofire
 class RNSGetSearchAddress: RNSGetGeoCode {
     
     override var path: String {
-        return mapHost2 + "search/"
+        return mapHost3 + "search/"
     }
     
     var text: String?
