@@ -37,9 +37,6 @@ extension RNSAddressHistoryView: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.cellForRow(at: indexPath) as? RNSAddressCell, let item = cell.item else {
             return
         }
-        /*
-        prepareAddress(item)
-        endEdit()
-        */
+        handlerAddress?(item)
     }
 }

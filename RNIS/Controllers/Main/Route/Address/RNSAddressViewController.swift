@@ -76,9 +76,13 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         let view = RNSAddressHistoryView()
         if let parentView = self.containerTables {
             parentView.addSubview(view)
-            view.snp.makeConstraints({ (make) in
-                make.edges.equalTo(parentView)
-            })
+            view.snp.makeConstraints{
+                $0.edges.equalTo(parentView)
+            }
+        }
+        view.handlerAddress = {[weak self] item in
+            self?.prepareAddress(item)
+            self?.endEdit()
         }
         return view
     }()
