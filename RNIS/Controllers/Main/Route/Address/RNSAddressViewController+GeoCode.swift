@@ -19,6 +19,7 @@ extension RNSAddressViewController {
         request = RNSGetGeoCode(point) {[weak self] (address) in
             self?.removeLoader()
             self?.addPin(point)
+            self?.tableAddress.clearTable()
             self?.prepareAddress(address)
         }
     }
