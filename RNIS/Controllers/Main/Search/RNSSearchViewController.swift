@@ -25,7 +25,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     
     /// Представление идикации загрузки
     lazy var loaderView:LoaderView = {
-        let view = LoaderView()
+        let view = LoaderView.interactionEnabled
         view.isUserInteractionEnabled = false
         view.labelText.text = "Идет запрос..."
         return view
@@ -38,30 +38,15 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     /// Представление для переключения вкладок
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     /// Таблица результатов поиска
-    @IBOutlet weak var tableView: UITableView!
-    
-    /// Массив моделей ячеек таблицы результатов поска
-    var items: [RNSTextItem]?
-    /// Поисковый запрос на сервер
-    var request: AlamofireAPI?
-    
+    @IBOutlet weak var searchView: RNSSearchView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareHandlers()
         prepareSegmented()
         checkSaved()
-        tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         prepareClearColor()
-    }
-    
-    /// Обновление представлений используя последний поисковый запрос если он имеется
-    func checkSaved() {
-        prepareSegment(RNSSearchManager.type ?? .transport)
-        guard let text = RNSSearchManager.text, !text.isEmpty else {
-            return
-        }
-        textField.text = text
-        updateSearch()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -36,8 +36,6 @@ extension RNSAddressViewController {
         geoCode(item.geoPoint)
     }
     
-    
-    
     /// Удаление пина с карты
     func removePin() {
         pin?.remove()

@@ -35,7 +35,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         return vc
     }
     
-    lazy var loaderView = LoaderView.loaderInteractionEnabled
+    lazy var loaderView = LoaderView.interactionEnabled
     
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         get {

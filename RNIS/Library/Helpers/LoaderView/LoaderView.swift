@@ -10,7 +10,7 @@ import UIKit
 
 class LoaderView: RNSParentLoaderView {
     
-    class var loaderInteractionEnabled: LoaderView {
+    class var interactionEnabled: LoaderView {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
         return view

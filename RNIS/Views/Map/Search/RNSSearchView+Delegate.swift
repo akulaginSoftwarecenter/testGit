@@ -1,15 +1,14 @@
 //
-//  RNSSearchViewController+TableView.swift
+//  RNSSearchView+Delegate.swift
 //  RNIS
 //
-//  Created by Артем Кулагин on 14.08.17.
+//  Created by Артем Кулагин on 23.11.2017.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
 import Foundation
 
-/// Расширение для работы с таблицей
-extension RNSSearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension RNSSearchView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items?.count ?? 0
@@ -22,7 +21,7 @@ extension RNSSearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showItem(indexPath)
+        showItem(item(indexPath))
     }
     
     func item(_ indexPath: IndexPath) -> RNSTextItem? {
