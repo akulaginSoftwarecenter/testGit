@@ -15,6 +15,16 @@ extension RNSDutyViewController {
     
     /// Получение с сервера списка возможных маршурутов, исходя из указанных адресов "куда" и "откуда"
     func loadData() {
+        prepareError(nil)
+        if fromItem?.address?.isEmpty ?? true {
+            prepareError("Введите адрес отправления")
+            return
+        }
+        
+        if inItem?.address?.isEmpty ?? true {
+            prepareError("Введите адрес назначения")
+            return
+        }
         showLoader()
         RNSPostActionRouting(fromItem, to: inItem, date: currentDate, complete: { [weak self] items in
             RNSPageRouteManager.items = items

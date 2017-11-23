@@ -50,7 +50,7 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     }
     
     func showPageRoute() {
-        let vc = RNSDutyViewController.initialController as? RNSDutyViewController
+        let vc = RNSDutyViewController.initialControllerType()
         vc?.loadStartItems(pointFrom, inItem: pointHere)
         vc?.pushAnimatedRed()
         removeAnimate()

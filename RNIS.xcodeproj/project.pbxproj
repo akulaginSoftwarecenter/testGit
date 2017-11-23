@@ -3302,11 +3302,11 @@
 			isa = PBXGroup;
 			children = (
 				83A5C7091F58129C006C8D62 /* DateSelect */,
+				837036B81F42A29B00FBD1E9 /* RNSDutyViewController.swift */,
 				832B1DCD1F42B2110024505C /* RNSDutyViewController+Action.swift */,
 				8326B9C51F8E141400623228 /* RNSDutyViewController+LoadData.swift */,
 				83A5C70E1F581636006C8D62 /* RNSDutyViewController+UI.swift */,
 				837036BA1F42A2C000FBD1E9 /* RNSDutyViewController.storyboard */,
-				837036B81F42A29B00FBD1E9 /* RNSDutyViewController.swift */,
 			);
 			path = Duty;
 			sourceTree = "<group>";
@@ -3934,8 +3934,8 @@
 			children = (
 				830E68B41F552B8E008EFA02 /* Detail */,
 				831E6F1D1F725C7E00122C4D /* Popup */,
-				8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */,
 				83A53F821F4A918200938969 /* RNSPageRouteController.swift */,
+				8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */,
 			);
 			path = PageRoute;
 			sourceTree = "<group>";

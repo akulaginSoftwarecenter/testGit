@@ -46,12 +46,4 @@ class RNSDutyViewController: UIViewController {
         
         prepareSearchButton()
     }
-
-    override class var storyboardName: String {
-        return "RNSDutyViewController"
-    }
-    
-    deinit {
-        print("RNSDutyViewController deinit")
-    }
 }
