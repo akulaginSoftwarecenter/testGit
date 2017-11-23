@@ -35,6 +35,8 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         return vc
     }
     
+    lazy var loaderView = LoaderView.loaderInteractionEnabled
+    
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         get {
             return bottomTableView
@@ -44,6 +46,8 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     var isNeedAddTap: Bool {
         return false
     }
+    
+    var request: RNSGetGeoCode?
     
     var type: TypeAddress?
     var item: RNSDutyAddressTemp?
@@ -74,56 +78,11 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         prepareTextField()
         prepareType()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        containerController = segue.destination as? RNSMapParentController
-        prepareEnterViewController()
-    }
-    
-    /// Настройка внутреннего контроллера
-    func prepareEnterViewController(){
-        containerController?.handlerOnMapTouchEvent = {[weak self] point in
-            self?.onMapTouchEvent(point)
-        }
-        
-        containerController?.handlerOnMapLongTouchEvent = {[weak self] point in
-            self?.onMapLongTouchEvent(point)
-        }
-        
-        containerController?.handlerOnOverlay = {[weak self] point,item in
-            self?.onOverlay(point, item: item)
-        }
-    }
-    
-    /// Событие нажатия на кнопку возврата на предыдущий контроллер
-    @IBAction func backButton(_ sender: Any) {
-        backAction(sender)
-        STRouter.pop()
-    }
-    
-    /// Настройка переменной, содержащей данные о расположении
-    func updateItem() {
-        if item == nil {
-            item = RNSDutyAddressTemp()
-        }
-        item?.address = text
-        let point = pin?.overlayItem.geoPoint
-        item?.latitude = point?.latitude
-        item?.longitude = point?.longitude
-    }
-    
-    /// Настройка заголовка контроллера
-    func prepareType() {
-        let type = self.type ?? .fromAddress
-        titleLabel.text = type.rawValue
-    }
+     
+ 
     
     override class var storyboardName: String {
         return "RNSMapParentController"
-    }
-    
-    deinit {
-        print("RNSAddressViewController deinit")
     }
     
     override func viewWillAppear(_ animated: Bool) {

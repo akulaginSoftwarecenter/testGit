@@ -36,23 +36,7 @@ extension RNSAddressViewController {
         geoCode(item.geoPoint)
     }
     
-    /// Функция получения адреса по географическим данным
-    ///
-    /// - Parameter point: географические координаты
-    func geoCode(_ point: PGGeoPoint) {
-        endEdit()
-        STRouter.showLoader()
-        RNSGetGeoCode(point) {[weak self] (address) in
-            STRouter.removeLoader()
-            self?.addPin(point)
-            self?.prepareAddress(address)
-        }
-    }
     
-    /// Функция получения текущего адреса пользователя
-    func geoCodeMylocation() {
-        geoCode(RNSLocationManager.point)
-    }
     
     /// Удаление пина с карты
     func removePin() {

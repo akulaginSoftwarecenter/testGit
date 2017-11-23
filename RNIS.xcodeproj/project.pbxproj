@@ -120,6 +120,8 @@
 		8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */; };
 		8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8326AA431F1F6A1C00F893C8 /* mainFont.otf */; };
 		8326B9C61F8E141400623228 /* RNSDutyViewController+LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326B9C51F8E141400623228 /* RNSDutyViewController+LoadData.swift */; };
+		83281CEF1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83281CEE1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift */; };
+		83281CF11FC6826300DAEC5B /* RNSAddressViewController+GeoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83281CF01FC6826300DAEC5B /* RNSAddressViewController+GeoCode.swift */; };
 		8329DF541F340E8B00D542FF /* RNSRedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329DF531F340E8B00D542FF /* RNSRedContainer.swift */; };
 		8329DF581F340F1200D542FF /* RNSParentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329DF571F340F1200D542FF /* RNSParentContainer.swift */; };
 		8329DF5A1F34117200D542FF /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329DF591F34117200D542FF /* UIViewController+Navigation.swift */; };
@@ -784,6 +786,8 @@
 		8326AA3D1F1F643E00F893C8 /* UIButton+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
 		8326AA431F1F6A1C00F893C8 /* mainFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mainFont.otf; sourceTree = "<group>"; };
 		8326B9C51F8E141400623228 /* RNSDutyViewController+LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSDutyViewController+LoadData.swift"; sourceTree = "<group>"; };
+		83281CEE1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSAddressViewController+UI.swift"; sourceTree = "<group>"; };
+		83281CF01FC6826300DAEC5B /* RNSAddressViewController+GeoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSAddressViewController+GeoCode.swift"; sourceTree = "<group>"; };
 		8329DF531F340E8B00D542FF /* RNSRedContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRedContainer.swift; sourceTree = "<group>"; };
 		8329DF571F340F1200D542FF /* RNSParentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSParentContainer.swift; sourceTree = "<group>"; };
 		8329DF591F34117200D542FF /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
@@ -2523,11 +2527,13 @@
 			isa = PBXGroup;
 			children = (
 				83E183941F44021F005912C5 /* Cell */,
+				836221A91F43DED1005B49DA /* RNSAddressViewController.swift */,
+				83281CEE1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift */,
 				836221B11F43F5C6005B49DA /* RNSAddressViewController+Action.swift */,
 				836221AD1F43EA81005B49DA /* RNSAddressViewController+MapView.swift */,
 				83E183921F4400DE005912C5 /* RNSAddressViewController+TableView.swift */,
 				836221B31F43F8A1005B49DA /* RNSAddressViewController+TextField.swift */,
-				836221A91F43DED1005B49DA /* RNSAddressViewController.swift */,
+				83281CF01FC6826300DAEC5B /* RNSAddressViewController+GeoCode.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -5180,6 +5186,7 @@
 				837F71941F452E6200DEAA36 /* RNSGetGeoCode.swift in Sources */,
 				837036B91F42A29B00FBD1E9 /* RNSDutyViewController.swift in Sources */,
 				836EEF1C1F3C1876007631D9 /* RNSDataManager+BusStop.swift in Sources */,
+				83281CF11FC6826300DAEC5B /* RNSAddressViewController+GeoCode.swift in Sources */,
 				836221AE1F43EA81005B49DA /* RNSAddressViewController+MapView.swift in Sources */,
 				8362CE291F6A8E0600BE912D /* RNSBusStopManager.swift in Sources */,
 				A76501E91F827D13001AEA25 /* RNSNotificationCreate.swift in Sources */,
@@ -5410,6 +5417,7 @@
 				83A5C7041F580BC0006C8D62 /* RNSDateSelectView.swift in Sources */,
 				8393AB6C1F8B2488004D754B /* RNSRouteTable+Stop.swift in Sources */,
 				830E68AE1F5514DE008EFA02 /* RNSPinDuration.swift in Sources */,
+				83281CEF1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
 				835A31221F4D21D100F83BE2 /* RNSRoutePoint.swift in Sources */,
 				831E6F261F72784500122C4D /* RNSPageRoutePopupController+RouteDetail.swift in Sources */,

@@ -13,6 +13,12 @@ import Foundation
  */
 extension RNSAddressViewController {
     
+     /// Событие нажатия на кнопку возврата на предыдущий контроллер
+    @IBAction func backButton(_ sender: Any) {
+        backAction(sender)
+        STRouter.pop()
+    }
+    
     /// Событие нажатия на кнопку "показать меня на карте"
     @IBAction func actionMyLocation(_ sender: Any) {
         geoCodeMylocation()
