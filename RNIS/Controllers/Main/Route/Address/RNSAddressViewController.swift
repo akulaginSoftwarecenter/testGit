@@ -80,9 +80,32 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
                 $0.edges.equalTo(parentView)
             }
         }
+        view.isHidden = true
         view.handlerAddress = {[weak self] item in
-            self?.prepareAddress(item)
-            self?.endEdit()
+            self?.prepareAddressContainers(item)
+        }
+        return view
+    }()
+    
+    lazy var tableAddress: RNSSearchView = {
+        let view = RNSSearchView()
+        if let parentView = self.containerTables {
+            parentView.addSubview(view)
+            view.snp.makeConstraints{
+                $0.edges.equalTo(parentView)
+            }
+        }
+        view.isHidden = true
+        view.handlerLoader = {[weak self] value in
+            if value {
+                self?.showLoader()
+            } else {
+                self?.removeLoader()
+            }
+        }
+        
+        view.handlerShowItem = {[weak self] value in
+            self?.prepareAddressContainers(value?.name)
         }
         return view
     }()

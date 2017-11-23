@@ -9,13 +9,13 @@
 import Foundation
 
 extension RNSSearchView {
-    func prepare(_ text: String?, typeSegment: TypeSearch) {
+    
+    func prepare(_ text: String?, typeSegment: TypeSearch = .address) {
         guard let text = text  else {
             return
         }
         self.text = text
         self.typeSegment = typeSegment
-        
         if typeSegment == .transport {
             return
         }
@@ -32,9 +32,6 @@ extension RNSSearchView {
         } else if typeSegment == .address {
             searchAddress()
         }
-        
-        //tableView.reloadData()
-        //heightTableView.constant = tableView.tableViewContentSize
     }
     
     /// Запрос на поиск остановок

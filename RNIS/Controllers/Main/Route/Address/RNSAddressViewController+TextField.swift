@@ -25,9 +25,18 @@ extension RNSAddressViewController: UITextFieldDelegate {
         textField.text = text
     }
     
+    func prepareAddressContainers(_ text: String?) {
+        prepareAddress(text)
+        endEdit()
+    }
+    
     /// Получение текущего текста из текстового поля
     var text: String? {
        return textField.text
+    }
+    
+    var textIsClear: Bool {
+        return text?.count == 0
     }
     
     /// Событие начала редактирования поля адреса

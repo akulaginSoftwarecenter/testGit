@@ -32,4 +32,17 @@ class RNSSearchView: BaseViewWithXIBInit {
     func showItem(_ item: RNSTextItem?) {
         handlerShowItem?(item)
     }
+    
+    func show() {
+        prepareVisible(false)
+    }
+    
+    func hidden() {
+        prepareVisible(true)
+    }
+    
+    func prepareVisible(_ isHidden: Bool) {
+        self.isHidden = isHidden
+        heightTableView.isActive = !isHidden
+    }
 }

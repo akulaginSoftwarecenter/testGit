@@ -9,12 +9,9 @@
 import Foundation
 
 class RNSAddressHistoryView: BaseViewWithXIBInit {
-    /*
-    /// Ограничение таблицы снизу
-    @IBOutlet weak var bottomTableView: NSLayoutConstraint!
+
     /// Ограничение высоты таблицы
- */
-    @IBOutlet weak var heightTableView: NSLayoutConstraint!
+     @IBOutlet weak var heightTableView: NSLayoutConstraint!
     /// Таблица вариантов адресов (автокомплит)
  
     @IBOutlet weak var tableView: UITableView!
@@ -28,5 +25,18 @@ class RNSAddressHistoryView: BaseViewWithXIBInit {
         self.text = text
         tableView.reloadData()
         heightTableView.constant = tableView.tableViewContentSize
+    }
+    
+    func show() {
+        prepareVisible(false)
+    }
+    
+    func hidden() {
+        prepareVisible(true)
+    }
+    
+    func prepareVisible(_ isHidden: Bool) {
+        self.isHidden = isHidden
+        heightTableView.isActive = !isHidden
     }
 }

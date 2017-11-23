@@ -14,7 +14,23 @@ import Foundation
 extension RNSAddressViewController {
     
     func prepareTableView() {
-        tableHistory.prepare(text)
+        tableAddress.isHidden = false
+        tableAddress.prepare(text)
+        /*
+        allTableHidden()
+        if textIsClear {
+            tableHistory.isHidden = false
+            tableHistory.prepare(text)
+        } else {
+            tableAddress = true
+            tableAddress.prepare(text)
+        }
+         */
+    }
+    
+    func allTableHidden() {
+        tableHistory.isHidden = true
+        tableAddress.isHidden = true
     }
 }
 
