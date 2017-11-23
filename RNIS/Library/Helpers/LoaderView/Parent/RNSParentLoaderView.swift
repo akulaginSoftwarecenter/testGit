@@ -40,6 +40,7 @@ class RNSParentLoaderView: BaseViewWithXIBInit {
     }
     
     func animationShow() {
+        self.alpha = 0
         UIView.animate(withDuration: 0.5, delay: delay, options: .curveLinear, animations: {[weak self] in
             self?.alpha = self?.defaultAlpha ?? 0.3
             }, completion:nil)
