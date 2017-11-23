@@ -68,9 +68,20 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     /// Ограничение таблицы снизу
     @IBOutlet weak var bottomTableView: NSLayoutConstraint!
     /// Ограничение высоты таблицы
-    @IBOutlet weak var heightTableView: NSLayoutConstraint!
+
     /// Таблица вариантов адресов (автокомплит)
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var containerTables: UIView!
+    
+    lazy var tableHistory: RNSAddressHistoryView = {
+        let view = RNSAddressHistoryView()
+        if let parentView = self.containerTables {
+            parentView.addSubview(view)
+            view.snp.makeConstraints({ (make) in
+                make.edges.equalTo(parentView)
+            })
+        }
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +89,6 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         prepareTextField()
         prepareType()
     }
-     
- 
     
     override class var storyboardName: String {
         return "RNSMapParentController"

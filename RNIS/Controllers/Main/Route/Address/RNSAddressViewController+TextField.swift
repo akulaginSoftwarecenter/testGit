@@ -32,14 +32,14 @@ extension RNSAddressViewController: UITextFieldDelegate {
     
     /// Событие начала редактирования поля адреса
     func startEdit() {
-        tableView.isHidden = false
+        containerTables.isHidden = false
         prepareTableView()
         buttonMyLocation.isHidden = true
     }
     
     /// Событие завершения редактирования поля адреса
     func endEdit() {
-        tableView.isHidden = true
+        containerTables.isHidden = true
         textField.endEditing(true)
         buttonMyLocation.isHidden = false
     }
