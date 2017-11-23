@@ -92,7 +92,8 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         if let parentView = self.containerTables {
             parentView.addSubview(view)
             view.snp.makeConstraints{
-                $0.edges.equalTo(parentView)
+                $0.right.top.bottom.equalTo(parentView)
+                $0.left.equalTo(parentView).inset(15)
             }
         }
         view.isHidden = true

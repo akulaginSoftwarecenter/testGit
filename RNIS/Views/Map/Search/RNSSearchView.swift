@@ -16,7 +16,7 @@ class RNSSearchView: BaseViewWithXIBInit {
     var text: String?
     var typeSegment: TypeSearch = .address
     
-    @IBOutlet weak var heightTableView: NSLayoutConstraint!
+    @IBOutlet var heightTableView: NSLayoutConstraint?
     
     var handlerLoader: AliasBoolBlock?
     var handlerError: AliasStringBlock?
@@ -43,6 +43,6 @@ class RNSSearchView: BaseViewWithXIBInit {
     
     func prepareVisible(_ isHidden: Bool) {
         self.isHidden = isHidden
-        heightTableView.isActive = !isHidden
+        heightTableView?.isActive = !isHidden
     }
 }
