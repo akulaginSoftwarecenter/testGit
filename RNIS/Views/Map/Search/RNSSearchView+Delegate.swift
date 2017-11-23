@@ -35,5 +35,6 @@ extension RNSSearchView: UITableViewDelegate, UITableViewDataSource {
     
     func tableReload() {
         tableView.reloadData()
+        heightTableView.constant = tableView.tableViewContentSize
     }
 }

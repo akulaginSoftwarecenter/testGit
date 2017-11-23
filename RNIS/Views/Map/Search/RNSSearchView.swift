@@ -16,6 +16,8 @@ class RNSSearchView: BaseViewWithXIBInit {
     var text: String?
     var typeSegment: TypeSearch = .address
     
+    @IBOutlet weak var heightTableView: NSLayoutConstraint!
+    
     var handlerLoader: AliasBoolBlock?
     var handlerError: AliasStringBlock?
     var handlerShowItem: ((RNSTextItem?) -> ())?
