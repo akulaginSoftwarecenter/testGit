@@ -20,6 +20,16 @@ extension RNSSearchViewController: UITextFieldDelegate {
         return true
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let font = textField.font else {
+            return true
+        }
+        let currentWidth = (text + string).width(font)
+        let allWidth = textField.frame.width - 25
+        return allWidth >= currentWidth
+    }
+    
+    
     func prepareClearColor() {
         guard let btn = textField.value(forKey: "clearButton") as? UIButton else {
             return
