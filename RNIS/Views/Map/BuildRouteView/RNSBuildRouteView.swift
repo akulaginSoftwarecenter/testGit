@@ -34,7 +34,7 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     var pointHere: RNSDutyAddressTemp? {
         return RNSMapManager.pointHere
     }
-    
+    /*
     func requestRoute() {
         STRouter.showLoader()
         RNSPostActionRouting(pointFrom, to: pointHere, complete: {[weak self] items in
@@ -48,7 +48,7 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
             self?.removeAnimate()
         })
     }
-    
+    */
     func showPageRoute() {
         let vc = RNSDutyViewController.initialControllerType()
         vc?.loadStartItems(pointFrom, inItem: pointHere)
