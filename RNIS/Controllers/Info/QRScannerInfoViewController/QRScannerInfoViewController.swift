@@ -100,7 +100,7 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
     }
     
     func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {
-        let cameraName = newCaptureDevice.device.localizedName
+       // let cameraName = newCaptureDevice.device.localizedName
     }
     
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
