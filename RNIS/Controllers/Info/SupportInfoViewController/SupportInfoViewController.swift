@@ -75,8 +75,4 @@ class SupportInfoViewController: UIViewController {
         nameSupportView.topText = titleName
         nameSupportView.text = nameText
     }
-
-    override class var storyboardName: String {
-        return "SupportInfoViewController"
-    }
 }

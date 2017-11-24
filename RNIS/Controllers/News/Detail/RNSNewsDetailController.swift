@@ -66,8 +66,4 @@ class RNSNewsDetailController: UIViewController {
         let page = String(format: "%@%@%@", "<div style=\"color:#ffffff\">", text, "</div>")
         webView.loadHTMLString(page, baseURL: nil)
     }
-    
-    override class var storyboardName: String {
-        return "RNSNewsDetailController"
-    }
 }

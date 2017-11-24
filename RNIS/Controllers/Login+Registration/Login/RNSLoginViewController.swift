@@ -64,8 +64,4 @@ class RNSLoginViewController: UIViewController {
             self?.prepareError(errorText)
         }
     }
-    
-    override class var storyboardName: String {
-        return "RNSLoginViewController"
-    }
 }

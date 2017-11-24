@@ -101,16 +101,11 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
     
     func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {
         let cameraName = newCaptureDevice.device.localizedName
-        print("Switching capturing to: \(cameraName)")
     }
     
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
         reader.stopScanning()
         
         dismiss(animated: true, completion: nil)
-    }
-    
-    override class var storyboardName: String {
-        return "QRScannerInfoViewController"
     }
 }

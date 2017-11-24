@@ -89,8 +89,4 @@ class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
     func removeAlert() {
         STAlertRouter.removeAlert(message)
     }
-   
-    override class var storyboardName: String {
-        return "RNSAlertViewController"
-    }
 }

@@ -99,10 +99,6 @@ class RNSBusDetailController: RNSParentDetailPinController {
         viewWay.item = item
     }
     
-    override class var storyboardName: String {
-        return "RNSBusDetailController"
-    }
-    
     deinit {
         print("RNSBusDetailController deinit")
     }

@@ -65,8 +65,4 @@ class NewsViewController: UIViewController {
     func removeLoader() {
         loaderView.remove()
     }
-
-    override class var storyboardName: String {
-        return "NewsViewController"
-    }
 }

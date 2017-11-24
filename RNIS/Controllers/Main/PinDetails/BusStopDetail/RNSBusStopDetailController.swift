@@ -71,14 +71,6 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
             vc?.pushAnimatedRedScroll()
         }
     }
-   
-    override class var storyboardName: String {
-        return "RNSBusStopDetailController"
-    }
-    
-    deinit {
-        print("RNSBusStopDetailController deinit")
-    }
     
     override func prepareCurrent(_ value: Bool) {
         RNSBusStopManager.prepareCurrentItem(value, item: item)

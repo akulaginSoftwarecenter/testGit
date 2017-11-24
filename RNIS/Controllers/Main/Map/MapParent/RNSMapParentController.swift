@@ -120,10 +120,6 @@ class RNSMapParentController: UIViewController {
         }
     }
     
-    override class var storyboardName: String {
-        return "RNSMapParentController"
-    }
-    
     deinit {
        // print("RNSMapParentController deinit")
     }

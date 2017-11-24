@@ -63,8 +63,4 @@ class RNSMenuViewController: LGSideMenuController {
         }
         hideLeftView(animated: true)
     }
-    
-    override class var storyboardName: String {
-        return "RNSMenuViewController"
-    }
 }

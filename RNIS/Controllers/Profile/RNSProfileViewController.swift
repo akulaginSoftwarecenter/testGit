@@ -60,12 +60,4 @@ class RNSProfileViewController: UIViewController {
         
         loadData()
     }
-    
-    override class var storyboardName: String {
-        return "RNSProfileViewController"
-    }
-    
-    deinit {
-        print("RNSProfileViewController deinit")
-    }
 }

@@ -43,8 +43,4 @@ class NotificationsSettingsViewController: UIViewController {
         }
         notificationPicker.selectRow(value, inComponent: 0, animated: true)
     }
-   
-    override class var storyboardName: String {
-        return "NotificationsSettingsViewController"
-    }
 }

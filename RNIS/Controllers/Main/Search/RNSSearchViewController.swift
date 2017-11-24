@@ -58,12 +58,4 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
         super.viewWillDisappear(animated)
         removeAllObservers()
     }
-    
-    override class var storyboardName: String {
-        return "RNSSearchViewController"
-    }
-    
-    deinit {
-        print("RNSSearchViewController deinit")
-    }
 }

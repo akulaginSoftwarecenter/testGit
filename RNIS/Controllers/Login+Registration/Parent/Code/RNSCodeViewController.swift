@@ -59,8 +59,4 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     @IBAction func repeatCodeAction(_ sender: Any) {
         handlerRepeatCode?()
     }
-    
-    override class var storyboardName: String {
-        return kCodeVC
-    }
 }

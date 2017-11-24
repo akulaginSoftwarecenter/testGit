@@ -63,10 +63,6 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
-    override class var storyboardName: String {
-        return "RNSDateSelectViewController"
-    }
-    
     deinit {
         print("RNSDateSelectViewController deinit")
     }

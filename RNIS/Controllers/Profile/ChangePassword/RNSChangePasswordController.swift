@@ -113,8 +113,4 @@ class RNSChangePasswordController: UIViewController {
         fields.clearError()
         prepareError(nil)
     }
-    
-    override class var storyboardName: String {
-        return "RNSChangePasswordController"
-    }
 }

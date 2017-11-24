@@ -69,8 +69,4 @@ class NotificationsViewController: UIViewController {
     func clearError() {
         loaderWay.remove()
     }
-    
-    override class var storyboardName: String {
-        return "NotificationsViewController"
-    }
 }

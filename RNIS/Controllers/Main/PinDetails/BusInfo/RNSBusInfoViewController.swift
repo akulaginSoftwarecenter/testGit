@@ -90,8 +90,4 @@ class RNSBusInfoViewController: UIViewController {
         descriptionAdd.isHidden = isHideAdditionally
         descriptionAdd.text = text
     }
-    
-    override class var storyboardName: String {
-        return "RNSBusInfoViewController"
-    }
 }

@@ -63,8 +63,4 @@ class ContactsInfoViewController: UIViewController {
         self.items = items
         tableView.reloadData()
     }
-    
-    override class var storyboardName: String {
-        return "ContactsInfoViewController"
-    }
 }

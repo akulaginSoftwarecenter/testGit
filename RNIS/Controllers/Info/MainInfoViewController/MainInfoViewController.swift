@@ -59,8 +59,4 @@ class MainInfoViewController: UIViewController {
         vc?.type = type
         vc?.pushAnimatedRedScroll()
     }
-    
-    override class var storyboardName: String {
-        return "MainInfoViewController"
-    }
 }

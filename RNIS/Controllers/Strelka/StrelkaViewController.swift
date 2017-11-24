@@ -48,8 +48,4 @@ class StrelkaViewController: UIViewController {
             self?.resetIfNeed()
         }
     }
- 
-    override class var storyboardName: String {
-        return "StrelkaViewController"
-    }
 }

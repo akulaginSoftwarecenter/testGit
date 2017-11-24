@@ -60,10 +60,7 @@ class DocsInfoViewController: UIViewController {
     func clearError() {
         loaderWay.remove()
     }
-    
-    override class var storyboardName: String {
-        return "DocsInfoViewController"
-    }
+
     /// Событие нажатия на кнопку возврата
     @IBAction func actionBack(_ sender: Any) {
         STRouter.pop()

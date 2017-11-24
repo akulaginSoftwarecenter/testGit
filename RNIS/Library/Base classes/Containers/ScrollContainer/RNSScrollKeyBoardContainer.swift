@@ -52,10 +52,6 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollVi
         scrollView.setContentOffset(offset, animated: true)
     }
     
-    override class var storyboardName: String {
-        return "RNSScrollKeyBoardContainer"
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addKeyboardObservers()

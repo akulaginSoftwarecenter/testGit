@@ -54,8 +54,4 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
             self?.prepareProfile()
         }
     }
-    
-    override class var storyboardName: String {
-        return "RNSLeftMenuController"
-    }
 }

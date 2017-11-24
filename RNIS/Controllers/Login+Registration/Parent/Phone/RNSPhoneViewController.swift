@@ -48,8 +48,4 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
         fields.clearError()
         errorLabel.text = nil
     }
-    
-    override class var storyboardName: String {
-        return kPhoneVC
-    }
 }

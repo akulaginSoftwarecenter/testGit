@@ -70,10 +70,6 @@ class RNSWelcomeViewContoller: UIViewController {
         titleButton.text = index == 4 ? "Перейти к приложению" : "Пропустить"
     }
     
-    override class var storyboardName: String {
-        return "RNSWelcomeViewContoller"
-    }
-    
     @IBAction func dismissAction(_ sender: Any) {
         dismiss(animated: true)
     }

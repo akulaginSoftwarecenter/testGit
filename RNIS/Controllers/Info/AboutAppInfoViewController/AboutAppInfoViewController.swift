@@ -22,8 +22,4 @@ class AboutAppInfoViewController: UIViewController {
             appVersionLabel.text = "Версия : \(version).\(bundle)"
         }
     }
-    
-    override class var storyboardName: String {
-        return "AboutAppInfoViewController"
-    }
 }

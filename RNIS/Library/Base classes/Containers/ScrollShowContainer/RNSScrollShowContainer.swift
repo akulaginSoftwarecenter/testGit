@@ -68,10 +68,6 @@ class RNSScrollShowContainer: UIViewController {
         scrollToStart()
     }
     
-    override class var storyboardName: String {
-        return "RNSScrollShowContainer"
-    }
-    
     func dismiss() {
         guard allowHideBottom else {
             scrollToStart()

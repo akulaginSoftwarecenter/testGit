@@ -45,8 +45,4 @@ class TransportViewController: UIViewController {
             Utils.checkTokeShowAlert()
         }
     }
-
-    override class var storyboardName: String {
-        return "TransportViewController"
-    }
 }

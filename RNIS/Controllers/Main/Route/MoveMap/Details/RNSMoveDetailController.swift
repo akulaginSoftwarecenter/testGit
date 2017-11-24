@@ -60,17 +60,12 @@ class RNSMoveDetailController: UIViewController {
         detailView.prepareMove()
     }
     
-    override class var storyboardName: String {
-        return "RNSMoveDetailController"
-    }
-    
     /// Событие нажатия на кнопку возврата на предыдущий экран
     @IBAction func actionBack(_ sender: Any) {
         handlerBack?()
     }
     
     deinit {
-        print("RNSMoveDetailController deinit")
-        NotificationCenter.removeObserver(self)
+         NotificationCenter.removeObserver(self)
     }
 }

@@ -65,8 +65,4 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
         fields.clearError()
         errorLabel.text = nil
     }
-
-    override class var storyboardName: String {
-        return kParoleVC
-    }
 }

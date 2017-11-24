@@ -58,14 +58,6 @@ class RNSRouteDetailController: UIViewController {
         detailView.item = item?.tableItem
     }
     
-    override class var storyboardName: String {
-        return "RNSRouteDetailController"
-    }
-    
-    deinit {
-        print("RNSRouteDetailViewController deinit")
-    }
-    
     /// Событие нажатия на кнопку возврата к предыдущему контроллеру
     @IBAction func actionBack(_ sender: Any) {
         handlerBack?()

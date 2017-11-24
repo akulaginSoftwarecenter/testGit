@@ -25,8 +25,4 @@ class SettingsViewController: UIViewController {
     @IBAction func switchIsChanged(_ sender: Any) {
         UserDefaults.hideZoomButtonInMap = !zoomButtonMap.isOn
     }
-
-    override class var storyboardName: String {
-        return "SettingsViewController"
-    }
 }

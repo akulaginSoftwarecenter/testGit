@@ -99,8 +99,4 @@ class RNSRegistrationNameController: UIViewController {
         nameField.setStateValid()
         prepareError(nil)
     }
-   
-    override class var storyboardName: String {
-        return "RNSRegistrationNameController"
-    }
 }
