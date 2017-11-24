@@ -17,7 +17,7 @@ class RNSChangeCodeController: RNSCodeContainerController {
     ///
     /// - Parameter item: модель профиля пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
-        let vc = RNSChangeCodeController.controller as? RNSChangeCodeController
+        let vc = RNSChangeCodeController.controllerType()
         
         let container = STRouter.scrollContainer(vc)
         vc?.handlerUpdateScroll = {

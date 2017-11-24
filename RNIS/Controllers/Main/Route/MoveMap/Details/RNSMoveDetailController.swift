@@ -29,7 +29,7 @@ class RNSMoveDetailController: UIViewController {
     ///
     /// - Parameter item: объект с информацией о маршруте
     static func initController(_ item: RNSRouteVariant?) -> RNSMoveDetailController?  {
-        let vc = RNSMoveDetailController.initialController as? RNSMoveDetailController
+        let vc = RNSMoveDetailController.initialControllerType()
         vc?.item = item
         return vc
     }

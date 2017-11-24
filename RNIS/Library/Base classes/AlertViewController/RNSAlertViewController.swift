@@ -17,7 +17,7 @@ class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
     var handlerViewDidLoad: EmptyBlock?
     
     static func controller(_ message: String?) -> RNSAlertViewController? {
-        let vc = RNSAlertViewController.initialController as? RNSAlertViewController
+        let vc = RNSAlertViewController.initialControllerType()
         vc?.message = message
         vc?.transitioningDelegate = CustomTransitionDelegate.shared
         return vc

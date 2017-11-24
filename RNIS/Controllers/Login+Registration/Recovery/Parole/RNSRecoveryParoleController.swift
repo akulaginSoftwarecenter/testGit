@@ -17,7 +17,7 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
     ///
     /// - Parameter item: данные пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
-        let vc = RNSRecoveryParoleController.controller as? RNSRecoveryParoleController
+        let vc = RNSRecoveryParoleController.controllerType()
         vc?.item = item
         return vc
     }

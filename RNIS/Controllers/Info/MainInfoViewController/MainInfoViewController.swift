@@ -37,7 +37,7 @@ class MainInfoViewController: UIViewController {
     ///
     /// - Parameter type: тип раздела
     func showDocsInfo(_ type: RNSDocsType) {
-        let vc = DocsInfoViewController.initialController as? DocsInfoViewController
+        let vc = DocsInfoViewController.initialControllerType()
         vc?.type = type
         vc?.pushAnimatedRed()
     }
@@ -46,7 +46,7 @@ class MainInfoViewController: UIViewController {
     ///
     /// - Parameter type: тип контакта
     func showContact(_ type: RNSContactInfoType) {
-        let vc = ContactsInfoViewController.initialController as? ContactsInfoViewController
+        let vc = ContactsInfoViewController.initialControllerType()
         vc?.type = type
         vc?.pushAnimatedRed()
     }
@@ -55,7 +55,7 @@ class MainInfoViewController: UIViewController {
     ///
     /// - Parameter type: тип обращения
     func showPetition(_ type: RNSPetitionType = .feedback) {
-        let vc = SupportInfoViewController.initialController as? SupportInfoViewController
+        let vc = SupportInfoViewController.initialControllerType()
         vc?.type = type
         vc?.pushAnimatedRedScroll()
     }

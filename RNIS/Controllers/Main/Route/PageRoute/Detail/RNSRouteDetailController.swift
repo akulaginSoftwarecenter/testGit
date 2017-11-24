@@ -36,7 +36,7 @@ class RNSRouteDetailController: UIViewController {
     ///
     /// - Parameter item: объект с информацией о маршруте
     static func initController(_ item: RNSRouteVariant?) -> RNSRouteDetailController?  {
-        let vc = RNSRouteDetailController.initialController as? RNSRouteDetailController
+        let vc = RNSRouteDetailController.initialControllerType()
         vc?.item = item
         return vc
     }

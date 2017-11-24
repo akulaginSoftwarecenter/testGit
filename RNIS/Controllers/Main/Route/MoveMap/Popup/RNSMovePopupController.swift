@@ -17,7 +17,7 @@ class RNSMovePopupController: UIViewController {
     ///
     /// - Parameter item: объект с информацией о маршруте
     static func initController(_ item: RNSRouteVariant?) -> UIViewController? {
-        let vc = RNSMovePopupController.controller as? RNSMovePopupController
+        let vc = RNSMovePopupController.controllerType()
         vc?.item = item
         let container = RNSScrollShowContainer.initController(vc)
         

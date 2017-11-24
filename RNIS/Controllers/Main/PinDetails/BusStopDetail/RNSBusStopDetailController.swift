@@ -22,7 +22,7 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
     ///
     /// - Parameter item: модель автобусной остановки
     static func initController(_ item: RNSBusStop?) -> UIViewController? {
-        let vc = RNSBusStopDetailController.initialController as? RNSBusStopDetailController
+        let vc = RNSBusStopDetailController.initialControllerType()
         vc?.item = item
         let container = STRouter.scrollShowContainer(vc, topTitle: item?.name)
         container?.handlerRect = vc?.prepareViews(_:)
@@ -63,7 +63,7 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
     /// Настройка кнопки "сообщить об ошибке"
     private func prepareReportButton() {
         errorReportButton.button.touchUpInside {
-            let vc = SupportItemViewController.controller as? SupportItemViewController
+            let vc = SupportItemViewController.controllerType()
             vc?.type = .feedback
             vc?.titleName = "Остановка"
             vc?.nameText = self.item?.name

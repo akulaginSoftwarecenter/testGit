@@ -17,7 +17,7 @@ class RNSBusDetailController: RNSParentDetailPinController {
     ///
     /// - Parameter item: модель автобуса
     static func initController(_ item: RNSBus?) -> UIViewController? {
-        let vc = RNSBusDetailController.initialController as? RNSBusDetailController
+        let vc = RNSBusDetailController.initialControllerType()
         vc?.itemBus = item
         
         let title = "Автобус №" + (item?.route_number ?? "")

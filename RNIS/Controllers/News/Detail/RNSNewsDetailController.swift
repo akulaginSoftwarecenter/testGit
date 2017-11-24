@@ -21,7 +21,7 @@ class RNSNewsDetailController: UIViewController {
     @IBOutlet weak var anonceLabel: UILabel!
     
     static func initController(_ item: RNSNewsTemp?) -> UIViewController? {
-        let vc = RNSNewsDetailController.initialController as? RNSNewsDetailController
+        let vc = RNSNewsDetailController.initialControllerType()
         vc?.item = item
         return STRouter.imageContainer(vc)
     }

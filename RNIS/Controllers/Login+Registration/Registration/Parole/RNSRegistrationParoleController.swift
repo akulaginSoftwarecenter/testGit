@@ -17,7 +17,7 @@ class RNSRegistrationParoleController: RNSParoleContainerController {
     ///
     /// - Parameter item: объект с данными пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
-        let vc = RNSRegistrationParoleController.controller as? RNSRegistrationParoleController
+        let vc = RNSRegistrationParoleController.controllerType()
         vc?.item = item
         return vc
     }

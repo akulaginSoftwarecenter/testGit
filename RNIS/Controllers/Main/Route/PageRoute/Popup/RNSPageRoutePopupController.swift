@@ -19,7 +19,7 @@ class RNSPageRoutePopupController: UIViewController {
     
     /// Создание контроллера
     static var initController: UIViewController? {
-        let vc = RNSPageRoutePopupController.controller as? RNSPageRoutePopupController
+        let vc = RNSPageRoutePopupController.controllerType()
         let container = RNSScrollShowContainer.initController(vc)
         
         container?.hideImageSlide = true

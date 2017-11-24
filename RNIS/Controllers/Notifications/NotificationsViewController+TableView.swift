@@ -30,8 +30,8 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        let controller = NotificationsSettingsViewController.initialController as! NotificationsSettingsViewController
-        controller.item = items?[indexPath.row]
-        controller.pushAnimatedRed()
+        let controller = NotificationsSettingsViewController.initialControllerType()
+        controller?.item = items?[indexPath.row]
+        controller?.pushAnimatedRed()
     }
 }

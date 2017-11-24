@@ -14,7 +14,7 @@ class RNSScrollShowContainer: UIViewController {
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     static func initController(_ container: UIViewController?, topTitle: String? = nil) -> RNSScrollShowContainer? {
-        let vc = RNSScrollShowContainer.initialController as? RNSScrollShowContainer
+        let vc = RNSScrollShowContainer.initialControllerType()
         vc?.containerVC = container
         vc?.topTitle = topTitle
         return vc

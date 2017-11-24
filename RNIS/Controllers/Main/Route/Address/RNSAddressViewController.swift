@@ -28,7 +28,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     ///   - type: тип адреса
     ///   - complete: блок, который выполнится непосредственно перед выходом из контроллера
     static func initController(_ item: RNSDutyAddressTemp?, type: TypeAddress?, complete: AliasAddressComplete?) -> UIViewController?  {
-        let vc = RNSAddressViewController.controller as? RNSAddressViewController
+        let vc = RNSAddressViewController.controllerType()
         vc?.item = item
         vc?.type = type
         vc?.complete = complete

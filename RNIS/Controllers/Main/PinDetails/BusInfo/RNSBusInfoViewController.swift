@@ -20,7 +20,7 @@ class RNSBusInfoViewController: UIViewController {
     ///
     /// - Parameter item: серверная модель автобуса
     static func initController(_ item: RNSBusTemp?) -> UIViewController? {
-        let vc = RNSBusInfoViewController.initialController as? RNSBusInfoViewController
+        let vc = RNSBusInfoViewController.initialControllerType()
         vc?.item = item
         return  vc
     }
@@ -65,7 +65,7 @@ class RNSBusInfoViewController: UIViewController {
         carrierField.text = item?.carrier_name
         phoneField.text = item?.unit_phone
         complainButton.button.touchUpInside {
-            let vc = SupportItemViewController.controller as? SupportItemViewController
+            let vc = SupportItemViewController.controllerType()
             vc?.type = .complaint
             vc?.titleName = "Транспорт"
             vc?.nameText = self.item?.route_number

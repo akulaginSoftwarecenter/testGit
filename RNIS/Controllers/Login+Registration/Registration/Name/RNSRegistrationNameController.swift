@@ -33,7 +33,7 @@ class RNSRegistrationNameController: UIViewController {
     ///
     /// - Parameter item: данные пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
-        let vc = RNSRegistrationNameController.initialController as? RNSRegistrationNameController
+        let vc = RNSRegistrationNameController.initialControllerType()
         
         let container = STRouter.scrollContainer(vc)
         vc?.handlerUpdateScroll = {

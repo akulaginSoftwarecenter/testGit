@@ -17,7 +17,7 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     ///
     /// - Parameter item: объект с данными пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
-        let vc = RNSRegistrationCodeController.controller as? RNSRegistrationCodeController
+        let vc = RNSRegistrationCodeController.controllerType()
         
         let container = STRouter.scrollContainer(vc)
         vc?.handlerUpdateScroll = {

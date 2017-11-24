@@ -21,7 +21,7 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollVi
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     static func initController(_ container: UIViewController?, isNeedAddTap: Bool = true) -> RNSScrollKeyBoardContainer? {
-        let vc = RNSScrollKeyBoardContainer.initialController as? RNSScrollKeyBoardContainer
+        let vc = RNSScrollKeyBoardContainer.initialControllerType()
         vc?.containerVC = container
         vc?.isNeedAddTap = isNeedAddTap
         return vc

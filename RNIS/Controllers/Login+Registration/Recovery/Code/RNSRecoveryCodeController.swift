@@ -17,7 +17,7 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
     ///
     /// - Parameter item: данные пользователя
     static func initController(_ item: RNSUserPayload?) -> UIViewController? {
-        let vc = RNSRecoveryCodeController.controller as? RNSRecoveryCodeController
+        let vc = RNSRecoveryCodeController.controllerType()
         
         let container = STRouter.scrollContainer(vc)
         vc?.handlerUpdateScroll = {
