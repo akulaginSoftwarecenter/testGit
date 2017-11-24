@@ -3221,9 +3221,9 @@
 			isa = PBXGroup;
 			children = (
 				836E91B61F58F9F3007CCF5A /* Left */,
+				836E91A61F58F7BD007CCF5A /* RNSMenuViewController.swift */,
 				836E91A81F58F8C2007CCF5A /* RNSMenuViewController+Handlers.swift */,
 				836E91B71F58FC0E007CCF5A /* RNSMenuViewController.storyboard */,
-				836E91A61F58F7BD007CCF5A /* RNSMenuViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";

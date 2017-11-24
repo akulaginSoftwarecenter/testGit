@@ -42,8 +42,8 @@ class RNSMenuViewController: LGSideMenuController {
         
         baseNavigationController = STRouter.rootViewController
         super.rootViewController = baseNavigationController
-        baseNavigationController.view.frame = view.bounds
-        baseNavigationController.setNavigationBarHidden(true, animated: false)
+        //baseNavigationController.view.frame = view.bounds
+        //baseNavigationController.setNavigationBarHidden(true, animated: false)
     }
     
     override func leftViewWillLayoutSubviews(with size: CGSize) {
