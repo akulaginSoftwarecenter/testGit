@@ -10,6 +10,11 @@ import UIKit
 
 class BaseNavigationController: UINavigationController,UINavigationControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setNavigationBarHidden(true, animated: false)
+    }
+    
     var completion: EmptyBlock? = nil
     
     func push(_ viewController:UIViewController, animated: Bool = false,

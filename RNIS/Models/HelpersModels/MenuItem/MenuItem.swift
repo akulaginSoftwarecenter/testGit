@@ -10,19 +10,21 @@ import Foundation
 
 struct MenuItem {
     
-    var vc: UIViewController?
+    var vc: BaseNavigationController?
     var title: String?
     var image: UIImage?
     
-    init(_ title: String?, _ vc: UIViewController?, _ image: UIImage?) {
+    init(_ title: String?, _ rootViewController: UIViewController?, _ image: UIImage?) {
         self.title = title
-        self.vc = vc
+        if let rootViewController = rootViewController {
+            self.vc = BaseNavigationController(rootViewController: rootViewController)
+        }
         self.image = image
     }
     
     func show() {
         updateIfNeed()
-        RNSMenuManager.showVC(vc)
+        RNSMenuManager.showItem(self)
     }
     
     func updateIfNeed() {

@@ -14,16 +14,16 @@ extension STRouter {
         RNSMenuViewController.initialController?.pushAnimated()
     }
 
-
     static func showLogin() {
         showLogin(animated: true)
     }
 
     static func showAfterLogout(animated: Bool) {
-        guard let mapController = RNSMenuManager.shared.mapVC, let loginController = imageBoardContainer(RNSLoginViewController.controller) else {
+        guard let vc = imageBoardContainer(RNSLoginViewController.controller) else {
             return
         }
-        STRouter.rootViewController.setViewControllers([mapController, loginController], animated: animated)
+        RNSMenuManager.itemMap.vc?.push(vc)
+        RNSMenuManager.showMap()
     }
 
     static func showLogin(animated: Bool) {

@@ -34,7 +34,7 @@ class RNSMenuManager: NSObject {
     }
     
     /// Создание пунктов меню
-    lazy var menuItems = [MenuItem("Карта", mapVC, #imageLiteral(resourceName: "menuMapIcon")),
+    lazy var menuItems = [itemMap,
                      MenuItem(favoriteTitle, TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
                      MenuItem(notificationTitle, NotificationsViewController.initialRed, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem(kNews, NewsViewController.initialRed, #imageLiteral(resourceName: "menuNewspaperIcon")),
@@ -48,6 +48,22 @@ class RNSMenuManager: NSObject {
         return STRouter.imageScrollContainer(RNSProfileViewController.initialController)
     }()
     
+    lazy var itemMap: MenuItem = {
+        return MenuItem("Карта", self.mapVC, #imageLiteral(resourceName: "menuMapIcon"))
+    }()
+    
+    static var itemMap: MenuItem {
+        return shared.itemMap
+    }
+    
+    lazy var itemProfile: MenuItem = {
+        return MenuItem(nil, self.profileVC, nil)
+    }()
+    
+    static var itemProfile: MenuItem {
+        return shared.itemProfile
+    }
+    
     /// Создание "слабого" экзамплеряа контроллера карты
     lazy var mapVC: UIViewController? = {
         return RNSMapViewController.controller
@@ -58,7 +74,7 @@ class RNSMenuManager: NSObject {
     /// Блок убирания бокового меню
     static var handlerHideLeftMenu: ((Bool) -> Void)?
     /// Блок выбранного контроллера меню
-    static var handlerShowVC: ((UIViewController?) -> ())?
+    static var handlerShowItem: ((MenuItem?) -> ())?
     
     /// Функция отображения бокового меню
     static func showLeftMenu() {
@@ -71,23 +87,23 @@ class RNSMenuManager: NSObject {
     }
     
     /// Функция отображения выбранного контроллера меню
-    static func showVC(_ vc: UIViewController?) {
-        handlerShowVC?(vc)
+    static func showItem(_ item: MenuItem?) {
+        handlerShowItem?(item)
     }
     
     /// Функция показа первого пункта меню
     static func showFirst() {
-        showVC(menuItems.first?.vc)
+        showItem(menuItems.first)
     }
     
     /// Фукнция показа профиля пользователя
     static func showProfile() {
-        showVC(shared.profileVC)
+        showItem(shared.itemProfile)
     }
     
     /// Функция показа карты
     static func showMap() {
-        showVC(shared.mapVC)
+        showItem(itemMap)
     }
     
     /// Фукнция обновления бокового меню

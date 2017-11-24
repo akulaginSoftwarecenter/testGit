@@ -20,8 +20,8 @@ extension RNSMenuViewController {
             self?.showLeftView(animated: true)
         }
         
-        RNSMenuManager.handlerShowVC = { [weak self] (vc) in
-            self?.showVC(vc)
+        RNSMenuManager.handlerShowItem = { [weak self] item in
+            self?.showItem(item)
         }
     }
 }

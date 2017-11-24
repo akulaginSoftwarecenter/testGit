@@ -21,7 +21,9 @@ class RNSMenuViewController: LGSideMenuController {
     }
 
     /// Контроллер навигации
-    var baseNavigationController: BaseNavigationController!
+    var root: BaseNavigationController? {
+        return rootViewController as? BaseNavigationController
+    }
     
     override func awakeFromNib(){
         super.awakeFromNib()
@@ -39,11 +41,6 @@ class RNSMenuViewController: LGSideMenuController {
         leftViewPresentationStyle = .slideBelow
         leftViewAlwaysVisibleOptions = LGSideMenuAlwaysVisibleOptions()
         isLeftViewSwipeGestureEnabled = true
-        
-        baseNavigationController = STRouter.rootViewController
-        super.rootViewController = baseNavigationController
-        //baseNavigationController.view.frame = view.bounds
-        //baseNavigationController.setNavigationBarHidden(true, animated: false)
     }
     
     override func leftViewWillLayoutSubviews(with size: CGSize) {
@@ -55,14 +52,14 @@ class RNSMenuViewController: LGSideMenuController {
     /// Показать контроллер
     ///
     /// - Parameter vc: контроллер
-    func showVC(_ vc: UIViewController?) {
-        guard let vc = vc else {
+    func showItem(_ item: MenuItem?) {
+        guard let item = item,
+            let vc = item.vc else {
             return
         }
-        if baseNavigationController.viewControllers.first != vc {
-            baseNavigationController.setViewControllers([vc], animated: true)
-        } else {
-            baseNavigationController.popToRootViewController(animated: true)
+        if root != vc {
+            super.rootViewController = vc
+            STRouter.rootViewController = vc
         }
         hideLeftView(animated: true)
     }
