@@ -42,5 +42,14 @@ struct MenuItem {
         if title == notificationTitle {
             RNSMenuManager.handlerUpdateNotification?()
         }
+        updateIfExitsMoveMap()
+    }
+    
+    func updateIfExitsMoveMap() {
+        vc?.viewControllers.forEach{
+            if let map = $0 as? RNSMoveMapViewController {
+                map.prepareMapView()
+            }
+        }
     }
 }

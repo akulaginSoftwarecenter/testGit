@@ -24,7 +24,7 @@ class RNSMoveMapViewController: UIViewController {
     ///
     /// - Parameter item: объект с информацией о маршруте
     static func initController(_ item: RNSRouteVariant?) -> RNSMoveMapViewController? {
-        let vc = RNSMoveMapViewController.controller as? RNSMoveMapViewController
+        let vc = RNSMoveMapViewController.controllerType()
         vc?.item = item
         return vc
     }

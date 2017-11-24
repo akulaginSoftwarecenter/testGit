@@ -30,6 +30,7 @@ class RNSPageRouteManager: NSObject {
         }
     }
     
+    static var currentItemFavorite: RNSRouteVariant?
     /// Создание экземпляра текущей точки маршрута
     static var currentItem: RNSRouteVariant?
     

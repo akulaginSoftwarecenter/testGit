@@ -38,6 +38,7 @@ extension RNSTransportTableView: UITableViewDelegate, UITableViewDataSource {
     /// Действие при выборе ячейки таблицы
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = self.item(indexPath)
+        RNSPageRouteManager.currentItemFavorite = item
         RNSMoveMapViewController.initController(item)?.pushAnimated()
     }
 }

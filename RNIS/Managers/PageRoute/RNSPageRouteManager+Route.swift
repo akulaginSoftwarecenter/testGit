@@ -19,6 +19,7 @@ extension RNSPageRouteManager {
     
     /// Функция удаления всех маршрутов с карты
     static func removeAllRoute() {
+        currentItemFavorite?.removeAllRoad()
         items?.forEach{$0.removeAllRoad()}
     }
     
