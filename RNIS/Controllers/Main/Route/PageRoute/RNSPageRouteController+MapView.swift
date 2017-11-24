@@ -38,6 +38,10 @@ extension RNSPageRouteController {
         containerController?.handlerOnMapTouchEvent = {[weak self] point in
             self?.onMapTouchEvent(point)
         }
+        
+        containerController?.handlerOnOverlay = {[weak self] point,item in
+            self?.onOverlay(point, item: item)
+        }
     }
     
     /// Обработка нажатия на карту
@@ -50,5 +54,9 @@ extension RNSPageRouteController {
     /// Обработка обновления карты
     func onMapEvent() {
         RNSPageRouteManager.activeRoadReload()
+    }
+    
+    func onOverlay(_ overlay: PGOverlay!, item: PGOverlayItem!) {
+        RNSMapManager.mapCenter(item.geoPoint)
     }
 }
