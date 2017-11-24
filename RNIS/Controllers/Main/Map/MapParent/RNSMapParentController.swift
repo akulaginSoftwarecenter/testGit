@@ -119,8 +119,4 @@ class RNSMapParentController: UIViewController {
             self?.updateLoader()
         }
     }
-    
-    deinit {
-       // print("RNSMapParentController deinit")
-    }
 }

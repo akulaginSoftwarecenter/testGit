@@ -62,8 +62,4 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
         datePicker.minimumDate = Date()
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
-    
-    deinit {
-        print("RNSDateSelectViewController deinit")
-    }
 }

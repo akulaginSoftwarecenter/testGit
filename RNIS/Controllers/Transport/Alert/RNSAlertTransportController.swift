@@ -62,9 +62,4 @@ class RNSAlertTransportController: UIAlertController {
         alert.addAction(UIAlertAction(title: "Отмена", style: .cancel))
         STRouter.present(alert)
     }
-
-    
-    deinit {
-        print("RNSAlertTransportController deinit")
-    }
 }

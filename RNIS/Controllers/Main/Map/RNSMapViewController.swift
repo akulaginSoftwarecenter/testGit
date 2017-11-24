@@ -110,9 +110,5 @@ class RNSMapViewController: UIViewController {
     override class var storyboardName: String {
         return "RNSMapParentController"
     }
-
-    deinit {
-        print("RNSMapViewController deinit")
-    }
 }
 

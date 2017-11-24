@@ -99,10 +99,6 @@ class RNSBusDetailController: RNSParentDetailPinController {
         viewWay.item = item
     }
     
-    deinit {
-        print("RNSBusDetailController deinit")
-    }
-    
     override func prepareCurrent(_ value: Bool) {
         RNSBusManager.prepareCurrentItem(value, item: itemBus)
     }

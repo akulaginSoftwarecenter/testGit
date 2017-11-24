@@ -99,8 +99,4 @@ class RNSLightButton: BaseViewWithXIBInit {
         setImage(#imageLiteral(resourceName: "svetofor_deselect"))
         label.isHidden = true;
     }
-    
-    deinit {
-        print("RNSLightButton deinit")
-    }
 }
