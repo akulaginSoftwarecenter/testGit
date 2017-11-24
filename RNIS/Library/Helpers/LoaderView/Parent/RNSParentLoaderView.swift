@@ -25,6 +25,12 @@ class RNSParentLoaderView: BaseViewWithXIBInit {
         animationShow()
     }
     
+    func showInView(_ view: UIView?, belowSubview: UIView? = nil) {
+        insertShowInView(view, belowSubview: belowSubview)
+        self.autoPinEdgesToSuperviewEdges()
+        animationShow()
+    }
+    
     func showInView(_ view: UIView?, frame: CGRect) {
         addShowInView(view)
         self.frame = frame
@@ -37,6 +43,15 @@ class RNSParentLoaderView: BaseViewWithXIBInit {
                 return
         }
         view.addSubview(self)
+    }
+    
+    func insertShowInView(_ view: UIView?, belowSubview: UIView? = nil) {
+        guard isEmptySuperView,
+            let view = view,
+            let belowSubview = belowSubview else {
+                return
+        }
+        view.insertSubview(self, belowSubview: belowSubview)
     }
     
     func animationShow() {

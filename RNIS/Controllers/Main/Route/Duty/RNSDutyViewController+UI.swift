@@ -55,11 +55,11 @@ extension RNSDutyViewController {
     
     /// Показать индикатор загрузки
     func showLoader() {
-        loaderView.showInView(self.view)
+        loaderView.showInView(view, belowSubview: backButton)
     }
     
     /// Убрать индикатор загрузки
     func removeLoader() {
-        loaderView.remove()
+        //loaderView.remove()
     }
 }
