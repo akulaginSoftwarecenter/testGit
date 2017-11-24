@@ -27,7 +27,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     
     func prepareAddressContainers(_ text: String?) {
         prepareAddress(text)
-        endEdit()
+        prepareTableView()
     }
     
     /// Получение текущего текста из текстового поля
