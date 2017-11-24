@@ -60,6 +60,6 @@ extension RNSDutyViewController {
     
     /// Убрать индикатор загрузки
     func removeLoader() {
-        //loaderView.remove()
+        loaderView.remove()
     }
 }
