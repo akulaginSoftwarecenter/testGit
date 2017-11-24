@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wUs-3r-StT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wUs-3r-StT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -58,7 +58,7 @@
                             <constraint firstItem="m8m-pf-kL8" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" constant="30" id="PWd-sv-WtN"/>
                             <constraint firstItem="m8m-pf-kL8" firstAttribute="centerY" secondItem="HrX-gk-F32" secondAttribute="centerY" constant="-30" id="Pwu-2d-Rl3"/>
                             <constraint firstItem="NkV-q8-iDK" firstAttribute="top" secondItem="m8m-pf-kL8" secondAttribute="bottom" constant="20" id="Shl-dy-sLc"/>
-                            <constraint firstItem="0DG-iq-4zY" firstAttribute="top" secondItem="Tzw-1V-wXu" secondAttribute="bottom" constant="3" id="VNf-Kx-iMW"/>
+                            <constraint firstAttribute="bottom" secondItem="Tzw-1V-wXu" secondAttribute="bottom" constant="3" id="TBa-X2-4F5"/>
                             <constraint firstItem="Tzw-1V-wXu" firstAttribute="leading" secondItem="HrX-gk-F32" secondAttribute="leading" id="ftF-5S-60o"/>
                             <constraint firstAttribute="trailing" secondItem="m8m-pf-kL8" secondAttribute="trailing" constant="30" id="tmx-9T-856"/>
                             <constraint firstAttribute="trailing" secondItem="Tzw-1V-wXu" secondAttribute="trailing" id="w58-7Q-QSw"/>

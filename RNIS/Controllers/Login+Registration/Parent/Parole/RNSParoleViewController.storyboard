@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -101,7 +101,6 @@
                             <constraint firstAttribute="trailing" secondItem="KZc-u5-fLb" secondAttribute="trailing" constant="30" id="G2K-uX-rge"/>
                             <constraint firstItem="fz9-tX-ATO" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="30" id="HnB-8k-qFS"/>
                             <constraint firstAttribute="trailing" secondItem="3IS-6A-dlY" secondAttribute="trailing" constant="15" id="I2c-53-9Ey"/>
-                            <constraint firstItem="KZc-u5-fLb" firstAttribute="centerY" secondItem="x6v-Ho-dlG" secondAttribute="centerY" constant="-30" id="JsA-Fz-QCU"/>
                             <constraint firstAttribute="trailing" secondItem="DvI-Er-Lhb" secondAttribute="trailing" constant="15" id="MxW-gg-j9K"/>
                             <constraint firstItem="JxW-ww-gyf" firstAttribute="top" secondItem="fz9-tX-ATO" secondAttribute="bottom" constant="10" id="Pzh-q9-xx0"/>
                             <constraint firstAttribute="trailing" secondItem="fz9-tX-ATO" secondAttribute="trailing" constant="30" id="QnK-gF-xws"/>
@@ -112,18 +111,11 @@
                             <constraint firstItem="Jbg-YR-z5S" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" id="m5B-2h-hco"/>
                             <constraint firstItem="DvI-Er-Lhb" firstAttribute="leading" secondItem="x6v-Ho-dlG" secondAttribute="leading" constant="15" id="n7t-Si-VwP"/>
                             <constraint firstAttribute="bottom" secondItem="Jbg-YR-z5S" secondAttribute="bottom" constant="3" id="nZr-bh-ShV"/>
-                            <constraint firstItem="tap-f8-YX6" firstAttribute="top" secondItem="Jbg-YR-z5S" secondAttribute="bottom" constant="3" id="uXc-6B-OMU"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Забыли пароль"/>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Сохранить"/>
                         </userDefinedRuntimeAttributes>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JsA-Fz-QCU"/>
-                                <exclude reference="uXc-6B-OMU"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="AO9-ei-mOZ"/>
                     <nil key="simulatedStatusBarMetrics"/>

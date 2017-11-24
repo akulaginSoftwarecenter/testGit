@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="adi-2r-abR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="adi-2r-abR">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,14 +72,13 @@
                             <constraint firstItem="pZT-vJ-bGu" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" id="QcJ-1C-31K"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="M54-Z0-rE4" secondAttribute="bottom" constant="138" id="S4E-Ti-7nZ"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uA1-nt-8CO" secondAttribute="trailing" constant="89" id="TYm-5m-6HZ"/>
-                            <constraint firstItem="uA1-nt-8CO" firstAttribute="centerX" secondItem="3SO-Er-NRQ" secondAttribute="centerX" id="WLV-DA-Izx"/>
                             <constraint firstItem="M54-Z0-rE4" firstAttribute="top" secondItem="bzV-rA-o14" secondAttribute="bottom" constant="10" id="Ynt-VU-Rtr"/>
                             <constraint firstItem="M54-Z0-rE4" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="30" id="ct8-YA-hRF"/>
                             <constraint firstItem="uA1-nt-8CO" firstAttribute="centerX" secondItem="3SO-Er-NRQ" secondAttribute="centerX" id="dfS-uH-hFd"/>
                             <constraint firstItem="bzV-rA-o14" firstAttribute="leading" secondItem="3SO-Er-NRQ" secondAttribute="leading" constant="30" id="e98-HF-YLa"/>
                             <constraint firstItem="bzV-rA-o14" firstAttribute="bottom" secondItem="uA1-nt-8CO" secondAttribute="bottom" constant="87" id="fGg-h6-FdF"/>
-                            <constraint firstItem="Hla-E5-RO9" firstAttribute="top" secondItem="pZT-vJ-bGu" secondAttribute="bottom" constant="3" id="tBx-60-Yjw"/>
                             <constraint firstAttribute="trailing" secondItem="bzV-rA-o14" secondAttribute="trailing" constant="30" id="xUG-IE-kZd"/>
+                            <constraint firstAttribute="bottom" secondItem="pZT-vJ-bGu" secondAttribute="bottom" constant="3" id="yBB-J7-lqO"/>
                             <constraint firstAttribute="trailing" secondItem="M54-Z0-rE4" secondAttribute="trailing" constant="30" id="zyq-TN-0jX"/>
                             <constraint firstItem="uA1-nt-8CO" firstAttribute="top" secondItem="ANv-lg-wyQ" secondAttribute="bottom" constant="182" id="zzs-gf-UEL"/>
                         </constraints>
@@ -87,11 +86,6 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Регистрация"/>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Далее"/>
                         </userDefinedRuntimeAttributes>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="WLV-DA-Izx"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="RYH-LT-S7u"/>
                     <nil key="simulatedStatusBarMetrics"/>

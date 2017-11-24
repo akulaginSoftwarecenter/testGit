@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5BO-cQ-P5L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5BO-cQ-P5L">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -120,16 +120,24 @@
                             <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="yKu-xF-If7" secondAttribute="bottom" constant="3" id="a51-C8-BrW"/>
                             <constraint firstItem="RMr-V4-Wpw" firstAttribute="centerY" secondItem="sNt-JM-pvk" secondAttribute="centerY" constant="-30" id="ay2-gV-wGQ"/>
                             <constraint firstItem="avp-B5-VH2" firstAttribute="top" secondItem="ReY-FI-gw3" secondAttribute="bottom" constant="3" id="nZp-ia-beg"/>
+                            <constraint firstAttribute="bottom" secondItem="ReY-FI-gw3" secondAttribute="bottom" constant="3" id="qn2-IG-ybv"/>
                             <constraint firstItem="RQF-AL-UOy" firstAttribute="leading" secondItem="sNt-JM-pvk" secondAttribute="leading" constant="30" id="t7x-Ge-dsy"/>
                             <constraint firstAttribute="trailing" secondItem="yKu-xF-If7" secondAttribute="trailing" constant="30" id="xaX-g2-Sho"/>
                             <constraint firstAttribute="centerX" secondItem="RQF-AL-UOy" secondAttribute="trailing" constant="5" id="xkk-vX-Z5w"/>
                             <constraint firstItem="pz7-OO-cHU" firstAttribute="top" secondItem="LIe-zO-afW" secondAttribute="bottom" constant="20" id="yKc-ca-g2J"/>
+                            <constraint firstAttribute="bottom" secondItem="yKu-xF-If7" secondAttribute="bottom" constant="3" id="zl3-OQ-bGg"/>
                             <constraint firstAttribute="bottom" secondItem="Gbj-QZ-2tZ" secondAttribute="bottom" constant="65" id="zpJ-Hn-Jw0"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Авторизация"/>
                             <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Войти"/>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a51-C8-BrW"/>
+                                <exclude reference="nZp-ia-beg"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="TXH-zU-9mB"/>
                     <nil key="simulatedStatusBarMetrics"/>
