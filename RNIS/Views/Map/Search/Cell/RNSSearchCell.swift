@@ -13,6 +13,7 @@ class RNSSearchCell: RNSBaseTableCell {
     @IBOutlet weak var imageBus: UIImageView!
     @IBOutlet weak var constraintLabel: NSLayoutConstraint!
     @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     
     var item: RNSTextItem? {
         didSet {
@@ -22,12 +23,11 @@ class RNSSearchCell: RNSBaseTableCell {
     }
     
     func prepareItem() {
-        var text = item?.name
         if let item = item as? RNSBusStopTemp,
             let nameDistance = item.nameDistance {
-            text = nameDistance
+            distanceLabel.text = nameDistance
         }
-        labelText.text = text
+        labelText.text = item?.name
     }
     
     func prepareBisibleBus() {

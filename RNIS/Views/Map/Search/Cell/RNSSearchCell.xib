@@ -26,8 +26,14 @@
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus01" translatesAutoresizingMaskIntoConstraints="NO" id="UkM-fa-PJo">
                         <rect key="frame" x="0.0" y="15" width="33" height="29"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-vd-o0n">
-                        <rect key="frame" x="48" y="4" width="282" height="51"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-vd-o0n">
+                        <rect key="frame" x="0.0" y="4" width="324" height="51"/>
+                        <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VGB-SJ-IKH">
+                        <rect key="frame" x="329" y="0.0" width="0.0" height="58.5"/>
                         <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -36,22 +42,27 @@
                 <constraints>
                     <constraint firstItem="UkM-fa-PJo" firstAttribute="leading" secondItem="MEu-AX-60F" secondAttribute="leading" id="1hT-iA-hBD"/>
                     <constraint firstItem="c4g-vd-o0n" firstAttribute="leading" secondItem="MEu-AX-60F" secondAttribute="leading" id="AaY-tz-hFx"/>
+                    <constraint firstItem="VGB-SJ-IKH" firstAttribute="leading" secondItem="c4g-vd-o0n" secondAttribute="trailing" constant="5" id="BaV-Nd-9kf"/>
                     <constraint firstAttribute="trailing" secondItem="c4g-vd-o0n" secondAttribute="trailing" constant="15" id="NA1-ww-Tc6"/>
                     <constraint firstItem="c4g-vd-o0n" firstAttribute="leading" secondItem="UkM-fa-PJo" secondAttribute="trailing" priority="750" constant="15" id="OCg-Eh-YrX"/>
                     <constraint firstItem="c4g-vd-o0n" firstAttribute="centerY" secondItem="MEu-AX-60F" secondAttribute="centerY" id="RDR-Yo-ajc"/>
+                    <constraint firstAttribute="trailing" secondItem="VGB-SJ-IKH" secondAttribute="trailing" constant="16" id="XB2-Pb-Ftg"/>
                     <constraint firstItem="c4g-vd-o0n" firstAttribute="top" secondItem="MEu-AX-60F" secondAttribute="top" constant="4" id="aKS-5q-UIU"/>
+                    <constraint firstItem="VGB-SJ-IKH" firstAttribute="top" secondItem="MEu-AX-60F" secondAttribute="top" id="dow-EF-5Ip"/>
                     <constraint firstAttribute="bottom" secondItem="c4g-vd-o0n" secondAttribute="bottom" constant="4" id="htg-YW-gLo"/>
+                    <constraint firstAttribute="bottom" secondItem="VGB-SJ-IKH" secondAttribute="bottom" id="m8x-Rt-Akd"/>
                     <constraint firstItem="UkM-fa-PJo" firstAttribute="centerY" secondItem="MEu-AX-60F" secondAttribute="centerY" id="sLK-Qm-ugd"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="AaY-tz-hFx"/>
+                        <exclude reference="NA1-ww-Tc6"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="constraintLabel" destination="AaY-tz-hFx" id="BZ2-hD-krX"/>
+                <outlet property="distanceLabel" destination="VGB-SJ-IKH" id="mE5-Lv-W83"/>
                 <outlet property="imageBus" destination="UkM-fa-PJo" id="2ud-0M-IZa"/>
                 <outlet property="labelText" destination="c4g-vd-o0n" id="3Tq-ng-uDS"/>
             </connections>

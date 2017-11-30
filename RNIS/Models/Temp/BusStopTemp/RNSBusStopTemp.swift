@@ -20,7 +20,7 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
         super.mapping(map: map)
         
         self.point = PGGeoPoint(latitude: latitude ?? 0, longitude: longitude ?? 0)
-        self.nameDistance = (name ?? "") + " (" + (self.point?.distanceToCurrent.toString ?? "") + ")"
+        self.nameDistance = self.point?.distanceToCurrent.toString
     }
     
     var point: PGGeoPoint?
