@@ -43,6 +43,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     func startEdit() {
         containerTables.isHidden = false
         prepareTableView()
+        rightTextFildConstraint.constant = 0
         buttonMyLocation.isHidden = true
     }
     
@@ -50,6 +51,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     func endEdit() {
         containerTables.isHidden = true
         textField.endEditing(true)
+        rightTextFildConstraint.constant = 40
         buttonMyLocation.isHidden = false
     }
     

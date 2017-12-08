@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -202,6 +202,7 @@
                         <outlet property="bottomTableView" destination="V38-0p-3J0" id="bHB-1M-7OJ"/>
                         <outlet property="buttonMyLocation" destination="DKD-dZ-eIH" id="fgk-e9-1EJ"/>
                         <outlet property="containerTables" destination="rIs-Dd-oBy" id="Weo-tb-eIU"/>
+                        <outlet property="rightTextFildConstraint" destination="Ltv-aH-Qig" id="v3n-EJ-75o"/>
                         <outlet property="textField" destination="4fj-X8-s17" id="vEj-St-tfk"/>
                         <outlet property="titleLabel" destination="hpJ-na-jw6" id="qTV-EZ-EjE"/>
                     </connections>

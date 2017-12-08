@@ -60,6 +60,9 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     
     /// Кнопка "показать меня на карте"
     @IBOutlet weak var buttonMyLocation: UIButton!
+    
+    @IBOutlet weak var rightTextFildConstraint: NSLayoutConstraint!
+    
     /// Поле ввода адреса
     @IBOutlet weak var textField: UITextField!
     /// Заголовок контроллера
