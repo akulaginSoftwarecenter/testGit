@@ -16,6 +16,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     /// Заполнение текстового поля сохраненным адресом
     func prepareTextField() {
         textField.text = item?.address
+        endEdit()
     }
     
     /// Настройка текста поля
@@ -24,7 +25,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     func prepareAddress(_ text: String?) {
         textField.text = text
     }
-    
+     
     func prepareAddressContainers(_ text: String?) {
         prepareAddress(text)
         prepareTableView()
@@ -75,6 +76,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     }
     
     @IBAction func textFieldEditingChanged(_ sender: Any) {
+        removePin()
         prepareTableView()
     }
 }

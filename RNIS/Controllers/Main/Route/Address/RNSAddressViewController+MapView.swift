@@ -39,13 +39,25 @@ extension RNSAddressViewController {
     /// Удаление пина с карты
     func removePin() {
         pin?.remove()
+        pin = nil
     }
     
     /// Добавление пина на карту в указанные координаты
     ///
     /// - Parameter point: координаты
-    func addPin(_ point: PGGeoPoint) {
+    func addPin(_ point: PGGeoPoint?) {
         removePin()
-        pin = RNSPinAddress(point)
+        if let point = point  {
+            pin = RNSPinAddress(point)
+        }
+    }
+    
+    func mapCenter(_ point: PGGeoPoint?) {
+        RNSMapManager.mapCenter(point)
+    }
+    
+    func addPinMapCenter(_ point: PGGeoPoint?) {
+        addPin(point)
+        mapCenter(point)
     }
 }

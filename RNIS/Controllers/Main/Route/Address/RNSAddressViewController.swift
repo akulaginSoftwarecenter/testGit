@@ -109,7 +109,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         }
         
         view.handlerShowItem = {[weak self] value in
-            self?.prepareAddressContainers(value?.name)
+            self?.prepareItemContainers(value as? RNSAddressTemp)
         }
         return view
     }()
@@ -119,6 +119,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         
         prepareTextField()
         prepareType()
+        prepareItem()
     }
     
     override class var storyboardName: String {

@@ -30,17 +30,6 @@ extension RNSAddressViewController {
         }
     }
     
-    /// Настройка переменной, содержащей данные о расположении
-    func updateItem() {
-        if item == nil {
-            item = RNSDutyAddressTemp()
-        }
-        item?.address = text
-        let point = pin?.overlayItem.geoPoint
-        item?.latitude = point?.latitude
-        item?.longitude = point?.longitude
-    }
-    
     /// Настройка заголовка контроллера
     func prepareType() {
         let type = self.type ?? .fromAddress
