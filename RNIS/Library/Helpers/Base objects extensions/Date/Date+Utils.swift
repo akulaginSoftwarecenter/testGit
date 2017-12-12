@@ -22,6 +22,10 @@ extension Date {
        return dateByAddingUnit(.minute, value: value ?? 0)
     }
     
+    func appendDay(_ value: Int?) -> Date? {
+        return dateByAddingUnit(.day, value: value ?? 0)
+    }
+    
     var stringDDMMyyyy_HHmm: String {
         return DateFormatter.DDMMyyyy_HHmm.string(from: self)
     }

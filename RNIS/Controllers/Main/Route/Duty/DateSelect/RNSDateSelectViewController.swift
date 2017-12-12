@@ -60,7 +60,9 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
     
     /// Настройка представления для выбора даты
     func prepareDatePicker() {
-        datePicker.minimumDate = Date()
+        let today = Date()
+        datePicker.minimumDate = today
+        datePicker.maximumDate = today.appendDay(3)
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         if let startDate = startDate {
              datePicker.date = startDate
