@@ -40,6 +40,7 @@ extension RNSLeftMenuController {
     ///
     /// - Parameter item: данные профиля пользователя
     func updateUI(_ item: RNSUserPayload?) {
+        prepareInfoMail(item?.email)
         prepareName(item?.name)
         preparePhone(item?.formatPhone)
         item?.loadImage { [weak self] image in
@@ -52,6 +53,7 @@ extension RNSLeftMenuController {
         prepareName(nil)
         preparePhone(nil)
         prepareImageProfile(nil)
+        prepareInfoMail(nil)
     }
     
     func prepareName(_ text: String?) {
@@ -64,5 +66,9 @@ extension RNSLeftMenuController {
     
     func prepareImageProfile(_ image: UIImage?) {
         profileImageView.image = image ?? #imageLiteral(resourceName: "avatarPlaceholderImage")
+    }
+    
+    func prepareInfoMail(_ mail: String?) {
+        RNSInfoManager.email = mail
     }
 }

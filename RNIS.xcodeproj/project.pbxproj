@@ -35,7 +35,6 @@
 		8310D4551F3C72D6000CCD0A /* RNSCircleHole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D4541F3C72D6000CCD0A /* RNSCircleHole.swift */; };
 		8310D4581F3C7483000CCD0A /* RNSCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310D4571F3C7483000CCD0A /* RNSCircle.swift */; };
 		8310F13A1F7BA7C500D5C565 /* NotificationsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310F1391F7BA7C500D5C565 /* NotificationsViewController+TableView.swift */; };
-		831184AB1F7E136700B999DA /* SupportInfoViewController+LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831184AA1F7E136700B999DA /* SupportInfoViewController+LoadData.swift */; };
 		831184AD1F7E138700B999DA /* SupportInfoViewController+Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831184AC1F7E138700B999DA /* SupportInfoViewController+Send.swift */; };
 		831381671F5E782A00A85CBD /* RNSBusTableModel+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831381661F5E782A00A85CBD /* RNSBusTableModel+Items.swift */; };
 		831381691F5E789700A85CBD /* RNSBusTableItem+Still.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */; };
@@ -713,7 +712,6 @@
 		8310D4541F3C72D6000CCD0A /* RNSCircleHole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSCircleHole.swift; sourceTree = "<group>"; };
 		8310D4571F3C7483000CCD0A /* RNSCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSCircle.swift; sourceTree = "<group>"; };
 		8310F1391F7BA7C500D5C565 /* NotificationsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationsViewController+TableView.swift"; sourceTree = "<group>"; };
-		831184AA1F7E136700B999DA /* SupportInfoViewController+LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupportInfoViewController+LoadData.swift"; sourceTree = "<group>"; };
 		831184AC1F7E138700B999DA /* SupportInfoViewController+Send.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupportInfoViewController+Send.swift"; sourceTree = "<group>"; };
 		831381661F5E782A00A85CBD /* RNSBusTableModel+Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSBusTableModel+Items.swift"; sourceTree = "<group>"; };
 		831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSBusTableItem+Still.swift"; sourceTree = "<group>"; };
@@ -4279,7 +4277,6 @@
 			children = (
 				832280351FBD5C99001AB60F /* Item */,
 				83AA6A5A1F5668C000B2139C /* SupportInfoViewController.swift */,
-				831184AA1F7E136700B999DA /* SupportInfoViewController+LoadData.swift */,
 				831184AC1F7E138700B999DA /* SupportInfoViewController+Send.swift */,
 				8390DFD11F663DFE003C3505 /* SupportInfoViewController+UI.swift */,
 				8390DFCD1F663481003C3505 /* SupportInfoViewController.storyboard */,
@@ -5427,7 +5424,6 @@
 				8393AB6A1F8B216B004D754B /* RNSRouteTableItem+Var.swift in Sources */,
 				83ED5E2A1F270383007D9F1C /* RNSMapManager+OverLays.swift in Sources */,
 				836E693C1F5E49E6003D9D46 /* RNSBusTemp+Random.swift in Sources */,
-				831184AB1F7E136700B999DA /* SupportInfoViewController+LoadData.swift in Sources */,
 				8336097A1F7378BF00B42333 /* RNSMovePopupController+Observe.swift in Sources */,
 				836E91B11F58F987007CCF5A /* MenuTableViewCell.swift in Sources */,
 				835718861F21A73C00DE5E25 /* RNSRequestReply.swift in Sources */,

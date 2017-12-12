@@ -17,6 +17,7 @@ class RNSInfoManager: NSObject, MFMailComposeViewControllerDelegate {
     
     var composeVC: MFMailComposeViewController?
     
+    static var email: String?
     /// Создание экземпляра почтового сообщения
     func send(_ item: RNSContactItem) {
         

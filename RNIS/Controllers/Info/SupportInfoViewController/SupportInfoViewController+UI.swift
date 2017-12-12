@@ -9,19 +9,9 @@
 import Foundation
 
 extension SupportInfoViewController {
-    /*
-    public func textViewDidChange(_ textView: UITextView) {
-        updateHeightTextView()
-    }
-    
-    func updateHeightTextView() {
-        UIView.animateConstrains(self.view) {
-            let size = self.textView.sizeThatFits(CGSize(width: self.textView.bounds.width, height: CGFloat.greatestFiniteMagnitude))
-            self.textViewHeightConstraint.constant = size.height
-        }
-    }
-    */
+
     func prepareUI() {
+        contactField.text = RNSInfoManager.email
         topTitle.text = type.rawValue
         
         blackButton.handlerAction = { [weak self] in

@@ -61,7 +61,6 @@ class SupportInfoViewController: UIViewController {
         super.viewDidLoad()
         
         prepareUI()
-        loadData()
         showNameSupportView()
     }
     
