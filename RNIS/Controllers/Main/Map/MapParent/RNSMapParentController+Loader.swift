@@ -30,6 +30,7 @@ extension RNSMapParentController {
     }
     
     func updateLoader() {
+        /*
         if RNSBusStopManager.showLoader {
             showLoader("Обновление остановок...")
             return
@@ -38,6 +39,7 @@ extension RNSMapParentController {
             showLoader("Обновление автобусов...")
             return
         }
+         */
         removeLoader()
     }
 }
