@@ -40,6 +40,7 @@ extension RNSDutyViewController {
     /// Событие нажатия на кнопку установки даты и времени
     @IBAction func dateAction(_ sender: Any) {
         let vc = RNSDateSelectViewController.initialControllerType()
+        vc?.startDate = currentDate
         vc?.transitioningDelegate = CustomTransitionDelegate.shared
         vc?.handlerDate = { [weak self] date in
             self?.prepareDate(date)

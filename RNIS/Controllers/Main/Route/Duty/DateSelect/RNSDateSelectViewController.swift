@@ -18,6 +18,7 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
     
     /// Блок, который вызывается при выходе из контроллера
     var handlerDismiss: EmptyBlock?
+    var startDate: Date?
     
     /// Представление для выбора даты
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -61,5 +62,8 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
     func prepareDatePicker() {
         datePicker.minimumDate = Date()
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        if let startDate = startDate {
+             datePicker.date = startDate
+        }
     }
 }
