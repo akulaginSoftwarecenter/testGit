@@ -14,6 +14,10 @@ class RNSPostMobilePageGet: RNSRequest {
         return .post
     }
     
+    override var cashed: Bool {
+        return true
+    }
+    
     var complete: AliasComplete?
     var failure: AliasStringBlock?
     var type: RNSDocsType = .userGuide
@@ -28,6 +32,13 @@ class RNSPostMobilePageGet: RNSRequest {
         self.type = type
         self.complete = complete
         self.failure = failure
+        
+        if let cacheData = cacheData,
+            let model = AliasReply(reply: cacheData),
+            model.success ?? false {
+            complete?(model.payload)
+            return
+        }
         
         STRouter.showLoader()
         sendRequestWithCompletion {[weak self] (object, error, inot) in

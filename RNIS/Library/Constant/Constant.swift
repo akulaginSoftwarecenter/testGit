@@ -18,7 +18,7 @@ let mapHost3 = "http://95.181.199.195/"
 let serverAddress = ""
 //let serverRnisapi = "https://dev-rnisapi.regeora.ru/ajax/request"
 let serverRnisapi = "https://api.rnis.mosreg.ru/ajax/request"
-let showLogApi = false
+let showLogApi = true
 let showLogApiDetail = false
 
 

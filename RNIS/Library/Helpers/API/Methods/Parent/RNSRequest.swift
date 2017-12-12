@@ -55,4 +55,25 @@ class RNSRequest: AlamofireAPI {
     func showLoader() {
         STRouter.showLoader()
     }
+    
+    var cashed: Bool {
+        return false
+    }
+    
+    var cacheKey: String {
+        return subject + parameters.description
+    }
+    
+    var cacheData: AnyObject? {
+        return RNSCasheManager.object(cacheKey)
+    }
+    
+    override func sendRequestWithCompletion(completion: @escaping APICompletion) {
+        super.sendRequestWithCompletion { (object, error, inot) in
+            if self.cashed {
+                RNSCasheManager.setObject(object, key: self.cacheKey)
+            }
+            completion(object, error, &inot)
+        }
+    }
 }
