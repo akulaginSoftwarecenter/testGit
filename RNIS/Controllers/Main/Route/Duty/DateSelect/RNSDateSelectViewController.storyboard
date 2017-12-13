@@ -57,7 +57,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Принять"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="pAP-GK-fch">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pAP-GK-fch">
                                         <rect key="frame" x="0.0" y="64" width="375" height="237"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
