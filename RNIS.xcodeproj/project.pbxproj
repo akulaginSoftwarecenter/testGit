@@ -40,6 +40,7 @@
 		831381691F5E789700A85CBD /* RNSBusTableItem+Still.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */; };
 		8313816B1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313816A1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift */; };
 		831588981F6280C900CA485A /* RNSPostStopPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831588971F6280C900CA485A /* RNSPostStopPointList.swift */; };
+		83180A911FE115D0009CFFA8 /* RNSDocsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83180A901FE115D0009CFFA8 /* RNSDocsType.swift */; };
 		8318548D1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */; };
 		8318548F1F95D392004D0B23 /* RNSDurationItem+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */; };
 		831863A51F74D13D00579000 /* RNSBusStopManager+Uuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831863A41F74D13D00579000 /* RNSBusStopManager+Uuids.swift */; };
@@ -717,6 +718,7 @@
 		831381681F5E789700A85CBD /* RNSBusTableItem+Still.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSBusTableItem+Still.swift"; sourceTree = "<group>"; };
 		8313816A1F5E825E00A85CBD /* RNSBusDetailWayCell+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSBusDetailWayCell+Var.swift"; sourceTree = "<group>"; };
 		831588971F6280C900CA485A /* RNSPostStopPointList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostStopPointList.swift; sourceTree = "<group>"; };
+		83180A901FE115D0009CFFA8 /* RNSDocsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSDocsType.swift; sourceTree = "<group>"; };
 		8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSRouteVariant+Navels.swift"; sourceTree = "<group>"; };
 		8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSDurationItem+Distance.swift"; sourceTree = "<group>"; };
 		831863A41F74D13D00579000 /* RNSBusStopManager+Uuids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSBusStopManager+Uuids.swift"; sourceTree = "<group>"; };
@@ -1513,6 +1515,14 @@
 			path = Circle;
 			sourceTree = "<group>";
 		};
+		83180A8F1FE115C5009CFFA8 /* DocsType */ = {
+			isa = PBXGroup;
+			children = (
+				83180A901FE115D0009CFFA8 /* RNSDocsType.swift */,
+			);
+			path = DocsType;
+			sourceTree = "<group>";
+		};
 		8319C5B11F60DFBE005A1768 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -2279,6 +2289,7 @@
 		8344E1CC1F397E31004A6F0C /* HelpersModels */ = {
 			isa = PBXGroup;
 			children = (
+				83180A8F1FE115C5009CFFA8 /* DocsType */,
 				83A667E81F5D1A0200A1A7BC /* DotsVerticalModel */,
 				83204B251F59083F0033ACA1 /* MenuItem */,
 				8344E1CD1F397EF3004A6F0C /* RangeScroll */,
@@ -5480,6 +5491,7 @@
 				8390DFD81F664C91003C3505 /* MainInfoViewController+TableView.swift in Sources */,
 				8329DF5D1F34251200D542FF /* RNSEmailField.swift in Sources */,
 				8310D44B1F3C6C3D000CCD0A /* RNSBusDetailWayView.swift in Sources */,
+				83180A911FE115D0009CFFA8 /* RNSDocsType.swift in Sources */,
 				838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,
 				835E81881F8C7F9300F64222 /* RNSDotsBussView+ShowDone.swift in Sources */,
 				838131581F832B9A00AA137F /* RNSRoutePoint+Calc.swift in Sources */,

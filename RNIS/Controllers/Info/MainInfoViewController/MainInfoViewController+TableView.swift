@@ -29,10 +29,10 @@ extension MainInfoViewController: UITableViewDelegate, UITableViewDataSource  {
         tableView.deselectRow(at: indexPath, animated: false)
         switch indexPath.row {
         case 0:
-            showContact(.contact)
+            showDocsInfo(.contacts)
             break;
         case 1:
-            showContact(.forgotten)
+            showDocsInfo(.forgotten)
             break;
         case 2:
             QRScannerInfoViewController.initialPushAnimatedRed()

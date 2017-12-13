@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum RNSDocsType: String {
-    case userGuide = "guide"
-    case termOfUse = "agreement"
-}
-
 /**
  Контроллер для отображения выбранного информационного раздела
  */
@@ -34,7 +29,7 @@ class DocsInfoViewController: UIViewController {
     
     /// Загрузка текста раздела
     func loadText() {
-        titleLabel.text = type == .userGuide ? "Руководство пользователя" : "Пользовательское соглашение"
+        titleLabel.text = type.title
         
         RNSPostMobilePageGet(type, complete: { [weak self] (item) in
             self?.prepareText(item?.text)
