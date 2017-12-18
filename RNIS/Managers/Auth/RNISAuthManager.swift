@@ -37,7 +37,7 @@ class RNISAuthManager {
         STRouter.showLoader()
         RNSPostLogin(login, password: password, complete: {
             STRouter.removeLoader()
-            STRouter.popToRoot()
+            STRouter.pop()
             RNSMenuManager.leftMenuUpdate()
             }, failure: { (errorText) in
                 STRouter.removeLoader()
