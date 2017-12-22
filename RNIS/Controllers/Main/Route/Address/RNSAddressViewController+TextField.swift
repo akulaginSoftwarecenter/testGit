@@ -17,6 +17,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     func prepareTextField() {
         textField.text = item?.address
         endEdit()
+        textField.becomeFirstResponder()
     }
     
     /// Настройка текста поля

@@ -22,6 +22,12 @@ extension RNSDutyViewController {
     func updateFields() {
         fromLabel.text = fromItem?.address
         toLabel.text = inItem?.address
+        updatePlaceHolders()
+    }
+    
+    func updatePlaceHolders() {
+        fromPlaceholderLabel.isHidden = !(fromLabel.text?.isEmpty ?? true)
+        toPlaceholderLabel.isHidden = !(toLabel.text?.isEmpty ?? true)
     }
     
     /// Настройка кнопки поиска
