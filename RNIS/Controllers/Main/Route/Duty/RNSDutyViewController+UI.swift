@@ -20,8 +20,8 @@ extension RNSDutyViewController {
     
     /// Обновление текстовых полей "куда" и "откуда"
     func updateFields() {
-        fromField.text = fromItem?.address
-        inField.text = inItem?.address
+        fromLabel.text = fromItem?.address
+        toLabel.text = inItem?.address
     }
     
     /// Настройка кнопки поиска

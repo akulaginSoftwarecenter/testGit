@@ -16,6 +16,9 @@ class RNSDutyViewController: UIViewController {
     /// Представление, которое служит индикатором загрузки
     lazy var loaderView = LoaderView()
 
+    @IBOutlet weak var fromLabel: UILabel!
+    @IBOutlet weak var toLabel: UILabel!
+    
     @IBOutlet weak var backButton: RNSLeftBackButton!
     /// Кнопка сброса даты и времени
     @IBOutlet weak var crossButton: UIButton!
@@ -23,10 +26,12 @@ class RNSDutyViewController: UIViewController {
     @IBOutlet weak var viewLabelDate: UIView!
     /// Ограничение представления даты и времени справа
     @IBOutlet weak var rightDateConstraint: NSLayoutConstraint!
+    /*
     /// Поле ввода адреса "откуда"
     @IBOutlet weak var fromField: UITextField!
     /// Поле ввода адреса "куда"
     @IBOutlet weak var inField: UITextField!
+ */
     /// Кнопка поиска
     @IBOutlet weak var searchButton: RNSBlackButton!
     /// Надпись, отображающая дату и время
