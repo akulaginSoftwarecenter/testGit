@@ -12,6 +12,6 @@ extension RNSMapViewController {
     
     /// Событие нажатия на кнопку демонстрации маршрута
     @IBAction func actionRoute(_ sender: Any) {
-        RNSDutyViewController.initialPushAnimatedRed()
+        RNSDutyViewController.initialPushAnimatedRedScroll()
     }
 }
