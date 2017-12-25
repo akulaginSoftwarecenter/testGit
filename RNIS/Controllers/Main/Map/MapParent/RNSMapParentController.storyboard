@@ -159,16 +159,26 @@
                                             <action selector="actionMyLocation:" destination="kPS-F3-8vu" eventType="touchUpInside" id="Ytd-45-0VS"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-JA-LXP">
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="45"/>
+                                        <color key="backgroundColor" red="0.85098039219999999" green="0.35294117650000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="Y8E-PS-M8G"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85098039219999999" green="0.35294117650000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5wi-Ci-q01"/>
+                                    <constraint firstItem="fWx-JA-LXP" firstAttribute="leading" secondItem="E2J-az-pMV" secondAttribute="leading" id="86z-Jg-eh2"/>
                                     <constraint firstItem="4fj-X8-s17" firstAttribute="top" secondItem="E2J-az-pMV" secondAttribute="top" id="9P5-g2-0Xc"/>
                                     <constraint firstAttribute="bottom" secondItem="DKD-dZ-eIH" secondAttribute="bottom" id="Hor-VG-0VX"/>
                                     <constraint firstAttribute="trailing" secondItem="4fj-X8-s17" secondAttribute="trailing" id="Ltv-aH-Qig"/>
                                     <constraint firstItem="DKD-dZ-eIH" firstAttribute="top" secondItem="E2J-az-pMV" secondAttribute="top" id="NUW-hT-FuG"/>
                                     <constraint firstAttribute="trailing" secondItem="DKD-dZ-eIH" secondAttribute="trailing" id="XT6-Lm-eFV"/>
+                                    <constraint firstItem="fWx-JA-LXP" firstAttribute="top" secondItem="E2J-az-pMV" secondAttribute="top" id="Zdp-yt-aEW"/>
                                     <constraint firstItem="4fj-X8-s17" firstAttribute="leading" secondItem="E2J-az-pMV" secondAttribute="leading" constant="15" id="b6X-Io-pXS"/>
+                                    <constraint firstAttribute="bottom" secondItem="fWx-JA-LXP" secondAttribute="bottom" id="cGK-pX-6wT"/>
                                     <constraint firstAttribute="bottom" secondItem="4fj-X8-s17" secondAttribute="bottom" id="yDd-c7-0Sy"/>
                                 </constraints>
                             </view>
