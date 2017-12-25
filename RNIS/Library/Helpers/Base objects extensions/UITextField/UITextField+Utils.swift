@@ -72,4 +72,11 @@ extension UITextField {
         
         inputAccessoryView = doneToolbar
     }
+    
+    var textWidth: CGFloat {
+        guard let font = font else {
+            return 0
+        }
+        return text?.width(font) ?? 0
+    }
 }

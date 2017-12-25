@@ -130,10 +130,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2J-az-pMV">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2J-az-pMV">
                                 <rect key="frame" x="0.0" y="85" width="375" height="45"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите адрес или укажите на карте" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-X8-s17">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите адрес или укажите на карте" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-X8-s17">
                                         <rect key="frame" x="15" y="0.0" width="360" height="45"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,6 +202,7 @@
                         <outlet property="bottomTableView" destination="V38-0p-3J0" id="bHB-1M-7OJ"/>
                         <outlet property="buttonMyLocation" destination="DKD-dZ-eIH" id="fgk-e9-1EJ"/>
                         <outlet property="containerTables" destination="rIs-Dd-oBy" id="Weo-tb-eIU"/>
+                        <outlet property="leftTextFieldConstraint" destination="b6X-Io-pXS" id="FR5-Zy-oD4"/>
                         <outlet property="rightTextFildConstraint" destination="Ltv-aH-Qig" id="v3n-EJ-75o"/>
                         <outlet property="textField" destination="4fj-X8-s17" id="vEj-St-tfk"/>
                         <outlet property="titleLabel" destination="hpJ-na-jw6" id="qTV-EZ-EjE"/>

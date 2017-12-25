@@ -15,9 +15,27 @@ extension RNSAddressViewController: UITextFieldDelegate {
     
     /// Заполнение текстового поля сохраненным адресом
     func prepareTextField() {
-        textField.text = item?.address
+        prepareAddress(item?.address)
         endEdit()
         prepareCursor()
+    }
+    
+    func prepareAlignRightIfNeed() {
+        let widthText = textField.textWidth
+        let widthTextField = UIScreen.width - 44 - leftTextField
+        var inset = widthTextField - widthText
+        if inset > 0 {
+            inset = 0
+        }
+        prepareInset(inset + leftTextField)
+    }
+    
+    func prepareAlignLeft() {
+        prepareInset(leftTextField)
+    }
+    
+    func prepareInset(_ inset: CGFloat) {
+        leftTextFieldConstraint.constant = inset
     }
     
     func prepareCursor() {
@@ -31,6 +49,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     /// - Parameter text: текст адреса
     func prepareAddress(_ text: String?) {
         textField.text = text
+        prepareAlignRightIfNeed()
     }
      
     func prepareAddressContainers(_ text: String?) {
@@ -49,6 +68,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     
     /// Событие начала редактирования поля адреса
     func startEdit() {
+        prepareAlignRightIfNeed()
         containerTables.isHidden = false
         prepareTableView()
         rightTextFildConstraint.constant = 0
@@ -57,6 +77,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     
     /// Событие завершения редактирования поля адреса
     func endEdit() {
+        prepareAlignRightIfNeed()
         containerTables.isHidden = true
         textField.endEditing(true)
         rightTextFildConstraint.constant = 40
@@ -74,6 +95,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         prepareTableView()
+        prepareAlignRightIfNeed()
         return true
     }
 
@@ -85,5 +107,6 @@ extension RNSAddressViewController: UITextFieldDelegate {
     @IBAction func textFieldEditingChanged(_ sender: Any) {
         removePin()
         prepareTableView()
+        prepareAlignRightIfNeed()
     }
 }

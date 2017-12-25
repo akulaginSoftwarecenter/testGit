@@ -63,6 +63,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     
     @IBOutlet weak var rightTextFildConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var leftTextFieldConstraint: NSLayoutConstraint!
     /// Поле ввода адреса
     @IBOutlet weak var textField: UITextField!
     /// Заголовок контроллера
@@ -74,6 +75,8 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
 
     /// Таблица вариантов адресов (автокомплит)
     @IBOutlet weak var containerTables: UIView!
+    
+    let leftTextField: CGFloat = 15
     
     lazy var tableHistory: RNSAddressHistoryView = {
         let view = RNSAddressHistoryView()
