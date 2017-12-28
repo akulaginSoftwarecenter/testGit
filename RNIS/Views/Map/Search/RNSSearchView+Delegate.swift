@@ -24,14 +24,6 @@ extension RNSSearchView: UITableViewDelegate, UITableViewDataSource {
         showItem(item(indexPath))
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
     func item(_ indexPath: IndexPath) -> RNSTextItem? {
         return items?[indexPath.row]
     }
