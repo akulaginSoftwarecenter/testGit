@@ -34,10 +34,11 @@ extension RNSDataManager {
         guard !text.isEmpty else {
             return
         }
-        
+        print("createSearchItem0",text);
         if searchItems?.contains(where: {$0.title == text}) ?? false {
             return
         }
+        print("createSearchItem1",text);
         write({
             let item = RNSSearchHistory()
             item.title = text

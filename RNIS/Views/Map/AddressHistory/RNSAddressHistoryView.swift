@@ -18,11 +18,11 @@ class RNSAddressHistoryView: BaseViewWithXIBInit {
     
     var handlerAddress: AliasStringBlock?
     
-    var text: String?
+    var items: [RNSSearchHistory]?
     
     /// Обновление содержимого таблицы и размеров
     func prepare(_ text: String?) {
-        self.text = text
+        self.items = RNSDataManager.searchItems(text)?.reversed()
         tableView.reloadData()
         heightTableView?.constant = tableView.tableViewContentSize
     }

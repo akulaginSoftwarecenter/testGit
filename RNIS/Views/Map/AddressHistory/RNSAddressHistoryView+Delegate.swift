@@ -10,11 +10,6 @@ import Foundation
 
 extension RNSAddressHistoryView: UITableViewDelegate, UITableViewDataSource {
     
-    /// Массив объектов из истории адресов, который служит для заполнения таблицы
-    var items: [RNSSearchHistory]? {
-        return RNSDataManager.searchItems(text)
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items?.count ?? 0
     }
