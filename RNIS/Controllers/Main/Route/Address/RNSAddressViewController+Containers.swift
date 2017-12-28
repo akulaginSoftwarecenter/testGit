@@ -1,16 +1,13 @@
 //
-//  RNSAddressViewController+TableView.swift
+//  RNSAddressViewController+Containers.swift
 //  RNIS
 //
-//  Created by Артем Кулагин on 16.08.17.
+//  Created by Артем Кулагин on 28.12.2017.
 //  Copyright © 2017 Артем Кулагин. All rights reserved.
 //
 
 import Foundation
-//import RealmSwift
-/**
- Расширение для работы с таблицей вариантов адресов
- */
+
 extension RNSAddressViewController {
     
     func prepareTableView() {
@@ -26,7 +23,16 @@ extension RNSAddressViewController {
     
     func allTableHidden() {
         tableHistory.hidden()
+        tableAddressHidden()
+    }
+    
+    func tableAddressHidden() {
         tableAddress.hidden()
     }
+    
+    func tableAddressHiddenIfNeed(_ item: RNSAddressTemp?) {
+        if item?.isHouse ?? false {
+            tableAddressHidden()
+        }
+    }
 }
-
