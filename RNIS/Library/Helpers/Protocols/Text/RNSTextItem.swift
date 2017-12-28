@@ -10,5 +10,7 @@ import Foundation
 
 protocol RNSTextItem: class {
     var name: String? { get set }
+    
+    func heightAtWidth(_ width: CGFloat) -> CGFloat
 
 }

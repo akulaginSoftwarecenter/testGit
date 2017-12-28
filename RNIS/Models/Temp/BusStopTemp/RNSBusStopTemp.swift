@@ -25,4 +25,8 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
     
     var point: PGGeoPoint?
     var nameDistance: String?
+    
+    func heightAtWidth(_ width: CGFloat) -> CGFloat {
+        return kSearchViewCellDefaultHeight
+    }
 }

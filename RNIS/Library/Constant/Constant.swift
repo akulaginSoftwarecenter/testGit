@@ -18,7 +18,7 @@ let mapHost3 = "http://95.181.199.195/"
 let serverAddress = ""
 //let serverRnisapi = "https://dev-rnisapi.regeora.ru/ajax/request"
 let serverRnisapi = "https://api.rnis.mosreg.ru/ajax/request"
-let showLogApi = true
+let showLogApi = false
 let showLogApiDetail = false
 
 
@@ -37,4 +37,9 @@ let errorNetwork = "Ошибка соединения повторите поп�
 let favoriteTitle = "Избранное"
 let notificationTitle = "Оповещения"
 let minZoomVisibleStop = Int32(14)
+
+let kSearchViewCellDefaultHeight: CGFloat = 59
+let kSearchViewCellDistanceRight: CGFloat = 16
+let kSearchViewCellDistanceLeft: CGFloat = 5
+let kSearchViewCellEdgeDownUp: CGFloat = 4
 

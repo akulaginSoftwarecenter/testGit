@@ -45,4 +45,8 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem {
             //route_number = newValue
         }
     }
+    
+    func heightAtWidth(_ width: CGFloat) -> CGFloat {
+        return kSearchViewCellDefaultHeight
+    }
 }

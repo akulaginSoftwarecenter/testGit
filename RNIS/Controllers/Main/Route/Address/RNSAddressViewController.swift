@@ -95,13 +95,15 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     
     lazy var tableAddress: RNSSearchView = {
         let view = RNSSearchView()
+        let leftEdge: CGFloat = 15
         if let parentView = self.containerTables {
             parentView.addSubview(view)
             view.snp.makeConstraints{
                 $0.right.top.bottom.equalTo(parentView)
-                $0.left.equalTo(parentView).inset(15)
+                $0.left.equalTo(parentView).inset(leftEdge)
             }
         }
+        view.widthCell = UIScreen.width - leftEdge
         view.isHidden = true
         view.handlerLoader = {[weak self] value in
             if value {

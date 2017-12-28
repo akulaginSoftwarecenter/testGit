@@ -24,6 +24,11 @@ extension RNSSearchView: UITableViewDelegate, UITableViewDataSource {
         showItem(item(indexPath))
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item = self.item(indexPath)
+        return item?.heightAtWidth(widthCell) ?? kSearchViewCellDefaultHeight
+    }
+    
     func item(_ indexPath: IndexPath) -> RNSTextItem? {
         return items?[indexPath.row]
     }
@@ -35,6 +40,6 @@ extension RNSSearchView: UITableViewDelegate, UITableViewDataSource {
     
     func tableReload() {
         tableView.reloadData()
-        heightTableView?.constant = tableView.tableViewContentSize
+        heightTableView?.constant = tableView.tableViewContentSize + tableView.contentInset.top
     }
 }

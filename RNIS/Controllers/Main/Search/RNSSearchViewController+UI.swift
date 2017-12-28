@@ -10,6 +10,10 @@ import Foundation
 
 /// Расширение для работы с таблицей
 extension RNSSearchViewController {
+    
+    func prepareSearchView() {
+        searchView.widthCell = UIScreen.width - 30
+    }
 
     func clearTable() {
         searchView.clearTable()

@@ -16,6 +16,8 @@ class RNSSearchView: BaseViewWithXIBInit {
     var text: String?
     var typeSegment: TypeSearch = .address
     
+    var widthCell: CGFloat = 320;
+    
     @IBOutlet var heightTableView: NSLayoutConstraint?
     
     var handlerLoader: AliasBoolBlock?

@@ -44,4 +44,17 @@ class RNSAddressTemp: RNISMappableBase, RNSTextItem {
     var distanceToCurrent: Double? {
         return point?.distanceToCurrent
     }
+    
+    func heightAtWidth(_ width: CGFloat) -> CGFloat {
+        let defaultHeight = kSearchViewCellDefaultHeight
+        let left = kSearchViewCellDistanceRight + kSearchViewCellDistanceLeft
+        guard var height = name?.height(.cffazm20, width: width - left) else {
+            return defaultHeight
+        }
+        height += kSearchViewCellEdgeDownUp * 2
+        if height < defaultHeight {
+            height = defaultHeight
+        }
+        return height
+    }
 }

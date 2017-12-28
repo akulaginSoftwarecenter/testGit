@@ -43,6 +43,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareSearchView()
         prepareHandlers()
         prepareSegmented()
         checkSaved()
