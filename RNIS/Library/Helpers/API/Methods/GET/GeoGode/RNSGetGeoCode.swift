@@ -51,6 +51,7 @@ class RNSGetGeoCode: AlamofireAPI {
         guard let dict = reply as? AliasDictionary,
             let res = dict["res"] as? [AliasDictionary],
             let addr =  res.first?["addr"] as? String else {
+                STAlertRouter.showOk("Сервер не отвечает")
                 superError()
                 return
         }
