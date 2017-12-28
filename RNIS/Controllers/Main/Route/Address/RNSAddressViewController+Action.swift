@@ -29,7 +29,7 @@ extension RNSAddressViewController {
         updateItem()
         complete?(item)
         if let text = text, !text.isEmpty  {
-            RNSDataManager.createSearchItem(text)
+            RNSDataManager.createSearchItem(text, point: point)
         }
     }
    

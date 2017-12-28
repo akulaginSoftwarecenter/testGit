@@ -94,6 +94,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     }
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        clearPoint()
         prepareTableView()
         prepareAlignRightIfNeed()
         return true
@@ -105,6 +106,7 @@ extension RNSAddressViewController: UITextFieldDelegate {
     }
     
     @IBAction func textFieldEditingChanged(_ sender: Any) {
+        clearPoint()
         removePin()
         prepareTableView()
         prepareAlignRightIfNeed()

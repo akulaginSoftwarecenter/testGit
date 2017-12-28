@@ -14,9 +14,9 @@ import UIKit
 class RNSAddressCell: RNSBaseTableCell {
     
     /// Текст адреса
-    var item: String? {
+    var item: RNSSearchHistory? {
         didSet{
-            titleLabel?.text = item
+            titleLabel?.text = item?.title
         }
     }
     

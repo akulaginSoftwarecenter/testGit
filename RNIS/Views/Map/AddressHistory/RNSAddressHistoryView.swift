@@ -16,7 +16,7 @@ class RNSAddressHistoryView: BaseViewWithXIBInit {
  
     @IBOutlet weak var tableView: UITableView!
     
-    var handlerAddress: AliasStringBlock?
+    var handlerItem: ((RNSSearchHistory?) -> ())?
     
     var items: [RNSSearchHistory]?
     

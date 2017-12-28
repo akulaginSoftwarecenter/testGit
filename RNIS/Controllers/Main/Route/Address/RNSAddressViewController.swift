@@ -58,6 +58,8 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     /// Пин, который будет установлен на карте для демонстрации положения адреса на карте
     var pin: RNSPinAddress?
     
+    var point: PGGeoPoint?
+    
     /// Кнопка "показать меня на карте"
     @IBOutlet weak var buttonMyLocation: UIButton!
     
@@ -87,8 +89,9 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
             }
         }
         view.isHidden = true
-        view.handlerAddress = {[weak self] item in
-            self?.prepareAddressContainers(item)
+        view.handlerItem = {[weak self] item in
+            self?.prepareAddressContainers(item?.title)
+            self?.addPinMapCenter(item?.point)
         }
         return view
     }()

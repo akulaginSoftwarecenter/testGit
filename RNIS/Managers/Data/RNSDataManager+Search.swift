@@ -30,7 +30,7 @@ extension RNSDataManager {
         return Array(result)
     }
     
-    static func createSearchItem(_ text: String) {
+    static func createSearchItem(_ text: String, point: PGGeoPoint?) {
         guard !text.isEmpty else {
             return
         }
@@ -42,6 +42,7 @@ extension RNSDataManager {
         write({
             let item = RNSSearchHistory()
             item.title = text
+            item.point = point
             realm?.add(item)
         })
     }

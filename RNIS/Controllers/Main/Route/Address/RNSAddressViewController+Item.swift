@@ -29,4 +29,8 @@ extension RNSAddressViewController {
         prepareAddressContainers(item?.name)
         addPinMapCenter(item?.point)
     }
+    
+    func clearPoint() {
+        point = nil
+    }
 }

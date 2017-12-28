@@ -2671,10 +2671,10 @@
 		836277D81F381FB4009FB712 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				836277D91F381FE1009FB712 /* RNSDataManager.swift */,
 				836EEF191F3C1839007631D9 /* RNSDataManager+Bus.swift */,
 				836EEF1B1F3C1876007631D9 /* RNSDataManager+BusStop.swift */,
 				83E1839A1F440DF3005912C5 /* RNSDataManager+Search.swift */,
-				836277D91F381FE1009FB712 /* RNSDataManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";

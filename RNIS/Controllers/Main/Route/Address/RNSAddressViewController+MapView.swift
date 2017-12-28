@@ -45,19 +45,20 @@ extension RNSAddressViewController {
     /// Добавление пина на карту в указанные координаты
     ///
     /// - Parameter point: координаты
-    func addPin(_ point: PGGeoPoint?) {
+    func addPin() {
         removePin()
         if let point = point  {
             pin = RNSPinAddress(point)
         }
     }
     
-    func mapCenter(_ point: PGGeoPoint?) {
+    func mapCenter() {
         RNSMapManager.mapCenter(point)
     }
     
     func addPinMapCenter(_ point: PGGeoPoint?) {
-        addPin(point)
-        mapCenter(point)
+        self.point = point
+        addPin()
+        mapCenter()
     }
 }
