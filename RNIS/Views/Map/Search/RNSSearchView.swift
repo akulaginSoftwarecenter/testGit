@@ -27,6 +27,8 @@ class RNSSearchView: BaseViewWithXIBInit {
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        tableView.estimatedRowHeight = 47.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func showItem(_ item: RNSTextItem?) {
