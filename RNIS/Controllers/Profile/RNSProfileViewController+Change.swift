@@ -74,13 +74,15 @@ extension RNSProfileViewController {
             prepareError(error)
             return
         }
+        let currentEmail = item?.email
         
         if emailText == item?.email {
             return
         }
-        
+        let textAlert = (currentEmail?.isEmpty ?? true) ? "Для завершения добавления адреса почты перейдите по ссылке в письме" : "Для завершения изменения адреса почты перейдите по ссылке в письме"
+
         updateItem(email: emailText){ [weak self] in
-            self?.showAlertOk("Для завершения изменения адреса почты перейдите по ссылке в письме")
+            self?.showAlertOk(textAlert)
             self?.checkShowBtn()
         }
     }
