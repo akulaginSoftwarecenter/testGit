@@ -25,6 +25,7 @@ class RNSLoginViewController: UIViewController {
     @IBOutlet weak var passwordField: STPasswordField!
     /// Надпись с текстом ошибки
     @IBOutlet weak var errorLabel: UILabel!
+    var handlerBack: EmptyBlock? = nil
     
     /// Данные пользователя
     var item: RNSUserPayload?
@@ -60,8 +61,10 @@ class RNSLoginViewController: UIViewController {
         UserDefaults.setLogin(login)
         UserDefaults.setPassword(password)
         
-        RNISAuthManager.login(login, password: password) {[weak self] (errorText) in
+        RNISAuthManager.login(login, password: password, success: { [weak self] in
+            self?.handlerBack?()
+        }, failure:{[weak self] (errorText) in
             self?.prepareError(errorText)
-        }
+        })
     }
 }

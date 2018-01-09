@@ -2151,11 +2151,11 @@
 		832E4B691F2EC26C00A4AD77 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */,
 				837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */,
 				83940B921F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift */,
 				839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */,
 				832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */,
-				832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";

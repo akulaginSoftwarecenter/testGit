@@ -19,14 +19,22 @@ extension STRouter {
     }
 
     static func showAfterLogout(animated: Bool) {
-        guard let vc = imageBoardContainer(RNSLoginViewController.controller) else {
+        guard let vc = loginVCAtBackShowMenu else {
             return
         }
         RNSMenuManager.itemMap.vc?.push(vc)
         RNSMenuManager.showMap()
     }
 
-    static func showLogin(animated: Bool) {
+    static func showLogin(animated: Bool = true) {
         RNSLoginViewController.controller?.pushAnimatedImageBoard(animated: animated)
+    }
+    
+    static var loginVCAtBackShowMenu: UIViewController? {
+        let vc = RNSLoginViewController.controllerType()
+        vc?.handlerBack = {
+            RNSMenuManager.showLeftMenu()
+        }
+        return imageBoardContainer(vc)
     }
 }

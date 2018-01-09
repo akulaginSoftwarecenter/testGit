@@ -33,11 +33,12 @@ class RNISAuthManager {
     }
     
     /// Функция авторизации в приложении
-    static func login(_ login: String?, password: String?, failure: AliasStringBlock?) {
+    static func login(_ login: String?, password: String?, success: EmptyBlock? = nil, failure: AliasStringBlock?) {
         STRouter.showLoader()
         RNSPostLogin(login, password: password, complete: {
             STRouter.removeLoader()
             STRouter.pop()
+            success?()
             RNSMenuManager.leftMenuUpdate()
             }, failure: { (errorText) in
                 STRouter.removeLoader()

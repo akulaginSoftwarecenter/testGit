@@ -82,9 +82,9 @@ class RNSRegistrationNameController: UIViewController {
     
     /// Авторизация пользователя
     func login() {
-        RNISAuthManager.login(item?.phone, password: item?.password) {[weak self] (errorText) in
+        RNISAuthManager.login(item?.phone, password: item?.password, failure: {[weak self] (errorText) in
             self?.prepareError(errorText)
-        }
+        })
     }
     
     /// Заполнение надписи для демонстрации ошибок текстом ошибки
