@@ -53,8 +53,10 @@ class RNSPostSearch: RNSRequest {
         guard let type = type else {
             return [:]
         }
-        return ["query": text ?? "",
-                "type": type.guery]
+        var dict = RNSLocationManager.point.dictionary
+        dict["query"] = text ?? ""
+        dict["type"] = type.guery
+        return dict
     }
     
     override var method: Alamofire.HTTPMethod {

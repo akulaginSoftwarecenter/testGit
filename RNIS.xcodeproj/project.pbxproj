@@ -1595,13 +1595,6 @@
 			path = Temp;
 			sourceTree = "<group>";
 		};
-		831A85A71F4144F10095F006 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		831A85AC1F41481E0095F006 /* Text */ = {
 			isa = PBXGroup;
 			children = (
@@ -2603,7 +2596,6 @@
 		836221A81F43DE8B005B49DA /* Address */ = {
 			isa = PBXGroup;
 			children = (
-				83E183941F44021F005912C5 /* Cell */,
 				836221A91F43DED1005B49DA /* RNSAddressViewController.swift */,
 				8340C3C61FDE281C00A4D98A /* RNSAddressViewController+Item.swift */,
 				83281CEE1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift */,
@@ -3785,7 +3777,6 @@
 		838CE93C1F3DB5D800C10FBA /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				831A85A71F4144F10095F006 /* Cell */,
 				838CE93D1F3DB60C00C10FBA /* RNSSearchViewController.swift */,
 				831A85BC1F414C730095F006 /* RNSSearchViewController+Data.swift */,
 				831A85B81F414B560095F006 /* RNSSearchViewController+Segment.swift */,
@@ -4636,13 +4627,6 @@
 				83D713891F5D0EB1005206C5 /* RNSDotsBussVertical.xib */,
 			);
 			path = RNSDotsBussVertical;
-			sourceTree = "<group>";
-		};
-		83E183941F44021F005912C5 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		83E183971F440D85005912C5 /* Search */ = {

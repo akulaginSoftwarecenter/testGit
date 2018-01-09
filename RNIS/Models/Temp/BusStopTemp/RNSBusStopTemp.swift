@@ -20,11 +20,13 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
         super.mapping(map: map)
         
         self.point = PGGeoPoint(latitude: latitude ?? 0, longitude: longitude ?? 0)
-        self.nameDistance = self.point?.distanceToCurrent.toString
+        distance_to_user <- map["distance_to_user"]
+        self.nameDistance = self.distance_to_user?.toString
     }
     
     var point: PGGeoPoint?
     var nameDistance: String?
+    var distance_to_user: CLLocationDistance?
     
     func heightAtWidth(_ width: CGFloat) -> CGFloat {
         return kSearchViewCellDefaultHeight

@@ -15,9 +15,9 @@ enum TypeSearch: Int {
     var guery: String {
         switch self {
         case .transport:
-            return "transport"
+            return "route"
         case .stop:
-            return "stop_point"
+            return "stop_points"
         case .address:
             return "address"
         }
