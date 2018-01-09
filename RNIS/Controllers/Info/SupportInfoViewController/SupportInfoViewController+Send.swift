@@ -38,6 +38,11 @@ extension SupportInfoViewController {
             prepareError("Поле 'Почта' обязательно для заполнения.")
             return
         }
+        if !InputFieldsValidator.isValidEmail(contact) {
+            prepareError(kErrorMail)
+            return
+        }
+        
         guard let body = body, !body.isEmpty else {
             prepareError("Поле 'Текст обращения' обязательно для заполнения.")
             return

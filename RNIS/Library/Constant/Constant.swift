@@ -36,6 +36,7 @@ let kMeta = "meta"
 let errorNetwork = "Отсутствует подключение к интернету"
 let favoriteTitle = "Избранное"
 let notificationTitle = "Оповещения"
+let kErrorMail = "Введите корректный email"
 let minZoomVisibleStop = Int32(14)
 
 let kSearchViewCellDefaultHeight: CGFloat = 59

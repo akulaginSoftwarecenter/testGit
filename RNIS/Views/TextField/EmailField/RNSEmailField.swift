@@ -18,7 +18,7 @@ class RNSEmailField: RNSTextField {
     }
     
     override var errorText:String? {
-        return isValid ? nil : "Введите корректный email"
+        return isValid ? nil : kErrorMail
     }
     
     /// Создание поля
