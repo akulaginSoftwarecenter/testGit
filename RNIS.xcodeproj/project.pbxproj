@@ -2681,6 +2681,7 @@
 			isa = PBXGroup;
 			children = (
 				837B66861F396DC10048C5BA /* TouchView */,
+				836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */,
 				8385DB421F3ACAA200FDCD4A /* RNSScrollShowContainer+Action.swift */,
 				837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */,
 				8344E1CA1F397D46004A6F0C /* RNSScrollShowContainer+Ranges.swift */,
@@ -2689,7 +2690,6 @@
 				8385DB3F1F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift */,
 				8310D4501F3C6E64000CCD0A /* RNSScrollShowContainer+UI.swift */,
 				836277DE1F382CC8009FB712 /* RNSScrollShowContainer.storyboard */,
-				836277DC1F382CB2009FB712 /* RNSScrollShowContainer.swift */,
 			);
 			path = ScrollShowContainer;
 			sourceTree = "<group>";

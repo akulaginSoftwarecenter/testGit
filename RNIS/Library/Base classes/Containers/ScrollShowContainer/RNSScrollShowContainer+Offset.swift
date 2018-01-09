@@ -15,7 +15,7 @@ extension RNSScrollShowContainer {
     }
     
     var topOffset: CGFloat {
-        return UIScreen.height
+        return view.bounds.height
     }
     
     var navHeight: CGFloat {
