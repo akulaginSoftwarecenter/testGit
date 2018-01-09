@@ -29,6 +29,9 @@ extension Array where Element: Any {
     }
     
     func enumerateNonFirst(handler: AliasHandler?) {
+        guard 1 <= count else {
+            return
+        }
         enumerateRange(1..<count, handler: handler)
     }
 }

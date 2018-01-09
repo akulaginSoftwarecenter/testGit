@@ -12,6 +12,9 @@ extension Array where Element: RNSRouteTableItem {
     func prepareMove() {
         
         defaultDoneMove()
+        guard count > 0 else {
+            return
+        }
         for i in 0..<count - 1 {
             
             guard let item = valueAt(i) else {
