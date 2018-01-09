@@ -567,6 +567,8 @@
 		83AA6A741F566CDD00B2139C /* RNSPageRouteCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A731F566CDD00B2139C /* RNSPageRouteCell+UI.swift */; };
 		83AA6A7A1F56863000B2139C /* RNSDotsWhiteVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AA6A791F56863000B2139C /* RNSDotsWhiteVertical.swift */; };
 		83ABFCD7200484EE000E0491 /* DocsInfoViewController+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABFCD6200484ED000E0491 /* DocsInfoViewController+WebView.swift */; };
+		83ABFCDA20048B54000E0491 /* URLRequest+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABFCD920048B54000E0491 /* URLRequest+Utils.swift */; };
+		83ABFCDD20048C86000E0491 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABFCDC20048C86000E0491 /* URL+Utils.swift */; };
 		83ADAAE71F838D2500C289C5 /* RNSPostFavoritePathList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADAAE61F838D2500C289C5 /* RNSPostFavoritePathList.swift */; };
 		83ADAAE91F8394E100C289C5 /* RNSRouteVariant+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADAAE81F8394E100C289C5 /* RNSRouteVariant+Query.swift */; };
 		83ADAAEC1F839C3100C289C5 /* RNSPostFavoritePathUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADAAEB1F839C3000C289C5 /* RNSPostFavoritePathUpdate.swift */; };
@@ -1212,6 +1214,8 @@
 		83AA6A731F566CDD00B2139C /* RNSPageRouteCell+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSPageRouteCell+UI.swift"; sourceTree = "<group>"; };
 		83AA6A791F56863000B2139C /* RNSDotsWhiteVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSDotsWhiteVertical.swift; sourceTree = "<group>"; };
 		83ABFCD6200484ED000E0491 /* DocsInfoViewController+WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocsInfoViewController+WebView.swift"; sourceTree = "<group>"; };
+		83ABFCD920048B54000E0491 /* URLRequest+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Utils.swift"; sourceTree = "<group>"; };
+		83ABFCDC20048C86000E0491 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
 		83ADAAE61F838D2500C289C5 /* RNSPostFavoritePathList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPostFavoritePathList.swift; sourceTree = "<group>"; };
 		83ADAAE81F8394E100C289C5 /* RNSRouteVariant+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSRouteVariant+Query.swift"; sourceTree = "<group>"; };
 		83ADAAEB1F839C3000C289C5 /* RNSPostFavoritePathUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPostFavoritePathUpdate.swift; sourceTree = "<group>"; };
@@ -3153,9 +3157,9 @@
 		836D80F01F1DD5EC00FEE390 /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
-				83631D641FC3F07A00C5F052 /* CGContext */,
 				837ABF281F2EEDF800AB5E54 /* Array */,
 				8326AA3C1F1F643E00F893C8 /* Button */,
+				83631D641FC3F07A00C5F052 /* CGContext */,
 				83FA41081FC2D37D0009045E /* CGFloat */,
 				83013D071FA995D100B880E1 /* CLLocation */,
 				835D85381F4FDAE100B83EB2 /* CLLocationCoordinate2D */,
@@ -3168,6 +3172,7 @@
 				8349F4A41FBC0A62009FF0FC /* MKMapRect */,
 				83A6522C1FB3F369001839C2 /* NSError */,
 				837ABF0F1F2EE2E000AB5E54 /* NSNotificationCenter */,
+				83ABFCDB20048C68000E0491 /* URL */,
 				83CD584F1F258B9300A9FE1A /* PGGeoPoint */,
 				83ED5E2D1F27078A007D9F1C /* PGPolyline */,
 				836EEF051F3BFBE3007631D9 /* Random */,
@@ -3184,6 +3189,7 @@
 				832E4B9D1F2ED5D200A4AD77 /* UITextField */,
 				8357187B1F21A30F00DE5E25 /* UIViewController */,
 				83EFADD01FBA8C3000F98F12 /* UIWebView */,
+				83ABFCD820048B41000E0491 /* URLRequest */,
 				8357188A1F21A9CA00DE5E25 /* UserDefaults */,
 				836D80F11F1DD5F600FEE390 /* View */,
 			);
@@ -4306,6 +4312,22 @@
 			path = Vertical;
 			sourceTree = "<group>";
 		};
+		83ABFCD820048B41000E0491 /* URLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				83ABFCD920048B54000E0491 /* URLRequest+Utils.swift */,
+			);
+			path = URLRequest;
+			sourceTree = "<group>";
+		};
+		83ABFCDB20048C68000E0491 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				83ABFCDC20048C86000E0491 /* URL+Utils.swift */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
 		83ADAAE51F838CE700C289C5 /* FavoritePathList */ = {
 			isa = PBXGroup;
 			children = (
@@ -5220,6 +5242,7 @@
 				836D80C11F1DB3B000FEE390 /* RNSMapViewController.swift in Sources */,
 				832E4B721F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
 				838EA0351F53D41000E9BF20 /* RNSNoteRoute.swift in Sources */,
+				83ABFCDD20048C86000E0491 /* URL+Utils.swift in Sources */,
 				835AFAF81F82367900E91572 /* RNSPostSearch+Type.swift in Sources */,
 				8362CE2D1F6A8F0900BE912D /* RNSBusStopManager+Pin.swift in Sources */,
 				831FDD901F59683C004D69FB /* RNSBusStopDetailController+Observe.swift in Sources */,
@@ -5399,6 +5422,7 @@
 				83E1839B1F440DF3005912C5 /* RNSDataManager+Search.swift in Sources */,
 				838131561F832B4900AA137F /* RNSRoutePoint+Hashable.swift in Sources */,
 				838540C41F70CF9D00B30772 /* RNSPostUserGet.swift in Sources */,
+				83ABFCDA20048B54000E0491 /* URLRequest+Utils.swift in Sources */,
 				835E818A1F8C91C100F64222 /* RNSRouteTable+Move.swift in Sources */,
 				832BEEFD1FA6F55800C9A0A7 /* RNSNewsCell.swift in Sources */,
 				8310D4581F3C7483000CCD0A /* RNSCircle.swift in Sources */,

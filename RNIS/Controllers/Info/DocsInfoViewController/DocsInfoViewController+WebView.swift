@@ -11,7 +11,11 @@ import Foundation
 extension DocsInfoViewController: UIWebViewDelegate  {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if navigationType == .linkClicked {
-            UIApplication.shared.openURL(request.url!)
+            if request.isMail {
+                RNSInfoManager.shared.sendRequest(request)
+            } else {
+                UIApplication.shared.openURL(request.url!)
+            }
             return false
         }
         return true

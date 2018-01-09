@@ -20,19 +20,27 @@ class RNSInfoManager: NSObject, MFMailComposeViewControllerDelegate {
     static var email: String?
     /// Создание экземпляра почтового сообщения
     func send(_ item: RNSContactItem) {
+         sendMail(item.value)
+    }
+    
+    func sendRequest(_ item: URLRequest?) {
+        sendMail(item?.url?.strNoURLScheme)
+    }
+    
+    func sendMail(_ email: String?) {
         
-         if !MFMailComposeViewController.canSendMail() {
-         STAlertRouter.showOk("Mail services are not available")
-         return
-         }
-         let vc = MFMailComposeViewController()
-         vc.mailComposeDelegate = self
-         
-         vc.setToRecipients([item.value ?? ""])
-         vc.setSubject("Здравствуйте!")
-         vc.setMessageBody("Текст", isHTML: false)
-         STRouter.present(vc)
-         self.composeVC = vc
+        if !MFMailComposeViewController.canSendMail() {
+            STAlertRouter.showOk("Mail services are not available")
+            return
+        }
+        let vc = MFMailComposeViewController()
+        vc.mailComposeDelegate = self
+        
+        vc.setToRecipients([email ?? ""])
+        vc.setSubject("Здравствуйте!")
+        vc.setMessageBody("Текст", isHTML: false)
+        STRouter.present(vc)
+        self.composeVC = vc
     }
     
     /// Функция отправки почты
