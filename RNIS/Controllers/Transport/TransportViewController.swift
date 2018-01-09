@@ -16,7 +16,7 @@ class TransportViewController: UIViewController {
     /// Представление переключения вкладок
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    var isNeedCheckToken = true
+    //var isNeedCheckToken = true
     
     /// Надпись заголовка контроллера
     @IBOutlet weak var titleLable: RNSTopTitle!
@@ -40,9 +40,9 @@ class TransportViewController: UIViewController {
     
     /// Проверка наличия токена сессии
     func checkToken() {
-        if isNeedCheckToken {
-            isNeedCheckToken = false
+       // if isNeedCheckToken {
+       //     isNeedCheckToken = false
             Utils.checkTokeShowAlert()
-        }
+      //  }
     }
 }
