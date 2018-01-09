@@ -24,6 +24,10 @@ extension RNSSearchViewController: UITextFieldDelegate {
         guard let font = textField.font else {
             return true
         }
+        let isBackSpace = string == "" && range.length == 1
+        if isBackSpace {
+            return true
+        }
         let currentWidth = (text + string).width(font)
         let allWidth = textField.frame.width - 25
         return allWidth >= currentWidth
