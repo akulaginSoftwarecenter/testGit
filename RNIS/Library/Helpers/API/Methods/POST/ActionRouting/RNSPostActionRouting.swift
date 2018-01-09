@@ -38,7 +38,9 @@ class RNSPostActionRouting: RNSRequest {
             //payload?["items"] = Utils.dictToJson("allRoute")
             dict?["payload"] = Utils.dictToJson("allRoute")
             //print("allRoute",Utils.dictToJson("allRoute"))
-             */
+            
+            self?.parseReply(AliasReply(reply: dict as AnyObject))
+            */
             self?.parseReply(AliasReply(reply: object as AnyObject))
         }
     }
