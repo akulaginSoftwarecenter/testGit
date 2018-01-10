@@ -62,6 +62,7 @@ class RNSLoginViewController: UIViewController {
         UserDefaults.setPassword(password)
         
         RNISAuthManager.login(login, password: password, success: { [weak self] in
+            STRouter.pop()
             self?.handlerBack?()
         }, failure:{[weak self] (errorText) in
             self?.prepareError(errorText)
