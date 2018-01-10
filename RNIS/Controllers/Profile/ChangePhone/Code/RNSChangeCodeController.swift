@@ -51,10 +51,8 @@ class RNSChangeCodeController: RNSCodeContainerController {
     /// Выход из контроллера с последующей демонстрацией сообщения об успешном изменении телефона
     func popAlert() {
         RNSMenuManager.leftMenuUpdate()
-        STRouter.pop(animated: false) {
-            STRouter.pop(animated: false) {
-                STAlertRouter.showOk("Номер телефона успешно изменён")
-            }
+        STRouter.popToRootMain(false) {
+            STAlertRouter.showOk("Номер телефона успешно изменён")
         }
     }
 }

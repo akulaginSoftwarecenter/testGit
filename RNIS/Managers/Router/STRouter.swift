@@ -13,10 +13,6 @@ class STRouter: NSObject {
     
     static var rootViewController: BaseNavigationController?
     
-    static func prepareRoot(_ vc: UIViewController) {
-        UIApplication.shared.delegate!.window!!.rootViewController = vc
-    }
-    
     static var rootView: UIView? {
         return rootViewController?.view
     }
@@ -56,7 +52,6 @@ class STRouter: NSObject {
             return
         }
         
-       
         while let presented = vc.presentedViewController {
             vc = presented
         }

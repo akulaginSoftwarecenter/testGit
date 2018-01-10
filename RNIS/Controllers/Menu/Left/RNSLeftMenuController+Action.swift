@@ -16,8 +16,7 @@ extension RNSLeftMenuController {
         if isHaveToken {
             RNSMenuManager.showProfile()
         } else {
-            STRouter.loginVCAtBackShowMenu?.pushAnimated()
-            RNSMenuManager.hideLeftMenu(animated: true)
+            STRouter.showLogin()
         }
     }
     

@@ -32,6 +32,8 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
-        RNSRecoveryParoleController.initController(item)?.pushAnimatedImageBoard()
+        let vc = RNSRecoveryParoleController.initController(item)
+        let container = STRouter.imageBoardContainer(vc)
+        STRouter.pushMain(container)
     }
 }

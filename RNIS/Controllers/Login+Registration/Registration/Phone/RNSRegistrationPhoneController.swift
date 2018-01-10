@@ -19,7 +19,7 @@ class RNSRegistrationPhoneController: RNSPhoneContainerController {
     
     override func actionComplete(_ item: RNSUserPayload?) {
         RNSPostRegister(item, complete: {
-            RNSRegistrationCodeController.initController($0)?.pushAnimated()
+            STRouter.pushMain(RNSRegistrationCodeController.initController($0))
         }, failure: { [weak self] error in
             self?.prepareError(error)
         })

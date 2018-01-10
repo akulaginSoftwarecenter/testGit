@@ -48,7 +48,7 @@ class RNSChangePhoneController: RNSPhoneContainerController {
         item?.new_phone = "+7" + (phoneText ?? "")
         item?.new_email = nil  // Don't re-send new email parameter on next update profile request
         RNSPostUpdate(item, complete: {
-            RNSChangeCodeController.initController($0)?.pushAnimated()
+            STRouter.pushMain(RNSChangeCodeController.initController($0))
         }, failure: { [weak self] error in
             self?.prepareError(error)
         })

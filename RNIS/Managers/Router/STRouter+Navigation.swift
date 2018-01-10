@@ -17,24 +17,18 @@ extension STRouter {
     static func showLogin() {
         showLogin(animated: true)
     }
-
-    static func showAfterLogout(animated: Bool) {
-        guard let vc = loginVCAtBackShowMenu else {
+    
+    static func showAfterLogout() {
+        popToRootMain(false)
+        RNSMenuManager.showMap()
+        showLogin(animated:false)
+    }
+ 
+    static func showLogin(animated: Bool = true) {
+        guard let vc = RNSLoginViewController.controller else {
             return
         }
-        RNSMenuManager.itemMap.vc?.push(vc)
-        RNSMenuManager.showMap()
-    }
-
-    static func showLogin(animated: Bool = true) {
-        RNSLoginViewController.controller?.pushAnimatedImageBoard(animated: animated)
-    }
-    
-    static var loginVCAtBackShowMenu: UIViewController? {
-        let vc = RNSLoginViewController.controllerType()
-        vc?.handlerBack = {
-            RNSMenuManager.showLeftMenu()
-        }
-        return imageBoardContainer(vc)
+        let container = imageBoardContainer(vc)
+        STRouter.pushMain(container, animated: animated)
     }
 }

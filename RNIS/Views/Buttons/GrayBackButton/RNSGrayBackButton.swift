@@ -41,4 +41,8 @@ class RNSGrayBackButton: BaseViewWithXIBInit {
     @IBAction func action(_ sender: Any) {
         STRouter.pop()
     }
+    
+    override var nibNamed:String {
+        return "RNSGrayBackButton"
+    }
 }

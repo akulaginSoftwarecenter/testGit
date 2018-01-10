@@ -19,7 +19,7 @@ class RNSRecoveryPhoneController: RNSPhoneContainerController {
 
     override func actionComplete(_ item: RNSUserPayload?) {
         RNSPostConfirmSend(item, complete: {
-            RNSRecoveryCodeController.initController($0)?.pushAnimated()
+            STRouter.pushMain(RNSRecoveryCodeController.initController($0))
         }, failure: {[weak self] item in
             self?.prepareError(item)
         })

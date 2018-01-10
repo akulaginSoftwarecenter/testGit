@@ -32,6 +32,7 @@ class RNSRegistrationCodeController: RNSCodeContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
-        RNSRegistrationParoleController.initController(item)?.pushAnimatedRedScroll()
+        let container = STRouter.redScrollContainer(RNSRegistrationParoleController.initController(item))
+        STRouter.pushMain(container)
     }
 }

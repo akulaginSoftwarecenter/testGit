@@ -17,8 +17,11 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
     
     var completion: EmptyBlock? = nil
     
-    func push(_ viewController:UIViewController, animated: Bool = false,
+    func push(_ viewController: UIViewController?, animated: Bool = false,
               completion:EmptyBlock? = nil) {
+        guard let viewController = viewController else {
+            return
+        }
         self.completion = completion
         self.delegate = self
         pushViewController(viewController, animated: animated)
