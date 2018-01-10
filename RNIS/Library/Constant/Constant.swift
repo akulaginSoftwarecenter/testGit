@@ -30,6 +30,8 @@ let kStrelka = "Стрелка"
 let kNews = "Новости"
 let kUpdateTime = "updateTime"
 let kUpdateLocation = "updateLocation"
+let kUpdateFavorite = "updateFavorite"
+
 let kServerNotAviable = "Сервер недоступен"
 let kName = "name"
 let kMeta = "meta"

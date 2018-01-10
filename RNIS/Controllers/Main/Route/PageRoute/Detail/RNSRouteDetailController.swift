@@ -50,7 +50,8 @@ class RNSRouteDetailController: UIViewController {
     /// Обновление данных в представлениях
     func updateData() {
         prepareDetailView()
-        prepareFlagView()
+        prepareHandlers()
+        updateFlagImage()
     }
     
     /// Настройка представления с детальной информацией
@@ -61,5 +62,9 @@ class RNSRouteDetailController: UIViewController {
     /// Событие нажатия на кнопку возврата к предыдущему контроллеру
     @IBAction func actionBack(_ sender: Any) {
         handlerBack?()
+    }
+    
+    deinit {
+        NotificationCenter.removeObserver(self)
     }
 }

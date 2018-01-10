@@ -14,22 +14,20 @@ import Foundation
 extension RNSMoveDetailController {
     
     /// Настройка кнопки
-    func prepareFlagView() {
+    func prepareHandlers() {
         flagView.handlerUpdate = { [weak self] in
             self?.updateFlag()
         }
-        updateFlagImage()
+        NotificationCenter.addObserverUpdateFavorite(self, selector: #selector(updateFlagImage))
     }
     
     /// Обновление кнопки
     func updateFlag() {
-        item?.changeFavorite { [weak self] in
-            self?.updateFlagImage()
-        }
+        item?.changeFavorite()
     }
     
     /// Обновление рисунка кнопки
-    func updateFlagImage() {
+    @objc func updateFlagImage() {
         flagView.isFavorite = item?.isFavorite ?? false
     }
 }

@@ -49,11 +49,21 @@ class RNSPageRouteManager: NSObject {
     }
     
     /// Удаление маршрута
-    static func removeItem(_ item: RNSRouteVariant?) {
+    static func removeFavoriteServer(_ item: RNSRouteVariant?) {
         showLoaderFavoriteTransport()
-        item?.removeItem {
+        item?.removeFavoriteServer {
             updateFavorite()
+            removeFavoriteLocalIfNeed(item?.uuid)
         }
+    }
+    
+    static func removeFavoriteLocalIfNeed(_ uuid: String?) {
+        guard let uuid = uuid else {
+            return
+        }
+        items?.first(where: {
+            $0.uuid == uuid
+        })?.removeFavoriteLocal()
     }
     
     /// Обновление имени маршрута

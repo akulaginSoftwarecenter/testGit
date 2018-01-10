@@ -43,10 +43,6 @@ class RNSRouteVariant: RNISMappableBase {
             updateDistanceNavels()
         }
     }
-   
-    var endPoint: RNSRoutePoint? {
-        return points?.last
-    }
     
     func removeAllRoad() {
         removeRoadOff()

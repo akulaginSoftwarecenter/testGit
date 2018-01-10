@@ -37,14 +37,14 @@ extension RNSRouteVariant {
         return dotsVerticalModel.height
     }
     
-    var isFavorite: Bool {
-        return uuid != nil
-    }
-    
     var endDoneMove: Bool {
         guard let item = points?.last else {
             return false
         }
         return item.doneMove && item.nearCurrentUser
+    }
+      
+    var endPoint: RNSRoutePoint? {
+        return points?.last
     }
 }

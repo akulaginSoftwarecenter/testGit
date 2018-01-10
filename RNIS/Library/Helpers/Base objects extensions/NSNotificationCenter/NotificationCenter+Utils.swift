@@ -36,11 +36,19 @@ extension NotificationCenter {
         addObserver(kUpdateLocation, observer: observer, selector: aSelector)
     }
     
+    static func addObserverUpdateFavorite(_ observer: Any, selector aSelector: Selector) {
+        addObserver(kUpdateFavorite, observer: observer, selector: aSelector)
+    }
+    
     static func postTime() {
         post(kUpdateTime)
     }
     
     static func postLocation() {
         post(kUpdateLocation)
+    }
+    
+    static func postUpdateFavorite() {
+        post(kUpdateFavorite)
     }
 }

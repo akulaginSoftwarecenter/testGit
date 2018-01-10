@@ -39,8 +39,9 @@ class RNSMoveDetailController: UIViewController {
         
         detailView.showMove = true
         prepareItem()
-        prepareFlagView()
+        updateFlagImage()
         prepareObservers()
+        prepareHandlers()
     }
     
     /// Контроллер подписывается на получение уведомлений

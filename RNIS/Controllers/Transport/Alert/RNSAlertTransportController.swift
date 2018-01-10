@@ -33,7 +33,7 @@ class RNSAlertTransportController: UIAlertController {
         }
         
         addAction("Удалить",style: .destructive) {[weak self] in
-            RNSPageRouteManager.removeItem(self?.item)
+            RNSPageRouteManager.removeFavoriteServer(self?.item)
         }
         
         addAction("Отмена", style: .cancel)
