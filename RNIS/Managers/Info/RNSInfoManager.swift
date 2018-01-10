@@ -37,8 +37,8 @@ class RNSInfoManager: NSObject, MFMailComposeViewControllerDelegate {
         vc.mailComposeDelegate = self
         
         vc.setToRecipients([email ?? ""])
-        vc.setSubject("Здравствуйте!")
-        vc.setMessageBody("Текст", isHTML: false)
+        //vc.setSubject("Здравствуйте!")
+        //vc.setMessageBody("Текст", isHTML: false)
         STRouter.present(vc)
         self.composeVC = vc
     }
