@@ -33,6 +33,12 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
         delegate = self
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        prepareDelegate()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -49,8 +55,13 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
     }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let isOnlySpace = string == " " && text?.count == 0
+        if isOnlySpace {
+            return false
+        }
         return validateSpecialCharactor(string)
     }
+    
     
     /// Проверка текста на содержание специальных символов
     ///

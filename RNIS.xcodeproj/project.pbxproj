@@ -2818,9 +2818,9 @@
 			children = (
 				836989401F319A65003E4D73 /* AlertPhoto */,
 				839BCDF41F32CA6000B5CA88 /* ImagePicker */,
+				836989301F318778003E4D73 /* RNSRegistrationNameController.swift */,
 				830802AF1F7A5BD6008B496C /* RNSRegistrationNameController+KeyBoard.swift */,
 				836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */,
-				836989301F318778003E4D73 /* RNSRegistrationNameController.swift */,
 			);
 			path = Name;
 			sourceTree = "<group>";
