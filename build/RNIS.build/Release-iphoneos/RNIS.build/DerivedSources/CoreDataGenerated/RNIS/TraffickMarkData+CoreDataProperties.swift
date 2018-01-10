@@ -2,7 +2,7 @@
 //  TraffickMarkData+CoreDataProperties.swift
 //  
 //
-//  Created by Admin on 27.10.17.
+//  Created by Артем Кулагин on 10.01.2018.
 //
 //  This file was automatically generated and should not be edited.
 //

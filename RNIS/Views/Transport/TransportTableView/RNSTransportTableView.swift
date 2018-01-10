@@ -30,6 +30,8 @@ class RNSTransportTableView: BaseViewWithXIBInit {
         tableView.contentInset = UIEdgeInsetsMake(27, 0, 0, 0);
         prepareHandlers()
         prepareNotificationHandlers()
+        
+        loaderWay.backgroundColor = .blue
     }
     
     /// Функция подготовки блоков обновления избранного
@@ -63,18 +65,35 @@ class RNSTransportTableView: BaseViewWithXIBInit {
                 self?.prepareLostInet()
                 return
             }
+            
+            let items = reply as? [RNSRouteVariant]
+            if items?.count == 0 {
+                self?.prepareNoItems()
+                return
+            }
+            
             self?.clearError()
-            self?.prepareItems(reply as? [RNSRouteVariant])
+            self?.prepareItems(items)
         }
     }
     
     func prepareItems(_ items: [RNSRouteVariant]?) {
         self.items = items
         tableView.reloadData()
+       // prepareNoItemsIfNeed()
     }
     
     func prepareLostInet() {
         loaderWay.showCenterLostInet(self)
+        clearItems()
+    }
+    
+    func prepareNoItems() {
+        loaderWay.prepareTextTop(self,text:"Вы еще не добавляли свои маршруты")
+        clearItems()
+    }
+
+    func clearItems() {
         prepareItems(nil)
     }
     

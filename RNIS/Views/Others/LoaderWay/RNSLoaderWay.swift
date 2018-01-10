@@ -20,11 +20,15 @@ class RNSLoaderWay: RNSParentLoaderView {
         bottomConstraint.isActive = true
     }
     
+    func prepareTopLabel() {
+        bottomConstraint.isActive = false
+    }
+    
     func showCenterError(_ view: UIView?, frame: CGRect?, text: String? = nil) {
         if let frame = frame {
             showInView(view, frame: frame)
         } else {
-            showInView(view, frame: view?.bounds ?? CGRect())
+            showInViewBounds(view)
         }
         prepareCenterLabel()
         prepareText(text)
@@ -32,6 +36,16 @@ class RNSLoaderWay: RNSParentLoaderView {
     
     func showCenterLostInet(_ view: UIView?, frame: CGRect? = nil) {
         showCenterError(view, frame: frame, text: errorNetwork)
+    }
+    
+    func prepareTextTop(_ view: UIView?, text: String? = nil) {
+        showInViewBounds(view)
+        prepareTopLabel()
+        prepareText(text)
+    }
+    
+    func showInViewBounds(_ view: UIView?) {
+        showInView(view, frame: view?.bounds ?? CGRect())
     }
     
     override func animationShow() {

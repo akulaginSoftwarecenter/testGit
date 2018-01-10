@@ -22,13 +22,29 @@ extension RNSFavoritesBusView {
                 self?.prepareLostInet()
                 return
             }
+            
+            let items = reply as? [RNSFavoriteStopPoint]
+            if items?.count == 0 {
+                self?.prepareNoItems()
+                return
+            }
+            
             self?.clearError()
-            self?.prepareSections(reply as? [RNSFavoriteStopPoint])
+            self?.prepareSections(items)
         }
     }
     
     func prepareLostInet() {
         loaderWay.showCenterLostInet(self)
+        clearItems()
+    }
+    
+    func prepareNoItems() {
+        loaderWay.prepareTextTop(self,text:"Вы еще не добавляли транспорт в избранное")
+        clearItems()
+    }
+    
+    func clearItems() {
         prepareSections(nil)
     }
     
@@ -51,6 +67,7 @@ extension RNSFavoritesBusView {
             sections.append(TableSection(title: "Более 1 км", items: long))
         }
         tableView.reloadData()
+        //prepareNoItemsIfNeed()
     }
     
     /// Функция отображения остановок ТС
