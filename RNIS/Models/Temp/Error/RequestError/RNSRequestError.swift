@@ -34,7 +34,10 @@ class RNSRequestError<T: Mappable>: RNISMappableBase {
         
         if let data = data as? RNSTextErrorProtocol,
             let error = data.textError  {
-            textError += "," + error
+            if !textError.isEmpty {
+                textError += ","
+            }
+            textError += error
         }
         return textError
     }
