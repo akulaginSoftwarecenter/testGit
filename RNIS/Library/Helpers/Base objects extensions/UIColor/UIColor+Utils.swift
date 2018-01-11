@@ -96,7 +96,10 @@ extension UIColor {
         return #colorLiteral(red: 0.1529411765, green: 0.6823529412, blue: 0.3764705882, alpha: 1)
     }
     
-   
+    static var blackAlpha50: UIColor {
+        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
+    }
+    
     convenience init(_ red255: UInt, _ green255: UInt, _ blue255: UInt) {
         self.init(red255,green255,blue255,1)
     }

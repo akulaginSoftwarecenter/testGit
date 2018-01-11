@@ -20,11 +20,15 @@ class RNSLeftBackButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let image = #imageLiteral(resourceName: "chevronLeft").withRenderingMode(.alwaysOriginal)
+        let image = imageShevron.withRenderingMode(.alwaysOriginal)
         setImage(image, for: .normal)
 
         prepareConstraint()
         prepareDefaultAction()
+    }
+    
+    var imageShevron: UIImage {
+        return #imageLiteral(resourceName: "chevronLeft")
     }
     
     /// Настройка обработчика по-умолчанию

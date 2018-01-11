@@ -63,6 +63,7 @@
 		831B3ACD1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B3ACC1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift */; };
 		831B3AD01F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B3ACF1F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift */; };
 		831B3AD31F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B3AD21F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift */; };
+		831BE686200728D1000633A4 /* RNSLeftBackBlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BE685200728D1000633A4 /* RNSLeftBackBlackButton.swift */; };
 		831C2BBB1FAC60A2009F65E4 /* RNSWelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C2BBA1FAC60A2009F65E4 /* RNSWelcomeCell.swift */; };
 		831E425B1F4687070016C7D3 /* RNSOneBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */; };
 		831E425E1F4688B80016C7D3 /* RNSTwoBtnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E425D1F4688B80016C7D3 /* RNSTwoBtnAlert.swift */; };
@@ -747,6 +748,7 @@
 		831B3ACC1F83802A00C54BB3 /* RNSPostFavoritePathCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPostFavoritePathCreate.swift; sourceTree = "<group>"; };
 		831B3ACF1F8387CA00C54BB3 /* RNSFavoritePathCreatePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSFavoritePathCreatePayload.swift; sourceTree = "<group>"; };
 		831B3AD21F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPostFavoritePathDelete.swift; sourceTree = "<group>"; };
+		831BE685200728D1000633A4 /* RNSLeftBackBlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSLeftBackBlackButton.swift; sourceTree = "<group>"; };
 		831C052C1FD004C800A4C59D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		831C2BBA1FAC60A2009F65E4 /* RNSWelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSWelcomeCell.swift; sourceTree = "<group>"; };
 		831E425A1F4687070016C7D3 /* RNSOneBtnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSOneBtnAlert.swift; sourceTree = "<group>"; };
@@ -1666,6 +1668,14 @@
 				831B3AD21F8389AD00C54BB3 /* RNSPostFavoritePathDelete.swift */,
 			);
 			path = FavoritePathDelete;
+			sourceTree = "<group>";
+		};
+		831BE68420072571000633A4 /* Black */ = {
+			isa = PBXGroup;
+			children = (
+				831BE685200728D1000633A4 /* RNSLeftBackBlackButton.swift */,
+			);
+			path = Black;
 			sourceTree = "<group>";
 		};
 		831C2BB91FAC606F009F65E4 /* Cell */ = {
@@ -3981,6 +3991,7 @@
 		839BCDFE1F32E83800B5CA88 /* LeftBackButton */ = {
 			isa = PBXGroup;
 			children = (
+				831BE68420072571000633A4 /* Black */,
 				839BCDFF1F32E87700B5CA88 /* RNSLeftBackButton.swift */,
 			);
 			path = LeftBackButton;
@@ -5634,6 +5645,7 @@
 				836221AA1F43DED1005B49DA /* RNSAddressViewController.swift in Sources */,
 				8319C5B91F60E96B005A1768 /* RNSTextErrorProtocol.swift in Sources */,
 				836E91A91F58F8C2007CCF5A /* RNSMenuViewController+Handlers.swift in Sources */,
+				831BE686200728D1000633A4 /* RNSLeftBackBlackButton.swift in Sources */,
 				8344E1CF1F397F1B004A6F0C /* RNSRangeScroll.swift in Sources */,
 				837ABF021F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */,
 				835718A01F21AFE100DE5E25 /* RNSBuildRouteView.swift in Sources */,
