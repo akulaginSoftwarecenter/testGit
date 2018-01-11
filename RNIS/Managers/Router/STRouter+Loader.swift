@@ -16,6 +16,10 @@ extension STRouter {
         SVProgressHUD.show()
     }
     
+    static func showLoaderEnableUserInteraction() {
+        SVProgressHUD.show()
+    }
+    
     static func removeLoader() {
         SVProgressHUD.dismiss()
     }

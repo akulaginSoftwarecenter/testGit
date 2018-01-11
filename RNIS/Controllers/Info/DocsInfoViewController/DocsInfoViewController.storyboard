@@ -32,17 +32,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAy-9k-AcM">
-                                <rect key="frame" x="0.0" y="0.0" width="42" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="DlZ-0E-WRt"/>
-                                    <constraint firstAttribute="height" constant="97" id="mZK-rN-5pL"/>
-                                </constraints>
-                                <state key="normal" image="chevronLeft"/>
-                                <connections>
-                                    <action selector="actionBack:" destination="ceI-a8-wPb" eventType="touchUpInside" id="Fo3-VP-j1B"/>
-                                </connections>
-                            </button>
                             <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-tY-bq9">
                                 <rect key="frame" x="15" y="90" width="345" height="569"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -51,18 +40,22 @@
                                     <outlet property="delegate" destination="ceI-a8-wPb" id="gwO-d4-obq"/>
                                 </connections>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-AJ-3a9" customClass="RNSLeftBackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="25" y="20" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rQO-59-M1D" firstAttribute="top" secondItem="mVo-gT-Vin" secondAttribute="top" constant="38" id="1XS-uI-z4h"/>
                             <constraint firstAttribute="bottom" secondItem="7EJ-tY-bq9" secondAttribute="bottom" constant="8" id="Lss-IM-zsD"/>
                             <constraint firstItem="7EJ-tY-bq9" firstAttribute="leading" secondItem="mVo-gT-Vin" secondAttribute="leading" constant="15" id="Mzt-a1-g7K"/>
-                            <constraint firstItem="aAy-9k-AcM" firstAttribute="leading" secondItem="mVo-gT-Vin" secondAttribute="leading" priority="750" id="Tb3-jP-0I2"/>
                             <constraint firstAttribute="trailing" secondItem="7EJ-tY-bq9" secondAttribute="trailing" constant="15" id="Uel-74-re5"/>
-                            <constraint firstItem="rQO-59-M1D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aAy-9k-AcM" secondAttribute="trailing" constant="5" id="XQd-9h-WXX"/>
                             <constraint firstItem="7EJ-tY-bq9" firstAttribute="top" secondItem="mVo-gT-Vin" secondAttribute="top" constant="90" id="nyo-cD-ZmT"/>
                             <constraint firstItem="rQO-59-M1D" firstAttribute="centerX" secondItem="mVo-gT-Vin" secondAttribute="centerX" id="rsu-LZ-vIt"/>
-                            <constraint firstItem="aAy-9k-AcM" firstAttribute="top" secondItem="mVo-gT-Vin" secondAttribute="top" id="xJ7-SP-wxh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Docs" id="nMU-GN-Vjm"/>
@@ -73,10 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rva-9Q-4pW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2878" y="17"/>
+            <point key="canvasLocation" x="2877.5999999999999" y="16.641679160419791"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="chevronLeft" width="14" height="22"/>
-    </resources>
 </document>

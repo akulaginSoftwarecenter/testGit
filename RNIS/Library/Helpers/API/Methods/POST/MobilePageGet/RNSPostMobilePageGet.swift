@@ -40,7 +40,7 @@ class RNSPostMobilePageGet: RNSRequest {
             return
         }
         
-        STRouter.showLoader()
+        STRouter.showLoaderEnableUserInteraction()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             STRouter.removeLoader()
             self?.parseReply(AliasReply(reply: object))

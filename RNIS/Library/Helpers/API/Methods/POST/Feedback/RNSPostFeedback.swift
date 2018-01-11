@@ -29,7 +29,7 @@ class RNSPostFeedback: RNSRequest {
         self.complete = complete
         self.failure = failure
         
-        STRouter.showLoader()
+        STRouter.showLoaderEnableUserInteraction()
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             self?.checkError(error)
             STRouter.removeLoader()
