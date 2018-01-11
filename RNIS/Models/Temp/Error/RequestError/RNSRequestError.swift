@@ -12,6 +12,7 @@ import ObjectMapper
 class RNSRequestError<T: Mappable>: RNISMappableBase {
     var data: T?
     var text: String?
+    var code: String?
     
     convenience init?(reply: AnyObject?) {
         guard let dict = reply as? AliasDictionary else {
@@ -23,12 +24,20 @@ class RNSRequestError<T: Mappable>: RNISMappableBase {
     public override func mapping(map: Map) {
         data <- map["data"]
         text <- map["text"]
+        code <- map["code"]
+    }
+    
+    var isCodeValidation: Bool {
+        guard let code = code else {
+            return false
+        }
+        return code == "1-0-0-3"
     }
     
     var textError: String {
         var textError = ""
         
-        if let text = self.text {
+        if let text = self.text, !isCodeValidation {
             textError += text
         }
         
