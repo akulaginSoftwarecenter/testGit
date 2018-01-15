@@ -257,7 +257,11 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftContentOffset">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="actionDefault" value="NO"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionBack:" destination="b0S-Li-6J8" eventType="touchUpInside" id="20D-RZ-u0t"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Движение по маршруту" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR1-Oe-orj" customClass="RNSTopTitle" customModule="RNIS" customModuleProvider="target">
                                 <rect key="frame" x="137" y="21" width="71" height="21"/>
