@@ -35,6 +35,7 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
+        item?.new_phone = nil
         RNSPostUpdate(item, complete: { [weak self] _ in
             self?.login()
         }, failure: { [weak self] error in
