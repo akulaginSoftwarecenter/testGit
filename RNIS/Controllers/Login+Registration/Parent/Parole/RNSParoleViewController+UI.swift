@@ -38,7 +38,11 @@ extension RNSParoleViewController {
 
     /// Добавление кнопки "Далее" на клавиатуру полей
     func addDoneButtonOnKeyboard()  {
-        passwordOneField.addButtonOnKeyboard("Далее   ", target: passwordTwoField, action: #selector(UIResponder.becomeFirstResponder))
+        passwordOneField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(self.passworOneAction))
         passwordTwoField.addButtonOnKeyboard("Далее   ", target: self, action: #selector(self.loginPressed))
+    }
+    
+    @objc func passworOneAction() {
+        showFirstErrorAlert()
     }
 }

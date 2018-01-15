@@ -35,29 +35,36 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
     }
    
     override func loginPressed() {
-        if let error = fields.checkValidFields {
-            prepareError(error)
+        if showFirstErrorAlert() {
             return
         }
         
         if passwordOneField.text !=  passwordTwoField.text {
-            prepareError("Пароли не совпадают")
-            passwordOneField.setStateNotValid()
-            passwordTwoField.setStateNotValid()
+            passwordNoValidBecome("Пароли не совпадают")
             return
         }
         
         if let parent = self.parent as? RNSParoleContainerController,
             let phone = parent.item?.phone,
             phone == passwordOneField.text {
-            prepareError("Пароль не может полностью повторять логин")
-            passwordOneField.setStateNotValid()
-            passwordTwoField.setStateNotValid()
+            passwordNoValidBecome("Пароль не может полностью повторять логин")
             return
         }
         
         clearError()
         handlerBlackAction?()
+    }
+    
+    func passwordNoValidBecome(_ text: String?) {
+        prepareError(text) { [weak self] in
+            self?.passwordOneField.setStateNotValid()
+            self?.passwordTwoField.setStateNotValid()
+            self?.passwordTwoField.becomeFirstResponder()
+        }
+    }
+    
+    @discardableResult func showFirstErrorAlert() -> Bool {
+        return fields.showFirstErrorAlert
     }
     
     /// Очистка надписей для ошибок
@@ -66,7 +73,10 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
         prepareError(nil)
     }
     
-    func prepareError(_ error: String?) {
-        errorLabel.text = error
+    func prepareError(_ error: String?, handler: EmptyBlock? = nil) {
+        guard let error = error, !error.isEmpty else {
+            return
+        }
+        STAlertRouter.showOk(error, handler: handler)
     }
 }

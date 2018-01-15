@@ -38,6 +38,20 @@ extension Array where Element : RNSTextField {
         return errors
     }
     
+    var showFirstErrorAlert: Bool {
+        clearError()
+        for field in self {
+            if let text = field.errorText {
+                STAlertRouter.showOk(text) {
+                    field.setStateNotValid()
+                    field.becomeFirstResponder()
+                }
+                return true
+            }
+        }
+        return false
+    }
+    
     func clearError() {
         for field in self {
             field.setStateValid()
