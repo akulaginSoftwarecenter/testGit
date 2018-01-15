@@ -10,6 +10,7 @@ import UIKit
 import ObjectMapper
 
 class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
+    var mobile_user_name: [String]?
     var mobile_user_phone: [String]?
     var mobile_user_new_phone: [String]?
     var mobile_user_new_email: [String]?
@@ -27,6 +28,7 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
         
         favorite_path_data = map.JSON["favorite_path.data"] as? [String]
         favorite_path_name = map.JSON["favorite_path.name"] as? [String]
+        mobile_user_name = map.JSON["mobile_user.name"] as? [String]
     }
     
     var textError: String? {
@@ -46,6 +48,9 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
         }
         
         if let text = favorite_path_name?.first {
+            error += " " + text
+        }
+        if let text = mobile_user_name?.first {
             error += " " + text
         }
         return error
