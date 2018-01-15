@@ -25,7 +25,8 @@ extension RNSProfileViewController {
     /// - Parameter complete: блок завершения операции отправки
     func updateItem(email: String? = nil, _ complete: EmptyBlock? = nil) {
         STRouter.showLoader()
-        self.item?.new_email = email  // Remove new_email from update profile payload
+        item?.new_email = email  // Remove new_email from update profile payload
+        item?.new_phone = nil
         RNSPostUpdate(item, complete: { item in
             STRouter.removeLoader()
             RNSMenuManager.leftMenuUpdate()
