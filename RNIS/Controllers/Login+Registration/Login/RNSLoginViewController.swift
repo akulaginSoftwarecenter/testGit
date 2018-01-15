@@ -48,7 +48,7 @@ class RNSLoginViewController: UIViewController {
     func loginPressed() {
         
         if let error = fields.checkValidFields {
-            errorLabel.text = error
+            prepareError(error)
             return
         }
         clearError()
