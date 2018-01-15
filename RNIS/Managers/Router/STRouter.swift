@@ -48,7 +48,7 @@ class STRouter: NSObject {
     
     static func present(_ viewControllerToPresent:UIViewController?, animated: Bool = true, completion: EmptyBlock? = nil) {
         guard let viewControllerToPresent = viewControllerToPresent,
-            var vc:UIViewController = rootViewController else {
+            var vc:UIViewController = rootMain else {
             return
         }
         
