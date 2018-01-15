@@ -43,6 +43,9 @@ extension RNSParoleViewController {
     }
     
     @objc func passworOneAction() {
-        showFirstErrorAlert()
+        if showFirstErrorAlert() {
+            return
+        }
+        passwordTwoField.becomeFirstResponder()
     }
 }

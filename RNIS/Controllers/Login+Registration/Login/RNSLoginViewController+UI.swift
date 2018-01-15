@@ -48,13 +48,16 @@ extension RNSLoginViewController {
     ///
     /// - Parameter error: текст ошибки
     func  prepareError(_ error: String?) {
-        errorLabel.text = error
+        guard let error = error, !error.isEmpty else {
+            return
+        }
+        STAlertRouter.showOk(error)
     }
     
     /// Очистка надписей с ошибками
     func clearError() {
         fields.clearError()
-        errorLabel.text = nil
+        prepareError(nil)
     }
     
     /// Добавление на клавиатуру кнопки "Далее" для полей телефона и пароля
@@ -71,6 +74,9 @@ extension RNSLoginViewController {
     
     /// Событие нажатия кнопки "Далее" в поле телефона
     @objc func passwordNext() {
-         passwordField.becomeFirstResponder()
+        if showFirstErrorAlert() {
+            return
+        }
+        passwordField.becomeFirstResponder()
     }
 }

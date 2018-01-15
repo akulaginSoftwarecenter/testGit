@@ -46,9 +46,7 @@ class RNSLoginViewController: UIViewController {
     
     /// Событие нажатия на кнопку входа
     func loginPressed() {
-        
-        if let error = fields.checkValidFields {
-            prepareError(error)
+        if showFirstErrorAlert() {
             return
         }
         clearError()
@@ -67,5 +65,9 @@ class RNSLoginViewController: UIViewController {
         }, failure:{[weak self] (errorText) in
             self?.prepareError(errorText)
         })
+    }
+    
+    @discardableResult func showFirstErrorAlert() -> Bool {
+        return fields.showFirstErrorAlert
     }
 }
