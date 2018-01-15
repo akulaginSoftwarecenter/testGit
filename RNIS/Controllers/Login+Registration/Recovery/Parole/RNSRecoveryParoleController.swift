@@ -58,6 +58,6 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
     ///
     /// - Parameter error: текст ошибки
     func prepareError(_ error: String?) {
-        containerViewController?.errorLabel.text = error
+        containerViewController?.prepareError(error)
     }
 }

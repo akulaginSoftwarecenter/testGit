@@ -36,12 +36,12 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
    
     override func loginPressed() {
         if let error = fields.checkValidFields {
-            errorLabel.text = error
+            prepareError(error)
             return
         }
         
         if passwordOneField.text !=  passwordTwoField.text {
-            errorLabel.text = "Пароли не совпадают"
+            prepareError("Пароли не совпадают")
             passwordOneField.setStateNotValid()
             passwordTwoField.setStateNotValid()
             return
@@ -50,7 +50,7 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
         if let parent = self.parent as? RNSParoleContainerController,
             let phone = parent.item?.phone,
             phone == passwordOneField.text {
-            errorLabel.text = "Пароль не может полностью повторять логин"
+            prepareError("Пароль не может полностью повторять логин")
             passwordOneField.setStateNotValid()
             passwordTwoField.setStateNotValid()
             return
@@ -63,6 +63,10 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
     /// Очистка надписей для ошибок
     func clearError() {
         fields.clearError()
-        errorLabel.text = nil
+        prepareError(nil)
+    }
+    
+    func prepareError(_ error: String?) {
+        errorLabel.text = error
     }
 }
