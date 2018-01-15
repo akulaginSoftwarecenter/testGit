@@ -55,49 +55,4 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     func showLoader() {
         loaderView.showInView(self)
     }
-    
-    /// Функция обновления вида элементов экрана
-    func updateUI() {
-        showLoader()
-        RNSPostFavoritePathList {[weak self] (reply, error, _) in
-            self?.loaderView.remove()
-            if error?.isLostInet ?? false {
-                self?.prepareLostInet()
-                return
-            }
-            
-            let items = reply as? [RNSRouteVariant]
-            if items?.count == 0 {
-                self?.prepareNoItems()
-                return
-            }
-            
-            self?.clearError()
-            self?.prepareItems(items)
-        }
-    }
-    
-    func prepareItems(_ items: [RNSRouteVariant]?) {
-        self.items = items
-        tableView.reloadData()
-       // prepareNoItemsIfNeed()
-    }
-    
-    func prepareLostInet() {
-        loaderWay.showCenterLostInet(self)
-        clearItems()
-    }
-    
-    func prepareNoItems() {
-        loaderWay.prepareTextTop(self,text:"Вы еще не добавляли свои маршруты")
-        clearItems()
-    }
-
-    func clearItems() {
-        prepareItems(nil)
-    }
-    
-    func clearError() {
-        loaderWay.remove()
-    }
 }

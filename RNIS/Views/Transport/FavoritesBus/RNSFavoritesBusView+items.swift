@@ -18,8 +18,8 @@ extension RNSFavoritesBusView {
         loaderView.showInView(self)
         RNSPostFavoriteRouteList {[weak self] (reply, error, _) in
             self?.loaderView.remove()
-            if error?.isLostInet ?? false {
-                self?.prepareLostInet()
+            if error != nil {
+                self?.parseError(error)
                 return
             }
             
@@ -40,7 +40,7 @@ extension RNSFavoritesBusView {
     }
     
     func prepareNoItems() {
-        loaderWay.prepareTextTop(self,text:"Вы еще не добавляли транспорт в избранное")
+        prepareTextTop("Вы еще не добавляли транспорт в избранное")
         clearItems()
     }
     
@@ -50,6 +50,19 @@ extension RNSFavoritesBusView {
     
     func clearError() {
         loaderWay.remove()
+    }
+    
+    func parseError(_ error: NSError?) {
+        if error?.isLostInet ?? false {
+            prepareLostInet()
+        } else {
+            prepareTextTop(error?.domain)
+        }
+    }
+    
+    func prepareTextTop(_ text: String?) {
+        loaderWay.prepareTextTop(self,text: text)
+        clearItems()
     }
     
     /// Функция подготовки секций таблицы
