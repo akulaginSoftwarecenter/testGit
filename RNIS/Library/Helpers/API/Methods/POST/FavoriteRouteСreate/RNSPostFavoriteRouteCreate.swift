@@ -10,18 +10,20 @@ import UIKit
 
 class RNSPostFavoriteRouteCreate: RNSPostRequestMobileToken {
     
-    var item: RNSBusRouteTemp?
+    var busRoute: RNSBusRouteTemp?
+    var stop_point: RNSBusStop?
     var complete: EmptyBlock?
     
     typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
     
-    @discardableResult convenience init(_ item: RNSBusRouteTemp?, complete: EmptyBlock?) {
+    @discardableResult convenience init(_ busRoute: RNSBusRouteTemp?, stop_point: RNSBusStop?, complete: EmptyBlock?) {
         self.init()
         
-        guard let item = item else {
+        guard let busRoute = busRoute else {
             return
         }
-        self.item = item
+        self.busRoute = busRoute
+        self.stop_point = stop_point
         self.complete = complete
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
@@ -46,12 +48,12 @@ class RNSPostFavoriteRouteCreate: RNSPostRequestMobileToken {
     }
     
     override var payload: AliasDictionary {
-        guard let uuid = item?.uuid,
-            let number = item?.number else {
+        guard let stop_point_uuid = stop_point?.uuid,
+            let route_number = busRoute?.number else {
             return [:]
         }
-        return ["uuid": uuid,
-                "route_number": number]
+        return ["stop_point_uuid": stop_point_uuid,
+                "route_number": route_number]
     }
     
     override var subject: String {

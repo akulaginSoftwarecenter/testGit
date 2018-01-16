@@ -57,11 +57,11 @@ extension RNSBusStopDetailController {
     /// Добавление автобусного маршрута в избранное
     ///
     /// - Parameter item: модель автобусного маршрута
-    func updateFavorite(_ item: RNSBusRouteTemp?) {
+    func updateFavorite(_ busRoute: RNSBusRouteTemp?) {
         guard let item = item else {
             return
         }
-        RNSPostFavoriteRouteCreate(item) { [weak self] in
+        RNSPostFavoriteRouteCreate(busRoute, stop_point: item) { [weak self] in
             self?.removeLoader(true)
             self?.loadItems(true)
         }
