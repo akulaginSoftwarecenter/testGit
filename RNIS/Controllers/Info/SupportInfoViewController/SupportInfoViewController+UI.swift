@@ -21,7 +21,10 @@ extension SupportInfoViewController {
     }
      
     func prepareError(_ error: String?) {
-        errorLabel.text = error
+        guard let error = error, !error.isEmpty else {
+            return
+        }
+        STAlertRouter.showOk(error)
     }
     
     func prepareMessage() {

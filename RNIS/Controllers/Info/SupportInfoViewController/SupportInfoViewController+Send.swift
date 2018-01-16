@@ -39,7 +39,7 @@ extension SupportInfoViewController {
             return
         }
         if !InputFieldsValidator.isValidEmail(contact) {
-            prepareError(kErrorMail)
+            prepareError("Введите корректный адрес электронной почты")
             return
         }
         
