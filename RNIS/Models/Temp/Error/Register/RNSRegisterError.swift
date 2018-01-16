@@ -33,25 +33,20 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
     
     var textError: String? {
         var error = ""
-        if let text = mobile_user_phone?.first {
-            error += " " + text
-        }
-        if let text = mobile_user_new_phone?.first {
-            error += " " + text
-        }
-        if let text = mobile_user_new_email?.first {
-            error += " " + text
-        }
-        
-        if let text = favorite_path_data?.first {
-            error += " " + text
-        }
-        
-        if let text = favorite_path_name?.first {
-            error += " " + text
-        }
-        if let text = mobile_user_name?.first {
-            error += " " + text
+        let items = [mobile_user_phone,
+                     mobile_user_new_phone,
+                     mobile_user_new_email,
+                     favorite_path_data,
+                     favorite_path_name,
+                     mobile_user_name]
+        items.forEach {
+            guard let text = $0?.first else {
+                return
+            }
+            if !error.isEmpty {
+                error += ", "
+            }
+            error += text
         }
         return error
     }

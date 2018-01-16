@@ -74,10 +74,9 @@ class RNSPhoneContainerController: STContainerViewController {
     ///
     /// - Parameter error: текст ошибки
     func prepareError(_ error: String?) {
-        containerViewController?.errorLabel.text = error
+        containerViewController?.prepareError(error)
     }
-    
-    
+     
     override class var storyboardName: String {
         return kPhoneVC
     }

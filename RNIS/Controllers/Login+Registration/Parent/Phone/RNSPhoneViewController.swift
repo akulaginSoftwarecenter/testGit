@@ -30,8 +30,7 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
 
     /// Событие нажатия на кнопку перехода к следующему шагу
     override func loginPressed() {
-        if let error = fields.checkValidFields {
-            errorLabel.text = error
+        if fields.showFirstErrorAlert {
             return
         }
         clearError()
@@ -46,6 +45,13 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
     /// Метод очистки надписей с ошибками
     func clearError() {
         fields.clearError()
-        errorLabel.text = nil
+        prepareError(nil)
+    }
+    
+    func prepareError(_ error: String?) {
+        guard let error = error, !error.isEmpty else {
+            return
+        }
+        STAlertRouter.showOk(error)
     }
 }
