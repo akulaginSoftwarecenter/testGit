@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Email View Controller-->
+        <scene sceneID="OJX-5t-NSZ">
+            <objects>
+                <viewController id="jjN-GA-3Xl" customClass="RNSEmailViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VO1-m6-Yvk"/>
+                        <viewControllerLayoutGuide type="bottom" id="8nb-ch-CC9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Z3-kS-qjn" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iT5-dX-k01" customClass="RNSGrayBackMainButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="602" width="375" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="ISI-On-5Z8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Вернуться к экрану приветствия"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLX-zo-tf9" customClass="RNSEmailField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="288.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите E-mail"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYK-rc-XHM">
+                                <rect key="frame" x="30" y="338.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iT5-dX-k01" secondAttribute="trailing" id="8NN-PQ-faw"/>
+                            <constraint firstAttribute="trailing" secondItem="rLX-zo-tf9" secondAttribute="trailing" constant="30" id="Dpg-3J-G3i"/>
+                            <constraint firstItem="rLX-zo-tf9" firstAttribute="centerY" secondItem="4Z3-kS-qjn" secondAttribute="centerY" constant="-30" id="GGe-lf-6aL"/>
+                            <constraint firstAttribute="trailing" secondItem="oYK-rc-XHM" secondAttribute="trailing" constant="30" id="GXd-ra-BM9"/>
+                            <constraint firstItem="rLX-zo-tf9" firstAttribute="leading" secondItem="4Z3-kS-qjn" secondAttribute="leading" constant="30" id="cAq-cQ-kZS"/>
+                            <constraint firstItem="iT5-dX-k01" firstAttribute="leading" secondItem="4Z3-kS-qjn" secondAttribute="leading" id="cKb-hP-ZP9"/>
+                            <constraint firstAttribute="bottom" secondItem="iT5-dX-k01" secondAttribute="bottom" constant="3" id="ecS-W6-wrH"/>
+                            <constraint firstItem="oYK-rc-XHM" firstAttribute="leading" secondItem="4Z3-kS-qjn" secondAttribute="leading" constant="30" id="gjl-T4-imU"/>
+                            <constraint firstItem="oYK-rc-XHM" firstAttribute="top" secondItem="rLX-zo-tf9" secondAttribute="bottom" constant="20" id="zLb-0F-YSI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oEw-e0-an5"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Далее"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="iT5-dX-k01" id="ejb-m4-niF"/>
+                        <outlet property="coverView" destination="4Z3-kS-qjn" id="GBv-fQ-jEx"/>
+                        <outlet property="emailField" destination="rLX-zo-tf9" id="xpp-sa-P2p"/>
+                        <outlet property="errorLabel" destination="oYK-rc-XHM" id="MRu-Bg-hsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJk-yz-Y1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.40000000000001" y="-183.05847076461771"/>
+        </scene>
+        <!--Registration Email Controller-->
+        <scene sceneID="2dd-yO-FWU">
+            <objects>
+                <viewController storyboardIdentifier="RNSRegistrationEmailController" id="dN7-Xa-ERe" customClass="RNSRegistrationEmailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="pB3-ky-kCx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="jjN-GA-3Xl" kind="embed" identifier="" id="kdb-5C-wGx"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jg-Lc-W8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-814" y="-977"/>
+        </scene>
+    </scenes>
+</document>

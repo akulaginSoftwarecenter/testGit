@@ -35,6 +35,12 @@ class RNSUserPayload: RNISMappableBase {
         self.phone = phone
     }
     
+    convenience init(email: String?) {
+        self.init()
+   
+        self.email = email
+    }
+    
     public override func mapping(map: Map) {
         is_phone_activated <- map["is_phone_activated"]
         phone <- map["phone"]

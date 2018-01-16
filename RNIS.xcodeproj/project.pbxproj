@@ -103,6 +103,10 @@
 		83204B5E1F5924800033ACA1 /* StrelkaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B5D1F5924800033ACA1 /* StrelkaViewController.swift */; };
 		83204B601F5924A30033ACA1 /* StrelkaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83204B5F1F5924A30033ACA1 /* StrelkaViewController.storyboard */; };
 		83207A60200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83207A5F200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift */; };
+		83207A64200DFF8C003E9879 /* RNSEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83207A63200DFF8C003E9879 /* RNSEmailViewController.swift */; };
+		83207A66200E0103003E9879 /* RNSEmailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83207A65200E0103003E9879 /* RNSEmailViewController.storyboard */; };
+		83207A68200E045F003E9879 /* RNSEmailContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83207A67200E045F003E9879 /* RNSEmailContainerController.swift */; };
+		83207A6A200E08A3003E9879 /* RNSRegistrationEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83207A69200E08A3003E9879 /* RNSRegistrationEmailController.swift */; };
 		8321D67D1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */; };
 		8321D6821F4D358B0022EE1C /* RNSRoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */; };
 		8321D6841F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */; };
@@ -791,6 +795,10 @@
 		83204B5D1F5924800033ACA1 /* StrelkaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrelkaViewController.swift; sourceTree = "<group>"; };
 		83204B5F1F5924A30033ACA1 /* StrelkaViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StrelkaViewController.storyboard; sourceTree = "<group>"; };
 		83207A5F200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSBusStopDetailController+Favorite.swift"; sourceTree = "<group>"; };
+		83207A63200DFF8C003E9879 /* RNSEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSEmailViewController.swift; sourceTree = "<group>"; };
+		83207A65200E0103003E9879 /* RNSEmailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RNSEmailViewController.storyboard; sourceTree = "<group>"; };
+		83207A67200E045F003E9879 /* RNSEmailContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSEmailContainerController.swift; sourceTree = "<group>"; };
+		83207A69200E08A3003E9879 /* RNSRegistrationEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSRegistrationEmailController.swift; sourceTree = "<group>"; };
 		8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSRouteVariant+RoadOff.swift"; sourceTree = "<group>"; };
 		8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRoadOff.swift; sourceTree = "<group>"; };
 		8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSPageRouteController+MapView.swift"; sourceTree = "<group>"; };
@@ -1944,6 +1952,24 @@
 				83204B5F1F5924A30033ACA1 /* StrelkaViewController.storyboard */,
 			);
 			path = Strelka;
+			sourceTree = "<group>";
+		};
+		83207A61200DFDE1003E9879 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				83207A69200E08A3003E9879 /* RNSRegistrationEmailController.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		83207A62200DFE0F003E9879 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				83207A67200E045F003E9879 /* RNSEmailContainerController.swift */,
+				83207A65200E0103003E9879 /* RNSEmailViewController.storyboard */,
+				83207A63200DFF8C003E9879 /* RNSEmailViewController.swift */,
+			);
+			path = Email;
 			sourceTree = "<group>";
 		};
 		8321D67E1F4D34E90022EE1C /* Polylines */ = {
@@ -3587,6 +3613,7 @@
 		837ABF2C1F2EF2E700AB5E54 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				83207A61200DFDE1003E9879 /* Email */,
 				838707D91F3025290094B273 /* Phone */,
 				838707F51F303C8B0094B273 /* Code */,
 				836989151F3172C1003E4D73 /* Parole */,
@@ -3603,6 +3630,7 @@
 				836989271F31839E003E4D73 /* Cover */,
 				836989081F316B2E003E4D73 /* Parole */,
 				838707E11F30257F0094B273 /* Phone */,
+				83207A62200DFE0F003E9879 /* Email */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -5003,6 +5031,7 @@
 				83A53F8D1F4A999F00938969 /* RNSPageRouteCell.xib in Resources */,
 				8369890C1F316B9C003E4D73 /* RNSParoleViewController.storyboard in Resources */,
 				8326AA441F1F6A1C00F893C8 /* mainFont.otf in Resources */,
+				83207A66200E0103003E9879 /* RNSEmailViewController.storyboard in Resources */,
 				8357187A1F21A2A500DE5E25 /* RNSLaunchViewController.storyboard in Resources */,
 				832E4B7F1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */,
 				8356BE4F1F3D451F00560623 /* RNSCircleHole.xib in Resources */,
@@ -5141,8 +5170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				837857EE1F4E700A009DEA26 /* RNSLoginError.swift in Sources */,
+				83207A6A200E08A3003E9879 /* RNSRegistrationEmailController.swift in Sources */,
 				831A85951F413E370095F006 /* RNSSearchViewController+Action.swift in Sources */,
 				838EF3901FDFC71F0008E771 /* RNSCasheManager.swift in Sources */,
+				83207A64200DFF8C003E9879 /* RNSEmailViewController.swift in Sources */,
 				831A85AE1F4148440095F006 /* RNSTextItem.swift in Sources */,
 				838B3B2B1F7B5B88003096F1 /* RNSLeftMenuController+Profile.swift in Sources */,
 				8356BE5F1F3D8B4700560623 /* RNSBusDetailController+Observe.swift in Sources */,
@@ -5563,6 +5594,7 @@
 				830E68AE1F5514DE008EFA02 /* RNSPinDuration.swift in Sources */,
 				83281CEF1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift in Sources */,
 				8326AA3E1F1F643E00F893C8 /* UIButton+Utils.swift in Sources */,
+				83207A68200E045F003E9879 /* RNSEmailContainerController.swift in Sources */,
 				835A31221F4D21D100F83BE2 /* RNSRoutePoint.swift in Sources */,
 				831E6F261F72784500122C4D /* RNSPageRoutePopupController+RouteDetail.swift in Sources */,
 				83281CFF1FC6987B00DAEC5B /* RNSSearchView.swift in Sources */,

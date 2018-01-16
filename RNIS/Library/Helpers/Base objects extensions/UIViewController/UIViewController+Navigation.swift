@@ -25,14 +25,6 @@ extension UIViewController {
     func pushAnimatedImageScroll() {
         STRouter.pushAnimatedImageScroll(self)
     }
-   
-    static func initialPushAnimatedRed() {
-        initialController?.pushAnimatedRed()
-    }
-    
-    static func initialPushAnimatedRedScroll() {
-        initialController?.pushAnimatedRedScroll()
-    }
     
     func pushAnimatedRed() {
         STRouter.pushAnimatedRed(self)
@@ -45,5 +37,17 @@ extension UIViewController {
     func push(_ animated: Bool = false,
               completion: EmptyBlock? = nil) {
         STRouter.push(self, animated: animated, completion: completion)
+    }
+    
+    static func controllerPush() {
+        controller?.push()
+    }
+    
+    static func initialPushAnimatedRed() {
+        initialController?.pushAnimatedRed()
+    }
+    
+    static func initialPushAnimatedRedScroll() {
+        initialController?.pushAnimatedRedScroll()
     }
 }
