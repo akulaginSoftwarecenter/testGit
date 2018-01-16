@@ -11,14 +11,16 @@ import UIKit
 class RNSPostFavoriteRouteDelete: RNSPostRequestMobileToken {
     
     var route_number: String?
+    var stop_point_uuid: String?
     var complete: EmptyBlock?
     
     typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
     
-    @discardableResult convenience init(_ route_number: String?, complete: EmptyBlock?) {
+    @discardableResult convenience init(_ route_number: String?, stop_point_uuid: String?, complete: EmptyBlock?) {
         self.init()
         
         self.route_number = route_number
+        self.stop_point_uuid = stop_point_uuid
         self.complete = complete
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
@@ -43,10 +45,12 @@ class RNSPostFavoriteRouteDelete: RNSPostRequestMobileToken {
     }
     
     override var payload: AliasDictionary {
-        guard let route_number = route_number else {
+        guard let route_number = route_number,
+            let stop_point_uuid = stop_point_uuid else {
                 return [:]
         }
-        return ["route_number": route_number]
+        return ["route_number": route_number,
+                "stop_point_uuid": stop_point_uuid]
     }
     
     override var subject: String {

@@ -102,6 +102,7 @@
 		83204B5A1F59239C0033ACA1 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83204B591F59239C0033ACA1 /* SettingsViewController.storyboard */; };
 		83204B5E1F5924800033ACA1 /* StrelkaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83204B5D1F5924800033ACA1 /* StrelkaViewController.swift */; };
 		83204B601F5924A30033ACA1 /* StrelkaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83204B5F1F5924A30033ACA1 /* StrelkaViewController.storyboard */; };
+		83207A60200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83207A5F200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift */; };
 		8321D67D1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */; };
 		8321D6821F4D358B0022EE1C /* RNSRoadOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */; };
 		8321D6841F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */; };
@@ -789,6 +790,7 @@
 		83204B591F59239C0033ACA1 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		83204B5D1F5924800033ACA1 /* StrelkaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrelkaViewController.swift; sourceTree = "<group>"; };
 		83204B5F1F5924A30033ACA1 /* StrelkaViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StrelkaViewController.storyboard; sourceTree = "<group>"; };
+		83207A5F200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSBusStopDetailController+Favorite.swift"; sourceTree = "<group>"; };
 		8321D67C1F4D33950022EE1C /* RNSRouteVariant+RoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSRouteVariant+RoadOff.swift"; sourceTree = "<group>"; };
 		8321D6811F4D358B0022EE1C /* RNSRoadOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRoadOff.swift; sourceTree = "<group>"; };
 		8321D6831F4D3BF40022EE1C /* RNSPageRouteController+MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSPageRouteController+MapView.swift"; sourceTree = "<group>"; };
@@ -2729,6 +2731,7 @@
 				831FDD8F1F59683C004D69FB /* RNSBusStopDetailController+Observe.swift */,
 				836EEF081F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift */,
 				833D6C1E1F7CC5A400C4A0F3 /* RNSBusStopDetailController+UpdateData.swift */,
+				83207A5F200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift */,
 				836277E31F382E97009FB712 /* RNSBusStopDetailController.storyboard */,
 			);
 			path = BusStopDetail;
@@ -5300,6 +5303,7 @@
 				83D713881F5D0E79005206C5 /* RNSDotsBussVertical.swift in Sources */,
 				836EEF091F3BFF15007631D9 /* RNSBusStopDetailController+TableView.swift in Sources */,
 				839BCDF81F32D44800B5CA88 /* RNSProfilePhoto+ImagePicker.swift in Sources */,
+				83207A60200DEACE003E9879 /* RNSBusStopDetailController+Favorite.swift in Sources */,
 				83B2E07E1F1E139800FA92A4 /* AlamofirePagedAPI.swift in Sources */,
 				83A5C70F1F581636006C8D62 /* RNSDutyViewController+UI.swift in Sources */,
 				837F71971F45365100DEAA36 /* RNSPinAddress.swift in Sources */,

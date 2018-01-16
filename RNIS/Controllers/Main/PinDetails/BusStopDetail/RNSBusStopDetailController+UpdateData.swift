@@ -53,20 +53,6 @@ extension RNSBusStopDetailController {
     func prepareTitle() {
         titleLabel.text = item?.name
     }
-    
-    /// Добавление автобусного маршрута в избранное
-    ///
-    /// - Parameter item: модель автобусного маршрута
-    func updateFavorite(_ busRoute: RNSBusRouteTemp?) {
-        guard let item = item else {
-            return
-        }
-        RNSPostFavoriteRouteCreate(busRoute, stop_point: item) { [weak self] in
-            self?.removeLoader(true)
-            self?.loadItems(true)
-        }
-        showLoader(true)
-    }
 
     func updateNotification(_ busRoute: RNSBusRouteTemp?) {
         guard let item = item, let busRoute = busRoute else {
