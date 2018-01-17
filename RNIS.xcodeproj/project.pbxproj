@@ -61,6 +61,7 @@
 		831922B9200F023900661A32 /* RNSLoginEmailViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922B8200F023900661A32 /* RNSLoginEmailViewController+Action.swift */; };
 		831922BB200F030E00661A32 /* RNSLoginEmailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831922BA200F030E00661A32 /* RNSLoginEmailViewController.storyboard */; };
 		831922BE200F05C600661A32 /* RNSPostLoginEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922BD200F05C600661A32 /* RNSPostLoginEmail.swift */; };
+		831922C1200F0A6000661A32 /* RNSRegistrationCodeEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922C0200F0A6000661A32 /* RNSRegistrationCodeEmailController.swift */; };
 		8319412C1FB439C4003EC18D /* RNSPinDuration+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319412B1FB439C4003EC18D /* RNSPinDuration+Icon.swift */; };
 		8319C5B31F60E026005A1768 /* RNSPostRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B21F60E026005A1768 /* RNSPostRegister.swift */; };
 		8319C5B61F60E4BD005A1768 /* RNSRegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */; };
@@ -768,6 +769,7 @@
 		831922B8200F023900661A32 /* RNSLoginEmailViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSLoginEmailViewController+Action.swift"; sourceTree = "<group>"; };
 		831922BA200F030E00661A32 /* RNSLoginEmailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RNSLoginEmailViewController.storyboard; sourceTree = "<group>"; };
 		831922BD200F05C600661A32 /* RNSPostLoginEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPostLoginEmail.swift; sourceTree = "<group>"; };
+		831922C0200F0A6000661A32 /* RNSRegistrationCodeEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSRegistrationCodeEmailController.swift; sourceTree = "<group>"; };
 		8319412B1FB439C4003EC18D /* RNSPinDuration+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSPinDuration+Icon.swift"; sourceTree = "<group>"; };
 		8319C5B21F60E026005A1768 /* RNSPostRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostRegister.swift; sourceTree = "<group>"; };
 		8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRegisterError.swift; sourceTree = "<group>"; };
@@ -1697,6 +1699,14 @@
 				831922BD200F05C600661A32 /* RNSPostLoginEmail.swift */,
 			);
 			path = LoginEmail;
+			sourceTree = "<group>";
+		};
+		831922BF200F0A2700661A32 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				831922C0200F0A6000661A32 /* RNSRegistrationCodeEmailController.swift */,
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 		8319C5B11F60DFBE005A1768 /* Register */ = {
@@ -3768,6 +3778,7 @@
 			isa = PBXGroup;
 			children = (
 				83207A61200DFDE1003E9879 /* Email */,
+				831922BF200F0A2700661A32 /* Code */,
 				836989151F3172C1003E4D73 /* Parole */,
 				8369892F1F318744003E4D73 /* Name */,
 				831922A2200EF7C100661A32 /* Old */,
@@ -5345,6 +5356,7 @@
 				83674FDC1F56CB2700F0A2C0 /* RNSMoveMapViewController.swift in Sources */,
 				830D157A1F5552CD00DF683E /* RNSRouteTable.swift in Sources */,
 				837ABF151F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */,
+				831922C1200F0A6000661A32 /* RNSRegistrationCodeEmailController.swift in Sources */,
 				839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */,
 				837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */,
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,

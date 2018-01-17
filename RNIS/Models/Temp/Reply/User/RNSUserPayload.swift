@@ -38,7 +38,6 @@ class RNSUserPayload: RNISMappableBase {
     
     convenience init(email: String?) {
         self.init()
-   
         self.email = email
     }
     

@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Registration Code Controller-->
+        <!--Registration Code Email Controller-->
         <scene sceneID="K9l-fo-1bU">
             <objects>
-                <viewController storyboardIdentifier="RNSRegistrationCodeController" id="E0t-Ch-tgU" customClass="RNSRegistrationCodeController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RNSRegistrationCodeEmailController" id="E0t-Ch-tgU" customClass="RNSRegistrationCodeEmailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <containerView key="view" opaque="NO" contentMode="scaleToFill" id="zF8-Ip-9UR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -188,6 +188,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Hyz-1h-daq"/>
+        <segue reference="df4-Dh-qdW"/>
     </inferredMetricsTieBreakers>
 </document>
