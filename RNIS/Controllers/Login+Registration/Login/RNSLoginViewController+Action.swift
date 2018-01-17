@@ -16,14 +16,14 @@ extension RNSLoginViewController {
     
     /// Событие нажатия на кнопку "Регистрация"
     @IBAction func registrationAction(_ sender: Any) {
-        push(RNSRegistrationEmailController.controller)
-        //push(RNSRegistrationPhoneController.controller)
+        //push(RNSRegistrationEmailController.controller)
+        push(RNSRegistrationPhoneController.controller)
     }
     
     /// Событие нажатия на кнопку восстановления пароля
     @IBAction func recoveryAction(_ sender: Any) {
-        push(RNSRecoveryEmailController.controller)
-       // push(RNSRecoveryPhoneController.controller)
+        //push(RNSRecoveryEmailController.controller)
+        push(RNSRecoveryPhoneController.controller)
     }
     
     /// Событие перехода в другой контроллер
