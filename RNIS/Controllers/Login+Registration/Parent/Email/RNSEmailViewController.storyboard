@@ -113,8 +113,24 @@
             </objects>
             <point key="canvasLocation" x="-42" y="-985"/>
         </scene>
+        <!--Change Email Controller-->
+        <scene sceneID="pjf-jQ-vi5">
+            <objects>
+                <viewController storyboardIdentifier="RNSChangeEmailController" id="mSq-Dz-p68" customClass="RNSChangeEmailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="RoH-Ev-I5U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="jjN-GA-3Xl" kind="embed" id="c2G-JI-KgC"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efm-RG-da6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="-985"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0k8-CD-vT2"/>
+        <segue reference="c2G-JI-KgC"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -47,6 +47,13 @@ extension RNSProfileViewController {
             RNSMenuManager.showLeftMenu()
         }
     }
+    
+    @IBAction func actionEmail(_ sender: Any) {
+        checkExit {
+            let container = STRouter.imageScrollContainer(RNSChangeEmailController.controller)
+            STRouter.pushMain(container)
+        }
+    }
       
     /// Настройка кнопки выхода
     func prepareBlackButton() {

@@ -19,6 +19,7 @@ enum TypeTitle: String {
     case registration = "Регистрация"
     case recovery = "Восстановление пароля"
     case change = "Сменить номер"
+    case changeEmail = "Сменить email"
     case none = ""
 }
 

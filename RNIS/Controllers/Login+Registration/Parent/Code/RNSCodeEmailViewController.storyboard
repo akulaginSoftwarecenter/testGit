@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="-106" y="-901"/>
         </scene>
-        <!--Change Code Controller-->
+        <!--Change Code Email Controller-->
         <scene sceneID="S7O-YB-zh8">
             <objects>
-                <viewController storyboardIdentifier="RNSChangeCodeController" id="3TY-w7-lqy" customClass="RNSChangeCodeController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RNSChangeCodeEmailController" id="3TY-w7-lqy" customClass="RNSChangeCodeEmailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
                     <containerView key="view" opaque="NO" contentMode="scaleToFill" id="pkL-7D-lcl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -188,6 +188,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="df4-Dh-qdW"/>
+        <segue reference="YUa-3A-svB"/>
     </inferredMetricsTieBreakers>
 </document>
