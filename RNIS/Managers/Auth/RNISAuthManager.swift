@@ -31,7 +31,7 @@ class RNISAuthManager {
         UserDefaults.removeLogin()
         UserDefaults.removePassword()
     }
-    
+
     /// Функция авторизации в приложении
     static func login(_ login: String?, password: String?, success: EmptyBlock?, failure: AliasStringBlock?) {
         STRouter.showLoader()
@@ -42,6 +42,19 @@ class RNISAuthManager {
             }, failure: { (errorText) in
                 STRouter.removeLoader()
                 failure?(errorText)
+        })
+    }
+    
+    /// Функция авторизации в приложении
+    static func loginEmail(_ email: String?, password: String?, success: EmptyBlock?, failure: AliasStringBlock?) {
+        STRouter.showLoader()
+        RNSPostLoginEmail(email, password: password, complete: {
+            STRouter.removeLoader()
+            success?()
+            RNSMenuManager.leftMenuUpdate()
+        }, failure: { (errorText) in
+            STRouter.removeLoader()
+            failure?(errorText)
         })
     }
 }

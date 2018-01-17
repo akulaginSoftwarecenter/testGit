@@ -25,7 +25,7 @@ extension STRouter {
     }
  
     static func showLogin(animated: Bool = true) {
-        guard let vc = RNSLoginViewController.controller else {
+        guard let vc = RNSLoginEmailViewController.controller else {
             return
         }
         let container = imageBoardContainer(vc)

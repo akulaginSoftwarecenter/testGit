@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login Email View Controller-->
+        <scene sceneID="mje-lh-t3w">
+            <objects>
+                <viewController storyboardIdentifier="RNSLoginEmailViewController" id="yO6-rz-4lQ" customClass="RNSLoginEmailViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qBV-LU-VPm"/>
+                        <viewControllerLayoutGuide type="bottom" id="RhA-N0-EQs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3VM-8r-Bir" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-qG-UUP" customClass="RNSEmailField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="288.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите E-mail"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kz3-13-bXv" customClass="STPasswordField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="373.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите пароль"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextNoValid" value="Пароль слишком короткий"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="yO6-rz-4lQ" id="hkS-JO-YMy"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtd-ID-BRd">
+                                <rect key="frame" x="30" y="602" width="106" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="7mN-Fr-mHS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <state key="normal" title="Регистрация">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registrationAction:" destination="yO6-rz-4lQ" eventType="touchUpInside" id="b6g-Bj-Gpt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sL-m0-Ipr">
+                                <rect key="frame" x="206" y="602" width="139" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="I9f-lt-P5F"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="h5E-hc-KNU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="24"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recoveryAction:" destination="yO6-rz-4lQ" eventType="touchUpInside" id="3VE-dM-GtW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rN0-de-5md">
+                                <rect key="frame" x="30" y="423.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prD-yu-Zwq" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="192.5" y="539" width="152.5" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="MOv-jb-ehI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Войти"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wge-Vh-h31" customClass="RNSBlackButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="539" width="152.5" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="aTy-JG-AcU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Назад"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rN0-de-5md" firstAttribute="top" secondItem="kz3-13-bXv" secondAttribute="bottom" constant="20" id="4cm-s6-R4m"/>
+                            <constraint firstItem="kz3-13-bXv" firstAttribute="bottom" secondItem="mNI-qG-UUP" secondAttribute="bottom" constant="85" id="5mF-HH-eVa"/>
+                            <constraint firstItem="prD-yu-Zwq" firstAttribute="leading" secondItem="3VM-8r-Bir" secondAttribute="centerX" constant="5" id="AYn-5E-5DV"/>
+                            <constraint firstAttribute="trailing" secondItem="mNI-qG-UUP" secondAttribute="trailing" constant="30" id="BBC-TP-Xrr"/>
+                            <constraint firstAttribute="trailing" secondItem="1sL-m0-Ipr" secondAttribute="trailing" constant="30" id="BCu-7F-yhH"/>
+                            <constraint firstAttribute="bottom" secondItem="Wge-Vh-h31" secondAttribute="bottom" constant="65" id="Fjz-3F-mTm"/>
+                            <constraint firstItem="RhA-N0-EQs" firstAttribute="top" secondItem="dtd-ID-BRd" secondAttribute="bottom" constant="3" id="HhY-uN-9Qy"/>
+                            <constraint firstItem="dtd-ID-BRd" firstAttribute="leading" secondItem="3VM-8r-Bir" secondAttribute="leading" constant="30" id="OU4-cX-jNj"/>
+                            <constraint firstAttribute="trailing" secondItem="rN0-de-5md" secondAttribute="trailing" constant="30" id="OsL-KV-FXt"/>
+                            <constraint firstItem="RhA-N0-EQs" firstAttribute="top" secondItem="1sL-m0-Ipr" secondAttribute="bottom" constant="3" id="PgU-bo-L9Z"/>
+                            <constraint firstAttribute="centerX" secondItem="Wge-Vh-h31" secondAttribute="trailing" constant="5" id="Q6S-Rj-DxX"/>
+                            <constraint firstItem="Wge-Vh-h31" firstAttribute="leading" secondItem="3VM-8r-Bir" secondAttribute="leading" constant="30" id="STy-LM-B2T"/>
+                            <constraint firstAttribute="trailing" secondItem="kz3-13-bXv" secondAttribute="trailing" constant="30" id="ai2-ez-265"/>
+                            <constraint firstAttribute="trailing" secondItem="prD-yu-Zwq" secondAttribute="trailing" constant="30" id="b6e-Xj-P6q"/>
+                            <constraint firstAttribute="bottom" secondItem="1sL-m0-Ipr" secondAttribute="bottom" constant="3" id="bSK-25-8oT"/>
+                            <constraint firstItem="mNI-qG-UUP" firstAttribute="leading" secondItem="3VM-8r-Bir" secondAttribute="leading" constant="30" id="fNm-mz-VkN"/>
+                            <constraint firstItem="mNI-qG-UUP" firstAttribute="centerY" secondItem="3VM-8r-Bir" secondAttribute="centerY" constant="-30" id="i0E-kt-0Rw"/>
+                            <constraint firstItem="rN0-de-5md" firstAttribute="leading" secondItem="3VM-8r-Bir" secondAttribute="leading" constant="30" id="lBg-co-ecZ"/>
+                            <constraint firstAttribute="bottom" secondItem="prD-yu-Zwq" secondAttribute="bottom" constant="65" id="mTG-Jo-kDQ"/>
+                            <constraint firstItem="kz3-13-bXv" firstAttribute="leading" secondItem="3VM-8r-Bir" secondAttribute="leading" constant="30" id="w6H-q6-N4N"/>
+                            <constraint firstAttribute="bottom" secondItem="dtd-ID-BRd" secondAttribute="bottom" constant="3" id="yQn-Z8-lr5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yt2-nA-jCP"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleTextTop" value="Авторизация"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Войти"/>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PgU-bo-L9Z"/>
+                                <exclude reference="HhY-uN-9Qy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="hsb-aK-ML7"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="Wge-Vh-h31" id="aHb-NE-Zub"/>
+                        <outlet property="errorLabel" destination="rN0-de-5md" id="uzg-os-Xdj"/>
+                        <outlet property="loginButton" destination="prD-yu-Zwq" id="uN3-Aa-eCd"/>
+                        <outlet property="loginField" destination="mNI-qG-UUP" id="VYr-Rq-gFJ"/>
+                        <outlet property="loginView" destination="3VM-8r-Bir" id="QHJ-gb-biG"/>
+                        <outlet property="passwordField" destination="kz3-13-bXv" id="Pn0-HT-AWx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsY-Nj-Un3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="115"/>
+        </scene>
+    </scenes>
+</document>
