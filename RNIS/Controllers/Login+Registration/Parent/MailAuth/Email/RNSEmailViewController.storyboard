@@ -97,5 +97,24 @@
             </objects>
             <point key="canvasLocation" x="-814" y="-977"/>
         </scene>
+        <!--Recovery Email Controller-->
+        <scene sceneID="SEk-oM-Yo0">
+            <objects>
+                <viewController storyboardIdentifier="RNSRecoveryEmailController" id="VqC-tQ-sjA" customClass="RNSRecoveryEmailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="ODg-Gc-rJc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="jjN-GA-3Xl" kind="embed" id="0k8-CD-vT2"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wi-Vl-WWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="-985"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0k8-CD-vT2"/>
+    </inferredMetricsTieBreakers>
 </document>

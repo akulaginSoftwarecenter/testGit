@@ -25,6 +25,7 @@ let showLogApiDetail = false
 let kPhoneVC = "RNSPhoneViewController"
 let kEmailVC = "RNSEmailViewController"
 let kCodeVC = "RNSCodeViewController"
+let kCodeEmailVC = "RNSCodeEmailViewController"
 let kParoleVC = "RNSParoleViewController"
 let kUuid = "uuid"
 let kStrelka = "Стрелка"

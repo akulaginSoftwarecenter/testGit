@@ -15,6 +15,7 @@ class RNSUserPayload: RNISMappableBase {
     var phone: String?
     var uuid: String?
     var phone_activation_code: String?
+    var email_activation_code: String?
     var new_phone_activation_code: String?
     var name: String?
     var token: String?
@@ -58,22 +59,7 @@ class RNSUserPayload: RNISMappableBase {
                  
         password <- map["password"]
         old_password <- map["old_password"]
-    }
-    
-    func confirmSend() {
-        RNSPostConfirmSend(self, complete: { item in
-            STAlertRouter.showRepeatCode()
-        }, failure: {
-            STAlertRouter.showOk($0)
-        })
-    }
-    
-    func phoneConfirmSend() {
-        RNSPostPhoneConfirmSend(self, complete: { item in
-            STAlertRouter.showRepeatCode()
-        }, failure: {
-            STAlertRouter.showOk($0)
-        })
+        email_activation_code <- map["email_activation_code"]
     }
     
     static func itemUserDefault() -> RNSUserPayload {

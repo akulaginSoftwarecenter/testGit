@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sxg-S8-9nM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="helveticaneuecyr-bold.otf">
+            <string>HelveticaNeueCyr-Bold</string>
+        </array>
+        <array key="mainFont.otf">
+            <string>Cffazmiakhaddpiofffvylaqekz</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Registration Code Controller-->
+        <scene sceneID="K9l-fo-1bU">
+            <objects>
+                <viewController storyboardIdentifier="RNSRegistrationCodeController" id="E0t-Ch-tgU" customClass="RNSRegistrationCodeController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="zF8-Ip-9UR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="Sxg-S8-9nM" kind="embed" id="df4-Dh-qdW"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSm-Iy-aos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="-902"/>
+        </scene>
+        <!--Code Email View Controller-->
+        <scene sceneID="HU7-pE-ROT">
+            <objects>
+                <viewController id="Sxg-S8-9nM" customClass="RNSCodeEmailViewController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQk-yc-KSa"/>
+                        <viewControllerLayoutGuide type="bottom" id="IpV-aO-CGd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fia-o9-sc5" customClass="RNSLoginView" customModule="RNIS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3AN-5t-Puh" customClass="RNSGrayBackMainButton" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="602" width="375" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="fcZ-0L-h2P"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qj8-xI-jd4">
+                                <rect key="frame" x="30" y="190" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На этот email было выслано сообщение с кодом подтверждения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZW8-tQ-Jzz">
+                                <rect key="frame" x="30" y="204" width="315" height="40"/>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-6X-Hiy">
+                                <rect key="frame" x="0.0" y="244" width="375" height="295"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="100" id="ZSN-MF-v0j"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTJ-9g-eej" customClass="RNSTextField" customModule="RNIS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="361.5" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите код подтверждения"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Sxg-S8-9nM" id="rxQ-ih-86J"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-ow-rUX">
+                                <rect key="frame" x="30" y="401.5" width="315" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueCyr-Bold" family="HelveticaNeueCyr" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-AO-XEz">
+                                <rect key="frame" x="30" y="411.5" width="315" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="vqA-Wl-Jd5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="20"/>
+                                <state key="normal" title="Выслать повторно">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="repeatCodeAction:" destination="Sxg-S8-9nM" eventType="touchUpInside" id="41f-Du-FA2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XTJ-9g-eej" secondAttribute="trailing" constant="30" id="0pM-P7-v9v"/>
+                            <constraint firstItem="hPL-ow-rUX" firstAttribute="top" secondItem="XTJ-9g-eej" secondAttribute="bottom" constant="10" id="3bK-pK-fSs"/>
+                            <constraint firstItem="eAh-AO-XEz" firstAttribute="top" secondItem="hPL-ow-rUX" secondAttribute="bottom" constant="10" id="4t0-kB-atz"/>
+                            <constraint firstAttribute="trailing" secondItem="qj8-xI-jd4" secondAttribute="trailing" constant="30" id="68A-6p-HMR"/>
+                            <constraint firstItem="bfF-6X-Hiy" firstAttribute="top" secondItem="qj8-xI-jd4" secondAttribute="bottom" constant="54" id="A8N-NI-myA"/>
+                            <constraint firstItem="qj8-xI-jd4" firstAttribute="top" secondItem="fia-o9-sc5" secondAttribute="top" constant="190" id="ADn-ag-gzP"/>
+                            <constraint firstAttribute="trailing" secondItem="hPL-ow-rUX" secondAttribute="trailing" constant="30" id="CQa-RU-c5w"/>
+                            <constraint firstItem="ZW8-tQ-Jzz" firstAttribute="top" secondItem="qj8-xI-jd4" secondAttribute="bottom" constant="14" id="Ch0-tI-8X4"/>
+                            <constraint firstItem="XTJ-9g-eej" firstAttribute="bottom" secondItem="bfF-6X-Hiy" secondAttribute="centerY" id="D9v-kR-u8R"/>
+                            <constraint firstItem="bfF-6X-Hiy" firstAttribute="leading" secondItem="fia-o9-sc5" secondAttribute="leading" id="Exj-EV-H6t"/>
+                            <constraint firstAttribute="trailing" secondItem="ZW8-tQ-Jzz" secondAttribute="trailing" constant="30" id="H0p-Gw-rMM"/>
+                            <constraint firstAttribute="trailing" secondItem="eAh-AO-XEz" secondAttribute="trailing" constant="30" id="LNY-gB-eMa"/>
+                            <constraint firstAttribute="trailing" secondItem="bfF-6X-Hiy" secondAttribute="trailing" id="Mc1-ck-8dW"/>
+                            <constraint firstAttribute="trailing" secondItem="3AN-5t-Puh" secondAttribute="trailing" id="RG7-lO-iZQ"/>
+                            <constraint firstItem="IpV-aO-CGd" firstAttribute="top" secondItem="3AN-5t-Puh" secondAttribute="bottom" constant="3" id="WWk-pz-MJH"/>
+                            <constraint firstItem="hPL-ow-rUX" firstAttribute="leading" secondItem="fia-o9-sc5" secondAttribute="leading" constant="30" id="WXS-uC-ahH"/>
+                            <constraint firstItem="XTJ-9g-eej" firstAttribute="leading" secondItem="fia-o9-sc5" secondAttribute="leading" constant="30" id="Xa8-kZ-jyj"/>
+                            <constraint firstItem="IpV-aO-CGd" firstAttribute="top" secondItem="bfF-6X-Hiy" secondAttribute="bottom" constant="128" id="bF4-Ol-Vbl"/>
+                            <constraint firstAttribute="bottom" secondItem="3AN-5t-Puh" secondAttribute="bottom" constant="3" id="c8c-jB-Rv9"/>
+                            <constraint firstItem="3AN-5t-Puh" firstAttribute="leading" secondItem="fia-o9-sc5" secondAttribute="leading" id="gxf-xd-J0o"/>
+                            <constraint firstItem="3AN-5t-Puh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eAh-AO-XEz" secondAttribute="bottom" constant="83" id="nmb-0a-G6Q"/>
+                            <constraint firstItem="eAh-AO-XEz" firstAttribute="leading" secondItem="fia-o9-sc5" secondAttribute="leading" constant="30" id="ppj-1C-MXo"/>
+                            <constraint firstItem="ZW8-tQ-Jzz" firstAttribute="leading" secondItem="fia-o9-sc5" secondAttribute="leading" constant="30" id="tP1-HI-AeG"/>
+                            <constraint firstItem="qj8-xI-jd4" firstAttribute="leading" secondItem="fia-o9-sc5" secondAttribute="leading" constant="30" id="xXo-EQ-Ud5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rTk-jf-0U1"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleBlackButton" value="Подтвердить"/>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WWk-pz-MJH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="codeField" destination="XTJ-9g-eej" id="MgX-Af-xlX"/>
+                        <outlet property="coverView" destination="fia-o9-sc5" id="wrW-q8-Fdk"/>
+                        <outlet property="emailLabel" destination="qj8-xI-jd4" id="Ly0-FV-UO7"/>
+                        <outlet property="errorLabel" destination="hPL-ow-rUX" id="kcL-fG-ZTR"/>
+                        <outlet property="repeatButton" destination="eAh-AO-XEz" id="Kd9-f7-y6M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85z-6w-gOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.40000000000001" y="-183.05847076461771"/>
+        </scene>
+        <!--Recovery Code Mail Controller-->
+        <scene sceneID="UaD-rO-cSk">
+            <objects>
+                <viewController storyboardIdentifier="RNSRecoveryCodeMailController" id="Clg-3x-hki" customClass="RNSRecoveryCodeMailController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="6tr-If-Oiq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="Sxg-S8-9nM" kind="embed" id="Hyz-1h-daq"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxu-8D-RB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="-901"/>
+        </scene>
+        <!--Change Code Controller-->
+        <scene sceneID="S7O-YB-zh8">
+            <objects>
+                <viewController storyboardIdentifier="RNSChangeCodeController" id="3TY-w7-lqy" customClass="RNSChangeCodeController" customModule="RNIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="pkL-7D-lcl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="Sxg-S8-9nM" kind="embed" id="YUa-3A-svB"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONq-8A-ser" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="-902"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hyz-1h-daq"/>
+    </inferredMetricsTieBreakers>
+</document>

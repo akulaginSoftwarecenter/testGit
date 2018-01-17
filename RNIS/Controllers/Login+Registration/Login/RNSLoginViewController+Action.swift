@@ -22,7 +22,8 @@ extension RNSLoginViewController {
     
     /// Событие нажатия на кнопку восстановления пароля
     @IBAction func recoveryAction(_ sender: Any) {
-        push(RNSRecoveryPhoneController.controller)
+        push(RNSRecoveryEmailController.controller)
+       // push(RNSRecoveryPhoneController.controller)
     }
     
     /// Событие перехода в другой контроллер

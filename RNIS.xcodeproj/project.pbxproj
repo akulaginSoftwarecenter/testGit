@@ -44,6 +44,17 @@
 		8318548D1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */; };
 		8318548F1F95D392004D0B23 /* RNSDurationItem+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */; };
 		831863A51F74D13D00579000 /* RNSBusStopManager+Uuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831863A41F74D13D00579000 /* RNSBusStopManager+Uuids.swift */; };
+		8319228B200EED0D00661A32 /* RNSRecoveryEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319228A200EED0D00661A32 /* RNSRecoveryEmailController.swift */; };
+		8319228E200EF09A00661A32 /* RNSEmailResetPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319228D200EF09A00661A32 /* RNSEmailResetPass.swift */; };
+		83192293200EF3D700661A32 /* RNSCodeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83192292200EF3D700661A32 /* RNSCodeEmailViewController.swift */; };
+		83192295200EF46200661A32 /* RNSCodeEmailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83192294200EF46200661A32 /* RNSCodeEmailViewController.storyboard */; };
+		83192297200EF55500661A32 /* RNSCodeMailContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83192296200EF55500661A32 /* RNSCodeMailContainerController.swift */; };
+		83192299200EF5BA00661A32 /* RNSCodeMailContainerController+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83192298200EF5BA00661A32 /* RNSCodeMailContainerController+KeyBoard.swift */; };
+		831922A4200EF7E700661A32 /* RNSRecoveryCodeMailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922A3200EF7E700661A32 /* RNSRecoveryCodeMailController.swift */; };
+		831922A8200EFAF300661A32 /* RNSEmailConfirmCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922A7200EFAF300661A32 /* RNSEmailConfirmCheck.swift */; };
+		831922AA200EFD6200661A32 /* RNSUserPayload+PhoneAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922A9200EFD6200661A32 /* RNSUserPayload+PhoneAuth.swift */; };
+		831922AC200EFD7300661A32 /* RNSUserPayload+EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922AB200EFD7300661A32 /* RNSUserPayload+EmailAuth.swift */; };
+		831922AF200EFE7300661A32 /* RNSEmailConfirmResend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831922AE200EFE7300661A32 /* RNSEmailConfirmResend.swift */; };
 		8319412C1FB439C4003EC18D /* RNSPinDuration+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319412B1FB439C4003EC18D /* RNSPinDuration+Icon.swift */; };
 		8319C5B31F60E026005A1768 /* RNSPostRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B21F60E026005A1768 /* RNSPostRegister.swift */; };
 		8319C5B61F60E4BD005A1768 /* RNSRegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */; };
@@ -446,7 +457,6 @@
 		838707F01F3029210094B273 /* RNSCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */; };
 		838707F11F3029210094B273 /* RNSCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */; };
 		838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */; };
-		838707F41F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */; };
 		83877AAB1F5D1215007888DE /* RNSDotsVerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83877AAA1F5D1215007888DE /* RNSDotsVerticalCell.swift */; };
 		83877AAD1F5D1293007888DE /* RNSDotsVerticalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83877AAC1F5D1293007888DE /* RNSDotsVerticalCell.xib */; };
 		8389CA301F5CF26B0003E8FD /* RNSPinMyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389CA2F1F5CF26B0003E8FD /* RNSPinMyLocation.swift */; };
@@ -735,6 +745,17 @@
 		8318548C1F95CFC5004D0B23 /* RNSRouteVariant+Navels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSRouteVariant+Navels.swift"; sourceTree = "<group>"; };
 		8318548E1F95D392004D0B23 /* RNSDurationItem+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSDurationItem+Distance.swift"; sourceTree = "<group>"; };
 		831863A41F74D13D00579000 /* RNSBusStopManager+Uuids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSBusStopManager+Uuids.swift"; sourceTree = "<group>"; };
+		8319228A200EED0D00661A32 /* RNSRecoveryEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSRecoveryEmailController.swift; sourceTree = "<group>"; };
+		8319228D200EF09A00661A32 /* RNSEmailResetPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSEmailResetPass.swift; sourceTree = "<group>"; };
+		83192292200EF3D700661A32 /* RNSCodeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSCodeEmailViewController.swift; sourceTree = "<group>"; };
+		83192294200EF46200661A32 /* RNSCodeEmailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RNSCodeEmailViewController.storyboard; sourceTree = "<group>"; };
+		83192296200EF55500661A32 /* RNSCodeMailContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSCodeMailContainerController.swift; sourceTree = "<group>"; };
+		83192298200EF5BA00661A32 /* RNSCodeMailContainerController+KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSCodeMailContainerController+KeyBoard.swift"; sourceTree = "<group>"; };
+		831922A3200EF7E700661A32 /* RNSRecoveryCodeMailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSRecoveryCodeMailController.swift; sourceTree = "<group>"; };
+		831922A7200EFAF300661A32 /* RNSEmailConfirmCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSEmailConfirmCheck.swift; sourceTree = "<group>"; };
+		831922A9200EFD6200661A32 /* RNSUserPayload+PhoneAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSUserPayload+PhoneAuth.swift"; sourceTree = "<group>"; };
+		831922AB200EFD7300661A32 /* RNSUserPayload+EmailAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSUserPayload+EmailAuth.swift"; sourceTree = "<group>"; };
+		831922AE200EFE7300661A32 /* RNSEmailConfirmResend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSEmailConfirmResend.swift; sourceTree = "<group>"; };
 		8319412B1FB439C4003EC18D /* RNSPinDuration+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSPinDuration+Icon.swift"; sourceTree = "<group>"; };
 		8319C5B21F60E026005A1768 /* RNSPostRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostRegister.swift; sourceTree = "<group>"; };
 		8319C5B51F60E4BD005A1768 /* RNSRegisterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRegisterError.swift; sourceTree = "<group>"; };
@@ -1549,6 +1570,120 @@
 			path = DocsType;
 			sourceTree = "<group>";
 		};
+		83192289200EECCA00661A32 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				8319228A200EED0D00661A32 /* RNSRecoveryEmailController.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		8319228F200EF0B900661A32 /* EmailResetPass */ = {
+			isa = PBXGroup;
+			children = (
+				8319228D200EF09A00661A32 /* RNSEmailResetPass.swift */,
+			);
+			path = EmailResetPass;
+			sourceTree = "<group>";
+		};
+		83192290200EF36200661A32 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				83192296200EF55500661A32 /* RNSCodeMailContainerController.swift */,
+				83192298200EF5BA00661A32 /* RNSCodeMailContainerController+KeyBoard.swift */,
+				83192294200EF46200661A32 /* RNSCodeEmailViewController.storyboard */,
+				83192292200EF3D700661A32 /* RNSCodeEmailViewController.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		8319229C200EF6E400661A32 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				831922A3200EF7E700661A32 /* RNSRecoveryCodeMailController.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		8319229D200EF73C00661A32 /* MailAuth */ = {
+			isa = PBXGroup;
+			children = (
+				83207A62200DFE0F003E9879 /* Email */,
+				83192290200EF36200661A32 /* Code */,
+			);
+			path = MailAuth;
+			sourceTree = "<group>";
+		};
+		8319229E200EF76200661A32 /* MailAuth */ = {
+			isa = PBXGroup;
+			children = (
+				83192289200EECCA00661A32 /* Email */,
+				8319229C200EF6E400661A32 /* Code */,
+			);
+			path = MailAuth;
+			sourceTree = "<group>";
+		};
+		8319229F200EF77500661A32 /* MailAuth */ = {
+			isa = PBXGroup;
+			children = (
+				83207A61200DFDE1003E9879 /* Email */,
+			);
+			path = MailAuth;
+			sourceTree = "<group>";
+		};
+		831922A0200EF79200661A32 /* PhoneAuth */ = {
+			isa = PBXGroup;
+			children = (
+				838707E11F30257F0094B273 /* Phone */,
+				838707EB1F3028E50094B273 /* Code */,
+			);
+			path = PhoneAuth;
+			sourceTree = "<group>";
+		};
+		831922A1200EF7B100661A32 /* PhoneAuth */ = {
+			isa = PBXGroup;
+			children = (
+				838707DA1F3025300094B273 /* Phone */,
+				8392BABD1F303D320024E9E5 /* Code */,
+			);
+			path = PhoneAuth;
+			sourceTree = "<group>";
+		};
+		831922A2200EF7C100661A32 /* PhoneAuth */ = {
+			isa = PBXGroup;
+			children = (
+				838707D91F3025290094B273 /* Phone */,
+				838707F51F303C8B0094B273 /* Code */,
+			);
+			path = PhoneAuth;
+			sourceTree = "<group>";
+		};
+		831922A5200EFA8600661A32 /* EmailAuth */ = {
+			isa = PBXGroup;
+			children = (
+				8319228F200EF0B900661A32 /* EmailResetPass */,
+				831922A6200EFAA200661A32 /* EmailConfirmCheck */,
+				831922AD200EFE5E00661A32 /* EmailConfirmResend */,
+			);
+			path = EmailAuth;
+			sourceTree = "<group>";
+		};
+		831922A6200EFAA200661A32 /* EmailConfirmCheck */ = {
+			isa = PBXGroup;
+			children = (
+				831922A7200EFAF300661A32 /* RNSEmailConfirmCheck.swift */,
+			);
+			path = EmailConfirmCheck;
+			sourceTree = "<group>";
+		};
+		831922AD200EFE5E00661A32 /* EmailConfirmResend */ = {
+			isa = PBXGroup;
+			children = (
+				831922AE200EFE7300661A32 /* RNSEmailConfirmResend.swift */,
+			);
+			path = EmailConfirmResend;
+			sourceTree = "<group>";
+		};
 		8319C5B11F60DFBE005A1768 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -1577,6 +1712,8 @@
 			isa = PBXGroup;
 			children = (
 				8319C5BB1F60EDAE005A1768 /* RNSUserPayload.swift */,
+				831922A9200EFD6200661A32 /* RNSUserPayload+PhoneAuth.swift */,
+				831922AB200EFD7300661A32 /* RNSUserPayload+EmailAuth.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1701,6 +1838,7 @@
 		831D89901F20749F00082116 /* POST */ = {
 			isa = PBXGroup;
 			children = (
+				831922A5200EFA8600661A32 /* EmailAuth */,
 				8351F15C1F81E4940014F0FD /* ActionRouting */,
 				83A327ED1F84A187003BA053 /* BusGet */,
 				836B96091F79FE1D00531BC6 /* BusList */,
@@ -2206,9 +2344,9 @@
 			isa = PBXGroup;
 			children = (
 				832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */,
-				837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */,
 				83940B921F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift */,
 				839875BE1F610FC200B88F0B /* RNSLoginViewController+UI.swift */,
+				837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */,
 				832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */,
 			);
 			path = Login;
@@ -3613,9 +3751,8 @@
 		837ABF2C1F2EF2E700AB5E54 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				83207A61200DFDE1003E9879 /* Email */,
-				838707D91F3025290094B273 /* Phone */,
-				838707F51F303C8B0094B273 /* Code */,
+				831922A2200EF7C100661A32 /* PhoneAuth */,
+				8319229F200EF77500661A32 /* MailAuth */,
 				836989151F3172C1003E4D73 /* Parole */,
 				8369892F1F318744003E4D73 /* Name */,
 			);
@@ -3626,11 +3763,10 @@
 			isa = PBXGroup;
 			children = (
 				8369891C1F3179F1003E4D73 /* Container */,
-				838707EB1F3028E50094B273 /* Code */,
+				831922A0200EF79200661A32 /* PhoneAuth */,
+				8319229D200EF73C00661A32 /* MailAuth */,
 				836989271F31839E003E4D73 /* Cover */,
 				836989081F316B2E003E4D73 /* Parole */,
-				838707E11F30257F0094B273 /* Phone */,
-				83207A62200DFE0F003E9879 /* Email */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -3737,8 +3873,8 @@
 		838707D61F301CC80094B273 /* Recovery */ = {
 			isa = PBXGroup;
 			children = (
-				838707DA1F3025300094B273 /* Phone */,
-				8392BABD1F303D320024E9E5 /* Code */,
+				831922A1200EF7B100661A32 /* PhoneAuth */,
+				8319229E200EF76200661A32 /* MailAuth */,
 				836989141F3172BE003E4D73 /* Parole */,
 			);
 			path = Recovery;
@@ -3773,8 +3909,8 @@
 		838707EB1F3028E50094B273 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				830802AB1F7A4D0C008B496C /* RNSCodeContainerController+KeyBoard.swift */,
 				838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */,
+				830802AB1F7A4D0C008B496C /* RNSCodeContainerController+KeyBoard.swift */,
 				830802AD1F7A57FD008B496C /* RNSCodeViewController+Delegate.swift */,
 				838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */,
 				838707EC1F30290C0094B273 /* RNSCodeViewController.swift */,
@@ -4995,6 +5131,7 @@
 				833609811F73881E00B42333 /* RNSFlagButton.xib in Resources */,
 				83204B4A1F591FBD0033ACA1 /* NotificationTableViewCell.xib in Resources */,
 				8357189D1F21AFD700DE5E25 /* RNSBuildRouteView.xib in Resources */,
+				83192295200EF46200661A32 /* RNSCodeEmailViewController.storyboard in Resources */,
 				8393B8941FB93419009AEA0C /* allRoute.json in Resources */,
 				83029BCC1F4BEBD700B0FEE3 /* RNSDotsWhiteHorizontal.xib in Resources */,
 				8310D4491F3C6C1F000CCD0A /* RNSBusDetailTotalView.xib in Resources */,
@@ -5245,6 +5382,7 @@
 				8319C5B31F60E026005A1768 /* RNSPostRegister.swift in Sources */,
 				8310D4511F3C6E64000CCD0A /* RNSScrollShowContainer+UI.swift in Sources */,
 				83204B4B1F591FBD0033ACA1 /* NotificationsViewController.swift in Sources */,
+				831922AF200EFE7300661A32 /* RNSEmailConfirmResend.swift in Sources */,
 				837ABF131F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */,
 				833D6C1B1F7CC20600C4A0F3 /* RNSPostFavoriteRouteCreate.swift in Sources */,
 				832B1DCC1F42B0DB0024505C /* RNSFieldPlaceholderColor.swift in Sources */,
@@ -5288,6 +5426,7 @@
 				836221B41F43F8A1005B49DA /* RNSAddressViewController+TextField.swift in Sources */,
 				8351F1601F81F2C90014F0FD /* RNSFavoritesBusView+items.swift in Sources */,
 				833D6C211F7CC65C00C4A0F3 /* RNSBusStopDetailCell+Action.swift in Sources */,
+				83192293200EF3D700661A32 /* RNSCodeEmailViewController.swift in Sources */,
 				8356BE5A1F3D6EC200560623 /* RNSBusDetailWayView+TableView.swift in Sources */,
 				8393AB661F8B159F004D754B /* RNSRouteTableItem+Copying.swift in Sources */,
 				83631D601FC3CD4800C5F052 /* RNSPinBus+Image.swift in Sources */,
@@ -5427,6 +5566,7 @@
 				8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */,
 				832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				830E68BC1F55386C008EFA02 /* RNSRouteTableItem.swift in Sources */,
+				8319228B200EED0D00661A32 /* RNSRecoveryEmailController.swift in Sources */,
 				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				838707ED1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,
 				836A9D771F6255BF00B5EB55 /* RNSFeedbackPayload.swift in Sources */,
@@ -5435,6 +5575,7 @@
 				831A85BD1F414C730095F006 /* RNSSearchViewController+Data.swift in Sources */,
 				83B2E07C1F1E139800FA92A4 /* AlamofireAPI.swift in Sources */,
 				8310F13A1F7BA7C500D5C565 /* NotificationsViewController+TableView.swift in Sources */,
+				831922AA200EFD6200661A32 /* RNSUserPayload+PhoneAuth.swift in Sources */,
 				8389CA301F5CF26B0003E8FD /* RNSPinMyLocation.swift in Sources */,
 				832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
 				83A652331FB41032001839C2 /* RNSMapParentController+Loader.swift in Sources */,
@@ -5443,6 +5584,7 @@
 				8393AB701F8B24F9004D754B /* RNSRouteTable+Prepare.swift in Sources */,
 				8326AA381F1F59E600F893C8 /* RNSTrafficData.swift in Sources */,
 				83246C031FB1A0A10009B728 /* RNSProfileViewController+Data.swift in Sources */,
+				83192299200EF5BA00661A32 /* RNSCodeMailContainerController+KeyBoard.swift in Sources */,
 				835718B21F21C86400DE5E25 /* RNSMapManager.swift in Sources */,
 				83A53F8B1F4A998600938969 /* RNSPageRouteCell.swift in Sources */,
 				8326AA351F1F57CF00F893C8 /* RNSTraffickMarkData.swift in Sources */,
@@ -5503,6 +5645,7 @@
 				831588981F6280C900CA485A /* RNSPostStopPointList.swift in Sources */,
 				83204B2C1F5917270033ACA1 /* RNSLeftMenuController+Action.swift in Sources */,
 				83940B931F6BCBB5005654DE /* RNSLoginViewController+Delegate.swift in Sources */,
+				831922AC200EFD7300661A32 /* RNSUserPayload+EmailAuth.swift in Sources */,
 				83B2E0981F1E139800FA92A4 /* SLTApiHelper.swift in Sources */,
 				83DD726C1F85D2EF008DCCA2 /* RNSBusTemp+Hashable.swift in Sources */,
 				832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */,
@@ -5578,6 +5721,7 @@
 				83AA6A311F565D0A00B2139C /* RNSRouteTable+Items.swift in Sources */,
 				836EEF131F3C02E3007631D9 /* UITableViewCell+Utils.swift in Sources */,
 				836A9D7A1F62573F00B5EB55 /* RNSPostFeedback.swift in Sources */,
+				831922A4200EF7E700661A32 /* RNSRecoveryCodeMailController.swift in Sources */,
 				837857F51F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift in Sources */,
 				837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
 				831FB5711F7D032A00A915FA /* RNSForecastBus.swift in Sources */,
@@ -5590,6 +5734,7 @@
 				8319C5B61F60E4BD005A1768 /* RNSRegisterError.swift in Sources */,
 				8385DB401F3AAD2100FDCD4A /* RNSScrollShowContainer+Swipe.swift in Sources */,
 				83A5C7041F580BC0006C8D62 /* RNSDateSelectView.swift in Sources */,
+				83192297200EF55500661A32 /* RNSCodeMailContainerController.swift in Sources */,
 				8393AB6C1F8B2488004D754B /* RNSRouteTable+Stop.swift in Sources */,
 				830E68AE1F5514DE008EFA02 /* RNSPinDuration.swift in Sources */,
 				83281CEF1FC680FA00DAEC5B /* RNSAddressViewController+UI.swift in Sources */,
@@ -5628,7 +5773,9 @@
 				838CE9351F3DA9FE00C10FBA /* RNSBusInfoViewController.swift in Sources */,
 				83AA6A6A1F5668C000B2139C /* QRScannerInfoViewController.swift in Sources */,
 				830E68B31F552714008EFA02 /* RNSPinVariantEnd.swift in Sources */,
+				831922A8200EFAF300661A32 /* RNSEmailConfirmCheck.swift in Sources */,
 				8375FF5E1F56BA4100795A66 /* ContactsInfoViewController+TableView.swift in Sources */,
+				8319228E200EF09A00661A32 /* RNSEmailResetPass.swift in Sources */,
 				838EA02C1F53B7FA00E9BF20 /* RNSRouteVariant+Hashable.swift in Sources */,
 				83E6F8131F944C7000686414 /* RNSMapManager+Zoom.swift in Sources */,
 				83E183991F440DC3005912C5 /* RNSSearchHistory.swift in Sources */,
@@ -5711,7 +5858,6 @@
 				8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
 				836989431F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */,
 				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
-				838707F41F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */,
 				836989201F317AB5003E4D73 /* ContainerProtocol.swift in Sources */,
 				837ABF141F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */,
 				838707EE1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,
