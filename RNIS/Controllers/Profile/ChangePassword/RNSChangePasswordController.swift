@@ -72,16 +72,25 @@ class RNSChangePasswordController: UIViewController {
             prepareError(error)
             return
         }
-        
-        if passwordOneField.text !=  passwordTwoField.text {
+        let onePassword = passwordOneField.text
+        if onePassword !=  passwordTwoField.text {
             prepareError("Пароли не совпадают")
-            passwordOneField.setStateNotValid()
-            passwordTwoField.setStateNotValid()
+            fieldsNewNotValid()
+            return
+        }
+        if onePassword == item?.email {
+            prepareError("Пароль не может полностью повторять логин")
+            fieldsNewNotValid()
             return
         }
         
         clearError()
         actionNext()
+    }
+    
+    func fieldsNewNotValid() {
+        passwordOneField.setStateNotValid()
+        passwordTwoField.setStateNotValid()
     }
     
     /// Отправка нового пароля на сервер
