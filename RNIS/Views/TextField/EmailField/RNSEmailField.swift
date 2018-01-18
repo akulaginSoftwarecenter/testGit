@@ -18,8 +18,11 @@ class RNSEmailField: RNSTextField {
     }
     
     override var errorText:String? {
-        return isValid ? nil : kErrorMail
+        return isValid ? nil : errorTextNoValid
     }
+    
+    /// Текст ошибки
+    @IBInspectable var errorTextNoValid: String = kErrorMail
     
     /// Создание поля
     ///
