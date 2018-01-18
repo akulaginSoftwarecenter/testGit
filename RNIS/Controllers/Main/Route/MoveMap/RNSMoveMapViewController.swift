@@ -67,9 +67,10 @@ class RNSMoveMapViewController: UIViewController {
         stubLocation = location
         RNSLocationManager.updateLocation()
     }
-    @IBAction func actionBack(_ sender: Any) {
+    
+    func showAlertExit(handler: EmptyBlock?) {
         STAlertRouter.showBtns("Отменить ведение по маршруту?") {
-            STRouter.pop()
+            handler?()
         }
     }
     

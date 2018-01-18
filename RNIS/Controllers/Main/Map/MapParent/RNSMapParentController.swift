@@ -44,6 +44,11 @@ class RNSMapParentController: UIViewController {
     var handlerOnOverlay: ((PGOverlay,PGOverlayItem) -> ())?
     
     var bottomTargetConstant: CGFloat?
+    
+    var searchRemoveTarget: Bool = false
+    
+    var handlerSearch: EmptyBlock?
+    
     @IBOutlet weak var bottomTarget: NSLayoutConstraint!
     
     /// Кнопка включения/отключения демонстрации трафика на карте

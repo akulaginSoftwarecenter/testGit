@@ -52,10 +52,6 @@ class RNSMenuManager: NSObject {
         return MenuItem("Карта", self.mapVC, #imageLiteral(resourceName: "menuMapIcon"))
     }()
     
-    static var itemMap: MenuItem {
-        return shared.itemMap
-    }
-    
     lazy var itemProfile: MenuItem = {
         return MenuItem(nil, self.profileVC, nil)
     }()
@@ -99,11 +95,6 @@ class RNSMenuManager: NSObject {
     /// Фукнция показа профиля пользователя
     static func showProfile() {
         showItem(shared.itemProfile)
-    }
-    
-    /// Функция показа карты
-    static func showMap() {
-        showItem(itemMap)
     }
     
     /// Фукнция обновления бокового меню

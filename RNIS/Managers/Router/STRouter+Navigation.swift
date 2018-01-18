@@ -31,4 +31,8 @@ extension STRouter {
         let container = imageBoardContainer(vc)
         STRouter.pushMain(container, animated: animated)
     }
+    
+    static func showSearch() {
+        RNSSearchViewController.initialPushAnimatedRed()
+    }
 }

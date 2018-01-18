@@ -26,19 +26,34 @@ extension RNSSearchViewController {
     ///
     /// - Parameter indexPath: индекс выбранного объекта
     func showItem(_ item: RNSTextItem?) {
-        //let item = self.item(indexPath)
         if let address = item as? RNSAddressTemp {
             prepareAddress(address)
         } else if let stop = item as? RNSBusStopTemp {
-            STRouter.pop {
-                RNSMapManager.showStopPoint(stop.toJSON())
-            }
+            showBusStop(stop)
+            
         } else if (item as? RNSBusTemp) != nil {
             STRouter.pop {
                 let bus = RNSDataManager.buss?.first
                 RNSMapManager.showInfoIfNeed(bus)
             }
         }
+    }
+    
+    func showBusStop(_ item: RNSBusStopTemp) {
+        showMapToRoot {
+            RNSMapManager.showStopPoint(item.toJSON())
+        }
+    }
+    
+    func showBus(_ item: RNSBusTemp) {
+        showMapToRoot {
+            let bus = RNSDataManager.buss?.first
+            RNSMapManager.showInfoIfNeed(bus)
+        }
+    }
+    
+    func showMapToRoot(completion: EmptyBlock? = nil) {
+        RNSMenuManager.showMapToRoot(completion:completion)
     }
     
     /// Возврат на контроллер с картой с последующей демонстрацией адреса и маршрута

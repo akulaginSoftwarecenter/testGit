@@ -26,7 +26,11 @@ extension RNSMapParentController {
 
     /// Событие нажатия на кнопку поиска
     @IBAction func searchAction(_ sender: Any) {
-        RNSSearchViewController.initialPushAnimatedRed()
+        handlerSearch?()
+        if searchRemoveTarget {
+            return
+        }
+        STRouter.showSearch()
     }
     
     /// Событие нажатия на кнопку увеличения зума карты

@@ -27,6 +27,10 @@ struct MenuItem {
         RNSMenuManager.showItem(self)
     }
     
+    func popToRoot(completion: EmptyBlock? = nil) {
+        vc?.popToRoot(completion: completion)
+    }
+    
     func updateIfNeed() {
         if title == kStrelka {
             RNSMenuManager.handlerStrelkaUpdate?()

@@ -13,22 +13,6 @@ import Foundation
  */
 extension RNSMoveMapViewController {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let containerController = segue.destination as? RNSMapParentController
-        containerController?.bottomTargetConstant = 91
-        containerController?.handlerOnMapLongTouchEvent = {[weak self] point in
-            self?.onMapLongTouchEvent(point)
-        }
-        
-        containerController?.handlerOnMapTouchEvent = {[weak self] point in
-            self?.onMapTouchEvent(point)
-        }
-        
-        containerController?.handlerOnMapEvent = {[weak self] in
-            self?.onMapEvent()
-        }
-    }
-    
     /// Получение карты
     var mapView: MapView {
         return RNSMapManager.mapView
