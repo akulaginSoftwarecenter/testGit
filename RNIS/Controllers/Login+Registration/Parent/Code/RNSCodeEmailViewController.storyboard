@@ -77,7 +77,7 @@
                                 <rect key="frame" x="30" y="361.5" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите код подтверждения"/>
                                 </userDefinedRuntimeAttributes>

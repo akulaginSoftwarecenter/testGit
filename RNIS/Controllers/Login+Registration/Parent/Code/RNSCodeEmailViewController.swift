@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RNSCodeEmailViewController: RNSCoverViewController,ContainerProtocol {
+class RNSCodeEmailViewController: RNSCoverViewController,ContainerProtocol,UITextFieldDelegate {
     /// Поле кода подтверждения
     @IBOutlet weak var codeField: RNSTextField!
     /// Надпись с номером телефона
@@ -54,5 +54,11 @@ class RNSCodeEmailViewController: RNSCoverViewController,ContainerProtocol {
     /// Событие нажатия на кнопку повторной отправки кода
     @IBAction func repeatCodeAction(_ sender: Any) {
         handlerRepeatCode?()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let newLength = text.count + string.count - range.length
+        return newLength <= 4 // Bool
     }
 }
