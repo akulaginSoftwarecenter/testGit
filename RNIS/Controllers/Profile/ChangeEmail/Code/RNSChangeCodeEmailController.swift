@@ -33,20 +33,20 @@ class RNSChangeCodeEmailController: RNSCodeMailContainerController {
     override var typeTitle: TypeTitle {
         return .changeEmail
     }
-    /*
+    
     override func repeatCodeAction() {
-        item?.phoneConfirmSend()
+        item?.phoneConfirmEmailSend()
     }
     
     override func actionNext() {
-        item?.new_phone_activation_code = codeText
-        RNSPostPhoneConfirmCheck(item, complete: { [weak self] item in
+        item?.new_email_activation_code = codeText
+        PostEmailConfirmCheck(item, complete: { [weak self] item in
             self?.popAlert()
             }, failure: { [weak self] error in
                 self?.prepareError(error)
         })
     }
-    */
+    
     /// Выход из контроллера с последующей демонстрацией сообщения об успешном изменении почта
     func popAlert() {
         RNSMenuManager.leftMenuUpdate()

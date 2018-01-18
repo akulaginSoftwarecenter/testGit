@@ -27,6 +27,7 @@ class RNSUserPayload: RNISMappableBase {
     
     var password: String?
     var old_password: String?
+    var new_email_activation_code: String?
     
     var user: RNSUserPayload?
    
@@ -59,6 +60,7 @@ class RNSUserPayload: RNISMappableBase {
         password <- map["password"]
         old_password <- map["old_password"]
         email_activation_code <- map["email_activation_code"]
+        new_email_activation_code <- map["new_email_activation_code"]
     }
     
     static func itemUserDefault() -> RNSUserPayload {

@@ -16,4 +16,12 @@ extension RNSUserPayload {
             STAlertRouter.showOk($0)
         })
     }
+    
+    func phoneConfirmEmailSend() {
+        RNSPostPhoneConfirmEmailSend(self, complete: { item in
+            STAlertRouter.showRepeatCode()
+        }, failure: {
+            STAlertRouter.showOk($0)
+        })
+    }
 }
