@@ -14,7 +14,7 @@ class RNSChangeEmailController: RNSEmailContainerController {
     }
     
     override var placeHolderEmailField: String? {
-        return "Введите новый электронный ящик"
+        return "Введите новый адрес электронной почты"
     }
     
     override var titleBackButton: String? {
