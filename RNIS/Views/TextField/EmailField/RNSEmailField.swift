@@ -18,11 +18,17 @@ class RNSEmailField: RNSTextField {
     }
     
     override var errorText:String? {
-        return isValid ? nil : errorTextNoValid
+          return isValid ? nil : errorNotValid
+    }
+    
+    var errorNotValid: String? {
+        let isClear = (text?.isEmpty ?? true)
+        return isClear ? errorClearNoValid : errorTextNoValid
     }
     
     /// Текст ошибки
     @IBInspectable var errorTextNoValid: String = kErrorMail
+    @IBInspectable var errorClearNoValid: String = kErrorMail
     
     /// Создание поля
     ///

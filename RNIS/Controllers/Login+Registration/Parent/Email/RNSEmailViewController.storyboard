@@ -44,7 +44,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderKey" value="Введите E-mail"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextNoValid" value="Адрес электронной почты должен быть заполнен"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="errorClearNoValid" value="Адрес электронной почты должен быть заполнен"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYK-rc-XHM">
