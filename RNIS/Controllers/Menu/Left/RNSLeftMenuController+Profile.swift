@@ -42,7 +42,7 @@ extension RNSLeftMenuController {
     func updateUI(_ item: RNSUserPayload?) {
         prepareInfoMail(item?.email)
         prepareName(item?.name)
-        preparePhone(item?.formatPhone)
+        preparePhone(item?.email)
         item?.loadImage { [weak self] image in
             self?.prepareImageProfile(image)
         }
