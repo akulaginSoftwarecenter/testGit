@@ -24,4 +24,13 @@ extension RNSUserPayload {
             STAlertRouter.showOk($0)
         })
     }
+    
+    
+    func errorCheckRepeatEmail(_ text: String?) -> String? {
+        guard let text = text,
+            let email = email else {
+            return nil
+        }
+        return text == email ? "Пароль не может полностью повторять логин" : nil
+    }
 }

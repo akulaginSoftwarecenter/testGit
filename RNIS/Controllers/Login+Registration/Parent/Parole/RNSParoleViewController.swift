@@ -38,16 +38,15 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
         if showFirstErrorAlert() {
             return
         }
-        
+        let passwordOne = passwordOneField.text
         if passwordOneField.text !=  passwordTwoField.text {
             passwordNoValidBecome("Пароли не совпадают")
             return
         }
         
         if let parent = self.parent as? RNSParoleContainerController,
-            let phone = parent.item?.phone,
-            phone == passwordOneField.text {
-            passwordNoValidBecome("Пароль не может полностью повторять логин")
+            let error = parent.item?.errorCheckRepeatEmail(passwordOne) {
+            passwordNoValidBecome(error)
             return
         }
         

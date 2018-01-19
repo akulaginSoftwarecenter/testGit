@@ -78,8 +78,9 @@ class RNSChangePasswordController: UIViewController {
             fieldsNewNotValid()
             return
         }
-        if onePassword == item?.email {
-            prepareError("Пароль не может полностью повторять логин")
+        
+        if let error = item?.errorCheckRepeatEmail(onePassword) {
+            prepareError(error)
             fieldsNewNotValid()
             return
         }
