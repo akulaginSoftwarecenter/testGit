@@ -85,6 +85,7 @@ class RNSRegistrationNameController: UIViewController {
         RNISAuthManager.loginEmail(item?.email, password: item?.password, success: {
             RNSMenuManager.hideLeftMenu(animated: false)
             STRouter.popToRootMain()
+            RNSMenuManager.showMap()
         }, failure: {[weak self] (errorText) in
             self?.prepareError(errorText)
         })
