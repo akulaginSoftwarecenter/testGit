@@ -14,7 +14,7 @@ extension RNSProfileViewController {
     func clearAll() {
         profilePhoto.imageView.image = nil
         nameField.text = ""
-        phoneField.text = ""
+        //phoneField.text = ""
         emailField.text = ""
         errorLabel.text = ""
     }
@@ -25,7 +25,7 @@ extension RNSProfileViewController {
     func updateUI(_ item: RNSUserPayload?) {
         self.item = item
         nameField.text = item?.name
-        phoneField.text = item?.formatPhone
+        //phoneField.text = item?.formatPhone
         emailField.text = item?.email
         
         decodeImage()

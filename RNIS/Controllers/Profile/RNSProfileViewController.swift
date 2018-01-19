@@ -18,7 +18,7 @@ class RNSProfileViewController: UIViewController {
     /// Поле редактирования почты
     @IBOutlet weak var emailField: RNSEmailField!
     /// Поле телефона
-    @IBOutlet weak var phoneField: RNSPhoneField!
+    //@IBOutlet weak var phoneField: RNSPhoneField!
     /// Кнопка выхода из аккаунта
     @IBOutlet weak var blackButton: RNSBlackButton!
     /// Надпись с текстом ошибки
