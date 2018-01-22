@@ -97,7 +97,7 @@
                                     <constraint firstAttribute="height" priority="750" constant="51" id="dbE-6U-tib"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Введите текст обращения:"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topText" value="Введите текст сообщения:"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-K8-NnR" customClass="RNSSupportTextView" customModule="RNIS" customModuleProvider="target">
