@@ -18,9 +18,7 @@ extension RNSMoveMapViewController {
     
     func searchAction() {
         showAlertExit {
-            RNSMenuManager.showMapToRoot{
-                STRouter.showSearch()
-            }
+            RNSMenuManager.showMapAndSearch()
         }
     }
 }

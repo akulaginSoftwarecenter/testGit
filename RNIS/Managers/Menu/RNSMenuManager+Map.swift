@@ -27,4 +27,12 @@ extension RNSMenuManager {
         showMap()
         mapToRoot(completion: completion)
     }
+    
+    static func showMapAndSearch() {
+        showMap()
+        mapToRoot()
+        let vc = RNSSearchViewController.initialController
+        let container = STRouter.redContainer(vc)
+        itemMap.vc?.push(container)
+    }
 }

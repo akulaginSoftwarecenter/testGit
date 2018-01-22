@@ -33,6 +33,8 @@ extension STRouter {
     }
     
     static func showSearch() {
-        RNSSearchViewController.initialPushAnimatedRed()
+        let vc = RNSSearchViewController.initialController
+        let container = redContainer(vc)
+        container?.pushAnimated()
     }
 }
