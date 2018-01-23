@@ -19,6 +19,7 @@ extension RNSBuildRouteView {
     }
     
     func show() {
+        mapHideOldPopopovers()
         guard let view = STRouter.rootView else {
             return
         }
@@ -26,6 +27,10 @@ extension RNSBuildRouteView {
         self.autoPinEdgesToSuperviewEdges()
         alpha = 0;
         animateAlpha(1)
+    }
+    
+    func mapHideOldPopopovers() {
+        RNSMapManager.handlerDismissOldPresentVC?()
     }
     
     func animateBottom() {
