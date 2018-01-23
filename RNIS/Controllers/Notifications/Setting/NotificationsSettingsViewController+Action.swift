@@ -29,7 +29,7 @@ extension NotificationsSettingsViewController {
     /// Нажатие на кнопку "удалить"
     @IBAction func actionRemove(_ sender: Any) {
         STRouter.showLoader()
-        RNSPostNotificationDelete(item) {
+        RNSPostNotificationDelete(item?.uuid) {
             STRouter.removeLoader()
             STRouter.pop()
         }

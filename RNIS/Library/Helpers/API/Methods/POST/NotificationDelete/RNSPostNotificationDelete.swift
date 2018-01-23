@@ -9,15 +9,19 @@
 import UIKit
 
 class RNSPostNotificationDelete: RNSPostRequestMobileToken {
-    var item: RNSNotificationModel?
+    var uuid: String?
+    var bus: RNSBusRouteTemp?
+    var stop: RNSBusStop?
     var complete: EmptyBlock?
     
     typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
     
-    @discardableResult convenience init(_ item: RNSNotificationModel?, complete: EmptyBlock?) {
+    @discardableResult convenience init(_ uuid: String? = nil, bus: RNSBusRouteTemp? = nil, stop: RNSBusStop? = nil, complete: EmptyBlock?) {
         self.init()
         
-        self.item = item
+        self.uuid = uuid
+        self.bus = bus
+        self.stop = stop
         self.complete = complete
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
@@ -41,10 +45,16 @@ class RNSPostNotificationDelete: RNSPostRequestMobileToken {
     }
     
     override var payload: AliasDictionary {
-        guard let uuid = item?.uuid else {
-            return [:]
+         var dict = AliasDictionary()
+        if let uuid = uuid {
+            dict = [kUuid: uuid]
         }
-        return [kUuid: uuid]
+        if let busUuid = bus?.uuid, let stopUuid = stop?.uuid  {
+            dict["route_uuid"] = busUuid
+            dict["route_number"] = bus?.number ?? ""
+            dict["stop_point"] = ["uuid" : stopUuid, "name" : stop?.name ?? ""]
+        }
+        return dict
     }
     
     override var subject: String {

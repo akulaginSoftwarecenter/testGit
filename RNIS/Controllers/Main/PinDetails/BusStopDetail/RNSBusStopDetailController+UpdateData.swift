@@ -53,15 +53,4 @@ extension RNSBusStopDetailController {
     func prepareTitle() {
         titleLabel.text = item?.name
     }
-
-    func updateNotification(_ busRoute: RNSBusRouteTemp?) {
-        guard let item = item, let busRoute = busRoute else {
-            return
-        }
-        RNSNotificationCreate(bus: busRoute, stop: item, time: "20") { [weak self] in
-            self?.removeLoader(true)
-            self?.loadItems(true)
-        }
-        showLoader(true)
-    }
 }
