@@ -40,9 +40,6 @@ class TransportViewController: UIViewController {
     
     /// Проверка наличия токена сессии
     func checkToken() {
-       // if isNeedCheckToken {
-       //     isNeedCheckToken = false
-            Utils.checkTokeShowAlert()
-      //  }
+        Utils.checkTokeShowAlert()
     }
 }

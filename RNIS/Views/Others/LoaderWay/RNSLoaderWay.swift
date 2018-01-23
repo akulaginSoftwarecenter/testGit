@@ -38,14 +38,15 @@ class RNSLoaderWay: RNSParentLoaderView {
         showCenterError(view, frame: frame, text: errorNetwork)
     }
     
-    func prepareTextTop(_ view: UIView?, text: String? = nil) {
-        showInViewBounds(view)
+    func prepareTextTop(_ view: UIView?, text: String? = nil, frame: CGRect? = nil) {
+        showInViewBounds(view, frame: frame)
         prepareTopLabel()
         prepareText(text)
     }
     
-    func showInViewBounds(_ view: UIView?) {
-        showInView(view, frame: view?.bounds ?? CGRect())
+    func showInViewBounds(_ view: UIView?, frame: CGRect? = nil) {
+        let defaultFrame = view?.bounds ?? CGRect()
+        showInView(view, frame: frame ?? defaultFrame)
     }
     
     override func animationShow() {
