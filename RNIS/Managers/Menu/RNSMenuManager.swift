@@ -35,7 +35,7 @@ class RNSMenuManager: NSObject {
     
     /// Создание пунктов меню
     lazy var menuItems = [itemMap,
-                     MenuItem(favoriteTitle, TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon")),
+                     MenuItemFavorite(),
                      MenuItem(notificationTitle, NotificationsViewController.initialRed, #imageLiteral(resourceName: "menuBellIcon")),
                      MenuItem(kNews, NewsViewController.initialRed, #imageLiteral(resourceName: "menuNewspaperIcon")),
                      MenuItem("Настройки", SettingsViewController.initialRed, #imageLiteral(resourceName: "menuSettingsIcon")),

@@ -22,8 +22,9 @@ class RNSMoveManager: NSObject {
             return
         }
         showAlertExit {
-            RNSMenuManager.showMapToRoot()
-            handler?()
+            RNSMenuManager.mapToRoot{
+                handler?()
+            }
         }
     }
 }

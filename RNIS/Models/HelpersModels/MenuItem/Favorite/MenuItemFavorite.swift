@@ -7,8 +7,21 @@
 //
 
 import UIKit
-/*
-struct MenuItemFavorite: MenuItem {
 
+class MenuItemFavorite: MenuItem {
+    convenience init() {
+        self.init(favoriteTitle, TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon"))
+    }
+    
+    override func show() {
+        RNSMoveManager.checkExitMapToRoot {
+            super.show()
+        }
+    }
+    
+    override func updateIfNeed() {
+        RNSPageRouteManager.handlerUpdateFavorite?()
+        RNSMenuManager.handlerUpdateFavoriteBuss?()
+    }
 }
-*/
+

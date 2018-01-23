@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MenuItem {
+class MenuItem {
     
     var vc: BaseNavigationController?
     var title: String?
@@ -37,10 +37,6 @@ struct MenuItem {
         }
         if title == kNews {
             RNSMenuManager.handlerNewsUpdate?()
-        }
-        if title == favoriteTitle {
-            RNSPageRouteManager.handlerUpdateFavorite?()
-            RNSMenuManager.handlerUpdateFavoriteBuss?()
         }
         
         if title == notificationTitle {
