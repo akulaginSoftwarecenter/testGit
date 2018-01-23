@@ -25,6 +25,7 @@ extension RNSLoginEmailViewController {
     }
     
     /// Подгрузка в текстовые поля учетных данных пользователя, если они имеются
+    /*
     func prepareLoginIfNeed() {
         if let email = item?.email {
             prepareStart(email, password: nil)
@@ -32,7 +33,7 @@ extension RNSLoginEmailViewController {
             prepareStart(UserDefaults.login, password: UserDefaults.password)
         }
     }
-    
+    */
     /// Заполнение полей для учетных данных
     ///
     /// - Parameters:

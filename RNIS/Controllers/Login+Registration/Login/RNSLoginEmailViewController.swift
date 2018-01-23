@@ -40,7 +40,7 @@ class RNSLoginEmailViewController: UIViewController {
         
         loginView.blackButton.isHidden = true
         prepareButtons()
-        prepareLoginIfNeed()
+        //prepareLoginIfNeed()
         addDoneButtonOnKeyboard()
     }
     
