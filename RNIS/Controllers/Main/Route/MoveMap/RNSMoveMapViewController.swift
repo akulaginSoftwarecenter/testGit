@@ -38,6 +38,17 @@ class RNSMoveMapViewController: UIViewController {
         prepareObservers()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        RNSMoveManager.isShowMoveMap = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        moveMapFalse()
+    }
+    
     /// Обновление объекта с информацией о маршруте
     @objc func updateItem() {
         item?.updateDistanceNavels()
@@ -68,10 +79,8 @@ class RNSMoveMapViewController: UIViewController {
         RNSLocationManager.updateLocation()
     }
     
-    func showAlertExit(handler: EmptyBlock?) {
-        STAlertRouter.showBtns("Отменить ведение по маршруту?") {
-            handler?()
-        }
+    func showAlertExit(_ handler: EmptyBlock?) {
+        RNSMoveManager.showAlertExit(handler)
     }
     
     deinit {
@@ -81,9 +90,14 @@ class RNSMoveMapViewController: UIViewController {
         
         prepareStubLocation(nil)
         NotificationCenter.removeObserver(self)
+        moveMapFalse()
     }
     
     override class var storyboardName: String {
         return "RNSMapParentController"
+    }
+    
+    func moveMapFalse() {
+        RNSMoveManager.isShowMoveMap = false
     }
 }
