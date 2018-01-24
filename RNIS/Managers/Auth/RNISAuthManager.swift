@@ -27,7 +27,7 @@ class RNISAuthManager {
     
     /// Функция очистки истории пользователя
     static func clearUserDefaults() {
-        UserDefaults.removeToken()
+        UserDefaults.removeUserData()
         UserDefaults.removeLogin()
         UserDefaults.removePassword()
     }
@@ -49,6 +49,7 @@ class RNISAuthManager {
     static func loginEmail(_ email: String?, password: String?, success: EmptyBlock?, failure: AliasStringBlock?) {
         STRouter.showLoader()
         RNSPostLoginEmail(email, password: password, complete: {
+            
             STRouter.removeLoader()
             success?()
             RNSMenuManager.leftMenuUpdate()

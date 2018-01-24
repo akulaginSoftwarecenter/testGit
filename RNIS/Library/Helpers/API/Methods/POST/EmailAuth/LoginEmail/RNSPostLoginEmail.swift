@@ -41,8 +41,10 @@ class RNSPostLoginEmail: RNSRequest {
     func parseReply(_ model: AliasModel?) {
         if let payload = model?.payload,
             let token = payload.token,
-            let uuid = payload.uuid {
+            let uuid = payload.uuid,
+            let email = payload.email {
             UserDefaults.setToken(token)
+            UserDefaults.setEmail(email)
             UserDefaults.setUuid(uuid)
             complete?()
             return

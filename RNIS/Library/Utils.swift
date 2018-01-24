@@ -94,12 +94,12 @@ class Utils {
         return dict
     }
     
-    static var isHaveToken: Bool {
-        return UserDefaults.isHaveToken
+    static var isHaveEmail: Bool {
+        return UserDefaults.isHaveEmail
     }
     
-    static func checkTokeShowAlert() {
-        if !isHaveToken {
+    static func checkEmailShowAlert() {
+        if !UserDefaults.isHaveEmail {
             STAlertRouter.showRegistration()
         }
     }

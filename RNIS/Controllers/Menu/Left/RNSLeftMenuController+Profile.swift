@@ -11,20 +11,20 @@ import Foundation
 extension RNSLeftMenuController {
     
     /// Возвращает булевое значение, указывающее сохранен ли токен сессии
-    var isHaveToken: Bool {
-        return Utils.isHaveToken
+    var isHaveEmail: Bool {
+        return UserDefaults.isHaveEmail
     }
     
     /// Настройка профиля
     func prepareProfile() {
         clearProfile()
-        if isHaveToken {
+        if isHaveEmail {
             loadData()
         } else {
             prepareName("Авторизация")
             preparePhone(nil)
         }
-        editButton.isHidden = !isHaveToken
+        editButton.isHidden = !isHaveEmail
     }
     
     /// Загрузка данных профиля

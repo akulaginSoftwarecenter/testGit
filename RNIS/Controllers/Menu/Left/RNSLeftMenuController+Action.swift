@@ -13,7 +13,7 @@ extension RNSLeftMenuController {
     
     /// Нажатие кнопки редактирование профиля
     @IBAction func actionProfile(_ sender: Any) {
-        if isHaveToken {
+        if isHaveEmail {
             RNSMenuManager.showProfile()
         } else {
             STRouter.showLogin()

@@ -16,6 +16,8 @@ extension UserDefaults {
     static let kPasswordField = "passwordField"
     static let kToken = "token"
     static let kUuid = "uuid"
+    static let kEmailField = "EmailField"
+    
     
     static var uuid: String? {
         return standard.string(forKey: kUuid)
@@ -23,6 +25,10 @@ extension UserDefaults {
     
     static var isHaveToken: Bool {
         return token != nil
+    }
+    
+    static var isHaveEmail: Bool {
+        return email != nil
     }
     
     static var token: String? {
@@ -40,7 +46,11 @@ extension UserDefaults {
     static var password: String? {
         return standard.string(forKey: kPasswordField)
     }
-     
+    
+    static var email: String? {
+        return standard.string(forKey: kEmailField)
+    }
+    
     static func setToken(_ value: String) {
         print("new token",value)
         standard.set(value, forKey: kToken)
@@ -58,12 +68,25 @@ extension UserDefaults {
         standard.set(value, forKey: kLoginField)
     }
     
+    static func setEmail(_ value: String?) {
+        standard.set(value, forKey: kEmailField)
+    }
+    
     static func setPassword(_ value: String?) {
         standard.set(value, forKey: kPasswordField)
     }
     
+    static func removeUserData() {
+        removeToken()
+        removeEmail()
+    }
+    
     static func removeToken() {
         standard.removeObject(forKey: kToken)
+    }
+    
+    static func removeEmail() {
+        standard.removeObject(forKey: kEmailField)
     }
     
     static func removeLogin() {

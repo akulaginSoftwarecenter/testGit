@@ -35,11 +35,11 @@ class TransportViewController: UIViewController {
         super.viewDidAppear(animated)
         
         updateItemsIfNeed()
-        checkToken()
+        checkEmail()
     }
     
     /// Проверка наличия токена сессии
-    func checkToken() {
-        Utils.checkTokeShowAlert()
+    func checkEmail() {
+        Utils.checkEmailShowAlert()
     }
 }
