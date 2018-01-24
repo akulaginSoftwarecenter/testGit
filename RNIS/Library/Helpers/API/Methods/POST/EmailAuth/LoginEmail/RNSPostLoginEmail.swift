@@ -9,9 +9,13 @@
 import UIKit
 import Alamofire
 
-class RNSPostLoginEmail: RNSRequest {
+class RNSPostLoginEmail: RNSPostRequestMobileToken {
     override var method: Alamofire.HTTPMethod {
         return .post
+    }
+    
+    override var headers: AliasDictionary {
+        return super.headers.merged(with: Utils.mobileToken)
     }
     
     var login: String?
@@ -41,15 +45,20 @@ class RNSPostLoginEmail: RNSRequest {
     func parseReply(_ model: AliasModel?) {
         if let payload = model?.payload,
             let token = payload.token,
-            let uuid = payload.uuid,
-            let email = payload.email {
+            let uuid = payload.uuid {
             UserDefaults.setToken(token)
-            UserDefaults.setEmail(email)
             UserDefaults.setUuid(uuid)
+            saveEmail()
             complete?()
             return
         }
         parseError(model)
+    }
+    
+    func saveEmail() {
+        if let login = login {
+            UserDefaults.setEmail(login)
+        }
     }
     
     func parseError(_ model: AliasModel?) {
