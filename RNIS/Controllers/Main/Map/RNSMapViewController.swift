@@ -41,8 +41,12 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        
         print("RNSMapViewController RNSTempRegister")
+        RNSTempRegister(complete: { (item) in
+            print("RNSMapViewController RNSTempRegister item",item?.token)
+        })
+        /*
         RNSTempRegister { (object, error, true) in
             print("RNSTempRegister",object)
         }

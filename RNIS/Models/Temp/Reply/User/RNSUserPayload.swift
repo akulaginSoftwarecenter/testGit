@@ -28,6 +28,7 @@ class RNSUserPayload: RNISMappableBase {
     var password: String?
     var old_password: String?
     var new_email_activation_code: String?
+    var is_temporary: Bool?
     
     var user: RNSUserPayload?
    
@@ -35,6 +36,11 @@ class RNSUserPayload: RNISMappableBase {
         self.init()
         
         self.phone = phone
+    }
+    static func tempToken() -> RNSUserPayload? {
+        let item = RNSUserPayload()
+        item.is_temporary = true
+        return item
     }
     
     convenience init(email: String?) {
@@ -61,6 +67,7 @@ class RNSUserPayload: RNISMappableBase {
         old_password <- map["old_password"]
         email_activation_code <- map["email_activation_code"]
         new_email_activation_code <- map["new_email_activation_code"]
+        is_temporary <- map["is_temporary"]
     }
     
     static func itemUserDefault() -> RNSUserPayload {

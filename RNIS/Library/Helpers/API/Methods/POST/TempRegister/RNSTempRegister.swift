@@ -7,19 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
-class RNSTempRegister: RNSRequest {
+class RNSTempRegister: RNSParentAuthPost {
     
-    override var payload: AliasDictionary {
-        return ["is_temporary": true]
+    @discardableResult convenience init(complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
+        self.init(RNSUserPayload.tempToken(), complete: complete, failure: failure)
     }
-    
-    override var headers: AliasDictionary {
-        var dict = super.headers
-        dict[kMeta] = AliasDictionary()
-        return dict
-    }
-    
+
     override var subject: String {
         return subjectRegister
     }
