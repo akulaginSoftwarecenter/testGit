@@ -12,7 +12,7 @@ import Alamofire
 class RNSTempRegister: RNSParentAuthPost {
     
     @discardableResult convenience init(complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
-        self.init(RNSUserPayload.tempToken(), complete: complete, failure: failure)
+        self.init(RNSUserPayload.tempToken(), complete: complete, isNeedLoaders: false, failure: failure)
     }
 
     override var subject: String {

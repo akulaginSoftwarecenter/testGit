@@ -11,6 +11,10 @@ import Alamofire
 
 class RNSPostLogin: RNSRequest {
 
+    override var headers: AliasDictionary {
+        return super.headers.merged(with: Utils.mobileToken)
+    }
+    
     override var method: Alamofire.HTTPMethod {
         return .post
     }

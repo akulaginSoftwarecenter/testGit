@@ -18,19 +18,24 @@ class RNSParentAuthPost: RNSTokenRequest {
     var failure: AliasStringBlock?
     var complete: AliasRegisterPayloadBlock?
      
-    @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
+    @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, isNeedLoaders: Bool = true, failure: AliasStringBlock? = nil) {
         self.init()
         
         self.item = item
         self.failure = failure
         self.complete = complete
-        STRouter.showLoader()
+        if isNeedLoaders {
+            STRouter.showLoader()
+        }
+        
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             if error != nil {
                 failure?(kServerNotAviable)
                 return
             }
-            STRouter.removeLoader()
+            if isNeedLoaders {
+                STRouter.removeLoader()
+            }
             self?.parseReply(AliasPostRegister(reply: object))
         }
     }
