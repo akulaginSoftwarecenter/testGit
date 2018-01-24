@@ -42,6 +42,7 @@ let favoriteTitle = "Избранное"
 let notificationTitle = "Оповещения"
 let kErrorMail = "Введите корректный email"
 let minZoomVisibleStop = Int32(14)
+let subjectRegister = "com.rnis.mobile.action.mobile_user.register"
 
 let kSearchViewCellDefaultHeight: CGFloat = 59
 let kSearchViewCellDistanceRight: CGFloat = 16

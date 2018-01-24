@@ -19,6 +19,6 @@ class RNSPostRegister: RNSParentAuthPost {
     }
     
     override var subject: String {
-        return "com.rnis.mobile.action.mobile_user.register"
+        return subjectRegister
     }
 }

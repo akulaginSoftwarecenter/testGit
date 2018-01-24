@@ -41,7 +41,12 @@ class RNSMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
+        print("RNSMapViewController RNSTempRegister")
+        RNSTempRegister { (object, error, true) in
+            print("RNSTempRegister",object)
+        }
+ */
         RNSMapManager.startLocation()
         prepareAnimator()
         simulateWelcomePresentationIfNeed()

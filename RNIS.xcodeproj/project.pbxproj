@@ -637,6 +637,7 @@
 		83C00B3E1FB169E600B09183 /* RNSLoaderWay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C00B3D1FB169E600B09183 /* RNSLoaderWay.xib */; };
 		83C00B431FB1747F00B09183 /* RNSParentLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C00B421FB1747F00B09183 /* RNSParentLoaderView.swift */; };
 		83C15D671F78A002005FD3F4 /* RNSProfileViewController+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C15D661F78A001005FD3F4 /* RNSProfileViewController+Image.swift */; };
+		83C315752018335700C7C146 /* RNSTempRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C315742018335700C7C146 /* RNSTempRegister.swift */; };
 		83CD584B1F25878900A9FE1A /* RNSPostRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD584A1F25878900A9FE1A /* RNSPostRouting.swift */; };
 		83CD584D1F25879B00A9FE1A /* RNSPostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD584C1F25879B00A9FE1A /* RNSPostLogin.swift */; };
 		83CD58511F258BAB00A9FE1A /* PGGeoPoint+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD58501F258BAB00A9FE1A /* PGGeoPoint+Utils.swift */; };
@@ -1323,6 +1324,7 @@
 		83C00B3D1FB169E600B09183 /* RNSLoaderWay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RNSLoaderWay.xib; sourceTree = "<group>"; };
 		83C00B421FB1747F00B09183 /* RNSParentLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSParentLoaderView.swift; sourceTree = "<group>"; };
 		83C15D661F78A001005FD3F4 /* RNSProfileViewController+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSProfileViewController+Image.swift"; sourceTree = "<group>"; };
+		83C315742018335700C7C146 /* RNSTempRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSTempRegister.swift; sourceTree = "<group>"; };
 		83CD584A1F25878900A9FE1A /* RNSPostRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostRouting.swift; sourceTree = "<group>"; };
 		83CD584C1F25879B00A9FE1A /* RNSPostLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostLogin.swift; sourceTree = "<group>"; };
 		83CD58501F258BAB00A9FE1A /* PGGeoPoint+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PGGeoPoint+Utils.swift"; sourceTree = "<group>"; };
@@ -1936,6 +1938,7 @@
 				8385AE631F848A1E008556C6 /* NotificationList */,
 				83A327EA1F849874003BA053 /* NotificationUpdate */,
 				839875C01F612F5D00B88F0B /* Parent */,
+				83C31573201832F600C7C146 /* TempRegister */,
 				8319C5B11F60DFBE005A1768 /* Register */,
 				83CD58491F25870900A9FE1A /* Routing */,
 				835AFAF41F8223DB00E91572 /* Search */,
@@ -4810,6 +4813,14 @@
 			path = Parent;
 			sourceTree = "<group>";
 		};
+		83C31573201832F600C7C146 /* TempRegister */ = {
+			isa = PBXGroup;
+			children = (
+				83C315742018335700C7C146 /* RNSTempRegister.swift */,
+			);
+			path = TempRegister;
+			sourceTree = "<group>";
+		};
 		83C83428200F5B37006B1847 /* PostPhoneConfirmEmailSend */ = {
 			isa = PBXGroup;
 			children = (
@@ -5447,6 +5458,7 @@
 				837ABF151F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */,
 				831922C1200F0A6000661A32 /* RNSRegistrationCodeEmailController.swift in Sources */,
 				839BCDF61F32CA9000B5CA88 /* RNSImagePickerController.swift in Sources */,
+				83C315752018335700C7C146 /* RNSTempRegister.swift in Sources */,
 				837B66881F396DEF0048C5BA /* RNSTouchView.swift in Sources */,
 				83B2E0A41F1E167700FA92A4 /* RNSGetTraffic.swift in Sources */,
 				83DD726E1F85D361008DCCA2 /* RNSBusTemp+Var.swift in Sources */,
