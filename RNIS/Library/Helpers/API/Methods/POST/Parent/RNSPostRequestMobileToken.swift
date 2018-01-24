@@ -18,4 +18,32 @@ class RNSPostRequestMobileToken: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post
     }
+    
+    override func sendRequest() {
+        if UserDefaults.isHaveToken {
+            super.sendRequest()
+        } else {
+            updateToken{
+                super.sendRequest()
+            }
+        }
+    }
+    
+    func updateToken(complete: EmptyBlock?) {
+        print("Получаем временный токен")
+        RNSTempRegister(complete: {[weak self] (item) in
+            if let token = item?.token {
+                UserDefaults.setToken(token)
+                complete?()
+            } else {
+                self?.showOk("Не удалось получить временный токен")
+            }
+        }, failure: { [weak self] error in
+            self?.showOk(error)
+        })
+    }
+    
+    func showOk(_ message: String?) {
+        STAlertRouter.showOk(message)
+    }
 }

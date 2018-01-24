@@ -42,6 +42,7 @@ extension UserDefaults {
     }
      
     static func setToken(_ value: String) {
+        print("new token",value)
         standard.set(value, forKey: kToken)
     }
     
