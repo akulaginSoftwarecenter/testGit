@@ -38,7 +38,7 @@ class RNSCodeEmailViewController: RNSCoverViewController,ContainerProtocol,UITex
     override func loginPressed() {
         if !codeField.isValid {
             codeField.setStateNotValid()
-            errorLabel.text = "Введите код"
+            prepareError("Введите код")
             return
         }
         clearError()
@@ -48,7 +48,14 @@ class RNSCodeEmailViewController: RNSCoverViewController,ContainerProtocol,UITex
     /// очистка надписей с ошибками
     func clearError() {
         codeField.setStateValid()
-        errorLabel.text = nil
+        prepareError(nil)
+    }
+    
+    func prepareError(_ error: String?) {
+        guard let error = error, !error.isEmpty else {
+            return
+        }
+        STAlertRouter.showOk(error)
     }
     
     /// Событие нажатия на кнопку повторной отправки кода

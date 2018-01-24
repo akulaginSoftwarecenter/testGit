@@ -64,7 +64,7 @@ class RNSCodeMailContainerController: STContainerViewController {
     }
     
     func prepareError(_ error: String?) {
-        containerViewController?.errorLabel.text = error
+        containerViewController?.prepareError(error)
         containerViewController?.codeField.text = ""
     }
     
