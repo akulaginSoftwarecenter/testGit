@@ -14,10 +14,6 @@ class RNSPostLoginEmail: RNSPostRequestMobileToken {
         return .post
     }
     
-    override var headers: AliasDictionary {
-        return super.headers.merged(with: Utils.mobileToken)
-    }
-    
     var login: String?
     var password: String?
     var complete: EmptyBlock?

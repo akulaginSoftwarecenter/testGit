@@ -8,9 +8,30 @@
 
 import UIKit
 
-class RNSPostUpdate: RNSParentAuthPost {
+class RNSPostUpdate: RNSPostRequestMobileToken {
     
-    override func parseReply(_ model: AliasPostRegister?) {
+    var item: RNSUserPayload?
+    var failure: AliasStringBlock?
+    var complete: AliasRegisterPayloadBlock?
+    
+    @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
+        self.init()
+        
+        self.item = item
+        self.failure = failure
+        self.complete = complete
+        
+        sendRequestWithCompletion {[weak self] (object, error, inot) in
+            if error != nil {
+                failure?(kServerNotAviable)
+                return
+            }
+
+            self?.parseReply(AliasPostRegister(reply: object))
+        }
+    }
+    
+    func parseReply(_ model: AliasPostRegister?) {
         if  model?.success ?? false,
             let payload = model?.payload  {
             self.complete?(payload)
@@ -19,8 +40,18 @@ class RNSPostUpdate: RNSParentAuthPost {
         parseError(model)
     }
     
-    override var headers: AliasDictionary {
-        return super.headers.merged(with: Utils.mobileToken)
+    func parseError(_ model: AliasPostRegister?) {
+        guard let error = model?.errors?.first?.textError else {
+            return
+        }
+        failure?(error)
+    }
+    
+    override var payload: AliasDictionary {
+        guard let item = item else {
+            return [:]
+        }
+        return item.toJSON()
     }
     
     override var subject: String {

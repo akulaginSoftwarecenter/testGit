@@ -35,10 +35,6 @@ class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
         super.apiDidFailWithError(item.error)
     }
     
-    override var headers: AliasDictionary {
-        return super.headers.merged(with: Utils.mobileToken)
-    }
-    
     override func showErrorNetwork() {
         
     }
