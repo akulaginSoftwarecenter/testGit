@@ -11,6 +11,8 @@ import Alamofire
 
 class RNSPostRequestMobileToken: RNSRequest {
     
+    var countAttemptUpdateToken = 0
+    
     override var headers: AliasDictionary {
         return super.headers.merged(with: Utils.mobileToken)
     }
@@ -34,7 +36,7 @@ class RNSPostRequestMobileToken: RNSRequest {
     }
     
     func updateToken(complete: EmptyBlock?) {
-        print("Получаем временный токен")
+        printLog("Получаем временный токен")
         RNSTempRegister(complete: {[weak self] (item) in
             if let token = item?.token {
                 UserDefaults.setToken(token)
@@ -52,15 +54,30 @@ class RNSPostRequestMobileToken: RNSRequest {
     }
     
     override func parseResponseJson(_ json: AnyObject) {
-        print("проверяем на наличие ошибок",json)
+        printLog("проверяем на наличие ошибок")
+        printLog("countAttemptUpdateToken " + "\(countAttemptUpdateToken)")
+        guard countAttemptUpdateToken < 3 else {
+            super.parseResponseJson(json)
+            showOk("Превышен лимит попыток обновления токена")
+            return
+        }
+        
+        countAttemptUpdateToken += 1
         let model = AliasPostRegister(reply: json)
         guard model?.errors?.first?.isBadToken ?? false else {
             super.parseResponseJson(json)
-            print("Нет ошибок")
+            printLog("Нет ошибок")
+ 
             return
         }
-        print("Перегружаем токен")
+        printLog("Перегружаем токен")
         UserDefaults.removeUserData()
         updateTokenAndRepeatRequest()
+    }
+    
+    func printLog(_ log: String){
+        if showLogUpdateToken {
+            print(log);
+        }
     }
 }

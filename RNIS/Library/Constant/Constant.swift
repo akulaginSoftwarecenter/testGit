@@ -21,6 +21,8 @@ let serverRnisapi = "https://api.rnis.mosreg.ru/ajax/request"
 let showLogApi = true
 let showLogApiDetail = false
 
+let showLogUpdateToken = false
+
 
 let kPhoneVC = "RNSPhoneViewController"
 let kEmailVC = "RNSEmailViewController"
