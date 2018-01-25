@@ -9,7 +9,7 @@
 import UIKit
 
 class RNSTokenRequest: RNSRequest {
-    
+    /*
     override var headers: AliasDictionary {
         var headers = super.headers
         if let token = UserDefaults.token {
@@ -17,4 +17,5 @@ class RNSTokenRequest: RNSRequest {
         }
         return headers
     }
+    */
 }
