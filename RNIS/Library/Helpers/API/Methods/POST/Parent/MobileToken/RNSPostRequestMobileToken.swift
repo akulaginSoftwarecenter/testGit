@@ -23,9 +23,13 @@ class RNSPostRequestMobileToken: RNSRequest {
         if UserDefaults.isHaveToken {
             super.sendRequest()
         } else {
-            updateToken{
-                super.sendRequest()
-            }
+            updateTokenAndRepeatRequest()
+        }
+    }
+    
+    func updateTokenAndRepeatRequest() {
+        updateToken{
+            super.sendRequest()
         }
     }
     
@@ -45,5 +49,18 @@ class RNSPostRequestMobileToken: RNSRequest {
     
     func showOk(_ message: String?) {
         STAlertRouter.showOk(message)
+    }
+    
+    override func parseResponseJson(_ json: AnyObject) {
+        print("проверяем на наличие ошибок",json)
+        let model = AliasPostRegister(reply: json)
+        guard model?.errors?.first?.isBadToken ?? false else {
+            super.parseResponseJson(json)
+            print("Нет ошибок")
+            return
+        }
+        print("Перегружаем токен")
+        UserDefaults.removeUserData()
+        updateTokenAndRepeatRequest()
     }
 }

@@ -2289,6 +2289,14 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		832704B420199757008A6E94 /* MobileToken */ = {
+			isa = PBXGroup;
+			children = (
+				833D6C1C1F7CC28E00C4A0F3 /* RNSPostRequestMobileToken.swift */,
+			);
+			path = MobileToken;
+			sourceTree = "<group>";
+		};
 		832725632005C49900D99984 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -4211,8 +4219,8 @@
 		839875C01F612F5D00B88F0B /* Parent */ = {
 			isa = PBXGroup;
 			children = (
+				832704B420199757008A6E94 /* MobileToken */,
 				839875C11F612FC400B88F0B /* RNSParentAuthPost.swift */,
-				833D6C1C1F7CC28E00C4A0F3 /* RNSPostRequestMobileToken.swift */,
 			);
 			path = Parent;
 			sourceTree = "<group>";

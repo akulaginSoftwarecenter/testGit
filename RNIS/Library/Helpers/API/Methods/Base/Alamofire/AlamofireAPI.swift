@@ -85,7 +85,7 @@ class AlamofireAPI: API {
             
             do {
                 let json = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments)
-                self.requestDidReturnReply(json as AnyObject)
+                self.parseResponseJson(json as AnyObject)
             } catch {
                 let string = String(data: response.data!, encoding: String.Encoding.utf8) ?? ""
                 print("alamofireRequest.response",string)
@@ -94,6 +94,10 @@ class AlamofireAPI: API {
             self.apiDidEnd()
         }
         self.alamofireRequest = alamofireRequest
+    }
+    
+    func parseResponseJson(_ json: AnyObject) {
+        requestDidReturnReply(json)
     }
     
     override func apiDidFailWithError(_ error: NSError) {

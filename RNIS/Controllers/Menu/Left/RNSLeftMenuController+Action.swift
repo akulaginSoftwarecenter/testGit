@@ -42,7 +42,8 @@ extension RNSLeftMenuController {
     }
       
     @IBAction func actionStart(_ sender: Any) {
-        RNSMoveStub.start()
+        //RNSMoveStub.start()
+        UserDefaults.setToken("sdfdsf")
     }
     
     @IBAction func actionEnd(_ sender: Any) {

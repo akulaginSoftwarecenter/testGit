@@ -34,6 +34,13 @@ class RNSRequestError<T: Mappable>: RNISMappableBase {
         return code == "1-0-0-3"
     }
     
+    var isBadToken: Bool {
+        guard let code = code else {
+            return false
+        }
+        return code == "1-0-0-7"
+    }
+    
     var textError: String {
         var textError = ""
         
