@@ -15,10 +15,17 @@ class RNSRegistrationEmailController: RNSEmailContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
+        RNSPostUpdate(item, complete: {
+            STRouter.pushMain(RNSRegistrationCodeEmailController.initController($0))
+            }, failure: { [weak self] error in
+              self?.prepareError(error)
+        })
+        /*
         RNSPostRegister(item, complete: {
             STRouter.pushMain(RNSRegistrationCodeEmailController.initController($0))
         }, failure: { [weak self] error in
             self?.prepareError(error)
         })
+        */
     }
 }
