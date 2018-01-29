@@ -85,6 +85,7 @@ extension RNSFavoritesBusView {
     
     /// Функция отображения остановок ТС
     func showStopPoint(_ item: RNSFavoriteStopPoint?) {
+        RNSMenuManager.mapToRoot()
         RNSMapManager.showStopPoint(item?.dict)
     }
 }
