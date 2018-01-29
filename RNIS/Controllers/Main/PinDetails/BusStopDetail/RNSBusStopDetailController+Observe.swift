@@ -37,12 +37,14 @@ extension RNSBusStopDetailController {
         let heightScreen = UIScreen.height
         let offset = heightScreen - top
         let between = offset - (startBottomOffset ?? 0)
-        var constant = 74 + between
-        if constant < 74 {
-            constant = 74
+        let topValue = CGFloat(18)
+        var constant = topValue + between
+        if constant < topValue {
+            constant = topValue
         }
-        if constant > 118 {
-            constant = 118
+        
+        if constant > 44 {
+            constant = 44
         }
         topConstraint.constant = constant
     }
