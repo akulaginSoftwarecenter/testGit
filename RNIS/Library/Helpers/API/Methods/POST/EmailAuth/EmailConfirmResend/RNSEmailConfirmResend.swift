@@ -18,7 +18,7 @@ class RNSEmailConfirmResend: RNSParentAuthPost {
     }
     
     override var subject: String {
-        //return "com.rnis.mobile.action.mobile_user.confirm.email.resend"
-        return "com.rnis.mobile.action.mobile_user.email.reset_pass"
+        return "com.rnis.mobile.action.mobile_user.confirm.email.resend"
+        //return "com.rnis.mobile.action.mobile_user.email.reset_pass"
     }
 }
