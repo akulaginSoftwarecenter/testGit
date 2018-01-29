@@ -35,7 +35,7 @@ class TransportViewController: UIViewController {
         super.viewDidAppear(animated)
         
         updateItemsIfNeed()
-        checkEmail()
+       // checkEmail()
     }
     
     /// Проверка наличия токена сессии

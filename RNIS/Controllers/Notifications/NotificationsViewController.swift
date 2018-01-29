@@ -28,7 +28,7 @@ class NotificationsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Utils.checkEmailShowAlert()
+       // Utils.checkEmailShowAlert()
         loadItems()
     }
     
