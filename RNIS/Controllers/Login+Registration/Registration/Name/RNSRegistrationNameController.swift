@@ -86,6 +86,7 @@ class RNSRegistrationNameController: UIViewController {
             RNSMenuManager.hideLeftMenu(animated: false)
             STRouter.popToRootMain()
             RNSMenuManager.showMap()
+            RNSMapManager.startLocation()
         }, failure: {[weak self] (errorText) in
             self?.prepareError(errorText)
         })

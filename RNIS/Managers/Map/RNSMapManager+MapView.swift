@@ -23,6 +23,7 @@ extension RNSMapManager {
     /// Функция старта определения местоположения
     static func startLocation() {
         RNSLocationManager.startLocation {
+            setMaxZoom()
             centerUserLocation()
             prepareRoutePoints()
         }

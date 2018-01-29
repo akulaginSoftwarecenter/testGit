@@ -61,6 +61,7 @@ class RNSLoginEmailViewController: UIViewController {
         
         RNISAuthManager.loginEmail(login, password: password, success: { [weak self] in
             STRouter.popMain()
+            RNSMapManager.startLocation()
             self?.handlerBack?()
             }, failure:{[weak self] (errorText) in
                 self?.prepareError(errorText)
