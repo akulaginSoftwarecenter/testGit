@@ -19,8 +19,7 @@ extension STRouter {
     }
     
     static func showAfterLogout() {
-        popToRootMain(false)
-        RNSMenuManager.showMap()
+        showMapReset()
         showLogin(animated:false)
     }
     
