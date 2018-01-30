@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ZS-ws-zKX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ZS-ws-zKX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,16 +36,6 @@
                                                     <constraint firstAttribute="height" id="neV-6Y-pCe"/>
                                                 </constraints>
                                             </imageView>
-                                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldl-3y-zZL">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="BqP-fS-UbZ"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="delegate" destination="2ZS-ws-zKX" id="hNS-PN-pQ8"/>
-                                                </connections>
-                                            </webView>
                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="wlZ-jF-w8F">
                                                 <rect key="frame" x="0.0" y="-135" width="375" height="135"/>
                                             </imageView>
@@ -55,24 +45,47 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmD-LL-OR3" customClass="RNSNewsWebView" customModule="RNIS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="250" constant="1" id="9KO-JA-seL"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcs-6s-Dlv" customClass="RNSNewsWebView" customModule="RNIS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1" width="375" height="582"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="1" id="a1n-e0-rVl"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="wlZ-jF-w8F" firstAttribute="trailing" secondItem="xsn-Qd-zfx" secondAttribute="trailing" id="4Vj-xT-reg"/>
                                             <constraint firstItem="QGp-Ab-Qr6" firstAttribute="trailing" secondItem="xsn-Qd-zfx" secondAttribute="trailing" constant="-26" id="4du-sF-DiT"/>
                                             <constraint firstItem="QGp-Ab-Qr6" firstAttribute="leading" secondItem="xsn-Qd-zfx" secondAttribute="leading" constant="26" id="5r4-mf-u7j"/>
+                                            <constraint firstItem="wcs-6s-Dlv" firstAttribute="top" secondItem="bmD-LL-OR3" secondAttribute="bottom" id="Byy-UL-MrX"/>
+                                            <constraint firstItem="wcs-6s-Dlv" firstAttribute="leading" secondItem="Mj8-ph-cDY" secondAttribute="leading" id="DPg-wk-1ky"/>
                                             <constraint firstItem="xsn-Qd-zfx" firstAttribute="leading" secondItem="Vd2-X8-5Yt" secondAttribute="leading" id="DZq-DU-mSv"/>
+                                            <constraint firstItem="bmD-LL-OR3" firstAttribute="leading" secondItem="Vd2-X8-5Yt" secondAttribute="leading" id="HJu-zP-a6u"/>
+                                            <constraint firstItem="wcs-6s-Dlv" firstAttribute="top" secondItem="xsn-Qd-zfx" secondAttribute="bottom" id="LRF-FK-r3W"/>
+                                            <constraint firstAttribute="trailing" secondItem="wcs-6s-Dlv" secondAttribute="trailing" id="Lrq-hO-hFO"/>
+                                            <constraint firstItem="bmD-LL-OR3" firstAttribute="top" secondItem="xsn-Qd-zfx" secondAttribute="bottom" id="Njn-1h-SPM"/>
                                             <constraint firstItem="QGp-Ab-Qr6" firstAttribute="bottom" secondItem="xsn-Qd-zfx" secondAttribute="bottom" constant="-10" id="Png-95-xLi"/>
-                                            <constraint firstItem="ldl-3y-zZL" firstAttribute="top" secondItem="xsn-Qd-zfx" secondAttribute="bottom" id="RlW-gc-zdx"/>
                                             <constraint firstItem="wlZ-jF-w8F" firstAttribute="bottom" secondItem="xsn-Qd-zfx" secondAttribute="bottom" id="TMx-Lu-2TN"/>
+                                            <constraint firstAttribute="bottom" secondItem="wcs-6s-Dlv" secondAttribute="bottom" id="ULC-Qj-9TV"/>
                                             <constraint firstItem="Vd2-X8-5Yt" firstAttribute="trailing" secondItem="xsn-Qd-zfx" secondAttribute="trailing" id="Z7c-MM-ICX"/>
                                             <constraint firstItem="xsn-Qd-zfx" firstAttribute="top" secondItem="Mj8-ph-cDY" secondAttribute="top" id="c7u-LQ-BcL"/>
                                             <constraint firstItem="wlZ-jF-w8F" firstAttribute="leading" secondItem="xsn-Qd-zfx" secondAttribute="leading" id="hK9-ks-vfp"/>
-                                            <constraint firstItem="ldl-3y-zZL" firstAttribute="leading" secondItem="Vd2-X8-5Yt" secondAttribute="leading" id="i31-Zp-sgJ"/>
-                                            <constraint firstItem="Vd2-X8-5Yt" firstAttribute="trailing" secondItem="ldl-3y-zZL" secondAttribute="trailing" id="og3-Cs-6ah"/>
-                                            <constraint firstAttribute="bottom" secondItem="ldl-3y-zZL" secondAttribute="bottom" id="wX9-aD-aqM"/>
+                                            <constraint firstItem="Vd2-X8-5Yt" firstAttribute="trailing" secondItem="bmD-LL-OR3" secondAttribute="trailing" id="w0C-dP-m6h"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="Vd2-X8-5Yt"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="LRF-FK-r3W"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -110,11 +123,11 @@
                     </view>
                     <connections>
                         <outlet property="anonceLabel" destination="QGp-Ab-Qr6" id="WNh-cV-x26"/>
-                        <outlet property="heightImageView" destination="neV-6Y-pCe" id="yYa-O1-R0k"/>
-                        <outlet property="heightWebView" destination="BqP-fS-UbZ" id="ZTU-7W-qXc"/>
+                        <outlet property="anounceWebView" destination="bmD-LL-OR3" id="Yo8-fZ-fr8"/>
+                        <outlet property="heightImageView" destination="neV-6Y-pCe" id="pvD-80-iG0"/>
                         <outlet property="imageView" destination="xsn-Qd-zfx" id="qzU-dt-avN"/>
                         <outlet property="rectangleView" destination="wlZ-jF-w8F" id="iXi-lA-G1a"/>
-                        <outlet property="webView" destination="ldl-3y-zZL" id="Adm-KI-d4A"/>
+                        <outlet property="textWebView" destination="wcs-6s-Dlv" id="aUf-Jn-GKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3D-1p-Zik" userLabel="First Responder" sceneMemberID="firstResponder"/>

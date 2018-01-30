@@ -13,8 +13,8 @@ class RNSNewsDetailController: UIViewController {
     var item: RNSNewsTemp?
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var heightWebView: NSLayoutConstraint!
+    @IBOutlet weak var anounceWebView: RNSNewsWebView!
+    @IBOutlet weak var textWebView: RNSNewsWebView!
     @IBOutlet weak var heightImageView: NSLayoutConstraint!
     
     @IBOutlet weak var rectangleView: UIImageView!
@@ -33,7 +33,7 @@ class RNSNewsDetailController: UIViewController {
     
     func loadItem() {
         prepareTitle()
-        prepareWebView()
+        prepareWebViews()
         loadImage()
     }
     
@@ -59,11 +59,8 @@ class RNSNewsDetailController: UIViewController {
         imageView.image = image
     }
     
-    func prepareWebView() {
-        guard let text = item?.text else {
-            return
-        }
-        let page = String(format: "%@%@%@", "<div style=\"color:#ffffff\">", text, "</div>")
-        webView.loadHTMLString(page, baseURL: nil)
+    func prepareWebViews() {
+        anounceWebView.item = item?.anounce
+        textWebView.item = item?.text
     }
 }

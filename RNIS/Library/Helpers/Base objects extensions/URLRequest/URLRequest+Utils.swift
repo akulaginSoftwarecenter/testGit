@@ -13,4 +13,16 @@ extension URLRequest {
     var isMail: Bool {
         return url?.isMail ?? false
     }
+    
+    func makeActionAt(_ navigationType: UIWebViewNavigationType) -> Bool {
+        if navigationType == .linkClicked {
+            if isMail {
+                RNSInfoManager.shared.sendRequest(self)
+            } else {
+                UIApplication.shared.openURL(url!)
+            }
+            return false
+        }
+        return true
+    }
 }
