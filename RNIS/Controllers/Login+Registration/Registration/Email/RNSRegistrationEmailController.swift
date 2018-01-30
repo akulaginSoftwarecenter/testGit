@@ -15,6 +15,7 @@ class RNSRegistrationEmailController: RNSEmailContainerController {
     }
     
     override func actionComplete(_ item: RNSUserPayload?) {
+        item?.edit_source = "Registration_Email"
         RNSPostUpdate(item, complete: {
             STRouter.pushMain(RNSRegistrationCodeEmailController.initController($0))
             }, failure: { [weak self] error in

@@ -72,7 +72,7 @@ class RNSRegistrationNameController: UIViewController {
     func send() {
         item?.name = nameField.text
         item?.avatar = photo.imageData
-
+        item?.edit_source = "Registration_Name"
         RNSPostUpdate(item, complete: {[weak self] _ in
             self?.login()
             }, failure: { [weak self] error in
