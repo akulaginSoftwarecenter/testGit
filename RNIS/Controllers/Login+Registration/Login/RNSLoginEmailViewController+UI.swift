@@ -18,8 +18,7 @@ extension RNSLoginEmailViewController {
             self?.loginPressed()
         }
         
-        backButton.handlerAction = { [weak self] in
-            self?.handlerBack?()
+        backButton.handlerAction = { 
             STRouter.popMain()
         }
     }

@@ -23,6 +23,14 @@ extension STRouter {
         RNSMenuManager.showMap()
         showLogin(animated:false)
     }
+    
+    static func showMapReset() {
+        RNSMenuManager.hideLeftMenu(animated: false)
+        popToRootMain()
+        RNSMenuManager.showMapToRoot()
+        RNSMapManager.startLocation()
+        RNSMapManager.hideOldPopopovers()
+    }
  
     static func showLogin(animated: Bool = true) {
         guard let vc = RNSLoginEmailViewController.controller else {

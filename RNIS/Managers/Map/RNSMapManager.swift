@@ -65,4 +65,8 @@ class RNSMapManager: NSObject {
     static func updateLoader() {
         handlerUpdateLoader?()
     }
+    
+    static func hideOldPopopovers() {
+        handlerDismissOldPresentVC?()
+    }
  }

@@ -30,7 +30,7 @@ extension RNSBuildRouteView {
     }
     
     func mapHideOldPopopovers() {
-        RNSMapManager.handlerDismissOldPresentVC?()
+        RNSMapManager.hideOldPopopovers()
     }
     
     func animateBottom() {

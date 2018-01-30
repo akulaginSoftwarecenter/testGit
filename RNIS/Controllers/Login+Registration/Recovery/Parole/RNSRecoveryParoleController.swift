@@ -46,8 +46,7 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
     /// Авторизация пользователя
     func login() {
         RNISAuthManager.loginEmail(item?.email, password: item?.password, success: {
-            RNSMenuManager.hideLeftMenu(animated: false)
-            STRouter.popToRootMain()
+            STRouter.showMapReset()
             STAlertRouter.showOk("Пароль успешно изменён")
             }, failure: {[weak self] (errorText) in
             self?.prepareError(errorText)
