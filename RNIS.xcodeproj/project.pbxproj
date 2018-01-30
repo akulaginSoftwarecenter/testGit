@@ -4271,7 +4271,6 @@
 			isa = PBXGroup;
 			children = (
 				8386B4431F343E8E008A5CC7 /* ChangePassword */,
-				836277C51F38044D009FB712 /* ChangePhone */,
 				831922C2200F14F800661A32 /* ChangeEmail */,
 				839BCDFA1F32E66B00B5CA88 /* RNSProfileViewController.swift */,
 				8386B4411F343D84008A5CC7 /* RNSProfileViewController+Action.swift */,
@@ -4282,6 +4281,7 @@
 				837857F41F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift */,
 				83246C001FB19DE70009B728 /* RNSProfileViewController+UI.swift */,
 				839BCDFC1F32E67E00B5CA88 /* RNSProfileViewController.storyboard */,
+				83ADEE8A20201EDE0042ED36 /* Old */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -4669,6 +4669,14 @@
 				83ADAAEB1F839C3000C289C5 /* RNSPostFavoritePathUpdate.swift */,
 			);
 			path = FavoritePathUpdate;
+			sourceTree = "<group>";
+		};
+		83ADEE8A20201EDE0042ED36 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				836277C51F38044D009FB712 /* ChangePhone */,
+			);
+			path = Old;
 			sourceTree = "<group>";
 		};
 		83AFEB4A1F6A2E5B00C2A251 /* RouteBusTemp */ = {

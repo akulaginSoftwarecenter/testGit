@@ -100,7 +100,7 @@ class RNSChangePasswordController: UIViewController {
         item?.old_password = passwordOld
         item?.new_email = nil  // Don't re-send new email parameter on next update profile request
         item?.new_phone = nil
-        
+        item?.prepareProfile()
         RNSPostUpdate(item, complete: { [weak self] item in
             self?.pop()
         }, failure: { [weak self] error in

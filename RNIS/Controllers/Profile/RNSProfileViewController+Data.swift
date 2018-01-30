@@ -27,6 +27,7 @@ extension RNSProfileViewController {
         STRouter.showLoader()
         item?.new_email = email  // Remove new_email from update profile payload
         item?.new_phone = nil
+        item?.prepareProfile()
         RNSPostUpdate(item, complete: { item in
             STRouter.removeLoader()
             RNSMenuManager.leftMenuUpdate()

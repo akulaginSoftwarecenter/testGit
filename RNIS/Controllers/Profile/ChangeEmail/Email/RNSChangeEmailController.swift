@@ -43,6 +43,7 @@ class RNSChangeEmailController: RNSEmailContainerController {
     override func actionNext() {
         item?.new_phone = nil
         item?.new_email = emailText  // Don't re-send new email parameter on next update profile request
+        item?.prepareProfile()
         RNSPostUpdate(item, complete: {
             STRouter.pushMain(RNSChangeCodeEmailController.initController($0))
         }, failure: { [weak self] error in
