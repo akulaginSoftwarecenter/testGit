@@ -23,9 +23,9 @@ extension RNSMapManager {
     /// Функция старта определения местоположения
     static func startLocation() {
         RNSLocationManager.startLocation {
-            setMaxZoom()
             centerUserLocation()
             prepareRoutePoints()
+            setMaxZoom()
         }
     }
     
@@ -47,14 +47,6 @@ extension RNSMapManager {
     
     static func setMaxZoom() {
         setZoomLevel(17)
-    }
-    
-    /// Фнукция установки начального зума на карте
-    static func firstZoomIfNeed() {
-        if !UserDefaults.isDidFirstZoom {
-            UserDefaults.firstZoomComplete()
-            prepareMinZoomVisibleStop()
-        }
     }
     
     static func prepareMinZoomVisibleStop() {
