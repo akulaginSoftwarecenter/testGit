@@ -18,6 +18,14 @@ extension DateFormatter {
         return "dd.MM.yyyy"
     }
     
+    static var textTimestamp: String {
+        return "yyyy-MM-dd"
+    }
+    
+    static var textdMMMMyyyy: String {
+        return "d MMMM yyyy"
+    }
+    
     static var HHmm: DateFormatter{
         return format(textHHmm)
     }
@@ -34,6 +42,14 @@ extension DateFormatter {
         return format("E d MMMM" + " / " + textHHmm)
     }
     
+    static var timestamp: DateFormatter{
+        return format(textTimestamp)
+    }
+    
+    static var dMMMMyyyy: DateFormatter{
+        return format(textdMMMMyyyy)
+    }
+   
     static func format(_ format: String) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = format

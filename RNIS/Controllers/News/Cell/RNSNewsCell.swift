@@ -14,7 +14,12 @@ class RNSNewsCell: RNSBaseTableCell {
     
     var item: RNSNewsTemp? {
         didSet{
-            label?.text = item?.title
+            updateItem()
         }
     }
+    
+    func updateItem() {
+        label?.text = item?.titleDate
+    }
 }
+
