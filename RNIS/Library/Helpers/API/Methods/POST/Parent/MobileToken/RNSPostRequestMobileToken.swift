@@ -12,9 +12,14 @@ import Alamofire
 class RNSPostRequestMobileToken: RNSRequest {
     
     var countAttemptUpdateToken = 0
+    var enableSendToken = true
     
     override var headers: AliasDictionary {
-        return super.headers.merged(with: Utils.mobileToken)
+        var headers = super.headers
+        if enableSendToken {
+            headers = headers.merged(with: Utils.mobileToken)
+        }
+        return headers
     }
     
     override var method: Alamofire.HTTPMethod {

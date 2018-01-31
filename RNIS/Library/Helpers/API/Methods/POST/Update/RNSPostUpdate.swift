@@ -14,12 +14,13 @@ class RNSPostUpdate: RNSPostRequestMobileToken {
     var failure: AliasStringBlock?
     var complete: AliasRegisterPayloadBlock?
     
-    @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
+    @discardableResult convenience init(_ item: RNSUserPayload?, enableSendToken: Bool = true, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
         self.init()
         
         self.item = item
         self.failure = failure
         self.complete = complete
+        self.enableSendToken = enableSendToken
         
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             if error != nil {
