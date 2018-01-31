@@ -21,5 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RNSTimeManager()
         return true
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)  {
+        let bytes = UnsafeBufferPointer<UInt8>(start: (deviceToken as NSData).bytes.bindMemory(to: UInt8.self, capacity: deviceToken.count), count:deviceToken.count)
+        let token = bytes.map { String(format: "%02hhx", $0) }.reduce("", { $0 + $1 })
+        UserDefaults.setPushToken(token)
+        STPushManager.send()
+        print("Push token",token)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("didReceiveRemoteNotification",userInfo)
+    }
 }
 

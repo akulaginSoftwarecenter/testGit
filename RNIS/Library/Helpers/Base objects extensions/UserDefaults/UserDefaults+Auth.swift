@@ -17,8 +17,8 @@ extension UserDefaults {
     static let kToken = "token"
     static let kUuid = "uuid"
     static let kEmailField = "EmailField"
-    
-    
+    static let kPushToken = "PushToken"
+        
     static var uuid: String? {
         return standard.string(forKey: kUuid)
     }
@@ -51,9 +51,14 @@ extension UserDefaults {
         return standard.string(forKey: kEmailField)
     }
     
+    static var pushToken:String? {
+        return standard.string(forKey: kPushToken)
+    }
+    
     static func setToken(_ value: String) {
         print("new token",value)
         standard.set(value, forKey: kToken)
+        STPushManager.check()
     }
     
     static func setUuid(_ value: String) {
@@ -74,6 +79,10 @@ extension UserDefaults {
     
     static func setPassword(_ value: String?) {
         standard.set(value, forKey: kPasswordField)
+    }
+    
+    static func setPushToken(_ value:String?) {
+        standard.set(value, forKey: kPushToken)
     }
     
     static func removeUserData() {
