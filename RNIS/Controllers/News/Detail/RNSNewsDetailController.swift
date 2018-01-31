@@ -38,13 +38,11 @@ class RNSNewsDetailController: UIViewController {
     }
     
     func prepareTitle() {
-        print("prepareTitle",item?.titleDate)
         anonceLabel.text = item?.titleDate
     }
     
     func loadImage() {
         heightImageView.constant = 0
-        print("item?.image",item?.image)
         Utils.loadImage(url: item?.image) { [weak self] image in
             self?.prepareImageView(image)
         }
@@ -58,7 +56,6 @@ class RNSNewsDetailController: UIViewController {
         anonceLabel.isHidden = false
         let size = image.size
         let height = UIScreen.width * size.height/size.width
-        print("height prepareImageView",height)
         heightImageView.constant = height
         imageView.image = image
     }

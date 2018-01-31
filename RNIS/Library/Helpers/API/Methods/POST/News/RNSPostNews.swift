@@ -34,7 +34,8 @@ class RNSPostNews: RNSRequest {
     
     override var headers: AliasDictionary {
         var dict = super.headers
-        dict[kMeta] = AliasDictionary()
+        dict["meta"] = ["order": ["column":"timestamp",
+                                  "direction": "desc"]]
         return dict
     }
     
