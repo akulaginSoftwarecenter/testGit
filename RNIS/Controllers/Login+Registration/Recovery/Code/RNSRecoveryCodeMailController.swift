@@ -30,6 +30,14 @@ class RNSRecoveryCodeMailController: RNSCodeMailContainerController {
         return .recovery
     }
     
+    override func repeatCodeAction() {
+        RNSEmailResetPass(item, complete: { item in
+            STAlertRouter.showRepeatCode()
+        }, failure: {
+            STAlertRouter.showOk($0)
+        })
+    }
+    
     override func actionComplete(_ item: RNSUserPayload?) {
         let vc = RNSRecoveryParoleController.initController(item)
         let container = STRouter.imageBoardContainer(vc)
