@@ -10,16 +10,16 @@ import Foundation
 
 /// Возможные типа объектов поиска: автобусы, остановки, адреса
 enum TypeSearch: Int {
-    case transport = 0, stop, address
+    case address = 0, stop, transport
     
     var guery: String {
         switch self {
-        case .transport:
-            return "route"
         case .stop:
             return "stop_points"
         case .address:
             return "address"
+        case .transport:
+            return "route"
         }
     }
 }
