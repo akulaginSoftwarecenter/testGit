@@ -15,5 +15,20 @@ class RNSRabanc: RNISMappableBase {
     
     public override func mapping(map: Map) {
         points <- map["points"]
+        preparePolyline()
+    }
+    
+    var polyline: RNSRoadBus?
+    
+    func clear() {
+        polyline?.clear()
+    }
+    
+    func preparePolyline() {
+        polyline = RNSRoadBus(points)
+    }
+    
+    deinit {
+        print("RNSRabanc deinit")
     }
 }

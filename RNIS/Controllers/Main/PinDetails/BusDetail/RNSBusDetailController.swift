@@ -101,5 +101,6 @@ class RNSBusDetailController: RNSParentDetailPinController {
     
     override func prepareCurrent(_ value: Bool) {
         RNSBusManager.prepareCurrentItem(value, item: itemBus)
+       // RNSRabancManager.prepareRabanc(value, item: nil)
     }
 }

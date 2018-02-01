@@ -26,6 +26,13 @@ class RNSRoadBus: PGPolyline {
         prepareLine()
     }
     
+    convenience init(_ points: [RNSRabancItem]?) {
+        self.init()
+        
+        self.points = points?.flatMap{$0.point}
+        prepareLine()
+    }
+    
     /// настройка линии
     func prepareLine() {
         setBorderWidth(50)
@@ -40,6 +47,7 @@ class RNSRoadBus: PGPolyline {
         guard let points = points else {
             return
         }
+        print("preparePoints ",points.count)
         addPoints(points, count: Int32(points.count), color: .color34)
     }
 }

@@ -124,7 +124,7 @@
                                     <action selector="actionEnd:" destination="T8u-3s-L8k" eventType="touchUpInside" id="tcq-Px-GGe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHE-Hu-SKT">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHE-Hu-SKT">
                                 <rect key="frame" x="186" y="600" width="60" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="CY2-fA-mKB"/>
