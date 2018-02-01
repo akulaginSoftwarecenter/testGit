@@ -77,11 +77,12 @@ class RNSPostBusList: RNSRequest {
             return
         }
         let error = "Ошибка загрузки автобусов. " + item.textError
-        STAlertRouter.showOk(error)
+        failure?(error)
+        //STAlertRouter.showOk(error)
     }
     
     override func showErrorNetwork() {
-        failure?(errorNetwork)
+        failure?("Соединение с сервером...")
     }
     
     override var subject: String {

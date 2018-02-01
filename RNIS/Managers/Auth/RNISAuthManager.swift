@@ -13,6 +13,11 @@ import UIKit
  */
 class RNISAuthManager {
     
+    static var servers = [serverMosreg,serverDev]
+    static var serverMosreg = "https://api.rnis.mosreg.ru/ajax/request"
+    static var serverDev = "https://dev-rnis.regeora.ru/ajax/request"
+    //static var serverDev = "https://dev-rnisapi.regeora.ru/ajax/request"
+    
     /// Функция выхода из приложения
     static func logout() {
         STRouter.showLoader()
@@ -57,5 +62,11 @@ class RNISAuthManager {
             STRouter.removeLoader()
             failure?(errorText)
         })
+    }
+    
+    static func prepareDefaultUrlIfNeed() {
+        if UserDefaults.serverApi == nil, let first = servers.first {
+            UserDefaults.setServerApi(first)
+        }
     }
 }

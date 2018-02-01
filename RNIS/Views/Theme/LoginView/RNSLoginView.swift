@@ -17,6 +17,7 @@ class RNSLoginView: BaseViewWithXIBInit {
     @IBOutlet weak var titleTop: UILabel!
     
     var handlerBlackAction: EmptyBlock?
+    var handlerLogoAction: EmptyBlock?
     
     @IBInspectable var titleBlackButton: String {
         get { return "" }
@@ -38,5 +39,9 @@ class RNSLoginView: BaseViewWithXIBInit {
         blackButton.button.touchUpInside { [weak self] in
             self?.handlerBlackAction?()
         }
+    }
+    
+    @IBAction func logoAction(_ sender: Any) {
+        handlerLogoAction?()
     }
 }

@@ -12,17 +12,6 @@ import Foundation
  */
 extension RNSLoginEmailViewController {
     
-    /// Настройка кнопок
-    func prepareButtons() {
-        loginButton.handlerAction = {[weak self] in
-            self?.loginPressed()
-        }
-        
-        backButton.handlerAction = { 
-            STRouter.popMain()
-        }
-    }
-    
     /// Подгрузка в текстовые поля учетных данных пользователя, если они имеются
     /*
     func prepareLoginIfNeed() {

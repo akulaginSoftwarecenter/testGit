@@ -11,6 +11,7 @@ import Foundation
 extension UserDefaults {
     
     static let kFirstZoom = "firstZoom"
+    static let kServerApi = "serverApi"
     
     static var isDidFirstZoom: Bool {
         return standard.bool(forKey: kFirstZoom)
@@ -27,5 +28,14 @@ extension UserDefaults {
         set {
             UserDefaults.standard.setValue(newValue, forKey: "Zoom")
         }
+    }
+    
+    static var serverApi: String? {
+        return standard.string(forKey: kServerApi)
+    }
+    
+    static func setServerApi(_ value: String) {
+        print("setServerApi",value)
+        standard.set(value, forKey: kServerApi)
     }
 }

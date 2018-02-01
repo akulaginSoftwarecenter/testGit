@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,8 +28,8 @@
                     <rect key="frame" x="177.5" y="92.5" width="20" height="20"/>
                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvA-yl-qmz">
-                    <rect key="frame" x="0.0" y="120" width="375" height="0.0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvA-yl-qmz">
+                    <rect key="frame" x="15" y="120" width="345" height="0.0"/>
                     <fontDescription key="fontDescription" name="Cffazmiakhaddpiofffvylaqekz" family="Cffazmiakhaddpiofffvylaqekz" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -36,9 +37,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="lvA-yl-qmz" secondAttribute="trailing" id="0QE-Uo-18P"/>
+                <constraint firstAttribute="trailing" secondItem="lvA-yl-qmz" secondAttribute="trailing" constant="15" id="0QE-Uo-18P"/>
                 <constraint firstItem="lvA-yl-qmz" firstAttribute="top" secondItem="VOB-cd-yGv" secondAttribute="bottom" constant="7.5" id="S46-9I-Ija"/>
-                <constraint firstItem="lvA-yl-qmz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UEA-7K-bMU"/>
+                <constraint firstItem="lvA-yl-qmz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="UEA-7K-bMU"/>
                 <constraint firstItem="VOB-cd-yGv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ll3-G2-W5n"/>
                 <constraint firstItem="VOB-cd-yGv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tEk-Rs-fSw"/>
             </constraints>

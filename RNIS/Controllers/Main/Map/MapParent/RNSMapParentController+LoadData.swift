@@ -15,7 +15,7 @@ extension RNSMapParentController {
         RNSBusManager.showLoader = true
         updateLoader()
         RNSBusManager.updateServer { [weak self] error in
-           self?.showLoaderLostInet()
+           self?.showLoader(error)
         }
     }
     
@@ -29,5 +29,10 @@ extension RNSMapParentController {
             }, failure: { [weak self] error in
                 self?.showLoaderLostInet()
         })
+    }
+    
+    func itemsUpdate() {
+        busUpdate()
+        busStopUpdate()
     }
 }

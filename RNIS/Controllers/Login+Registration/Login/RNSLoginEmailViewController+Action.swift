@@ -12,6 +12,21 @@ import Foundation
  */
 extension RNSLoginEmailViewController {
     
+    /// Настройка кнопок
+    func prepareButtons() {
+        loginButton.handlerAction = {[weak self] in
+            self?.loginPressed()
+        }
+        
+        loginView.handlerLogoAction = { 
+            STRouter.present(RNSSelectServerController.initController)
+        }
+        
+        backButton.handlerAction = {
+            STRouter.popMain()
+        }
+    }
+    
     /// Событие нажатия на кнопку "Регистрация"
     @IBAction func registrationAction(_ sender: Any) {
         push(RNSRegistrationEmailController.controller)

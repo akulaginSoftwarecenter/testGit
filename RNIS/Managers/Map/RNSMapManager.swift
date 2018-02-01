@@ -46,6 +46,8 @@ class RNSMapManager: NSObject {
     /// Функция показа информации
     static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
     
+    static var handlerItemsUpdate: EmptyBlock?
+    
     static var currentItemUuid = ""
     
     /// Функция подготовки точек маршрута
@@ -68,5 +70,20 @@ class RNSMapManager: NSObject {
     
     static func hideOldPopopovers() {
         handlerDismissOldPresentVC?()
+    }
+    
+    static func itemsUpdate() {
+        handlerItemsUpdate?()
+    }
+    
+    static func resetMap() {
+        RNSBusManager.removeAll()
+        RNSDataManager.removeAllBuss()
+        
+        RNSBusStopManager.removeAll()
+        RNSDataManager.removeAllBusStop()
+        
+        STRouter.mapReset()
+        RNSMapManager.itemsUpdate()
     }
  }

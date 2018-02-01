@@ -31,8 +31,7 @@ extension RNSMapParentController: PGMapViewDelegate {
         lightButton.updateStateLightButton()
         updateZoom()
         handlerOnMapEvent?()
-        busUpdate()
-        busStopUpdate()
+        itemsUpdate()
     }
     
     /// Событие нажатия на карту

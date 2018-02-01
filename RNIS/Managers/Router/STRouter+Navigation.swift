@@ -24,8 +24,12 @@ extension STRouter {
     }
     
     static func showMapReset() {
-        RNSMenuManager.hideLeftMenu(animated: false)
+        mapReset()
         popToRootMain()
+    }
+    
+    static func mapReset() {
+        RNSMenuManager.hideLeftMenu(animated: false)
         RNSMenuManager.showMapToRoot()
         RNSMapManager.startLocation()
         RNSMapManager.hideOldPopopovers()

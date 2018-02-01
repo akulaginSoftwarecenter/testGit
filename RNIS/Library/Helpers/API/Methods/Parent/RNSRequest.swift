@@ -12,7 +12,7 @@ import Alamofire
 class RNSRequest: AlamofireAPI {
     
     override var path: String {
-        return serverRnisapi
+        return UserDefaults.serverApi ?? ""
     }
     
     var subject: String {

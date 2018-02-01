@@ -55,6 +55,7 @@ class RNSPostStopPointList: RNSRequest {
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,
             let items = model?.payload?.items {
+            //print("RNSPostStopPointList",items.count)
             RNSDataManager.parseBusStopItemsAsync(items) { [weak self] (uuids) in
                 self?.complete?(uuids)
             }
