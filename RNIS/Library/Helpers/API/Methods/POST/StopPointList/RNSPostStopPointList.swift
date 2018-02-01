@@ -51,6 +51,10 @@ class RNSPostStopPointList: RNSRequest {
     override var isShowLogReply: Bool {
         return false
     }
+    
+    override var isShowLogRequest: Bool {
+        return false
+    }
   
     func parseReply(_ model: AliasReply?) {
         if  model?.success ?? false,

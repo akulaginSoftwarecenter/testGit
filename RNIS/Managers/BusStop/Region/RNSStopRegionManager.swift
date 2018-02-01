@@ -10,7 +10,12 @@ import UIKit
 import MapKit
 
 class RNSStopRegionManager: NSObject {
+   
     static var regions = [MKMapRect]()
+    
+    static func reset() {
+        regions = [MKMapRect]()
+    }
     
     static func checkCurrentRect(сontinue: EmptyBlock?, failure: EmptyBlock?) {
         guard let rect = currentMapRect else {

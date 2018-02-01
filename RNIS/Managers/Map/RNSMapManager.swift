@@ -80,6 +80,7 @@ class RNSMapManager: NSObject {
         RNSBusManager.removeAll()
         RNSDataManager.removeAllBuss()
         
+        RNSStopRegionManager.reset()
         RNSBusStopManager.removeAll()
         RNSDataManager.removeAllBusStop()
         
