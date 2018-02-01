@@ -36,7 +36,8 @@ extension RNSSearchViewController {
       
     /// Предварительная настройка представления переключения вкладок
     func prepareSegmented() {
-        prepareSegment(.transport)
+        prepareSegment(.address)
+        segmentedControl.sendActions(for: .valueChanged)
         segmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.cffazm18],
                                             for: .normal)
     }

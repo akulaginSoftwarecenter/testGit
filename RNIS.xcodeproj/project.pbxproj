@@ -2486,13 +2486,6 @@
 			path = "Login+Registration";
 			sourceTree = "<group>";
 		};
-		832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Login+Registration";
-			sourceTree = "<group>";
-		};
 		832E4B701F2EC40E00A4AD77 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3333,7 +3326,6 @@
 				83029BC81F4BEB7D00B0FEE3 /* DotsWhite */,
 				839BCDEC1F32BABC00B5CA88 /* ImageView */,
 				839BCE031F32EF6A00B5CA88 /* Label */,
-				832E4B6F1F2EC3FE00A4AD77 /* Login+Registration */,
 				835718981F21AE3900DE5E25 /* Map */,
 				83204B281F590E2B0033ACA1 /* MenuBarItem */,
 				8310D4531F3C72AC000CCD0A /* Others */,
