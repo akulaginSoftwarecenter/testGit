@@ -19,6 +19,17 @@ extension RNSBusTableModel {
         addOnePart(indCurrent)
         addItemCurrent(indCurrent)
         addTwoPart(indCurrent)
+        
+        prepareOpen()
+    }
+    
+    func prepareOpen() {
+        for item in items.reversed() {
+            if item.isStill {
+                item.openStill = true
+                return
+            }
+        }
     }
     
     func addOnePart(_ indCurrent: Int) {
