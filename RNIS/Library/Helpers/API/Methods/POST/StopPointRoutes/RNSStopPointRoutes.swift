@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class RNSStopPointRoutes: RNSRequest {
+class RNSStopPointRoutes: RNSPostRequestMobileToken {
     override var method: Alamofire.HTTPMethod {
         return .post
     }
