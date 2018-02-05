@@ -58,6 +58,13 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
         prepareReportButton()
         prepareTitle()
         loadItems()
+        prepareHandlers()
+    }
+    
+    func prepareHandlers() {
+        RNSMapManager.handlerStopDetailUpdate = {[weak self] in
+            self?.loadItems(true)
+        }
     }
     
     /// Настройка кнопки "сообщить об ошибке"

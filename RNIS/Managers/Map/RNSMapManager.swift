@@ -47,7 +47,7 @@ class RNSMapManager: NSObject {
     static var handlerShowInfo: ((RNSCoordinateModel?) -> ())?
     
     static var handlerItemsUpdate: EmptyBlock?
-    
+    static var handlerStopDetailUpdate: EmptyBlock?
     static var currentItemUuid = ""
     
     /// Функция подготовки точек маршрута
