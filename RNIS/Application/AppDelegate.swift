@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RNISAuthManager.prepareDefaultUrlIfNeed()
         Fabric.with([Answers.self, Crashlytics.self])
         RNSTimeManager()
+        STPushManager.check()
         return true
     }
     

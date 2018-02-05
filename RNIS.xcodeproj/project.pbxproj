@@ -695,6 +695,7 @@
 		83ED5E3A1F270A25007D9F1C /* RNISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E391F270A25007D9F1C /* RNISTests.swift */; };
 		83EFADD21FBA8C5700F98F12 /* UIWebView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFADD11FBA8C5700F98F12 /* UIWebView+Utils.swift */; };
 		83EFADD41FBA9FCF00F98F12 /* RNSSearchViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFADD31FBA9FCF00F98F12 /* RNSSearchViewController+TextField.swift */; };
+		83F2E7972027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2E7962027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift */; };
 		83F555341F5562B300D1221C /* RNSRouteStillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555331F5562B300D1221C /* RNSRouteStillCell.swift */; };
 		83F555371F5565BF00D1221C /* RNSRouteBusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555361F5565BF00D1221C /* RNSRouteBusCell.swift */; };
 		83F5553A1F55675800D1221C /* RNSRouteTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F555391F55675800D1221C /* RNSRouteTotalCell.swift */; };
@@ -1393,6 +1394,7 @@
 		83ED5E3B1F270A25007D9F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EFADD11FBA8C5700F98F12 /* UIWebView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWebView+Utils.swift"; sourceTree = "<group>"; };
 		83EFADD31FBA9FCF00F98F12 /* RNSSearchViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSSearchViewController+TextField.swift"; sourceTree = "<group>"; };
+		83F2E7962027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPushTokenUpdate.swift; sourceTree = "<group>"; };
 		83F555331F5562B300D1221C /* RNSRouteStillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRouteStillCell.swift; sourceTree = "<group>"; };
 		83F555361F5565BF00D1221C /* RNSRouteBusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRouteBusCell.swift; sourceTree = "<group>"; };
 		83F555391F55675800D1221C /* RNSRouteTotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRouteTotalCell.swift; sourceTree = "<group>"; };
@@ -1942,6 +1944,7 @@
 		831D89901F20749F00082116 /* POST */ = {
 			isa = PBXGroup;
 			children = (
+				83F2E7922027F79200D3F3C0 /* PushUpdate */,
 				831922A5200EFA8600661A32 /* EmailAuth */,
 				8351F15C1F81E4940014F0FD /* ActionRouting */,
 				83A327ED1F84A187003BA053 /* BusGet */,
@@ -5133,6 +5136,14 @@
 			path = UIWebView;
 			sourceTree = "<group>";
 		};
+		83F2E7922027F79200D3F3C0 /* PushUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				83F2E7962027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift */,
+			);
+			path = PushUpdate;
+			sourceTree = "<group>";
+		};
 		83F555311F55625700D1221C /* Stop */ = {
 			isa = PBXGroup;
 			children = (
@@ -5859,6 +5870,7 @@
 				834691F81FAC5AC10098D4C6 /* RNSWelcomeViewContoller+CollectionView.swift in Sources */,
 				83204B581F5923900033ACA1 /* SettingsViewController.swift in Sources */,
 				830E68AB1F5513BB008EFA02 /* RNSDurationItem.swift in Sources */,
+				83F2E7972027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift in Sources */,
 				835718B51F21CC5F00DE5E25 /* RNSMapViewController+Handlers.swift in Sources */,
 				8363434F1FB29FAA0091AF63 /* RNSTextField+UI.swift in Sources */,
 				83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */,

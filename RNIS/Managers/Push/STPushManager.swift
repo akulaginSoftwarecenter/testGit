@@ -25,14 +25,9 @@ class STPushManager: NSObject {
     }
     
     static func send() {
-        /*
-        guard let token = pushToken else {
-            return
+        RNSPushTokenUpdate { (reply, error, value) in
+            print("RNSPushTokenUpdate reply", reply as Any);
+            print("RNSPushTokenUpdate error", error as Any);
         }
-        api.makeReques(apiMethod: .UserPushToken, data: ["push_token": token], resultType: STBaseData.self, complete: { (result) in
-        }) { (userInfo) in
-            STAlertFactory.showAlertRedOK(message: userInfo["errorString"] as? String)
-        }
-        */
     }
 }
