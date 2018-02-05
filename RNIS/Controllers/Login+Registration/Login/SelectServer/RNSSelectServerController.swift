@@ -35,6 +35,8 @@ class RNSSelectServerController: UIAlertController {
             addAction(item) {
                 UserDefaults.setServerApi(item)
                 RNSMapManager.resetMap()
+                RNISAuthManager.clearUserDefaults()
+                STPushManager.check()
             }
         }
         addAction("Отмена", style: .cancel)
