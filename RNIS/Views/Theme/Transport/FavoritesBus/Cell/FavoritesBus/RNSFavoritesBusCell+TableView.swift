@@ -21,6 +21,9 @@ extension RNSFavoritesBusCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSForecastCell
         cell.item = item(indexPath)
+        cell.tapGesture { [weak self] in
+            self?.showStopPoint()
+        }
         return cell
     }
     

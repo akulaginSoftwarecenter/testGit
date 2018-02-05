@@ -39,4 +39,9 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
         topTitle.text = item?.stop_point_title ?? ""
         tableView.reloadData()
     }
+    
+    func showStopPoint() {
+        RNSMenuManager.mapToRoot()
+        RNSMapManager.showStopPoint(item?.dict)
+    }
 }
