@@ -16,14 +16,14 @@ extension RNSSearchView {
         }
         self.text = text
         self.typeSegment = typeSegment
+        request?.cancel()
         if typeSegment == .transport {
+            searchTransport()
             return
         }
-        request?.cancel()
+        
         if text.count < 3 {
-            clearTable()
-            clearError()
-            removeLoader()
+            clearUI()
             return
         }
         
@@ -52,6 +52,25 @@ extension RNSSearchView {
             }, failure: { [weak self] text in
                 self?.prepareClearError(text)
         })
+    }
+    
+    func searchTransport() {
+        if text?.count == 0 {
+            clearUI()
+            return
+        }
+        showLoader()
+        request = RNSPostSearch(text, type:typeSegment, complete: { [weak self] items in
+            self?.prepareItems(items as? [RNSTextItem])
+            }, failure: { [weak self] text in
+                self?.prepareClearError(text)
+        })
+    }
+    
+    func clearUI() {
+        clearTable()
+        clearError()
+        removeLoader()
     }
     
     func prepareItems(_ items: [RNSTextItem]?) {
