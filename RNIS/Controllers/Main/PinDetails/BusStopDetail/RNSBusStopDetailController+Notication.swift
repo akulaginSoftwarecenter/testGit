@@ -11,12 +11,12 @@ import Foundation
 extension RNSBusStopDetailController {
     
     func updateNotification(_ busRoute: RNSBusRouteTemp?) {
+        showLoader(true)
         if busRoute?.in_notifications ?? false {
             deleteNotification(busRoute)
         } else {
             createNotification(busRoute)
         }
-        showLoader(true)
     }
     
     func createNotification(_ busRoute: RNSBusRouteTemp?) {
@@ -24,8 +24,7 @@ extension RNSBusStopDetailController {
             return
         }
         RNSNotificationCreate(bus: busRoute, stop: item, time: "20") { [weak self] in
-            self?.removeLoader(true)
-            self?.loadItems(true)
+             self?.loadItems(true)
         }
     }
     
@@ -34,8 +33,7 @@ extension RNSBusStopDetailController {
             return
         }
         RNSPostNotificationDelete(bus: busRoute, stop: item) { [weak self] in
-            self?.removeLoader(true)
-            self?.loadItems(true)
+             self?.loadItems(true)
         }
     }
 }

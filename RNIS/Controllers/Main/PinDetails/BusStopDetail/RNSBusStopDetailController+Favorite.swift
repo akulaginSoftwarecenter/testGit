@@ -14,28 +14,24 @@ extension RNSBusStopDetailController {
     ///
     /// - Parameter item: модель автобусного маршрута
     func updateFavorite(_ busRoute: RNSBusRouteTemp?) {
+        showLoader(true)
         if busRoute?.in_favorites ?? false {
             deleteFavorite(busRoute)
         } else {
             createFavorite(busRoute)
         }
-        showLoader(true)
     }
     
     func createFavorite(_ busRoute: RNSBusRouteTemp?) {
         RNSPostFavoriteRouteCreate(busRoute, stop_point: item) { [weak self] in
-            self?.removeLoaderLoadItems()
+            self?.loadItems(true)
         }
     }
     
     func deleteFavorite(_ busRoute: RNSBusRouteTemp?) {
         RNSPostFavoriteRouteDelete(route_number: busRoute?.number, stop_point_uuid: item?.uuid) { [weak self] in
-            self?.removeLoaderLoadItems()
+            self?.loadItems(true)
         }
     }
-    
-    func removeLoaderLoadItems() {
-        removeLoader(true)
-        loadItems(true)
-    }
+
 }

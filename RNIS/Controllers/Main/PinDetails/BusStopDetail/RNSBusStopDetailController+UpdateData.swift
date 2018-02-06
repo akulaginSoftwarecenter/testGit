@@ -40,13 +40,12 @@ extension RNSBusStopDetailController {
     }
     
     /// Убрать представление индикации загрузки
-    func removeLoader(_ loaderTwo: Bool = false) {
+    func removeLoader(_ loaderTwo: Bool = false, complete: EmptyBlock? = nil) {
         if loaderTwo {
-            loaderViewTwo.remove()
+            loaderViewTwo.remove(complete)
         } else {
-            loaderView.remove()
+            loaderView.remove(complete)
         }
-        
     }
     
     /// Обновление надписи выбранной остановки

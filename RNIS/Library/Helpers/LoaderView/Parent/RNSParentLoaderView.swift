@@ -65,11 +65,12 @@ class RNSParentLoaderView: BaseViewWithXIBInit {
         return superview == nil
     }
     
-    func remove() {
+    func remove(_ complete: EmptyBlock? = nil) {
         UIView.animate(withDuration: 0.2, animations: {[weak self] in
             self?.alpha = 0
             }, completion: { [weak self] (_) in
                 self?.removeFromSuperview()
+                complete?()
         })
     }
     
