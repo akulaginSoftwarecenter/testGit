@@ -45,11 +45,13 @@ class RNSFlagButton: BaseViewWithXIBInit {
     
     /// Показать индикатор загрузки
     func showLoader() {
+        isUserInteractionEnabled = false
         loaderView.showInView(imageView)
     }
     
     /// Убрать индикатор загрузки
     func removeLoader() {
+        isUserInteractionEnabled = true
         loaderView.remove()
     }
     
