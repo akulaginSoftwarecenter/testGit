@@ -29,7 +29,7 @@ extension RNSBusStopDetailController {
     }
     
     func deleteFavorite(_ busRoute: RNSBusRouteTemp?) {
-        RNSPostFavoriteRouteDelete(busRoute?.number, stop_point_uuid: item?.uuid) { [weak self] in
+        RNSPostFavoriteRouteDelete(route_number: busRoute?.number, stop_point_uuid: item?.uuid) { [weak self] in
             self?.removeLoaderLoadItems()
         }
     }

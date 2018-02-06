@@ -34,10 +34,7 @@ extension RNSFavoritesBusCell: UITableViewDelegate, UITableViewDataSource {
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             let route_number = item(indexPath)?.route_number
-            let stop_point_uuid = item?.stop_point_uuid
-            RNSPostFavoriteRouteDelete(route_number, stop_point_uuid: stop_point_uuid) {
-                RNSMenuManager.updateFavoriteBuss()
-            }
+            stopCurrentDelete(route_number: route_number)
         }
     }
     

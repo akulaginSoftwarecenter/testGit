@@ -16,7 +16,7 @@ class RNSPostFavoriteRouteDelete: RNSPostRequestMobileToken {
     
     typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
     
-    @discardableResult convenience init(_ route_number: String?, stop_point_uuid: String?, complete: EmptyBlock?) {
+    @discardableResult convenience init(route_number: String? = nil, stop_point_uuid: String?, complete: EmptyBlock?) {
         self.init()
         
         self.route_number = route_number
@@ -41,16 +41,21 @@ class RNSPostFavoriteRouteDelete: RNSPostRequestMobileToken {
         guard let error = model?.errors?.first?.textError else {
             return
         }
+        complete?()
         STAlertRouter.showOk(error)
     }
     
     override var payload: AliasDictionary {
-        guard let route_number = route_number,
-            let stop_point_uuid = stop_point_uuid else {
-                return [:]
+        var dict = AliasDictionary()
+        
+        if let value = route_number {
+            dict["route_number"] = value
         }
-        return ["route_number": route_number,
-                "stop_point_uuid": stop_point_uuid]
+        
+        if let value = stop_point_uuid {
+            dict["stop_point_uuid"] = value
+        }
+        return dict
     }
     
     override var subject: String {

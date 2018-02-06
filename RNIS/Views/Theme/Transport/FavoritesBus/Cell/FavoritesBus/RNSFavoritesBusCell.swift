@@ -44,4 +44,17 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
         RNSMenuManager.mapToRoot()
         RNSMapManager.showStopPoint(item?.dict)
     }
+    
+    @IBAction func deleteBusStopAction(_ sender: Any) {
+        stopCurrentDelete()
+    }
+    
+    func stopCurrentDelete(route_number: String? = nil) {
+        STRouter.showLoader()
+        RNSPostFavoriteRouteDelete(route_number: route_number, stop_point_uuid: item.stop_point_uuid) {
+            STRouter.removeLoader()
+            RNSMenuManager.updateFavoriteBuss()
+            RNSMapManager.stopDetailUpdate()
+        }
+    }
 }

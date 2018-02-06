@@ -30,7 +30,7 @@ extension NotificationsSettingsViewController {
     @IBAction func actionRemove(_ sender: Any) {
         STRouter.showLoader()
         RNSPostNotificationDelete(item?.uuid) {
-            RNSMapManager.handlerStopDetailUpdate?()
+            RNSMapManager.stopDetailUpdate()
             STRouter.removeLoader()
             STRouter.pop()
         }

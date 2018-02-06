@@ -87,4 +87,8 @@ class RNSMapManager: NSObject {
         STRouter.mapReset()
         RNSMapManager.itemsUpdate()
     }
+    
+    static func stopDetailUpdate() {
+        handlerStopDetailUpdate?()
+    }
  }

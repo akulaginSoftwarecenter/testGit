@@ -25,7 +25,24 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-p1-xWx">
                         <rect key="frame" x="0.0" y="12" width="429" height="220.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k71-lI-Zus">
+                                <rect key="frame" x="403" y="0.0" width="26" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="76G-5b-OBL"/>
+                                    <constraint firstAttribute="height" constant="32" id="Ago-j2-r7e"/>
+                                </constraints>
+                                <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="deleteBusStopAction:" destination="cw8-Ul-QE0" eventType="touchUpInside" id="lM5-8k-JO5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.81960784313725488" green="0.25882352941176467" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k71-lI-Zus" secondAttribute="trailing" id="LL5-FU-Cul"/>
+                            <constraint firstItem="k71-lI-Zus" firstAttribute="top" secondItem="fEB-p1-xWx" secondAttribute="top" id="Ud7-8P-0lb"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="5"/>
@@ -89,4 +106,7 @@
             <point key="canvasLocation" x="-29.5" y="96.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cross" width="12" height="12"/>
+    </resources>
 </document>
