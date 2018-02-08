@@ -16,6 +16,11 @@ extension RNSScrollShowContainer {
     }
     
     @IBAction func actionTop(_ sender: Any) {
-        scrollToTop(true)
+        scrollView.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.25, animations: {
+            self.scrollToTop(false)
+        }) { (_) in
+            self.scrollView.isUserInteractionEnabled = true
+        }
     }
 }
