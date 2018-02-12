@@ -74,4 +74,14 @@ class SupportInfoViewController: UIViewController {
         nameSupportView.topText = titleName
         nameSupportView.text = nameText
     }
+    
+    var isValidNameSupport: Bool {
+        if !isShowNameSupport {
+            return true
+        }
+        if let text = nameSupportView.text, text.isEmptyOrWhitespace {
+            return false
+        }
+        return true
+    }
 }

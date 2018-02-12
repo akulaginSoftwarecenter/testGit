@@ -43,7 +43,12 @@ extension SupportInfoViewController {
             return
         }
         
-        guard let body = body, !body.isEmptyOrWhitespace else {
+        if !isValidNameSupport {
+            prepareError("Поле '\(titleName ?? "")' обязательно для заполнения.")
+            return
+        }
+        
+        guard let text = messageView.text, !text.isEmptyOrWhitespace else {
             prepareError("Поле 'Текст обращения' обязательно для заполнения.")
             return
         }
