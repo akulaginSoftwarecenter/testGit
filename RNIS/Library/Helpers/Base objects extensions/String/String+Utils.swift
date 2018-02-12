@@ -34,4 +34,11 @@ extension String{
         return self.boundingRect(with: size, options: [.usesLineFragmentOrigin,.usesFontLeading]
             , attributes: attributes, context: nil)
     }
+    
+    var isEmptyOrWhitespace: Bool {
+        if(self.isEmpty) {
+            return true
+        }
+        return trimmingCharacters(in: .whitespacesAndNewlines) == ""
+    }
 }

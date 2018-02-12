@@ -43,7 +43,7 @@ extension SupportInfoViewController {
             return
         }
         
-        guard let body = body, !body.isEmpty else {
+        guard let body = body, !body.isEmptyOrWhitespace else {
             prepareError("Поле 'Текст обращения' обязательно для заполнения.")
             return
         }

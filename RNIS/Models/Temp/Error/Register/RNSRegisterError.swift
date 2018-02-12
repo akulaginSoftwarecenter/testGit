@@ -19,6 +19,8 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
     var favorite_path_name: [String]?
     var mobile_user_email: [String]?
     var mobile_user_edit_source: [String]?
+    var body: [String]?
+    
     
     public override func mapping(map: Map) {
         
@@ -33,6 +35,7 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
         mobile_user_name = map.JSON["mobile_user.name"] as? [String]
         mobile_user_email = map.JSON["mobile_user.email"] as? [String]
         mobile_user_edit_source = map.JSON["mobile_user.edit_source"] as? [String]
+        body = map.JSON["body"] as? [String]
     }
     
     var textError: String? {
@@ -44,7 +47,8 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
                      favorite_path_name,
                      mobile_user_name,
                      mobile_user_email,
-                     mobile_user_edit_source]
+                     mobile_user_edit_source,
+                     body]
         items.forEach {
             guard let text = $0?.first else {
                 return
