@@ -24,7 +24,7 @@ class RNSPostRouteBusList: RNSRequest {
         self.init()
         
         self.item = item
-        
+        self.complete = complete
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             self?.parseReply(AliasReply(reply: object))
         }
@@ -39,20 +39,22 @@ class RNSPostRouteBusList: RNSRequest {
 
     func parseReply(_ model: AliasReply?) {
        // print("RNSPostRouteBusList 1",model as Any)
+        complete?()
         if  model?.success ?? false,
             let item = model?.payload?.items?.first {
           //  print("RNSPostRouteBusList 2",item)
             let buss = RNSDataManager.parseItems([item]) as [RNSBus]
           //  print("RNSPostRouteBusList 3",buss.first as Any)
-            complete?()
-            guard let bus = buss.first else {
-                STAlertRouter.showOk("Для данного маршрута автобусы не найдены")
-                return
-            }
-            RNSMapManager.showInfoIfNeed(bus)
+            RNSMapManager.showInfoIfNeed(buss.first)
             return
+        } else {
+            showError()
         }
         parseError(model)
+    }
+    
+    func showError() {
+        STAlertRouter.showOk("Для данного маршрута автобусы не найдены")
     }
     
     func parseError(_ model: AliasReply?) {
@@ -61,7 +63,6 @@ class RNSPostRouteBusList: RNSRequest {
         }
         let error = "Ошибка загрузки автобуса. " + item.textError
         STAlertRouter.showOk(error)
-        complete?()
     }
     
     override var subject: String {
