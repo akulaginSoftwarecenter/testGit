@@ -43,7 +43,9 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let bus = RNSDataManager.buss?.first
-        RNSMapManager.showInfoIfNeed(bus)
+        showLoader(true)
+        RNSPostRouteBusList(item(indexPath), complete: { [weak self] in
+            self?.removeLoader(true)
+        })
     }
 }

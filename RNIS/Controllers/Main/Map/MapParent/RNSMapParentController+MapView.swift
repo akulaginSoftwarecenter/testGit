@@ -38,6 +38,7 @@ extension RNSMapParentController: PGMapViewDelegate {
     ///
     /// - Parameter point: географические координаты места нажатия
     func onMapTouchEvent(_ point: PGGeoPoint) {
+        print("onMapTouchEvent",point)
         handlerOnMapTouchEvent?(point)
     }
     
