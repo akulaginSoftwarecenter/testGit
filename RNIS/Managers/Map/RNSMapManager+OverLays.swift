@@ -47,6 +47,11 @@ extension RNSMapManager {
         return step
     }
     
+    static func showMapRootStopPoint(_ item: RNSFavoriteStopPoint?) {
+        RNSMenuManager.mapToRoot()
+        showStopPoint(item?.dict)
+    }
+    
     /// Фнукция показа остановки на карте
     static func showStopPoint(_ dict: AliasDictionary?) {
         guard let dict = dict,

@@ -33,6 +33,7 @@ let kNews = "Новости"
 let kUpdateTime = "updateTime"
 let kUpdateLocation = "updateLocation"
 let kUpdateFavorite = "updateFavorite"
+let kStop_point_uuid = "stop_point_uuid"
 
 let kServerNotAviable = "Сервер недоступен"
 let kName = "name"

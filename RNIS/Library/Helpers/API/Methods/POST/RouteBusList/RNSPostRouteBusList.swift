@@ -18,12 +18,14 @@ class RNSPostRouteBusList: RNSRequest {
     typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
     
     var item: RNSBusRouteTemp?
+    var busStop: RNSBusStop?
     var complete: EmptyBlock?
     
-    @discardableResult convenience init(_ item: RNSBusRouteTemp?, complete: EmptyBlock?) {
+    @discardableResult convenience init(_ item: RNSBusRouteTemp?, busStop: RNSBusStop?, complete: EmptyBlock?) {
         self.init()
         
         self.item = item
+        self.busStop = busStop
         self.complete = complete
         sendRequestWithCompletion {[weak self] (object, error, inot) in
             self?.parseReply(AliasReply(reply: object))
@@ -31,20 +33,18 @@ class RNSPostRouteBusList: RNSRequest {
     }
     
     override var payload: AliasDictionary {
-        guard let uuid = item?.uuid else {
+        guard let uuid = item?.uuid, let stop_point_uuid = busStop?.uuid else {
             return [:]
         }
-        return [kUuid: uuid]
+        return [kUuid: uuid,
+                kStop_point_uuid: stop_point_uuid]
     }
 
     func parseReply(_ model: AliasReply?) {
-       // print("RNSPostRouteBusList 1",model as Any)
         complete?()
         if  model?.success ?? false,
             let item = model?.payload?.items?.first {
-          //  print("RNSPostRouteBusList 2",item)
             let buss = RNSDataManager.parseItems([item]) as [RNSBus]
-          //  print("RNSPostRouteBusList 3",buss.first as Any)
             RNSMapManager.showInfoIfNeed(buss.first)
             return
         } else {

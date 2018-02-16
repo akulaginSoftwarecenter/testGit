@@ -53,7 +53,7 @@ class RNSPostFavoriteRouteDelete: RNSPostRequestMobileToken {
         }
         
         if let value = stop_point_uuid {
-            dict["stop_point_uuid"] = value
+            dict[kStop_point_uuid] = value
         }
         return dict
     }

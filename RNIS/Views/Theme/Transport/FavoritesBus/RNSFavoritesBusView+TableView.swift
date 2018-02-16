@@ -63,6 +63,6 @@ extension RNSFavoritesBusView: UITableViewDelegate, UITableViewDataSource {
 
     /// Действие при выборе ячейки таблицы
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showStopPoint(item(indexPath))
+        RNSMapManager.showMapRootStopPoint(item(indexPath))
     }
 }

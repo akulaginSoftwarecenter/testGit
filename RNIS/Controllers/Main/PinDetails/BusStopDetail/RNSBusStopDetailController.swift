@@ -28,6 +28,9 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
         container?.handlerRect = vc?.prepareViews(_:)
         container?.handlerDismiss = RNSMapManager.handlerDismissOldPresentVC
         vc?.startBottomOffset = container?.startBottomOffset
+        container?.handlerShowStartComplete = {
+            container?.scrollToStart()
+        }
         return  container
     }
    

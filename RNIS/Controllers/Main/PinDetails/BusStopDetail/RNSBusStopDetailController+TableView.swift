@@ -44,7 +44,7 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showLoader(true)
-        RNSPostRouteBusList(item(indexPath), complete: { [weak self] in
+        RNSPostRouteBusList(item(indexPath), busStop: item, complete: { [weak self] in
             self?.removeLoader(true)
         })
     }

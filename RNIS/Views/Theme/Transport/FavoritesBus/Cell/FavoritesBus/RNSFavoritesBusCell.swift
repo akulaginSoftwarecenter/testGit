@@ -23,7 +23,7 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
     @IBOutlet weak var topTitle: UILabel!
     
     /// Создание экземпляра избранной остановки
-    var item: RNSFavoriteStopPoint! {
+    var item: RNSFavoriteStopPoint? {
         didSet {
             updateUI()
         }
@@ -41,8 +41,7 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
     }
     
     func showStopPoint() {
-        RNSMenuManager.mapToRoot()
-        RNSMapManager.showStopPoint(item?.dict)
+        RNSMapManager.showMapRootStopPoint(item)
     }
     
     @IBAction func deleteBusStopAction(_ sender: Any) {
@@ -51,7 +50,7 @@ class RNSFavoritesBusCell: RNSBaseTableCell {
     
     func stopCurrentDelete(route_number: String? = nil) {
         STRouter.showLoader()
-        RNSPostFavoriteRouteDelete(route_number: route_number, stop_point_uuid: item.stop_point_uuid) {
+        RNSPostFavoriteRouteDelete(route_number: route_number, stop_point_uuid: item?.stop_point_uuid) {
             STRouter.removeLoader()
             RNSMenuManager.updateFavoriteBuss()
             RNSMapManager.stopDetailUpdate()

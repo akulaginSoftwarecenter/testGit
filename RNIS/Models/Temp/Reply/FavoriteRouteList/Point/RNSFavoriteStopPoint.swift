@@ -31,7 +31,7 @@ class RNSFavoriteStopPoint: RNISMappableBase, Hashable {
     public override func mapping(map: Map) {
         forecast <- map["forecast"]
         stop_point_title <- map["stop_point_title"]
-        stop_point_uuid <- map["stop_point_uuid"]
+        stop_point_uuid <- map[kStop_point_uuid]
         stop_point_latitude <- map["stop_point_latitude"]
         stop_point_longitude <- map["stop_point_longitude"]
     }

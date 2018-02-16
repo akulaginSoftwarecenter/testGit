@@ -52,7 +52,7 @@ class RNSPostFavoriteRouteCreate: RNSPostRequestMobileToken {
             let route_number = busRoute?.number else {
             return [:]
         }
-        return ["stop_point_uuid": stop_point_uuid,
+        return [kStop_point_uuid: stop_point_uuid,
                 "route_number": route_number]
     }
     
