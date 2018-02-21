@@ -27,12 +27,15 @@ import Alamofire
 public typealias APICompletion = (_ reply: AnyObject?, _ error: NSError?, _ handleError: inout Bool) -> ()
 public typealias APIProgress = (_ progress: Double) -> ()
 
-
+/**
+ class API для работы с сетью
+ */
 public class API: NSObject {
     
+    /// внутренний объект
     var object: AnyObject?
     
-   
+    /// параметры запроса
     var parameters: AliasDictionary {
         let parameters = AliasDictionary()
         
@@ -41,10 +44,10 @@ public class API: NSObject {
         return parameters
     }
 
-    
+    /// последний объект полученный с сервера
     var lastReply: AnyObject?
 
-    
+    /// последняя ошибка полученный с сервера
     var lastError: NSError?;
 
     
