@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос обновления данных пользователей
+ */
 class RNSPostUpdate: RNSPostRequestMobileToken {
     
     var item: RNSUserPayload?

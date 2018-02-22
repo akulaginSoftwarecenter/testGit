@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос получения списка нотификации
+ */
 class RNSPostNotificationList: RNSPostRequestMobileToken {
     
     typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSNotificationModel>,RNSRegisterError>

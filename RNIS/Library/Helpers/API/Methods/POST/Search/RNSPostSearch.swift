@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос поиска
+ */
 class RNSPostSearch: RNSRequest {
     
     var text: String?

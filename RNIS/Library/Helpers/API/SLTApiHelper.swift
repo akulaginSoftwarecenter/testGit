@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс помощьник для API
+ */
 class SLTApiHelper {
 
     static func urlRequestAddContent(_ request: URLRequest, obj: [String : Any]) -> URLRequest

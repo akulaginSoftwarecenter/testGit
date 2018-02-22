@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Протокол для контейнера
+ */
 protocol ContainerProtocol: class {
     var titleTextTop: TypeTitle? { get set }
     var handlerBlackAction: EmptyBlock? { get set}

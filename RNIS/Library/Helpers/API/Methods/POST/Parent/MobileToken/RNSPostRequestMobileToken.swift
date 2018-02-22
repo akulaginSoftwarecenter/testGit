@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения временного токена
+ */
 class RNSPostRequestMobileToken: RNSRequest {
     
     var countAttemptUpdateToken = 0

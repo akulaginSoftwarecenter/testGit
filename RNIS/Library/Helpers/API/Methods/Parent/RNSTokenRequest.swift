@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос родительский
+ */
 class RNSTokenRequest: RNSRequest {
     /*
     override var headers: AliasDictionary {

@@ -9,6 +9,9 @@
 import UIKit
 import SnapKit
 
+/**
+ Протокол для клавиатура
+ */
 protocol KeyboardShowable: class {
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? { get }
     var viewBottomHeightConstraint: Constraint? { get }
@@ -21,6 +24,9 @@ protocol KeyboardShowable: class {
     func keyboardWillHide()
 }
 
+/**
+ Расширение для клавиатура
+ */
 extension KeyboardShowable
 {
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {

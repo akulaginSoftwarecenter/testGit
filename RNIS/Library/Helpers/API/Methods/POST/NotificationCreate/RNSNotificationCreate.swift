@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+/**
+ Запрос создания нотификации
+ */
 class RNSNotificationCreate: RNSPostRequestMobileToken {
 
     var bus: RNSBusRouteTemp?

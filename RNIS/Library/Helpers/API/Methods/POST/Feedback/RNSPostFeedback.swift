@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос создания избраного маршрута
+ */
 class RNSPostFeedback: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post

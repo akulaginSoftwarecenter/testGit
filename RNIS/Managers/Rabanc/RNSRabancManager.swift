@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Менеджер отображения маршрута автобуса
+ */
 class RNSRabancManager: NSObject {
     
     static var rabanc: RNSRabanc?

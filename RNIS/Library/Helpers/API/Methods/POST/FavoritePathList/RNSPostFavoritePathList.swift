@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос списка избраных маршрутов
+ */
 class RNSPostFavoritePathList: RNSPostRequestMobileToken {
     
     typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSRouteVariant>,RNSRegisterError>

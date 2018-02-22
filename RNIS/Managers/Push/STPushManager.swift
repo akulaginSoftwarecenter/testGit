@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Менеджер пуш
+ */
 class STPushManager: NSObject {
     
     static var pushToken: String? {

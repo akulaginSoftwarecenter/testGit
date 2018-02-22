@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос родительский
+ */
 class RNSRequest: AlamofireAPI {
     
     override var path: String {

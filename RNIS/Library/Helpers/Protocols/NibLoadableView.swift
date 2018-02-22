@@ -8,8 +8,14 @@
 
 import UIKit
 
+/**
+ Протокол для NibLoadableView
+ */
 protocol NibLoadableView: class {}
 
+/**
+ Расширение NibLoadableView
+ */
 extension NibLoadableView where Self: UIView{
     static var nibName: String {
         return String(describing: self)

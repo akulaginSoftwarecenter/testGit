@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Менеджер алертов
+ */
 class STAlertRouter: NSObject {
     
     static var showedUuids = [String]()

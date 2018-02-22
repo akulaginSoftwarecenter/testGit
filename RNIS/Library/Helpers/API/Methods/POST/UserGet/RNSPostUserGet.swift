@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения пользователя
+ */
 class RNSPostUserGet: RNSPostRequestMobileToken {
     
     override var isShowLogReply: Bool {

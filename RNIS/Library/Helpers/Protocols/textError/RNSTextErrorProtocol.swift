@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Протокол для клавиатура
+ */
 protocol RNSTextErrorProtocol: class {
     var textError: String? { get }
 }

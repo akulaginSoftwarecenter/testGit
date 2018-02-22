@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс заглушки движения
+ */
 class RNSMoveStub: NSObject {
     
     /// переменная синглетона

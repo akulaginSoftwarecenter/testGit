@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Менеджер кэширования
+ */
 class RNSCasheManager: NSObject {
     static var cache = NSCache<NSString,AnyObject>()
     

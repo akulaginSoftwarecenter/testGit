@@ -10,6 +10,9 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
+/**
+ Запрос получения списка контактов
+ */
 class RNSPostContactList: RNSRequest {
     
     override var method: Alamofire.HTTPMethod {

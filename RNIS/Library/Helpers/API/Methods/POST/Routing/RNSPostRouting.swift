@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос маршрута
+ */
 class RNSPostRouting: RNSTokenRequest {
     
     override var method: Alamofire.HTTPMethod {

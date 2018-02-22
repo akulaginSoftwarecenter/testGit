@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос создания избраного маршрута
+ */
 class RNSPostFavoriteRouteCreate: RNSPostRequestMobileToken {
     
     var busRoute: RNSBusRouteTemp?

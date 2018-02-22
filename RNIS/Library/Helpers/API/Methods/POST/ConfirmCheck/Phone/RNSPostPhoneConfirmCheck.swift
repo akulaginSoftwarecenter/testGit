@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос проверки телефона
+ */
 class RNSPostPhoneConfirmCheck: RNSPostConfirmCheck {
     
     override var headers: AliasDictionary {

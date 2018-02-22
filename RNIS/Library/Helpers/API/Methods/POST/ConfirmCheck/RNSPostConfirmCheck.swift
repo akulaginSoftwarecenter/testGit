@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос проверки телефона
+ */
 class RNSPostConfirmCheck: RNSParentAuthPost {
     
     override func parseReply(_ model: AliasPostRegister?) {

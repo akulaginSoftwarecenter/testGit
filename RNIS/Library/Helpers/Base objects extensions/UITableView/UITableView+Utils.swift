@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Расширение для UITableView
+ */
 extension UITableView
 {
     func registerCell(_ reuseID: String)    {

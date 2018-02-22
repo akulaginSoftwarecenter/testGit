@@ -8,6 +8,9 @@
 
 import CloudKit
 
+/**
+ Парсер родительский
+ */
 class CloudKitParser: Parser {
 
 //    override class func modelFromSourceObjectWithoutDrain(modelClass: APIModel.Type, source: AnyObject) -> APIModel? {

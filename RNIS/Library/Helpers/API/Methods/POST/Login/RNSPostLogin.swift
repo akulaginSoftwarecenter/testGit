@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос логина
+ */
 class RNSPostLogin: RNSRequest {
     
     override var method: Alamofire.HTTPMethod {

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Менеджер движения
+ */
 class RNSMoveManager: NSObject {
     
     static var isShowMoveMap = false

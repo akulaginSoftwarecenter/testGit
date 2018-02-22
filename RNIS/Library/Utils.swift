@@ -37,6 +37,9 @@ func NSLoc(_ key: String?) -> String {
     return NSLocalizedString(key, comment: "")
 }
 
+/**
+ Класс утилит
+ */
 class Utils {
     
     static func delay(_ delay:Double, closure: EmptyBlock?) {

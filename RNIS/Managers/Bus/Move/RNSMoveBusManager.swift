@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Менеджер движения автобусов 
+ */
 class RNSMoveBusManager: NSObject {
     
     /// переменная синглетона

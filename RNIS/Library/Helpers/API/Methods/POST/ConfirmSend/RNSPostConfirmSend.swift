@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Запрос подтверждения телефона
+ */
 class RNSPostConfirmSend: RNSParentAuthPost {
     
     override func parseReply(_ model: AliasPostRegister?) {

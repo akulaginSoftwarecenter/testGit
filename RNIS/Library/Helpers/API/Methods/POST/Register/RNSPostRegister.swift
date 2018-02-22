@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос регистрации
+ */
 class RNSPostRegister: RNSParentAuthPost {
     
     override func parseReply(_ model: AliasPostRegister?) {

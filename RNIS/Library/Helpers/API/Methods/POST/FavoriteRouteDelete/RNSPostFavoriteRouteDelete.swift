@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос удаления избраного маршрута
+ */
 class RNSPostFavoriteRouteDelete: RNSPostRequestMobileToken {
     
     var route_number: String?

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос списка избраных маршрутов
+ */
 class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
     /*
     override var isShowLogReply: Bool {

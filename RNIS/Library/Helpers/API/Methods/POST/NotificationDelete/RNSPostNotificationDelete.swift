@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Запрос удаления нотификации
+ */
 class RNSPostNotificationDelete: RNSPostRequestMobileToken {
     var uuid: String?
     var bus: RNSBusRouteTemp?

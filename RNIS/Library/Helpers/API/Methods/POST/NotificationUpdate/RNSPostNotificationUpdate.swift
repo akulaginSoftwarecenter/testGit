@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос обновления нотификации
+ */
 class RNSPostNotificationUpdate: RNSPostRequestMobileToken {
     var item: RNSNotificationModel?
     var complete: EmptyBlock?

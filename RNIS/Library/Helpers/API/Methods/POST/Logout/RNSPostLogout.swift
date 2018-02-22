@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос логаута
+ */
 class RNSPostLogout: RNSTokenRequest {
     
     override var method: Alamofire.HTTPMethod {

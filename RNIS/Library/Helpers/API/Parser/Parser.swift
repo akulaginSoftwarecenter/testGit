@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+/**
+ Парсер родительский
+ */
 class Parser {
     static let executableName = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
 

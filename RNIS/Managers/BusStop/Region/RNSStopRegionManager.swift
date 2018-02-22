@@ -9,6 +9,9 @@
 import UIKit
 import MapKit
 
+/**
+ Менеджер регионов для остановок
+ */
 class RNSStopRegionManager: NSObject {
    
     static var regions = [MKMapRect]()

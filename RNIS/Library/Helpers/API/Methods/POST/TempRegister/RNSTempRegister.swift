@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос регистрации
+ */
 class RNSTempRegister: RNSParentAuthPost {
     
     /// Метод инициализации 

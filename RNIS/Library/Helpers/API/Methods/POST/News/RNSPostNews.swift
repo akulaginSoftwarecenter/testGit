@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения новостей
+ */
 class RNSPostNews: RNSRequest {
     
     override var method: Alamofire.HTTPMethod {

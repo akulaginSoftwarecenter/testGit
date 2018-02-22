@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос создания избраного маршрута
+ */
 class RNSPostFavoritePathCreate: RNSPostRequestMobileToken {
     var item: RNSRouteVariant?
     var complete: AliasStringBlock?

@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения мобильной страницы
+ */
 class RNSPostMobilePageGet: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post

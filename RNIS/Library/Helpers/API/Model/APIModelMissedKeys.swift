@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Запрос родительский
+ */
 class APIModelMissedKeys: APIModel {
     /*
     override func parcingDidStart() {

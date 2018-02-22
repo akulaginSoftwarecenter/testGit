@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Протокол для текста
+ */
 protocol RNSTextItem: class {
     var name: String? { get set }
     

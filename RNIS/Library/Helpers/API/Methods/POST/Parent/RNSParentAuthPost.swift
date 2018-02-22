@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения временного токена
+ */
 class RNSParentAuthPost: RNSTokenRequest {
     override var method: Alamofire.HTTPMethod {
         return .post

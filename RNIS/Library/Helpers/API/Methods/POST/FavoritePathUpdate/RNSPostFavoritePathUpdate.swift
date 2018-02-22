@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос обновления избраного маршрута
+ */
 class RNSPostFavoritePathUpdate: RNSPostFavoritePathCreate {
     override var subject: String {
         return "com.rnis.mobile.action.favorite_path.update"

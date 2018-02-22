@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения списка автобусов
+ */
 class RNSPostBusList: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post

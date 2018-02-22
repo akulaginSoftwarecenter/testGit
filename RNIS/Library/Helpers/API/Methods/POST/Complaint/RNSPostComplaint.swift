@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос жалоба
+ */
 class RNSPostComplaint: RNSRequest {
     override var method: Alamofire.HTTPMethod {
         return .post
