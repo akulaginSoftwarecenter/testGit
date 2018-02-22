@@ -2,36 +2,50 @@
   "warnings": [
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Application/AppDelegate.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "AppDelegate",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Application/AppDelegate.swift",
-      "line": 17,
+      "line": 18,
       "symbol": "AppDelegate.window",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Application/AppDelegate.swift",
-      "line": 19,
+      "line": 20,
       "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Application/AppDelegate.swift",
-      "line": 27,
-      "symbol": "AppDelegate.application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+      "line": 29,
+      "symbol": "AppDelegate.prepareUserNotification()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Application/AppDelegate.swift",
       "line": 35,
+      "symbol": "AppDelegate.application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Application/AppDelegate.swift",
+      "line": 43,
       "symbol": "AppDelegate.application(_:didReceiveRemoteNotification:fetchCompletionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Application/AppDelegate.swift",
+      "line": 48,
+      "symbol": "AppDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -554,6 +568,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Info/SupportInfoViewController/SupportInfoViewController.swift",
+      "line": 78,
+      "symbol": "SupportInfoViewController.isValidNameSupport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Login+Registration/Login/RNSLoginEmailViewController.swift",
       "line": 37,
       "symbol": "RNSLoginEmailViewController.viewDidLoad()",
@@ -975,21 +996,21 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/Map/MapParent/RNSMapParentController+MapView.swift",
-      "line": 60,
+      "line": 61,
       "symbol": "RNSMapParentController.onPoiMarker(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/Map/MapParent/RNSMapParentController+MapView.swift",
-      "line": 64,
+      "line": 65,
       "symbol": "RNSMapParentController.onLocationChanged(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/Map/MapParent/RNSMapParentController+MapView.swift",
-      "line": 75,
+      "line": 76,
       "symbol": "RNSMapParentController.onGeoblogMarker(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1325,49 +1346,49 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/PinDetails/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 44,
+      "line": 47,
       "symbol": "RNSBusStopDetailController.titleStop",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/PinDetails/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 45,
+      "line": 48,
       "symbol": "RNSBusStopDetailController.timerlabel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/PinDetails/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 49,
+      "line": 52,
       "symbol": "RNSBusStopDetailController.loaderView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/PinDetails/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 50,
+      "line": 53,
       "symbol": "RNSBusStopDetailController.loaderViewTwo",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/PinDetails/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 55,
+      "line": 58,
       "symbol": "RNSBusStopDetailController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/PinDetails/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 64,
+      "line": 67,
       "symbol": "RNSBusStopDetailController.prepareHandlers()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Controllers/Main/PinDetails/BusStopDetail/RNSBusStopDetailController.swift",
-      "line": 82,
+      "line": 85,
       "symbol": "RNSBusStopDetailController.prepareCurrent(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -4622,91 +4643,98 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
-      "line": 37,
-      "symbol": "kServerNotAviable",
+      "line": 36,
+      "symbol": "kStop_point_uuid",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 38,
-      "symbol": "kName",
+      "symbol": "kServerNotAviable",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 39,
-      "symbol": "kMeta",
+      "symbol": "kName",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 40,
-      "symbol": "errorNetwork",
+      "symbol": "kMeta",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 41,
-      "symbol": "favoriteTitle",
+      "symbol": "errorNetwork",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 42,
-      "symbol": "notificationTitle",
+      "symbol": "favoriteTitle",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 43,
-      "symbol": "kErrorMail",
+      "symbol": "notificationTitle",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 44,
-      "symbol": "minZoomVisibleStop",
+      "symbol": "kErrorMail",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
       "line": 45,
+      "symbol": "minZoomVisibleStop",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
+      "line": 46,
       "symbol": "subjectRegister",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
-      "line": 47,
+      "line": 48,
       "symbol": "kSearchViewCellDefaultHeight",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
-      "line": 48,
+      "line": 49,
       "symbol": "kSearchViewCellDistanceRight",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
-      "line": 49,
+      "line": 50,
       "symbol": "kSearchViewCellDistanceLeft",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Constant/Constant.swift",
-      "line": 50,
+      "line": 51,
       "symbol": "kSearchViewCellEdgeDownUp",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
@@ -4986,224 +5014,56 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": null,
-      "symbol": "API",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": null,
-      "symbol": "API",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": null,
-      "symbol": "API",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 31,
-      "symbol": "API",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 33,
-      "symbol": "API.object",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 36,
-      "symbol": "API.parameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 45,
-      "symbol": "API.lastReply",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 48,
-      "symbol": "API.lastError",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 51,
-      "symbol": "API.completion",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 54,
-      "symbol": "API.progressBlock",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 57,
-      "symbol": "API.apiRequestInProgress",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
       "line": 61,
-      "symbol": "API.shouldLogRequest",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 62,
-      "symbol": "API.shouldAddAccessToken",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 64,
       "symbol": "API.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 77,
+      "line": 73,
       "symbol": "API.sendRequestWithCompletion(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/API.swift",
-      "line": 83,
+      "line": 79,
       "symbol": "API.sendRequest()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": null,
-      "symbol": "AlamofireAPI",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 13,
-      "symbol": "AlamofireAPI",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 18,
-      "symbol": "AlamofireAPI.method",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 23,
-      "symbol": "AlamofireAPI.path",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 27,
-      "symbol": "AlamofireAPI.alamofireRequest",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 29,
-      "symbol": "AlamofireAPI.apiRequestInProgress",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 34,
-      "symbol": "AlamofireAPI.urlRequest()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 55,
-      "symbol": "AlamofireAPI.prepareURLRequest(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 64,
-      "symbol": "AlamofireAPI.sendRequest()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 99,
-      "symbol": "AlamofireAPI.parseResponseJson(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 114,
-      "symbol": "AlamofireAPI.showErrorNetwork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 126,
+      "line": 132,
       "symbol": "AlamofireAPI.httpManager",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 135,
+      "line": 141,
       "symbol": "AlamofireAPI.baseURL",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 143,
+      "line": 149,
       "symbol": "AlamofireAPI.apiDidEnd()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 148,
+      "line": 154,
       "symbol": "AlamofireAPI.debugDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/AlamofireAPI.swift",
-      "line": 152,
+      "line": 158,
       "symbol": "AlamofireAPI.superError()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -5227,13 +5087,6 @@
       "line": 12,
       "symbol": "PostAPI.method",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Base/Alamofire/PostAPI.swift",
-      "line": 16,
-      "symbol": "PostAPI.prepareURLRequest(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -5280,27 +5133,6 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/GeoGode/RNSGetGeoCode.swift",
-      "line": 25,
-      "symbol": "RNSGetGeoCode.path",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/GeoGode/RNSGetGeoCode.swift",
-      "line": 29,
-      "symbol": "RNSGetGeoCode.parameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/GeoGode/RNSGetGeoCode.swift",
-      "line": 40,
-      "symbol": "RNSGetGeoCode.prepareURLRequest(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/GeoGode/RNSGetGeoCode.swift",
       "line": 61,
       "symbol": "RNSGetGeoCode.superError()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -5314,24 +5146,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Parent/RNSRegularRequest.swift",
-      "line": 13,
-      "symbol": "RNSRegularRequest.prepareURLRequest(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Search/RNSGetSearchAddress.swift",
       "line": 12,
       "symbol": "RNSGetSearchAddress",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Search/RNSGetSearchAddress.swift",
-      "line": 14,
-      "symbol": "RNSGetSearchAddress.path",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -5359,20 +5177,6 @@
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Search/RNSGetSearchAddress.swift",
       "line": 23,
       "symbol": "RNSGetSearchAddress.init(_:complete:failure:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Search/RNSGetSearchAddress.swift",
-      "line": 34,
-      "symbol": "RNSGetSearchAddress.parameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Search/RNSGetSearchAddress.swift",
-      "line": 72,
-      "symbol": "RNSGetSearchAddress.showErrorNetwork()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -5413,29 +5217,8 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Traffic/RNSGetTraffic.swift",
-      "line": 28,
-      "symbol": "RNSGetTraffic.path",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Traffic/RNSGetTraffic.swift",
-      "line": 32,
-      "symbol": "RNSGetTraffic.parameters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Traffic/RNSGetTraffic.swift",
       "line": 55,
       "symbol": "RNSGetTraffic.superError()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/GET/Traffic/RNSGetTraffic.swift",
-      "line": 59,
-      "symbol": "RNSGetTraffic.prepareURLRequest(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -5507,13 +5290,6 @@
       "line": 64,
       "symbol": "RNSPostActionRouting.payload",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/ActionRouting/RNSPostActionRouting.swift",
-      "line": 77,
-      "symbol": "RNSPostActionRouting.showErrorNetwork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -5681,13 +5457,6 @@
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/BusList/RNSPostBusList.swift",
       "line": 75,
       "symbol": "RNSPostBusList.parseError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/BusList/RNSPostBusList.swift",
-      "line": 84,
-      "symbol": "RNSPostBusList.showErrorNetwork()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6176,13 +5945,6 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/FavoritePathList/RNSPostFavoritePathList.swift",
-      "line": 34,
-      "symbol": "RNSPostFavoritePathList.showErrorNetwork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/FavoritePathList/RNSPostFavoritePathList.swift",
       "line": 38,
       "symbol": "RNSPostFavoritePathList.subject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -6290,13 +6052,6 @@
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/FavoriteRouteList/RNSPostFavoriteRouteList.swift",
       "line": 31,
       "symbol": "RNSPostFavoriteRouteList.parseError(_:source:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/FavoriteRouteList/RNSPostFavoriteRouteList.swift",
-      "line": 38,
-      "symbol": "RNSPostFavoriteRouteList.showErrorNetwork()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6617,13 +6372,6 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/MobilePageGet/RNSPostMobilePageGet.swift",
-      "line": 69,
-      "symbol": "RNSPostMobilePageGet.showErrorNetwork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/MobilePageGet/RNSPostMobilePageGet.swift",
       "line": 73,
       "symbol": "RNSPostMobilePageGet.subject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -6682,13 +6430,6 @@
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/News/RNSPostNews.swift",
       "line": 51,
       "symbol": "RNSPostNews.parseError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/News/RNSPostNews.swift",
-      "line": 59,
-      "symbol": "RNSPostNews.showErrorNetwork()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6862,13 +6603,6 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/NotificationList/RNSPostNotificationList.swift",
-      "line": 34,
-      "symbol": "RNSPostNotificationList.showErrorNetwork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/NotificationList/RNSPostNotificationList.swift",
       "line": 38,
       "symbol": "RNSPostNotificationList.subject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -6967,13 +6701,6 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/Parent/MobileToken/RNSPostRequestMobileToken.swift",
-      "line": 29,
-      "symbol": "RNSPostRequestMobileToken.sendRequest()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/Parent/MobileToken/RNSPostRequestMobileToken.swift",
       "line": 37,
       "symbol": "RNSPostRequestMobileToken.updateTokenAndRepeatRequest()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -6990,13 +6717,6 @@
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/Parent/MobileToken/RNSPostRequestMobileToken.swift",
       "line": 57,
       "symbol": "RNSPostRequestMobileToken.showOk(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/Parent/MobileToken/RNSPostRequestMobileToken.swift",
-      "line": 61,
-      "symbol": "RNSPostRequestMobileToken.parseResponseJson(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -7109,6 +6829,83 @@
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/Register/RNSPostRegister.swift",
       "line": 21,
       "symbol": "RNSPostRegister.subject",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 13,
+      "symbol": "RNSPostRouteBusList",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 14,
+      "symbol": "RNSPostRouteBusList.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 20,
+      "symbol": "RNSPostRouteBusList.item",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 21,
+      "symbol": "RNSPostRouteBusList.busStop",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 22,
+      "symbol": "RNSPostRouteBusList.complete",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 24,
+      "symbol": "RNSPostRouteBusList.init(_:busStop:complete:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 35,
+      "symbol": "RNSPostRouteBusList.payload",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 43,
+      "symbol": "RNSPostRouteBusList.parseReply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 56,
+      "symbol": "RNSPostRouteBusList.showError()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 60,
+      "symbol": "RNSPostRouteBusList.parseError(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/RouteBusList/RNSPostRouteBusList.swift",
+      "line": 68,
+      "symbol": "RNSPostRouteBusList.subject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -7240,13 +7037,6 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/Search/RNSPostSearch.swift",
-      "line": 66,
-      "symbol": "RNSPostSearch.showErrorNetwork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/Search/RNSPostSearch.swift",
       "line": 70,
       "symbol": "RNSPostSearch.subject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -7333,13 +7123,6 @@
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/StopPointList/RNSPostStopPointList.swift",
       "line": 71,
       "symbol": "RNSPostStopPointList.parseError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/StopPointList/RNSPostStopPointList.swift",
-      "line": 79,
-      "symbol": "RNSPostStopPointList.showErrorNetwork()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -7618,13 +7401,6 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/СontactList/RNSPostContactList.swift",
-      "line": 76,
-      "symbol": "RNSPostContactList.showErrorNetwork()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/POST/СontactList/RNSPostContactList.swift",
       "line": 80,
       "symbol": "RNSPostContactList.subject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -7639,22 +7415,8 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Parent/RNSRequest.swift",
-      "line": 14,
-      "symbol": "RNSRequest.path",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Parent/RNSRequest.swift",
       "line": 18,
       "symbol": "RNSRequest.subject",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Parent/RNSRequest.swift",
-      "line": 22,
-      "symbol": "RNSRequest.parameters",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -7670,13 +7432,6 @@
       "line": 32,
       "symbol": "RNSRequest.payload",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/API/Methods/Parent/RNSRequest.swift",
-      "line": 36,
-      "symbol": "RNSRequest.prepareURLRequest(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -8839,6 +8594,13 @@
       "line": 28,
       "symbol": "String.rectWithFont(_:size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Library/Helpers/Base objects extensions/String/String+Utils.swift",
+      "line": 38,
+      "symbol": "String.isEmptyOrWhitespace",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -11177,6 +10939,13 @@
       "line": 60,
       "symbol": "RNSMapManager.lastCenterCoord",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Managers/Map/RNSMapManager+OverLays.swift",
+      "line": 50,
+      "symbol": "RNSMapManager.showMapRootStopPoint(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -13582,14 +13351,21 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Models/Temp/Error/Register/RNSRegisterError.swift",
-      "line": 23,
+      "line": 22,
+      "symbol": "RNSRegisterError.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Models/Temp/Error/Register/RNSRegisterError.swift",
+      "line": 25,
       "symbol": "RNSRegisterError.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Models/Temp/Error/Register/RNSRegisterError.swift",
-      "line": 38,
+      "line": 41,
       "symbol": "RNSRegisterError.textError",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -19175,14 +18951,14 @@
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Views/Theme/Transport/FavoritesBus/Cell/FavoritesBus/RNSFavoritesBusCell.swift",
-      "line": 48,
+      "line": 47,
       "symbol": "RNSFavoritesBusCell.deleteBusStopAction(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/artemkulagin/Desktop/WorkLuxoft/RNIS/RNIS/Views/Theme/Transport/FavoritesBus/Cell/FavoritesBus/RNSFavoritesBusCell.swift",
-      "line": 52,
+      "line": 51,
       "symbol": "RNSFavoritesBusCell.stopCurrentDelete(route_number:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

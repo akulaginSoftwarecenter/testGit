@@ -14,7 +14,7 @@
     <a title="AppDelegate Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (32% documented)</p>
+        <p><a href="../index.html"> Docs</a> (33% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -670,6 +670,9 @@
                 <a href="../Classes/RNSPostRequestMobileToken.html">RNSPostRequestMobileToken</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/RNSPostRouteBusList.html">RNSPostRouteBusList</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/RNSPostRouting.html">RNSPostRouting</a>
               </li>
               <li class="nav-group-task">
@@ -1008,6 +1011,9 @@
                 <a href="../Global Variables.html#/s:4RNIS17kServerNotAviableSSv">kServerNotAviable</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:4RNIS16kStop_point_uuidSSv">kStop_point_uuid</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:4RNIS8kStrelkaSSv">kStrelka</a>
               </li>
               <li class="nav-group-task">
@@ -1306,7 +1312,7 @@
             <h1>AppDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span><span class="p">,</span> <span class="kt">UNUserNotificationCenterDelegate</span></code></pre>
 
                 </div>
               </div>
@@ -1373,6 +1379,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@RNIS@objc(cs)AppDelegate(im)prepareUserNotification"></a>
+                    <a name="//apple_ref/swift/Method/prepareUserNotification()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@RNIS@objc(cs)AppDelegate(im)prepareUserNotification">prepareUserNotification()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareUserNotification</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@RNIS@objc(cs)AppDelegate(im)application:didRegisterForRemoteNotificationsWithDeviceToken:"></a>
                     <a name="//apple_ref/swift/Method/application(_:didRegisterForRemoteNotificationsWithDeviceToken:)" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@RNIS@objc(cs)AppDelegate(im)application:didRegisterForRemoteNotificationsWithDeviceToken:">application(_:didRegisterForRemoteNotificationsWithDeviceToken:)</a>
@@ -1424,12 +1457,39 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@RNIS@objc(cs)AppDelegate(im)userNotificationCenter:willPresentNotification:withCompletionHandler:"></a>
+                    <a name="//apple_ref/swift/Method/userNotificationCenter(_:willPresent:withCompletionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@RNIS@objc(cs)AppDelegate(im)userNotificationCenter:willPresentNotification:withCompletionHandler:">userNotificationCenter(_:willPresent:withCompletionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="n">_</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">willPresent</span> <span class="nv">notification</span><span class="p">:</span> <span class="kt">UNNotification</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UNNotificationPresentationOptions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-07)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
