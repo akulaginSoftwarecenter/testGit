@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Базовая модель для APIModel
+ */
 class BaseModel: NSObject {
     var id: UInt = 0
 
@@ -15,6 +18,7 @@ class BaseModel: NSObject {
     }
 }
 
+/// Методе сравнения базовых моделей
 func == (lhs: BaseModel, rhs: BaseModel) -> Bool {
     let equal = lhs.id == rhs.id
     return equal

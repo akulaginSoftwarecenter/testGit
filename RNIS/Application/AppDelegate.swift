@@ -13,10 +13,15 @@ import Crashlytics
 import UserNotifications
 
 @UIApplicationMain
+/**
+ Главный класс инициализации приложения
+ */
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-
+    
+    /// Переменная для получения главного window
     var window: UIWindow?
 
+    /// Метод инициализации приложения
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         RNISAuthManager.prepareDefaultUrlIfNeed()
         Fabric.with([Answers.self, Crashlytics.self])
@@ -26,12 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+    /// Метод подготовки UserNotificationCenter
     func prepareUserNotification() {
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
         }
     }
     
+    /// Метод получения пуш токена
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)  {
         let bytes = UnsafeBufferPointer<UInt8>(start: (deviceToken as NSData).bytes.bindMemory(to: UInt8.self, capacity: deviceToken.count), count:deviceToken.count)
         let token = bytes.map { String(format: "%02hhx", $0) }.reduce("", { $0 + $1 })
@@ -40,11 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print("Push token",token)
     }
     
+    /// Метод получения пуш нотификации
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         print("didReceiveRemoteNotification",userInfo)
     }
     
     @available(iOS 10.0, *)
+    /// Метод установления типов нотификаций
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .badge, .sound])
     }
