@@ -24,6 +24,7 @@ class RNSChangeEmailController: RNSEmailContainerController {
     /// Данные профиля пользователя
     var item: RNSUserPayload?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

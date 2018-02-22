@@ -56,6 +56,7 @@ class RNSCodeContainerController: STContainerViewController {
         })
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
     }

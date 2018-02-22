@@ -34,6 +34,7 @@ class RNSEmailContainerController: STContainerViewController {
         return nil
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

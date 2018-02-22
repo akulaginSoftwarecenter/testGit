@@ -34,6 +34,7 @@ extension RNSDotsVerticalModel {
         return model
     }
     
+    /// Метод подготовки массива данных
     func prepareItems() {
         var items = [RNSVerticalTableItem]()
         

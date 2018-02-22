@@ -47,6 +47,7 @@ class RNSBusInfoViewController: UIViewController {
     @IBOutlet weak var descriptionAdd: UILabel!
     
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         /*

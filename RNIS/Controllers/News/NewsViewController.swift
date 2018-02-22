@@ -24,6 +24,7 @@ class NewsViewController: UIViewController {
     
     lazy var loaderWay = RNSLoaderWay()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +38,7 @@ class NewsViewController: UIViewController {
         }
     }
     
+    /// Загрузка данных
     func loadItems() {
         loaderView.showInView(view)
         RNSPostNews(complete: { [weak self] items in
@@ -47,15 +49,18 @@ class NewsViewController: UIViewController {
         }
     }
     
+    /// Метод отображения ошибок
     func prepareError(_ text: String?) {
         loaderWay.showCenterError(self.view, frame: tableView.frame, text: text)
         prepareItems(nil)
     }
     
+    /// Метод очистки ошибок
     func clearError() {
         loaderWay.remove()
     }
     
+    /// Метод подготовки массива данных
     func prepareItems(_ items: [RNSNewsTemp]?) {
         self.items = items
         tableView.reloadData()

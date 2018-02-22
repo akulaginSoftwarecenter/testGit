@@ -21,6 +21,7 @@ class RNSPostRouteBusList: RNSRequest {
     var busStop: RNSBusStop?
     var complete: EmptyBlock?
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ item: RNSBusRouteTemp?, busStop: RNSBusStop?, complete: EmptyBlock?) {
         self.init()
         

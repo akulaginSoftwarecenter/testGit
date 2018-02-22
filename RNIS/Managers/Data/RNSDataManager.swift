@@ -12,6 +12,8 @@ import RealmSwift
  Контроллер БД
  */
 class RNSDataManager: NSObject {
+    
+    /// переменная синглетона
     static let shared = RNSDataManager()
     
     static var busStop1: RNSBusStop?

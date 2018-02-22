@@ -13,6 +13,7 @@ import MapKit
  */
 class RNSBusStopManager: NSObject {
     
+    /// переменная синглетона
     static let shared = RNSBusStopManager()
     
     /// Создание экземпляра отображаемой остановки ТС

@@ -16,6 +16,7 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
     var point: PGGeoPoint?
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
+    /// Метод инициализации класса
     @discardableResult convenience init(_ point: PGGeoPoint?) {
         self.init(frame: CGRect.zero)
         

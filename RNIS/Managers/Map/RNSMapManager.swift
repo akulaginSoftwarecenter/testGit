@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSMapManager: NSObject {
     
+    /// переменная синглетона
     static let shared = RNSMapManager()
     
     /// Создание экземпляра карты

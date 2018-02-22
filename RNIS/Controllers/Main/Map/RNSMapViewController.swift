@@ -39,6 +39,7 @@ class RNSMapViewController: UIViewController {
     var route: PGPolyline?
     private var animator: MapButtonsAnimator!
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
 

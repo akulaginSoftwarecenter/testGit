@@ -10,6 +10,7 @@ import Foundation
 
 extension RNSBusTableModel {
     
+    /// Метод подготовки массива данных
     func prepareItems() {
         guard let next_stop_point = main?.next_stop_point,
             let indCurrent = stop_points?.index(of: next_stop_point) else {

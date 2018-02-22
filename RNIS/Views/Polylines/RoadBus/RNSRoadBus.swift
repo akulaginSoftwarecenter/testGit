@@ -26,6 +26,7 @@ class RNSRoadBus: PGPolyline {
         prepareLine()
     }
     
+    /// Метод инициализации класса
     convenience init(_ points: [RNSRabancItem]?) {
         self.init()
         

@@ -8,14 +8,19 @@
 
 import UIKit
 
+/**
+ Класс форматирования и валидации телефона
+ */
 class InputFieldsValidator: NSObject {
     
+    /// массив форматов телефонов
     static var preferredPhoneFormats: [String] {
         return ["+7 (###) ###-##-##",
                 "8 (###) ###-##-##",
                 "(###) ###-##-##"]
     }
 
+    /// Метод форматирования телефона
     static func format(_ phoneNumber: String?) -> (text: String?, haveFormat: Bool, complete: Bool) {
         
         let input = strip(phoneNumber)
@@ -63,6 +68,7 @@ class InputFieldsValidator: NSObject {
         return (input,false,false)
     }
     
+    /// Метод очистки телфона от формата
     static func strip(_ phoneNumber: String?) -> String {
         var res = ""
         guard let phoneNumber = phoneNumber else {
@@ -78,6 +84,7 @@ class InputFieldsValidator: NSObject {
         return res
     }
     
+    /// переменная проверки вставки телефона
     static func canBeInputByPhonePad(_ c: Character) -> Bool {
         if c == "#" {
             return true

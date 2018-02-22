@@ -30,6 +30,7 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollVi
     @IBOutlet weak var coverView: UIView!
     var containerVC:UIViewController?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

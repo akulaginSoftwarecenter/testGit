@@ -34,6 +34,7 @@ class RNSLoginEmailViewController: UIViewController {
         return [self.loginField, self.passwordField]
     }()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

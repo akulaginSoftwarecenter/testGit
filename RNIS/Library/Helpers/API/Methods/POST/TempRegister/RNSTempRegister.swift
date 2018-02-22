@@ -11,6 +11,7 @@ import Alamofire
 
 class RNSTempRegister: RNSParentAuthPost {
     
+    /// Метод инициализации 
     @discardableResult convenience init(complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
         self.init(RNSUserPayload.tempToken(), complete: complete, isNeedLoaders: false, failure: failure)
     }

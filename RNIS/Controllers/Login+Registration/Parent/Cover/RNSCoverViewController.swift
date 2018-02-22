@@ -25,6 +25,7 @@ class RNSCoverViewController: UIViewController {
     /// Представление с текстом ошибки
     @IBOutlet weak var errorLabel: UILabel!
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

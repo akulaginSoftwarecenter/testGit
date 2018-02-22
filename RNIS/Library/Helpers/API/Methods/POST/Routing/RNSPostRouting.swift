@@ -15,6 +15,7 @@ class RNSPostRouting: RNSTokenRequest {
         return .post
     }
     
+    /// Метод инициализации 
     @discardableResult convenience init(complete: @escaping APICompletion) {
         self.init()
 

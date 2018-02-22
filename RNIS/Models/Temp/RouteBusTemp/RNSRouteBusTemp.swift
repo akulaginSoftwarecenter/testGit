@@ -13,6 +13,7 @@ class RNSRouteBusTemp: RNISMappableBase {
     var time: Int?
     var timePerod: Int?
     
+    /// Метод инициализации 
     convenience init(_ route_number: String?, time: Int?, timePerod: Int?) {
         self.init()
         

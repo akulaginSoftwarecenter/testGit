@@ -25,6 +25,7 @@ class TransportViewController: UIViewController {
     /// Представление списка схем маршрутов "избранных" автобусов
     @IBOutlet weak var myRoutesView: RNSTransportTableView!
 
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

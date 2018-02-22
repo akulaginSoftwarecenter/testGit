@@ -14,6 +14,7 @@ class MenuItem {
     var title: String?
     var image: UIImage?
     
+    /// Метод инициализации 
     init(_ title: String?, _ rootViewController: UIViewController?, _ image: UIImage?) {
         self.title = title
         if let rootViewController = rootViewController {

@@ -44,6 +44,7 @@ class RNSPageRoutePopupController: UIViewController {
     /// Начальная высота нижней панели
     var startBottomOffset: CGFloat?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

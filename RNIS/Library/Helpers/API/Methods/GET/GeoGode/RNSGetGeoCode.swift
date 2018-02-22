@@ -13,6 +13,7 @@ class RNSGetGeoCode: AlamofireAPI {
     
     var point: PGGeoPoint?
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ point: PGGeoPoint?, complete: AliasStringBlock?) {
         self.init()
         

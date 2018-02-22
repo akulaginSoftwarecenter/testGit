@@ -9,6 +9,8 @@
 import UIKit
 
 class MenuItemFavorite: MenuItem {
+    
+    /// Метод инициализации 
     convenience init() {
         self.init(favoriteTitle, TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon"))
     }

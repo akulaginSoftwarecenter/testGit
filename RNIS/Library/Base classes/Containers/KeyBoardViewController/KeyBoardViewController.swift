@@ -9,17 +9,27 @@
 import UIKit
 import SnapKit
 
+/**
+ Класс контейнер для обработки появления клавиатуры
+ */
 class KeyBoardViewController: UIViewController, KeyboardShowable {
 
+    /// переменная высота нижнего констрейнта
     var viewBottomHeightConstraint: Constraint?
+    
+    /// вью для вставки контейнера
     var innerView: UIView!
+    
+    /// контейнер для вставки
     var containerVC:UIViewController?
     
+    /// Метод инициализации 
     convenience init(_ container: UIViewController?) {
         self.init()
         containerVC = container
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -13,14 +13,17 @@ import UIKit
  */
 class DocsInfoViewController: UIViewController {
 
-    /// Надпись заголовка контроллера
+    /// переменная браузера
     @IBOutlet weak var webView: UIWebView!
+    
+    /// Надпись заголовка контроллера
     @IBOutlet weak var titleLabel: UILabel!
     lazy var loaderWay = RNSLoaderWay()
     /// Представление для отображения текста раздела
     //@IBOutlet weak var textView: UITextView!
     var type: RNSDocsType = .userGuide
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +43,7 @@ class DocsInfoViewController: UIViewController {
         }
     }
     
+    /// Метод загрузка html текста
     func prepareText(_ text: String?) {
         guard let text = text else {
             return
@@ -48,10 +52,12 @@ class DocsInfoViewController: UIViewController {
         webView.loadHTMLString(page, baseURL: nil)
     }
     
+    /// Метод отображения ошибок
     func prepareError(_ text: String?) {
         loaderWay.showCenterError(self.view, frame: webView.frame, text: text)
     }
     
+    /// Метод очистки ошибок
     func clearError() {
         loaderWay.remove()
     }

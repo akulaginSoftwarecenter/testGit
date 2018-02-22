@@ -10,6 +10,7 @@ import Foundation
 
 extension RNSSearchView {
     
+    /// Метод очистки ошибок
     func clearError() {
         prepareError(nil)
     }

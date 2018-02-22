@@ -100,10 +100,12 @@ extension UIColor {
         return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
     
+    /// Метод инициализации
     convenience init(_ red255: UInt, _ green255: UInt, _ blue255: UInt) {
         self.init(red255,green255,blue255,1)
     }
     
+    /// Метод инициализации
     convenience init(_ red255: UInt,_ green255: UInt,_ blue255: UInt,_ alpha: CGFloat) {
         self.init(red: CGFloat(red255) / 255,
                   green: CGFloat(green255) / 255,
@@ -111,7 +113,7 @@ extension UIColor {
                   alpha: alpha)
     }
     
-    
+    /// Метод инициализации
     convenience init(hexString:String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt32()
@@ -130,6 +132,7 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
     
+    /// Метод инициализации 
     convenience init(hex: String) {
         let scanner = Scanner(string: hex)
         scanner.scanLocation = 0

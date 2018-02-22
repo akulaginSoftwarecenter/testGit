@@ -8,16 +8,27 @@
 
 import UIKit
 
-
+/**
+ Протокол появления
+ */
 protocol FadePresent: class {}
+
+/**
+ Протокол исчезновения
+ */
 protocol FadeDismiss: class {}
 
-
+/**
+ Класс анимации появления
+ */
 class FadePresentAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
+    
+    /// Метод возврата времение анимации
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
 
+    // Метод анимации контроллера
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let toVC = transitionContext.viewController(forKey: .to) else {
             return

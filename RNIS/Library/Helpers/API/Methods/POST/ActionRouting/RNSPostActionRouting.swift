@@ -20,6 +20,7 @@ class RNSPostActionRouting: RNSRequest {
     
     typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSRouteVariant>,RNSRegisterError>
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ from: RNSDutyAddressTemp?, to: RNSDutyAddressTemp?, date: Date? = nil, complete: AliasComplete?, failure: AliasStringBlock? = nil) {
         self.init()
         

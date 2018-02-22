@@ -122,6 +122,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         return view
     }()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

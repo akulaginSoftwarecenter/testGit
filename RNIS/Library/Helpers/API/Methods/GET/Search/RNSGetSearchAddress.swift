@@ -20,6 +20,7 @@ class RNSGetSearchAddress: RNSGetGeoCode {
     var complete: AliasComplete?
     var failure: AliasStringBlock?
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ text: String?, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         

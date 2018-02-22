@@ -12,6 +12,8 @@ import UIKit
  Конроллер управления ТС
  */
 class RNSBusManager: NSObject {
+    
+    /// переменная синглетона
     static let shared = RNSBusManager()
     
     /// Переменная хранения ТС

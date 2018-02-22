@@ -14,6 +14,7 @@ class RNSPostFavoritePathDelete: RNSPostRequestMobileToken {
     
     typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ item: RNSRouteVariant?, complete: EmptyBlock?) {
         self.init()
         

@@ -17,10 +17,12 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
         heightTableView.constant = tableView.tableViewContentSize
     }
     
+    /// Метод возврата количества строк в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items?.count ?? 0
     }
     
+    /// Метод возврата строки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSBusStopDetailCell
         let item = self.item(indexPath)
@@ -42,6 +44,7 @@ extension RNSBusStopDetailController: UITableViewDelegate, UITableViewDataSource
         return items?[indexPath.row]
     }
     
+    /// Метод обработки строки по тапу
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showLoader(true)
         RNSPostRouteBusList(item(indexPath), busStop: item, complete: { [weak self] in

@@ -10,6 +10,7 @@ import UIKit
 
 class RNSOneBtnAlert: UIButton {
   
+    /// Метод инициализации 
     convenience init(_ title: String? = "ОК") {
         self.init(frame: CGRect.zero)
         

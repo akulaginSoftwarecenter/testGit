@@ -22,6 +22,7 @@ class RNSPostBusList: RNSRequest {
     var complete: AliasComplete?
     var failure: AliasStringBlock?
     
+    /// Метод инициализации 
     convenience init(_ min: PGGeoPoint, center: PGGeoPoint, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         

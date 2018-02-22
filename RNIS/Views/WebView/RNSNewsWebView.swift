@@ -32,6 +32,7 @@ class RNSNewsWebView: BaseViewWithXIBInit, UIWebViewDelegate  {
         heightWebView.constant = webView.scrollView.contentSize.height
     }
     
+    /// Метод делегата браузера старта загрузки url
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         return request.makeActionAt(navigationType)
     }

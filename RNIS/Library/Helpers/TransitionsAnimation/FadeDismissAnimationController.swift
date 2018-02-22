@@ -8,12 +8,17 @@
 
 import UIKit
 
-
+/**
+ Класс анимации исчезновения
+ */
 class FadeDismissAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
+    
+    /// Метод возврата времение анимации
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
 
+    /// Метод анимации контроллера
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: .from) else {
             return

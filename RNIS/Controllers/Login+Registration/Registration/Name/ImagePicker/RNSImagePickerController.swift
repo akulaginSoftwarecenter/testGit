@@ -25,6 +25,7 @@ class RNSImagePickerController: UIImagePickerController, UIImagePickerController
         self.complete = complete
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

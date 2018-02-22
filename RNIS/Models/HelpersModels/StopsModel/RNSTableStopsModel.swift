@@ -12,12 +12,14 @@ import RealmSwift
 class RNSTableStopsModel {
     
     var item: RNSBus?
-        
+    
+    /// Метод инициализации 
     init(_ item: RNSBus?) {
         self.item  = item
         prepareItems()
     }
     
+    /// Метод подготовки массива данных
     func prepareItems() {
         
     }

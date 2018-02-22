@@ -23,6 +23,7 @@ class RNSPhoneViewController: RNSCoverViewController,ContainerProtocol {
         return [self.phoneField]
     }()
 
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         addDoneButtonOnKeyboard()

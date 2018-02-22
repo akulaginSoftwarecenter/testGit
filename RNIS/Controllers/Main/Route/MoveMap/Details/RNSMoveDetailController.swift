@@ -34,6 +34,7 @@ class RNSMoveDetailController: UIViewController {
         return vc
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

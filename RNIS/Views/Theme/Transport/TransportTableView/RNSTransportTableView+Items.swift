@@ -29,6 +29,7 @@ extension RNSTransportTableView {
         }
     }
     
+    /// Метод подготовки массива данных
     func prepareItems(_ items: [RNSRouteVariant]?) {
         self.items = items
         tableView.reloadData()
@@ -48,6 +49,7 @@ extension RNSTransportTableView {
         prepareItems(nil)
     }
     
+    /// Метод очистки ошибок
     func clearError() {
         loaderWay.remove()
     }

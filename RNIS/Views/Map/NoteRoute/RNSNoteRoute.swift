@@ -68,6 +68,7 @@ class RNSNoteRoute: UIView {
     let arrow = CGFloat(9)
     let textHeight = CGFloat(30)
     
+    /// Метод инициализации класса
     convenience init(busTitle: String?, type: TypeNote) {
         self.init(frame: CGRect.zero)
         
@@ -77,6 +78,7 @@ class RNSNoteRoute: UIView {
         prepareFrame()
     }
     
+    /// Метод инициализации класса
     convenience init(durationMinute: Int?, distance: CLLocationDistance? = nil, type: TypeNote) {
         self.init(frame: CGRect.zero)
         titleLabel.text = "\(durationMinute ?? 0) мин."

@@ -14,6 +14,7 @@ class RNSFeedbackPayload: RNISMappableBase {
     var contact: String?
     var body: String?
     
+    /// Метод инициализации 
     convenience init(_ contact: String?, body: String?) {
         self.init()
         

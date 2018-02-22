@@ -9,11 +9,14 @@
 import UIKit
 
 class RNSParentLoaderView: BaseViewWithXIBInit {
+    
+    /// Метод инициализации
     convenience init(_ delay: TimeInterval = 0) {
         self.init()
         
         self.delay = delay
     }
+    
     @IBOutlet weak var labelText: UILabel!
     
     var defaultAlpha = CGFloat(0.3)

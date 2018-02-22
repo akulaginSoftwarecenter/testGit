@@ -22,6 +22,7 @@ class NotificationsSettingsViewController: UIViewController {
     
     @IBOutlet weak var notificationPicker: UIPickerView!
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

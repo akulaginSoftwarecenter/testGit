@@ -22,6 +22,7 @@ class RNSVerticalTableItem: NSObject {
         return type == .run
     }
     
+    /// Метод инициализации 
     convenience init(_ main: RNSRoutePoint?) {
         self.init()
         self.type = main?.type ?? .bus

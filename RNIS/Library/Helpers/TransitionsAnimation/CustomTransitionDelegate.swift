@@ -8,10 +8,15 @@
 
 import UIKit
 
-
+/**
+ Класс делегата анимации перехода
+ */
 class CustomTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
+    
+    /// переменная синглетона
     static let shared = CustomTransitionDelegate()
 
+    /// Метод анимации появления
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if presented is FadePresent {
             return FadePresentAnimationController()
@@ -19,6 +24,7 @@ class CustomTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate 
         return nil
     }
 
+    /// Метод анимации исчезновения
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if dismissed is FadeDismiss {
             return FadeDismissAnimationController()

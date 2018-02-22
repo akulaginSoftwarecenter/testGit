@@ -73,6 +73,7 @@ extension RNSSearchView {
         removeLoader()
     }
     
+    /// Метод подготовки массива данных
     func prepareItems(_ items: [RNSTextItem]?) {
         self.items = items
         tableReload()

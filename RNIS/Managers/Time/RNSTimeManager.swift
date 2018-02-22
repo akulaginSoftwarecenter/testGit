@@ -15,6 +15,8 @@ class RNSTimeManager: NSObject {
     var timer: Timer!
     /// Создание расстояния
     let distance = 17
+    
+    /// Метод инициализации 
     @discardableResult override init() {
         super.init()
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)

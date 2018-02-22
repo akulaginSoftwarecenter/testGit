@@ -49,6 +49,7 @@ class RNSDurationItem: NSObject {
         }
     }
     
+    /// Метод инициализации 
     convenience init(_ point: PGGeoPoint?, time: Int?, routePoints: [RNSRoutePoint]?) {
         self.init()
         

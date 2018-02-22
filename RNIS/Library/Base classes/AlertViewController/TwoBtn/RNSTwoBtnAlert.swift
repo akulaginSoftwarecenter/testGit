@@ -16,6 +16,7 @@ class RNSTwoBtnAlert: BaseViewWithXIBInit {
     var handlerLeft: EmptyBlock?
     var handlerRight: EmptyBlock?
     
+    /// Метод инициализации 
     convenience init(_ leftTitle: String? = "OK", _ rightTitle: String? = "ОТМЕНА") {
         self.init(frame: CGRect.zero)
         

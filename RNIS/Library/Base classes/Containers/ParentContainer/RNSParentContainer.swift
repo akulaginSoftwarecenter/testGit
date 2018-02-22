@@ -12,11 +12,13 @@ class RNSParentContainer: UIViewController {
 
     var containerVC:UIViewController?
     
+    /// Метод инициализации 
     convenience init(_ container: UIViewController?) {
         self.init()
         containerVC = container
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

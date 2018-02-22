@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController {
     /// Представление, которое включает или отключает наличие на карте кнопок зума
     @IBOutlet weak var zoomButtonMap: UISwitch!
 
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         zoomButtonMap.isOn = !UserDefaults.hideZoomButtonInMap

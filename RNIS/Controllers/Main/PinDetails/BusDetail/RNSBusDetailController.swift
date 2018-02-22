@@ -62,6 +62,7 @@ class RNSBusDetailController: RNSParentDetailPinController {
     
     var canLoadViewWay = false
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

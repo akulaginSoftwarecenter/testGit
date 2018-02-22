@@ -21,6 +21,7 @@ class RNSPostLoginEmail: RNSPostRequestMobileToken {
     
     typealias AliasModel = RNSRequestReply<RNSUserPayload,RNSLoginError>
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ login: String?, password: String?, complete: EmptyBlock?, failure: AliasStringBlock?) {
         self.init()
         

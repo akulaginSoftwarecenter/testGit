@@ -40,6 +40,7 @@ class RNSProfileViewController: UIViewController {
         return emailField.text
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
             

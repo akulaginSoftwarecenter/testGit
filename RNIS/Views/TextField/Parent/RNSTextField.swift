@@ -107,6 +107,7 @@ class RNSTextField: UITextField {
         return view
     }()
     
+    /// Метод инициализации 
     required init() {
         super.init(frame: CGRect.zero)
         prepareUI()

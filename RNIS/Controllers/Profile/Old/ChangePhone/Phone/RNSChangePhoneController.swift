@@ -28,6 +28,7 @@ class RNSChangePhoneController: RNSPhoneContainerController {
     /// Данные профиля пользователя
     var item: RNSUserPayload?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

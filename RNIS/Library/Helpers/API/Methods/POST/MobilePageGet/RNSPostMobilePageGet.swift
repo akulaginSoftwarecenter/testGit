@@ -26,6 +26,7 @@ class RNSPostMobilePageGet: RNSRequest {
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ type: RNSDocsType, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         

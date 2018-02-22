@@ -38,6 +38,7 @@ class RNSEmailField: RNSTextField {
         text = email
     }
     
+    /// Метод инициализации 
     required init() {
         super.init()
  

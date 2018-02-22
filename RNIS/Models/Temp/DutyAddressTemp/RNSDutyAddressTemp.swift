@@ -20,6 +20,7 @@ class RNSDutyAddressTemp: RNISMappableBase {
         longitude <- map["longitude"]
     }
     
+    /// Метод инициализации 
     convenience init(_ point: PGGeoPoint?) {
         self.init()
         self.latitude = point?.latitude

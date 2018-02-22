@@ -9,6 +9,8 @@
 import UIKit
 
 class RNSMoveBusManager: NSObject {
+    
+    /// переменная синглетона
     static let shared = RNSMoveBusManager()
    
     static var queue: OperationQueue {

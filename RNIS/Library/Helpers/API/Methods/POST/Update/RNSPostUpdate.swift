@@ -14,6 +14,7 @@ class RNSPostUpdate: RNSPostRequestMobileToken {
     var failure: AliasStringBlock?
     var complete: AliasRegisterPayloadBlock?
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ item: RNSUserPayload?, enableSendToken: Bool = true, complete: AliasRegisterPayloadBlock?, failure: AliasStringBlock? = nil) {
         self.init()
         

@@ -17,6 +17,7 @@ extension RNSFavoritesBusCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items?.count ?? 0
     }
+    
     /// Создание ячейки таблицы
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSForecastCell

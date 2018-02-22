@@ -10,6 +10,7 @@ import Foundation
 
 extension NotificationsViewController {
     
+    /// Загрузка данных
     func loadItems() {
         STRouter.showLoader()
         RNSPostNotificationList {[weak self] (reply, error, _) in
@@ -23,6 +24,7 @@ extension NotificationsViewController {
         }
     }
     
+    /// Метод подготовки массива данных
     func prepareItems(_ items: [RNSNotificationModel]?) {
         self.items = items
         tableView.reloadData()
@@ -59,6 +61,7 @@ extension NotificationsViewController {
         prepareItems(nil)
     }
     
+    /// Метод очистки ошибок
     func clearError() {
         loaderWay.remove()
     }

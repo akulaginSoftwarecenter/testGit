@@ -8,8 +8,12 @@
 
 import Foundation
 
-extension InputFieldsValidator
-{
+/**
+ Расширение для проверки полей
+ */
+extension InputFieldsValidator {
+    
+    /// Метод проверки почты
     static func isValidEmail(_ email: String?) -> Bool {
         guard let email = email else {
             return false
@@ -20,6 +24,7 @@ extension InputFieldsValidator
         return emailTest.evaluate(with: email)
     }
     
+     /// Метод проверки телефона
     static func isValidPhone(_ phone: AnyObject?) -> Bool {
         guard let _phone = phone as? String else {
             return false
@@ -30,6 +35,7 @@ extension InputFieldsValidator
         return strippedPhone.count == 11
     }
 
+    /// Метод проверки кастомизации телефона
     func needCustomizePhoneField(_ customize: Bool, text: String?) -> String? {
         let count = text?.count ?? 0
         var txt = text

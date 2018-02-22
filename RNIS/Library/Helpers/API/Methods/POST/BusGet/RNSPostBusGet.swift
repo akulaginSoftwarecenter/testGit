@@ -20,6 +20,7 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
     typealias AliasComplete = (RNSBusTemp?) -> ()
     typealias AliasReply = RNSRequestReply<RNSBusTemp,RNSRegisterError>
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ item: RNSBus?, complete: AliasComplete?, failure: EmptyBlock? = nil) {
         self.init()
         

@@ -25,6 +25,7 @@ class RNSCodeViewController: RNSCoverViewController,ContainerProtocol {
     /// Текст номера телефона
     var phone: String?
 
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         preparePhone()

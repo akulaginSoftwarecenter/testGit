@@ -31,6 +31,7 @@ class RNSBusTableItem {
         return stop?.toJSON()
     }
     
+    /// Метод инициализации 
     init(_ stop: RNSBusStopTemp? = nil, type: TypeBusTableItem = .def, typeEdge: TypeEdgeBusItem = .none) {
         self.type = type
         title = stop?.name

@@ -13,10 +13,12 @@ import Foundation
  */
 extension RNSRouteDetailView: UITableViewDelegate, UITableViewDataSource {
     
+    /// Метод возврата количества строк в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
+    /// Метод возврата строки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = self.item(indexPath)
         let cell: RNSRouteParentCell
@@ -38,6 +40,7 @@ extension RNSRouteDetailView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    /// Метод обработки строки по тапу
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = self.item(indexPath)
         if item.isStillCell {
@@ -47,6 +50,7 @@ extension RNSRouteDetailView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    /// Метод возврата высоты строк
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return items[indexPath.row].height
     }

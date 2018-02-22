@@ -45,6 +45,7 @@ class RNSDutyViewController: UIViewController {
     /// Объект, хранящий данные адреса "куда"
     var inItem: RNSDutyAddressTemp?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

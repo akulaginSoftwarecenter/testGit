@@ -29,6 +29,7 @@ class RNSPostContactList: RNSRequest {
     typealias AliasReply = RNSRequestReply<AliasPayload,RNSRegisterError>
     typealias AliasComplete = (AliasPayload?) -> ()
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ type: RNSContactInfoType, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         

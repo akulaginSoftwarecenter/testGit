@@ -27,6 +27,7 @@ class MainInfoViewController: UIViewController {
                       "Пользовательское соглашение",
                       "О приложении"];
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

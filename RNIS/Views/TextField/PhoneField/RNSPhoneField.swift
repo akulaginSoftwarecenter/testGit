@@ -56,6 +56,7 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
         preparePhone(phone)
     }
     
+    /// Метод инициализации класса
     required init() {
         super.init()
         

@@ -56,6 +56,7 @@ class RNSScrollShowContainer: UIViewController {
         return [self.rangeHalfTop, self.rangeHalfBottom]
     }()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
 

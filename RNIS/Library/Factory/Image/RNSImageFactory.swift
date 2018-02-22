@@ -12,6 +12,7 @@ class RNSImageFactory: NSObject {
     
     typealias AliasDict = [NSAttributedStringKey: Any]
     
+    /// переменная синглетона
     static let shared = RNSImageFactory()
     
     let cache = NSCache<NSString,UIImage>()

@@ -21,6 +21,7 @@ class RNSPageRouteController: UIViewController {
         return RNSPageRouteController.controller
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

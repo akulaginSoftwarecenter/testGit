@@ -8,7 +8,12 @@
 
 import Foundation
 
+/**
+ Расширение для работы с бразуером
+ */
 extension DocsInfoViewController: UIWebViewDelegate  {
+    
+    /// Метод делегата старта загрузки url
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         return request.makeActionAt(navigationType)
     }

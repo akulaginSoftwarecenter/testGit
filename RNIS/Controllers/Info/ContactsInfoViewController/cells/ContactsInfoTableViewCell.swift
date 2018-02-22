@@ -11,10 +11,16 @@ import UIKit
 /// Табличная ячейка для отображения информации о контактах
 class ContactsInfoTableViewCell: RNSBaseTableCell {
 
+    /// Переменная отображения заголовка
     @IBOutlet weak var title: UILabel!
+    
+    /// Переменная отображения
     @IBOutlet weak var descr: UILabel!
+    
+    /// Переменная отображения изображения контакта
     @IBOutlet weak var contactInfoImageView: UIImageView!
     
+    /// Метод обновления ячейки
     func updateCell(_ model: RNSContactItem?) {
         guard let model = model else {
             return

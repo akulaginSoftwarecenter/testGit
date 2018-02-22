@@ -13,6 +13,7 @@ import CoreLocation
  */
 class RNSLocationManager: NSObject {
     
+    /// переменная синглетона
     static let shared = RNSLocationManager()
     
     /// Создание блока определения геолокации

@@ -9,6 +9,8 @@
 import UIKit
 
 class STRouter: NSObject {
+    
+    /// переменная синглетона
     static let shared = STRouter()
     
     static var rootViewController: BaseNavigationController?

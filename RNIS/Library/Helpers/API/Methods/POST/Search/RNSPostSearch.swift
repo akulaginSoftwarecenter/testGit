@@ -19,6 +19,7 @@ class RNSPostSearch: RNSRequest {
     
     typealias AliasReply = RNSRequestReply<RNSItemsPayload,RNSRegisterError>
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ text: String?, type: TypeSearch?, complete: AnyItemsBlock?, failure: AliasStringBlock? = nil) {
         self.init()
         

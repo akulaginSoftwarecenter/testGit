@@ -14,6 +14,7 @@ import Foundation
 class BaseModel: NSObject {
     var id: UInt = 0
 
+    /// Метод инициализации 
     required override init() {
     }
 }

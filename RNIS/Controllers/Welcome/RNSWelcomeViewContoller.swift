@@ -9,6 +9,8 @@
 import UIKit
 
 struct WelcomeItem {
+    
+    /// Метод инициализации 
     init(_ back: UIImage?, title: String?, desc: String? = nil, main: UIImage? = nil, startImage: UIImage? = nil) {
         self.back = back
         self.startImage = startImage
@@ -45,6 +47,7 @@ class RNSWelcomeViewContoller: UIViewController {
                 WelcomeItem(#imageLiteral(resourceName: "welc4Back"),title: "Избранное", desc: "Сохраняйте любимые маршруты и остановки с расписаниями, чтобы они всегда были под рукой", main: #imageLiteral(resourceName: "welc4"))]
     }()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

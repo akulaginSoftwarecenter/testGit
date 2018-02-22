@@ -41,6 +41,7 @@ class RNSRouteDetailController: UIViewController {
         return vc
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

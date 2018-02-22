@@ -15,6 +15,7 @@ class RNSDotsName: BaseViewWithXIBInit {
     
     @IBOutlet var label: UILabel!
     
+    /// Метод инициализации класса
     convenience init(_ item: RNSBusRouteTemp?) {
         self.init()
         

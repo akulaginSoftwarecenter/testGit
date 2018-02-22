@@ -19,6 +19,7 @@ class NotificationsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
 

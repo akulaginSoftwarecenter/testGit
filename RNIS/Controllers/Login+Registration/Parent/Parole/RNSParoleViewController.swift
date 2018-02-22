@@ -27,6 +27,7 @@ class RNSParoleViewController: RNSCoverViewController, ContainerProtocol {
         return [self.passwordOneField, self.passwordTwoField]
     }()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

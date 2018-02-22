@@ -19,6 +19,7 @@ class RNSEmailViewController: RNSCoverViewController, ContainerProtocol {
         return [self.emailField]
     }()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         addDoneButtonOnKeyboard()

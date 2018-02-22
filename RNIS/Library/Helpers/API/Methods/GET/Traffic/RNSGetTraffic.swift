@@ -16,6 +16,7 @@ class RNSGetTraffic: AlamofireAPI {
     var maxCoord: PGGeoPoint?
     var zoom: Int32?
     
+    /// Метод инициализации 
     @discardableResult convenience init(minCoord: PGGeoPoint?, maxCoord: PGGeoPoint?, zoom: Int32?, completion: @escaping APICompletion) {
         self.init()
         

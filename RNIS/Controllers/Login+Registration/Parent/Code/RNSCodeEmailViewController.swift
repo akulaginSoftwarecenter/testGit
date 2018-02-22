@@ -21,6 +21,7 @@ class RNSCodeEmailViewController: RNSCoverViewController,ContainerProtocol,UITex
     /// Текст номера телефона
     var email: String?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareEmail()

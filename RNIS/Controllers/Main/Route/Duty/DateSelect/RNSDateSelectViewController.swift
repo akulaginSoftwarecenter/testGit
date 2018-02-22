@@ -28,6 +28,7 @@ class RNSDateSelectViewController: UIViewController, FadePresent, FadeDismiss {
     /// Кнопка отмены
     @IBOutlet weak var cancelButton: RNSBlackButton!
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

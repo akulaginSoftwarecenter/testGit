@@ -39,6 +39,7 @@ class RNSChangePasswordController: UIViewController {
         }
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

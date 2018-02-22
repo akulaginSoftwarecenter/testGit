@@ -9,6 +9,8 @@
 import UIKit
 
 class RNSMoveStub: NSObject {
+    
+    /// переменная синглетона
     static let shared = RNSMoveStub()
     
     static func start() {

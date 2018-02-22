@@ -40,6 +40,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     /// Таблица результатов поиска
     @IBOutlet weak var searchView: RNSSearchView!
 
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

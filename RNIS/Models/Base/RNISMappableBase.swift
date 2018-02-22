@@ -15,6 +15,7 @@ import ObjectMapper
 
 class RNISMappableBase: Mappable {
     
+    /// Метод инициализации 
     init() {
         
     }

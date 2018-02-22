@@ -55,6 +55,9 @@ struct Event
     let target: EventDispatcher
 }
 
+/**
+ Класс появления листенера
+ */
 class EventListener
 {
     var listener: EventHandler?

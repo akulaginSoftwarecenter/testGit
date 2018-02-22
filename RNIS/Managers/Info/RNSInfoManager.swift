@@ -13,6 +13,7 @@ import MessageUI
  */
 class RNSInfoManager: NSObject, MFMailComposeViewControllerDelegate {
     
+    /// переменная синглетона
     static let shared = RNSInfoManager()
     
     var composeVC: MFMailComposeViewController?

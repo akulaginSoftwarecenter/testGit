@@ -64,6 +64,7 @@ class RNSMapParentController: UIViewController {
     
     private var animator: MapButtonsAnimator!
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

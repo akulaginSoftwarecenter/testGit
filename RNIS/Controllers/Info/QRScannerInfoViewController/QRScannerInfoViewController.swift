@@ -31,6 +31,7 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
     /// Распознаватель кода
     lazy var reader: QRCodeReader = QRCodeReader()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

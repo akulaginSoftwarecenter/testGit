@@ -10,10 +10,12 @@ import Foundation
 
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
+    /// Метод возврата количества строк в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items?.count ?? 0
     }
     
+    /// Метод возврата строки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as RNSNewsCell
         cell.item = item(indexPath)
@@ -28,6 +30,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         return items?.valueAt(indexPath.row)
     }
     
+    /// Метод обработки строки по тапу
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let item = item(indexPath) else {
            return

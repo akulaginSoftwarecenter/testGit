@@ -10,6 +10,7 @@ import MapKit
 
 public extension MKMapRect {
     
+    /// Метод инициализации
     public init(region: MKCoordinateRegion) {
         let bottomLeft = MKMapPointForCoordinate(CLLocationCoordinate2D(latitude: region.center.latitude + region.span.latitudeDelta / 2, longitude: region.center.longitude - region.span.longitudeDelta / 2))
         let topRight = MKMapPointForCoordinate(CLLocationCoordinate2D(latitude: region.center.latitude - region.span.latitudeDelta / 2, longitude: region.center.longitude + region.span.longitudeDelta / 2))
@@ -68,6 +69,7 @@ public extension MKMapRect {
 }
 
 extension MKMapRect {
+    /// Метод инициализации 
     init(coordinates: [PGGeoPoint]) {
         self = coordinates.map({ MKMapPointForCoordinate($0.coordinate) }).map({ MKMapRect(origin: $0, size: MKMapSize(width: 0, height: 0)) }).reduce(MKMapRectNull, MKMapRectUnion)
     }

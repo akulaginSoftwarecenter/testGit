@@ -52,6 +52,7 @@ extension Array where Element : RNSTextField {
         return false
     }
     
+    /// Метод очистки ошибок
     func clearError() {
         for field in self {
             field.setStateValid()

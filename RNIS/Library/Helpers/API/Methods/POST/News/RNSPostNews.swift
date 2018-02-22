@@ -21,6 +21,7 @@ class RNSPostNews: RNSRequest {
     var complete: CompleteAlias?
     var failure: AliasStringBlock?
     
+    /// Метод инициализации 
     @discardableResult convenience init(complete: CompleteAlias?, failure: AliasStringBlock?) {
         self.init()
         

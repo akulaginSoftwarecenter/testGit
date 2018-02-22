@@ -14,6 +14,7 @@ struct RNSRangeScroll {
     var handlerOne: EmptyBlock?
     var handlerTwo: EmptyBlock?
     
+    /// Метод инициализации 
     init(_ range: ClosedRange<CGFloat>, handlerOne: EmptyBlock? = nil, handlerTwo: EmptyBlock? = nil) {
         self.range = range
         self.handlerOne = handlerOne

@@ -13,6 +13,7 @@ class RNSDotsVerticalModel: NSObject {
     var duration = String()
     var points: [RNSRoutePoint]?
     
+    /// Метод инициализации 
     convenience init(_ main: RNSRouteVariant?) {
         self.init()
         

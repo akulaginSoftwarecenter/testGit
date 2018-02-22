@@ -16,6 +16,7 @@ class AboutAppInfoViewController: UIViewController {
     /// Надпись с версией приложения
     @IBOutlet weak var appVersionLabel: UILabel!
 
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString"), let bundle = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") {

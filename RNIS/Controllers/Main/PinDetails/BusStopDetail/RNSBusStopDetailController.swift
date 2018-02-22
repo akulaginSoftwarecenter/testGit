@@ -55,6 +55,7 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
     /// Начальная высота контроллера
     var startBottomOffset: CGFloat?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

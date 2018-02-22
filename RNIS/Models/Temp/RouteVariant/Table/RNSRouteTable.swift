@@ -14,6 +14,7 @@ class RNSRouteTable: NSObject {
     var points: [RNSRoutePoint]?
     var main: RNSRouteVariant?
     
+    /// Метод инициализации 
     convenience init(_ main: RNSRouteVariant?) {
         self.init()
         

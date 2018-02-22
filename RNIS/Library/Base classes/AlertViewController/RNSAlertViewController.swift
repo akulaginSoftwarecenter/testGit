@@ -27,6 +27,7 @@ class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
     
     var titleOneButton: String?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -48,6 +48,7 @@ extension RNSFavoritesBusView {
         prepareSections(nil)
     }
     
+    /// Метод очистки ошибок
     func clearError() {
         loaderWay.remove()
     }

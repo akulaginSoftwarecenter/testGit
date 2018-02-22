@@ -32,6 +32,7 @@ class RNSLeftMenuController: UIViewController, UITableViewDataSource, UITableVie
     /// Индикатор загрузки
     lazy var loaderView = LoaderView()
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
 

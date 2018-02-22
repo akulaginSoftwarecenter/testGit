@@ -34,6 +34,7 @@ class RNSBusTableModel {
         return itemsStill
     }
     
+    /// Метод инициализации 
     convenience init(_ main: RNSBusTemp?) {
         self.init()
         

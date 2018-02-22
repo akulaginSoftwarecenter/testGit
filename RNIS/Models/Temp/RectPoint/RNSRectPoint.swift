@@ -29,6 +29,7 @@ class RNSRectPoint {
         return RNSMapManager.step
     }
     
+    /// Метод инициализации 
     init(_ pointStart: PGGeoPoint?, pointEnd: PGGeoPoint?) {
         self.pointStart = pointStart
         self.pointEnd = pointEnd

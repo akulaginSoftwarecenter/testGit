@@ -26,6 +26,7 @@ class RNSStopPointRoutes: RNSPostRequestMobileToken {
     typealias AliasReply = RNSRequestReply<RNSStopPointRoutesPayload,RNSRegisterError>
     typealias AliasComplete = ([RNSBusRouteTemp]?) -> ()
     
+    /// Метод инициализации 
     @discardableResult convenience init(_ item: RNSBusStop?, complete: AliasComplete?, failure: AliasStringBlock?) {
         self.init()
         

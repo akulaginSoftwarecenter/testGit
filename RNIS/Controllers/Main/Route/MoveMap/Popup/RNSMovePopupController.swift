@@ -52,7 +52,7 @@ class RNSMovePopupController: UIViewController {
     /// Контейнер для представления внутреннего контроллера
     @IBOutlet weak var containerView: UIView!
     
-    
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
 

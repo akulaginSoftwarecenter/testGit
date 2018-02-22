@@ -33,6 +33,7 @@ class RNSUserPayload: RNISMappableBase {
     
     var user: RNSUserPayload?
    
+    /// Метод инициализации
     convenience init(phone: String?) {
         self.init()
         
@@ -44,6 +45,7 @@ class RNSUserPayload: RNISMappableBase {
         return item
     }
     
+    /// Метод инициализации 
     convenience init(email: String?) {
         self.init()
         self.email = email

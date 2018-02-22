@@ -57,6 +57,7 @@ class SupportInfoViewController: UIViewController {
     
     var message: String?
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

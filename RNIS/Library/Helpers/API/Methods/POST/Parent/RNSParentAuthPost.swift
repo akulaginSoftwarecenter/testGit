@@ -17,7 +17,8 @@ class RNSParentAuthPost: RNSTokenRequest {
     var item: RNSUserPayload?
     var failure: AliasStringBlock?
     var complete: AliasRegisterPayloadBlock?
-     
+    
+    /// Метод инициализации 
     @discardableResult convenience init(_ item: RNSUserPayload?, complete: AliasRegisterPayloadBlock?, isNeedLoaders: Bool = true, failure: AliasStringBlock? = nil) {
         self.init()
         

@@ -26,6 +26,7 @@ class RNSNewsDetailController: UIViewController {
         return STRouter.imageContainer(vc)
     }
 
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         loadItem()

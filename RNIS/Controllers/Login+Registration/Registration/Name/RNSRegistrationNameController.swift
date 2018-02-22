@@ -43,6 +43,7 @@ class RNSRegistrationNameController: UIViewController {
         return STRouter.imageContainer(container)
     }
     
+    /// Метод инициализации класса
     override func viewDidLoad() {
         super.viewDidLoad()
         

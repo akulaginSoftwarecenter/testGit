@@ -22,6 +22,7 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
         self.text = text
     }
     
+    /// Метод инициализации 
     required init() {
         super.init()
         

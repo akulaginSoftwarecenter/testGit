@@ -18,6 +18,7 @@ class RNSNotificationCreate: RNSPostRequestMobileToken {
 
     typealias AliasReply = RNSRequestReply<RNISMappableBase,RNSRegisterError>
 
+    /// Метод инициализации 
     @discardableResult convenience init(bus: RNSBusRouteTemp, stop: RNSBusStop, time: String?, complete: EmptyBlock?) {
         self.init()
 

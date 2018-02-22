@@ -10,6 +10,7 @@ import Foundation
 
 extension RNSRouteTable {
     
+    /// Метод подготовки массива данных
     func prepareItems() {
         guard let points = points else {
             return
