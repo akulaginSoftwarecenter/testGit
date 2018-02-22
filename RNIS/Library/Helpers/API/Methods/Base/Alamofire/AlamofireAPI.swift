@@ -9,28 +9,29 @@
 import Alamofire
 import Foundation
 
-
+/**
+ Класс для обработки запротки Get запросов
+ */
 class AlamofireAPI: API {
-    // Change baseURLString to change API target
-//     let baseURLString = SLTSettingsManager.serverAddress
 
-    // Override this method to set REST method
+    /// Override this method to set REST method
     var method: Alamofire.HTTPMethod {
         return .get
     }
 
-    // Override this method to set request relative path
+    /// Override this method to set request relative path
     var path: String {
         preconditionFailure("Request path should be set, override path")
     }
-
+    /// Параметр хранилище запроса
     weak var alamofireRequest: Alamofire.Request?
 
+    /// Параметр определяющий что запрос выполняется
     override var apiRequestInProgress: Bool {
         return alamofireRequest != nil
     }
 
-    // Creating
+    /// Creating
     func urlRequest() -> URLRequest {
         let fullPath = serverAddress + path
         let url = URL(string: fullPath)!;
@@ -51,7 +52,8 @@ class AlamofireAPI: API {
         }
         return urlRequest
     }
-
+    
+    /// Подготовка запроса
     @objc func prepareURLRequest(_ request: URLRequest) -> URLRequest {
         // This is a point to customize URL request
         // E.g. set timeout interval or cache policy
@@ -61,6 +63,7 @@ class AlamofireAPI: API {
         return mutableRequest
     }
 
+    /// Метод отправка запроса
     override func sendRequest()
     {
         let alamofireRequest = Alamofire.request(urlRequest())
@@ -96,10 +99,12 @@ class AlamofireAPI: API {
         self.alamofireRequest = alamofireRequest
     }
     
+    /// Метод парсинга Json
     func parseResponseJson(_ json: AnyObject) {
         requestDidReturnReply(json)
     }
     
+    /// Метод для обработки ошибок
     override func apiDidFailWithError(_ error: NSError) {
         if showLogApi {
             print("apiDidFailWithError",error)
@@ -111,6 +116,7 @@ class AlamofireAPI: API {
         STRouter.removeLoader()
     }
     
+    /// Метод отображения универсальной ошибки сети
     func showErrorNetwork() {
         STAlertRouter.showErrorNetwork()
     }

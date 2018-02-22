@@ -50,25 +50,18 @@ public class API: NSObject {
     /// последняя ошибка полученный с сервера
     var lastError: NSError?;
 
-    
+    /// клоужер выполнения запроса
     var completion: APICompletion?
 
-    
-    var progressBlock: APIProgress?
-
-    
+    /// парамете определящий выполнение запроса,  требуется переопределние
     var apiRequestInProgress: Bool {
         preconditionFailure("Concrete API object should override progress indicator like 'return alamofireRequest != nil'")
     }
-
-    var shouldLogRequest = false
-    var shouldAddAccessToken = true
 
     override init() {
         super.init()
         prepare()
     }
-
     
     private func prepare() {
         // E.g. add access token to request or log level
