@@ -14,8 +14,13 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
     var forecast: [RNSRouteBusTemp]?
     
     var height: CGFloat {
-        return CGFloat(45 + (forecast?.count ?? 0) * 49)
+        var count: CGFloat = 0
+        if let forcount = forecast?.count {
+            count = CGFloat(forcount)
+        }
+        return 45 + count * 49
     }
+    
     public override func mapping(map: Map) {
         super.mapping(map: map)
         
