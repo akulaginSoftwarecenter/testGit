@@ -124,11 +124,13 @@ class AlamofireAPI: API {
 
 // RequestProgress
 extension AlamofireAPI {
-
+    
+    /// Метод отмена запроса
     override func cancel() {
         alamofireRequest?.cancel()
     }
 
+    /// Синглетон httpManager
     static let httpManager: SessionManager = {
         let defaultManager = Alamofire.SessionManager.default
         defaultManager.session.configuration.requestCachePolicy = .reloadIgnoringCacheData
@@ -138,6 +140,7 @@ extension AlamofireAPI {
         return defaultManager
     }()
 
+    /// Переменная для установления базового адреса
     @nonobjc static let baseURL: URL = {
         // This is a place to configure API base URL if depends on something
         // E.g. builds for different servers
@@ -146,15 +149,18 @@ extension AlamofireAPI {
         return baseURL
     }()
 
+    /// Метод окончания запроса
     override func apiDidEnd() {
         super.apiDidEnd()
         alamofireRequest = nil
     }
 
+    /// Переменная для описания отладки
     override var debugDescription: String {
         return String(format: "%@, path:%@", super.description, path)
     }
     
+    /// Метод возврата ошибки по умолчанию
     @objc func superError() {
         super.apiDidFailWithError(NSError(domain: "error", code: 0, userInfo: [:]))
     }

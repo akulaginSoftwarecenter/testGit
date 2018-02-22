@@ -31,10 +31,12 @@ extension API {
         preconditionFailure("Concrete API object should override cancel method like 'alamofireRequest?.cancel()'")
     }
     
+    /// Флаг отображения лога ответа по запросу
     @objc var isShowLogReply: Bool {
         return showLogApi
     }
     
+    /// Флаг отображения тела запроса
     @objc var isShowLogRequest: Bool {
         return showLogApi
     }
@@ -55,8 +57,8 @@ extension API {
         apiDidReturnReply(parsedReply, source: reply)
     }
     
+    /// Метод возврата класса для парсинга
     func classForParsingReply() -> AnyClass? {
         return nil
     }
-    
 }

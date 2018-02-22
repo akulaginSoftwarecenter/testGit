@@ -58,24 +58,27 @@ public class API: NSObject {
         preconditionFailure("Concrete API object should override progress indicator like 'return alamofireRequest != nil'")
     }
 
+    /// Метод инициализации класса API
     override init() {
         super.init()
         prepare()
     }
     
+    /// Метод подготовки запроса
     private func prepare() {
         // E.g. add access token to request or log level
         //        [self setShouldAddAccessToken:YES];
         //        [self setShouldLogRequest:NO];
     }
 
-    
+    /// Метод отправки запроса и получения клоужера
     func sendRequestWithCompletion(completion: @escaping APICompletion) {
         self.completion = completion
         
         sendRequest()
     }
     
+    /// Метод отправки запроса
     func sendRequest()
     {}
 }

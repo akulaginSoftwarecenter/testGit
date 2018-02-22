@@ -79,6 +79,7 @@ extension API
         */
     }
     
+    /// Метод окончания запроса
     @objc func apiDidEnd() {
        //completion = nil
     }
