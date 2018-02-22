@@ -73,11 +73,13 @@ class KeyBoardViewController: UIViewController, KeyboardShowable {
         containerView.autoPinEdgesToSuperviewEdges()
     }
     
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addKeyboardObservers()
     }
     
+    /// метод обработки исчезновения контроллера
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeAllObservers()

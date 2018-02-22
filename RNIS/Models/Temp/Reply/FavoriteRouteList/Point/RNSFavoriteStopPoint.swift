@@ -31,6 +31,7 @@ class RNSFavoriteStopPoint: RNISMappableBase, Hashable {
     var stop_point_latitude: Double?
     var stop_point_longitude: Double?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         forecast <- map["forecast"]
         stop_point_title <- map["stop_point_title"]

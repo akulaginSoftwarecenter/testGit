@@ -20,6 +20,7 @@ class RNSRouteVariant: RNISMappableBase {
     var uuid: String?
     var name: String?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         points <- map["points"]
         points <- map["data.points"]

@@ -17,6 +17,7 @@ class RNSLeftBackButton: UIButton {
     @IBInspectable var leftContentOffset: CGFloat = 0
     @IBInspectable var actionDefault: Bool = true
 
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

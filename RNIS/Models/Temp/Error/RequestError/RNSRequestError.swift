@@ -24,6 +24,7 @@ class RNSRequestError<T: Mappable>: RNISMappableBase {
         self.init(JSON: dict)
     }
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         data <- map["data"]
         text <- map["text"]

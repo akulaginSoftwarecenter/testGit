@@ -16,6 +16,7 @@ class RNSRabanc: RNISMappableBase {
 
     var points: [RNSRabancItem]?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         points <- map["points"]
         preparePolyline()

@@ -16,6 +16,7 @@ class RNSLoginError: RNISMappableBase {
     var login: [String]?
     var password: [String]?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         login <- map["login"]
         password <- map["password"]

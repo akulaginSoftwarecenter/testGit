@@ -26,6 +26,7 @@ class RNSNewsTemp: RNISMappableBase {
     var dateString: String?
     var titleDate: String?
     
+    /// Метод парсинга
     override func mapping(map: Map) {
         uuid <- map["uuid"]
         title <- map["title"]

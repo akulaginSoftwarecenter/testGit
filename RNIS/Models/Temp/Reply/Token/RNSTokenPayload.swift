@@ -17,6 +17,7 @@ class RNSTokenPayload: RNISMappableBase {
     
     var token: String?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         token <- map["token"]
     }

@@ -11,6 +11,7 @@ import UIKit
 /// Текстовое поле для ввода имени с выравниванием текста в левую сторону
 class RNSNameFieldLeft: RNSNameField {
 
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

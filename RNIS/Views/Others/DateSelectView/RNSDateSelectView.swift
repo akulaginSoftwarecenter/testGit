@@ -24,6 +24,7 @@ class RNSDateSelectView: BaseViewWithXIBInit {
     /// Кнопка отмены
     @IBOutlet weak var cancelButton: RNSBlackButton!
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
      

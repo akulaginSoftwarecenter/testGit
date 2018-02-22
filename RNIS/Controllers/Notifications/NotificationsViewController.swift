@@ -29,6 +29,7 @@ class NotificationsViewController: UIViewController {
         prepareHandlers()
     }
     
+    /// метод обработки появления контроллера
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
        // Utils.checkEmailShowAlert()

@@ -18,11 +18,13 @@ class RNSCircleHole: BaseViewWithXIBInit {
     /// Внутренний круг
     @IBOutlet weak var smallCircle: RNSCircle!
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
     }
     
+    /// метод загрузки названия xib файла
     override var nibNamed:String {
         return "RNSCircleHole"
     }

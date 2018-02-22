@@ -12,7 +12,6 @@ import ObjectMapper
 /**
  RNISMappableBase
  */
-
 class RNISMappableBase: Mappable {
     
     /// Метод инициализации 
@@ -20,9 +19,11 @@ class RNISMappableBase: Mappable {
         
     }
     
+    /// Метод инициализации
     required init?(map: Map) {
     }
     
+    /// Метод парсинга
     public func mapping(map: Map) {
       
     }

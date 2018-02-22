@@ -89,6 +89,7 @@ class RNSMapViewController: UIViewController {
         routeBtn.alpha = alpha
     }
 
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         RNSPageRouteManager.removeAllRoute()
@@ -102,6 +103,7 @@ class RNSMapViewController: UIViewController {
         animator.setupOnce(showingButtonsConstraints, hidingButtonsConstraints, initialVisibilityStateHidden: true)
     }
     
+    /// метод обработки появления контроллера
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animator.setMapButtons(hidden: false, animated: true)

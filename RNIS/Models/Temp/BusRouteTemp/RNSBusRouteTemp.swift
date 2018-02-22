@@ -21,6 +21,7 @@ class RNSBusRouteTemp: RNISMappableBase {
     var next: Bool?
     var time: Int?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         uuid <- map["uuid"]
         number <- map["number"]

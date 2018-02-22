@@ -13,8 +13,11 @@ import UIKit
  */
 class RNISAuthManager {
     
+    ///Массив серверов
     static var servers = [serverMosreg,serverDev]
+    ///Сервер морсег
     static var serverMosreg = "https://api.rnis.mosreg.ru/ajax/request"
+    ///Сервер dеф
     static var serverDev = "https://dev-rnis.regeora.ru/ajax/request"
     //static var serverDev = "https://dev-rnisapi.regeora.ru/ajax/request"
     
@@ -64,6 +67,7 @@ class RNISAuthManager {
         })
     }
     
+    /// метод подготовки сервера по умолчанию
     static func prepareDefaultUrlIfNeed() {
         if UserDefaults.serverApi == nil, let first = servers.first {
             UserDefaults.setServerApi(first)

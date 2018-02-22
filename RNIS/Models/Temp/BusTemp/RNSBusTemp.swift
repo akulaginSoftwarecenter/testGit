@@ -26,6 +26,7 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem {
     var unit_name: String?
     var unit_phone: String?
    
+    /// Метод парсинга
     public override func mapping(map: Map) {
         uuid <- map["uuid"]
         carrier_name <- map["carrier_name"]

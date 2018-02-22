@@ -21,6 +21,7 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
         return UITableViewAutomaticDimension
     }
     
+    /// Метод возврата высоты строк по оценке
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66
     }

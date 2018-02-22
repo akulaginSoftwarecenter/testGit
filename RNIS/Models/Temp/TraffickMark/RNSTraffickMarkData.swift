@@ -23,6 +23,7 @@ class RNSTraffickMarkData: Mappable {
         
     }
     
+    /// Метод парсинга
     func mapping(map: Map) {
         cityNam <- map["CITY_NAM"]
         lat <- map["Lat"]

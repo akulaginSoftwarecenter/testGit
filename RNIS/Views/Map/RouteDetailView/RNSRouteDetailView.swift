@@ -44,6 +44,7 @@ class RNSRouteDetailView: BaseViewWithXIBInit {
         tableView.reloadData()
     }
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

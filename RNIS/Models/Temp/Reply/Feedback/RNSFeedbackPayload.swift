@@ -25,6 +25,7 @@ class RNSFeedbackPayload: RNISMappableBase {
         self.body = body
     }
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         contact <- map["contact"]
         body <- map["body"]

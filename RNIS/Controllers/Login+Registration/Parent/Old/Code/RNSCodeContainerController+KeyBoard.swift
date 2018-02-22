@@ -12,6 +12,8 @@ import Foundation
  Расширение для работы с клавиатурой
  */
 extension RNSCodeContainerController {
+    
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -45,6 +47,7 @@ extension RNSCodeContainerController {
         }
     }
     
+    /// метод обработки исчезновения контроллера
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         

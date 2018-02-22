@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSMenuBarItem: UIBarButtonItem {
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         target = self

@@ -22,6 +22,7 @@ class RNSAddressTemp: RNISMappableBase, RNSTextItem {
     var type: Int?
     var point: PGGeoPoint?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         uuid <- map["id"]
         name <- map["entity"]

@@ -16,6 +16,8 @@ class RNSActionRoutingPayload<T: Mappable>: RNISMappableBase {
 
     /// массив моделей
     var items: [T]?
+    
+    /// Метод парсинга
     public override func mapping(map: Map) {
         items <- map["items"]
     }

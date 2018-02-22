@@ -17,6 +17,7 @@ class RNSDutyAddressTemp: RNISMappableBase {
     var latitude: Double?
     var longitude: Double?
     
+    /// Метод парсинга
     override func mapping(map: Map) {
         address <- map["address"]
         latitude <- map["latitude"]

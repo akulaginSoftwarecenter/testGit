@@ -25,6 +25,7 @@ class RNSMenuViewController: LGSideMenuController {
         return rootViewController as? BaseNavigationController
     }
     
+    /// метод обработки загрузки вью
     override func awakeFromNib(){
         super.awakeFromNib()
         

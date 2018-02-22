@@ -33,6 +33,7 @@ class RNSLoginView: BaseViewWithXIBInit {
         }
     }
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

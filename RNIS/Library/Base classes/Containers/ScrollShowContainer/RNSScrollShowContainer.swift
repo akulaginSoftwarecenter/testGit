@@ -66,6 +66,7 @@ class RNSScrollShowContainer: UIViewController {
         prepareUI()
     }
     
+    /// метод обработки появления контроллера
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

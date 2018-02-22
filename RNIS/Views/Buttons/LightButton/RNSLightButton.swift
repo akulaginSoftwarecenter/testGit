@@ -23,6 +23,7 @@ class RNSLightButton: BaseViewWithXIBInit {
     /// Надпись заголовка
     @IBOutlet weak var label: UILabel!
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

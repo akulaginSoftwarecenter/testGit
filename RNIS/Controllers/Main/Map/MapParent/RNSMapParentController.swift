@@ -99,6 +99,7 @@ class RNSMapParentController: UIViewController {
         bottomTarget.constant = constant
     }
     
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         plusButtonZoom.isHidden = UserDefaults.hideZoomButtonInMap
@@ -114,6 +115,7 @@ class RNSMapParentController: UIViewController {
         animator.setupOnce(showingButtonsConstraints, hidingButtonsConstraints, initialVisibilityStateHidden: true)
     }
     
+    /// метод обработки появления контроллера
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 

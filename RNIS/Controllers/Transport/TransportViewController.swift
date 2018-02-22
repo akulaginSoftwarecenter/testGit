@@ -32,6 +32,7 @@ class TransportViewController: UIViewController {
         prepareSegment()
     }
     
+    /// метод обработки появления контроллера
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

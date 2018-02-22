@@ -25,6 +25,7 @@ class RNSBlackButton: BaseViewWithXIBInit {
         }
     }
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -41,6 +42,7 @@ class RNSBlackButton: BaseViewWithXIBInit {
         handlerAction?()
     }
     
+    /// метод загрузки названия xib файла
     override var nibNamed:String {
         return String(describing: RNSBlackButton.self)
     }

@@ -25,6 +25,7 @@ class RNSRequestReply<T1: Mappable,T2: Mappable>: RNISMappableBase {
         self.init(JSON: dict)
     }
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         payload <- map["payload"]
         errors <- map["errors"]

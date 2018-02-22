@@ -15,6 +15,8 @@ import ObjectMapper
 class RNSFavoritePathCreatePayload: RNISMappableBase {
     
     var uuid: String?
+    
+    /// Метод парсинга
     public override func mapping(map: Map) {
         
         uuid <- map["uuid"]

@@ -139,6 +139,10 @@ class Parser {
 
 // Model to dictionary
 extension Parser {
+    /**
+     We should use this private method for parcing arrays
+     Because public method drains mappings after every parse
+     */
     static func dictionary(forModel model: BaseModel,
                              andKeys keys:[String]) -> [String: AnyObject] {
         return [String: AnyObject]()
@@ -149,6 +153,10 @@ extension Parser {
  Расширение для работы с облаком
  */
 protocol ParsableObject {
+    /**
+     We should use this private method for parcing arrays
+     Because public method drains mappings after every parse
+     */
     func valueForAPI() -> AnyObject
 }
 
@@ -156,6 +164,10 @@ protocol ParsableObject {
  Расширение для работы с облаком
  */
 extension NSObject: ParsableObject {
+    /**
+     We should use this private method for parcing arrays
+     Because public method drains mappings after every parse
+     */
     @objc func valueForAPI() -> AnyObject {
         return self
     }
@@ -165,6 +177,10 @@ extension NSObject: ParsableObject {
  Расширение для работы с облаком
  */
 extension APIModel {
+    /**
+     We should use this private method for parcing arrays
+     Because public method drains mappings after every parse
+     */
     override func valueForAPI() -> AnyObject {
         return self.fullObject()
     }
@@ -175,6 +191,10 @@ extension APIModel {
  Расширение для работы с облаком
  */
 extension Array: ParsableObject {
+    /**
+     We should use this private method for parcing arrays
+     Because public method drains mappings after every parse
+     */
     func valueForAPI() -> AnyObject {
         var valueForAPI = [AnyObject]()
         valueForAPI.reserveCapacity(self.count)
@@ -191,6 +211,10 @@ extension Array: ParsableObject {
  Расширение для работы с облаком
  */
 extension Dictionary: ParsableObject {
+    /**
+     We should use this private method for parcing arrays
+     Because public method drains mappings after every parse
+     */
     func valueForAPI() -> AnyObject {
         var valueForAPI = [Key: AnyObject](minimumCapacity: self.count)
         for (key, value) in self {

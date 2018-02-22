@@ -28,6 +28,7 @@ class RNSProfilePhoto: BaseViewWithXIBInit {
     /// Блок обновления фото
     var handlerUpdateImage: EmptyBlock?
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

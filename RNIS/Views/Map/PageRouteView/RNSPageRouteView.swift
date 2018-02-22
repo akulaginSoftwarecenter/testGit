@@ -34,6 +34,7 @@ class RNSPageRouteView: BaseViewWithXIBInit {
         collectionView.reloadData()
     }
 
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

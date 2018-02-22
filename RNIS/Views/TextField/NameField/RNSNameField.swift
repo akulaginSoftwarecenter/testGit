@@ -34,6 +34,7 @@ class RNSNameField: RNSTextField, UITextFieldDelegate {
         delegate = self
     }
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
 

@@ -27,6 +27,7 @@ class RNSContactItem: RNISMappableBase {
     var value: String?
     var value_type: String?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         uuid <- map["uuid"]
         type <- map["type"]

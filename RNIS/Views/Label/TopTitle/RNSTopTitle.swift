@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSTopTitle: UILabel {
 
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

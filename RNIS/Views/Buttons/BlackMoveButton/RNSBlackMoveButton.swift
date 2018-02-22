@@ -12,6 +12,8 @@ import UIKit
  Кнопка "поехали"
  */
 class RNSBlackMoveButton: RNSBlackButton {
+    
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

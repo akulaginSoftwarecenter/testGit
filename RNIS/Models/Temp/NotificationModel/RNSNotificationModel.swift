@@ -19,6 +19,7 @@ class RNSNotificationModel: RNISMappableBase {
     var stop_point: RNSBusStopTemp?
     var uuid: String?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         notification_time <- map["notification_time"]
         route_number <- map["route_number"]

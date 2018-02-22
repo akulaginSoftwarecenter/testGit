@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSBackGroundView: UIView {
 
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .backColor

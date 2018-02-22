@@ -15,6 +15,7 @@ import ObjectMapper
 class RNSFavoriteRouteListPayload: RNISMappableBase {
     var stop_points: [RNSFavoriteStopPoint]?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         stop_points <- map["stop_points"]
     }

@@ -79,6 +79,7 @@ class RNSDotsWhiteHorizontal: BaseViewWithXIBInit {
         return circle
     }
     
+    /// метод загрузки названия xib файла
     override var nibNamed:String {
         return String(describing: RNSDotsWhiteHorizontal.self)
     }

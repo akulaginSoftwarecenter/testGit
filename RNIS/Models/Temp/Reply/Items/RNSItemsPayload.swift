@@ -17,6 +17,7 @@ class RNSItemsPayload: RNISMappableBase {
     /// массив моделей
     var items: [AliasDictionary]?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         items <- map["items"]
     }

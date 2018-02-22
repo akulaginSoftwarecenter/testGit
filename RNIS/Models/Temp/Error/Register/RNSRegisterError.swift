@@ -24,7 +24,7 @@ class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
     var mobile_user_edit_source: [String]?
     var body: [String]?
     
-    
+    /// Метод парсинга
     public override func mapping(map: Map) {
         
         mobile_user_phone <- map["mobile_user.phone"]

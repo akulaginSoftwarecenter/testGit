@@ -39,12 +39,14 @@ class RNSMoveMapViewController: UIViewController {
         prepareObservers()
     }
     
+    /// метод обработки появления контроллера
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         RNSMoveManager.isShowMoveMap = true
     }
     
+    /// метод обработки исчезновения контроллера
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         moveMapFalse()

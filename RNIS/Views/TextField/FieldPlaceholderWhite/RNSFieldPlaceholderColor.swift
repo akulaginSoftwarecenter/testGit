@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSFieldPlaceholderColor: UITextField {
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

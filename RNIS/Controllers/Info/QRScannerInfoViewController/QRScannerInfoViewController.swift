@@ -85,6 +85,7 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
         }
     }
     
+    /// метод делегата результата сканирования
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         reader.stopScanning()
         
@@ -100,10 +101,12 @@ class QRScannerInfoViewController: UIViewController,QRCodeReaderViewControllerDe
         }
     }
     
+    /// метод делегата результата камеры
     func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {
        // let cameraName = newCaptureDevice.device.localizedName
     }
     
+    /// метод делегата результата отмены
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
         reader.stopScanning()
         

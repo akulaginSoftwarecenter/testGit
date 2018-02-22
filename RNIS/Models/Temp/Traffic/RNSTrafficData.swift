@@ -43,6 +43,7 @@ class RNSTrafficData: Mappable {
         
     }
     
+    /// Метод парсинга
     func mapping(map: Map) {
         b <- map["b"]
         cities <- map["cities"]

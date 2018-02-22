@@ -57,6 +57,7 @@ class RNSEmailField: RNSTextField {
         keyboardType = .emailAddress
     }
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

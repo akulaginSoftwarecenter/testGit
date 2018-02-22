@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSBaseTableCell: UITableViewCell {
 
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = self.contentView.backgroundColor;

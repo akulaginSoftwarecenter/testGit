@@ -32,6 +32,7 @@ class RNSSearchView: BaseViewWithXIBInit {
     /// переменная таблицы
     @IBOutlet weak var tableView: UITableView!
     
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);

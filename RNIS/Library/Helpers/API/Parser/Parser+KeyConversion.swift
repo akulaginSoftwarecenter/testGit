@@ -14,14 +14,17 @@ import Foundation
 */
 extension Parser {
 
+    /// метод имени
     static func classNameFromBackendKey(_ key: String) -> String {
         return keyFromBackendKey(key, capitlizeFirst: true)
     }
     
+    /// метод свойств
     static func propertyFromBackendKey(_ key: String) -> String {
         return keyFromBackendKey(key, capitlizeFirst: false)
     }
 
+    /// метод ключей
     static func keyFromBackendKey(_ key: String, capitlizeFirst: Bool) -> String {
         var resultKey = ""
 
@@ -82,10 +85,12 @@ extension Parser {
 
 
 
+    /// метод ключей имени
     static func backendKeyFromPropertyName(_ key: String) -> String {
         return keyFromBackendKey(key, capitlizeFirst: true)
     }
 
+    /// метод имени классов
     static func backendKeyFromClassName(_ key: String) -> String {
         return keyFromBackendKey(key, capitlizeFirst: true)
     }

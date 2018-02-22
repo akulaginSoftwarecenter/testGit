@@ -13,10 +13,14 @@ import UIKit
  */
 class NotificationTableViewCell: RNSBaseTableCell {
    
+    /// переменная отображения номера авто
     @IBOutlet weak var autoNumberLabel: UILabel!
+    /// переменная отображения улицы
     @IBOutlet weak var streetLabel: UILabel!
+    /// переменная отображения времени
     @IBOutlet weak var timeLabel: UILabel!
   
+    /// метод обновления ячейки
     func updateCell(model: RNSNotificationModel?) {
         self.autoNumberLabel.text = "A" + (model?.route_number ?? "")
         self.streetLabel.text = model?.stop_point?.name

@@ -56,6 +56,7 @@ class RNSProfileViewController: UIViewController {
         }
     }
     
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

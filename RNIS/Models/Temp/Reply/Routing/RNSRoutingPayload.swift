@@ -17,6 +17,7 @@ class RNSRoutingPayload: RNISMappableBase {
     var distance: CGFloat?
     var route: PGPolyline?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         distance <- map["distance"]
         parseRoute(map["points"].currentValue)

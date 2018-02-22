@@ -12,6 +12,8 @@ import Foundation
  Расширение для работы с клавиатурой. При появлении контроллера, подписывает его на событие появления клавиатуры, а при исчезновении - отписывает.
  */
 extension RNSRegistrationNameController {
+    
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -44,6 +46,7 @@ extension RNSRegistrationNameController {
         }
     }
     
+    /// метод обработки исчезновения контроллера
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.removeObserver(self)

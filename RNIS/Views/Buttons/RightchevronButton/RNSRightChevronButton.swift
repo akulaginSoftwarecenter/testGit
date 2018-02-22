@@ -14,6 +14,7 @@ import SnapKit
  */
 class RNSRightChevronButton: UIButton {
 
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

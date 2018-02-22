@@ -19,6 +19,7 @@ class RNSRabancItem: RNISMappableBase {
     
     var point: PGGeoPoint?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         latitude <- map["latitude"]
         longitude <- map["longitude"]

@@ -56,11 +56,13 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollVi
         scrollView.setContentOffset(offset, animated: true)
     }
     
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addKeyboardObservers()
     }
     
+    /// метод обработки исчезновения контроллера
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeAllObservers()

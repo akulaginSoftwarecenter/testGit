@@ -12,7 +12,6 @@ import ObjectMapper
 /**
  RNSNameMapable
  */
-
 class RNSNameMapable: RNISMappableBase {
 
     var uuid: String?
@@ -20,6 +19,7 @@ class RNSNameMapable: RNISMappableBase {
     var latitude: Double?
     var longitude: Double?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         uuid <- map["uuid"]
         name <- map["name"]

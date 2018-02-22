@@ -76,6 +76,7 @@ class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
         }
     }
     
+    /// метод обработки исчезновения контроллера
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeAlert()

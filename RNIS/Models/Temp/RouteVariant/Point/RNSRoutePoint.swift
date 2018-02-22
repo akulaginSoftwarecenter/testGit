@@ -25,6 +25,7 @@ class RNSRoutePoint: RNISMappableBase {
     var route: RNSBusRouteTemp?
     var name: String?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         latitude <- map["latitude"]
         longitude <- map["longitude"]

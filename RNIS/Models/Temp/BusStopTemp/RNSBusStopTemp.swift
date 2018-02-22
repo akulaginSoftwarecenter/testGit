@@ -24,6 +24,7 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
         return 45 + count * 49
     }
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         super.mapping(map: map)
         

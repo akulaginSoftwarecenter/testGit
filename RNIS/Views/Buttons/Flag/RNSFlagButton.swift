@@ -37,6 +37,8 @@ class RNSFlagButton: BaseViewWithXIBInit {
         handlerUpdate?()
         showLoader()
     }
+    
+    /// метод обработки загрузки вью
     override func awakeFromNib() {
         super.awakeFromNib()
         

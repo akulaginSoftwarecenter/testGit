@@ -136,11 +136,13 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         return "RNSMapParentController"
     }
     
+    /// метод обработки появления контроллера
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addKeyboardObservers()
     }
     
+    /// метод обработки исчезновения контроллера
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeAllObservers()

@@ -54,6 +54,7 @@ class RNSUserPayload: RNISMappableBase {
         self.email = email
     }
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         is_phone_activated <- map["is_phone_activated"]
         phone <- map["phone"]

@@ -17,6 +17,7 @@ class RNSMobilePagePayload: RNISMappableBase {
     var key: String?
     var text: String?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         uuid <- map["uuid"]
         key <- map["key"]

@@ -17,6 +17,7 @@ class RNSContactPayload: RNISMappableBase {
     /// массив моделей
     var items: [RNSContactItem]?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         items <- map["items"]
     }

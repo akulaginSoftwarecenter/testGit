@@ -17,6 +17,7 @@ class RNSForecastBus: RNISMappableBase {
     var route_number: String?
     var time: Int?
     
+    /// Метод парсинга
     public override func mapping(map: Map) {
         route_number <- map["route_number"]
         time <- map["time"]
