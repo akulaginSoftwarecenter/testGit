@@ -630,7 +630,6 @@
 		83B2E0841F1E139800FA92A4 /* API+ReplyHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06E1F1E139800FA92A4 /* API+ReplyHandling.swift */; };
 		83B2E0861F1E139800FA92A4 /* API+RequestProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E06F1F1E139800FA92A4 /* API+RequestProgress.swift */; };
 		83B2E0881F1E139800FA92A4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0701F1E139800FA92A4 /* API.swift */; };
-		83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0721F1E139800FA92A4 /* CloudKitAPI.swift */; };
 		83B2E08C1F1E139800FA92A4 /* APIModel+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0741F1E139800FA92A4 /* APIModel+CloudKit.swift */; };
 		83B2E08E1F1E139800FA92A4 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0751F1E139800FA92A4 /* APIModel.swift */; };
 		83B2E0901F1E139800FA92A4 /* APIModelMissedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2E0761F1E139800FA92A4 /* APIModelMissedKeys.swift */; };
@@ -1328,7 +1327,6 @@
 		83B2E06E1F1E139800FA92A4 /* API+ReplyHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+ReplyHandling.swift"; sourceTree = "<group>"; };
 		83B2E06F1F1E139800FA92A4 /* API+RequestProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+RequestProgress.swift"; sourceTree = "<group>"; };
 		83B2E0701F1E139800FA92A4 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		83B2E0721F1E139800FA92A4 /* CloudKitAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitAPI.swift; sourceTree = "<group>"; };
 		83B2E0741F1E139800FA92A4 /* APIModel+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIModel+CloudKit.swift"; sourceTree = "<group>"; };
 		83B2E0751F1E139800FA92A4 /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		83B2E0761F1E139800FA92A4 /* APIModelMissedKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModelMissedKeys.swift; sourceTree = "<group>"; };
@@ -4825,7 +4823,6 @@
 			isa = PBXGroup;
 			children = (
 				83B2E0691F1E139800FA92A4 /* Alamofire */,
-				83B2E0711F1E139800FA92A4 /* CloudKit */,
 				83B2E06D1F1E139800FA92A4 /* API+Creating.swift */,
 				83B2E06E1F1E139800FA92A4 /* API+ReplyHandling.swift */,
 				83B2E06F1F1E139800FA92A4 /* API+RequestProgress.swift */,
@@ -4842,14 +4839,6 @@
 				83B2E06C1F1E139800FA92A4 /* PostAPI.swift */,
 			);
 			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		83B2E0711F1E139800FA92A4 /* CloudKit */ = {
-			isa = PBXGroup;
-			children = (
-				83B2E0721F1E139800FA92A4 /* CloudKitAPI.swift */,
-			);
-			path = CloudKit;
 			sourceTree = "<group>";
 		};
 		83B2E0731F1E139800FA92A4 /* Model */ = {
@@ -5835,7 +5824,6 @@
 				832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
 				830E68BC1F55386C008EFA02 /* RNSRouteTableItem.swift in Sources */,
 				8319228B200EED0D00661A32 /* RNSRecoveryEmailController.swift in Sources */,
-				83B2E08A1F1E139800FA92A4 /* CloudKitAPI.swift in Sources */,
 				83804E262022DEC60091CF39 /* RNSRabanc.swift in Sources */,
 				838707ED1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,
 				836A9D771F6255BF00B5EB55 /* RNSFeedbackPayload.swift in Sources */,
@@ -6330,7 +6318,7 @@
 					"\"PureLayout\"",
 					"-lc++",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Onone -Xfrontend -warn-long-expression-type-checking=200 -Xfrontend -warn-long-function-bodies=200";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Onone";
 				PRODUCT_BUNDLE_IDENTIFIER = com.t1.rnis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
