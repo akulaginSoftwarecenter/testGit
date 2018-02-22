@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для Double
+ */
 extension Double {
     
     var radian: Double {

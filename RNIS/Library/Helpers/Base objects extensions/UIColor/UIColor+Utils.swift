@@ -7,9 +7,11 @@
 //
 
 import Foundation
-
 import UIKit
 
+/**
+ Расширение для UIColor
+ */
 extension UIColor {
     
     static var backColor: UIColor {

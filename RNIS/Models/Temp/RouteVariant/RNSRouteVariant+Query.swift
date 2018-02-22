@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с очередью
+ */
 extension RNSRouteVariant {
     
     func updateName(complete: EmptyBlock?) {

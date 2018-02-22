@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с устновкой
+ */
 extension RNSRectPoint {
     
     func preparePoints() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 /**
  Расширение для UITableView
  */

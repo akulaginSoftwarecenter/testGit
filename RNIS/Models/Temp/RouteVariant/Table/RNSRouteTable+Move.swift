@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с движением
+ */
 extension RNSRouteTable {
     
     func randomDoneMove() {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с полем ввода
+ */
 extension RNSSupportTextView: UITextViewDelegate {
     public func textViewDidChange(_ textView: UITextView) {
         updateHeightTextView()

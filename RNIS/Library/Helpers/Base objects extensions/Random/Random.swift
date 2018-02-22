@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для случайных чисел Int
+ */
 extension Int {
     
     static func rand(_ offset: Int, limit: Int) -> Int {
@@ -15,12 +18,18 @@ extension Int {
     }
 }
 
+/**
+ Расширение для случайных чисел Bool
+ */
 extension Bool {
     static var random: Bool {
         return arc4random_uniform(2) == 0
     }
 }
 
+/**
+ Расширение для случайных чисел Array
+ */
 extension Array {
     func randomItem() -> Element? {
         if isEmpty { return nil }

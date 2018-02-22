@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с меню
+ */
 extension STRouter {
     
     static var rootMain: BaseNavigationController? {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для тапа по кнопкам
+ */
 extension RNSSearchViewController {
     
     /// Событие переключения вкладки

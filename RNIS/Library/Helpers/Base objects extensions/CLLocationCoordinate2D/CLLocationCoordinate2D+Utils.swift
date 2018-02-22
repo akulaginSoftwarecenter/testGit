@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для CLLocationCoordinate2D
+ */
 extension CLLocationCoordinate2D {
     
     var point: PGGeoPoint {

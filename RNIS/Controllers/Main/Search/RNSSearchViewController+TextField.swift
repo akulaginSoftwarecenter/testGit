@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для поля ввода
+ */
 extension RNSSearchViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

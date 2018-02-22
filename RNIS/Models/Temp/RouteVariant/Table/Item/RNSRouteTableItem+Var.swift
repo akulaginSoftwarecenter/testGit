@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с переменными
+ */
 extension RNSRouteTableItem {
     
     var stillText: String? {

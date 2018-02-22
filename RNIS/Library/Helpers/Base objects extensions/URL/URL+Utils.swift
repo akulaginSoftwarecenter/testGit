@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для URL
+ */
 extension URL {
     var strNoURLScheme: String? {
         guard let scheme = scheme else {

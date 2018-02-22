@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы со свайпом
+ */
 extension RNSScrollShowContainer {
     
     func detectSwipe() {

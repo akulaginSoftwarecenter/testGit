@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с переменными
+ */
 extension RNSRouteTable {
     
     var isLastStop: Bool {

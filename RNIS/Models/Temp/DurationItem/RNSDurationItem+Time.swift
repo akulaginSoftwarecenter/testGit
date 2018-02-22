@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с временем
+ */
 extension RNSDurationItem {
     
     var timeRate: Int? {

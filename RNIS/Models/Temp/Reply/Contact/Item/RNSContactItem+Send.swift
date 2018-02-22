@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с отправкой
+ */
 extension RNSContactItem {
     
     func callOrSend() {

@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+/**
+ Расширение для работы с оперециями
+ */
 extension RNSMoveBusManager {
     
     static func parse(_ items: [AliasDictionary]?) {

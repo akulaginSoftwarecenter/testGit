@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с типами
+ */
 extension RNSPostSearch {
     
     func parseAtType(_ dicts: [AliasDictionary]) {

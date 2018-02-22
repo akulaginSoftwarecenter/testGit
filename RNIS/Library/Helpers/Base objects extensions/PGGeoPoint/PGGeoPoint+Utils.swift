@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для PGGeoPoint
+ */
 extension PGGeoPoint {
     var dictionary: AliasDictionary {
         return ["latitude": latitude,

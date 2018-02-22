@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для получения автобусов
+ */
 extension RNSAddressViewController {
     /// Функция получения адреса по географическим данным
     ///

@@ -10,6 +10,9 @@ import UIKit
 
 private var xoAssociationKey: UInt8 = 0
 
+/**
+ Расширение для UIButton
+ */
 extension UIButton {
     
     var handlerActionTouchUpInside: EmptyBlock? {

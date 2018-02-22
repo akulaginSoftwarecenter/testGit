@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с данными
+ */
 extension RNSBusTableModel {
     
     /// Метод подготовки массива данных

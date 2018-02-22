@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с заглушками
+ */
 extension RNSBusTemp {
     /*
     static func generate(_ point: PGGeoPoint) -> RNSBusTemp {

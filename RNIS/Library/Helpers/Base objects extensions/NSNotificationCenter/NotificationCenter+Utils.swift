@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для NotificationCenter
+ */
 extension NotificationCenter {
     
     static var center: NotificationCenter {

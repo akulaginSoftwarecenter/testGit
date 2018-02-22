@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Расширение для работы с навигацией
+ */
 extension STRouter {
 
     static func showMenu() {

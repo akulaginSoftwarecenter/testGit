@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Расширение для UITableViewCell
+ */
 extension UITableViewCell: ReusableView, NibLoadableView {
     static var identifier: String {
         return String(describing: self)

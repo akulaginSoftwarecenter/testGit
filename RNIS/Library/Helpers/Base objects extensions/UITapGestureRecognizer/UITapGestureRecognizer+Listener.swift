@@ -8,8 +8,11 @@
 
 import UIKit
 
-extension UITapGestureRecognizer: EventDispatcher
-{
+/**
+ Расширение для UITapGestureRecognizer
+ */
+extension UITapGestureRecognizer: EventDispatcher {
+    
     func addTapListener() {
         addTarget(self, action: #selector(tapHandler))
     }

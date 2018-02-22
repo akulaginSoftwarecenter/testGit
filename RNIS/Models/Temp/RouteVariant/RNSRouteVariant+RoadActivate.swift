@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с активным маршрутом
+ */
 extension RNSRouteVariant {
     
     func removeRoadActivate() {

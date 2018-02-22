@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с заглушкой
+ */
 extension RNSBusStop {
     /*
     func generate() {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с данными
+ */
 extension RNSRouteTable {
     
     /// Метод подготовки массива данных

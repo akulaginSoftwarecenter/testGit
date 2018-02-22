@@ -11,7 +11,6 @@ import Foundation
 /**
  Note Route + UI
  */
-
 extension RNSNoteRoute {
     
     func prepareUIBus() {

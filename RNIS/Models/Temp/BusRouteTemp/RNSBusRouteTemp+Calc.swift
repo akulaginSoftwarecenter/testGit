@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с расчетами
+ */
 extension RNSBusRouteTemp {
     
     func prepareTitle() {

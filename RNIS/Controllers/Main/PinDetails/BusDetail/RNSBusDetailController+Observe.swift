@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для вью
+ */
 extension RNSBusDetailController {
     
     func prepareViews(_ rect: CGRect) {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы со сравнением
+ */
 extension RNSRectPoint {
     
     func countains(_ point: PGGeoPoint?) -> Bool {

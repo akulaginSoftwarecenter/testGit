@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с картинкой
+ */
 extension RNSPinBus {
     
     func updateImage() {

@@ -8,8 +8,14 @@
 
 import UIKit
 
+/**
+ Протокол ReusableView
+ */
 protocol ReusableView {}
 
+/**
+ Расширение для работы с ReusableView
+ */
 extension ReusableView where Self: UIView {
     static var reuseIdentifier: String {
         return String(describing: self)

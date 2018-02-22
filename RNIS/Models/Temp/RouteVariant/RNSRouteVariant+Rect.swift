@@ -9,6 +9,9 @@
 import Foundation
 import MapKit
 
+/**
+ Расширение для работы с областью
+ */
 extension RNSRouteVariant {
     
     var rects: [RNSRectPoint] {

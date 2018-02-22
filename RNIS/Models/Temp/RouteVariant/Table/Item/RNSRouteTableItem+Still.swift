@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с кнопкой "Еще"
+ */
 extension RNSRouteTableItem {
     
     func indexPatchs(_ indexPath: IndexPath) -> [IndexPath] {

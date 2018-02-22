@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для UIViewController
+ */
 extension UIViewController {
     
     static var initialController: UIViewController? {

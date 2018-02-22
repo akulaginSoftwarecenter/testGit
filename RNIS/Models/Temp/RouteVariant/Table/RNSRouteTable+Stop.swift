@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с остановкой
+ */
 extension RNSRouteTable {
     
     func stop(_ point: RNSRoutePoint?, time: Int) -> RNSRouteTableItem {

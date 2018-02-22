@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с протоколом NSCopying
+ */
 extension RNSRouteTableItem: NSCopying {
     
     func copy(with zone: NSZone? = nil) -> Any {

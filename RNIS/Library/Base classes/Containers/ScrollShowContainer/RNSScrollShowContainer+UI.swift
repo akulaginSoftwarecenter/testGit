@@ -9,6 +9,9 @@
 import Foundation
 import PureLayout
 
+/**
+ Расширение для работы с интерфейсом
+ */
 extension RNSScrollShowContainer {
     
     func prepareUI() {

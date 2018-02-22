@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для UIViewController
+ */
 extension UIViewController {
     
     func pushAnimated(completion: EmptyBlock? = nil) {

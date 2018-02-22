@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с интерфейсом
+ */
 extension SupportInfoViewController {
 
     func prepareUI() {

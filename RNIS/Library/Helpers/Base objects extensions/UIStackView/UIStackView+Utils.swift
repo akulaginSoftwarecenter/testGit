@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для UIStackView
+ */
 extension UIStackView {
     func removeArrangedSubviews() {
         for view in arrangedSubviews {

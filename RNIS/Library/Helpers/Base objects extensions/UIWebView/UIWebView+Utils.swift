@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для UIWebView
+ */
 extension UIWebView {
     func loadStubWhite(_ text: String?) {
         guard let text = text else {

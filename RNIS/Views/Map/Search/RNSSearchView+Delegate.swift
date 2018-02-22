@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с таблицей
+ */
 extension RNSSearchView: UITableViewDelegate, UITableViewDataSource {
     
     /// Метод возврата количества строк в секции

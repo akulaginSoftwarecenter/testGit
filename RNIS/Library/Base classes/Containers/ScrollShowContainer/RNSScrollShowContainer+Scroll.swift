@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы со скролом
+ */
 extension RNSScrollShowContainer {
     
     func scrollToTop(_ animated: Bool = true) {

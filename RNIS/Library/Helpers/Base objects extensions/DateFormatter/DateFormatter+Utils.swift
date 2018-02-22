@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для DateFormatter
+ */
 extension DateFormatter {
     
     static var textHHmm: String {

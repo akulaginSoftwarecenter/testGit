@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для лоадеров
+ */
 extension RNSAddressViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

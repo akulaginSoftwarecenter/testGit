@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с навигацией
+ */
 extension STAlertRouter {
     
     static func showRepeatCode() {

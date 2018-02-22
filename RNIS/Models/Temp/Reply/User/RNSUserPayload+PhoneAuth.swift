@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с авторизацией по телефону
+ */
 extension RNSUserPayload {
     
     func confirmSend() {

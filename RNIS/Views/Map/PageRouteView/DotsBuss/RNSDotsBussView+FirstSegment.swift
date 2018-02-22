@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с сегментами
+ */
 extension RNSDotsBussView {
     
     var isHideFirstSegment: Bool {

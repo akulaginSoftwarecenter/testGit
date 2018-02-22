@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с данными
+ */
 extension RNSSearchView {
     
     func prepare(_ text: String?, typeSegment: TypeSearch = .address) {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с протоколом Hashable
+ */
 extension RNSBusStopTemp: Hashable {
     
     var hashValue: Int {

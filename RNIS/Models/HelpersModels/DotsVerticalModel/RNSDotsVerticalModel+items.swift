@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с данными
+ */
 extension RNSDotsVerticalModel {
     
     static func generate() -> RNSDotsVerticalModel {

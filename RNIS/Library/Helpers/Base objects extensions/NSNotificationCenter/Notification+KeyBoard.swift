@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/**
+ Расширение для Notification для клавиатуры
+ */
 extension Notification {
     
     var height: CGFloat? {

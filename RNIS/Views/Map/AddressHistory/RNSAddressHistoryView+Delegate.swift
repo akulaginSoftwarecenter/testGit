@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с таблицей
+ */
 extension RNSAddressHistoryView: UITableViewDelegate, UITableViewDataSource {
     
     /// Метод возврата количества строк в секции

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для URLRequest
+ */
 extension URLRequest {
     
     var isMail: Bool {

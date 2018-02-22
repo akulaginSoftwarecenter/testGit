@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для UserDefaults
+ */
 extension UserDefaults {
     
     open override static func setValue(_ value: Any?, forKey key: String) {

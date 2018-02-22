@@ -8,6 +8,9 @@
 
 import MapKit
 
+/**
+ Расширение для MKMapRect
+ */
 public extension MKMapRect {
     
     /// Метод инициализации
@@ -68,6 +71,9 @@ public extension MKMapRect {
     
 }
 
+/**
+ Расширение для MKMapRect
+ */
 extension MKMapRect {
     /// Метод инициализации 
     init(coordinates: [PGGeoPoint]) {
@@ -75,6 +81,9 @@ extension MKMapRect {
     }
 }
 
+/**
+ Расширение для MKMapRect
+ */
 extension MKMapRect: Equatable {
     
     public static func == (a: MKMapRect, b: MKMapRect) -> Bool {

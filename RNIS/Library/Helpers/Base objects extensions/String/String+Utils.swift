@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-extension String{
+/**
+ Расширение для String
+ */
+extension String {
     var last10:String {
         return String(suffix(10))
     }

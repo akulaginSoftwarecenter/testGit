@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с переменными
+ */
 extension RNSImageFactory {
 
     func textFontAttributes(_ selected: Bool) -> AliasDict  {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с расчетами
+ */
 extension RNSRoutePoint {
     
     func different(_ point: RNSRoutePoint?) -> Bool {

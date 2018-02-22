@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для CLLocationDistance
+ */
 extension CLLocationDistance {
     var toString: String {
         var string = ""

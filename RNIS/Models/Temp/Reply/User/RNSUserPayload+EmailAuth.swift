@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с авторизацией по почте
+ */
 extension RNSUserPayload {
     func confirmEmailSend() {
         RNSEmailConfirmResend(self, complete: { item in

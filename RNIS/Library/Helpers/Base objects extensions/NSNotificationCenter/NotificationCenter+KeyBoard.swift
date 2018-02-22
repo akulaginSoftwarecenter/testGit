@@ -10,6 +10,9 @@ import Foundation
 
 typealias NotificationBlock = (Notification) -> Void
 
+/**
+ Расширение для NotificationBlock для клавиатуры
+ */
 extension NotificationCenter {
     
     @discardableResult static func keyboardWillShow(usingBlock block: @escaping NotificationBlock) -> NSObjectProtocol {

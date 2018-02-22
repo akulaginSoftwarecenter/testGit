@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с Element
+ */
 extension Array where Element: Any {
     
     func valueAt(_ index: Int?) -> Element? {

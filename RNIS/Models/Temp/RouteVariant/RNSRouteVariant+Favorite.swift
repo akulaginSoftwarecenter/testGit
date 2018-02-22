@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с избранными
+ */
 extension RNSRouteVariant {
     
     var isFavorite: Bool {

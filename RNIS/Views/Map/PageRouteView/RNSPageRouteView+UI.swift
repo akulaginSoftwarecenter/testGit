@@ -11,8 +11,6 @@ import Foundation
 /**
  Page Route View + UI
  */
-
-
 extension RNSPageRouteView {
     
     func updateMap() {

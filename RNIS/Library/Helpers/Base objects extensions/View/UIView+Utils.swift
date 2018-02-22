@@ -9,6 +9,9 @@
 import Foundation
 import SnapKit
 
+/**
+ Расширение для UIView
+ */
 extension UIView {
     
     func addLogo() {

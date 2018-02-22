@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для маршрутов
+ */
 extension RNSMapViewController {
     
     /// Добавить маршрут на карту

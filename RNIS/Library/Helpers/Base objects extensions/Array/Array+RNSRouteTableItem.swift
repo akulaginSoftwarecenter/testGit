@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с RNSRouteTableItem
+ */
 extension Array where Element: RNSRouteTableItem {
     func prepareMove() {
         

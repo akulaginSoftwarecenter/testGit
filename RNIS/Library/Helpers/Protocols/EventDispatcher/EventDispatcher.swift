@@ -9,12 +9,18 @@
 import Foundation
 import UIKit
 
+/**
+ Протокол EventDispatcher
+ */
 protocol EventDispatcher: class
 {
     func addEventListener(_ handler: EventHandler)
     func dispatchEvent(_ event: Event)
 }
 
+/**
+ Расширение для EventDispatcher
+ */
 extension EventDispatcher
 {
     func addEventListener(_ handler: EventHandler)

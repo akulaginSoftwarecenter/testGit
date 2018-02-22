@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с интерфейсом
+ */
 extension RNSTextField {
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {

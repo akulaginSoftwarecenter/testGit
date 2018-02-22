@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для Date
+ */
 extension Date {
     
     var stringHHmm: String {

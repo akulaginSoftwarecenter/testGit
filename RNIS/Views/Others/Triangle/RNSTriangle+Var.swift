@@ -11,8 +11,6 @@ import Foundation
 /**
  Triangle + Var
  */
-
-
 extension RNSTriangle {
     
     var size: CGSize {

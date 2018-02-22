@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для NSError
+ */
 extension NSError {
     
     var isLostInet: Bool {

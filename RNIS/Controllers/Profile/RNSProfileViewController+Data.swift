@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с данными
+ */
 extension RNSProfileViewController {
     
     /// Загрузка данных профиля пользователя

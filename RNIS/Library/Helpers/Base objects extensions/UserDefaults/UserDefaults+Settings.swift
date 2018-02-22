@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение UserDefaults для настроек
+ */
 extension UserDefaults {
     
     static let kFirstZoom = "firstZoom"

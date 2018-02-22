@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы со значениями
+ */
 extension RNSDotsBussView {
     
     func prepareValues() {

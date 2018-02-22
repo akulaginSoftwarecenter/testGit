@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для данных
+ */
 extension RNSMovePopupController {
     /// Контроллер подписывается на получение событий
     func prepareObservers() {

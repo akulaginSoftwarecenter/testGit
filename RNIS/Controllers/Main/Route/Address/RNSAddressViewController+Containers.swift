@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для таблицы
+ */
 extension RNSAddressViewController {
     
     func prepareTableView() {

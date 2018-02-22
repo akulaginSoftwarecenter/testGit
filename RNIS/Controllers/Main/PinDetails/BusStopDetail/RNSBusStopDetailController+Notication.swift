@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для нотификаций
+ */
 extension RNSBusStopDetailController {
     
     func updateNotification(_ busRoute: RNSBusRouteTemp?) {

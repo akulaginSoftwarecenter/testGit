@@ -11,6 +11,9 @@ import UIKit
 private var xoAssociationKey: UInt8 = 0
 private var xoAssociationKey1: UInt8 = 1
 
+/**
+ Расширение для UIView для Тапов
+ */
 extension UIView {
     
     var handlerActionTap: EmptyBlock? {

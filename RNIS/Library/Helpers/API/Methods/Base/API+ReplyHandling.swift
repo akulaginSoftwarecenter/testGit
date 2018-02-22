@@ -25,6 +25,9 @@
 import Foundation
 import Alamofire
 
+/**
+ Расширение для работы с созданием запроса
+ */
 extension API
 {
     /**

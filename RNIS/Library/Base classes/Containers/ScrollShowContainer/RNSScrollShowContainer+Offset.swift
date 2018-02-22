@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с передвижением
+ */
 extension RNSScrollShowContainer {
     
     var overTopOffset: CGFloat {

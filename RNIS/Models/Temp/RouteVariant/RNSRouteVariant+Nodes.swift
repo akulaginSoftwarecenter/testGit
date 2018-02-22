@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с нодами
+ */
 extension RNSRouteVariant {
     
     func removeNodes() {

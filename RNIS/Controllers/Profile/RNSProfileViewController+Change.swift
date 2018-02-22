@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для изменений профиля
+ */
 extension RNSProfileViewController {
     
     var isNameNoChange: Bool {

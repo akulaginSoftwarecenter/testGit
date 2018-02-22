@@ -22,6 +22,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+/**
+ Расширение для работы с созданием запроса
+ */
 extension API {
     /**
      Creates api instance

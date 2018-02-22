@@ -11,8 +11,6 @@ import Foundation
 /**
  Light Button + UI
  */
-
-
 extension RNSLightButton {
     
     var mapView: MapView {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с RNSBusRouteTemp
+ */
 extension Array where Element: RNSBusRouteTemp {
     
     var titleWidth: CGFloat {

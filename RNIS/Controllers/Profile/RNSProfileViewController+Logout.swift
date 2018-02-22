@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с логаутом
+ */
 extension RNSProfileViewController {
     
     /// Показать алерт о выходе из аккаунта

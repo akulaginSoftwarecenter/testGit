@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с RNSRoutePoint
+ */
 extension Array where Element: RNSRoutePoint {
     
     var navel: RNSDurationItem? {

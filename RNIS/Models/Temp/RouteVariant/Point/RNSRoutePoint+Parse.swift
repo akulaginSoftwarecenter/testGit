@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с парсером
+ */
 extension RNSRoutePoint {
     func preparePoint() {
         guard let latitude = latitude,

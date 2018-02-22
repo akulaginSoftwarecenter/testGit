@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с протоколом Hashable
+ */
 extension RNSBusRouteTemp: Hashable  {
     var hashValue: Int {
         return uuid?.hashValue ?? 0

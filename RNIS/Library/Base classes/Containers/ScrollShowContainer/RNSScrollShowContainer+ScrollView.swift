@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы со скролом
+ */
 extension RNSScrollShowContainer: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

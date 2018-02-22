@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с надписями
+ */
 extension RNSRouteVariant {
     
     func prepareNavels() {

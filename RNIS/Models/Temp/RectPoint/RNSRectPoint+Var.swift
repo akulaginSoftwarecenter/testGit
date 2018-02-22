@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с переменными
+ */
 extension RNSRectPoint {
     
     var azimutMinus: Double {

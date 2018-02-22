@@ -8,9 +8,15 @@
 
 import UIKit
 
+/**
+ Расширение для UICollectionViewCell
+ */
 extension UICollectionViewCell: ReusableView, NibLoadableView
 {}
 
+/**
+ Расширение для UICollectionView
+ */
 extension UICollectionView
 {
     func register<T: UICollectionViewCell>(_ : T.Type)

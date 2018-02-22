@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для UserDefaults
+ */
 extension UserDefaults {
     
     static let kLaunchedBefore = "launchedBefore"

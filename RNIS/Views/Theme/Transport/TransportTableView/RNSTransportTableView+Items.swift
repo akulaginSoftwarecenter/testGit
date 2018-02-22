@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с данными
+ */
 extension RNSTransportTableView {
     /// Функция обновления вида элементов экрана
     func updateUI() {

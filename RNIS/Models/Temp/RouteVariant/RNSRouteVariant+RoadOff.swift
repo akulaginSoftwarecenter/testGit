@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с не активным маршрутом
+ */
 extension RNSRouteVariant {
     
     func removeRoadOff() {

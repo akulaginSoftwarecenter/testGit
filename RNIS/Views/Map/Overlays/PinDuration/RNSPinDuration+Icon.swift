@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с иконкой
+ */
 extension RNSPinDuration {
     
     var isHide: Bool {

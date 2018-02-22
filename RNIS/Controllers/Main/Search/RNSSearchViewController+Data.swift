@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для данных
+ */
 extension RNSSearchViewController {
     
     /// Получение текста поискового запроса

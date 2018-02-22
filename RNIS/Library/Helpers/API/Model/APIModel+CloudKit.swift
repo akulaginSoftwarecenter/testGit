@@ -8,6 +8,9 @@
 
 import CloudKit
 
+/**
+ Расширение для работы с облаком
+ */
 extension APIModel {
 
 //    func identifierObject() -> AnyObject {

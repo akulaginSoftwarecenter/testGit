@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с картой
+ */
 extension RNSMenuManager {
     
     static var itemMap: MenuItem {

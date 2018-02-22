@@ -9,6 +9,9 @@
 import UIKit
 import SVProgressHUD
 
+/**
+ Расширение для работы с лоадером
+ */
 extension STRouter {
     
     static func showLoader() {

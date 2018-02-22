@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с RNSCoordinateModel
+ */
 extension Array where Element: RNSCoordinateModel {
     
     func updateIcons() {

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Расширение для UIView для Layer
+ */
 extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {

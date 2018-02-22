@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Расширение для работы с контейнер
+ */
 extension STRouter {
     
     static func boardContainer(_ viewController: UIViewController?) -> UIViewController? {

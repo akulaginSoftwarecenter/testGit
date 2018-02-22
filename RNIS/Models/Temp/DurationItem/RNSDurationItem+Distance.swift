@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с дистанцией
+ */
 extension RNSDurationItem {
     
     func updateDistance() {

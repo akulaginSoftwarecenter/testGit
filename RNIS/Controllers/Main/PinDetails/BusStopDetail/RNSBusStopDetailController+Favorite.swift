@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для избранных
+ */
 extension RNSBusStopDetailController {
     
     /// Добавление автобусного маршрута в избранное

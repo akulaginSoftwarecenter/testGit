@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с парсером
+ */
 extension RNSRouteVariant {
     func prepareHashValue() {
         var hashValue = Int(0)

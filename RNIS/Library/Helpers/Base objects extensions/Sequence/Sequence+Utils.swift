@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для Sequence
+ */
 extension Sequence where Iterator.Element: Hashable {
     var unique: [Iterator.Element] {
         var alreadyAdded = Set<Iterator.Element>()

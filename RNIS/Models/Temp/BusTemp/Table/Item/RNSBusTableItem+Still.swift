@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с ячейкой таблицы "Еще"
+ */
 extension RNSBusTableItem {
     
     var stillText: String? {

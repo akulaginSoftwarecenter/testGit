@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для контейнера
+ */
 extension RNSMoveMapViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

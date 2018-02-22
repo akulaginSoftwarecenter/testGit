@@ -11,7 +11,6 @@ import Foundation
 /**
  Triangle + Draw
  */
-
 extension RNSTriangle {
     
     func drawLeft(_ path: CGMutablePath) {

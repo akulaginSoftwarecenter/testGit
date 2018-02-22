@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Расширение для UIFont
+ */
 extension UIFont {
     
     static var cffazm8:UIFont {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с рисованием
+ */
 extension RNSImageFactory {
     static func imageBusAt(_ text: String, selected: Bool, width: Float, isRight: Bool) -> UIImage {
         let inImage = bus_icon

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с рангами
+ */
 extension RNSScrollShowContainer {
     
     var rangeNav: RNSRangeScroll {

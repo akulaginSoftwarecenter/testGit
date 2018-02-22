@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с протоколом Hashable
+ */
 extension RNSRouteVariant: Hashable {
     
     static func ==(lhs: RNSRouteVariant, rhs: RNSRouteVariant) -> Bool {

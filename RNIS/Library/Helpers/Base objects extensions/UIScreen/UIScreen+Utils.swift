@@ -9,8 +9,11 @@
 import Foundation
 import UIKit
 
-extension UIScreen
-{
+/**
+ Расширение для UIScreen
+ */
+extension UIScreen {
+    
     static var width:CGFloat {
         return bounds().width
     }

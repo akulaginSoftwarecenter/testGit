@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для подготовки со стартовыми данными
+ */
 extension RNSRouteTable {
     
     func prepareEdge() {

@@ -145,16 +145,25 @@ extension Parser {
     }
 }
 
+/**
+ Расширение для работы с облаком
+ */
 protocol ParsableObject {
     func valueForAPI() -> AnyObject
 }
 
+/**
+ Расширение для работы с облаком
+ */
 extension NSObject: ParsableObject {
     @objc func valueForAPI() -> AnyObject {
         return self
     }
 }
 
+/**
+ Расширение для работы с облаком
+ */
 extension APIModel {
     override func valueForAPI() -> AnyObject {
         return self.fullObject()
@@ -162,6 +171,9 @@ extension APIModel {
 
 }
 
+/**
+ Расширение для работы с облаком
+ */
 extension Array: ParsableObject {
     func valueForAPI() -> AnyObject {
         var valueForAPI = [AnyObject]()
@@ -175,6 +187,9 @@ extension Array: ParsableObject {
 
 }
 
+/**
+ Расширение для работы с облаком
+ */
 extension Dictionary: ParsableObject {
     func valueForAPI() -> AnyObject {
         var valueForAPI = [Key: AnyObject](minimumCapacity: self.count)

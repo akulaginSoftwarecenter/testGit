@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для Dictionary
+ */
 extension Dictionary {
     
     mutating func merge(with dictionary: Dictionary?) {

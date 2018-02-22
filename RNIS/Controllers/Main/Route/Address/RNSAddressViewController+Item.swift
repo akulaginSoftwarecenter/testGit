@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для данных
+ */
 extension RNSAddressViewController {
     
     func prepareItem() {

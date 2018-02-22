@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для PGPolyline
+ */
 extension PGPolyline {
     func addOnMap() {
         RNSMapManager.addOverlay(self)

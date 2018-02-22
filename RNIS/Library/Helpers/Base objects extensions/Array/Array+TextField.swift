@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с RNSTextField
+ */
 extension Array where Element : RNSTextField {
     
     var checkValidFields: String? {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для CGContext
+ */
 extension CGContext {
     
     func drawEllipse(_ rect: CGRect, color: CGColor) {
