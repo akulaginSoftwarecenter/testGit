@@ -14,9 +14,11 @@ import RealmSwift
  */
 class RNSBusDetailWayView: BaseViewWithXIBInit {
     
+    /// переменная таблицы
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
     
+    /// массив моделей автобусов
     var items: [RNSBusTableItem]?
     
     var tableModel: RNSBusTableModel? {

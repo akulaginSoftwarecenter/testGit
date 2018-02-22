@@ -73,6 +73,7 @@ class RNSPostBusList: RNSRequest {
         parseError(model)
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ model: AliasReply?) {
         guard let item = model?.errors?.first else {
             return

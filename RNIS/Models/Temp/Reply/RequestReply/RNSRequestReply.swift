@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс парсера Request
+ */
 class RNSRequestReply<T1: Mappable,T2: Mappable>: RNISMappableBase {
     var payload: T1?
     var errors: [RNSRequestError<T2>]?

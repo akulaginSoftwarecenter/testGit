@@ -56,6 +56,7 @@ class RNSPostMobilePageGet: RNSRequest {
         parseError(model)
     }
     
+    /// Метод расчета ошибки
     func parseError(_ model: AliasReply?) {
         guard let error = model?.errors?.first?.textError else {
             return

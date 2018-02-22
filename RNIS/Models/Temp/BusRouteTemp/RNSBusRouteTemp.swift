@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс автобусаного маршрута
+ */
 class RNSBusRouteTemp: RNISMappableBase {
     
     var uuid: String?

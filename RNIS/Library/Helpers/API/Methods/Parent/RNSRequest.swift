@@ -48,6 +48,7 @@ class RNSRequest: AlamofireAPI {
         return mutableRequest
     }
     
+    /// Убрать индикацию загрузки
     func removeLoader() {
         STRouter.removeLoader()
     }

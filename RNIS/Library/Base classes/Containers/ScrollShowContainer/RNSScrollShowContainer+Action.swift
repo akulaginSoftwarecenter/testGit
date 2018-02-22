@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы тапами по кнопкам
+ */
 extension RNSScrollShowContainer {
     
     @IBAction func actionCross(_ sender: Any) {

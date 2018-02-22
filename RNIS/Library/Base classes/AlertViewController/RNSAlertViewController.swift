@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс алерта
+ */
 class RNSAlertViewController: UIViewController, FadePresent, FadeDismiss {
 
     @IBOutlet weak var messageLabel: UILabel!

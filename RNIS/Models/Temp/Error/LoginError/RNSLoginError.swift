@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс ошибки
+ */
 class RNSLoginError: RNISMappableBase {
     var login: [String]?
     var password: [String]?

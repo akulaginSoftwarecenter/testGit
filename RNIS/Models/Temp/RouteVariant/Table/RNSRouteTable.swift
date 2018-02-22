@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс таблицы маршрута
+ */
 class RNSRouteTable: NSObject {
     
     var items = [RNSRouteTableItem]()

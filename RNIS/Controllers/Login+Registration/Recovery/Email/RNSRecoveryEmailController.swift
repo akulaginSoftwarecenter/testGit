@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс контроллеера восстановления пароля по почте
+ */
 class RNSRecoveryEmailController: RNSEmailContainerController {
 
     override var typeTitle: TypeTitle {

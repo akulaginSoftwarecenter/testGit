@@ -8,8 +8,12 @@
 
 import Foundation
 
+/**
+ Расширение для работы с клоужерами
+ */
 extension RNSMapParentController {
     
+    /// Подписка на клоужеры
     func prepareHandlers() {
         RNSMapManager.handlerUpdateLoader = { [weak self] in
             self?.updateLoader()

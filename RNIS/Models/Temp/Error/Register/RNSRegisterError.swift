@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс ошибки регистрации
+ */
 class RNSRegisterError: RNISMappableBase, RNSTextErrorProtocol {
     var mobile_user_name: [String]?
     var mobile_user_phone: [String]?

@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс избранного массива
+ */
 class RNSFavoritePathCreatePayload: RNISMappableBase {
     
     var uuid: String?

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс контроллеера ввода кода подтверждения почты
+ */
 class RNSCodeEmailViewController: RNSCoverViewController,ContainerProtocol,UITextFieldDelegate {
     /// Поле кода подтверждения
     @IBOutlet weak var codeField: RNSTextField!

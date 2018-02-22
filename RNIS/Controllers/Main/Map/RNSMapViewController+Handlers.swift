@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с клоужерами
+ */
 extension RNSMapViewController {
     
     /// Настройка блоков обработки некоторых событий

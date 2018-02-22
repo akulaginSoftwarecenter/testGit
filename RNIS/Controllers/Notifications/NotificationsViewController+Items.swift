@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы  моделям данных
+ */
 extension NotificationsViewController {
     
     /// Загрузка данных
@@ -30,6 +33,7 @@ extension NotificationsViewController {
         tableView.reloadData()
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ error: NSError?) {
         if error?.isLostInet ?? false {
             prepareLostInet()
@@ -38,24 +42,29 @@ extension NotificationsViewController {
         }
     }
     
+    /// Метод подготовки заголовка
     func prepareTextTop(_ text: String?) {
         loaderWay.prepareTextTop(view,text: text, frame: rectError)
         clearItems()
     }
     
+    /// Метод очистки таблицы
     func clearItems() {
         prepareItems(nil)
     }
-     
+    
+    /// Убрать индикацию загрузки
     func removeLoader() {
         STRouter.removeLoader()
     }
     
+    /// Переменная области ошибки
     var rectError: CGRect {
         let top = CGFloat(82)
         return CGRect(x: 0, y: top, width: UIScreen.width, height: UIScreen.height - top)
     }
     
+    /// Метод появления ошибки потерянного интернета
     func prepareLostInet() {
         loaderWay.showCenterLostInet(self.view, frame: rectError)
         prepareItems(nil)

@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс ошибки запросов
+ */
 class RNSRequestError<T: Mappable>: RNISMappableBase {
     var data: T?
     var text: String?

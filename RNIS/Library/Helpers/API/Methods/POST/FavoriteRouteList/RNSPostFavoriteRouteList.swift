@@ -28,6 +28,7 @@ class RNSPostFavoriteRouteList: RNSPostRequestMobileToken {
         parseError(model, source: source)
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ model: AliasReply?, source: AnyObject) {
         guard let item = model?.errors?.first else {
             return

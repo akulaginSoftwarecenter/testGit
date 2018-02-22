@@ -26,6 +26,7 @@ extension StrelkaViewController: UIWebViewDelegate {
         removeLoader()
     }
     
+    /// Убрать индикацию загрузки
     func removeLoader() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         loaderView.remove()

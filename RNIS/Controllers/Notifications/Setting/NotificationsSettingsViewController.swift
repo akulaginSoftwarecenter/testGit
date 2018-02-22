@@ -17,9 +17,9 @@ class NotificationsSettingsViewController: UIViewController {
     var handlerNotification: ((Int) -> ())?
     /// Модель уведомления
     var item: RNSNotificationModel?
-    
+    /// Константа максимального значения
     let maxValue = 100
-    
+    /// Переменная пикера
     @IBOutlet weak var notificationPicker: UIPickerView!
     
     /// Метод инициализации класса

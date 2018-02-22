@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы c таблицей
+ */
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     /// Метод возврата количества строк в секции

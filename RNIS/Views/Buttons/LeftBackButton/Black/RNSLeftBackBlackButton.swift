@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс серой кнопки "назад"
+ */
 class RNSLeftBackBlackButton: RNSLeftBackButton {
     override var imageShevron: UIImage {
         return #imageLiteral(resourceName: "chevronLeftBlack")

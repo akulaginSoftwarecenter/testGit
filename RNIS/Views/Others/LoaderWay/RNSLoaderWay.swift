@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Класс Лоадера
+ */
 class RNSLoaderWay: RNSParentLoaderView {
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -38,6 +40,7 @@ class RNSLoaderWay: RNSParentLoaderView {
         showCenterError(view, frame: frame, text: errorNetwork)
     }
     
+    /// Метод подготовки заголовка
     func prepareTextTop(_ view: UIView?, text: String? = nil, frame: CGRect? = nil) {
         showInViewBounds(view, frame: frame)
         prepareTopLabel()

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс контейнера с фоновой картинкой
+ */
 class STImageContainer: RNSParentContainer {
     
     override func prepareView() {

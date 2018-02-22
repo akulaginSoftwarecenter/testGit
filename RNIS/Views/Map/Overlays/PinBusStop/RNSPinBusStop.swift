@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSPinBusStop: RNSPinItem {
     
+    /// Подписка на клоужеры
     override func prepareHandlers() {
         super.prepareHandlers()
         

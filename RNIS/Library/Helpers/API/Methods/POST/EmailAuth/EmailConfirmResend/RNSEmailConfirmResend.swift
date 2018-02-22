@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос подтверждения почты переотправка
+ */
 class RNSEmailConfirmResend: RNSParentAuthPost {
     override func parseReply(_ model: AliasPostRegister?) {
         if  model?.success ?? false {

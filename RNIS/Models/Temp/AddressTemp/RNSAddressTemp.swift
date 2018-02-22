@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс адреса
+ */
 class RNSAddressTemp: RNISMappableBase, RNSTextItem {
     
     var uuid: String?

@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Класс базового контейнера
+ */
 class RNSParentContainer: UIViewController {
 
     var containerVC:UIViewController?

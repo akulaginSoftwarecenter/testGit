@@ -9,7 +9,9 @@
 import UIKit
 
 import ObjectMapper
-
+/**
+ Класс новости
+ */
 class RNSNewsTemp: RNISMappableBase {
     
     var uuid: String?

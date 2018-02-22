@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс ячейки новостей
+ */
 class RNSNewsCell: RNSBaseTableCell {
 
     @IBOutlet weak var label: UILabel!

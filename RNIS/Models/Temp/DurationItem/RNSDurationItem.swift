@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс длительности в маршруте
+ */
 class RNSDurationItem: NSObject {
     var point: PGGeoPoint?
     var durationMinute: Int?

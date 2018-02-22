@@ -9,8 +9,12 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс модели загрузки маршрута
+ */
 class RNSActionRoutingPayload<T: Mappable>: RNISMappableBase {
 
+    /// массив моделей
     var items: [T]?
     public override func mapping(map: Map) {
         items <- map["items"]

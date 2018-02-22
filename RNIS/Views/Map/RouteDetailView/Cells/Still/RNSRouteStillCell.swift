@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ ячейка отображения "Еще" маршрута
+ */
 class RNSRouteStillCell: RNSRouteParentCell {
 
     @IBOutlet weak var label: UILabel!

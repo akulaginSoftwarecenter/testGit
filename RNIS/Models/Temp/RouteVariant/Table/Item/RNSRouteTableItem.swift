@@ -12,6 +12,9 @@ enum TypeTableItem {
     case stop, still, bus, total
 }
 
+/**
+ Класс таблицы маршрута
+ */
 class RNSRouteTableItem {
     
     var edge: Bool = false

@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс автобуса
+ */
 class RNSForecastBus: RNISMappableBase {
  
     var route_number: String?

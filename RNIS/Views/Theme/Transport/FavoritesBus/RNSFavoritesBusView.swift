@@ -13,6 +13,7 @@ import UIKit
  */
 struct TableSection {
     let title: String?
+    /// массив моделей маршрутов
     var items: [RNSFavoriteStopPoint]?
 }
 
@@ -20,6 +21,7 @@ class RNSFavoritesBusView: BaseViewWithXIBInit {
     
     /// Экземпляр класса вида загрузки
     lazy var loaderView = LoaderView()
+    /// Представление индикации загрузки
     lazy var loaderWay = RNSLoaderWay()
     /// Создание секций таблицы
     var sections = [TableSection]()

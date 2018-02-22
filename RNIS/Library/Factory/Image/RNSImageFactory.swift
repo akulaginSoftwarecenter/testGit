@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс фабрики для иконок
+ */
 class RNSImageFactory: NSObject {
     
     typealias AliasDict = [NSAttributedStringKey: Any]

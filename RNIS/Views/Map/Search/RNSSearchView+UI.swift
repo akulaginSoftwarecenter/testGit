@@ -23,6 +23,7 @@ extension RNSSearchView {
         handlerLoader?(true)
     }
     
+    /// Убрать индикацию загрузки
     func removeLoader(){
         handlerLoader?(false)
     }

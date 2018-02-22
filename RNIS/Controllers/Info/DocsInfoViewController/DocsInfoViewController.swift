@@ -18,6 +18,7 @@ class DocsInfoViewController: UIViewController {
     
     /// Надпись заголовка контроллера
     @IBOutlet weak var titleLabel: UILabel!
+    /// Представление индикации загрузки
     lazy var loaderWay = RNSLoaderWay()
     /// Представление для отображения текста раздела
     //@IBOutlet weak var textView: UITextView!

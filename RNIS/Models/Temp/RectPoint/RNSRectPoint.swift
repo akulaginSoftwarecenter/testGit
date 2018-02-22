@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс области для точки
+ */
 class RNSRectPoint {
     
     var pointStart: PGGeoPoint?

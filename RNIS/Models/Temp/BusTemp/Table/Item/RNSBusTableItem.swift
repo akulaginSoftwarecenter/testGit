@@ -16,6 +16,9 @@ enum TypeEdgeBusItem {
     case start, none, end
 }
 
+/**
+ Класс автобуса в таблице
+ */
 class RNSBusTableItem {
     
     var typeEdge: TypeEdgeBusItem = .none

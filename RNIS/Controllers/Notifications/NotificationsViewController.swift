@@ -11,12 +11,14 @@ import UIKit
 /**
  NotificationsViewController
  */
-
 class NotificationsViewController: UIViewController {
     
+    /// массив моделей нотификаций
     var items: [RNSNotificationModel]?
+    /// Представление индикации загрузки
     lazy var loaderWay = RNSLoaderWay()
 
+    /// переменная таблицы
     @IBOutlet weak var tableView: UITableView!
     
     /// Метод инициализации класса
@@ -33,6 +35,7 @@ class NotificationsViewController: UIViewController {
         loadItems()
     }
     
+    /// Подписка на клоужеры
     func prepareHandlers() {
         RNSMenuManager.handlerUpdateNotification = { [weak self] in
             self?.loadItems()

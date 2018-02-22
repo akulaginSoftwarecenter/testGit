@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс парсера Payload
+ */
 class RNSRoutingPayload: RNISMappableBase {
     
     var distance: CGFloat?

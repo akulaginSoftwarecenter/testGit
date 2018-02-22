@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс парсера Payload
+ */
 class RNSMobilePagePayload: RNISMappableBase {
     var uuid: String?
     var key: String?

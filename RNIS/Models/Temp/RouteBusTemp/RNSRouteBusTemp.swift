@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс маршрута автобуса
+ */
 class RNSRouteBusTemp: RNISMappableBase {
     var route_number: String?
     var time: Int?

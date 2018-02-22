@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс кнопки алерта
+ */
 class RNSTwoBtnAlert: BaseViewWithXIBInit {
     
     @IBOutlet weak var leftBtn: UIButton!

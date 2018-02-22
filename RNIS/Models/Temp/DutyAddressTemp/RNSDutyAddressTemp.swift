@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс адреса
+ */
 class RNSDutyAddressTemp: RNISMappableBase {
     var address: String?
     var latitude: Double?

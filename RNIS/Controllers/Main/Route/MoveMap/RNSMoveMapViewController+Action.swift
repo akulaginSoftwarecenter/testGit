@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы тапами по кнопкам
+ */
 extension RNSMoveMapViewController {
     
     @IBAction func actionBack(_ sender: Any) {

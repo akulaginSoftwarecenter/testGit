@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос сброса пароля 
+ */
 class RNSEmailResetPass: RNSParentAuthPost {
     override func parseReply(_ model: AliasPostRegister?) {
         if  model?.success ?? false {

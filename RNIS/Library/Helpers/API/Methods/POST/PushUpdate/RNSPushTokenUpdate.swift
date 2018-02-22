@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос отправки пуш токена
+*/
 class RNSPushTokenUpdate: RNSPostRequestMobileToken {
     override var payload: AliasDictionary {
         guard let token = UserDefaults.pushToken else {

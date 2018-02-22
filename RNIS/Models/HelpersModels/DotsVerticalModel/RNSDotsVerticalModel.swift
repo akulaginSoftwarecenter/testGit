@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс вертикальной точки
+ */
 class RNSDotsVerticalModel: NSObject {
     var items = [RNSVerticalTableItem]()
     var duration = String()

@@ -38,6 +38,7 @@ class RNSRouteStopCell: RNSRouteParentCell {
         text1Label.text = item?.text1
     }
     
+    /// Подписка на клоужеры
     func prepareHandlers() {
         item?.handlerUpdateText1 = { [weak self] in
             self?.updateText1()

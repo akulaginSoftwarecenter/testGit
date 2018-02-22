@@ -11,7 +11,10 @@ import UIKit
 /// Табличная ячейка для меню
 class MenuTableViewCell: RNSBaseTableCell {
     
+    /// переменная заголовка
     @IBOutlet weak var cellTitle: UILabel!
+    
+    /// переменная изображения
     @IBOutlet weak var cellImageView: UIImageView!
 
     /// Обновление ячейки

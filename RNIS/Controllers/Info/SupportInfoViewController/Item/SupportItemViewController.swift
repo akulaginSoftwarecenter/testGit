@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Контроллер для отправки сообщения в поддержку
+ */
 class SupportItemViewController: UIViewController {
     
     var enterViewController: SupportInfoViewController?

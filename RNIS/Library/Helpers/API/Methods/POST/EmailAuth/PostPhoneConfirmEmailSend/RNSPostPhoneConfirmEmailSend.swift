@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос подтверждения почты для телефона
+ */
 class RNSPostPhoneConfirmEmailSend: RNSPostConfirmSend {
     override var subject: String {
         return "com.rnis.mobile.action.mobile_user.email.confirm.send"

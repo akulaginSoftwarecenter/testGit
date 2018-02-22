@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс отображения браузера для новости
+ */
 class RNSNewsWebView: BaseViewWithXIBInit, UIWebViewDelegate  {
 
     var item: String? {

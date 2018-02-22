@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Класс базовый для таблицы
+ */
 class RNSRegisterTableView: UITableView {
 
     @IBInspectable var registerCellIdentifier: String {

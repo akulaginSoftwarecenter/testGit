@@ -13,8 +13,10 @@ import UIKit
  */
 class MainInfoViewController: UIViewController {
 
+    /// переменная таблицы
     @IBOutlet weak var tableView: UITableView!
     
+    /// переменная хранения константы "main_to_contacts"
     let main_to_contacts = "main_to_contacts"
     
     /// Список заголовков разделов

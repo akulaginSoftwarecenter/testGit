@@ -9,6 +9,9 @@
 import UIKit
 import RealmSwift
 
+/**
+ Класс таблицы остановки
+ */
 class RNSTableStopsModel {
     
     var item: RNSBus?

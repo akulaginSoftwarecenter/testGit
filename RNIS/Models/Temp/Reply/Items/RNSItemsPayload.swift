@@ -9,8 +9,12 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс парсера Payload
+ */
 class RNSItemsPayload: RNISMappableBase {
     
+    /// массив моделей
     var items: [AliasDictionary]?
     
     public override func mapping(map: Map) {

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс базовой ячейки таблицы
+ */
 class RNSBaseTableCell: UITableViewCell {
 
     override func awakeFromNib() {

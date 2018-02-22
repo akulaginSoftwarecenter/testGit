@@ -28,12 +28,13 @@ class ContactsInfoViewController: UIViewController {
 
     /// Переменная отображения таблицы
     @IBOutlet weak var tableView: UITableView!
+    /// Представление индикации загрузки
     lazy var loaderWay = RNSLoaderWay()
     
     /// Тип контактов
     var type: RNSContactInfoType = .contact
     
-    /// Массив моделей
+    /// Массив моделей контактов
     var items: [RNSContactItem]?
     
     /// Метод инициализации класса

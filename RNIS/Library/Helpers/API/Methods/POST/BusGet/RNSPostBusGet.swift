@@ -46,6 +46,7 @@ class RNSPostBusGet: RNSPostRequestMobileToken {
         parseError(model)
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ model: AliasReply?) {
         failure?()
     }

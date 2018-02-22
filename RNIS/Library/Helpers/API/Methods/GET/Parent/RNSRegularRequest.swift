@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос Регулярный
+ */
 class RNSRegularRequest: AlamofireAPI {
     override func prepareURLRequest(_ request: URLRequest) -> URLRequest{
         var mutableRequest = super.prepareURLRequest(request)

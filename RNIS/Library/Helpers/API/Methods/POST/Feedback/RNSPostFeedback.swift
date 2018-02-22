@@ -53,6 +53,7 @@ class RNSPostFeedback: RNSRequest {
         parseError(model)
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ model: AliasReply?) {
         guard let error = model?.errors?.first?.textError else {
             return

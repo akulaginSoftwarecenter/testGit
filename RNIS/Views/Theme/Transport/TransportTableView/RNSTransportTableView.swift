@@ -21,6 +21,7 @@ class RNSTransportTableView: BaseViewWithXIBInit {
     @IBOutlet var tableView: RNSRegisterTableView!
     /// Создание экземпляра вида загрузки
     lazy var loaderView = LoaderView()
+    /// Представление индикации загрузки
     lazy var loaderWay = RNSLoaderWay()
     
     /// Инициализация таблицы

@@ -9,6 +9,9 @@
 import Foundation
 import RealmSwift
 
+/**
+ Класс остановки в базе
+ */
 class RNSBusStop: RNSCoordinateModel {
     
     @objc dynamic var name: String = ""

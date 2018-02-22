@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Класс поле ввода текста в контроллера отправки письма в поддержку
+ */
 class RNSSupportTextView: BaseViewWithXIBInit {
     @IBOutlet weak var titleLabel: UILabel!
     

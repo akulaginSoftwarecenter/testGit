@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс вертикальной точки
+ */
 class RNSVerticalTableItem: NSObject {
     var type: TypePoint? = .bus
     var title = ""

@@ -11,7 +11,6 @@ import Foundation
 /**
  RNSParoleViewController extention
  */
-
 extension RNSParoleViewController {
     
     /// Подготовка представлений

@@ -11,8 +11,10 @@ import UIKit
 /// Табличная ячейка для отображения информационного раздела
 class MainInfoTableViewCell: RNSBaseTableCell {
 
+    /// переменная заголовка
     @IBOutlet weak var title: UILabel!
 
+    /// Метод обновления заголовка
     func updateCell(title: String) {
         self.title.text = title
     }

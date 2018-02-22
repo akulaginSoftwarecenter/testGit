@@ -13,6 +13,9 @@ enum TypePoint: String {
     case run, bus
 }
 
+/**
+ Класс точки маршрута
+ */
 class RNSRoutePoint: RNISMappableBase {
     var latitude: Double?
     var longitude: Double?

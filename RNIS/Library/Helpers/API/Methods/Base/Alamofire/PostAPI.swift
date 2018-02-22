@@ -8,6 +8,9 @@
 
 import Alamofire
 
+/**
+ Класс для обработки запротки Post запросов
+ */
 class PostAPI: AlamofireAPI {
     override var method: Alamofire.HTTPMethod {
         return .post

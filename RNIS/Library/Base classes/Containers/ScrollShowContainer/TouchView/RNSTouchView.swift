@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс тап вью
+ */
 class RNSTouchView: UIView {
 
     var rect: CGRect?

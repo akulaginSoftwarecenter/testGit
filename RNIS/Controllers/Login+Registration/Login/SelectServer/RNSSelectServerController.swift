@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс контроллеера выбора сервера
+ */
 class RNSSelectServerController: UIAlertController {
 
     /// Создание контроллера
@@ -20,6 +23,7 @@ class RNSSelectServerController: UIAlertController {
         return vc
     }
     
+    /// массив данных серверов
     var items: [String] {
         var items = RNISAuthManager.servers
         if let current = UserDefaults.serverApi,

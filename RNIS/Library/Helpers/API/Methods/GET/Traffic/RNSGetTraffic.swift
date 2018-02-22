@@ -10,6 +10,9 @@ import UIKit
 import ObjectMapper
 import Alamofire
 
+/**
+ Запрос получения трафика
+ */
 class RNSGetTraffic: AlamofireAPI {
     
     var minCoord: PGGeoPoint?

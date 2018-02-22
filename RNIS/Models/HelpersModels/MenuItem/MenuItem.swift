@@ -8,10 +8,18 @@
 
 import Foundation
 
+/**
+ Класс ячейки бокового меню
+ */
 class MenuItem {
     
+    /// корневой навигатор
     var vc: BaseNavigationController?
+    
+    /// Заголовок
     var title: String?
+    
+    /// Изображение
     var image: UIImage?
     
     /// Метод инициализации 
@@ -23,15 +31,18 @@ class MenuItem {
         self.image = image
     }
     
+    /// Метод появления
     func show() {
         updateIfNeed()
         RNSMenuManager.showItem(self)
     }
     
+    /// Метод перехода к корневому контроллеру
     func popToRoot(completion: EmptyBlock? = nil) {
         vc?.popToRoot(completion: completion)
     }
     
+    /// Метод обновления контроллеров если нужно
     func updateIfNeed() {
         if title == kStrelka {
             RNSMenuManager.handlerStrelkaUpdate?()
@@ -46,6 +57,7 @@ class MenuItem {
         updateIfExitsMoveMap()
     }
     
+    /// Метод обновления контроллера движения
     func updateIfExitsMoveMap() {
         vc?.viewControllers.forEach{
             if let map = $0 as? RNSMoveMapViewController {

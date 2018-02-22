@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс остановки автобуса
+ */
 class RNSFavoriteStopPoint: RNISMappableBase, Hashable {
     
     var hashValue: Int {

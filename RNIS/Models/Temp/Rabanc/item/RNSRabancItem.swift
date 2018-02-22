@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс таблицы остановки
+ */
 class RNSRabancItem: RNISMappableBase {
 
     var latitude: Double?

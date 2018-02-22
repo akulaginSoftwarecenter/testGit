@@ -58,6 +58,7 @@ class RNSBusDetailController: RNSParentDetailPinController {
     /// Представление, отображающее схему маршрута автобуса
     @IBOutlet weak var viewWay: RNSBusDetailWayView!
     
+    /// Представление индикации загрузки
     lazy var loaderView = RNSLoaderWay()
     
     var canLoadViewWay = false

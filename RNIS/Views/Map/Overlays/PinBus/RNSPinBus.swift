@@ -29,6 +29,7 @@ class RNSPinBus: RNSPinItem {
         setBitmap(image, xOffset: xOffset, yOffset: 0.0, isPlain: false, sizeInMeters: 15)
     }
     
+    /// Подписка на клоужеры
     override func prepareHandlers() {
         super.prepareHandlers()
         item?.handlerUpdateLocaton = { [weak self] in

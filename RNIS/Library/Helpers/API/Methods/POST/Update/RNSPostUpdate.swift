@@ -42,6 +42,7 @@ class RNSPostUpdate: RNSPostRequestMobileToken {
         parseError(model)
     }
     
+    /// Метод расчета ошибки
     func parseError(_ model: AliasPostRegister?) {
         guard let error = model?.errors?.first?.textError else {
             return

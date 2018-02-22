@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс трафика 
+ */
 class RNSTrafficData: Mappable {
     
     var b: Float?

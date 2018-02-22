@@ -52,6 +52,7 @@ class RNSPostLogin: RNSRequest {
         parseError(model)
     }
     
+    /// Метод расчета ошибки
     func parseError(_ model: AliasModel?) {
         guard let error = model?.errors?.first,
             var text = error.text else {

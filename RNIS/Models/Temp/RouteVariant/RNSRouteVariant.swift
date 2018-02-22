@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс варианта маршрута
+ */
 class RNSRouteVariant: RNISMappableBase {
     
     var points: [RNSRoutePoint]?

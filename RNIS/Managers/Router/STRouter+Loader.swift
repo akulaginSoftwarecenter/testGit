@@ -20,6 +20,7 @@ extension STRouter {
         SVProgressHUD.show()
     }
     
+    /// Убрать индикацию загрузки
     static func removeLoader() {
         SVProgressHUD.dismiss()
     }

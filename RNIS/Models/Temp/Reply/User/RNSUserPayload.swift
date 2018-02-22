@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс парсера Payload
+ */
 class RNSUserPayload: RNISMappableBase {
     
     var is_phone_activated: Int?

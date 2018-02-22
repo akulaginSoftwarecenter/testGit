@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс серой кнопки "назад"
+ */
 class RNSGrayBackMainButton: RNSGrayBackButton {
 
     @IBAction override func action(_ sender: Any) {

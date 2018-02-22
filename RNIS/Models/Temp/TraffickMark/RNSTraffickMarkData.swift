@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс трафика
+ */
 class RNSTraffickMarkData: Mappable {
     
     var cityNam: String?

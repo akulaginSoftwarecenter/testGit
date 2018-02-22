@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс контроллера регистрации по почте
+ */
 class RNSRegistrationEmailController: RNSEmailContainerController {
 
     override var typeTitle: TypeTitle {

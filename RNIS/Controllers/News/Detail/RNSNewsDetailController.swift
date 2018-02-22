@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Контроллер для отображения подробной информации новости
+ */
 class RNSNewsDetailController: UIViewController {
     
     var item: RNSNewsTemp?

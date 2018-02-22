@@ -15,7 +15,7 @@ class StrelkaViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     let host = "https://strelkacard.ru/"
-    
+    /// Представление индикации загрузки
     lazy var loaderView: LoaderView = {
         let view = LoaderView()
         view.isUserInteractionEnabled = false

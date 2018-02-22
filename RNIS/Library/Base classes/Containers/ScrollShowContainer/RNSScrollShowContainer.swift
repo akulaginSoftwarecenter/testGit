@@ -9,6 +9,9 @@
 import UIKit
 import SnapKit
 
+/**
+ Класс попап контейнера
+ */
 class RNSScrollShowContainer: UIViewController {
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!

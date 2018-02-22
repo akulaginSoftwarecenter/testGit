@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+/**
+ Расширение для работы тапами по кнопкам
+ */
 extension RNSMapViewController {
     
     /// Событие нажатия на кнопку демонстрации маршрута

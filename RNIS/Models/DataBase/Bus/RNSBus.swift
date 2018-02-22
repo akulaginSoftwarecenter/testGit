@@ -16,7 +16,9 @@ enum TypeWing {
         return self == .right
     }
 }
-
+/**
+ Класс автобуса в базе
+ */
 class RNSBus: RNSCoordinateModel {
     
     @objc dynamic var minute: Int = 0

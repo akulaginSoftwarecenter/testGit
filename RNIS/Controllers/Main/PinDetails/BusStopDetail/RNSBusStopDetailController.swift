@@ -49,7 +49,10 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
     /// Кнопка "сообщить об ошибке"
     @IBOutlet weak var errorReportButton: RNSBlackButton!
     
+    /// Представление индикации загрузки
     lazy var loaderView = RNSLoaderWay()
+    
+    /// Представление индикации загрузки
     lazy var loaderViewTwo = LoaderView()
     
     /// Начальная высота контроллера
@@ -65,6 +68,7 @@ class RNSBusStopDetailController: RNSParentDetailPinController {
         prepareHandlers()
     }
     
+    /// Подписка на клоужеры
     func prepareHandlers() {
         RNSMapManager.handlerStopDetailUpdate = {[weak self] in
             self?.loadItems(true)

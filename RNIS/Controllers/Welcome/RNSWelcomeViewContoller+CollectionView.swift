@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы коллекцией
+ */
 extension RNSWelcomeViewContoller: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count

@@ -26,6 +26,9 @@ struct WelcomeItem {
     var desc: String?
 }
 
+/**
+ Класс контроллеера приветствия
+ */
 class RNSWelcomeViewContoller: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -39,6 +42,7 @@ class RNSWelcomeViewContoller: UIViewController {
         return collectionView.indexPathForItem(at: collectionView.contentOffset)
     }
     
+    /// массив данных WelcomeItem
     lazy var items: [WelcomeItem] = {
         return [WelcomeItem(nil,title: "Будьте в курсе где сейчас ваш автобус и сколько его ждать", startImage: #imageLiteral(resourceName: "welc0Back")),
                 WelcomeItem(#imageLiteral(resourceName: "welc1Back"),title: "Поиск маршрутов", desc: "Стройте маршруты на общественном транспорте до нужного адреса в Подмосковье", main: #imageLiteral(resourceName: "welc1")),

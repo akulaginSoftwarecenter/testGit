@@ -40,6 +40,7 @@ extension RNSAddressViewController {
         loaderView.showInView(view)
     }
     
+    /// Убрать индикацию загрузки
     func removeLoader() {
         loaderView.remove()
     }

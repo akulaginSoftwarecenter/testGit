@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс ячейка меню пункта "Избранное"
+ */
 class MenuItemFavorite: MenuItem {
     
     /// Метод инициализации 
@@ -15,12 +18,14 @@ class MenuItemFavorite: MenuItem {
         self.init(favoriteTitle, TransportViewController.initialRed, #imageLiteral(resourceName: "menuStarIcon"))
     }
     
+    /// Метод появления
     override func show() {
         RNSMoveManager.checkExitMapToRoot {
             super.show()
         }
     }
     
+    /// Метод обновления
     override func updateIfNeed() {
         RNSPageRouteManager.handlerUpdateFavorite?()
         RNSMenuManager.handlerUpdateFavoriteBuss?()

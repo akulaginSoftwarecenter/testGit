@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения адресов
+ */
 class RNSGetSearchAddress: RNSGetGeoCode {
     
     override var path: String {

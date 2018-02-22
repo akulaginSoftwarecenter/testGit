@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос подтверждения почты
+ */
 class RNSPostLoginEmail: RNSPostRequestMobileToken {
     override var method: Alamofire.HTTPMethod {
         return .post
@@ -58,6 +61,7 @@ class RNSPostLoginEmail: RNSPostRequestMobileToken {
         }
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ model: AliasModel?) {
         guard let error = model?.errors?.first,
             var text = error.text else {

@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+/**
+ Расширение для работы тапами по кнопкам
+ */
 extension RNSProfileViewController {
     
     /// Событие нажатия на кнопку смены номера телефона

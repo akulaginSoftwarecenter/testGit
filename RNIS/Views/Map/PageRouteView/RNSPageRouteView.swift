@@ -16,6 +16,7 @@ class RNSPageRouteView: BaseViewWithXIBInit {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    /// массив моделей маршрутов
     var items: [RNSRouteVariant]? {
         return RNSPageRouteManager.items
     }
@@ -41,6 +42,7 @@ class RNSPageRouteView: BaseViewWithXIBInit {
         prepareHandlers()
     }
     
+    /// Подписка на клоужеры
     func prepareHandlers() {
         RNSPageRouteManager.handlerUpdateCurrent = { [weak self] in
             self?.prepareCurrentItem()

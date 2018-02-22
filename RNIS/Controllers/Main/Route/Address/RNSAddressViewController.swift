@@ -35,6 +35,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         return vc
     }
     
+    /// Представление индикации загрузки
     lazy var loaderView = LoaderView.interactionEnabled
     
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {

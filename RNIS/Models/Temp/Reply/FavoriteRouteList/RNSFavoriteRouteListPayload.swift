@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс избранных маршрутов автобусов
+ */
 class RNSFavoriteRouteListPayload: RNISMappableBase {
     var stop_points: [RNSFavoriteStopPoint]?
     

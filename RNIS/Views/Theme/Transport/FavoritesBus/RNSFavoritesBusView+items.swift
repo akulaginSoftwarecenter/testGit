@@ -34,6 +34,7 @@ extension RNSFavoritesBusView {
         }
     }
     
+    /// Метод появления ошибки потерянного интернета
     func prepareLostInet() {
         loaderWay.showCenterLostInet(self)
         clearItems()
@@ -44,6 +45,7 @@ extension RNSFavoritesBusView {
         clearItems()
     }
     
+    /// Метод очистки таблицы
     func clearItems() {
         prepareSections(nil)
     }
@@ -53,6 +55,7 @@ extension RNSFavoritesBusView {
         loaderWay.remove()
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ error: NSError?) {
         if error?.isLostInet ?? false {
             prepareLostInet()
@@ -61,6 +64,7 @@ extension RNSFavoritesBusView {
         }
     }
     
+    /// Метод подготовки заголовка
     func prepareTextTop(_ text: String?) {
         loaderWay.prepareTextTop(self,text: text)
         clearItems()

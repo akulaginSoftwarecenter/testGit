@@ -69,6 +69,7 @@ class RNSPostStopPointList: RNSRequest {
         parseError(model)
     }
     
+    /// Метод расчета ошибки
     func parseError(_ model: AliasReply?) {
         guard let item = model?.errors?.first else {
             return

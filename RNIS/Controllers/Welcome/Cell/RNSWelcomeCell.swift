@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Класс ячейки приветствия
+ */
 class RNSWelcomeCell: UICollectionViewCell {
     
     let endConstraint = CGFloat(54)

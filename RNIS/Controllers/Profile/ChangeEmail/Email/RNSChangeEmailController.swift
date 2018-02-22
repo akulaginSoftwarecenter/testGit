@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Контроллер изменения почты
+ */
 class RNSChangeEmailController: RNSEmailContainerController {
     override var typeTitle: TypeTitle {
         return .changeEmail

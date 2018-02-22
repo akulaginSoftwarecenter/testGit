@@ -29,6 +29,7 @@ class RNSPostUserGet: RNSPostRequestMobileToken {
         parseError(model, source: source)
     }
     
+    /// Метод расчета ошибки
     func parseError(_ model: AliasPostRegister?, source: AnyObject) {
         guard let item = model?.errors?.first else {
             return

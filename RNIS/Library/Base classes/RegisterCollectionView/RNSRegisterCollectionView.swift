@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс базовый для коллекции
+ */
 class RNSRegisterCollectionView: UICollectionView {
 
     @IBInspectable var registerCellIdentifier: String {

@@ -13,15 +13,19 @@ import UIKit
  */
 class NewsViewController: UIViewController {
     
+    /// переменная таблицы
     @IBOutlet weak var tableView: UITableView!
+    
+    /// массив моделей новостей
     var items: [RNSNewsTemp]?
     
+    /// лоадер
     lazy var loaderView: LoaderView = {
         let view = LoaderView()
         view.isUserInteractionEnabled = false
         return view
     }()
-    
+    /// Представление индикации загрузки
     lazy var loaderWay = RNSLoaderWay()
     
     /// Метод инициализации класса
@@ -32,6 +36,7 @@ class NewsViewController: UIViewController {
         prepareHandlers()
     }
     
+    /// Подписка на клоужеры
     func prepareHandlers() {
         RNSMenuManager.handlerNewsUpdate = { [weak self] in
             self?.loadItems()
@@ -67,6 +72,7 @@ class NewsViewController: UIViewController {
         removeLoader()
     }
     
+    /// Удаление лоадера
     func removeLoader() {
         loaderView.remove()
     }

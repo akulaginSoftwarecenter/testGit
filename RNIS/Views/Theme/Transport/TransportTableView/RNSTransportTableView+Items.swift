@@ -35,6 +35,7 @@ extension RNSTransportTableView {
         tableView.reloadData()
     }
     
+    /// Метод появления ошибки потерянного интернета
     func prepareLostInet() {
         loaderWay.showCenterLostInet(self)
         clearItems()
@@ -45,6 +46,7 @@ extension RNSTransportTableView {
         clearItems()
     }
     
+    /// Метод очистки таблицы
     func clearItems() {
         prepareItems(nil)
     }
@@ -54,6 +56,7 @@ extension RNSTransportTableView {
         loaderWay.remove()
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ error: NSError?) {
         if error?.isLostInet ?? false {
             prepareLostInet()
@@ -62,6 +65,7 @@ extension RNSTransportTableView {
         }
     }
     
+    /// Метод подготовки заголовка
     func prepareTextTop(_ text: String?) {
         loaderWay.prepareTextTop(self,text: text)
         clearItems()

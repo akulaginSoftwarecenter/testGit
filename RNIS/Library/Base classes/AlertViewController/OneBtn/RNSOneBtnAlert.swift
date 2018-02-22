@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс кнопки алерта
+ */
 class RNSOneBtnAlert: UIButton {
   
     /// Метод инициализации 

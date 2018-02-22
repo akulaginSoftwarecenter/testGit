@@ -8,7 +8,12 @@
 
 import UIKit
 
+/**
+ Класс поиска
+ */
 class RNSSearchView: BaseViewWithXIBInit {
+    
+    /// массив моделей резуьтатов поиска
     var items: [RNSTextItem]?
     
     /// Поисковый запрос на сервер
@@ -24,6 +29,7 @@ class RNSSearchView: BaseViewWithXIBInit {
     var handlerError: AliasStringBlock?
     var handlerShowItem: ((RNSTextItem?) -> ())?
     
+    /// переменная таблицы
     @IBOutlet weak var tableView: UITableView!
     
     override func awakeFromNib() {

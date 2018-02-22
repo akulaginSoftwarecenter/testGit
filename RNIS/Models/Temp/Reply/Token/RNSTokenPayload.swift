@@ -10,6 +10,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс парсера Payload
+ */
 class RNSTokenPayload: RNISMappableBase {
     
     var token: String?

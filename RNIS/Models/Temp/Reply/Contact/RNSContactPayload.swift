@@ -9,8 +9,12 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс контакта
+ */
 class RNSContactPayload: RNISMappableBase {
     
+    /// массив моделей
     var items: [RNSContactItem]?
     
     public override func mapping(map: Map) {

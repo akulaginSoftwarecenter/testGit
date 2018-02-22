@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс родительского контроллера для отображения информации по пинам
+ */
 class RNSParentDetailPinController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс модели нотификации
+ */
 class RNSNotificationModel: RNISMappableBase {
     var notification_time: Int?
     var route_number: String?

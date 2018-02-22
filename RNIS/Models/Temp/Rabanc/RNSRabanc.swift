@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс таблицы остановки
+ */
 class RNSRabanc: RNISMappableBase {
 
     var points: [RNSRabancItem]?

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс скролл контейнера
+ */
 class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollViewDelegate {
     
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {

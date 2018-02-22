@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с лоадером
+ */
 extension RNSMapParentController {
     
     /// Показать индикацию загрузки

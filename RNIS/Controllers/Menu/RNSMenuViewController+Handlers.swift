@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы с клоужерами
+ */
 extension RNSMenuViewController {
 
     /// Настройка обработчиков событий меню

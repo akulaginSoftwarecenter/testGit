@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Контроллер таблицы нотификаций
+ */
 class NotificationTableViewCell: RNSBaseTableCell {
    
     @IBOutlet weak var autoNumberLabel: UILabel!

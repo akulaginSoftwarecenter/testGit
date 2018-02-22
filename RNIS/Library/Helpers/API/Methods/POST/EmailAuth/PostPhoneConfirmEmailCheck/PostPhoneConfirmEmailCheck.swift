@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Запрос подтверждения почты
+ */
 class PostEmailConfirmCheck: RNSPostConfirmCheck {
     override var headers: AliasDictionary {
         return super.headers.merged(with: Utils.mobileToken)

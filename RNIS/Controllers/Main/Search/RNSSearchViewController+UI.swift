@@ -18,7 +18,8 @@ extension RNSSearchViewController {
     func clearTable() {
         searchView.clearTable()
     }
-       
+    
+    /// Подписка на клоужеры
     func prepareHandlers() {
         searchView.handlerLoader = {[weak self] value in
             if value {
@@ -43,6 +44,7 @@ extension RNSSearchViewController {
         loaderView.showInView(self.view)
     }
     
+    /// Убрать индикацию загрузки
     func removeLoader() {
         loaderView.remove()
     }

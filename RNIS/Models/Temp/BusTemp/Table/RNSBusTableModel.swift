@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Класс таблицы автобуса
+ */
 class RNSBusTableModel {
     
     var stop_points: [RNSBusStopTemp]? {

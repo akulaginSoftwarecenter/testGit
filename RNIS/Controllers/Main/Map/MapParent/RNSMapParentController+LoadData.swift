@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Расширение для работы моделями данный
+ */
 extension RNSMapParentController {
     
     /// Обновление положения автобусов на карте

@@ -9,7 +9,12 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс парсера Payload
+ */
 class RNSStopPointRoutesPayload: RNISMappableBase {
+    
+    /// массив моделей
     var items: [RNSBusRouteTemp]?
     
     public override func mapping(map: Map) {

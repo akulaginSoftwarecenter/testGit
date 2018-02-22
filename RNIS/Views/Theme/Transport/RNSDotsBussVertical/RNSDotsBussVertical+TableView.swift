@@ -11,7 +11,6 @@ import Foundation
 /**
  Класс создание таблицы отображения движения ТС
  */
-
 extension RNSDotsBussVertical: UITableViewDelegate, UITableViewDataSource {
     
     /// Указание количества строк таблицы по секциям

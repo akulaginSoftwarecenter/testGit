@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс контроллера ввода почты
+ */
 class RNSEmailViewController: RNSCoverViewController, ContainerProtocol {
     /// Поле номера телефона
     @IBOutlet weak var emailField: RNSEmailField!

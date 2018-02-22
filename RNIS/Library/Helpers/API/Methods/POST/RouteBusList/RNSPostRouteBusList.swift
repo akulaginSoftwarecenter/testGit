@@ -58,6 +58,7 @@ class RNSPostRouteBusList: RNSRequest {
         STAlertRouter.showOk("Для данного маршрута автобусы не найдены")
     }
     
+    /// Метод расчета отображения ошибки
     func parseError(_ model: AliasReply?) {
         guard let item = model?.errors?.first else {
             return

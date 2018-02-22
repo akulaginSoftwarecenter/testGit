@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Класс контейнера
+ */
 class RNSRedContainer: RNSParentContainer {
     
     override func prepareView() {

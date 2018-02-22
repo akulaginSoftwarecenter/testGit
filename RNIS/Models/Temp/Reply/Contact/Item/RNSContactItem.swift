@@ -9,11 +9,17 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Перечисление типов контакта
+ */
 enum RNSContactItemType: String {
     case phone = "phone"
     case email = "email"
 }
 
+/**
+ Класс контакта
+ */
 class RNSContactItem: RNISMappableBase {
     var uuid: String?
     var type: String?

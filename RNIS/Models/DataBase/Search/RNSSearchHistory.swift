@@ -8,7 +8,9 @@
 
 import UIKit
 import RealmSwift
-
+/**
+ Класс истории поиска
+ */
 class RNSSearchHistory: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var latitude = 0.0

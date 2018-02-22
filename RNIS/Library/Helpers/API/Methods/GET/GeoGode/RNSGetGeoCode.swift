@@ -9,6 +9,9 @@
 import UIKit
 import Alamofire
 
+/**
+ Запрос получения адресов
+ */
 class RNSGetGeoCode: AlamofireAPI {
     
     var point: PGGeoPoint?

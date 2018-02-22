@@ -9,6 +9,9 @@
 import UIKit
 import ObjectMapper
 
+/**
+ Класс остановки автобуса
+ */
 class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
    
     var forecast: [RNSRouteBusTemp]?
