@@ -12,6 +12,7 @@ import UIKit
  Класс длительности в маршруте
  */
 class RNSDurationItem: NSObject {
+    /// точка инициализации
     var point: PGGeoPoint?
     var durationMinute: Int?
     var durationDefault: Int?

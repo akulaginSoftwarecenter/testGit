@@ -30,6 +30,7 @@ class RNSChangeCodeEmailController: RNSCodeMailContainerController {
         containerViewController?.email = item?.new_email
     }
     
+    /// тип заголовка "Регистрация" "Восстановление пароля" "Сменить номер" "Сменить email"
     override var typeTitle: TypeTitle {
         return .changeEmail
     }

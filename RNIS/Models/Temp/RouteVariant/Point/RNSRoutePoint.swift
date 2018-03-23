@@ -17,12 +17,15 @@ enum TypePoint: String {
  Класс точки маршрута
  */
 class RNSRoutePoint: RNISMappableBase {
+    /// переменная широта сущности
     var latitude: Double?
+    /// переменная долгота сущности
     var longitude: Double?
     var time: Int?
     var typePoint: String?
     var stop_point: RNSBusStopTemp?
     var route: RNSBusRouteTemp?
+    /// переменная имени сущности
     var name: String?
     
     /// Метод парсинга
@@ -40,6 +43,7 @@ class RNSRoutePoint: RNISMappableBase {
         prepareHashValue()
     }
     
+    /// точка инициализации
     var point: PGGeoPoint?
     var type: TypePoint?
     var doneMove = false

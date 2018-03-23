@@ -16,10 +16,12 @@ class RNSUserPayload: RNISMappableBase {
     
     var is_phone_activated: Int?
     var phone: String?
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     var phone_activation_code: String?
     var email_activation_code: String?
     var new_phone_activation_code: String?
+    /// переменная имени сущности
     var name: String?
     var token: String?
     var mobile_token: String?

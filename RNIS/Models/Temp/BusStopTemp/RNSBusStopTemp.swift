@@ -33,10 +33,12 @@ class RNSBusStopTemp: RNSNameMapable, RNSTextItem {
         self.nameDistance = self.distance_to_user?.toString
     }
     
+    /// точка инициализации
     var point: PGGeoPoint?
     var nameDistance: String?
     var distance_to_user: CLLocationDistance?
     
+    /// функция расчет высоты в зависимости от ширины
     func heightAtWidth(_ width: CGFloat) -> CGFloat {
         return kSearchViewCellDefaultHeight
     }

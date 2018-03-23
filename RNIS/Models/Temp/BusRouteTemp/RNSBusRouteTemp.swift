@@ -14,6 +14,7 @@ import ObjectMapper
  */
 class RNSBusRouteTemp: RNISMappableBase {
     
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     var number: String?
     var in_favorites: Bool?
@@ -34,6 +35,7 @@ class RNSBusRouteTemp: RNISMappableBase {
     
     var doneMove = false
     var title: String?
+    /// точка инициализации
     var point: PGGeoPoint?
     var handlerRemove: EmptyBlock?
 }

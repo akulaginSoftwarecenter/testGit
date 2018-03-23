@@ -48,6 +48,7 @@ class RNSFavoriteStopPoint: RNISMappableBase, Hashable {
         return 45 + count * 49
     }
     
+    /// точка инициализации
     var point: PGGeoPoint? {
         guard let latitude = stop_point_latitude,
             let longitude = stop_point_longitude else {

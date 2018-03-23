@@ -14,9 +14,13 @@ import ObjectMapper
  */
 class RNSNameMapable: RNISMappableBase {
 
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
+    /// переменная имени сущности
     var name: String?
+    /// переменная широта сущности
     var latitude: Double?
+    /// переменная долгота сущности
     var longitude: Double?
     
     /// Метод парсинга

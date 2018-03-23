@@ -14,6 +14,7 @@ import Alamofire
  */
 class RNSGetGeoCode: AlamofireAPI {
     
+    /// точка инициализации
     var point: PGGeoPoint?
     
     /// Метод инициализации 

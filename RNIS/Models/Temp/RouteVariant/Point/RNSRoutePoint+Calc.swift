@@ -63,6 +63,7 @@ extension RNSRoutePoint {
         return RNSVerticalTableItem(self)
     }
     
+    // переменная дистанция до текущей позиции
     var distanceToCurrent: CLLocationDistance? {
         return point?.distanceToCurrent
     }

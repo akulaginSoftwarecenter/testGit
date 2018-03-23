@@ -12,6 +12,7 @@ import UIKit
 class RNSRouteBusCell: RNSRouteParentCell {
 
     @IBOutlet weak var line: UIView!
+    /// UILabel для отображения заголовка
     @IBOutlet weak var label: UILabel!
     
     override func prepareUI() {

@@ -12,6 +12,7 @@ import UIKit
  Горизонтальная линия из точек двух точек
  */
 class RNSDotRun: PGPolyline {
+    /// точка инициализации
     var point: PGGeoPoint?
     
     /// Создание представления

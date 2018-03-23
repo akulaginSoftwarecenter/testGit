@@ -27,6 +27,7 @@ class RNSRecoveryCodeController: RNSCodeContainerController {
         return STRouter.imageContainer(container)
     }
   
+    /// тип заголовка "Регистрация" "Восстановление пароля" "Сменить номер" "Сменить email"
     override var typeTitle: TypeTitle {
         return .recovery
     }

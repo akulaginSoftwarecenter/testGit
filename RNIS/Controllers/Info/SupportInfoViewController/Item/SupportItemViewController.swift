@@ -17,6 +17,7 @@ class SupportItemViewController: UIViewController {
     var type: RNSPetitionType = .feedback
     var titleName: String?
     var nameText: String?
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

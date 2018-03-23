@@ -16,7 +16,9 @@ import RealmSwift
 class RNSCoordinateModel: Object {
     
     @objc dynamic var uuid = ""
+    /// переменная широта сущности
     @objc dynamic var latitude = 0.0
+    /// переменная долгота сущности
     @objc dynamic var longitude = 0.0
     
     override static func primaryKey() -> String? {

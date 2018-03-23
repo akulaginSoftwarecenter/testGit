@@ -12,6 +12,7 @@ import Foundation
  Расширение для работы с парсером
  */
 extension RNSRoutePoint {
+    /// функция парсинга и подготовки точки point
     func preparePoint() {
         guard let latitude = latitude,
             let longitude = longitude else {

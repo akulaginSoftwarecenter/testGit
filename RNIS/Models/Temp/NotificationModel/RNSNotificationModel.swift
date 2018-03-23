@@ -17,6 +17,7 @@ class RNSNotificationModel: RNISMappableBase {
     var route_number: String?
     var route_uuid: String?
     var stop_point: RNSBusStopTemp?
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     
     /// Метод парсинга

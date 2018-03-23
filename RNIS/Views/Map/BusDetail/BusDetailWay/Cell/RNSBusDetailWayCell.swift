@@ -30,6 +30,7 @@ class RNSBusDetailWayCell: RNSBaseTableCell {
     
     @IBOutlet weak var whiteTopLine: UIView!
     @IBOutlet weak var whiteDownLine: UIView!
+    /// UILabel для отображения заголовка
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var arrowImage: UIImageView!
     

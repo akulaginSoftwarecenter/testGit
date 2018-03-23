@@ -59,6 +59,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     /// Пин, который будет установлен на карте для демонстрации положения адреса на карте
     var pin: RNSPinAddress?
     
+    /// точка инициализации
     var point: PGGeoPoint?
     
     /// Кнопка "показать меня на карте"

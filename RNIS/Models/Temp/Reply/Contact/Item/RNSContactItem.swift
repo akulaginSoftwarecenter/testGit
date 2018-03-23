@@ -21,8 +21,10 @@ enum RNSContactItemType: String {
  Класс контакта
  */
 class RNSContactItem: RNISMappableBase {
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     var type: String?
+    /// переменная имени сущности
     var name: String?
     var value: String?
     var value_type: String?

@@ -21,7 +21,8 @@ extension UserDefaults {
     static let kUuid = "uuid"
     static let kEmailField = "EmailField"
     static let kPushToken = "PushToken"
-        
+    
+    /// переменная уникальный идентификатор сущности
     static var uuid: String? {
         return standard.string(forKey: kUuid)
     }

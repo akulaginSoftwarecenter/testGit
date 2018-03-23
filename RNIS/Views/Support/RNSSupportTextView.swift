@@ -11,6 +11,7 @@ import UIKit
  Класс поле ввода текста в контроллера отправки письма в поддержку
  */
 class RNSSupportTextView: BaseViewWithXIBInit {
+    /// UILabel для отображения заголовка
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var textView: UITextView!

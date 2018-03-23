@@ -14,7 +14,9 @@ import ObjectMapper
  */
 class RNSDutyAddressTemp: RNISMappableBase {
     var address: String?
+    /// переменная широта сущности
     var latitude: Double?
+    /// переменная долгота сущности
     var longitude: Double?
     
     /// Метод парсинга
@@ -31,6 +33,7 @@ class RNSDutyAddressTemp: RNISMappableBase {
         self.longitude = point?.longitude
     }
     
+    /// точка инициализации
     var point: PGGeoPoint? {
         guard let latitude = latitude,
             let longitude = longitude else {

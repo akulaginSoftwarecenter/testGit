@@ -31,6 +31,7 @@ extension RNSDateSelectView {
         }
     }
     
+    /// функция исчезновения вью
     func hidden() {
         isHidden = true
     }

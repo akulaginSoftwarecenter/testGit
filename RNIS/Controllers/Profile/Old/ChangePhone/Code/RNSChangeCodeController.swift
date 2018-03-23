@@ -31,6 +31,7 @@ class RNSChangeCodeController: RNSCodeContainerController {
         containerViewController?.phone = item?.new_phone
     }
     
+    /// тип заголовка "Регистрация" "Восстановление пароля" "Сменить номер" "Сменить email"
     override var typeTitle: TypeTitle {
         return .change
     }

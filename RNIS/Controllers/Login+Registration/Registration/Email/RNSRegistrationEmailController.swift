@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSRegistrationEmailController: RNSEmailContainerController {
 
+    /// тип заголовка "Регистрация" "Восстановление пароля" "Сменить номер" "Сменить email"
     override var typeTitle: TypeTitle {
         return .registration
     }

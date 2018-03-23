@@ -45,11 +45,12 @@ extension CLLocationCoordinate2D {
     var radianLatitude: Double {
         return latitude.radian
     }
-    
+    /// переменная широта в километрах
     var latitudeKM: Double {
         return 111.143 - 0.562 * cos(2 * radianLatitude)
     }
     
+    /// переменная долгота в километрах
     var longitudeKM: Double {
         return 111.321 * cos(radianLatitude) - 0.094 * cos(3 * radianLatitude)
     }

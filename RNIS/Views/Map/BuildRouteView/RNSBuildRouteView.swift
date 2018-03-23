@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSBuildRouteView: BaseViewWithXIBInit {
     
+    /// точка инициализации
     var point: PGGeoPoint?
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     

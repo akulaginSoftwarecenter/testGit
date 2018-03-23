@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSChangePhoneController: RNSPhoneContainerController {
     
+    /// тип заголовка "Регистрация" "Восстановление пароля" "Сменить номер" "Сменить email"
     override var typeTitle: TypeTitle {
         return .change
     }

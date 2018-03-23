@@ -17,7 +17,9 @@ class RNSRouteVariant: RNISMappableBase {
     var points: [RNSRoutePoint]?
     var pointsData: [RNSRoutePoint]?
     var dict: AliasDictionary?
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
+    /// переменная имени сущности
     var name: String?
     
     /// Метод парсинга

@@ -12,6 +12,8 @@ import UIKit
  Контроллер изменения почты
  */
 class RNSChangeEmailController: RNSEmailContainerController {
+    
+    /// тип заголовка "Регистрация" "Восстановление пароля" "Сменить номер" "Сменить email"
     override var typeTitle: TypeTitle {
         return .changeEmail
     }

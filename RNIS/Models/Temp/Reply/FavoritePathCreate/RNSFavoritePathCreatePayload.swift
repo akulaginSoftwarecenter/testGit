@@ -14,6 +14,7 @@ import ObjectMapper
  */
 class RNSFavoritePathCreatePayload: RNISMappableBase {
     
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     
     /// Метод парсинга

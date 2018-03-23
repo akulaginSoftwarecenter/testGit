@@ -32,6 +32,7 @@ extension PGGeoPoint {
         return self.location.distance(from: location)
     }
     
+    // переменная дистанция до текущей позиции
     var distanceToCurrent: CLLocationDistance {
         return distanceTo(RNSLocationManager.point)
     }

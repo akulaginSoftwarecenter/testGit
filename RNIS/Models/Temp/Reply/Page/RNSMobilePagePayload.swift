@@ -13,6 +13,7 @@ import ObjectMapper
  Класс парсера Payload
  */
 class RNSMobilePagePayload: RNISMappableBase {
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     var key: String?
     var text: String?

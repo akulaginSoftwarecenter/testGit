@@ -14,6 +14,7 @@ import ObjectMapper
  */
 class RNSBusTemp: RNISMappableBase, RNSTextItem {
 
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     var carrier_name: String?
     var check_taker: String?
@@ -41,6 +42,7 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem {
         unit_phone <- map["unit_phone"]
     }
     
+    /// переменная имени сущности
     var name: String? {
         get {
             return route_number
@@ -50,6 +52,7 @@ class RNSBusTemp: RNISMappableBase, RNSTextItem {
         }
     }
     
+    /// функция расчет высоты в зависимости от ширины
     func heightAtWidth(_ width: CGFloat) -> CGFloat {
         return kSearchViewCellDefaultHeight
     }

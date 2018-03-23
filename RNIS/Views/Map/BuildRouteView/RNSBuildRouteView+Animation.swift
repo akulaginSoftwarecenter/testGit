@@ -18,6 +18,7 @@ extension RNSBuildRouteView {
         animateBottom(true)
     }
     
+    /// функция появления вью
     func show() {
         mapHideOldPopopovers()
         guard let view = STRouter.rootView else {

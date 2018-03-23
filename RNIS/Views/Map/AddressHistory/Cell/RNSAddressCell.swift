@@ -19,6 +19,6 @@ class RNSAddressCell: RNSBaseTableCell {
             titleLabel?.text = item?.title
         }
     }
-    
+    /// UILabel для отображения заголовка
     @IBOutlet weak var titleLabel: UILabel!
 }

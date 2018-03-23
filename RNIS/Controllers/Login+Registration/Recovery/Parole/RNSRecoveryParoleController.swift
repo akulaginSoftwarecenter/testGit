@@ -22,6 +22,7 @@ class RNSRecoveryParoleController: RNSParoleContainerController {
         return vc
     }
  
+    /// тип заголовка "Регистрация" "Восстановление пароля" "Сменить номер" "Сменить email"
     override var typeTitle: TypeTitle {
         return .recovery
     }

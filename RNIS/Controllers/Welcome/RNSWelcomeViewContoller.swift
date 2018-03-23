@@ -35,6 +35,7 @@ class RNSWelcomeViewContoller: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var labelDesc: UILabel!
+    /// UILabel для отображения заголовка
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var titleButton: UILabel!
     

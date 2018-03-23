@@ -14,9 +14,12 @@ import ObjectMapper
  */
 class RNSRabancItem: RNISMappableBase {
 
+    /// переменная широта сущности
     var latitude: Double?
+    /// переменная долгота сущности
     var longitude: Double?
     
+    /// точка инициализации
     var point: PGGeoPoint?
     
     /// Метод парсинга
@@ -26,6 +29,7 @@ class RNSRabancItem: RNISMappableBase {
         preparePoint()
     }
     
+    /// функция парсинга и подготовки точки point
     func preparePoint() {
         guard let latitude = latitude,
             let longitude = longitude else {

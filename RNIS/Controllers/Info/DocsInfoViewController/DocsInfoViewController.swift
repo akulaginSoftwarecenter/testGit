@@ -21,7 +21,6 @@ class DocsInfoViewController: UIViewController {
     /// Представление индикации загрузки
     lazy var loaderWay = RNSLoaderWay()
     /// Представление для отображения текста раздела
-    //@IBOutlet weak var textView: UITextView!
     var type: RNSDocsType = .userGuide
     
     /// Метод инициализации класса

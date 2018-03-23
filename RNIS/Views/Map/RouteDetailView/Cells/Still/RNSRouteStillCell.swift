@@ -12,6 +12,7 @@ import UIKit
  */
 class RNSRouteStillCell: RNSRouteParentCell {
 
+    /// UILabel для отображения заголовка
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageArrow: UIImageView!
     @IBOutlet weak var line: UIView!

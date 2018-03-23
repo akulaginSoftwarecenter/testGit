@@ -14,6 +14,7 @@ import ObjectMapper
  */
 class RNSNewsTemp: RNISMappableBase {
     
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
     var title: String?
     var image: String?

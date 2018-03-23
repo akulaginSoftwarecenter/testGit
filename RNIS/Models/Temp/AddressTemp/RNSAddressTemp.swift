@@ -14,12 +14,19 @@ import ObjectMapper
  */
 class RNSAddressTemp: RNISMappableBase, RNSTextItem {
     
+    /// переменная уникальный идентификатор сущности
     var uuid: String?
+    /// переменная имени сущности
     var name: String?
+    /// переменная широта сущности
     var latitude: Double?
+    /// переменная долгота сущности
     var longitude: Double?
+    /// массив координат в строках
     var coord: [String]?
+    /// тип сущности
     var type: Int?
+    /// точка инициализации
     var point: PGGeoPoint?
     
     /// Метод парсинга
@@ -33,10 +40,12 @@ class RNSAddressTemp: RNISMappableBase, RNSTextItem {
         preparePoint()
     }
     
+    /// переменная проверки что это дом
     var isHouse: Bool {
         return (type ?? -1) == 3
     }
     
+    /// функция парсинга и подготовки точки point
     func preparePoint() {
         guard let latitude = latitude,
             let longitude = longitude else {
@@ -45,10 +54,12 @@ class RNSAddressTemp: RNISMappableBase, RNSTextItem {
         point = PGGeoPoint(latitude: latitude, longitude: longitude)
     }
     
+    // переменная дистанция до текущей позиции
     var distanceToCurrent: Double? {
         return point?.distanceToCurrent
     }
     
+    /// функция расчет высоты в зависимости от ширины
     func heightAtWidth(_ width: CGFloat) -> CGFloat {
         let defaultHeight = kSearchViewCellDefaultHeight
         let left = kSearchViewCellDistanceRight + kSearchViewCellDistanceLeft

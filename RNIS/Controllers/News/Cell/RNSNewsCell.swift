@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSNewsCell: RNSBaseTableCell {
 
+    /// UILabel для отображения заголовка
     @IBOutlet weak var label: UILabel!
     
     var item: RNSNewsTemp? {

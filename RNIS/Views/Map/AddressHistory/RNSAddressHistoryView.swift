@@ -30,14 +30,17 @@ class RNSAddressHistoryView: BaseViewWithXIBInit {
         heightTableView?.constant = tableView.tableViewContentSize
     }
     
+    /// функция появления вью
     func show() {
         prepareVisible(false)
     }
     
+    /// функция исчезновения вью
     func hidden() {
         prepareVisible(true)
     }
     
+    /// функция исчезновения или появления вью
     func prepareVisible(_ isHidden: Bool) {
         self.isHidden = isHidden
         heightTableView?.isActive = !isHidden
