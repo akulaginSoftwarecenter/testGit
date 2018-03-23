@@ -180,29 +180,17 @@
 		832BEEFD1FA6F55800C9A0A7 /* RNSNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BEEFC1FA6F55800C9A0A7 /* RNSNewsCell.swift */; };
 		832E4B6E1F2EC39D00A4AD77 /* RNSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B6D1F2EC39D00A4AD77 /* RNSLoginViewController.swift */; };
 		832E4B721F2EC48600A4AD77 /* RNSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */; };
-		832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B711F2EC48600A4AD77 /* RNSLoginView.swift */; };
 		832E4B751F2EC49400A4AD77 /* RNSLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B741F2EC49400A4AD77 /* RNSLoginView.xib */; };
-		832E4B761F2EC49400A4AD77 /* RNSLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B741F2EC49400A4AD77 /* RNSLoginView.xib */; };
 		832E4B791F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B781F2EC69200A4AD77 /* RNSBlackButton.swift */; };
-		832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B781F2EC69200A4AD77 /* RNSBlackButton.swift */; };
 		832E4B7C1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */; };
-		832E4B7D1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7B1F2EC6AC00A4AD77 /* RNSBlackButton.xib */; };
 		832E4B7F1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */; };
-		832E4B801F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832E4B7E1F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard */; };
 		832E4B861F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B851F2ECDCC00A4AD77 /* RNSPhoneField.swift */; };
-		832E4B871F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B851F2ECDCC00A4AD77 /* RNSPhoneField.swift */; };
 		832E4B8A1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B891F2ECE8C00A4AD77 /* RNSTextField.swift */; };
-		832E4B8B1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B891F2ECE8C00A4AD77 /* RNSTextField.swift */; };
 		832E4B8F1F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B8E1F2ED03400A4AD77 /* UIFont+Utils.swift */; };
-		832E4B901F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B8E1F2ED03400A4AD77 /* UIFont+Utils.swift */; };
 		832E4B931F2ED53000A4AD77 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B921F2ED53000A4AD77 /* String+Utils.swift */; };
-		832E4B941F2ED53000A4AD77 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B921F2ED53000A4AD77 /* String+Utils.swift */; };
 		832E4B991F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */; };
-		832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B971F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift */; };
 		832E4B9B1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */; };
-		832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B981F2ED57C00A4AD77 /* InputFieldsValidator.swift */; };
 		832E4B9F1F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
-		832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E4B9E1F2ED5D200A4AD77 /* UITextField+Utils.swift */; };
 		8334DE651F7A3F6C005DE3DD /* RNSMoveBusManager+Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334DE641F7A3F6C005DE3DD /* RNSMoveBusManager+Operation.swift */; };
 		833609781F73758000B42333 /* RNSMovePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609771F73758000B42333 /* RNSMovePopupController.swift */; };
 		8336097A1F7378BF00B42333 /* RNSMovePopupController+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833609791F7378BF00B42333 /* RNSMovePopupController+Observe.swift */; };
@@ -311,27 +299,16 @@
 		8369890A1F316B8E003E4D73 /* RNSParoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989091F316B8E003E4D73 /* RNSParoleViewController.swift */; };
 		8369890C1F316B9C003E4D73 /* RNSParoleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8369890B1F316B9C003E4D73 /* RNSParoleViewController.storyboard */; };
 		8369890F1F316F9C003E4D73 /* RNSParoleViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */; };
-		836989101F316F9C003E4D73 /* RNSParoleViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369890E1F316F9C003E4D73 /* RNSParoleViewController+UI.swift */; };
 		836989121F317190003E4D73 /* RNSParoleContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989111F317190003E4D73 /* RNSParoleContainerController.swift */; };
-		836989131F317190003E4D73 /* RNSParoleContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989111F317190003E4D73 /* RNSParoleContainerController.swift */; };
 		836989171F317368003E4D73 /* RNSRecoveryParoleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989161F317368003E4D73 /* RNSRecoveryParoleController.swift */; };
-		836989181F317368003E4D73 /* RNSRecoveryParoleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989161F317368003E4D73 /* RNSRecoveryParoleController.swift */; };
 		8369891A1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989191F31737F003E4D73 /* RNSRegistrationParoleController.swift */; };
-		8369891B1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989191F31737F003E4D73 /* RNSRegistrationParoleController.swift */; };
 		8369891F1F317AB5003E4D73 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */; };
-		836989201F317AB5003E4D73 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369891E1F317AB5003E4D73 /* ContainerProtocol.swift */; };
 		836989221F317B64003E4D73 /* STContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989211F317B64003E4D73 /* STContainerViewController.swift */; };
-		836989231F317B64003E4D73 /* STContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989211F317B64003E4D73 /* STContainerViewController.swift */; };
 		836989291F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989281F3183C3003E4D73 /* RNSCoverViewController.swift */; };
-		8369892A1F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989281F3183C3003E4D73 /* RNSCoverViewController.swift */; };
 		836989311F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989301F318778003E4D73 /* RNSRegistrationNameController.swift */; };
-		836989321F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989301F318778003E4D73 /* RNSRegistrationNameController.swift */; };
 		836989341F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */; };
-		836989351F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836989331F318791003E4D73 /* RNSRegistrationNameController.storyboard */; };
 		836989381F318B54003E4D73 /* RNSNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989371F318B54003E4D73 /* RNSNameField.swift */; };
-		836989391F318B54003E4D73 /* RNSNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989371F318B54003E4D73 /* RNSNameField.swift */; };
 		836989421F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */; };
-		836989431F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836989411F319AA6003E4D73 /* RNSAlertPhotoController.swift */; };
 		836A9D611F62332C00B5EB55 /* RNSPostContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D601F62332C00B5EB55 /* RNSPostContactList.swift */; };
 		836A9D641F62341700B5EB55 /* RNSContactPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D631F62341700B5EB55 /* RNSContactPayload.swift */; };
 		836A9D671F62374C00B5EB55 /* RNSPostMobilePageGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D661F62374C00B5EB55 /* RNSPostMobilePageGet.swift */; };
@@ -342,6 +319,7 @@
 		836A9D771F6255BF00B5EB55 /* RNSFeedbackPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D761F6255BF00B5EB55 /* RNSFeedbackPayload.swift */; };
 		836A9D7A1F62573F00B5EB55 /* RNSPostFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */; };
 		836A9D7D1F625FE000B5EB55 /* RNSPostComplaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9D7C1F625FE000B5EB55 /* RNSPostComplaint.swift */; };
+		836B0E302064A2AF0019DC1D /* RNISTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B0E2F2064A2AF0019DC1D /* RNISTests2.swift */; };
 		836B960B1F79FE7600531BC6 /* RNSPostBusList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B960A1F79FE7600531BC6 /* RNSPostBusList.swift */; };
 		836B960D1F7A003400531BC6 /* RNSBusManager+Uuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B960C1F7A003400531BC6 /* RNSBusManager+Uuids.swift */; };
 		836B960F1F7A008100531BC6 /* RNSBusManager+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B960E1F7A008100531BC6 /* RNSBusManager+Server.swift */; };
@@ -405,31 +383,18 @@
 		837857F31F4E7E6F009DEA26 /* RNSPostLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837857F21F4E7E6F009DEA26 /* RNSPostLogout.swift */; };
 		837857F51F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837857F41F4E7F79009DEA26 /* RNSProfileViewController+Logout.swift */; };
 		837ABEFB1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */; };
-		837ABEFC1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFA1F2EDAAD00AB5E54 /* STPasswordField.swift */; };
 		837ABEFE1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFD1F2EE13100AB5E54 /* STRouter+Containers.swift */; };
-		837ABEFF1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABEFD1F2EE13100AB5E54 /* STRouter+Containers.swift */; };
 		837ABF021F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF011F2EE19700AB5E54 /* KeyBoardViewController.swift */; };
-		837ABF031F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF011F2EE19700AB5E54 /* KeyBoardViewController.swift */; };
 		837ABF0A1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF071F2EE21B00AB5E54 /* KeyboardShowable.swift */; };
-		837ABF0B1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF071F2EE21B00AB5E54 /* KeyboardShowable.swift */; };
 		837ABF0D1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF0C1F2EE26100AB5E54 /* UIView+TapGesture.swift */; };
-		837ABF0E1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF0C1F2EE26100AB5E54 /* UIView+TapGesture.swift */; };
 		837ABF131F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF101F2EE2E000AB5E54 /* Notification+KeyBoard.swift */; };
-		837ABF141F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF101F2EE2E000AB5E54 /* Notification+KeyBoard.swift */; };
 		837ABF151F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF111F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift */; };
-		837ABF161F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF111F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift */; };
 		837ABF171F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF121F2EE2E000AB5E54 /* NotificationCenter+Utils.swift */; };
-		837ABF181F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF121F2EE2E000AB5E54 /* NotificationCenter+Utils.swift */; };
 		837ABF1B1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF1A1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift */; };
-		837ABF1C1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF1A1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift */; };
 		837ABF1F1F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF1E1F2EE3BC00AB5E54 /* EventDispatcher.swift */; };
-		837ABF201F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF1E1F2EE3BC00AB5E54 /* EventDispatcher.swift */; };
 		837ABF231F2EE5B400AB5E54 /* STImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */; };
-		837ABF241F2EE5B400AB5E54 /* STImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF221F2EE5B400AB5E54 /* STImageContainer.swift */; };
 		837ABF261F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */; };
-		837ABF271F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF251F2EE79500AB5E54 /* RNSLoginViewController+Action.swift */; };
 		837ABF2A1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
-		837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837ABF291F2EEE1600AB5E54 /* Array+TextField.swift */; };
 		837B66761F3957C50048C5BA /* UIScreen+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66751F3957C50048C5BA /* UIScreen+Utils.swift */; };
 		837B667F1F396AD20048C5BA /* RNSMapViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B667E1F396AD20048C5BA /* RNSMapViewController+Present.swift */; };
 		837B66841F396D770048C5BA /* RNSScrollShowContainer+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B66821F396D770048C5BA /* RNSScrollShowContainer+Offset.swift */; };
@@ -462,19 +427,12 @@
 		838707D31F3017870094B273 /* RNSGrayBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707D21F3017870094B273 /* RNSGrayBackButton.swift */; };
 		838707D51F30179B0094B273 /* RNSGrayBackButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838707D41F30179B0094B273 /* RNSGrayBackButton.xib */; };
 		838707DC1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707DB1F3025490094B273 /* RNSRecoveryPhoneController.swift */; };
-		838707DD1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707DB1F3025490094B273 /* RNSRecoveryPhoneController.swift */; };
 		838707DF1F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707DE1F3025600094B273 /* RNSRegistrationPhoneController.swift */; };
-		838707E01F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707DE1F3025600094B273 /* RNSRegistrationPhoneController.swift */; };
 		838707E41F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838707E21F30257F0094B273 /* RNSPhoneViewController.storyboard */; };
-		838707E51F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838707E21F30257F0094B273 /* RNSPhoneViewController.storyboard */; };
 		838707E61F30257F0094B273 /* RNSPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707E31F30257F0094B273 /* RNSPhoneViewController.swift */; };
-		838707E71F30257F0094B273 /* RNSPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707E31F30257F0094B273 /* RNSPhoneViewController.swift */; };
 		838707E91F3027410094B273 /* RNSPhoneContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707E81F3027410094B273 /* RNSPhoneContainerController.swift */; };
-		838707EA1F3027410094B273 /* RNSPhoneContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707E81F3027410094B273 /* RNSPhoneContainerController.swift */; };
 		838707ED1F30290C0094B273 /* RNSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707EC1F30290C0094B273 /* RNSCodeViewController.swift */; };
-		838707EE1F30290C0094B273 /* RNSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707EC1F30290C0094B273 /* RNSCodeViewController.swift */; };
 		838707F01F3029210094B273 /* RNSCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */; };
-		838707F11F3029210094B273 /* RNSCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838707EF1F3029210094B273 /* RNSCodeViewController.storyboard */; };
 		838707F31F303C3A0094B273 /* RNSCodeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838707F21F303C3A0094B273 /* RNSCodeContainerController.swift */; };
 		83877AAB1F5D1215007888DE /* RNSDotsVerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83877AAA1F5D1215007888DE /* RNSDotsVerticalCell.swift */; };
 		83877AAD1F5D1293007888DE /* RNSDotsVerticalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83877AAC1F5D1293007888DE /* RNSDotsVerticalCell.xib */; };
@@ -509,13 +467,9 @@
 		8390DFD61F6648C3003C3505 /* DocsInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390DFD51F6648C3003C3505 /* DocsInfoViewController.storyboard */; };
 		8390DFD81F664C91003C3505 /* MainInfoViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390DFD71F664C91003C3505 /* MainInfoViewController+TableView.swift */; };
 		8392BABF1F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
-		8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BABE1F303D870024E9E5 /* RNSRegistrationCodeController.swift */; };
 		8392BAC21F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
-		8392BAC31F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC11F303DA50024E9E5 /* RNSRecoveryCodeController.swift */; };
 		8392BAC61F304BB80024E9E5 /* RNSAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */; };
-		8392BAC71F304BB80024E9E5 /* RNSAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392BAC51F304BB80024E9E5 /* RNSAlertViewController.swift */; };
 		8392BAC91F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
-		8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392BAC81F304BC20024E9E5 /* RNSAlertViewController.storyboard */; };
 		8393AB661F8B159F004D754B /* RNSRouteTableItem+Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393AB651F8B159F004D754B /* RNSRouteTableItem+Copying.swift */; };
 		8393AB681F8B2003004D754B /* RNSRouteTable+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393AB671F8B2003004D754B /* RNSRouteTable+Var.swift */; };
 		8393AB6A1F8B216B004D754B /* RNSRouteTableItem+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393AB691F8B216B004D754B /* RNSRouteTableItem+Var.swift */; };
@@ -692,7 +646,6 @@
 		83ED5E2C1F2706EF007D9F1C /* RNSMapViewController+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E2B1F2706EF007D9F1C /* RNSMapViewController+Route.swift */; };
 		83ED5E2F1F2707A0007D9F1C /* PGPolyline+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E2E1F2707A0007D9F1C /* PGPolyline+Utils.swift */; };
 		83ED5E311F2709D4007D9F1C /* RNSMapViewController+OverLays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E301F2709D4007D9F1C /* RNSMapViewController+OverLays.swift */; };
-		83ED5E3A1F270A25007D9F1C /* RNISTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED5E391F270A25007D9F1C /* RNISTests.swift */; };
 		83EFADD21FBA8C5700F98F12 /* UIWebView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFADD11FBA8C5700F98F12 /* UIWebView+Utils.swift */; };
 		83EFADD41FBA9FCF00F98F12 /* RNSSearchViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFADD31FBA9FCF00F98F12 /* RNSSearchViewController+TextField.swift */; };
 		83F2E7972027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2E7962027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift */; };
@@ -708,10 +661,11 @@
 		A794FC1B1F7905BC0091BD20 /* FadePresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794FC181F7905BC0091BD20 /* FadePresentAnimationController.swift */; };
 		A7D869461F7D1A150000938E /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D869451F7D1A150000938E /* UserDefaults+Settings.swift */; };
 		AFCB50069DBF94697662C88D /* Pods_RNIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */; };
+		DC3BF7DC6E4ABD9E032555AC /* Pods_RNISTests2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A94AF90C500B9C6FF9EFF5 /* Pods_RNISTests2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		83ED5E3C1F270A25007D9F1C /* PBXContainerItemProxy */ = {
+		836B0E322064A2AF0019DC1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 836D80521F1DAC0400FEE390 /* Project object */;
 			proxyType = 1;
@@ -736,6 +690,9 @@
 
 /* Begin PBXFileReference section */
 		23B4C45A07CC288BB5A83FCE /* Pods-RNIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.debug.xcconfig"; sourceTree = "<group>"; };
+		4601E342854672074C8B6B9E /* Pods-RNISTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNISTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNISTests/Pods-RNISTests.debug.xcconfig"; sourceTree = "<group>"; };
+		70D09A299AC8816A3019E8A4 /* Pods-RNISTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNISTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNISTests/Pods-RNISTests.release.xcconfig"; sourceTree = "<group>"; };
+		71FB4BCD01E6FE7F20713DA9 /* Pods_RNISTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNISTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83013D081FA9961000B880E1 /* CLLocation+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Utils.swift"; sourceTree = "<group>"; };
 		83029BC91F4BEBC900B0FEE3 /* RNSDotsWhiteHorizontal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSDotsWhiteHorizontal.swift; sourceTree = "<group>"; };
 		83029BCB1F4BEBD700B0FEE3 /* RNSDotsWhiteHorizontal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RNSDotsWhiteHorizontal.xib; sourceTree = "<group>"; };
@@ -1050,6 +1007,9 @@
 		836A9D761F6255BF00B5EB55 /* RNSFeedbackPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSFeedbackPayload.swift; sourceTree = "<group>"; };
 		836A9D791F62573F00B5EB55 /* RNSPostFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostFeedback.swift; sourceTree = "<group>"; };
 		836A9D7C1F625FE000B5EB55 /* RNSPostComplaint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSPostComplaint.swift; sourceTree = "<group>"; };
+		836B0E2D2064A2AF0019DC1D /* RNISTests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNISTests2.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		836B0E2F2064A2AF0019DC1D /* RNISTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNISTests2.swift; sourceTree = "<group>"; };
+		836B0E312064A2AF0019DC1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		836B960A1F79FE7600531BC6 /* RNSPostBusList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPostBusList.swift; sourceTree = "<group>"; };
 		836B960C1F7A003400531BC6 /* RNSBusManager+Uuids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSBusManager+Uuids.swift"; sourceTree = "<group>"; };
 		836B960E1F7A008100531BC6 /* RNSBusManager+Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSBusManager+Server.swift"; sourceTree = "<group>"; };
@@ -1389,9 +1349,6 @@
 		83ED5E2B1F2706EF007D9F1C /* RNSMapViewController+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSMapViewController+Route.swift"; sourceTree = "<group>"; };
 		83ED5E2E1F2707A0007D9F1C /* PGPolyline+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PGPolyline+Utils.swift"; sourceTree = "<group>"; };
 		83ED5E301F2709D4007D9F1C /* RNSMapViewController+OverLays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RNSMapViewController+OverLays.swift"; sourceTree = "<group>"; };
-		83ED5E371F270A25007D9F1C /* RNISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83ED5E391F270A25007D9F1C /* RNISTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNISTests.swift; sourceTree = "<group>"; };
-		83ED5E3B1F270A25007D9F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EFADD11FBA8C5700F98F12 /* UIWebView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWebView+Utils.swift"; sourceTree = "<group>"; };
 		83EFADD31FBA9FCF00F98F12 /* RNSSearchViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNSSearchViewController+TextField.swift"; sourceTree = "<group>"; };
 		83F2E7962027F8BD00D3F3C0 /* RNSPushTokenUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSPushTokenUpdate.swift; sourceTree = "<group>"; };
@@ -1401,16 +1358,27 @@
 		83F555401F556CEB00D1221C /* RNSRouteParentCel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSRouteParentCel.swift; sourceTree = "<group>"; };
 		83FFF229202305CB004C9AD3 /* RNSRabancManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSRabancManager.swift; sourceTree = "<group>"; };
 		84D40C361F855CE800A3B040 /* MapButtonsAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapButtonsAnimator.swift; sourceTree = "<group>"; };
+		A3A94AF90C500B9C6FF9EFF5 /* Pods_RNISTests2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNISTests2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76501E81F827D13001AEA25 /* RNSNotificationCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSNotificationCreate.swift; sourceTree = "<group>"; };
 		A794FC161F7905BC0091BD20 /* CustomTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionDelegate.swift; sourceTree = "<group>"; };
 		A794FC171F7905BC0091BD20 /* FadeDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeDismissAnimationController.swift; sourceTree = "<group>"; };
 		A794FC181F7905BC0091BD20 /* FadePresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentAnimationController.swift; sourceTree = "<group>"; };
 		A7D869451F7D1A150000938E /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
+		BD5564F84F9BED126EFD2B3C /* Pods-RNISTests2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNISTests2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNISTests2/Pods-RNISTests2.debug.xcconfig"; sourceTree = "<group>"; };
 		BE5BDD3840B274B802D836D4 /* Pods-RNIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNIS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNIS/Pods-RNIS.release.xcconfig"; sourceTree = "<group>"; };
+		D50C3DE2BF6900E997BED2A9 /* Pods-RNISTests2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNISTests2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNISTests2/Pods-RNISTests2.release.xcconfig"; sourceTree = "<group>"; };
 		DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		836B0E2A2064A2AF0019DC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC3BF7DC6E4ABD9E032555AC /* Pods_RNISTests2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		836D80571F1DAC0400FEE390 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1419,13 +1387,6 @@
 				836D80CE1F1DBF2B00FEE390 /* OpenAL.framework in Frameworks */,
 				AFCB50069DBF94697662C88D /* Pods_RNIS.framework in Frameworks */,
 				836D80A61F1DB31100FEE390 /* libProgorodLiteLibrary.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83ED5E341F270A25007D9F1C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1441,6 +1402,8 @@
 				836D80C71F1DBB9600FEE390 /* OpenGLES.framework */,
 				836D80C51F1DBB8D00FEE390 /* OpenAL.framework */,
 				DCD00E7395BBFB6DFB60C685 /* Pods_RNIS.framework */,
+				71FB4BCD01E6FE7F20713DA9 /* Pods_RNISTests.framework */,
+				A3A94AF90C500B9C6FF9EFF5 /* Pods_RNISTests2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3260,6 +3223,15 @@
 			path = StopPointList;
 			sourceTree = "<group>";
 		};
+		836B0E2E2064A2AF0019DC1D /* RNISTests2 */ = {
+			isa = PBXGroup;
+			children = (
+				836B0E2F2064A2AF0019DC1D /* RNISTests2.swift */,
+				836B0E312064A2AF0019DC1D /* Info.plist */,
+			);
+			path = RNISTests2;
+			sourceTree = "<group>";
+		};
 		836B96091F79FE1D00531BC6 /* BusList */ = {
 			isa = PBXGroup;
 			children = (
@@ -3291,7 +3263,7 @@
 				41FEA048396AAE9F5C6E5CE3 /* Frameworks */,
 				A72B1F20BB40A42123B9309F /* Pods */,
 				836D805B1F1DAC0400FEE390 /* Products */,
-				83ED5E381F270A25007D9F1C /* RNISTests */,
+				836B0E2E2064A2AF0019DC1D /* RNISTests2 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3299,7 +3271,7 @@
 			isa = PBXGroup;
 			children = (
 				836D805A1F1DAC0400FEE390 /* RNIS.app */,
-				83ED5E371F270A25007D9F1C /* RNISTests.xctest */,
+				836B0E2D2064A2AF0019DC1D /* RNISTests2.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -5119,15 +5091,6 @@
 			path = PGPolyline;
 			sourceTree = "<group>";
 		};
-		83ED5E381F270A25007D9F1C /* RNISTests */ = {
-			isa = PBXGroup;
-			children = (
-				83ED5E3B1F270A25007D9F1C /* Info.plist */,
-				83ED5E391F270A25007D9F1C /* RNISTests.swift */,
-			);
-			path = RNISTests;
-			sourceTree = "<group>";
-		};
 		83EFADD01FBA8C3000F98F12 /* UIWebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -5216,6 +5179,10 @@
 			children = (
 				23B4C45A07CC288BB5A83FCE /* Pods-RNIS.debug.xcconfig */,
 				BE5BDD3840B274B802D836D4 /* Pods-RNIS.release.xcconfig */,
+				4601E342854672074C8B6B9E /* Pods-RNISTests.debug.xcconfig */,
+				70D09A299AC8816A3019E8A4 /* Pods-RNISTests.release.xcconfig */,
+				BD5564F84F9BED126EFD2B3C /* Pods-RNISTests2.debug.xcconfig */,
+				D50C3DE2BF6900E997BED2A9 /* Pods-RNISTests2.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -5241,6 +5208,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		836B0E2C2064A2AF0019DC1D /* RNISTests2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 836B0E362064A2AF0019DC1D /* Build configuration list for PBXNativeTarget "RNISTests2" */;
+			buildPhases = (
+				652F4879A89A132B34FA33D3 /* [CP] Check Pods Manifest.lock */,
+				836B0E292064A2AF0019DC1D /* Sources */,
+				836B0E2A2064A2AF0019DC1D /* Frameworks */,
+				836B0E2B2064A2AF0019DC1D /* Resources */,
+				614C9EF92F3859FC83E19593 /* [CP] Embed Pods Frameworks */,
+				B025269FFB27C01DADBD1080 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				836B0E332064A2AF0019DC1D /* PBXTargetDependency */,
+			);
+			name = RNISTests2;
+			productName = RNISTests2;
+			productReference = 836B0E2D2064A2AF0019DC1D /* RNISTests2.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		836D80591F1DAC0400FEE390 /* RNIS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 836D807A1F1DAC0400FEE390 /* Build configuration list for PBXNativeTarget "RNIS" */;
@@ -5264,34 +5252,21 @@
 			productReference = 836D805A1F1DAC0400FEE390 /* RNIS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		83ED5E361F270A25007D9F1C /* RNISTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 83ED5E3E1F270A25007D9F1C /* Build configuration list for PBXNativeTarget "RNISTests" */;
-			buildPhases = (
-				83ED5E331F270A25007D9F1C /* Sources */,
-				83ED5E341F270A25007D9F1C /* Frameworks */,
-				83ED5E351F270A25007D9F1C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				83ED5E3D1F270A25007D9F1C /* PBXTargetDependency */,
-			);
-			name = RNISTests;
-			productName = RNISTests;
-			productReference = 83ED5E371F270A25007D9F1C /* RNISTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		836D80521F1DAC0400FEE390 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Артем Кулагин";
 				TargetAttributes = {
+					836B0E2C2064A2AF0019DC1D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 836D80591F1DAC0400FEE390;
+					};
 					836D80591F1DAC0400FEE390 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = EPY5L857V2;
@@ -5305,12 +5280,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					83ED5E361F270A25007D9F1C = {
-						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 836D80591F1DAC0400FEE390;
 					};
 				};
 			};
@@ -5328,12 +5297,19 @@
 			projectRoot = "";
 			targets = (
 				836D80591F1DAC0400FEE390 /* RNIS */,
-				83ED5E361F270A25007D9F1C /* RNISTests */,
+				836B0E2C2064A2AF0019DC1D /* RNISTests2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		836B0E2B2064A2AF0019DC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		836D80581F1DAC0400FEE390 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -5430,20 +5406,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83ED5E351F270A25007D9F1C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				832E4B801F2ECBCF00A4AD77 /* RNSLoginViewController.storyboard in Resources */,
-				832E4B761F2EC49400A4AD77 /* RNSLoginView.xib in Resources */,
-				832E4B7D1F2EC6AC00A4AD77 /* RNSBlackButton.xib in Resources */,
-				838707E51F30257F0094B273 /* RNSPhoneViewController.storyboard in Resources */,
-				836989351F318791003E4D73 /* RNSRegistrationNameController.storyboard in Resources */,
-				8392BACA1F304BC20024E9E5 /* RNSAlertViewController.storyboard in Resources */,
-				838707F11F3029210094B273 /* RNSCodeViewController.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -5496,6 +5458,58 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNIS/Pods-RNIS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		614C9EF92F3859FC83E19593 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RNISTests2/Pods-RNISTests2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNISTests2/Pods-RNISTests2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		652F4879A89A132B34FA33D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNISTests2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8375DEA91F20681700FCA26E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -5522,6 +5536,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" f67f202ee4b4de3992f5c52aacbefb74f0c0a6bd 5db0704649e3b17748e00c6d88a2eaf2c3c8de1537d634adcb0cd2d83d04a43a";
 		};
+		B025269FFB27C01DADBD1080 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNISTests2/Pods-RNISTests2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CDBC72EDE02F640C6AADD15D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -5543,6 +5572,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		836B0E292064A2AF0019DC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836B0E302064A2AF0019DC1D /* RNISTests2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		836D80561F1DAC0400FEE390 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -6109,61 +6146,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83ED5E331F270A25007D9F1C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				837ABF181F2EE2E000AB5E54 /* NotificationCenter+Utils.swift in Sources */,
-				837ABF031F2EE19700AB5E54 /* KeyBoardViewController.swift in Sources */,
-				832E4B8B1F2ECE8C00A4AD77 /* RNSTextField.swift in Sources */,
-				836989231F317B64003E4D73 /* STContainerViewController.swift in Sources */,
-				838707E01F3025600094B273 /* RNSRegistrationPhoneController.swift in Sources */,
-				837ABEFC1F2EDAAD00AB5E54 /* STPasswordField.swift in Sources */,
-				837ABF201F2EE3BC00AB5E54 /* EventDispatcher.swift in Sources */,
-				8369891B1F31737F003E4D73 /* RNSRegistrationParoleController.swift in Sources */,
-				8392BAC01F303D870024E9E5 /* RNSRegistrationCodeController.swift in Sources */,
-				836989431F319AA6003E4D73 /* RNSAlertPhotoController.swift in Sources */,
-				832E4B7A1F2EC69200A4AD77 /* RNSBlackButton.swift in Sources */,
-				836989201F317AB5003E4D73 /* ContainerProtocol.swift in Sources */,
-				837ABF141F2EE2E000AB5E54 /* Notification+KeyBoard.swift in Sources */,
-				838707EE1F30290C0094B273 /* RNSCodeViewController.swift in Sources */,
-				838707DD1F3025490094B273 /* RNSRecoveryPhoneController.swift in Sources */,
-				837ABF1C1F2EE38600AB5E54 /* UITapGestureRecognizer+Listener.swift in Sources */,
-				836989321F318778003E4D73 /* RNSRegistrationNameController.swift in Sources */,
-				838707E71F30257F0094B273 /* RNSPhoneViewController.swift in Sources */,
-				832E4B731F2EC48600A4AD77 /* RNSLoginView.swift in Sources */,
-				837ABF241F2EE5B400AB5E54 /* STImageContainer.swift in Sources */,
-				832E4B9A1F2ED57C00A4AD77 /* InputFieldsValidator+Validation.swift in Sources */,
-				836989391F318B54003E4D73 /* RNSNameField.swift in Sources */,
-				832E4B871F2ECDCC00A4AD77 /* RNSPhoneField.swift in Sources */,
-				837ABF2B1F2EEE1600AB5E54 /* Array+TextField.swift in Sources */,
-				832E4BA01F2ED5D200A4AD77 /* UITextField+Utils.swift in Sources */,
-				832E4B901F2ED03400A4AD77 /* UIFont+Utils.swift in Sources */,
-				836989101F316F9C003E4D73 /* RNSParoleViewController+UI.swift in Sources */,
-				837ABF0E1F2EE26100AB5E54 /* UIView+TapGesture.swift in Sources */,
-				836989131F317190003E4D73 /* RNSParoleContainerController.swift in Sources */,
-				832E4B941F2ED53000A4AD77 /* String+Utils.swift in Sources */,
-				837ABF0B1F2EE21B00AB5E54 /* KeyboardShowable.swift in Sources */,
-				837ABF161F2EE2E000AB5E54 /* NotificationCenter+KeyBoard.swift in Sources */,
-				837ABEFF1F2EE13100AB5E54 /* STRouter+Containers.swift in Sources */,
-				8369892A1F3183C3003E4D73 /* RNSCoverViewController.swift in Sources */,
-				8392BAC71F304BB80024E9E5 /* RNSAlertViewController.swift in Sources */,
-				8392BAC31F303DA50024E9E5 /* RNSRecoveryCodeController.swift in Sources */,
-				836989181F317368003E4D73 /* RNSRecoveryParoleController.swift in Sources */,
-				832E4B9C1F2ED57C00A4AD77 /* InputFieldsValidator.swift in Sources */,
-				83ED5E3A1F270A25007D9F1C /* RNISTests.swift in Sources */,
-				837ABF271F2EE79500AB5E54 /* RNSLoginViewController+Action.swift in Sources */,
-				838707EA1F3027410094B273 /* RNSPhoneContainerController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		83ED5E3D1F270A25007D9F1C /* PBXTargetDependency */ = {
+		836B0E332064A2AF0019DC1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 836D80591F1DAC0400FEE390 /* RNIS */;
-			targetProxy = 83ED5E3C1F270A25007D9F1C /* PBXContainerItemProxy */;
+			targetProxy = 836B0E322064A2AF0019DC1D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -6181,6 +6170,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		836B0E342064A2AF0019DC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD5564F84F9BED126EFD2B3C /* Pods-RNISTests2.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RNISTests2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = softwarecenter.RNISTests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNIS.app/RNIS";
+			};
+			name = Debug;
+		};
+		836B0E352064A2AF0019DC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D50C3DE2BF6900E997BED2A9 /* Pods-RNISTests2.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RNISTests2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = softwarecenter.RNISTests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNIS.app/RNIS";
+			};
+			name = Release;
+		};
 		836D80781F1DAC0400FEE390 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -6370,37 +6401,18 @@
 			};
 			name = Release;
 		};
-		83ED5E3F1F270A25007D9F1C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RNISTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = softwarecenter.RNISTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNIS.app/RNIS";
-			};
-			name = Debug;
-		};
-		83ED5E401F270A25007D9F1C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RNISTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = softwarecenter.RNISTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNIS.app/RNIS";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		836B0E362064A2AF0019DC1D /* Build configuration list for PBXNativeTarget "RNISTests2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836B0E342064A2AF0019DC1D /* Debug */,
+				836B0E352064A2AF0019DC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		836D80551F1DAC0400FEE390 /* Build configuration list for PBXProject "RNIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -6415,15 +6427,6 @@
 			buildConfigurations = (
 				836D807B1F1DAC0400FEE390 /* Debug */,
 				836D807C1F1DAC0400FEE390 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83ED5E3E1F270A25007D9F1C /* Build configuration list for PBXNativeTarget "RNISTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83ED5E3F1F270A25007D9F1C /* Debug */,
-				83ED5E401F270A25007D9F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -39,6 +39,16 @@
                ReferencedContainer = "container:RNIS.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "836B0E2C2064A2AF0019DC1D"
+               BuildableName = "RNISTests2.xctest"
+               BlueprintName = "RNISTests2"
+               ReferencedContainer = "container:RNIS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

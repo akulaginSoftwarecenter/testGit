@@ -1,16 +1,17 @@
 //
-//  RNISTests.swift
-//  RNISTests
+//  RNISTests2.swift
+//  RNISTests2
 //
-//  Created by Артем Кулагин on 25.07.17.
-//  Copyright © 2017 Артем Кулагин. All rights reserved.
+//  Created by Артем Кулагин on 23.03.2018.
+//  Copyright © 2018 Артем Кулагин. All rights reserved.
 //
 
 import XCTest
 @testable import RNIS
+@testable import Realm
 
-class RNISTests: XCTestCase {
-       
+class RNISTests2: XCTestCase {
+    
     func testLogin() {
         var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostLogin")
         RNSPostLogin { (reply, error, _) in
@@ -76,16 +77,6 @@ class RNISTests: XCTestCase {
         var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostUserGet")
         RNSPostUserGet { (reply, error, _) in
             XCTAssertTrue(error == nil, "error user_get")
-            expectation?.fulfill()
-            expectation = nil
-        }
-        waitForExpectations(timeout: 50)
-    }
-    
-    func testLogout() {
-        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostLogout")
-        RNSPostLogout { (reply, error, _) in
-            XCTAssertTrue(error == nil, "error logout")
             expectation?.fulfill()
             expectation = nil
         }
@@ -222,16 +213,6 @@ class RNISTests: XCTestCase {
         waitForExpectations(timeout: 50)
     }
     
-    func testNotificationCreate() {
-        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostNotificationCreate")
-        RNSPostNotificationCreate { (reply, error, _) in
-            XCTAssertTrue(error == nil, "error notification_create")
-            expectation?.fulfill()
-            expectation = nil
-        }
-        waitForExpectations(timeout: 50)
-    }
-    
     func testNotificationUpdate() {
         var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostNotificationUpdate")
         RNSPostNotificationUpdate { (reply, error, _) in
@@ -339,4 +320,5 @@ class RNISTests: XCTestCase {
         })
         waitForExpectations(timeout: 50)
     }
+    
 }
