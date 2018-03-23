@@ -465,27 +465,13 @@ class RNISTests2: XCTestCase {
         waitForExpectations(timeout: 20)
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func testParseActionRouting() {
+        var dict = AliasDictionary()
+        dict["payload"] = Utils.dictToJson("allRoute")
+        
+        typealias AliasReply = RNSRequestReply<RNSActionRoutingPayload<RNSRouteVariant>,RNSRegisterError>
+        let model = AliasReply(reply: dict as AnyObject)
+        let items = model?.payload?.items
+        XCTAssertTrue(items?.count == 3, "Ошибка парсера RNSActionRoutingPayload")
+    }
 }
