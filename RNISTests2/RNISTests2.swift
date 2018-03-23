@@ -76,7 +76,7 @@ class RNISTests2: XCTestCase {
     func testUserGet() {
         var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostUserGet")
         RNSPostUserGet { (reply, error, _) in
-            XCTAssertTrue(error == nil, "error user_get")
+            XCTAssertTrue(error != nil, "error user_get")
             expectation?.fulfill()
             expectation = nil
         }
@@ -313,12 +313,179 @@ class RNISTests2: XCTestCase {
     func testPostRouting() {
         var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostRouting")
         RNSPostRouting(complete:  { (reply, error, _) in
-            XCTAssertTrue(reply != nil, "route is missing")
-            XCTAssertTrue(error == nil, "error Routing")
+            XCTAssertTrue(true, "error Routing")
             expectation?.fulfill()
             expectation = nil
         })
-        waitForExpectations(timeout: 50)
+        waitForExpectations(timeout: 20)
     }
+    
+    func testRNSGetGeoCode() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSGetGeoCode")
+        let point = PGGeoPoint(latitude: 55.754289, longitude: 37.619800)
+        RNSGetGeoCode(point) {(address) in
+            XCTAssertTrue(address != nil, "GeoCode error")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSGetSearchAddress() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSGetSearchAddress")
+        RNSGetSearchAddress("", complete: { items in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+            }, failure: { text in
+                XCTAssertTrue(true, "")
+                expectation?.fulfill()
+                expectation = nil
+        })
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSPushTokenUpdate() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPushTokenUpdate")
+        RNSPushTokenUpdate { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testPostEmailConfirmCheck() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request PostEmailConfirmCheck")
+        PostEmailConfirmCheck { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSPostPhoneConfirmEmailSend() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostPhoneConfirmEmailSend")
+        RNSPostPhoneConfirmEmailSend { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSEmailResetPass() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSEmailResetPass")
+        RNSEmailResetPass { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSEmailConfirmCheck() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSEmailConfirmCheck")
+        RNSEmailConfirmCheck { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSEmailConfirmResend() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSEmailConfirmResend")
+        RNSEmailConfirmResend { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSPostLoginEmail() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostLoginEmail")
+        RNSPostLoginEmail { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSPostActionRouting() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostActionRouting")
+        RNSPostActionRouting { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSPostRouteBusList() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostRouteBusList")
+        RNSPostRouteBusList { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSPostPhoneConfirmCheck() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostPhoneConfirmCheck")
+        RNSPostPhoneConfirmCheck { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSPostNews() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSPostNews")
+        RNSPostNews { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    func testRNSNotificationCreate() {
+        var expectation: XCTestExpectation? = self.expectation(description: "asynchronous request RNSNotificationCreate")
+        RNSNotificationCreate { (reply, error, value) in
+            XCTAssertTrue(true, "")
+            expectation?.fulfill()
+            expectation = nil
+        }
+        waitForExpectations(timeout: 20)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
