@@ -39,7 +39,7 @@ class RNSPageRouteController: UIViewController {
         view.addSubview(containerView)
         containerView.autoPinEdgesToSuperviewEdges()
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return "RNSMapParentController"
     }

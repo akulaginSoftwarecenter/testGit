@@ -32,7 +32,7 @@ extension RNSAddressViewController {
             RNSDataManager.createSearchItem(text, point: point)
         }
     }
-   
+    /// Событие нажатия на кнопку конца редактирования
     @IBAction func actionTop(_ sender: Any) {
         endEdit()
     }

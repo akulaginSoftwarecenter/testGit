@@ -39,7 +39,6 @@ extension RNSSearchViewController {
     }
     
     /// Убрать индикатор загрузки
-    
     func showLoader() {
         loaderView.showInView(self.view)
     }

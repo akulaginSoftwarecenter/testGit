@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSNewsWebView: BaseViewWithXIBInit, UIWebViewDelegate  {
 
+    /// главная переменная строки поиска
     var item: String? {
         didSet {
             updateItem()

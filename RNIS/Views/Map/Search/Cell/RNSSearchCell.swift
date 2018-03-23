@@ -15,13 +15,14 @@ class RNSSearchCell: RNSBaseTableCell {
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     
+    /// главная переменная инициализации
     var item: RNSTextItem? {
         didSet {
             prepareItem()
             prepareBisibleBus()
         }
     }
-    
+    /// Функция подготовки вью для главной переменной инициализации
     func prepareItem() {
         prepareDistanceLabel()
         labelText.text = item?.name

@@ -12,7 +12,7 @@ import Foundation
  Расширение для контейнера
  */
 extension RNSMoveMapViewController {
-    
+    /// Функция подготовки контейнера
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let containerController = segue.destination as? RNSMapParentController
         containerController?.bottomTargetConstant = 91

@@ -77,7 +77,7 @@ class RNSPhoneContainerController: STContainerViewController {
     func prepareError(_ error: String?) {
         containerViewController?.prepareError(error)
     }
-     
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return kPhoneVC
     }

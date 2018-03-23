@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSSearchViewController: UIViewController, KeyboardShowable {
     
+    /// переменная высоты нижнего констрейнта
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         get {
             return bottomConstraint
@@ -21,6 +22,7 @@ class RNSSearchViewController: UIViewController, KeyboardShowable {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    /// переменная для проверки добавления тапа на вью если нужно
     var isNeedAddTap: Bool = false
     
     /// Представление идикации загрузки

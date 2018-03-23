@@ -22,6 +22,7 @@ class RNSDotsBussView: BaseViewWithXIBInit {
     @IBOutlet weak var lastCircle: RNSCircleHoleWhite!
     @IBOutlet weak var dotsWhite: RNSDotsWhiteHorizontal!
     
+    /// главная переменная инициализации варианта маршрута
     var item: RNSRouteVariant? {
         didSet {
             reloadData()

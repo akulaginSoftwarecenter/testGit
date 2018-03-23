@@ -23,6 +23,7 @@ class RNSForecastCell: RNSBaseTableCell {
     /// Экземпляр модели для отображения времени
     @IBOutlet weak var timeView: UIView!
     
+    /// главная переменная инициализации
     var item: RNSForecastBus? {
         didSet {
             updateUI()

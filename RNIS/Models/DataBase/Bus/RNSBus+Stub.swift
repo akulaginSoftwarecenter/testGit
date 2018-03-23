@@ -12,7 +12,7 @@ import Foundation
  Расширение для работы с заглушкой
  */
 extension RNSBus {
-    
+    /// переменная генерирования движения автобуса
     var stubDictMove: AliasDictionary? {
         var dict = point.coordinate(45, distance: 16)?.dictionary
         dict?[kUuid] = uuid

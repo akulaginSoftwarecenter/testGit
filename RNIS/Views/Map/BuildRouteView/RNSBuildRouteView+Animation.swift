@@ -12,7 +12,7 @@ import Foundation
  Расширение для работы с анимацией
  */
 extension RNSBuildRouteView {
-    
+    /// Функция появления анимации
     func animateShow() {
         show()
         animateBottom(true)
@@ -29,22 +29,22 @@ extension RNSBuildRouteView {
         alpha = 0;
         animateAlpha(1)
     }
-    
+    /// Функция скрытия всех старых поповеров
     func mapHideOldPopopovers() {
         RNSMapManager.hideOldPopopovers()
     }
-    
+    /// Функция активации нижнего констрейнта
     func animateBottom() {
         UIView.animateConstrains(self) {
             self.bottomConstraint.isActive = true
         }
     }
-    
+    /// Функция удаления анимации
     func removeAnimate() {
         animateBottom(false)
         animateAlpha(0, complete: remove)
     }
-    
+    /// Функция анимации изменения альфа канала
     func animateAlpha(_ alpha: CGFloat, complete: EmptyBlock? = nil) {
         UIView.animate(withDuration: 0.3, animations: {
             self.alpha = alpha
@@ -52,7 +52,7 @@ extension RNSBuildRouteView {
             complete?()
         }
     }
-    
+    /// Функция изменения активации нижнего констрейнта
     func animateBottom(_ value: Bool) {
         UIView.animateConstrains(self) {
             self.bottomConstraint.isActive = value

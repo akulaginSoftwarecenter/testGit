@@ -57,7 +57,7 @@ class RNSPageRoutePopupController: UIViewController {
             self?.updateCurrentItem()
         }
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return "RNSRouteDetailController"
     }

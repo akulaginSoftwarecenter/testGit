@@ -21,7 +21,7 @@ extension RNSSearchView {
     func  prepareError(_ error: String?) {
         handlerError?(error)
     }
-    
+    /// Функция появления лоадера
     func showLoader() {
         handlerLoader?(true)
     }

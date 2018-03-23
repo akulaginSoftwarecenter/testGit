@@ -37,6 +37,7 @@ class RNSBusDetailWayCell: RNSBaseTableCell {
     @IBOutlet weak var separatorLine: UIView!
     @IBOutlet weak var currentImage: UIImageView!
     
+    /// главная переменная инициализации
     var item: RNSBusTableItem? {
         didSet{
             prepareUI()

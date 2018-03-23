@@ -12,20 +12,20 @@ import Foundation
  Расширение для вью
  */
 extension RNSBusDetailController {
-    
+    /// Функция подготовки изменения вью
     func prepareViews(_ rect: CGRect) {
         let y = rect.origin.y
         prepareAlpha(y)
         prepareEnabled(y)
     }
-    
+    /// Функция подготовки изменения альфа канала
     func prepareAlpha(_ top: CGFloat) {
         let alpha = Utils.alpha(top, startBottomOffset: startBottomOffset)
         viewTotal.alpha = alpha
         viewWay.alpha = 1 - alpha
         bottomView.alpha = viewWay.alpha
     }
-    
+    /// Функция подготовки изменения включения вью
     func prepareEnabled(_ top: CGFloat) {
         let enabled = top > UIScreen.halfHeight
         viewTotal.isUserInteractionEnabled = enabled

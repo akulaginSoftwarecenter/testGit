@@ -59,7 +59,7 @@ class RNSMovePopupController: UIViewController {
         prepareItem()
         prepareObservers()
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return "RNSMoveDetailController"
     }

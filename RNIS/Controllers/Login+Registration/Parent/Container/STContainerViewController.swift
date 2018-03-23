@@ -31,7 +31,7 @@ class STContainerViewController: UIViewController {
     
     /// внутренний контроллер
     var enterViewController: ContainerProtocol?
-    
+    /// Функция подготовки контейнера
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         enterViewController = segue.destination as? ContainerProtocol

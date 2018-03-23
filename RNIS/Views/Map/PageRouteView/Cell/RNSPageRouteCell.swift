@@ -18,6 +18,7 @@ class RNSPageRouteCell: UICollectionViewCell {
     @IBOutlet weak var labelCount: UILabel!
     @IBOutlet weak var dotsBussView: RNSDotsBussView!
     
+    /// главная переменная инициализации варианта маршрута
     var item: RNSRouteVariant? {
         didSet {
             reloadData()

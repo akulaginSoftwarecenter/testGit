@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSNewsDetailController: UIViewController {
     
+    /// главная переменная инициализации
     var item: RNSNewsTemp?
     
     @IBOutlet weak var imageView: UIImageView!

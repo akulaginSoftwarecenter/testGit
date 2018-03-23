@@ -12,6 +12,7 @@ import Foundation
 Расширение для работы с объектом, содержащим информацию о маршруте
  */
 extension RNSMoveMapViewController {
+    /// Функция подготовки вью для главной переменной инициализации
     func prepareItem() {
         item?.prepareRoadActivate()
         item?.prepareDisplayMapFirst()

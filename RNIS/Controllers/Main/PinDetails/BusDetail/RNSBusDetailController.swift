@@ -60,7 +60,7 @@ class RNSBusDetailController: RNSParentDetailPinController {
     
     /// Представление индикации загрузки
     lazy var loaderView = RNSLoaderWay()
-    
+    /// переменная можно ли загрузить дорогу
     var canLoadViewWay = false
     
     /// Метод инициализации класса
@@ -89,18 +89,18 @@ class RNSBusDetailController: RNSParentDetailPinController {
         bottomView.item = item
         prepareWayIfCan()
     }
-    
+    /// Функция подготовки пути если можно
     func prepareWayIfCan() {
         if canLoadViewWay {
             prepareWay()
         }
     }
-    
+    /// Функция подготовки пути
     func prepareWay() {
         canLoadViewWay = true
         viewWay.item = item
     }
-    
+    /// Функция подготовки текущего значения
     override func prepareCurrent(_ value: Bool) {
         RNSBusManager.prepareCurrentItem(value, item: itemBus)
        // RNSRabancManager.prepareRabanc(value, item: nil)

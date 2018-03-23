@@ -13,6 +13,7 @@ import UIKit
  */
 class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollViewDelegate {
     
+    /// переменная высоты нижнего констрейнта
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         get {
             return bottomConstraint
@@ -20,6 +21,7 @@ class RNSScrollKeyBoardContainer: UIViewController, KeyboardShowable, UIScrollVi
     }
     
     @IBOutlet weak var scrollView: UIScrollView!
+    /// переменная для проверки добавления тапа на вью если нужно
     var isNeedAddTap: Bool = true
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     

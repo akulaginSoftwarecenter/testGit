@@ -13,11 +13,12 @@ import Foundation
  */
 extension RNSSearchViewController: UITextFieldDelegate {
     
+    /// Событие нажатия на кнопку "Ввод" на клавиатуре
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         hideKeyboard()
         return true
     }
-    
+    /// Метод делегата вызванный при тапе на кнопку очистки текста
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         updateSearch()
         return true

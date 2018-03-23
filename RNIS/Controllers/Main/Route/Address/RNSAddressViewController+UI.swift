@@ -12,7 +12,7 @@ import Foundation
  Расширение для лоадеров
  */
 extension RNSAddressViewController {
-    
+    /// Функция подготовки контейнера
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         containerController = segue.destination as? RNSMapParentController
         prepareEnterViewController()
@@ -38,7 +38,7 @@ extension RNSAddressViewController {
         let type = self.type ?? .fromAddress
         titleLabel.text = type.rawValue
     }
-    
+    /// Функция появления лоадера
     func showLoader() {
         loaderView.showInView(view)
     }

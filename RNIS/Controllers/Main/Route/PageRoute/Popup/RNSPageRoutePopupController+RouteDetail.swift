@@ -13,7 +13,7 @@ import Foundation
  */
 
 extension RNSPageRoutePopupController {
-    
+    /// Функция подготовки контейнера
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         containerController = segue.destination as? RNSRouteDetailController
         prepareEnterViewController()

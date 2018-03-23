@@ -12,11 +12,7 @@ import Foundation
  Расширение для работы с заглушкой
  */
 extension RNSBusStop {
-    /*
-    func generate() {
-        generate("бул. Конногвардейский")
-    }
-    */
+
     static func generate(_ uuid: String, name: String?, lat: Double, lon: Double) -> RNSBusStop {
         let item = RNSBusStop()
         item.generate(uuid, name: name, lat: lat, lon: lon)

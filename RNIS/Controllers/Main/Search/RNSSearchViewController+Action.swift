@@ -23,7 +23,7 @@ extension RNSSearchViewController {
     @IBAction func editionChange(_ sender: Any) {
         updateSearch()
     }
-      
+    /// Событие нажатия на кнопку конца редактирования
     @IBAction func actionTop(_ sender: Any) {
          hideKeyboard()
     }

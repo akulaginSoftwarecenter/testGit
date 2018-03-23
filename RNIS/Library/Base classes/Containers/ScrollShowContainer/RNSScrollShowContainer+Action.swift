@@ -17,7 +17,7 @@ extension RNSScrollShowContainer {
         startOverTopDeselerateFalse()
         scrollToStart()
     }
-    
+    /// Событие нажатия на кнопку конца редактирования
     @IBAction func actionTop(_ sender: Any) {
         scrollView.isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.25, animations: {

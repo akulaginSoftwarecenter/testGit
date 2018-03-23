@@ -29,7 +29,7 @@ class RNSPinItem: RNSPinParent {
         prepareImage()
         prepareHandlers()
     }
-    
+    /// Функция подготовки вью для главной переменной инициализации
     func prepareItem() {
         
     }

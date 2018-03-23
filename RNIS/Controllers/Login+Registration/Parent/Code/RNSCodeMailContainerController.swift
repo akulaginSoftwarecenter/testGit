@@ -67,7 +67,7 @@ class RNSCodeMailContainerController: STContainerViewController {
         containerViewController?.prepareError(error)
         containerViewController?.codeField.text = ""
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return kCodeEmailVC
     }

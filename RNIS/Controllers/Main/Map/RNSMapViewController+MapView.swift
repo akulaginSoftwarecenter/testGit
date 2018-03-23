@@ -10,7 +10,7 @@ import Foundation
 
 /// Расширение для работы с картой
 extension RNSMapViewController {
-    
+    /// Функция подготовки контейнера
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         containerController = segue.destination as? RNSMapParentController
         prepareHandlerMapView()

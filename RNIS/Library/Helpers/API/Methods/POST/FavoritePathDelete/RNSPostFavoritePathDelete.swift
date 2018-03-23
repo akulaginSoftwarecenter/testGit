@@ -11,6 +11,7 @@ import UIKit
  Запрос удаления избраного маршрута
  */
 class RNSPostFavoritePathDelete: RNSPostRequestMobileToken {
+    /// главная переменная инициализации варианта маршрута
     var item: RNSRouteVariant?
     var complete: EmptyBlock?
     

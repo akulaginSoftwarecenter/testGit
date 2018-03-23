@@ -59,7 +59,7 @@ class RNSParoleContainerController: STContainerViewController {
     func actionComplete(_ item: RNSUserPayload?) {
         
     }
-  
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return kParoleVC
     }

@@ -13,6 +13,7 @@ import Foundation
  */
 extension RNSAddressViewController {
     
+    /// Функция подготовки вью для главной переменной инициализации
     func prepareItem() {
         addPinMapCenter(item?.point)
     }
@@ -27,13 +28,13 @@ extension RNSAddressViewController {
         item?.latitude = point?.latitude
         item?.longitude = point?.longitude
     }
-    
+    /// Функция подготовки контейнера переменной инициализации
     func prepareItemContainers(_ item: RNSAddressTemp?) {
         prepareAddressContainers(item?.name)
         addPinMapCenter(item?.point)
         tableAddressHiddenIfNeed(item)
     }
-   
+    /// Функция очистки ячейки
     func clearPoint() {
         point = nil
     }

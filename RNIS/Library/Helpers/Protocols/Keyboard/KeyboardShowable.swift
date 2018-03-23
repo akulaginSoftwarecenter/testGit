@@ -13,9 +13,11 @@ import SnapKit
  Протокол для клавиатура
  */
 protocol KeyboardShowable: class {
+    /// переменная высоты нижнего констрейнта
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? { get }
     var viewBottomHeightConstraint: Constraint? { get }
     var view: UIView? { get }
+    /// переменная для проверки добавления тапа на вью если нужно
     var isNeedAddTap: Bool { get }
     
     func addKeyboardObservers()
@@ -29,6 +31,7 @@ protocol KeyboardShowable: class {
  */
 extension KeyboardShowable
 {
+    /// переменная высоты нижнего констрейнта
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         return nil
     }
@@ -51,6 +54,7 @@ extension KeyboardShowable
         return nil
     }
     
+    /// переменная для проверки добавления тапа на вью если нужно
     var isNeedAddTap: Bool {
         return true
     }

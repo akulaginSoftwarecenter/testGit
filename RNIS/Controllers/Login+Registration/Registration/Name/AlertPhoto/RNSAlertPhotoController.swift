@@ -48,13 +48,13 @@ class RNSAlertPhotoController: UIAlertController {
         addCancel()
         addAction("Отмена", style: .cancel)
     }
-    
+    /// Функция подготовки события для алерта
     func addAction(_ title: String?, style: UIAlertActionStyle = .default, complete: EmptyBlock? = nil) {
         addAction(UIAlertAction(title: title, style: style) {action in
             complete?()
         })
     }
-    
+    /// Функция подготовки события для алерта кнопки "Удалить"
     func addCancel() {
         guard showRemove ?? false else {
             return

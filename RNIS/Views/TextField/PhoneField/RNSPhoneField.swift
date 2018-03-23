@@ -75,13 +75,13 @@ class RNSPhoneField: RNSTextField, UITextFieldDelegate {
             self?.textFieldDidChange()
         }
     }
-
+    /// Метод делегата вызванный при старте редактирования текстового поля
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if text == "" {
             text = "+7"
         }
     }
-
+    /// Метод делегата вызванный при окончании редактирования текстового поля
     func textFieldDidEndEditing(_ textField: UITextField) {
         if text == "+7" {
             text = ""

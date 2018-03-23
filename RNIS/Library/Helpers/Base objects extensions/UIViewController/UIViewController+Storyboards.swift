@@ -41,7 +41,7 @@ extension UIViewController {
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as? T
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     @objc class var storyboardName: String {
         return self.storyboardIdentifier
     }

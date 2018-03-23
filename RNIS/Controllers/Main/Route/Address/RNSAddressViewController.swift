@@ -38,19 +38,23 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     /// Представление индикации загрузки
     lazy var loaderView = LoaderView.interactionEnabled
     
+    /// переменная высоты нижнего констрейнта
     var viewBottomHeightLayoutConstraint: NSLayoutConstraint? {
         get {
             return bottomTableView
         }
     }
     
+    /// переменная для проверки добавления тапа на вью если нужно
     var isNeedAddTap: Bool {
         return false
     }
     
+    /// переменная сохранения запроса RNSGetGeoCode
     var request: RNSGetGeoCode?
-    
+    /// переменная тип поиска адреса
     var type: TypeAddress?
+    /// главная переменная инициализации
     var item: RNSDutyAddressTemp?
     var complete: AliasAddressComplete?
     /// Внутренний контроллер
@@ -64,9 +68,9 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
     
     /// Кнопка "показать меня на карте"
     @IBOutlet weak var buttonMyLocation: UIButton!
-    
+    /// Правый констрейнт текстового поля
     @IBOutlet weak var rightTextFildConstraint: NSLayoutConstraint!
-    
+    /// Левый констрейнт текстового поля
     @IBOutlet weak var leftTextFieldConstraint: NSLayoutConstraint!
     /// Поле ввода адреса
     @IBOutlet weak var textField: UITextField!
@@ -79,9 +83,10 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
 
     /// Таблица вариантов адресов (автокомплит)
     @IBOutlet weak var containerTables: UIView!
-    
+    /// Левый оступ текстового поля
     let leftTextField: CGFloat = 15
     
+    /// Таблица истории поиска
     lazy var tableHistory: RNSAddressHistoryView = {
         let view = RNSAddressHistoryView()
         if let parentView = self.containerTables {
@@ -97,7 +102,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         }
         return view
     }()
-    
+    /// Таблица адресов поиска
     lazy var tableAddress: RNSSearchView = {
         let view = RNSSearchView()
         let leftEdge: CGFloat = 15
@@ -132,7 +137,7 @@ class RNSAddressViewController: UIViewController, KeyboardShowable {
         prepareType()
         prepareItem()
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return "RNSMapParentController"
     }

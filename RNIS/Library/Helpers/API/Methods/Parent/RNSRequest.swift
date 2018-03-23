@@ -55,7 +55,7 @@ class RNSRequest: AlamofireAPI {
     func removeLoader() {
         STRouter.removeLoader()
     }
-    
+    /// Функция появления лоадера
     func showLoader() {
         STRouter.showLoader()
     }

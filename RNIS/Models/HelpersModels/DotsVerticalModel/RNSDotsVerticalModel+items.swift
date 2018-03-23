@@ -13,6 +13,7 @@ import Foundation
  */
 extension RNSDotsVerticalModel {
     
+    /// Функция генерирования тестовой точки вертикальной модели
     static func generate() -> RNSDotsVerticalModel {
         let model = RNSDotsVerticalModel()
         

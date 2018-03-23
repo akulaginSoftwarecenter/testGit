@@ -95,7 +95,7 @@ class RNSMoveMapViewController: UIViewController {
         NotificationCenter.removeObserver(self)
         moveMapFalse()
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return "RNSMapParentController"
     }

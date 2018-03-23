@@ -18,7 +18,8 @@ class RNSBaseTableCell: UITableViewCell {
         super.awakeFromNib()
         self.backgroundColor = self.contentView.backgroundColor;
     }
-
+    /// метод переопредления setSelected для отключения выделения ячейки
     override func setSelected(_ selected: Bool, animated: Bool) {}
+    /// метод переопредления setHighlighted для отключения выделения ячейки
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
 }

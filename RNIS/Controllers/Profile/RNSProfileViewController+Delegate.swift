@@ -12,15 +12,11 @@ import Foundation
 /// Расширение для работы с текстовыми полями
 extension RNSProfileViewController: UITextFieldDelegate {
     
+    /// Событие нажатия на кнопку "Ввод" на клавиатуре
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailField.resignFirstResponder()
         nameField.resignFirstResponder()
         checkChange(textField)
         return true
     }
-    /*
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        checkChange(textField)
-    }
-    */
 }

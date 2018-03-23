@@ -16,7 +16,7 @@ class RNSPinBus: RNSPinItem {
     var widthWing: Float = 0
     var itemBus: RNSBus?
     var operation: BlockOperation?
-    
+    /// Функция подготовки вью для главной переменной инициализации
     override func prepareItem() {
         itemBus = item as? RNSBus
         widthWing = Float(itemBus?.widthWing ?? 0)

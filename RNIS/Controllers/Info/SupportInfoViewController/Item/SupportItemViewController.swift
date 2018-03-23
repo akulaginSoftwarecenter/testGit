@@ -19,7 +19,7 @@ class SupportItemViewController: UIViewController {
     var nameText: String?
     /// переменная уникальный идентификатор сущности
     var uuid: String?
-    
+    /// Функция подготовки контейнера
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         enterViewController = segue.destination as? SupportInfoViewController
@@ -40,7 +40,7 @@ class SupportItemViewController: UIViewController {
     func body(_ message: String?) -> String? {
         return "\(titleName ?? "") \(nameText ?? ""), id \(uuid ?? ""). Сообщение: \(message ?? "")"
     }
-     
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return "SupportInfoViewController"
     }

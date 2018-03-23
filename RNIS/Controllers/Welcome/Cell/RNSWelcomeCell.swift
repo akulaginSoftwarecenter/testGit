@@ -20,6 +20,7 @@ class RNSWelcomeCell: UICollectionViewCell {
     @IBOutlet weak var imageStart: UIImageView!
     @IBOutlet weak var imageBack: UIImageView!
     
+    /// главная переменная инициализации
     var item: WelcomeItem? {
         didSet {
             updateItem()

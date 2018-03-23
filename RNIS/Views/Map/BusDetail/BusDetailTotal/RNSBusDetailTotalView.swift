@@ -19,7 +19,7 @@ class RNSBusDetailTotalView: BaseViewWithXIBInit {
             updateUI()
         }
     }
-    
+    /// Модель автобуса из базы
     var itemBus: RNSBus? {
         didSet{
             titleLabel.text =  itemBus?.route_number ?? ""

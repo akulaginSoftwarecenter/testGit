@@ -52,7 +52,7 @@ class RNSTransportTableView: BaseViewWithXIBInit {
             self?.updateUI()
         }
     }
-    
+    /// Функция появления лоадера
     func showLoader() {
         loaderView.showInView(self)
     }

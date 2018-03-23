@@ -51,11 +51,11 @@ extension RNSAddressViewController {
             pin = RNSPinAddress(point)
         }
     }
-    
+    /// Функция центрирования карты на точке point
     func mapCenter() {
         RNSMapManager.mapCenter(point)
     }
-    
+    /// Функция добавления точки адреса на карту и центрирования карты на точке point
     func addPinMapCenter(_ point: PGGeoPoint?) {
         self.point = point
         addPin()

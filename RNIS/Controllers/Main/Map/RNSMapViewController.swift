@@ -109,7 +109,7 @@ class RNSMapViewController: UIViewController {
         animator.setMapButtons(hidden: false, animated: true)
         loadWelcomeIfNeed()
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return "RNSMapParentController"
     }

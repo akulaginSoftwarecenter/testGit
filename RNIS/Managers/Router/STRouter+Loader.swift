@@ -13,7 +13,7 @@ import SVProgressHUD
  Расширение для работы с лоадером
  */
 extension STRouter {
-    
+    /// Функция появления лоадера
     static func showLoader() {
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.show()

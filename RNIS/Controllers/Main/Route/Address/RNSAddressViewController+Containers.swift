@@ -13,6 +13,7 @@ import Foundation
  */
 extension RNSAddressViewController {
     
+    /// Функция подготовки таблицы
     func prepareTableView() {
         allTableHidden()
         if textIsClear {
@@ -23,16 +24,16 @@ extension RNSAddressViewController {
             tableAddress.prepare(text)
         }
     }
-    
+    /// Функция все таблицы скрыть
     func allTableHidden() {
         tableHistory.hidden()
         tableAddressHidden()
     }
-    
+    /// Функция скрыть таблицу с адресами
     func tableAddressHidden() {
         tableAddress.hidden()
     }
-    
+    /// Функция скрыть таблицу с адресами если нужно
     func tableAddressHiddenIfNeed(_ item: RNSAddressTemp?) {
         if item?.isHouse ?? false {
             tableAddressHidden()

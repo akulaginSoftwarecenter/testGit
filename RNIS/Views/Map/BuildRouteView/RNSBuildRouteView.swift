@@ -24,33 +24,20 @@ class RNSBuildRouteView: BaseViewWithXIBInit {
         self.point = point
         animateShow()
     }
-   
+    /// Функция удаления старого пина
     func remove() {
         RNSMapManager.removeOldPinBuild()
         self.removeFromSuperview()
     }
-    
+    /// переменная точки построения "от"
     var pointFrom: RNSDutyAddressTemp? {
         return RNSMapManager.pointFrom
     }
+    /// переменная точки построения "до"
     var pointHere: RNSDutyAddressTemp? {
         return RNSMapManager.pointHere
     }
-    /*
-    func requestRoute() {
-        STRouter.showLoader()
-        RNSPostActionRouting(pointFrom, to: pointHere, complete: {[weak self] items in
-            RNSPageRouteManager.items = items
-            self?.showPageRoute()
-            STRouter.removeLoader()
-            self?.removeAnimate()
-        }, failure: { [weak self] text in
-            STAlertRouter.showOk(text)
-            STRouter.removeLoader()
-            self?.removeAnimate()
-        })
-    }
-    */
+    /// Функция отображения контроллера выбора точек
     func showPageRoute() {
         let vc = RNSDutyViewController.initialControllerType()
         vc?.loadStartItems(pointFrom, inItem: pointHere)

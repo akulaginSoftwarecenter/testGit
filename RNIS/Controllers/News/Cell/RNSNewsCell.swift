@@ -16,6 +16,7 @@ class RNSNewsCell: RNSBaseTableCell {
     /// UILabel для отображения заголовка
     @IBOutlet weak var label: UILabel!
     
+    /// главная переменная инициализации
     var item: RNSNewsTemp? {
         didSet{
             updateItem()

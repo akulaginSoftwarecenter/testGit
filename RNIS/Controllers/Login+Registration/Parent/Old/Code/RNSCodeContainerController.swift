@@ -72,7 +72,7 @@ class RNSCodeContainerController: STContainerViewController {
         containerViewController?.errorLabel.text = error
         containerViewController?.codeField.text = ""
     }
-    
+    /// Переменная имени сториборда инициализации вьюконтроллера
     override class var storyboardName: String {
         return kCodeVC
     }
